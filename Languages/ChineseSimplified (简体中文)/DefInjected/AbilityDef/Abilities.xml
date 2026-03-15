@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: spike launch -->
+  <FH_SpikeLaunch_Paraspike.label>TODO</FH_SpikeLaunch_Paraspike.label>
+  <!-- EN: Launch a bone spike at a target. -->
+  <FH_SpikeLaunch_Paraspike.description>TODO</FH_SpikeLaunch_Paraspike.description>
+  
+  <!-- EN: spike launch -->
+  <FH_SpikeLaunch_Shatterspike.label>TODO</FH_SpikeLaunch_Shatterspike.label>
+  <!-- EN: Launch a bone spike at a target. -->
+  <FH_SpikeLaunch_Shatterspike.description>TODO</FH_SpikeLaunch_Shatterspike.description>
+  
+  <!-- EN: spike launch -->
+  <FH_SpikeLaunch_Whipspike.label>TODO</FH_SpikeLaunch_Whipspike.label>
+  <!-- EN: Launch a bone spike at a target. -->
+  <FH_SpikeLaunch_Whipspike.description>TODO</FH_SpikeLaunch_Whipspike.description>
+  
+</LanguageData>

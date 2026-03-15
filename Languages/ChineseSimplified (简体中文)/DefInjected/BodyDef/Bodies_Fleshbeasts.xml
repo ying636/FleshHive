@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: FleshBeastWithoutSpine -->
+  <FH_FleshBeastWithoutSpine.label>TODO</FH_FleshBeastWithoutSpine.label>
+  <!-- EN: left lung -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_lung.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_lung.customLabel>
+  <!-- EN: right lung -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_lung.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_lung.customLabel>
+  <!-- EN: left kidney -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_kidney.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_kidney.customLabel>
+  <!-- EN: right kidney -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_kidney.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_kidney.customLabel>
+  <!-- EN: left eye -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.left_eye.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.right_eye.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.right_eye.customLabel>
+  <!-- EN: left shoulder -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_shoulder.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_shoulder.customLabel>
+  <!-- EN: right shoulder -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_shoulder.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_shoulder.customLabel>
+  <!-- EN: left tentacle -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_tentacle.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_tentacle.customLabel>
+  <!-- EN: right tentacle -->
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_tentacle.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_tentacle.customLabel>
+  
+</LanguageData>

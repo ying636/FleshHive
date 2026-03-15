@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>FH_Job_PutPawnInParasitePod</defName>
+    <driverClass>FleshHive.JobDriver_PutPawnInParasitePod</driverClass>
+    <reportString>carrry TargetA to TargetB.</reportString>
+  </JobDef>
+
+</Defs> 

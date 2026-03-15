@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: fingerspike -->
+  <FH_Fingerspike.label>TODO</FH_Fingerspike.label>
+  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
+  <FH_Fingerspike.description>TODO</FH_Fingerspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fingerspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fingerspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: spike -->
+  <FH_Fingerspike.tools.spike.label>TODO</FH_Fingerspike.tools.spike.label>
+  <!-- EN: spike -->
+  <FH_Fingerspike.tools.spike.labelNoLocation>TODO</FH_Fingerspike.tools.spike.labelNoLocation>
+  <!-- EN: head -->
+  <FH_Fingerspike.tools.head.label>TODO</FH_Fingerspike.tools.head.label>
+  
+  <!-- EN: 胃血兽 -->
+  <FH_Gutspike.label>TODO</FH_Gutspike.label>
+  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
+  <FH_Gutspike.description>TODO</FH_Gutspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Gutspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Gutspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: teeth -->
+  <FH_Gutspike.tools.teeth.label>TODO</FH_Gutspike.tools.teeth.label>
+  <!-- EN: head -->
+  <FH_Gutspike.tools.head.label>TODO</FH_Gutspike.tools.head.label>
+  
+  <!-- EN: 寄血兽 -->
+  <FH_Paraspike.label>TODO</FH_Paraspike.label>
+  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
+  <FH_Paraspike.description>TODO</FH_Paraspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Paraspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Paraspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: head -->
+  <FH_Paraspike.tools.head.label>TODO</FH_Paraspike.tools.head.label>
+  <!-- EN: spike -->
+  <FH_Paraspike.tools.spike.label>TODO</FH_Paraspike.tools.spike.label>
+  <!-- EN: spike -->
+  <FH_Paraspike.tools.spike.labelNoLocation>TODO</FH_Paraspike.tools.spike.labelNoLocation>
+  
+  <!-- EN: 肺血兽 -->
+  <FH_Puffspike.label>TODO</FH_Puffspike.label>
+  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
+  <FH_Puffspike.description>TODO</FH_Puffspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Puffspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Puffspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: head -->
+  <FH_Puffspike.tools.head.label>TODO</FH_Puffspike.tools.head.label>
+  
+  <!-- EN: shatterspike -->
+  <FH_Shatterspike.label>TODO</FH_Shatterspike.label>
+  <!-- EN: TODO. -->
+  <FH_Shatterspike.description>TODO</FH_Shatterspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left spike -->
+  <FH_Shatterspike.tools.left_spike.label>TODO</FH_Shatterspike.tools.left_spike.label>
+  <!-- EN: spike -->
+  <FH_Shatterspike.tools.left_spike.labelNoLocation>TODO</FH_Shatterspike.tools.left_spike.labelNoLocation>
+  <!-- EN: right spike -->
+  <FH_Shatterspike.tools.right_spike.label>TODO</FH_Shatterspike.tools.right_spike.label>
+  <!-- EN: spike -->
+  <FH_Shatterspike.tools.right_spike.labelNoLocation>TODO</FH_Shatterspike.tools.right_spike.labelNoLocation>
+  <!-- EN: top spike -->
+  <FH_Shatterspike.tools.top_spike.label>TODO</FH_Shatterspike.tools.top_spike.label>
+  <!-- EN: spike -->
+  <FH_Shatterspike.tools.top_spike.labelNoLocation>TODO</FH_Shatterspike.tools.top_spike.labelNoLocation>
+  <!-- EN: head -->
+  <FH_Shatterspike.tools.head.label>TODO</FH_Shatterspike.tools.head.label>
+  
+  <!-- EN: shieldspike -->
+  <FH_Shieldspike.label>TODO</FH_Shieldspike.label>
+  <!-- EN: TODO -->
+  <FH_Shieldspike.description>TODO</FH_Shieldspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left spike -->
+  <FH_Shieldspike.tools.left_spike.label>TODO</FH_Shieldspike.tools.left_spike.label>
+  <!-- EN: spike -->
+  <FH_Shieldspike.tools.left_spike.labelNoLocation>TODO</FH_Shieldspike.tools.left_spike.labelNoLocation>
+  <!-- EN: right spike -->
+  <FH_Shieldspike.tools.right_spike.label>TODO</FH_Shieldspike.tools.right_spike.label>
+  <!-- EN: spike -->
+  <FH_Shieldspike.tools.right_spike.labelNoLocation>TODO</FH_Shieldspike.tools.right_spike.labelNoLocation>
+  <!-- EN: head -->
+  <FH_Shieldspike.tools.head.label>TODO</FH_Shieldspike.tools.head.label>
+  
+  <!-- EN: toughspike -->
+  <FH_Toughspike.label>TODO</FH_Toughspike.label>
+  <!-- EN: A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly. -->
+  <FH_Toughspike.description>TODO</FH_Toughspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Toughspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Toughspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left spike -->
+  <FH_Toughspike.tools.left_spike.label>TODO</FH_Toughspike.tools.left_spike.label>
+  <!-- EN: spike -->
+  <FH_Toughspike.tools.left_spike.labelNoLocation>TODO</FH_Toughspike.tools.left_spike.labelNoLocation>
+  <!-- EN: right spike -->
+  <FH_Toughspike.tools.right_spike.label>TODO</FH_Toughspike.tools.right_spike.label>
+  <!-- EN: spike -->
+  <FH_Toughspike.tools.right_spike.labelNoLocation>TODO</FH_Toughspike.tools.right_spike.labelNoLocation>
+  <!-- EN: head -->
+  <FH_Toughspike.tools.head.label>TODO</FH_Toughspike.tools.head.label>
+  
+  <!-- EN: trispike -->
+  <FH_Trispike.label>TODO</FH_Trispike.label>
+  <!-- EN: A man-sized amalgamation of several smaller fleshbeasts. Each of the creature's limbs is capable of surviving independently. On death, trispikes may split into separate fingerspikes as each limb rips free and attacks. -->
+  <FH_Trispike.description>TODO</FH_Trispike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Trispike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Trispike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left spike -->
+  <FH_Trispike.tools.left_spike.label>TODO</FH_Trispike.tools.left_spike.label>
+  <!-- EN: spike -->
+  <FH_Trispike.tools.left_spike.labelNoLocation>TODO</FH_Trispike.tools.left_spike.labelNoLocation>
+  <!-- EN: right spike -->
+  <FH_Trispike.tools.right_spike.label>TODO</FH_Trispike.tools.right_spike.label>
+  <!-- EN: spike -->
+  <FH_Trispike.tools.right_spike.labelNoLocation>TODO</FH_Trispike.tools.right_spike.labelNoLocation>
+  <!-- EN: top spike -->
+  <FH_Trispike.tools.top_spike.label>TODO</FH_Trispike.tools.top_spike.label>
+  <!-- EN: spike -->
+  <FH_Trispike.tools.top_spike.labelNoLocation>TODO</FH_Trispike.tools.top_spike.labelNoLocation>
+  <!-- EN: head -->
+  <FH_Trispike.tools.head.label>TODO</FH_Trispike.tools.head.label>
+  
+  <!-- EN: 鞭爪兽 -->
+  <FH_Whipspike.label>TODO</FH_Whipspike.label>
+  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
+  <FH_Whipspike.description>TODO</FH_Whipspike.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Whipspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Whipspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: head -->
+  <FH_Whipspike.tools.head.label>TODO</FH_Whipspike.tools.head.label>
+  <!-- EN: spike -->
+  <FH_Whipspike.tools.spike.label>TODO</FH_Whipspike.tools.spike.label>
+  <!-- EN: spike -->
+  <FH_Whipspike.tools.spike.labelNoLocation>TODO</FH_Whipspike.tools.spike.labelNoLocation>
+  
+</LanguageData>

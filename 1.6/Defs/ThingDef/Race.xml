@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseFleshbeast" Name="FH_BaseFleshBeast" Abstract="True">
+    <thingClass>HiveCreatureFramework.Unit</thingClass>
+    <comps>
+      <li Class="HiveCreatureFramework.ControlCompProperties">
+      </li>
+    </comps>
+    <race>
+      <thinkTreeMain>HCF_ThinkTree_Unit</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <foodType>None</foodType>
+      <needsRest>false</needsRest>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LittleFleshBeast" Abstract="True">
+    <statBases>
+      <MoveSpeed>5.1</MoveSpeed>
+      <MinimumContainmentStrength>20</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <race>
+      <baseBodySize>0.6</baseBodySize>
+      <baseHealthScale>0.5</baseHealthScale>
+      <lifeExpectancy>10</lifeExpectancy>
+      <deathAction Class="DeathActionProperties_Vanish">
+        <workerClass>DeathActionWorker_Vanish</workerClass>
+        <filth>Filth_TwistedFlesh</filth>
+        <filthCountRange>1~3</filthCountRange>
+        <meatExplosionSize>Small</meatExplosionSize>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Fingerspike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Fingerspike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Fingerspike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <!-- 单爪兽 -->
+
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_Fingerspike</defName>
+    <label>fingerspike</label>
+    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</uiIconPath>
+    <race>
+      <body>Fingerspike</body>
+      <renderTree>Fingerspike</renderTree>
+    </race>
+    <comps>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_Fingerspike</iconPath> 
+        <cost>1</cost>
+        <hediff>FH_Parasitism_Fingerspike</hediff>
+        <effect>全局工作效率+10%，魅力-1，“血肉寄生”心情-6</effect>
+        <abilityLabel>寄生武器：骨刺触手</abilityLabel>
+        <abilityDescription>宿主体表生长骨刺触手，造成刺击伤害。</abilityDescription>
+      </li>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Fingerspike</defName>
+    <label>fingerspike</label>
+    <race>FH_Fingerspike</race>
+    <abilities>
+      <li>SpikeLaunch_Fingerspike</li>
+    </abilities>
+    <combatPower>25</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- 肺血兽 -->
+
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_Puffspike</defName>
+    <label>肺血兽</label>
+    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <statBases>
+      <MoveSpeed>7.1</MoveSpeed>
+    </statBases>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Puffspike/FH_Puffspike_east</uiIconPath>
+    <race>
+      <body>FH_FleshBeastWithoutSpine</body>
+    </race>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Puffspike</defName>
+    <label>肺血兽</label>
+    <race>FH_Puffspike</race>
+
+    <combatPower>25</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Puffspike/FH_Puffspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Puffspike/FH_Puffspike_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 鞭爪兽 -->
+
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_Whipspike</defName>
+    <label>鞭爪兽</label>
+    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Whipspike/Finger1spike_east</uiIconPath>
+    <race>
+      <body>Fingerspike</body>
+      <renderTree>FH_Whipspike</renderTree>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Whipspike</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_HuntEnemies_Whipspike</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Whipspike</defName>
+    <label>鞭爪兽</label>
+    <race>FH_Whipspike</race>
+    <abilities>
+      <li>FH_SpikeLaunch_Whipspike</li>
+    </abilities>
+    <combatPower>25</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Whipspike/FH_Whipspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Whipspike/FH_Whipspike_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 胃血兽 -->
+
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_Gutspike</defName>
+    <label>胃血兽</label>
+    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Gutspike/FH_Gutspike_east</uiIconPath>
+    <race>
+      <body>FH_FleshBeastWithoutSpine</body>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Gutspike</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_HuntEnemies_Gutspike</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>1</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Gutspike</defName>
+    <label>胃血兽</label>
+    <race>FH_Gutspike</race>
+    <combatPower>25</combatPower>
+    <abilities>
+      <li>CorrosiveSpray</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Gutspike/FH_Gutspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Gutspike/FH_Gutspike_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 寄血兽 -->
+
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_Paraspike</defName>
+    <label>寄血兽</label>
+    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Paraspike/FH_Paraspike_east</uiIconPath>
+    <race>
+      <body>Fingerspike</body>
+      <renderTree>FH_Paraspike</renderTree>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Paraspike</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_HuntEnemies_Paraspike</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Paraspike</defName>
+    <label>寄血兽</label>
+    <race>FH_Paraspike</race>
+    <abilities>
+      <li>FH_SpikeLaunch_Paraspike</li>
+    </abilities>
+    <combatPower>25</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Paraspike/FH_Paraspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Paraspike/FH_Paraspike_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 碎爪兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Shatterspike</defName>
+    <label>shatterspike</label>
+    <description>TODO.</description>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <groupCost>3</groupCost>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Shatterspike</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_HuntEnemies_Shatterspike</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <statBases>
+      <MoveSpeed>4.3</MoveSpeed>
+      <MinimumContainmentStrength>40</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatters1pike_east</uiIconPath>
+    <race>
+      <body>Trispike</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>10</lifeExpectancy>
+      <renderTree>FH_Shatterspike</renderTree>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>2</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Fingerspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Trispike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Trispike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Trispike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>left spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>top spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Shatterspike</defName>
+    <label>shatterspike</label>
+    <race>FH_Shatterspike</race>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <abilities>
+      <li>FH_SpikeLaunch_Shatterspike</li>
+    </abilities>
+    <combatPower>90</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+          <drawOffset>(0, 0, 0.1)</drawOffset>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatters1pike_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 双爪兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Toughspike</defName>
+    <label>toughspike</label>
+    <description>A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly.</description>
+    <statBases>
+      <MoveSpeed>4.3</MoveSpeed>
+      <MinimumContainmentStrength>50</MinimumContainmentStrength>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Toughspike</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_HuntEnemies_Toughspike</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
+    <race>
+      <body>Toughspike</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <renderTree>Toughspike</renderTree>
+      <canBecomeShambler>true</canBecomeShambler>
+      <lifeStageAges>
+        <li>
+          <def>FullyFormed_Toughspike</def>
+          <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>left spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Toughspike</defName>
+    <label>toughspike</label>
+    <race>FH_Toughspike</race>
+    <abilities>
+      <li>SpikeLaunch_Toughspike</li>
+    </abilities>
+    <combatPower>70</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Toughspike/Dessicated_Toughspike</texPath>
+          <drawSize>2</drawSize>
+          <attachPoints>
+            <li>
+              <offset>(-.3, 0, .45)</offset>
+              <type>PlatformRestraint0</type>
+            </li>
+            <li>
+              <offset>(.3, 0, .45)</offset>
+              <type>PlatformRestraint1</type>
+            </li>
+            <li>
+              <offset>(.17, 0, -.43)</offset>
+              <type>PlatformRestraint2</type>
+            </li>
+            <li>
+              <offset>(-.2, 0, -.45)</offset>
+              <type>PlatformRestraint3</type>
+            </li>
+          </attachPoints>
+        </dessicatedBodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 盾爪兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Shieldspike</defName>
+    <label>shieldspike</label>
+    <description>TODO</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <MinimumContainmentStrength>50</MinimumContainmentStrength>
+      <ArmorRating_Sharp>0.792</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.36</ArmorRating_Heat>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
+    <race>
+      <body>Toughspike</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1.2</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <canBecomeShambler>true</canBecomeShambler>
+      <lifeStageAges>
+        <li>
+          <def>FullyFormed_Toughspike</def>
+          <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>left spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>15.7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>15.7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Shieldspike</defName>
+    <label>shieldspike</label>
+    <race>FH_Shieldspike</race>
+    <combatPower>70</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Shieldspike/FH_Shieldspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Shieldspike/Dessicated_FH_Shieldspike</texPath>
+          <drawSize>2</drawSize>
+          <attachPoints>
+            <li>
+              <offset>(-.3, 0, .45)</offset>
+              <type>PlatformRestraint0</type>
+            </li>
+            <li>
+              <offset>(.3, 0, .45)</offset>
+              <type>PlatformRestraint1</type>
+            </li>
+            <li>
+              <offset>(.17, 0, -.43)</offset>
+              <type>PlatformRestraint2</type>
+            </li>
+            <li>
+              <offset>(-.2, 0, -.45)</offset>
+              <type>PlatformRestraint3</type>
+            </li>
+          </attachPoints>
+        </dessicatedBodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Shieldspike/FH_Shieldspike_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 三爪兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Trispike</defName>
+    <label>trispike</label>
+    <description>A man-sized amalgamation of several smaller fleshbeasts. Each of the creature's limbs is capable of surviving independently. On death, trispikes may split into separate fingerspikes as each limb rips free and attacks.</description>
+    <statBases>
+      <MoveSpeed>4.3</MoveSpeed>
+      <MinimumContainmentStrength>40</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/Trispike/Trispike_MenuIcon</uiIconPath>
+    <race>
+      <body>Trispike</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>10</lifeExpectancy>
+      <renderTree>Trispike</renderTree>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>Fingerspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Trispike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Trispike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Trispike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <groupCost>3</groupCost>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Trispike</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_HuntEnemies_Trispike</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>top spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Trispike</defName>
+    <label>trispike</label>
+    <race>FH_Trispike</race>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <abilities>
+      <li>SpikeLaunch_Toughspike</li>
+    </abilities>
+    <combatPower>90</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Trispike/Trispike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+          <drawOffset>(0, 0, 0.1)</drawOffset>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Trispike/Trispike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 大型血肉兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Bulbfreak</defName>
+    <label>bulbfreak</label>
+    <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MinimumContainmentStrength>75</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/Bulbfreak/Bulbfreak_MenuIcon</uiIconPath>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>4</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>Toughspike</li>
+          <li>Trispike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <renderTree>Bulbfreak</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>ThirdTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FourthTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FifthTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Bulbfreak</defName>
+    <label>bulbfreak</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>FH_Bulbfreak</race>
+    <combatPower>360</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Bulbfreak/Bulbfreak</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 腐蚀瘤兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Acidbulb</defName>
+    <label>acidbulb</label>
+    <description>TODO.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MinimumContainmentStrength>75</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Acidbulb/FH_Acidbulb_Icon</uiIconPath>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>4</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>Toughspike</li>
+          <li>Trispike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <renderTree>Bulbfreak</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>ThirdTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FourthTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FifthTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Acidbulb</defName>
+    <label>Acidbulb</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>FH_Acidbulb</race>
+    <combatPower>360</combatPower>
+    <abilities>
+      <li>FH_Acidbulb_Launch</li>
+    </abilities>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Acidbulb/FH_Acidbulb</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 喷射瘤兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Spitbulb</defName>
+    <label>FH_Spitbulb</label>
+    <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MinimumContainmentStrength>75</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Spitbulb/FH_Spitbulb_Icon</uiIconPath>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>4</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>Toughspike</li>
+          <li>Trispike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <renderTree>Bulbfreak</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <groupCost>5</groupCost>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>ThirdTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FourthTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FifthTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Spitbulb</defName>
+    <label>bulbfreak</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>FH_Spitbulb</race>
+    <abilities>
+      <li>FH_Spitbulb_Launch</li>
+    </abilities>
+    <combatPower>360</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Spitbulb/FH_Spitbulb</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+
+
+</Defs>

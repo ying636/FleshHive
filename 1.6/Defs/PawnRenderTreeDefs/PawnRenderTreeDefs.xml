@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnRenderTreeDef>
+    <defName>FH_Whipspike</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>Spike</debugLabel>
+              <texPath>Things/Pawn/Fleshbeast/FH_Whipspike/FH_Whipspike_TopLimb</texPath>
+              <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <rotateFacing>false</rotateFacing>
+              <rotationRange>-18~18</rotationRange>
+              <durationTicksRange>15~45</durationTicksRange>
+              <nextSpasmTicksRange>5~30</nextSpasmTicksRange>
+              <scaleRange>0.95~1.05</scaleRange>
+              <drawSize>1.4</drawSize>
+              <baseLayer>10</baseLayer>
+              <useRottenColor>true</useRottenColor>
+              <drawData>
+                <dataNorth>
+                  <rotationOffset>-15</rotationOffset>
+                  <offset>(0, 0, 0.3)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0.25, 0, 0.1)</offset>
+                </dataEast>
+                <dataSouth>
+                  <rotationOffset>15</rotationOffset>
+                  <offset>(0, 0, -0.2)</offset>
+                  <flip>true</flip>
+                </dataSouth>
+                <dataWest>
+                  <flip>true</flip>
+                </dataWest>
+              </drawData>
+            </li>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+  <!-- 碎爪兽 -->
+  <PawnRenderTreeDef>
+    <defName>FH_Shatterspike</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+          <children>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>SpikeL</debugLabel>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_TopLimb</texPath>
+              <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <rotateFacing>false</rotateFacing>
+              <rotationRange>-25~25</rotationRange>
+              <scaleRange>0.9~1.1</scaleRange>
+              <durationTicksRange>15~45</durationTicksRange>
+              <nextSpasmTicksRange>5~35</nextSpasmTicksRange>
+              <drawSize>1.4</drawSize>
+              <baseLayer>10</baseLayer>
+              <useRottenColor>true</useRottenColor>
+              <drawData>
+                <dataNorth>
+                  <rotationOffset>-20</rotationOffset>
+                  <offset>(-0.25, 0, 0.05)</offset>
+                </dataNorth>
+                <dataEast>
+                  <rotationOffset>245</rotationOffset>
+                  <layer>-5</layer>
+                </dataEast>
+                <dataSouth>
+                  <rotationOffset>35</rotationOffset>
+                  <offset>(0.25, 0, 0.05)</offset>
+                </dataSouth>
+                <dataWest>
+                  <offset>(0, 0, 0.1)</offset>
+                  <flip>true</flip>
+                </dataWest>
+              </drawData>
+            </li>
+            <li Class="PawnRenderNodeProperties_Spastic">
+              <debugLabel>SpikeR</debugLabel>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_SideLimb</texPath>
+              <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <rotateFacing>false</rotateFacing>
+              <rotationRange>-25~25</rotationRange>
+              <scaleRange>0.9~1.1</scaleRange>
+              <durationTicksRange>15~45</durationTicksRange>
+              <nextSpasmTicksRange>5~35</nextSpasmTicksRange>
+              <drawSize>1.45</drawSize>
+              <baseLayer>10</baseLayer>
+              <useRottenColor>true</useRottenColor>
+              <drawData>
+                <dataNorth>
+                  <rotationOffset>160</rotationOffset>
+                  <offset>(0.2, 0, 0.05)</offset>
+                </dataNorth>
+                <dataEast>
+                  <offset>(0, 0, 0.1)</offset>
+                </dataEast>
+                <dataSouth>
+                  <rotationOffset>180</rotationOffset>
+                  <offset>(-0.25, 0, 0)</offset>
+                </dataSouth>
+                <dataWest>
+                  <rotationOffset>120</rotationOffset>
+                  <layer>-5</layer>
+                  <flip>true</flip>
+                </dataWest>
+              </drawData>
+            </li> 
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+  <PawnRenderTreeDef>
+    <defName>FH_Paraspike</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <tagDef>Body</tagDef>
+          <useRottenColor>true</useRottenColor>
+          <nodeClass>FleshHive.PawnRenderNode_AnimalPart_Paraspike</nodeClass>
+          <children>
+            <li>
+              <debugLabel>Wounds</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayWounds</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <baseLayer>10</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Firefoam</debugLabel>
+              <nodeClass>PawnRenderNode_AnimalPart</nodeClass>
+              <workerClass>PawnRenderNodeWorker_OverlayFirefoam</workerClass>
+              <overlayLayer>Body</overlayLayer>
+              <useGraphic>false</useGraphic>
+              <baseLayer>20</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
+</Defs>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Fingerspike -->
+  <FH_Unit_Fingerspike.label>TODO</FH_Unit_Fingerspike.label>
+  <!-- EN: Fingerspike -->
+  <FH_Unit_Fingerspike.description>TODO</FH_Unit_Fingerspike.description>
+  
+  <!-- EN: Gutspike -->
+  <FH_Unit_Gutspike.label>TODO</FH_Unit_Gutspike.label>
+  <!-- EN: Gutspike -->
+  <FH_Unit_Gutspike.description>TODO</FH_Unit_Gutspike.description>
+  
+  <!-- EN: Paraspike -->
+  <FH_Unit_Paraspike.label>TODO</FH_Unit_Paraspike.label>
+  <!-- EN: Paraspike -->
+  <FH_Unit_Paraspike.description>TODO</FH_Unit_Paraspike.description>
+  
+  <!-- EN: Puffspike -->
+  <FH_Unit_Puffspike.label>TODO</FH_Unit_Puffspike.label>
+  <!-- EN: Puffspike -->
+  <FH_Unit_Puffspike.description>TODO</FH_Unit_Puffspike.description>
+  
+  <!-- EN: Whipspike -->
+  <FH_Unit_Whipspike.label>TODO</FH_Unit_Whipspike.label>
+  <!-- EN: Whipspike -->
+  <FH_Unit_Whipspike.description>TODO</FH_Unit_Whipspike.description>
+  
+  <!-- EN: Gutspike -->
+  <Test.label>TODO</Test.label>
+  <!-- EN: Gutspike -->
+  <Test.description>TODO</Test.description>
+  
+  <!-- EN: Gutspike -->
+  <Test2.label>TODO</Test2.label>
+  <!-- EN: Gutspike -->
+  <Test2.description>TODO</Test2.description>
+  
+</LanguageData>

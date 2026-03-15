@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.SpawnCategoryDef>
+        <defName>FH_Category_LittleFleshBeast</defName>
+        <label>Little flesh beast</label>
+        <description>Little flesh beast</description>
+        <color>(0.7, 0.1, 0.1)</color>
+        <units>
+            <li>FH_Unit_Whipspike</li>
+            <li>FH_Unit_Puffspike</li>
+            <li>FH_Unit_Paraspike</li>
+            <li>FH_Unit_Fingerspike</li>
+            <li>FH_Unit_Gutspike</li>
+            <li>Test</li>
+            <li>Test2</li>
+        </units>
+    </HiveCreatureFramework.SpawnCategoryDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Whipspike</defName>
+        <label>Whipspike</label>
+        <description>Whipspike</description>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Whipspike</kind>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Puffspike</defName>
+        <label>Puffspike</label>
+        <description>Puffspike</description>
+        <kind>FH_Puffspike</kind>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Paraspike</defName>
+        <label>Paraspike</label>
+        <description>Paraspike</description>
+        <kind>FH_Paraspike</kind>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Fingerspike</defName>
+        <label>Fingerspike</label>
+        <description>Fingerspike</description>
+        <kind>FH_Fingerspike</kind>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Gutspike</defName>
+        <label>Gutspike</label>
+        <description>Gutspike</description>
+        <kind>FH_Gutspike</kind>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>Test</defName>
+        <label>Gutspike</label>
+        <description>Gutspike</description>
+        <kind>FH_Shatterspike</kind>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>Test2</defName>
+        <label>Gutspike</label>
+        <description>Gutspike</description>
+        <kind>FH_Spitbulb</kind>
+        <costs>
+            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+</Defs> 

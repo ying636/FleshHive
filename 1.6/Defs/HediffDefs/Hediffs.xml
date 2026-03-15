@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+  <HediffDef>
+    <defName>FH_Spike_Paraspike</defName>
+    <label>paraspike's spike</label>
+    <hediffClass>FleshHive.Hediff_FH_Spike_Paraspike</hediffClass>
+    <description>TODO</description>
+    <isBad>true</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500~5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" /> 
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_LostSpike_Paraspike</defName>
+    <label>lost spike</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>TODO</description>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsAndKills">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" /> 
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Fingerspike</defName>
+    <label>fingerspike parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>被独爪兽寄生后，宿主体表生长骨刺触手。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

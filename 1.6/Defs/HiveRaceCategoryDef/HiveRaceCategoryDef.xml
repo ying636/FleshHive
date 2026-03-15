@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.HiveRaceCategoryDef>
+        <defName>FH_Category_FleshHive</defName>
+        <label>Flesh</label>
+        <description>flesh beast</description>
+        <tags>
+            <li>Flesh</li>
+        </tags>
+        <options>
+            <li>HCF_CategoryOption_Group</li>
+        </options>
+        <texPath>UI/UI_Hive/Hive_Flesh</texPath>
+    </HiveCreatureFramework.HiveRaceCategoryDef>
+
+
+</Defs>

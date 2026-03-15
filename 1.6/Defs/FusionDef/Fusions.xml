@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.FusionDef>
+        <defName>FH_Fusion_Shieldspike</defName>
+        <label>Shieldspike</label>
+        <category>LittleFlesh</category>
+        <progressTick>30000</progressTick>
+        <hiden>true</hiden>
+        <materials>
+            <li Class="HiveCreatureFramework.FusionMaterial_Random">
+                <id>1</id>
+                <targetPools>
+                    <li>FH_Fingerspike</li>
+                </targetPools>
+            </li>
+            <li Class="HiveCreatureFramework.FusionMaterial_Random">
+                <id>2</id>
+                <targetPools>
+                    <li>FH_Fingerspike</li>
+                </targetPools>
+            </li>
+        </materials>
+        <results>
+            <li>
+                <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+                    <label>盾爪兽</label>
+                    <description>盾爪兽</description>
+                    <kind>FH_Shieldspike</kind>
+                </result>
+                <weight>1</weight>
+            </li>
+        </results>
+    </HiveCreatureFramework.FusionDef>
+
+    <HiveCreatureFramework.FusionDef>
+        <defName>FH_Fusion_Default</defName>
+        <label>Unknown</label>
+        <progressTick>30000</progressTick>
+        <results>
+            <li>
+                <result Class="HiveCreatureFramework.FusionResult_Thing">
+                    <label>未知</label>
+                    <description>未知</description>
+                    <results>
+                        <MonolithFragment>30</MonolithFragment>
+                    </results>
+                </result>
+                <weight>1</weight>
+            </li>
+        </results>
+    </HiveCreatureFramework.FusionDef>
+
+
+</Defs>

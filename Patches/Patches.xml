@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Trispike"]/race/deathAction/dividePawnKindOptions</xpath>
+		<value>
+			<li>FH_Whipspike</li>
+			<li>FH_Puffspike</li>
+			<li>FH_Fingerspike</li>
+			<li>FH_Paraspike</li>
+			<li>FH_Gutspike</li>
+		</value>
+	</Operation>
+
+
+</Patch>

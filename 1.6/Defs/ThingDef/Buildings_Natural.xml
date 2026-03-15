@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshHive</defName>
+    <label>flesh hive</label>
+    <description>TODO</description>
+    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.5</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <uiIconScale>0.65</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <HCF_Stat_HiveCapacity>50</HCF_Stat_HiveCapacity>
+    </statBases>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <costList>
+      <InsectJelly>50</InsectJelly>
+    </costList>
+    <designationCategory>HCF_Hive</designationCategory>
+    <building>
+      <storageGroupTag>Hive</storageGroupTag>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+          <disallowedCategories>
+            <li>Chunks</li>
+            <li>Plants</li>
+            <li>Buildings</li>
+            <li>CorpsesMechanoid</li>
+          </disallowedCategories>
+          <specialFiltersToDisallow>
+            <li>AllowRotten</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Preferred</priority>
+        <filter>
+          <categories>
+            <li>Foods</li>
+            <li>Manufactured</li>
+            <li>ResourcesRaw</li>
+            <li>Items</li>
+            <li>Weapons</li>
+            <li>Apparel</li>
+            <li>BodyParts</li>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <resources>
+          <FH_Resource_Nutrition>500</FH_Resource_Nutrition>
+        </resources>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
+        <UnitCategories>
+          <li>FH_Category_LittleFleshBeast</li>
+        </UnitCategories>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+        <groupCount>1</groupCount>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
+        <defaultFusion>FH_Fusion_Default</defaultFusion>
+        <category>LittleFlesh</category>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveUpgrader">
+        <upgrades>
+        </upgrades>
+      </li>
+      <li>
+        <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveContainer">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
+        <category>Flesh</category>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshParasiteVat</defName>
+    <label>flesh parasite vat</label>
+    <description>TODO</description>
+    <thingClass>FleshHive.FleshParasitePod</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,2.5)</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(3,2)</size>
+    <uiIconScale>0.65</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_Parasitism</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <costList>
+      <InsectJelly>50</InsectJelly>
+    </costList>
+    <designationCategory>HCF_Hive</designationCategory>
+    <building>
+
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <outlineGraphic>
+          <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Outline</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>(3.6,2.6)</drawSize>
+        </outlineGraphic> 
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

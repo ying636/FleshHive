@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
+    <FleshParasitePod_Title>将一只血肉兽在血肉寄生仓的辅助下寄生在宿主的身体中。血肉兽将会消耗寄生目标的营养存活。不同的血肉兽会提供不同的能力，使宿主变得更加强大。</FleshParasitePod_Title>
+
+    <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
+    <FleshParasitePod_Progress>进度：{0}</FleshParasitePod_Progress>
+
+
+    <Tab_Parasitism>寄生</Tab_Parasitism>
+    <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
+    <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
+
+    <Unparasitized>未被寄生</Unparasitized>
+    <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
+
+</LanguageData>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <DutyDef>
+    <defName>FH_Defend_Gutspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>48</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+          <ability>CorrosiveSpray</ability>
+        </li>
+        <li Class="JobGiver_AIDefendPoint">
+          <targetAcquireRadius>36</targetAcquireRadius>
+          <targetKeepRadius>24</targetKeepRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius">
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_HuntEnemies_Gutspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>48</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+          <ability>CorrosiveSpray</ability>
+        </li>
+        <li Class="JobGiver_AIFightEnemies">
+          <targetAcquireRadius>36</targetAcquireRadius>
+          <targetKeepRadius>24</targetKeepRadius>
+          <allowTurrets>true</allowTurrets>
+        </li>
+        <li Class="JobGiver_AIGotoNearestHostile" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <!-- 鞭爪兽 -->
+
+  <DutyDef>
+    <defName>FH_Defend_Whipspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>2.9</enemyDistToFleeRange>
+          <fleeDistRange>4~6</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>24</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+          <ability>FH_SpikeLaunch_Whipspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+          <enemyRadius>0~24</enemyRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius">
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_HuntEnemies_Whipspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>2.9</enemyDistToFleeRange>
+          <fleeDistRange>4~6</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>24</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+          <ability>FH_SpikeLaunch_Whipspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <!-- 寄血兽 -->
+
+  <DutyDef>
+    <defName>FH_Defend_Paraspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>48</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+          <ability>FH_SpikeLaunch_Paraspike</ability>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius">
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_HuntEnemies_Paraspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>48</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+          <ability>FH_SpikeLaunch_Paraspike</ability>
+        </li>
+        <li Class="JobGiver_AIGotoNearestHostile" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+
+  <!-- 碎爪兽 -->
+
+  <DutyDef>
+    <defName>FH_Defend_Shatterspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
+          <fleeDistRange>6~12</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>12</targetKeepRadius>
+          <ability>FH_SpikeLaunch_Shatterspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+          <enemyRadius>0~24</enemyRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius">
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_HuntEnemies_Shatterspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
+          <fleeDistRange>6~12</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>12</targetKeepRadius>
+          <ability>FH_SpikeLaunch_Shatterspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <!-- 双爪兽 -->
+
+  <DutyDef>
+    <defName>FH_Defend_Toughspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
+          <fleeDistRange>6~12</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>12</targetKeepRadius>
+          <ability>SpikeLaunch_Toughspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+          <enemyRadius>0~24</enemyRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius">
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_HuntEnemies_Toughspike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
+          <fleeDistRange>6~12</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>12</targetKeepRadius>
+          <ability>SpikeLaunch_Toughspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+
+  <!-- 三爪兽 -->
+
+  <DutyDef>
+    <defName>FH_Defend_Trispike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
+          <fleeDistRange>6~12</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>12</targetKeepRadius>
+          <ability>SpikeLaunch_Toughspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+          <enemyRadius>0~24</enemyRadius>
+        </li>
+        <li Class="ThinkNode_ForbidOutsideFlagRadius">
+          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+        </li>
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_HuntEnemies_Trispike</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <!-- Keep distance -->
+        <li Class="JobGiver_FleeForDistance">
+          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
+          <fleeDistRange>6~12</fleeDistRange>
+        </li>
+        <li Class="JobGiver_AIAbilityFight">
+          <targetAcquireRadius>12</targetAcquireRadius>
+          <targetKeepRadius>12</targetKeepRadius>
+          <ability>SpikeLaunch_Toughspike</ability>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_AIApproachHostile">
+          <radius>2~4</radius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+</Defs>

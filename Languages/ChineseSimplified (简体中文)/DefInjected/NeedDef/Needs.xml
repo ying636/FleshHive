@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: control -->
+  <FH_Need_Control.label>TODO</FH_Need_Control.label>
+  <!-- EN: Control represents how much control the colony has over this unit.\nWhen it reaches zero, the unit will attempt to break free from control. -->
+  <FH_Need_Control.description>TODO</FH_Need_Control.description>
+  
+</LanguageData>

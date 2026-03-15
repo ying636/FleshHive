@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.HiveResourceDef>
+        <defName>FH_Resource_Nutrition</defName>
+        <label>Nurtition</label>
+        <description>Nurtition.</description>
+        <color>(0.7, 0.1, 0.1)</color>
+        <worker Class="HiveCreatureFramework.HiveResourceWorker_Nutrition">
+        </worker>
+        <thing>Meat_Twisted</thing>
+        <thingCountPerResource>20</thingCountPerResource>
+    </HiveCreatureFramework.HiveResourceDef>
+
+
+
+
+
+
+</Defs>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <AbilityDef ParentName="SpikeLaunchBase">
+    <defName>FH_SpikeLaunch_Whipspike</defName>
+    <verbProperties>
+      <range>3.9</range>
+      <minRange>1.9</minRange>
+      <defaultProjectile>FH_Spike_Whipspike</defaultProjectile>
+      <defaultCooldownTime>0.5</defaultCooldownTime>
+    </verbProperties>
+  </AbilityDef>
+  <ThingDef ParentName="SpikeBase">
+    <defName>FH_Spike_Whipspike</defName>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <AbilityDef>
+    <defName>FH_SpikeLaunch_Paraspike</defName>
+    <label>spike launch</label>
+    <description>Launch a bone spike at a target.</description>
+    <cooldownTicksRange>5</cooldownTicksRange>
+    <abilityClass>FleshHive.Ability_SpikeLaunch_Paraspike</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Ability_SpineLaunch</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <verbClass>HiveCreatureFramework.Verb_AbilityShootWithEffects</verbClass>
+      <range>36.9</range>
+      <defaultProjectile>FH_Spike_Paraspike</defaultProjectile>
+      <defaultCooldownTime>0.5</defaultCooldownTime>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <durationSecondsOverride>50</durationSecondsOverride>
+        <compClass>HiveCreatureFramework.CompAbilityEffect_GiveHediff_Unit</compClass>
+        <hediffDef>FH_LostSpike_Paraspike</hediffDef>
+        <onlyApplyToSelf>True</onlyApplyToSelf>
+        <applyToSelf>True</applyToSelf>
+        <severity>1</severity>
+      </li>
+    </comps>
+  </AbilityDef>
+  <ThingDef ParentName="SpikeBase">
+    <defName>FH_Spike_Paraspike</defName>
+    <thingClass>FleshHive.Spike_Paraspike</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <AbilityDef ParentName="SpikeLaunchBase">
+    <defName>FH_SpikeLaunch_Shatterspike</defName>
+    <verbProperties>
+      <range>12.9</range>
+      <burstShotCount>6</burstShotCount>
+      <defaultProjectile>FH_Spike_Shatterspike</defaultProjectile>
+      <defaultCooldownTime>0.5</defaultCooldownTime>
+    </verbProperties>
+  </AbilityDef>
+  <ThingDef ParentName="SpikeBase">
+    <defName>FH_Spike_Shatterspike</defName>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <AbilityDef>
+    <defName>FH_Acidbulb_Launch</defName>
+    <label>acid launch</label>
+    <description>Launch acid.</description>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <verbProperties>
+      <range>40</range>
+      <defaultProjectile>FH_Bullet_Shell_AcidSpit</defaultProjectile>
+      <defaultCooldownTime>5</defaultCooldownTime>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Ability_SpineLaunch</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Bullet_Shell_AcidSpit</defName>
+    <label>acid spit</label>
+    <graphicData>
+      <graphicClass>Graphic_Single_AgeSecs</graphicClass>
+      <texPath>Things/Projectile/FleshmassSpitterProjectileSheet</texPath>
+      <drawSize>(.75, .75)</drawSize>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <useGraphicClass>True</useGraphicClass>
+      <shadowSize>1</shadowSize>
+      <damageDef>AcidBurn</damageDef>
+      <spinRate>20</spinRate>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>41</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <explosionRadius>1.95</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>SpitterSpitLands</soundExplode>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+      <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+      <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+      <doExplosionVFX>false</doExplosionVFX>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>Shell_AcidSpitStream</effecterDef>
+      </li>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>Shell_AcidSpitLaunched</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <AbilityDef>
+    <defName>FH_Spitbulb_Launch</defName>
+    <label>acid launch</label>
+    <description>Launch acid.</description>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <verbProperties>
+      <range>40</range>
+      <defaultProjectile>FH_Bullet_Shell_Spit</defaultProjectile>
+      <defaultCooldownTime>5</defaultCooldownTime>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Ability_SpineLaunch</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Bullet_Shell_Spit</defName>
+    <label>nexusmeld seed</label>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Item/FH_NexusmeldSeed</texPath>
+      <drawSize>(.75, .75)</drawSize> 
+    </graphicData>
+    <thingClass>FleshHive.Projectile_Explosive_Spit</thingClass>
+    <projectile>
+      <useGraphicClass>True</useGraphicClass>
+      <shadowSize>1</shadowSize>
+      <damageDef>Bomb</damageDef>
+      <spinRate>20</spinRate>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>41</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <explosionRadius>1.95</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>SpitterSpitLands</soundExplode> 
+      <filthCount>1</filthCount>  
+      <doExplosionVFX>false</doExplosionVFX>
+    </projectile> 
+  </ThingDef>
+
+
+</Defs>

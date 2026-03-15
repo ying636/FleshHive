@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_PutPawnInParasitePod</defName>
+        <label>carrry pawn to parasite pod</label>
+        <giverClass>FleshHive.WorkGiver_FillParasitePod</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>carry</verb>
+        <gerund>carring</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>19</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef> 
+
+</Defs> 
