@@ -111,10 +111,7 @@
         <tags>
           <li>Flesh</li>
         </tags>
-      </li>
-      <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
-        <category>Flesh</category>
-      </li>
+      </li> 
     </comps>
   </ThingDef>
 

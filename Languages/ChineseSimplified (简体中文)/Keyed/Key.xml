@@ -15,4 +15,9 @@
     <Unparasitized>未被寄生</Unparasitized>
     <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
 
+    <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
+
+    <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
+    <ParasitismAbility>寄生能力</ParasitismAbility>
+
 </LanguageData>
