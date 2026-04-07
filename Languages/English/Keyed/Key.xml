@@ -1,5 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <FleshParasitePod_CancelInsert>Cancel insert</FleshParasitePod_CancelInsert>
+  <FleshParasitePod_Start>Start</FleshParasitePod_Start>
+  <FleshParasitePod_ParasitizedFleshBeasts>Parasitized flesh beasts</FleshParasitePod_ParasitizedFleshBeasts>
+  <FleshParasitePod_Remove>Remove</FleshParasitePod_Remove>
+  <FleshParasitePod_InsufficientCapacity>Cannot parasite: insufficient capacity</FleshParasitePod_InsufficientCapacity>
 
 </LanguageData>

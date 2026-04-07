@@ -7,4 +7,10 @@
     <reportString>carrry TargetA to TargetB.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_EnterParasitePod</defName>
+    <driverClass>FleshHive.JobDriver_EnterParasitePod</driverClass>
+    <reportString>enter parasite pod.</reportString>
+  </JobDef>
+
 </Defs> 

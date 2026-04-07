@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshHive</defName>
@@ -35,7 +35,7 @@
     <costList>
       <InsectJelly>50</InsectJelly>
     </costList>
-    <designationCategory>HCF_Hive</designationCategory>
+    <designationCategory>FH_Flesh</designationCategory>
     <building>
       <storageGroupTag>Hive</storageGroupTag>
       <fixedStorageSettings>
@@ -150,7 +150,7 @@
     <costList>
       <InsectJelly>50</InsectJelly>
     </costList>
-    <designationCategory>HCF_Hive</designationCategory>
+    <designationCategory>FH_Flesh</designationCategory>
     <building>
 
     </building>

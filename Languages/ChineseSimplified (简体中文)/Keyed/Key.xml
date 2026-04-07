@@ -20,4 +20,12 @@
     <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
     <ParasitismAbility>寄生能力</ParasitismAbility>
 
+    <FleshParasitePod_CancelInsert>取消植入</FleshParasitePod_CancelInsert>
+    <FleshParasitePod_Start>开始</FleshParasitePod_Start>
+    <FleshParasitePod_ParasitizedFleshBeasts>已寄生血肉兽</FleshParasitePod_ParasitizedFleshBeasts>
+    <FleshParasitePod_Remove>移除</FleshParasitePod_Remove>
+    <FleshParasitePod_InsufficientCapacity>无法寄生、空间不足</FleshParasitePod_InsufficientCapacity>
+    <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
+    <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
+
 </LanguageData>
