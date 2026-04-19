@@ -359,6 +359,55 @@
         <active>false</active>
         <fillCount>10</fillCount>
       </li>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Trispike/Attachments/Side/Trispike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Trispike/Attachments/Side/Trispike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Trispike/Attachments/Top/Trispike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDefs>
           <li>FH_Parasitism_BoneSpikeShot</li>

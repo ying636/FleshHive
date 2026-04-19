@@ -164,7 +164,7 @@
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Item/FH_NexusmeldSeed</texPath>
-      <drawSize>(.75, .75)</drawSize> 
+      <drawSize>(.75, .75)</drawSize>
     </graphicData>
     <thingClass>FleshHive.Projectile_Explosive_Spit</thingClass>
     <projectile>
@@ -177,10 +177,10 @@
       <arcHeightFactor>1</arcHeightFactor>
       <explosionRadius>1.95</explosionRadius>
       <flyOverhead>true</flyOverhead>
-      <soundExplode>SpitterSpitLands</soundExplode> 
-      <filthCount>1</filthCount>  
+      <soundExplode>SpitterSpitLands</soundExplode>
+      <filthCount>1</filthCount>
       <doExplosionVFX>false</doExplosionVFX>
-    </projectile> 
+    </projectile>
   </ThingDef>
 
   <AbilityDef>
@@ -218,13 +218,15 @@
     <abilityClass>FleshHive.Effect.Ability_TrispikeRelease</abilityClass>
     <aiCanUse>true</aiCanUse>
     <cooldownTicksRange>300000</cooldownTicksRange>
+    <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
       <warmupTime>0.5</warmupTime>
       <range>3</range>
       <ai_IsWeapon>false</ai_IsWeapon>
       <targetParams>
-        <canTargetLocations>true</canTargetLocations>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
       </targetParams>
     </verbProperties>
     <comps>
