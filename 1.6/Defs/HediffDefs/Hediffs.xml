@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 
@@ -14,7 +14,7 @@
         <disappearsAfterTicks>2500~5000</disappearsAfterTicks>
         <showRemainingTime>true</showRemainingTime>
       </li>
-      <li Class="HediffCompProperties_DisappearsOnDeath" /> 
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
     <stages>
       <li>
@@ -35,7 +35,7 @@
         <disappearsAfterTicks>5000</disappearsAfterTicks>
         <showRemainingTime>true</showRemainingTime>
       </li>
-      <li Class="HediffCompProperties_DisappearsOnDeath" /> 
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
     </comps>
     <stages>
       <li>
@@ -56,6 +56,27 @@
         <minSeverity>0</minSeverity>
       </li>
     </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Fingerspike/Attachments/Fingerspike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
   </HediffDef>
 
 </Defs>
