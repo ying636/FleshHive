@@ -183,5 +183,33 @@
     </projectile> 
   </ThingDef>
 
+  <AbilityDef>
+    <defName>FH_Parasitism_BoneSpikeShot</defName>
+    <label>骨刺射击</label>
+    <description>发射一枚骨刺。</description>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>240</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>3</range>
+      <burstShotCount>1</burstShotCount>
+      <defaultProjectile>FH_Spike_Parasitism_BoneSpike</defaultProjectile>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="SpikeBase">
+    <defName>FH_Spike_Parasitism_BoneSpike</defName>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Stab</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
 
 </Defs>

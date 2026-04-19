@@ -54,6 +54,12 @@
     <stages>
       <li>
         <minSeverity>0</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
       </li>
     </stages>
     <comps>
@@ -75,6 +81,260 @@
             </renderNode>
           </li>
         </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Puffspike</defName>
+    <label>肺血兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>完全免疫哮喘与肺瘟，并治愈宿主肺中的这些疾病。移动速度提升且更耐受毒性环境。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.06</painFactor>
+        <statFactors>
+          <MoveSpeed>1.1</MoveSpeed>
+          <ToxicResistance>1.3</ToxicResistance>
+        </statFactors>
+        <makeImmuneTo>
+          <li>Asthma</li>
+          <li>LungRot</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_Immunity">
+        <hds>
+          <li>Asthma</li>
+          <li>LungRot</li>
+        </hds>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_BoneSpikeShot</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Gutspike</defName>
+    <label>胃血兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>几乎不会食物中毒，并对肠道蠕虫具备免疫与清除能力。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.08</painFactor>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <makeImmuneTo>
+          <li>GutWorms</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_Immunity">
+        <hds>
+          <li>GutWorms</li>
+        </hds>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Acidbulb_Launch</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Whipspike</defName>
+    <label>鞭爪兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>宿主体表生长血肉触鞭，能够鞭击附近敌人。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Cut</damageDef>
+            <damageAmount>20.5</damageAmount>
+            <cooldown>5</cooldown>
+            <armorPenetration>0.6</armorPenetration>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Whipspike/FH_Whipspike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Paraspike</defName>
+    <label>寄血兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>降低失血速率并免疫感染。被寄血兽寄生的生物，其后代也会继承这种寄生。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.06</painFactor>
+        <totalBleedFactor>0.75</totalBleedFactor>
+        <makeImmuneTo>
+          <li>WoundInfection</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_Immunity">
+        <hds>
+          <li>WoundInfection</li>
+        </hds>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_BoneSpikeShot</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Shieldspike</defName>
+    <label>盾爪兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>宿主获得更强的护甲与一只盾爪。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>1.1</ArmorRating_Blunt>
+          <ArmorRating_Heat>1.2</ArmorRating_Heat>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>16</damageAmount>
+            <cooldown>3</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Shieldspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Toughspike</defName>
+    <label>双爪兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>宿主体表生长两条骨刺触手，提高全局工作效率。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.15</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Paraspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Paraspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
       </li>
     </comps>
   </HediffDef>
