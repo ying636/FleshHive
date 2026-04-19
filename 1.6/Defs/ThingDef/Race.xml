@@ -160,6 +160,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon1</iconPath>
         <cost>1</cost>
+        <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Puffspike</hediff>
         <effect>完全免疫哮喘和肺瘟，并会治愈宿主肺中的这些疾病；移动速度+10%；有毒环境抗性+30%；疼痛+6%</effect>
         <abilityLabel>寄生武器：骨刺射击</abilityLabel>
@@ -332,6 +333,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon3</iconPath>
         <cost>1</cost>
+        <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Gutspike</hediff>
         <effect>食物中毒系数×0%；抗感染：肠道蠕虫；疼痛+8%</effect>
         <abilityLabel>寄生武器：酸浆喷射</abilityLabel>
@@ -423,6 +425,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon4</iconPath>
         <cost>1</cost>
+        <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Paraspike</hediff>
         <effect>失血速率×75%；抗感染：感染；疼痛+6%；后代继承寄血兽寄生效果</effect>
         <abilityLabel>寄生武器：骨刺射击</abilityLabel>
