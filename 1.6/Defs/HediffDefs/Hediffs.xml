@@ -339,4 +339,82 @@
     </comps>
   </HediffDef>
 
+  <HediffDef>
+    <defName>FH_Parasitism_Trispike</defName>
+    <label>三爪兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>宿主可以释放2只随机的小型血肉兽。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_TrispikeCharge">
+        <active>false</active>
+        <fillCount>10</fillCount>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>FH_Parasitism_BoneSpikeShot</li>
+          <li>FH_Trispike_ReleaseSpikes</li>
+        </abilityDefs>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Shatterspike</defName>
+    <label>碎爪兽寄生</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>宿主体表生长碎骨喷发触手，能够远程发射骨刺碎片。</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li Class="FleshHive.TentacleProperties_RangeAttack">
+            <tentacleClass>FleshHive.Tentacle_RangeAttack</tentacleClass>
+            <projectile>FH_Bullet_BoneShard</projectile>
+            <range>16</range>
+            <rotatingTime>60</rotatingTime>
+            <cooldown>1.5</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
 </Defs>

@@ -511,6 +511,14 @@
           <li>Flesh</li>
         </tags>
       </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_SkillIcon8</iconPath>
+        <cost>1</cost>
+        <hediff>FH_Parasitism_Shatterspike</hediff>
+        <effect>“血肉寄生”心情-6；魅力-1</effect>
+        <abilityLabel>寄生武器：碎骨喷发</abilityLabel>
+        <abilityDescription>远程发射骨刺碎片。</abilityDescription>
+      </li>
     </comps>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>
@@ -954,6 +962,15 @@
         <tags>
           <li>Flesh</li>
         </tags>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_SkillIcon7</iconPath>
+        <cost>1</cost>
+        <drawIcon>false</drawIcon>
+        <hediff>FH_Parasitism_Trispike</hediff>
+        <effect>“血肉寄生”心情-6；魅力-1；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天）</effect>
+        <abilityLabel>寄生武器：骨刺射击</abilityLabel>
+        <abilityDescription>发射骨刺，造成刺击伤害。</abilityDescription>
       </li>
     </comps>
     <tools>

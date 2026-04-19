@@ -211,5 +211,44 @@
     </projectile>
   </ThingDef>
 
+  <AbilityDef>
+    <defName>FH_Trispike_ReleaseSpikes</defName>
+    <label>释放血肉兽</label>
+    <description>释放2只随机的小型血肉兽。</description>
+    <abilityClass>FleshHive.Effect.Ability_TrispikeRelease</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>300000</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>3</range>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.Effect.CompProperties_AbilityTrispikeRelease" />
+    </comps>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Bullet_BoneShard</defName>
+    <label>bone shard</label>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
+      <drawSize>(.35, .35)</drawSize>
+    </graphicData>
+    <thingClass>Bullet</thingClass>
+    <projectile>
+      <damageDef>Stab</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>55</speed>
+      <stoppingPower>3.0</stoppingPower>
+    </projectile>
+  </ThingDef>
+
 
 </Defs>

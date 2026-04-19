@@ -13,4 +13,10 @@
     <reportString>enter parasite pod.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_FillTrispikeCharge</defName>
+    <driverClass>FleshHive.Effect.JobDriver_FillTrispikeCharge</driverClass>
+    <reportString>fill trispike charge.</reportString>
+  </JobDef>
+
 </Defs> 
