@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <ThingDef ParentName="BaseFleshbeast" Name="FH_BaseFleshBeast" Abstract="True">
@@ -46,7 +46,7 @@
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Fingerspike</defName>
-    <label>fingerspike</label>
+    <label>Fingerspike</label>
     <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
     <uiIconPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</uiIconPath>
     <race>
@@ -632,7 +632,7 @@
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Toughspike</defName>
-    <label>toughspike</label>
+    <label>aaa</label>
     <description>A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly.</description>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>

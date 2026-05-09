@@ -2,7 +2,7 @@
 <LanguageData>
   
   <!-- EN: fingerspike -->
-  <FH_Fingerspike.label>TODO</FH_Fingerspike.label>
+  <FH_Fingerspike.label>你好 ̴́͊́̋͒̍̈͛̕͝͠ ̴̡̢̰̬͚̬͓̻̰̯͓̥̈́̐̾̆̾͆̇̀̑̽́̄͜ ̸̢̞͔̜̰͔͕́̾̾͆̀͆̔̿ ̵̤̭̟͗͜ ̸̫̙͉̠̺͙̺͐̈́̇͌̒͝ ̸̢̧̜̤̟̱͔̤̩͙̻̻͋͒͋̿͆͊̒̿͐̏́͜ͅ ̸̧̦̬͔̼̩̯̤̼̋̆̑̄͜͠ͅ ̵̙̳̅̃̃̓̔̑͋̐̋̎̐̇͝<</FH_Fingerspike.label>
   <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
   <FH_Fingerspike.description>TODO</FH_Fingerspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
@@ -86,7 +86,7 @@
   <FH_Shieldspike.tools.head.label>TODO</FH_Shieldspike.tools.head.label>
   
   <!-- EN: toughspike -->
-  <FH_Toughspike.label>TODO</FH_Toughspike.label>
+  <FH_Toughspike.label>你好 ̴́͊́̋͒̍̈͛̕͝͠ ̴̡̢̰̬͚̬͓̻̰̯͓̥̈́̐̾̆̾͆̇̀̑̽́̄͜ ̸̢̞͔̜̰͔͕́̾̾͆̀͆̔̿ ̵̤̭̟͗͜ ̸̫̙͉̠̺͙̺͐̈́̇͌̒͝ ̸̢̧̜̤̟̱͔̤̩͙̻̻͋͒͋̿͆͊̒̿͐̏́͜ͅ ̸̧̦̬͔̼̩̯̤̼̋̆̑̄͜͠ͅ ̵̙̳̅̃̃̓̔̑͋̐̋̎̐̇͝<</FH_Toughspike.label>
   <!-- EN: A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly. -->
   <FH_Toughspike.description>TODO</FH_Toughspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
