@@ -11,9 +11,7 @@
             <li>FH_Unit_Puffspike</li>
             <li>FH_Unit_Paraspike</li>
             <li>FH_Unit_Fingerspike</li>
-            <li>FH_Unit_Gutspike</li>
-            <li>Test</li>
-            <li>Test2</li>
+            <li>FH_Unit_Gutspike</li> 
         </units>
     </HiveCreatureFramework.SpawnCategoryDef>
 
@@ -62,27 +60,6 @@
         <label>Gutspike</label>
         <description>Gutspike</description>
         <kind>FH_Gutspike</kind>
-        <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
-        </costs>
-    </HiveCreatureFramework.UnitDef>
-
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>Test</defName>
-        <label>Gutspike</label>
-        <description>Gutspike</description>
-        <kind>FH_Shatterspike</kind>
-        <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
-        </costs>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>Test2</defName>
-        <label>Gutspike</label>
-        <description>Gutspike</description>
-        <kind>FH_Spitbulb</kind>
         <costs>
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>

@@ -72,17 +72,20 @@
       </defaultStorageSettings>
     </building>
     <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
         <resources>
           <FH_Resource_Nutrition>500</FH_Resource_Nutrition>
         </resources>
         <tags>
           <li>Flesh</li>
+          <li>FleshHive</li>
         </tags>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
         <UnitCategories>
           <li>FH_Category_LittleFleshBeast</li>
+          <li>FH_Category_MeldBeast</li>
         </UnitCategories>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
@@ -110,8 +113,9 @@
         <healResource>FH_Resource_Nutrition</healResource>
         <tags>
           <li>Flesh</li>
+          <li>FleshHive</li>
         </tags>
-      </li> 
+      </li>
     </comps>
   </ThingDef>
 
@@ -160,7 +164,7 @@
           <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Outline</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>(3.6,2.6)</drawSize>
-        </outlineGraphic> 
+        </outlineGraphic>
       </li>
     </comps>
   </ThingDef>

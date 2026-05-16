@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
     <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
@@ -27,5 +27,14 @@
     <FleshParasitePod_InsufficientCapacity>无法寄生、空间不足</FleshParasitePod_InsufficientCapacity>
     <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
     <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
+
+    <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
+    <HCF_AddParasite>添加寄生兽</HCF_AddParasite>
+    <HCF_SelectParasite>选择寄生血肉兽</HCF_SelectParasite>
+    <HCF_Parasite_NoSpace>寄生空间不足（剩余{0}，需要{1}）</HCF_Parasite_NoSpace>
+    <HCF_Parasite_CapacityInfo>已使用寄生空间：{0}/{1}</HCF_Parasite_CapacityInfo>
+    <HCF_Parasite_NoChoices>没有可用的寄生血肉兽</HCF_Parasite_NoChoices>
+    <HCF_Parasite_AlreadyAdded>已添加此寄生兽</HCF_Parasite_AlreadyAdded>
+    <HCF_Parasite_Noun>寄生</HCF_Parasite_Noun>
 
 </LanguageData>

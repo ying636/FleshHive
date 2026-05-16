@@ -7,4 +7,13 @@
   <FleshParasitePod_Remove>Remove</FleshParasitePod_Remove>
   <FleshParasitePod_InsufficientCapacity>Cannot parasite: insufficient capacity</FleshParasitePod_InsufficientCapacity>
 
+  <HCF_FormulaCategory_Parasite>Parasite</HCF_FormulaCategory_Parasite>
+  <HCF_AddParasite>Add Parasite</HCF_AddParasite>
+  <HCF_SelectParasite>Select Parasite</HCF_SelectParasite>
+  <HCF_Parasite_NoSpace>Insufficient parasite space (remaining {0}, need {1})</HCF_Parasite_NoSpace>
+  <HCF_Parasite_CapacityInfo>Used parasite space: {0}/{1}</HCF_Parasite_CapacityInfo>
+  <HCF_Parasite_NoChoices>No available parasite beasts</HCF_Parasite_NoChoices>
+  <HCF_Parasite_AlreadyAdded>Already added</HCF_Parasite_AlreadyAdded>
+  <HCF_Parasite_Noun>Parasite</HCF_Parasite_Noun>
+
 </LanguageData>

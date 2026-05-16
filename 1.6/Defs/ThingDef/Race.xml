@@ -537,6 +537,8 @@
         <dividePawnCount>2</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
         </dividePawnKindOptions>
       </deathAction>
       <lifeStageAges>
@@ -677,6 +679,13 @@
       <lifeExpectancy>15</lifeExpectancy>
       <renderTree>Toughspike</renderTree>
       <canBecomeShambler>true</canBecomeShambler>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>2</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Fingerspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
       <lifeStageAges>
         <li>
           <def>FullyFormed_Toughspike</def>
@@ -818,6 +827,13 @@
       <baseHealthScale>1.2</baseHealthScale>
       <lifeExpectancy>15</lifeExpectancy>
       <canBecomeShambler>true</canBecomeShambler>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>2</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Fingerspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
       <lifeStageAges>
         <li>
           <def>FullyFormed_Toughspike</def>
@@ -931,7 +947,9 @@
         <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
         <dividePawnKindOptions>
-          <li>Fingerspike</li>
+          <li>FH_Fingerspike</li>
+          <li>FH_Puffspike</li>
+          <li>FH_Whipspike</li>
         </dividePawnKindOptions>
       </deathAction>
       <lifeStageAges>
@@ -1074,8 +1092,10 @@
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>4</dividePawnCount>
         <dividePawnKindOptions>
-          <li>Toughspike</li>
-          <li>Trispike</li>
+          <li>FH_Toughspike</li>
+          <li>FH_Trispike</li>
+          <li>FH_Shieldspike</li>
+          <li>FH_Shatterspike</li>
         </dividePawnKindOptions>
       </deathAction>
       <renderTree>Bulbfreak</renderTree>
@@ -1216,8 +1236,10 @@
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>4</dividePawnCount>
         <dividePawnKindOptions>
-          <li>Toughspike</li>
-          <li>Trispike</li>
+          <li>FH_Toughspike</li>
+          <li>FH_Trispike</li>
+          <li>FH_Shieldspike</li>
+          <li>FH_Shatterspike</li>
         </dividePawnKindOptions>
       </deathAction>
       <renderTree>Bulbfreak</renderTree>
@@ -1362,8 +1384,10 @@
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>4</dividePawnCount>
         <dividePawnKindOptions>
-          <li>Toughspike</li>
-          <li>Trispike</li>
+          <li>FH_Toughspike</li>
+          <li>FH_Trispike</li>
+          <li>FH_Shieldspike</li>
+          <li>FH_Shatterspike</li>
         </dividePawnKindOptions>
       </deathAction>
       <renderTree>Bulbfreak</renderTree>

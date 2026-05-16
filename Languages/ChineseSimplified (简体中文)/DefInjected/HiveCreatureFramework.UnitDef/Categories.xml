@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Fingerspike -->
@@ -35,5 +35,35 @@
   <Test2.label>TODO</Test2.label>
   <!-- EN: Gutspike -->
   <Test2.description>TODO</Test2.description>
+  
+  <!-- EN: Nexusmeld -->
+  <FH_Unit_Nexusmeld.label>统合母兽</FH_Unit_Nexusmeld.label>
+  <!-- EN: Nexusmeld -->
+  <FH_Unit_Nexusmeld.description>统合母兽</FH_Unit_Nexusmeld.description>
+  
+  <!-- EN: Furiousmeld -->
+  <FH_Unit_Furiousmeld.label>暴怒母兽</FH_Unit_Furiousmeld.label>
+  <!-- EN: Furiousmeld -->
+  <FH_Unit_Furiousmeld.description>暴怒母兽</FH_Unit_Furiousmeld.description>
+  
+  <!-- EN: Bastionmeld -->
+  <FH_Unit_Bastionmeld.label>铁骸母兽</FH_Unit_Bastionmeld.label>
+  <!-- EN: Bastionmeld -->
+  <FH_Unit_Bastionmeld.description>铁骸母兽</FH_Unit_Bastionmeld.description>
+  
+  <!-- EN: Fissionmeld -->
+  <FH_Unit_Fissionmeld.label>裂殖母兽</FH_Unit_Fissionmeld.label>
+  <!-- EN: Fissionmeld -->
+  <FH_Unit_Fissionmeld.description>裂殖母兽</FH_Unit_Fissionmeld.description>
+  
+  <!-- EN: Dreadmeld -->
+  <FH_Unit_Dreadmeld.label>惊惧母兽</FH_Unit_Dreadmeld.label>
+  <!-- EN: Dreadmeld -->
+  <FH_Unit_Dreadmeld.description>惊惧母兽</FH_Unit_Dreadmeld.description>
+  
+  <!-- EN: Fleshtitan -->
+  <FH_Unit_Fleshtitan.label>血肉泰坦</FH_Unit_Fleshtitan.label>
+  <!-- EN: Fleshtitan -->
+  <FH_Unit_Fleshtitan.description>血肉泰坦</FH_Unit_Fleshtitan.description>
   
 </LanguageData>

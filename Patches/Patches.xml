@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="Dreadmeld"]/comps/li[compClass="CompDreadmeld"]</xpath>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Dreadmeld"]/comps</xpath>
+		<value>
+			<li Class="FleshHive.CompProperties_MeldSplit">
+				<firstHitSpawnKindOptions>
+					<li>FH_Fingerspike</li>
+				</firstHitSpawnKindOptions>
+				<firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+				<firstHitSpawnRadius>5</firstHitSpawnRadius>
+				<thresholdSpawnKindOptions>
+					<li>FH_Fingerspike</li>
+					<li>FH_Whipspike</li>
+					<li>FH_Gutspike</li>
+					<li>FH_Paraspike</li>
+					<li>FH_Puffspike</li>
+				</thresholdSpawnKindOptions>
+				<thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
+				<damageThreshold>200</damageThreshold>
+			</li>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="Trispike"]/race/deathAction/dividePawnKindOptions</xpath>
 		<value>
@@ -9,8 +35,30 @@
 			<li>FH_Fingerspike</li>
 			<li>FH_Paraspike</li>
 			<li>FH_Gutspike</li>
+			<li>FH_Toughspike</li>
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Bulbfreak"]/race/deathAction/dividePawnKindOptions</xpath>
+		<value>
+			<li>FH_Toughspike</li>
+			<li>FH_Trispike</li>
+			<li>FH_Shieldspike</li>
+			<li>FH_Shatterspike</li>
+			<li>FH_Acidbulb</li>
+			<li>FH_Spitbulb</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Dreadmeld"]/race/deathAction/dividePawnKindAdditionalForced</xpath>
+		<value>
+			<li>FH_Toughspike</li>
+			<li>FH_Trispike</li>
+			<li>FH_Shieldspike</li>
+			<li>FH_Shatterspike</li>
+		</value>
+	</Operation>
 
 </Patch>

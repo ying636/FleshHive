@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 
@@ -173,7 +173,7 @@
           <li>
             <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
             <damageDef>Cut</damageDef>
-            <damageAmount>20.5</damageAmount>
+            <damageAmount>12</damageAmount>
             <cooldown>5</cooldown>
             <armorPenetration>0.6</armorPenetration>
             <renderNode>

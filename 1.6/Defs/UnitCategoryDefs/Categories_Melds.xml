@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.SpawnCategoryDef>
+        <defName>FH_Category_MeldBeast</defName>
+        <label>Meld beast</label>
+        <description>Meld beast</description>
+        <color>(0.8, 0.2, 0.4)</color>
+        <units>
+            <li>FH_Unit_Nexusmeld</li>
+            <li>FH_Unit_Furiousmeld</li>
+            <li>FH_Unit_Bastionmeld</li>
+            <li>FH_Unit_Fissionmeld</li> 
+            <li>FH_Unit_Dreadmeld</li>
+            <li>FH_Unit_Fleshtitan</li>
+        </units>
+    </HiveCreatureFramework.SpawnCategoryDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Nexusmeld</defName>
+        <label>Nexusmeld</label>
+        <description>Nexusmeld</description>
+        <costs>
+            <FH_Resource_Nutrition>36</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Nexusmeld</kind>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Furiousmeld</defName>
+        <label>Furiousmeld</label>
+        <description>Furiousmeld</description>
+        <costs>
+            <FH_Resource_Nutrition>48</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Furiousmeld</kind>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Bastionmeld</defName>
+        <label>Bastionmeld</label>
+        <description>Bastionmeld</description>
+        <costs>
+            <FH_Resource_Nutrition>42</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Bastionmeld</kind>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Fissionmeld</defName>
+        <label>Fissionmeld</label>
+        <description>Fissionmeld</description>
+        <costs>
+            <FH_Resource_Nutrition>30</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Fissionmeld</kind>
+    </HiveCreatureFramework.UnitDef> 
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Fleshtitan</defName>
+        <label>Fleshtitan</label>
+        <description>Fleshtitan</description>
+        <costs>
+            <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Fleshtitan</kind>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Dreadmeld</defName>
+        <label>Dreadmeld</label>
+        <description>Dreadmeld</description>
+        <costs>
+            <FH_Resource_Nutrition>54</FH_Resource_Nutrition>
+        </costs>
+        <kind>FH_Dreadmeld</kind>
+    </HiveCreatureFramework.UnitDef>
+
+</Defs>

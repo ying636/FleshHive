@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: fingerspike -->
@@ -27,5 +27,23 @@
   
   <!-- EN: 鞭爪兽 -->
   <FH_Whipspike.label>TODO</FH_Whipspike.label>
+  
+  <!-- EN: nexusmeld -->
+  <FH_Nexusmeld.label>统合母兽</FH_Nexusmeld.label>
+  
+  <!-- EN: furiousmeld -->
+  <FH_Furiousmeld.label>暴怒母兽</FH_Furiousmeld.label>
+  
+  <!-- EN: bastionmeld -->
+  <FH_Bastionmeld.label>铁骸母兽</FH_Bastionmeld.label>
+  
+  <!-- EN: fissionmeld -->
+  <FH_Fissionmeld.label>裂殖母兽</FH_Fissionmeld.label>
+  
+  <!-- EN: dreadmeld -->
+  <FH_Dreadmeld.label>惊惧母兽</FH_Dreadmeld.label>
+  
+  <!-- EN: fleshtitan -->
+  <FH_Fleshtitan.label>血肉泰坦</FH_Fleshtitan.label>
   
 </LanguageData>
