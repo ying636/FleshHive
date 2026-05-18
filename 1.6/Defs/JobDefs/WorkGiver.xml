@@ -14,6 +14,36 @@
         <requiredCapacities>
             <li>Manipulation</li>
         </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_RefillTwistedFlesh</defName>
+        <label>refill twisted flesh</label>
+        <giverClass>FleshHive.WorkGiver_RefillTwistedFlesh</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>refill</verb>
+        <gerund>refilling</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>20</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_RefillTwistedFlesh_Help</defName>
+        <label>refill others' twisted flesh</label>
+        <giverClass>FleshHive.WorkGiver_RefillTwistedFlesh_Help</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>refill</verb>
+        <gerund>refilling</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>21</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
     </WorkGiverDef> 
 
 </Defs> 

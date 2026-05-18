@@ -8,26 +8,27 @@
     <label>nexusmeld</label>
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. The nexusmeld is the core of the fleshbeast swarm's coordination, using its powerful psychic abilities to command other fleshbeasts in assaults. Nexusmelds rarely appear in raids, preferring to lurk within nests supported by fleshmass hearts, with which they share a psychic bond.</description>
     <statBases>
-      <MoveSpeed>3.5</MoveSpeed>
+      <MoveSpeed>2.8</MoveSpeed>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
-      <ToxicResistance>0.5</ToxicResistance>
+      <ToxicResistance>0.8</ToxicResistance>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld_east</uiIconPath>
     <race>
       <body>Bulbfreak</body>
-      <baseBodySize>3.5</baseBodySize>
-      <baseHealthScale>0.4</baseHealthScale>
+      <baseBodySize>3.8</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
       <deathAction Class="DeathActionProperties_Divide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
+        <dividePawnCount>5</dividePawnCount>
         <dividePawnKindOptions>
-          <li>FH_Trispike</li>
           <li>FH_Toughspike</li>
-          <li>FH_Fingerspike</li>
-          <li>FH_Whipspike</li>
+          <li>FH_Trispike</li>
+          <li>FH_Shieldspike</li>
+          <li>FH_Shatterspike</li>
+          <li>FH_Bulbfreak</li>
         </dividePawnKindOptions>
       </deathAction>
       <lifeStageAges>
@@ -58,20 +59,29 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_MeldSplit">
-        <firstHitSpawnKindOptions>
-          <li>FH_Fingerspike</li>                                                                               
-        </firstHitSpawnKindOptions>
-        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
-        <firstHitSpawnRadius>5</firstHitSpawnRadius>
-        <thresholdSpawnKindOptions>
+        <spawnOptions>
           <li>FH_Fingerspike</li>
           <li>FH_Whipspike</li>
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-        </thresholdSpawnKindOptions>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
         <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
         <damageThreshold>200</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+      <li Class="FleshHive.CompProperties_FH_UnifyAura" />
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>300</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_ScarletField</iconPath>
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Nexusmeld</hediff>
+        <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -80,7 +90,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>10</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
@@ -91,7 +101,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>10</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
@@ -117,7 +127,11 @@
     <label>nexusmeld</label>
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>FH_Nexusmeld</race>
-    <combatPower>500</combatPower>
+    <combatPower>600</combatPower>
+    <abilities>
+      <li>FH_FleshBerserk</li>
+      <li>FH_FleshSpread</li>
+    </abilities>
     <startingHediffs>
       <li>
         <def>Regeneration</def>
@@ -135,25 +149,27 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 暴怒母兽 -->
+  <!-- 暴怒母�?-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Furiousmeld</defName>
     <label>furiousmeld</label>
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses, clearing a path for lesser fleshbeasts to overwhelm the enemy.</description>
     <statBases>
-      <MoveSpeed>4.2</MoveSpeed>
+      <MoveSpeed>1.25</MoveSpeed>
       <MinimumContainmentStrength>120</MinimumContainmentStrength>
-      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.3</ArmorRating_Heat>
-      <ToxicResistance>0.5</ToxicResistance>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.00</ArmorRating_Heat>
+      <ToxicResistance>0.80</ToxicResistance>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld_east</uiIconPath>
     <race>
       <body>Bulbfreak</body>
-      <baseBodySize>3.8</baseBodySize>
-      <baseHealthScale>0.6</baseHealthScale>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
@@ -196,66 +212,74 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_MeldSplit">
-        <firstHitSpawnKindOptions>
-          <li>FH_Fingerspike</li>
-        </firstHitSpawnKindOptions>
-        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
-        <firstHitSpawnRadius>5</firstHitSpawnRadius>
-        <thresholdSpawnKindOptions>
+        <spawnOptions>
           <li>FH_Fingerspike</li>
           <li>FH_Whipspike</li>
           <li>FH_Gutspike</li>
-          <li>FH_Toughspike</li>
-        </thresholdSpawnKindOptions>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
         <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
         <damageThreshold>200</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+      <li Class="FleshHive.CompProperties_ScarletField" />
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>400</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_RampageCharge</iconPath>
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Furiousmeld</hediff>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
       <li>
-        <label>tentacle</label>
+        <label>left horn</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
+          <li>Cut</li>
         </capacities>
-        <power>14</power>
+        <power>34</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
       </li>
       <li>
-        <label>tentacle</label>
+        <label>right horn</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
+          <li>Cut</li>
         </capacities>
-        <power>14</power>
+        <power>34</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
       </li>
       <li>
-        <label>tentacle</label>
+        <label>carapace</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>14</power>
+        <power>26</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-        <linkedBodyPartsGroup>ThirdTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>5</power>
+        <power>26</power>
         <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
       </li>
     </tools>
   </ThingDef>
@@ -266,6 +290,10 @@
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>FH_Furiousmeld</race>
     <combatPower>650</combatPower>
+    <abilities>
+      <li>FH_ScarletField</li>
+      <li>FH_RampageCharge</li>
+    </abilities>
     <startingHediffs>
       <li>
         <def>Regeneration</def>
@@ -343,19 +371,19 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_MeldSplit">
-        <firstHitSpawnKindOptions>
+        <spawnOptions>
           <li>FH_Fingerspike</li>
-        </firstHitSpawnKindOptions>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
         <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>
-        <thresholdSpawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Paraspike</li>
-          <li>FH_Shatterspike</li>
-          <li>FH_Puffspike</li>
-        </thresholdSpawnKindOptions>
         <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
         <damageThreshold>200</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <tools>
@@ -476,20 +504,19 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_MeldSplit">
-        <firstHitSpawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Whipspike</li>
-        </firstHitSpawnKindOptions>
-        <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
-        <firstHitSpawnRadius>5</firstHitSpawnRadius>
-        <thresholdSpawnKindOptions>
+        <spawnOptions>
           <li>FH_Fingerspike</li>
           <li>FH_Whipspike</li>
           <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-        </thresholdSpawnKindOptions>
+        </spawnOptions>
+        <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
         <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
         <damageThreshold>150</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <tools>
@@ -553,7 +580,7 @@
     </lifeStages>
   </PawnKindDef> 
 
-  <!-- 血肉泰坦 -->
+  <!-- 血肉泰�?-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fleshtitan</defName>
@@ -613,21 +640,19 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_MeldSplit">
-        <firstHitSpawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Whipspike</li>
-        </firstHitSpawnKindOptions>
-        <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
-        <firstHitSpawnRadius>5</firstHitSpawnRadius>
-        <thresholdSpawnKindOptions>
+        <spawnOptions>
           <li>FH_Fingerspike</li>
           <li>FH_Whipspike</li>
           <li>FH_Gutspike</li>
-          <li>FH_Toughspike</li>
-          <li>FH_Shieldspike</li>
-        </thresholdSpawnKindOptions>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
         <thresholdSpawnPointsRange>200~400</thresholdSpawnPointsRange>
         <damageThreshold>300</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <tools>
@@ -782,19 +807,19 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_MeldSplit">
-        <firstHitSpawnKindOptions>
-          <li>FH_Fingerspike</li>
-        </firstHitSpawnKindOptions>
-        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
-        <firstHitSpawnRadius>5</firstHitSpawnRadius>
-        <thresholdSpawnKindOptions>
+        <spawnOptions>
           <li>FH_Fingerspike</li>
           <li>FH_Whipspike</li>
           <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-        </thresholdSpawnKindOptions>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
         <thresholdSpawnPointsRange>150~350</thresholdSpawnPointsRange>
         <damageThreshold>250</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <tools>

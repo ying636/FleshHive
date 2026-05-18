@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>FH_Unification</defName>
+    <label>flesh unification</label>
+    <description>The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.8, 0.2, 0.6)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+          <IncomingDamageFactor>0.75</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Berserk</defName>
+    <label>flesh berserk</label>
+    <description>The flesh beasts are driven into a frenzied berserk state.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.3</MoveSpeed>
+          <MeleeDamageFactor>1.5</MeleeDamageFactor>
+        </statFactors>
+        <label>berserk</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Nexusmeld</defName>
+    <label>nexusmeld parasitism</label>
+    <description>The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts.</description>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.8, 0.2, 0.6)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+        <label>nexusmeld parasitism</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>14</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Left Spike</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>14</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Right Spike</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_FleshSpread_Parasitism</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_TwistedFleshProducer">
+        <twistedFleshPerDay>200</twistedFleshPerDay>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_UnificationAura" />
+      <li Class="FleshHive.HediffCompProperties_Regeneration">
+        <regenHediff>Regeneration</regenHediff>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Furiousmeld</defName>
+    <label>furiousmeld parasitism</label>
+    <description>The furiousmeld latches onto the host, providing twisted flesh capacity, armor, and regeneration.</description>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+          <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.5</ArmorRating_Heat>
+        </statOffsets>
+        <label>furiousmeld parasitism</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_ParasitismWithShield">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>16</damageAmount>
+            <cooldown>3</cooldown>
+            <renderNode>
+              <debugLabel>Shield Claw</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Shieldspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>16</damageAmount>
+            <cooldown>3</cooldown>
+            <renderNode>
+              <debugLabel>Shield Claw</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Shieldspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_ScarletField</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_Regeneration">
+        <regenHediff>Regeneration</regenHediff>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_ScarletField">
+        <areaShieldRadius>4.5</areaShieldRadius>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

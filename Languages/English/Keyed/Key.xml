@@ -16,4 +16,10 @@
   <HCF_Parasite_AlreadyAdded>Already added</HCF_Parasite_AlreadyAdded>
   <HCF_Parasite_Noun>Parasite</HCF_Parasite_Noun>
 
+  <TwistedFleshCapacity>Twisted Flesh: {0}/{1}</TwistedFleshCapacity>
+
+  <ToggleTentacleAttackMode>Toggle {0}'s tentacle attack mode</ToggleTentacleAttackMode>
+  <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>
+  <TentacleAttackModeOff>Tentacle Attack: Off</TentacleAttackModeOff>
+
 </LanguageData>

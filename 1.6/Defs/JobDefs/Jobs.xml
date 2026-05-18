@@ -19,4 +19,16 @@
     <reportString>fill trispike charge.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_RefillTwistedFlesh</defName>
+    <driverClass>FleshHive.JobDriver_RefillTwistedFlesh</driverClass>
+    <reportString>refilling twisted flesh.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_RefillTwistedFlesh_Help</defName>
+    <driverClass>FleshHive.JobDriver_RefillTwistedFlesh_Help</driverClass>
+    <reportString>refilling TargetB's twisted flesh.</reportString>
+  </JobDef>
+
 </Defs> 

@@ -1,10 +1,12 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <ThingDef ParentName="BaseFleshbeast" Name="FH_BaseFleshBeast" Abstract="True">
     <thingClass>HiveCreatureFramework.Unit</thingClass>
     <comps>
       <li Class="HiveCreatureFramework.ControlCompProperties">
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <race>
@@ -16,6 +18,10 @@
   </ThingDef>
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LittleFleshBeast" Abstract="True">
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+    </comps>
     <statBases>
       <MoveSpeed>5.1</MoveSpeed>
       <MinimumContainmentStrength>20</MinimumContainmentStrength>
@@ -42,7 +48,7 @@
     </race>
   </ThingDef>
 
-  <!-- 单爪兽 -->
+  <!-- 单爪兽-->
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Fingerspike</defName>
@@ -131,7 +137,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 肺血兽 -->
+  <!-- 肺血兽-->
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Puffspike</defName>
@@ -209,7 +215,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 鞭爪兽 -->
+  <!-- 鞭爪兽-->
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Whipspike</defName>
@@ -244,7 +250,7 @@
         <cost>1</cost>
         <hediff>FH_Parasitism_Whipspike</hediff>
         <effect>魅力-1，“血肉寄生”心情-6</effect>
-        <abilityLabel>寄生武器：血肉触鞭</abilityLabel>
+        <abilityLabel>寄生武器：血肉触手</abilityLabel>
         <abilityDescription>宿主体表生长血肉触鞭，鞭击附近敌人造成利器伤害。</abilityDescription>
       </li>
     </comps>
@@ -301,7 +307,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 胃血兽 -->
+  <!-- 胃血兽-->
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Gutspike</defName>
@@ -392,7 +398,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 寄血兽 -->
+  <!-- 寄血兽-->
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Paraspike</defName>
@@ -485,7 +491,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 碎爪兽 -->
+  <!-- 碎爪兽-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Shatterspike</defName>
@@ -513,11 +519,13 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon8</iconPath>
-        <cost>1</cost>
+        <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
         <effect>“血肉寄生”心情-6；魅力-1</effect>
-        <abilityLabel>寄生武器：碎骨喷发</abilityLabel>
+        <abilityLabel>寄生武器：碎骨喷射</abilityLabel>
         <abilityDescription>远程发射骨刺碎片。</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <statBases>
@@ -630,7 +638,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 双爪兽 -->
+  <!-- 双爪兽-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Toughspike</defName>
@@ -664,11 +672,13 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon5</iconPath>
-        <cost>1</cost>
+        <cost>2</cost>
         <hediff>FH_Parasitism_Toughspike</hediff>
         <effect>“血肉寄生”心情-6；魅力-1；全局工作效率+15%；宿主获得两条骨刺触手</effect>
         <abilityLabel>寄生武器：骨刺触手</abilityLabel>
         <abilityDescription>宿主体表生长两条骨刺触手，造成刺击伤害。</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
@@ -780,7 +790,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 盾爪兽 -->
+  <!-- 盾爪兽-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Shieldspike</defName>
@@ -813,11 +823,13 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon6</iconPath>
-        <cost>1</cost>
+        <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
         <effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6</effect>
         <abilityLabel>寄生武器：盾爪</abilityLabel>
         <abilityDescription>宿主获得盾爪，钝击附近敌人。</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
@@ -925,7 +937,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 三爪兽 -->
+  <!-- 三爪兽-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Trispike</defName>
@@ -983,12 +995,14 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_SkillIcon7</iconPath>
-        <cost>1</cost>
+        <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
         <effect>“血肉寄生”心情-6；魅力-1；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天）</effect>
         <abilityLabel>寄生武器：骨刺射击</abilityLabel>
         <abilityDescription>发射骨刺，造成刺击伤害。</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
     <tools>
@@ -1076,6 +1090,10 @@
     <defName>FH_Bulbfreak</defName>
     <label>bulbfreak</label>
     <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+    </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
@@ -1220,6 +1238,10 @@
     <defName>FH_Acidbulb</defName>
     <label>acidbulb</label>
     <description>TODO.</description>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+    </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
@@ -1368,6 +1390,10 @@
     <defName>FH_Spitbulb</defName>
     <label>FH_Spitbulb</label>
     <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+    </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>

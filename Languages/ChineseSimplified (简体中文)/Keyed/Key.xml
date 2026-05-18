@@ -37,4 +37,10 @@
     <HCF_Parasite_AlreadyAdded>已添加此寄生兽</HCF_Parasite_AlreadyAdded>
     <HCF_Parasite_Noun>寄生</HCF_Parasite_Noun>
 
+    <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
+
+    <ToggleTentacleAttackMode>开关{0}的触手攻击模式</ToggleTentacleAttackMode>
+    <TentacleAttackModeOn>触手攻击：开启</TentacleAttackModeOn>
+    <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
+
 </LanguageData>

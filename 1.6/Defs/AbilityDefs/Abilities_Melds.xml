@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>FH_FleshBerserk</defName>
+    <label>flesh berserk</label>
+    <description>All friendly flesh beasts on the map enter a frenzied berserk state for 6 hours, gaining increased move speed and melee damage.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>300000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_FleshBerserk</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityFleshBerserk" />
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_FleshSpread</defName>
+    <label>flesh spread</label>
+    <description>Spread twisted flesh across an area, consuming twisted flesh from the host.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>360</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_FleshSpread</iconPath>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>5</warmupTime>
+      <range>30</range>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityFleshSpread">
+        <twistedFleshCost>100</twistedFleshCost>
+        <explosionRadius>4.5</explosionRadius>
+        <baseDamage>5</baseDamage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_FleshSpread_Parasitism</defName>
+    <label>flesh spread</label>
+    <description>Spread twisted flesh across an area, consuming twisted flesh from the host.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_FleshSpread</iconPath>
+    <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>50</range>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityFleshSpread">
+        <twistedFleshCost>100</twistedFleshCost>
+        <explosionRadius>5</explosionRadius>
+        <baseDamage>5</baseDamage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_ScarletField</defName>
+    <label>scarlet field</label>
+    <description>Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>1200</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_ScarletField</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <range>3</range>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityScarletField" />
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_RampageCharge</defName>
+    <label>rampage charge</label>
+    <description>The furiousmeld charges forward, dealing damage to everything in its path. Buildings are destroyed until a cumulative limit is reached.</description>
+    <iconPath>UI/Ability/FH_RampageCharge</iconPath>
+    <targetRequired>true</targetRequired>
+    <cooldownTicksRange>72000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>40</range>
+      <defaultProjectile>FH_Projectile_Rampage</defaultProjectile>
+      <defaultCooldownTime>5</defaultCooldownTime>
+      <verbClass>HiveCreatureFramework.Verb_ShootCharge</verbClass>
+      <warmupTime>5</warmupTime>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_ShootCharge">
+        <dist>30</dist>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Projectile_Rampage</defName>
+    <label>rampage</label>
+    <thingClass>HiveCreatureFramework.Projectile_Charge</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld_east</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>34</damageAmountBase>
+      <speed>50</speed>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_Charge">
+        <damageDef>Blunt</damageDef>
+        <amount>34</amount>
+        <flyer>FH_PawnFlyer_Rampage</flyer>
+        <canDestroyBuildings>true</canDestroyBuildings>
+        <buildingDamageThreshold>3000</buildingDamageThreshold>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="PawnFlyerBase">
+    <defName>FH_PawnFlyer_Rampage</defName>
+    <thingClass>HiveCreatureFramework.HCFPawnFlyer</thingClass>
+    <pawnFlyer>
+      <flightSpeed>24</flightSpeed>
+      <heightFactor>0.5</heightFactor>
+    </pawnFlyer>
+    <comps>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesDamage">
+        <damageDef>Blunt</damageDef>
+        <amount>6</amount>
+      </li>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesEffecter">
+        <effect>ImpactSmallDustCloud</effect>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

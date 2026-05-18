@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>FH_FleshPack</defName>
+    <label>flesh pack</label>
+    <description>A parasitic growth that expands the host's capacity to sustain flesh beast parasites.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Apparel/FH_FleshPack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshPack" />
+    </comps>
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <FH_Stat_ParasitismCapacity>2</FH_Stat_ParasitismCapacity>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <wornGraphicPath>Things/Apparel/FH_FleshPack</wornGraphicPath>
+    </apparel>
+    <techLevel>Neolithic</techLevel>
+    <costList>
+      <InsectJelly>50</InsectJelly>
+    </costList>
+  </ThingDef>
+
+</Defs>
