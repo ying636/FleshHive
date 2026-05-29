@@ -43,4 +43,21 @@
     <TentacleAttackModeOn>触手攻击：开启</TentacleAttackModeOn>
     <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
 
+    <FH_MarkPrey>标记猎物</FH_MarkPrey>
+    <FH_MarkPreyDesc>标记倒地生物，将其搬运至血肉囊进行消化。</FH_MarkPreyDesc>
+    <FH_MarkPrey_NotDowned>目标未倒地</FH_MarkPrey_NotDowned>
+    <FH_MarkPrey_NotFlesh>只能标记血肉生物</FH_MarkPrey_NotFlesh>
+    <FH_MarkPrey_AlreadyMarked>已标记</FH_MarkPrey_AlreadyMarked>
+
+    <FH_FleshSack_Digesting>消化中：{0}</FH_FleshSack_Digesting>
+    <FH_FleshSack_Inner>内含：{0}</FH_FleshSack_Inner>
+    <FH_FleshSack_Empty>空</FH_FleshSack_Empty>
+
+    <FH_FleshSack_FriendlyTitle>友方单位被消化</FH_FleshSack_FriendlyTitle>
+    <FH_FleshSack_FriendlyDesc>{0}被放入血肉囊中消化。</FH_FleshSack_FriendlyDesc>
+
+    <FH_Building_ReplacedBy>该建筑已被{0}取代。</FH_Building_ReplacedBy>
+    <FH_HiveBuildingUnavailable>该建筑当前不可用。</FH_HiveBuildingUnavailable>
+    <FH_FleshPrimaryNest_OnlyOne>一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest_OnlyOne>
+
 </LanguageData>

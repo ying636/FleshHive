@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HiveCreatureFramework.Evolution.HiveEvolutionMapDef>
+    <defName>FH_EvolutionMap_FleshHive</defName>
+    <label>flesh hive evolution</label>
+    <size>(420,220)</size>
+  </HiveCreatureFramework.Evolution.HiveEvolutionMapDef>
+
+  <HiveCreatureFramework.Evolution.HiveEvolutionOptionDef>
+    <defName>FH_Evolution_FleshHive</defName>
+    <label>flesh hive</label>
+    <description>The current flesh hive form.</description>
+    <map>FH_EvolutionMap_FleshHive</map>
+    <position>(60,85)</position>
+    <resultThing>FH_FleshHive</resultThing>
+  </HiveCreatureFramework.Evolution.HiveEvolutionOptionDef>
+
+  <HiveCreatureFramework.Evolution.HiveEvolutionOptionDef>
+    <defName>FH_Evolution_FleshPrimaryNest</defName>
+    <label>flesh primary nest</label>
+    <description>Evolve the flesh hive into a flesh primary nest.</description>
+    <map>FH_EvolutionMap_FleshHive</map>
+    <position>(260,85)</position>
+    <origin>FH_Evolution_FleshHive</origin>
+    <resultThing>FH_FleshPrimaryNest</resultThing>
+    <resourceCosts>
+      <FH_Resource_Nutrition>300</FH_Resource_Nutrition>
+    </resourceCosts>
+     <changeConditions>
+      <li Class="FleshHive.ChangeCondition_OnlyOnePrimaryNest" />
+    </changeConditions>  
+    <progressTick>60000</progressTick>
+    <inheritResources>true</inheritResources>
+    <inheritSpecialItems>true</inheritSpecialItems>
+    <inheritUnits>true</inheritUnits>
+    <inheritProgresses>true</inheritProgresses>
+    <inheritUpgrades>true</inheritUpgrades>
+    <inheritGroups>true</inheritGroups>
+    <inheritStorageSettings>true</inheritStorageSettings>
+    <inheritHitPoints>true</inheritHitPoints>
+    <inheritFaction>true</inheritFaction>
+  </HiveCreatureFramework.Evolution.HiveEvolutionOptionDef>
+
+</Defs>

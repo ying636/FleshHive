@@ -8,6 +8,7 @@
         <color>(0.7, 0.1, 0.1)</color>
         <worker Class="HiveCreatureFramework.HiveResourceWorker_Nutrition">
         </worker>
+        <resourceClass>FleshHive.HiveResource_FleshHiveNutrition</resourceClass>
         <thing>Meat_Twisted</thing>
         <thingCountPerResource>20</thingCountPerResource>
     </HiveCreatureFramework.HiveResourceDef>

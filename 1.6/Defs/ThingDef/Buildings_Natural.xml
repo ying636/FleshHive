@@ -75,7 +75,7 @@
       <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
         <resources>
-          <FH_Resource_Nutrition>500</FH_Resource_Nutrition>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
         </resources>
         <tags>
           <li>Flesh</li>
@@ -96,6 +96,135 @@
         <tags>
           <li>Flesh</li>
         </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>10.5</radius>
+        <cellsPerErosion>3</cellsPerErosion>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
+        <defaultFusion>FH_Fusion_Default</defaultFusion>
+        <category>LittleFlesh</category>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveUpgrader">
+        <upgrades>
+        </upgrades>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveEvolution">
+        <map>FH_EvolutionMap_FleshHive</map>
+      </li>
+      <li>
+        <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveContainer">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <tags>
+          <li>Flesh</li>
+          <li>FleshHive</li>
+        </tags>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshPrimaryNest</defName>
+    <label>flesh primary nest</label>
+    <description>The core of a large flesh hive. It can gestate and fuse flesh beasts within the nest, and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shard, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. A hive can only support one flesh primary nest.</description>
+    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>3.5</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+    <uiIconPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</uiIconPath>
+    <uiIconScale>0.58</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <HCF_Stat_HiveCapacity>100</HCF_Stat_HiveCapacity>
+    </statBases>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <building>
+      <storageGroupTag>Hive</storageGroupTag>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+          <disallowedCategories>
+            <li>Chunks</li>
+            <li>Plants</li>
+            <li>Buildings</li>
+            <li>CorpsesMechanoid</li>
+          </disallowedCategories>
+          <specialFiltersToDisallow>
+            <li>AllowRotten</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Preferred</priority>
+        <filter>
+          <categories>
+            <li>Foods</li>
+            <li>Manufactured</li>
+            <li>ResourcesRaw</li>
+            <li>Items</li>
+            <li>Weapons</li>
+            <li>Apparel</li>
+            <li>BodyParts</li>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <resources>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
+        </resources>
+        <tags>
+          <li>Flesh</li>
+          <li>FleshHive</li>
+        </tags>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
+        <UnitCategories>
+          <li>FH_Category_LittleFleshBeast</li>
+          <li>FH_Category_MeldBeast</li>
+        </UnitCategories>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+        <groupCount>1</groupCount>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>10.5</radius>
+        <cellsPerErosion>3</cellsPerErosion>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
@@ -164,6 +293,175 @@
           <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Outline</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>(3.6,2.6)</drawSize>
+        </outlineGraphic>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshSack</defName>
+    <label>flesh sack</label>
+    <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously generate nutrients for the hive. Cannot digest inorganic matter - when digestion is complete, it will eject dessicated remains.</description>
+    <thingClass>FleshHive.FleshSack</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshSack/FH_FleshSackA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.5</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <outlineGraphic>
+          <texPath>Things/Building/FH_FleshSack/FH_FleshSackA</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(2.5,2.5)</drawSize>
+        </outlineGraphic>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshBarricade</defName>
+    <label>flesh barricade</label>
+    <description>A waist-high barrier of pulsating, quivering twisted flesh. It provides cover from incoming shots. Though unsightly, it offers better protection than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Barricades</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>42</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.55</fillPercent>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Beauty>-3</Beauty>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <outlineGraphic>
+          <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(1.5,1.5)</drawSize>
+        </outlineGraphic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_ChitinFleshBarricade</defName>
+    <label>chitin flesh barricade</label>
+    <description>A waist-high barrier of pulsating, quivering twisted flesh reinforced with hardened chitin. It provides cover from incoming shots. Though unsightly, it offers better protection than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Barricades</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>42</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.55</fillPercent>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Beauty>-3</Beauty>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <outlineGraphic>
+          <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(1.5,1.5)</drawSize>
+        </outlineGraphic>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshLamp</defName>
+    <label>flesh lamp</label>
+    <description>A bioluminescent bulb grown from twisted flesh. It pulses with a warm, organic light, illuminating the surrounding area without the need for electricity.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_Fleshbulb/Variants</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>0</pathCost>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(0.4,0.8,0.3,0)</glowColor>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <outlineGraphic>
+          <texPath>Things/Building/FH_Fleshbulb/FH_FleshbulbA</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(1.2,1.2)</drawSize>
         </outlineGraphic>
       </li>
     </comps>

@@ -31,4 +31,10 @@
     <reportString>refilling TargetB's twisted flesh.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_FillFleshSack</defName>
+    <driverClass>FleshHive.JobDriver_FillFleshSack</driverClass>
+    <reportString>carrying TargetA to flesh sack.</reportString>
+  </JobDef>
+
 </Defs> 

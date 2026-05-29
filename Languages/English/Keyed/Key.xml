@@ -22,4 +22,21 @@
   <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>
   <TentacleAttackModeOff>Tentacle Attack: Off</TentacleAttackModeOff>
 
+  <FH_MarkPrey>Mark Prey</FH_MarkPrey>
+  <FH_MarkPreyDesc>Mark downed creatures to be carried to a flesh sack for digestion.</FH_MarkPreyDesc>
+  <FH_MarkPrey_NotDowned>Target is not downed</FH_MarkPrey_NotDowned>
+  <FH_MarkPrey_NotFlesh>Can only mark fleshy creatures</FH_MarkPrey_NotFlesh>
+  <FH_MarkPrey_AlreadyMarked>Already marked</FH_MarkPrey_AlreadyMarked>
+
+  <FH_FleshSack_Digesting>Digesting: {0}</FH_FleshSack_Digesting>
+  <FH_FleshSack_Inner>Contains: {0}</FH_FleshSack_Inner>
+  <FH_FleshSack_Empty>Empty</FH_FleshSack_Empty>
+
+  <FH_FleshSack_FriendlyTitle>Friendly unit being digested</FH_FleshSack_FriendlyTitle>
+  <FH_FleshSack_FriendlyDesc>{0} has been placed into a flesh sack for digestion.</FH_FleshSack_FriendlyDesc>
+
+  <FH_Building_ReplacedBy>This building has been replaced by {0}.</FH_Building_ReplacedBy>
+  <FH_HiveBuildingUnavailable>This building is currently unavailable.</FH_HiveBuildingUnavailable>
+  <FH_FleshPrimaryNest_OnlyOne>A hive can only support one flesh primary nest.</FH_FleshPrimaryNest_OnlyOne>
+
 </LanguageData>

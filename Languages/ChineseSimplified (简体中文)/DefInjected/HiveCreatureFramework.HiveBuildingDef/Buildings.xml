@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh primary nest -->
+  <FH_Building_FleshPrimaryNest.label>血肉主巢</FH_Building_FleshPrimaryNest.label>
+  <!-- EN: The core of a large flesh hive... -->
+  <FH_Building_FleshPrimaryNest.description>大型血肉巢群的核心，可以在巢穴中孕育和融合血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。一个巢群只能有一个血肉主巢。</FH_Building_FleshPrimaryNest.description>
+
+  <!-- EN: flesh barricade -->
+  <FH_Building_FleshBarricade.label>血肉掩体</FH_Building_FleshBarricade.label>
+  <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh... -->
+  <FH_Building_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_FleshBarricade.description>
+
+  <!-- EN: chitin flesh barricade -->
+  <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>
+  <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh reinforced with hardened chitin... -->
+  <FH_Building_ChitinFleshBarricade.description>一种齐腰高的坚固扭曲肉块，外层包覆着硬化的甲壳。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮物体更好的掩护。甲壳血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_ChitinFleshBarricade.description>
+
+</LanguageData>

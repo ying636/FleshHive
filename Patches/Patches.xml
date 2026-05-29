@@ -58,4 +58,11 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/DesignationCategoryDef[defName="Orders"]/specialDesignatorClasses</xpath>
+		<value>
+			<li>FleshHive.Designator_MarkPrey</li>
+		</value>
+	</Operation>
+
 </Patch>

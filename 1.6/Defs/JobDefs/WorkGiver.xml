@@ -44,6 +44,21 @@
         <requiredCapacities>
             <li>Manipulation</li>
         </requiredCapacities>
-    </WorkGiverDef> 
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_FillFleshSack</defName>
+        <label>carry prey to flesh sack</label>
+        <giverClass>FleshHive.WorkGiver_FillFleshSack</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>carry</verb>
+        <gerund>carrying</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>19</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
 
 </Defs> 

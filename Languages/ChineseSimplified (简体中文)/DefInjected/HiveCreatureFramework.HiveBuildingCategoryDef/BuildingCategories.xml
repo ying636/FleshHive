@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Flesh -->
+  <FH_BuildingCategory_Flesh.label>血肉</FH_BuildingCategory_Flesh.label>
+  <!-- EN: Flesh structures built by the hive. -->
+  <FH_BuildingCategory_Flesh.description>由巢群建造的血肉建筑。</FH_BuildingCategory_Flesh.description>
+  
+</LanguageData>

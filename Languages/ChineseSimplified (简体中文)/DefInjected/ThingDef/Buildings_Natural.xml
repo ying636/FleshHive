@@ -1,9 +1,34 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: flesh hive -->
   <FH_FleshHive.label>TODO</FH_FleshHive.label>
   <!-- EN: TODO -->
   <FH_FleshHive.description>TODO</FH_FleshHive.description>
+
+  <!-- EN: flesh primary nest -->
+  <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>
+  <!-- EN: The core of a large flesh hive... -->
+  <FH_FleshPrimaryNest.description>大型血肉巢群的核心，可以在巢穴中孕育和融合血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest.description>
   
+  <!-- EN: flesh sack -->
+  <FH_FleshSack.label>血肉囊</FH_FleshSack.label>
+  <!-- EN: A swollen sack of flesh... -->
+  <FH_FleshSack.description>肿胀的肉袋。这些无法移动的血肉兽充当了消化器官。将活体生物放到血肉囊中，血肉囊就可以持续不断的为巢群提供营养。但它们无法消化无机物，当消化完成时，将会把风干的尸骨吐出来。</FH_FleshSack.description>
+
+  <!-- EN: flesh barricade -->
+  <FH_FleshBarricade.label>血肉掩体</FH_FleshBarricade.label>
+  <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh... -->
+  <FH_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_FleshBarricade.description>
+
+  <!-- EN: chitin flesh barricade -->
+  <FH_ChitinFleshBarricade.label>甲壳血肉掩体</FH_ChitinFleshBarricade.label>
+  <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh reinforced with hardened chitin... -->
+  <FH_ChitinFleshBarricade.description>一种齐腰高的坚固扭曲肉块，外层包覆着硬化的甲壳。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮物体更好的掩护。甲壳血肉掩体会像栅栏一样阻挡部分动物。</FH_ChitinFleshBarricade.description>
+
+  <!-- EN: flesh lamp -->
+  <FH_FleshLamp.label>血肉灯</FH_FleshLamp.label>
+  <!-- EN: A bioluminescent bulb grown from twisted flesh... -->
+  <FH_FleshLamp.description>由扭曲肉块培育出的生物发光球茎。它发出温暖而有生命的脉动光芒，无需电力就能照亮周围区域。</FH_FleshLamp.description>
+
 </LanguageData>

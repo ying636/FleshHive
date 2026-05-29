@@ -12,7 +12,7 @@
   <FH_Research_ComplexFleshHive.label>复杂血肉巢穴</FH_Research_ComplexFleshHive.label>
   <FH_Research_ComplexFleshHive.description>TODO</FH_Research_ComplexFleshHive.description>
 
-  <FH_Research_BonePlatingFleshBlock.label>骨甲血肉块</FH_Research_BonePlatingFleshBlock.label>
+  <FH_Research_BonePlatingFleshBlock.label>甲壳血肉块</FH_Research_BonePlatingFleshBlock.label>
   <FH_Research_BonePlatingFleshBlock.description>TODO</FH_Research_BonePlatingFleshBlock.description>
 
   <FH_Research_EfficientNutritionAbsorption.label>高效营养吸收</FH_Research_EfficientNutritionAbsorption.label>
@@ -30,4 +30,3 @@
   <FH_Research_EfficientCellDivision.label>高效细胞分裂</FH_Research_EfficientCellDivision.label>
   <FH_Research_EfficientCellDivision.description>TODO</FH_Research_EfficientCellDivision.description>
 </LanguageData>
-

@@ -85,7 +85,6 @@
     <description>Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>1200</cooldownTicksRange>
     <iconPath>UI/Ability/FH_ScarletField</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

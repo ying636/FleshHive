@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh hive -->
+  <FH_Evolution_FleshHive.label>血肉巢穴</FH_Evolution_FleshHive.label>
+  <!-- EN: The current flesh hive form. -->
+  <FH_Evolution_FleshHive.description>当前的血肉巢穴形态。</FH_Evolution_FleshHive.description>
+
+  <!-- EN: flesh primary nest -->
+  <FH_Evolution_FleshPrimaryNest.label>血肉主巢</FH_Evolution_FleshPrimaryNest.label>
+  <!-- EN: Evolve the flesh hive into a flesh primary nest. -->
+  <FH_Evolution_FleshPrimaryNest.description>将血肉巢穴进化为血肉主巢。</FH_Evolution_FleshPrimaryNest.description>
+
+</LanguageData>
