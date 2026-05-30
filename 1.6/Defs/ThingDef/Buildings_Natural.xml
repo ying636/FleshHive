@@ -125,7 +125,7 @@
           <li>FleshHive</li>
         </tags>
       </li>
-      <li Class="CompProperties_FleshmassBase">
+      <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>2</size>
       </li>
     </comps>
@@ -250,7 +250,7 @@
           <li>FleshHive</li>
         </tags>
       </li>
-      <li Class="CompProperties_FleshmassBase">
+      <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>3</size>
       </li>
     </comps>
@@ -321,7 +321,7 @@
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
     <comps>
-      <li Class="CompProperties_FleshmassBase">
+      <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>2</size>
       </li>
     </comps>
@@ -512,7 +512,7 @@
       <isInert>true</isInert>
     </building>
     <comps>
-      <li Class="CompProperties_FleshmassBase">
+      <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>1</size>
       </li>
     </comps>
@@ -625,7 +625,7 @@
         <glowRadius>10</glowRadius>
         <glowColor>(0.4,0.8,0.3,0)</glowColor>
       </li>
-      <li Class="CompProperties_FleshmassBase">
+      <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>1</size>
       </li>
     </comps>
