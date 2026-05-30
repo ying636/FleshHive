@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <!-- EN: flesh primary nest -->
-  <FH_Building_FleshPrimaryNest.label>血肉主巢</FH_Building_FleshPrimaryNest.label>
-  <!-- EN: The core of a large flesh hive... -->
-  <FH_Building_FleshPrimaryNest.description>大型血肉巢群的核心，可以在巢穴中孕育和融合血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。一个巢群只能有一个血肉主巢。</FH_Building_FleshPrimaryNest.description>
+  <!-- EN: flesh block -->
+  <FH_Building_FleshBlock.label>血肉块</FH_Building_FleshBlock.label>
+  <!-- EN: A structure made of flesh, functioning like a wall. -->
+  <FH_Building_FleshBlock.description>血肉构成的结构，如同墙一样。</FH_Building_FleshBlock.description>
+
+  <!-- EN: chitin flesh block -->
+  <FH_Building_ChitinFleshBlock.label>甲壳血肉块</FH_Building_ChitinFleshBlock.label>
+  <!-- EN: A structure made of flesh and hardened chitin, functioning like a wall. -->
+  <FH_Building_ChitinFleshBlock.description>覆盖着硬化甲壳的血肉结构，如同墙一样。</FH_Building_ChitinFleshBlock.description>
+
+  <!-- EN: flesh door -->
+  <FH_Building_FleshDoor.label>血肉门</FH_Building_FleshDoor.label>
+  <!-- EN: A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them. -->
+  <FH_Building_FleshDoor.description>由扭曲血肉生长而成的门。它会为靠近的生物蠕动着张开，并在其身后重新封闭通道。</FH_Building_FleshDoor.description>
 
   <!-- EN: flesh barricade -->
   <FH_Building_FleshBarricade.label>血肉掩体</FH_Building_FleshBarricade.label>
   <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh... -->
   <FH_Building_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_FleshBarricade.description>
+
+  <!-- EN: flesh hopper -->
+  <FH_Building_FleshHopper.label>产出物喷口</FH_Building_FleshHopper.label>
+  <!-- EN: An organic spout used to hold materials for flesh construction. Nutritious matter placed on it is broken down into hive nutrition. -->
+  <FH_Building_FleshHopper.description>用于承载血肉建材的有机喷口。放置在其上的营养性物体会被分解并转化为巢穴营养。</FH_Building_FleshHopper.description>
 
   <!-- EN: chitin flesh barricade -->
   <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>

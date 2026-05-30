@@ -101,6 +101,7 @@
         <intervalDays>3</intervalDays>
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
+        <initialErosionCount>10</initialErosionCount>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
@@ -123,6 +124,9 @@
           <li>Flesh</li>
           <li>FleshHive</li>
         </tags>
+      </li>
+      <li Class="CompProperties_FleshmassBase">
+        <size>2</size>
       </li>
     </comps>
   </ThingDef>
@@ -225,6 +229,7 @@
         <intervalDays>3</intervalDays>
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
+        <initialErosionCount>10</initialErosionCount>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
@@ -244,6 +249,9 @@
           <li>Flesh</li>
           <li>FleshHive</li>
         </tags>
+      </li>
+      <li Class="CompProperties_FleshmassBase">
+        <size>3</size>
       </li>
     </comps>
   </ThingDef>
@@ -287,15 +295,6 @@
     <building>
 
     </building>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <outlineGraphic>
-          <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Outline</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>(3.6,2.6)</drawSize>
-        </outlineGraphic>
-      </li>
-    </comps>
   </ThingDef>
 
 
@@ -322,12 +321,199 @@
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
     <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <outlineGraphic>
-          <texPath>Things/Building/FH_FleshSack/FH_FleshSackA</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>(2.5,2.5)</drawSize>
-        </outlineGraphic>
+      <li Class="CompProperties_FleshmassBase">
+        <size>2</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshBlock</defName>
+    <label>flesh block</label>
+    <description>A structure made of flesh, functioning like a wall.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>300</pathCost>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect> 
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_ChitinFleshBlock</defName>
+    <label>chitin flesh block</label>
+    <description>A structure made of flesh and hardened chitin, functioning like a wall.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>300</pathCost>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect> 
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshDoor</defName>
+    <label>flesh door</label>
+    <description>A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them.</description>
+    <thingClass>Building_Door</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshDoor/FH_FleshDoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshDoor/FH_FleshDoor_MenuIcon</uiIconPath>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <drawerType>RealtimeOnly</drawerType>
+    <forceMoveItemsBeforeConstruction>true</forceMoveItemsBeforeConstruction>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>850</WorkToBuild>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_FleshDoor/FH_FleshDoor_MenuIcon</texPath>
+      </blueprintGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+      <canExchangeVacuum>true</canExchangeVacuum>
+    </building>
+    <comps>
+      <li Class="CompProperties_Forbiddable">
+        <allowNonPlayer>true</allowNonPlayer>
+      </li>
+    </comps>
+    <replaceTags>
+      <li>Door</li>
+    </replaceTags>
+    <placeWorkers>
+      <li>PlaceWorker_DoorLearnOpeningSpeed</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshHopper</defName>
+    <label>flesh hopper</label>
+    <description>An organic spout used to hold materials for flesh construction. Nutritious matter placed on it is broken down into hive nutrition.</description>
+    <thingClass>FleshHive.Building_FleshHopper</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshHopper/FH_FleshHopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshHopper/FH_FleshHopper</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <building>
+      <storageGroupTag>FH_FleshHopper</storageGroupTag>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>Foods</li>
+            <li>Manufactured</li>
+            <li>ResourcesRaw</li>
+            <li>Items</li>
+            <li>Weapons</li>
+            <li>Apparel</li>
+            <li>BodyParts</li>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="CompProperties_FleshmassBase">
+        <size>1</size>
       </li>
     </comps>
   </ThingDef>
@@ -371,16 +557,7 @@
     </building>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <outlineGraphic>
-          <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>(1.5,1.5)</drawSize>
-        </outlineGraphic>
-      </li>
-    </comps>
+    <neverMultiSelect>true</neverMultiSelect> 
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -421,16 +598,7 @@
     </building>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <outlineGraphic>
-          <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>(1.5,1.5)</drawSize>
-        </outlineGraphic>
-      </li>
-    </comps>
+    <neverMultiSelect>true</neverMultiSelect> 
   </ThingDef>
 
 
@@ -457,12 +625,8 @@
         <glowRadius>10</glowRadius>
         <glowColor>(0.4,0.8,0.3,0)</glowColor>
       </li>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <outlineGraphic>
-          <texPath>Things/Building/FH_Fleshbulb/FH_FleshbulbA</texPath>
-          <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>(1.2,1.2)</drawSize>
-        </outlineGraphic>
+      <li Class="CompProperties_FleshmassBase">
+        <size>1</size>
       </li>
     </comps>
   </ThingDef>

@@ -6,6 +6,11 @@
         <label>Nurtition</label>
         <description>Nurtition.</description>
         <color>(0.7, 0.1, 0.1)</color>
+        <graphic>
+            <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphic>
         <worker Class="HiveCreatureFramework.HiveResourceWorker_Nutrition">
         </worker>
         <resourceClass>FleshHive.HiveResource_FleshHiveNutrition</resourceClass>

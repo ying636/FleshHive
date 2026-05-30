@@ -38,5 +38,7 @@
   <FH_Building_ReplacedBy>This building has been replaced by {0}.</FH_Building_ReplacedBy>
   <FH_HiveBuildingUnavailable>This building is currently unavailable.</FH_HiveBuildingUnavailable>
   <FH_FleshPrimaryNest_OnlyOne>A hive can only support one flesh primary nest.</FH_FleshPrimaryNest_OnlyOne>
+  <FH_MustPlaceOnFleshTerrain>Must be placed on flesh terrain.</FH_MustPlaceOnFleshTerrain>
+  <FH_RequireFleshHopper>An available flesh hopper is required.</FH_RequireFleshHopper>
 
 </LanguageData>

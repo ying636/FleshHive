@@ -59,5 +59,7 @@
     <FH_Building_ReplacedBy>该建筑已被{0}取代。</FH_Building_ReplacedBy>
     <FH_HiveBuildingUnavailable>该建筑当前不可用。</FH_HiveBuildingUnavailable>
     <FH_FleshPrimaryNest_OnlyOne>一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest_OnlyOne>
+    <FH_MustPlaceOnFleshTerrain>必须放置在血肉地形上。</FH_MustPlaceOnFleshTerrain>
+    <FH_RequireFleshHopper>需要至少一个可用的产出物喷口。</FH_RequireFleshHopper>
 
 </LanguageData>

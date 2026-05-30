@@ -1,49 +1,117 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HiveCreatureFramework.HiveBuildingDef>
-    <defName>FH_Building_FleshPrimaryNest</defName>
-    <label>flesh primary nest</label>
-    <description>The core of a large flesh hive. It can gestate and fuse flesh beasts within the nest, and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shard, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. A hive can only support one flesh primary nest.</description>
-    <building>FH_FleshPrimaryNest</building>
-    <category>FH_BuildingCategory_Flesh</category>
-    <workAmount>1200</workAmount>
-    <worker Class="FleshHive.HiveBuildingWorker_FleshPrimaryNest" />
-    <resourcesCosts>
-      <FH_Resource_Nutrition>500</FH_Resource_Nutrition>
-    </resourcesCosts>
-  </HiveCreatureFramework.HiveBuildingDef>
-
-  <HiveCreatureFramework.HiveBuildingDef>
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshSack</defName>
     <label>flesh sack</label>
     <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously generate nutrients for the hive. Cannot digest inorganic matter - when digestion is complete, it will eject dessicated remains.</description>
     <building>FH_FleshSack</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>400</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
     <resourcesCosts>
       <FH_Resource_Nutrition>200</FH_Resource_Nutrition>
     </resourcesCosts>
-  </HiveCreatureFramework.HiveBuildingDef>
+  </FleshHive.FleshHiveBuildingDef>
 
-  <HiveCreatureFramework.HiveBuildingDef>
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBlock</defName>
+    <label>flesh block</label>
+    <description>A structure made of flesh, functioning like a wall.</description>
+    <building>FH_FleshBlock</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>150</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
+      <research>FH_Research_BonePlatingFleshBlock</research>
+      <showWhenFinished>false</showWhenFinished>
+      <replacementBuilding>FH_ChitinFleshBlock</replacementBuilding>
+    </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_ChitinFleshBlock</defName>
+    <label>chitin flesh block</label>
+    <description>A structure made of flesh and hardened chitin, functioning like a wall.</description>
+    <building>FH_ChitinFleshBlock</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BonePlatingFleshBlock</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
+      <research>FH_Research_BonePlatingFleshBlock</research>
+      <showWhenFinished>true</showWhenFinished>
+    </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDoor</defName>
+    <label>flesh door</label>
+    <description>A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them.</description>
+    <building>FH_FleshDoor</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>150</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>30</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshBarricade</defName>
     <label>flesh barricade</label>
     <description>A waist-high barrier of pulsating, quivering twisted flesh. It provides cover from incoming shots. Though unsightly, it offers better protection than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
     <building>FH_FleshBarricade</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>150</workAmount>
-    <worker Class="FleshHive.HiveBuildingWorker_ResearchVisibility">
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
       <showWhenFinished>false</showWhenFinished>
       <replacementBuilding>FH_ChitinFleshBarricade</replacementBuilding>
     </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
     <resourcesCosts>
       <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
     </resourcesCosts>
-  </HiveCreatureFramework.HiveBuildingDef>
+  </FleshHive.FleshHiveBuildingDef>
 
-  <HiveCreatureFramework.HiveBuildingDef>
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshHopper</defName>
+    <label>flesh hopper</label>
+    <description>An organic spout used to hold materials for flesh construction. Nutritious matter placed on it is broken down into hive nutrition.</description>
+    <building>FH_FleshHopper</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>120</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>30</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
     <description>A waist-high barrier of pulsating, quivering twisted flesh reinforced with hardened chitin. It provides cover from incoming shots. Though unsightly, it offers better protection than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
@@ -53,25 +121,32 @@
     <researchPrerequisites>
       <li>FH_Research_BonePlatingFleshBlock</li>
     </researchPrerequisites>
-    <worker Class="FleshHive.HiveBuildingWorker_ResearchVisibility">
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
       <showWhenFinished>true</showWhenFinished>
     </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
     <resourcesCosts>
       <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
     </resourcesCosts>
-  </HiveCreatureFramework.HiveBuildingDef>
+  </FleshHive.FleshHiveBuildingDef>
 
-  <HiveCreatureFramework.HiveBuildingDef>
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshLamp</defName>
     <label>flesh lamp</label>
     <description>A bioluminescent bulb grown from twisted flesh. It pulses with a warm, organic light, illuminating the surrounding area without the need for electricity.</description>
     <building>FH_FleshLamp</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
     <resourcesCosts>
       <FH_Resource_Nutrition>50</FH_Resource_Nutrition>
     </resourcesCosts>
-  </HiveCreatureFramework.HiveBuildingDef>
+  </FleshHive.FleshHiveBuildingDef>
 
 </Defs>

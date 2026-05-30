@@ -16,6 +16,26 @@
   <!-- EN: A swollen sack of flesh... -->
   <FH_FleshSack.description>肿胀的肉袋。这些无法移动的血肉兽充当了消化器官。将活体生物放到血肉囊中，血肉囊就可以持续不断的为巢群提供营养。但它们无法消化无机物，当消化完成时，将会把风干的尸骨吐出来。</FH_FleshSack.description>
 
+  <!-- EN: flesh block -->
+  <FH_FleshBlock.label>血肉块</FH_FleshBlock.label>
+  <!-- EN: A structure made of flesh, functioning like a wall. -->
+  <FH_FleshBlock.description>血肉构成的结构，如同墙一样。</FH_FleshBlock.description>
+
+  <!-- EN: chitin flesh block -->
+  <FH_ChitinFleshBlock.label>甲壳血肉块</FH_ChitinFleshBlock.label>
+  <!-- EN: A structure made of flesh and hardened chitin, functioning like a wall. -->
+  <FH_ChitinFleshBlock.description>覆盖着硬化甲壳的血肉结构，如同墙一样。</FH_ChitinFleshBlock.description>
+
+  <!-- EN: flesh door -->
+  <FH_FleshDoor.label>血肉门</FH_FleshDoor.label>
+  <!-- EN: A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them. -->
+  <FH_FleshDoor.description>由扭曲血肉生长而成的门。它会为靠近的生物蠕动着张开，并在其身后重新封闭通道。</FH_FleshDoor.description>
+
+  <!-- EN: flesh hopper -->
+  <FH_FleshHopper.label>产出物喷口</FH_FleshHopper.label>
+  <!-- EN: An organic spout used to hold materials for flesh construction. Nutritious matter placed on it is broken down into hive nutrition. -->
+  <FH_FleshHopper.description>用于承载血肉建材的有机喷口。放置在其上的营养性物体会被分解并转化为巢穴营养。</FH_FleshHopper.description>
+
   <!-- EN: flesh barricade -->
   <FH_FleshBarricade.label>血肉掩体</FH_FleshBarricade.label>
   <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh... -->
