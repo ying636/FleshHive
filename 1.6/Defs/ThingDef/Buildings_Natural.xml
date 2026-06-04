@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshHive</defName>
@@ -102,6 +102,9 @@
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveInitialNutrition">
+        <initialNutrition>100</initialNutrition>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
@@ -230,10 +233,7 @@
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
-      </li>
-      <li Class="FleshHive.CompProperties_HiveInitialNutrition">
-        <initialNutrition>100</initialNutrition>
-      </li>
+      </li> 
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
         <category>LittleFlesh</category>
@@ -371,7 +371,7 @@
     </building>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect> 
+    <neverMultiSelect>true</neverMultiSelect>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -408,7 +408,7 @@
     </building>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect> 
+    <neverMultiSelect>true</neverMultiSelect>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -566,7 +566,7 @@
     </building>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect> 
+    <neverMultiSelect>true</neverMultiSelect>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -607,7 +607,7 @@
     </building>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect> 
+    <neverMultiSelect>true</neverMultiSelect>
   </ThingDef>
 
 
@@ -819,6 +819,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(1,2)</size>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -855,6 +860,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -891,6 +901,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(4,2)</size>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -927,6 +942,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(3,3)</size>
+      </li>
+    </comps>
   </ThingDef>
 
 
