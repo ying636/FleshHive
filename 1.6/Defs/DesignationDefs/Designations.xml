@@ -4,7 +4,7 @@
   <DesignationDef>
     <defName>FH_MarkPrey</defName>
     <label>mark prey</label>
-    <texturePath>Things/Building/FH_FleshSack/FH_FleshSackA</texturePath>
+    <texturePath>Things/Building/FH_FleshSack/FH_FleshSack_A</texturePath>
   </DesignationDef>
 
 </Defs>

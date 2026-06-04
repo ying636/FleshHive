@@ -126,7 +126,7 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>2</size>
+        <size>(2,2)</size>
       </li>
     </comps>
   </ThingDef>
@@ -231,6 +231,9 @@
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
       </li>
+      <li Class="FleshHive.CompProperties_HiveInitialNutrition">
+        <initialNutrition>100</initialNutrition>
+      </li>
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
         <category>LittleFlesh</category>
@@ -251,7 +254,7 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>3</size>
+        <size>(3,3)</size>
       </li>
     </comps>
   </ThingDef>
@@ -301,11 +304,11 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshSack</defName>
     <label>flesh sack</label>
-    <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously generate nutrients for the hive. Cannot digest inorganic matter - when digestion is complete, it will eject dessicated remains.</description>
+    <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains.</description>
     <thingClass>FleshHive.FleshSack</thingClass>
     <graphicData>
-      <texPath>Things/Building/FH_FleshSack/FH_FleshSackA</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/FH_FleshSack</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
       <drawSize>2.5</drawSize>
     </graphicData>
     <size>(2,2)</size>
@@ -321,8 +324,14 @@
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
     <comps>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>3</radius>
+        <cellsPerErosion>1</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>2</size>
+        <size>(2,2)</size>
       </li>
     </comps>
   </ThingDef>
@@ -331,7 +340,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshBlock</defName>
     <label>flesh block</label>
-    <description>A structure made of flesh, functioning like a wall.</description>
+    <description>An impassable lump of twisted flesh. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
@@ -350,7 +359,7 @@
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>160</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
     <building>
@@ -368,7 +377,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_ChitinFleshBlock</defName>
     <label>chitin flesh block</label>
-    <description>A structure made of flesh and hardened chitin, functioning like a wall.</description>
+    <description>An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
@@ -387,7 +396,7 @@
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
+      <MaxHitPoints>320</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
     <building>
@@ -464,7 +473,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FH_FleshHopper</defName>
     <label>flesh hopper</label>
-    <description>An organic spout used to hold materials for flesh construction. Nutritious matter placed on it is broken down into hive nutrition.</description>
+    <description>An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies.</description>
     <thingClass>FleshHive.Building_FleshHopper</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHopper/FH_FleshHopper</texPath>
@@ -513,7 +522,7 @@
     </building>
     <comps>
       <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>1</size>
+        <size>(1,1)</size>
       </li>
     </comps>
   </ThingDef>
@@ -522,7 +531,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshBarricade</defName>
     <label>flesh barricade</label>
-    <description>A waist-high barrier of pulsating, quivering twisted flesh. It provides cover from incoming shots. Though unsightly, it offers better protection than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
+    <description>A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
@@ -563,7 +572,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
-    <description>A waist-high barrier of pulsating, quivering twisted flesh reinforced with hardened chitin. It provides cover from incoming shots. Though unsightly, it offers better protection than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
+    <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
@@ -602,10 +611,329 @@
   </ThingDef>
 
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshBed</defName>
+    <label>flesh bed</label>
+    <description>A single bed made of flesh. Soft flesh has grown into a pocket-like structure and a pillow for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <thingClass>Building_Bed</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBed/FH_FleshBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(1,2)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.80</Comfort>
+      <BedRestEffectiveness>1.00</BedRestEffectiveness>
+      <SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <Beauty>1</Beauty>
+    </statBases>
+    <building>
+      <buildingTags>
+        <li>Bed</li>
+      </buildingTags>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshDoubleBed</defName>
+    <label>flesh double bed</label>
+    <description>A double bed made of flesh. Soft flesh has grown into a pocket-like structure and pillows for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <thingClass>Building_Bed</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBed/FH_FleshDoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(2,2)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.80</Comfort>
+      <BedRestEffectiveness>1.00</BedRestEffectiveness>
+      <SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <Beauty>2</Beauty>
+    </statBases>
+    <building>
+      <buildingTags>
+        <li>Bed</li>
+      </buildingTags>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshColumn</defName>
+    <label>flesh column</label>
+    <description>A column made of flesh, used to support roofs. It does not block sight or movement.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshColumn/FH_FleshColumn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.5,1.25)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <fillPercent>0.25</fillPercent>
+    <holdsRoof>true</holdsRoof>
+    <passability>PassThroughOnly</passability>
+    <pathCost>0</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(1,1)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshStool</defName>
+    <label>flesh stool</label>
+    <description>A simple stool made of flesh for people to sit on. It is unexpectedly comfortable. It can be used near dining tables, workbenches, or elsewhere.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshStool/FH_FleshStool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <fillPercent>0.2</fillPercent>
+    <pathCost>30</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.70</Comfort>
+      <Beauty>1</Beauty>
+    </statBases>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <replaceTags>
+      <li>Chair</li>
+    </replaceTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(1,1)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableSmall</defName>
+    <label>flesh table (1x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable1x2</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(1,2)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableSquare</defName>
+    <label>flesh table (2x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable2x2_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(2,2)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableLong</defName>
+    <label>flesh table (4x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable2x4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(5,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(4,2)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableLarge</defName>
+    <label>flesh table (3x3)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable3x3_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(3,3)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+  </ThingDef>
+
+
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshLamp</defName>
     <label>flesh lamp</label>
-    <description>A bioluminescent bulb grown from twisted flesh. It pulses with a warm, organic light, illuminating the surrounding area without the need for electricity.</description>
+    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshbulb/Variants</texPath>
@@ -613,6 +941,7 @@
       <drawSize>0.9</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
+    <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
     <pathCost>0</pathCost>
     <statBases>
@@ -625,8 +954,18 @@
         <glowRadius>10</glowRadius>
         <glowColor>(0.4,0.8,0.3,0)</glowColor>
       </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>3</radius>
+        <cellsPerErosion>1</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionProducer">
+        <nutritionPerDay>0.1</nutritionPerDay>
+        <intervalTicks>2500</intervalTicks>
+      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>1</size>
+        <size>(1,1)</size>
       </li>
     </comps>
   </ThingDef>

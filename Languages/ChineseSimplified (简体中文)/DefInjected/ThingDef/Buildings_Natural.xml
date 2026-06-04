@@ -1,54 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <!-- EN: flesh hive -->
   <FH_FleshHive.label>TODO</FH_FleshHive.label>
-  <!-- EN: TODO -->
   <FH_FleshHive.description>TODO</FH_FleshHive.description>
 
-  <!-- EN: flesh primary nest -->
   <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>
-  <!-- EN: The core of a large flesh hive... -->
   <FH_FleshPrimaryNest.description>大型血肉巢群的核心，可以在巢穴中孕育和融合血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest.description>
-  
-  <!-- EN: flesh sack -->
+
   <FH_FleshSack.label>血肉囊</FH_FleshSack.label>
-  <!-- EN: A swollen sack of flesh... -->
   <FH_FleshSack.description>肿胀的肉袋。这些无法移动的血肉兽充当了消化器官。将活体生物放到血肉囊中，血肉囊就可以持续不断的为巢群提供营养。但它们无法消化无机物，当消化完成时，将会把风干的尸骨吐出来。</FH_FleshSack.description>
 
-  <!-- EN: flesh block -->
   <FH_FleshBlock.label>血肉块</FH_FleshBlock.label>
-  <!-- EN: A structure made of flesh, functioning like a wall. -->
-  <FH_FleshBlock.description>血肉构成的结构，如同墙一样。</FH_FleshBlock.description>
+  <FH_FleshBlock.description>一团无法通过的扭曲肉块。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_FleshBlock.description>
 
-  <!-- EN: chitin flesh block -->
   <FH_ChitinFleshBlock.label>甲壳血肉块</FH_ChitinFleshBlock.label>
-  <!-- EN: A structure made of flesh and hardened chitin, functioning like a wall. -->
-  <FH_ChitinFleshBlock.description>覆盖着硬化甲壳的血肉结构，如同墙一样。</FH_ChitinFleshBlock.description>
+  <FH_ChitinFleshBlock.description>一团无法通过的扭曲肉块，外层覆盖着硬化甲壳。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_ChitinFleshBlock.description>
 
-  <!-- EN: flesh door -->
   <FH_FleshDoor.label>血肉门</FH_FleshDoor.label>
-  <!-- EN: A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them. -->
   <FH_FleshDoor.description>由扭曲血肉生长而成的门。它会为靠近的生物蠕动着张开，并在其身后重新封闭通道。</FH_FleshDoor.description>
 
-  <!-- EN: flesh hopper -->
-  <FH_FleshHopper.label>产出物喷口</FH_FleshHopper.label>
-  <!-- EN: An organic spout used to hold materials for flesh construction. Nutritious matter placed on it is broken down into hive nutrition. -->
-  <FH_FleshHopper.description>用于承载血肉建材的有机喷口。放置在其上的营养性物体会被分解并转化为巢穴营养。</FH_FleshHopper.description>
+  <FH_FleshHopper.label>血肉产出口</FH_FleshHopper.label>
+  <FH_FleshHopper.description>使得血肉巢穴能够将内部加工的产物吐出的器官。通过血肉产出口，可以命令巢穴消耗营养生产物资。</FH_FleshHopper.description>
 
-  <!-- EN: flesh barricade -->
   <FH_FleshBarricade.label>血肉掩体</FH_FleshBarricade.label>
-  <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh... -->
-  <FH_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_FleshBarricade.description>
+  <FH_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_FleshBarricade.description>
 
-  <!-- EN: chitin flesh barricade -->
   <FH_ChitinFleshBarricade.label>甲壳血肉掩体</FH_ChitinFleshBarricade.label>
-  <!-- EN: A waist-high barrier of pulsating, quivering twisted flesh reinforced with hardened chitin... -->
-  <FH_ChitinFleshBarricade.description>一种齐腰高的坚固扭曲肉块，外层包覆着硬化的甲壳。它跳动着，颤抖着，用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮物体更好的掩护。甲壳血肉掩体会像栅栏一样阻挡部分动物。</FH_ChitinFleshBarricade.description>
+  <FH_ChitinFleshBarricade.description>一种齐腰高的坚固扭曲肉块，外层包覆着硬化的甲壳。用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮物体更好的掩护。甲壳血肉掩体会像栅栏一样阻挡部分动物。</FH_ChitinFleshBarricade.description>
 
-  <!-- EN: flesh lamp -->
+  <FH_FleshBed.label>血肉单人床</FH_FleshBed.label>
+  <FH_FleshBed.description>一张血肉构成的单人床，柔软的血肉上长出了一个口袋结构和枕头用于休息，意外的舒适，在上面休息的人能够更快的恢复伤势。</FH_FleshBed.description>
+
+  <FH_FleshDoubleBed.label>血肉双人床</FH_FleshDoubleBed.label>
+  <FH_FleshDoubleBed.description>一张血肉构成的双人床，柔软的血肉上长出了一个口袋结构和枕头用于休息，意外的舒适，在上面休息的人能够更快的恢复伤势。</FH_FleshDoubleBed.description>
+
+  <FH_FleshColumn.label>血肉支撑柱</FH_FleshColumn.label>
+  <FH_FleshColumn.description>一个由血肉构成用于支撑屋顶的柱子，不影响视野和移动。</FH_FleshColumn.description>
+
+  <FH_FleshStool.label>血肉凳子</FH_FleshStool.label>
+  <FH_FleshStool.description>由血肉构成给人坐的简易凳子。意外的舒适。可以在餐桌和工作台或者别的什么附近使用。</FH_FleshStool.description>
+
+  <FH_FleshTableSmall.label>血肉桌子（1x2）</FH_FleshTableSmall.label>
+  <FH_FleshTableSmall.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableSmall.description>
+
+  <FH_FleshTableSquare.label>血肉桌子（2x2）</FH_FleshTableSquare.label>
+  <FH_FleshTableSquare.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableSquare.description>
+
+  <FH_FleshTableLong.label>血肉桌子（4x2）</FH_FleshTableLong.label>
+  <FH_FleshTableLong.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableLong.description>
+
+  <FH_FleshTableLarge.label>血肉桌子（3x3）</FH_FleshTableLarge.label>
+  <FH_FleshTableLarge.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableLarge.description>
+
   <FH_FleshLamp.label>血肉灯</FH_FleshLamp.label>
-  <!-- EN: A bioluminescent bulb grown from twisted flesh... -->
-  <FH_FleshLamp.description>由扭曲肉块培育出的生物发光球茎。它发出温暖而有生命的脉动光芒，无需电力就能照亮周围区域。</FH_FleshLamp.description>
-
+  <FH_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_FleshLamp.description>
 </LanguageData>
