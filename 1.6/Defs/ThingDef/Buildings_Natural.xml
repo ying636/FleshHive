@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshHive</defName>
@@ -352,7 +352,7 @@
     </graphicData>
     <uiIconPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_MenuIcon</uiIconPath>
     <uiIconScale>1.2</uiIconScale>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
     <pathCost>300</pathCost>
     <passability>Impassable</passability>
     <blockWind>true</blockWind>
@@ -389,7 +389,7 @@
     </graphicData>
     <uiIconPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_MenuIcon</uiIconPath>
     <uiIconScale>1.2</uiIconScale>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
     <pathCost>300</pathCost>
     <passability>Impassable</passability>
     <blockWind>true</blockWind>
@@ -543,7 +543,7 @@
     </graphicData>
     <uiIconPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_MenuIcon</uiIconPath>
     <uiIconScale>1.2</uiIconScale>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
     <pathCost>42</pathCost>
     <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
     <passability>PassThroughOnly</passability>
@@ -584,7 +584,7 @@
     </graphicData>
     <uiIconPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_MenuIcon</uiIconPath>
     <uiIconScale>1.2</uiIconScale>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
     <pathCost>42</pathCost>
     <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
     <passability>PassThroughOnly</passability>
@@ -656,9 +656,6 @@
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
       </li>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(2,2)</size>
-      </li>
     </comps>
   </ThingDef>
 
@@ -706,9 +703,6 @@
       <li Class="CompProperties_AssignableToPawn">
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
-      </li>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(2,2)</size>
       </li>
     </comps>
   </ThingDef>
@@ -778,11 +772,6 @@
     <replaceTags>
       <li>Chair</li>
     </replaceTags>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(1,1)</size>
-      </li>
-    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -819,11 +808,6 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(1,2)</size>
-      </li>
-    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -860,11 +844,6 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(2,2)</size>
-      </li>
-    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -901,11 +880,6 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(4,2)</size>
-      </li>
-    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -942,11 +916,6 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
-    <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(3,3)</size>
-      </li>
-    </comps>
   </ThingDef>
 
 
