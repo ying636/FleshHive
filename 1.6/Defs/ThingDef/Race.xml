@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <ThingDef ParentName="BaseFleshbeast" Name="FH_BaseFleshBeast" Abstract="True">
@@ -45,6 +45,22 @@
           <soundCall>Pawn_Fleshbeast_Fingerspike_Call</soundCall>
         </li>
       </lifeStageAges>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_MediumFleshBeast" Abstract="True">
+    <race>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>2</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Puffspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
     </race>
   </ThingDef>
 
@@ -494,7 +510,7 @@
 
   <!-- 碎爪兽-->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Shatterspike</defName>
     <label>shatterspike</label>
     <description>TODO.</description>
@@ -541,15 +557,6 @@
       <baseHealthScale>0.3</baseHealthScale>
       <lifeExpectancy>10</lifeExpectancy>
       <renderTree>FH_Shatterspike</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
-        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
-        <dividePawnCount>2</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Whipspike</li>
-          <li>FH_Gutspike</li>
-        </dividePawnKindOptions>
-      </deathAction>
       <lifeStageAges>
         <li>
           <def>EntityFullyFormed</def>
@@ -641,7 +648,7 @@
 
   <!-- 双爪兽-->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Toughspike</defName>
     <label>aaa</label>
     <description>A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly.</description>
@@ -690,13 +697,6 @@
       <lifeExpectancy>15</lifeExpectancy>
       <renderTree>Toughspike</renderTree>
       <canBecomeShambler>true</canBecomeShambler>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
-        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
-        <dividePawnCount>2</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Fingerspike</li>
-        </dividePawnKindOptions>
-      </deathAction>
       <lifeStageAges>
         <li>
           <def>FullyFormed_Toughspike</def>
@@ -793,7 +793,7 @@
 
   <!-- 盾爪兽-->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Shieldspike</defName>
     <label>shieldspike</label>
     <description>TODO</description>
@@ -840,13 +840,6 @@
       <baseHealthScale>1.2</baseHealthScale>
       <lifeExpectancy>15</lifeExpectancy>
       <canBecomeShambler>true</canBecomeShambler>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
-        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
-        <dividePawnCount>2</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Fingerspike</li>
-        </dividePawnKindOptions>
-      </deathAction>
       <lifeStageAges>
         <li>
           <def>FullyFormed_Toughspike</def>
@@ -940,7 +933,7 @@
 
   <!-- 三爪兽-->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Trispike</defName>
     <label>trispike</label>
     <description>A man-sized amalgamation of several smaller fleshbeasts. Each of the creature's limbs is capable of surviving independently. On death, trispikes may split into separate fingerspikes as each limb rips free and attacks.</description>
@@ -956,15 +949,6 @@
       <baseHealthScale>0.3</baseHealthScale>
       <lifeExpectancy>10</lifeExpectancy>
       <renderTree>Trispike</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
-        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
-        <dividePawnCount>3</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Puffspike</li>
-          <li>FH_Whipspike</li>
-        </dividePawnKindOptions>
-      </deathAction>
       <lifeStageAges>
         <li>
           <def>EntityFullyFormed</def>
@@ -1083,6 +1067,130 @@
         </silhouetteGraphicData>
       </li>
     </lifeStages>
+  </PawnKindDef>
+
+  <!-- 翼爪兽 -->
+
+  <ThingDef ParentName="FH_MediumFleshBeast">
+    <defName>FH_Fleshwind</defName>
+    <label>fleshwind</label>
+    <description>A fleshbeast with huge spiked flying wings and a head covered in sharp keratinous plating. It is roughly the size of an adult human. Its loose, shifting structure allows it to fly through the air and quickly cross defensive fortifications. Fleshwind bodies are often host to smaller fleshbeasts; when the host dies, these parasites tear free, act independently, and attack.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <MaxFlightTime>15</MaxFlightTime>
+      <FlightCooldown>5</FlightCooldown>
+      <MinimumContainmentStrength>45</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_east</uiIconPath>
+    <race>
+      <body>Trispike</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>0.8</baseHealthScale>
+      <lifeExpectancy>12</lifeExpectancy>
+      <flightStartChanceOnJobStart>0.25</flightStartChanceOnJobStart>
+      <flightSpeedFactor>2.5</flightSpeedFactor>
+      <canFlyIntoMap>true</canFlyIntoMap>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <groupCost>2</groupCost>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left wing spike</label>
+        <labelNoLocation>wing spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right wing spike</label>
+        <labelNoLocation>wing spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>horned head</label>
+        <labelNoLocation>horned head</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Fleshwind</defName>
+    <label>fleshwind</label>
+    <race>FH_Fleshwind</race>
+    <combatPower>80</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Dessicated_Fleshwind</texPath>
+          <drawSize>2.2</drawSize>
+        </dessicatedBodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_east</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+    <flyingAnimationFramePathPrefix>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_Flying_</flyingAnimationFramePathPrefix>
+    <flyingAnimationFrameCount>8</flyingAnimationFrameCount>
+    <flyingAnimationTicksPerFrame>2</flyingAnimationTicksPerFrame>
+    <flyingAnimationDrawSize>2.2</flyingAnimationDrawSize>
+    <flyingAnimationDrawSizeIsMultiplier>false</flyingAnimationDrawSizeIsMultiplier>
+    <flyingAnimationInheritColors>true</flyingAnimationInheritColors>
   </PawnKindDef>
 
   <!-- 大型血肉兽 -->
@@ -1542,3 +1650,6 @@
 
 
 </Defs>
+
+
+

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshHive</defName>
@@ -8,7 +8,7 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3.5,2.5)</drawSize>
+      <drawSize>(3.5,3)</drawSize>
     </graphicData>
     <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
@@ -495,15 +495,73 @@
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(1,1)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshBox</defName>
+    <label>flesh vesicle</label>
+    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive.</description>
+    <thingClass>FleshHive.Building_FleshBox</thingClass>
+    <graphicData>
+      <texPath>FH_FleshBox/FH_FleshBox</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>FH_FleshBox/FH_FleshBox</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
     <inspectorTabs>
       <li>ITab_Storage</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
     </statBases>
     <building>
-      <storageGroupTag>FH_FleshHopper</storageGroupTag>
+      <storageGroupTag>FH_FleshBox</storageGroupTag>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+          <disallowedCategories>
+            <li>Chunks</li>
+            <li>Plants</li>
+            <li>Buildings</li>
+          </disallowedCategories>
+          <specialFiltersToDisallow>
+            <li>AllowLargeCorpses</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
       <defaultStorageSettings>
         <priority>Important</priority>
         <filter>
@@ -515,7 +573,6 @@
             <li>Weapons</li>
             <li>Apparel</li>
             <li>BodyParts</li>
-            <li>Corpses</li>
           </categories>
         </filter>
       </defaultStorageSettings>

@@ -18,6 +18,9 @@
   <FH_Building_FleshHopper.label>血肉产出口</FH_Building_FleshHopper.label>
   <FH_Building_FleshHopper.description>使得血肉巢穴能够将内部加工的产物吐出的器官。通过血肉产出口，可以命令巢穴消耗营养生产物资。</FH_Building_FleshHopper.description>
 
+  <FH_Building_FleshBox.label>血肉囊泡</FH_Building_FleshBox.label>
+  <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。储存原料以供血肉巢穴使用。</FH_Building_FleshBox.description>
+
   <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>
   <FH_Building_ChitinFleshBarricade.description>一种齐腰高的坚固扭曲肉块，外层包覆着硬化的甲壳。用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮物体更好的掩护。甲壳血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_ChitinFleshBarricade.description>
 

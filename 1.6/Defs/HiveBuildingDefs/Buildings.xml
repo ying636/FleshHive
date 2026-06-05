@@ -112,6 +112,22 @@
   </FleshHive.FleshHiveBuildingDef>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBox</defName>
+    <label>flesh vesicle</label>
+    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive.</description>
+    <building>FH_FleshBox</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>120</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
     <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>

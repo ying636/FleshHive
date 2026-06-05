@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <HediffDef>
+    <defName>FH_Trait_None</defName>
+    <label>none</label>
+    <description>This fleshbeast has no special trait.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Tough</defName>
+    <label>tough</label>
+    <description>This fleshbeast has a dense, resilient body and takes less damage.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>0.75</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Degraded</defName>
+    <label>degraded</label>
+    <description>This fleshbeast's nervous tissue has degraded, reducing its consciousness.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Runaway</defName>
+    <label>runaway</label>
+    <description>This fleshbeast is prone to breaking free of control after fusion.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Fragile</defName>
+    <label>fragile</label>
+    <description>This fleshbeast's body is unstable and takes more damage.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <IncomingDamageFactor>1.25</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Swift</defName>
+    <label>swift</label>
+    <description>This fleshbeast moves with abnormal speed.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_RapidGrowth</defName>
+    <label>rapid growth</label>
+    <description>This fleshbeast grows unusually quickly.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Split</defName>
+    <label>split</label>
+    <description>This fleshbeast splits into a small fleshbeast when it dies.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_FleshTraitDeathEffect">
+        <spawnSmallFleshbeast>true</spawnSmallFleshbeast>
+        <spawnCount>1</spawnCount>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Sharp</defName>
+    <label>sharp</label>
+    <description>This fleshbeast's sharp natural weapons pierce armor more easily.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeArmorPenetration>1.2</MeleeArmorPenetration>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Acidic</defName>
+    <label>acidic</label>
+    <description>This fleshbeast ruptures in a burst of acid when it dies.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_FleshTraitDeathEffect">
+        <acidExplosion>true</acidExplosion>
+        <acidDamageAmount>10</acidDamageAmount>
+        <acidExplosionRadius>1.9</acidExplosionRadius>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_BoneSpurGrowth</defName>
+    <label>bone spur growth</label>
+    <description>This fleshbeast grows excess bone spurs, reducing the cooldown of its abilities.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Domesticated</defName>
+    <label>domesticated</label>
+    <description>This fleshbeast is more stable under hive control.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <HCF_Stat_MaintenanceDecayRate>0.5</HCF_Stat_MaintenanceDecayRate>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_ExpandedCapacity</defName>
+    <label>expanded capacity</label>
+    <description>This fleshbeast can hold additional parasite mass.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statOffsets>
+          <FH_Stat_ParasitismCapacity>1</FH_Stat_ParasitismCapacity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Robust</defName>
+    <label>robust</label>
+    <description>This fleshbeast hits harder in melee.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Trait_Cancerous</defName>
+    <label>cancerous</label>
+    <description>This fleshbeast regenerates like a ghoul, but its control decays much faster.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <statFactors>
+          <HCF_Stat_MaintenanceDecayRate>2</HCF_Stat_MaintenanceDecayRate>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Regeneration">
+        <regenHediff>Regeneration</regenHediff>
+        <regenSeverity>0.5</regenSeverity>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

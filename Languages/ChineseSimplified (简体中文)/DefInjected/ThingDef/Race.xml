@@ -122,6 +122,25 @@
   <FH_Trispike.tools.top_spike.labelNoLocation>TODO</FH_Trispike.tools.top_spike.labelNoLocation>
   <!-- EN: head -->
   <FH_Trispike.tools.head.label>TODO</FH_Trispike.tools.head.label>
+
+  <!-- EN: fleshwind -->
+  <FH_Fleshwind.label>翼爪兽</FH_Fleshwind.label>
+  <!-- EN: A fleshbeast with huge spiked flying wings and a head covered in sharp keratinous plating. It is roughly the size of an adult human. Its loose, shifting structure allows it to fly through the air and quickly cross defensive fortifications. Fleshwind bodies are often host to smaller fleshbeasts; when the host dies, these parasites tear free, act independently, and attack. -->
+  <FH_Fleshwind.description>长着巨大尖刺飞翼的血肉兽，头部覆盖着尖锐的角质甲壳，体型与成年人相当。这种生物能够以松散的结构在空中飞行，快速穿越防御工事。翼爪兽身上通常寄生着小型血肉兽。死亡时，寄生的血肉兽就会从原本的宿主上跳出，独立行动并发起攻击。</FH_Fleshwind.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left wing spike -->
+  <FH_Fleshwind.tools.left_wing_spike.label>左翼骨刺</FH_Fleshwind.tools.left_wing_spike.label>
+  <!-- EN: wing spike -->
+  <FH_Fleshwind.tools.left_wing_spike.labelNoLocation>翼骨刺</FH_Fleshwind.tools.left_wing_spike.labelNoLocation>
+  <!-- EN: right wing spike -->
+  <FH_Fleshwind.tools.right_wing_spike.label>右翼骨刺</FH_Fleshwind.tools.right_wing_spike.label>
+  <!-- EN: wing spike -->
+  <FH_Fleshwind.tools.right_wing_spike.labelNoLocation>翼骨刺</FH_Fleshwind.tools.right_wing_spike.labelNoLocation>
+  <!-- EN: horned head -->
+  <FH_Fleshwind.tools.horned_head.label>覆角头部</FH_Fleshwind.tools.horned_head.label>
+  <!-- EN: horned head -->
+  <FH_Fleshwind.tools.horned_head.labelNoLocation>覆角头部</FH_Fleshwind.tools.horned_head.labelNoLocation>
   
   <!-- EN: 鞭爪兽 -->
   <FH_Whipspike.label>TODO</FH_Whipspike.label>
