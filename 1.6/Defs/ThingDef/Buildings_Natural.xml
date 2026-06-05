@@ -8,9 +8,9 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2.5</drawSize>
+      <drawSize>(3.5,2.5)</drawSize>
     </graphicData>
-    <size>(2,2)</size>
+    <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
@@ -130,7 +130,7 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(2,2)</size>
+        <size>(3,2)</size>
       </li>
     </comps>
   </ThingDef>
