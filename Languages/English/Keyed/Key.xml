@@ -40,5 +40,7 @@
   <FH_FleshPrimaryNest_OnlyOne>A hive can only support one flesh primary nest.</FH_FleshPrimaryNest_OnlyOne>
   <FH_MustPlaceOnFleshTerrain>Must be placed on flesh terrain.</FH_MustPlaceOnFleshTerrain>
   <FH_RequireFleshHopper>An available flesh hopper is required.</FH_RequireFleshHopper>
+  <FleshHive_SettingsCategory>Flesh Hive</FleshHive_SettingsCategory>
+  <FleshHive_RaidParasiteChance>Raid parasite carrier chance: {0}</FleshHive_RaidParasiteChance>
 
 </LanguageData>

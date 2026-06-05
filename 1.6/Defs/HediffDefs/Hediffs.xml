@@ -257,7 +257,7 @@
             <renderNode>
               <debugLabel>Tentacle</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
-              <texPath>Things/Pawn/Addon/Shieldspike_Spike</texPath>
+              <texPath>Things/Pawn/Addon/FH_Shieldspike_Spike</texPath>
               <baseLayer>100</baseLayer>
               <drawData>
                 <dataSouth>
@@ -448,7 +448,7 @@
             <renderNode>
               <debugLabel>Tentacle</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
-              <texPath>Things/Pawn/Addon/FH_Shatterspike_SideLimb</texPath>
+              <texPath>Things/Pawn/Addon/FH_Shieldspike_Spike</texPath>
               <baseLayer>100</baseLayer>
               <drawData>
                 <dataSouth>

@@ -61,5 +61,7 @@
     <FH_FleshPrimaryNest_OnlyOne>一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest_OnlyOne>
     <FH_MustPlaceOnFleshTerrain>必须放置在血肉地形上。</FH_MustPlaceOnFleshTerrain>
     <FH_RequireFleshHopper>需要至少一个可用的产出物喷口。</FH_RequireFleshHopper>
+    <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
+    <FleshHive_RaidParasiteChance>袭击单位携带血肉兽寄生概率：{0}</FleshHive_RaidParasiteChance>
 
 </LanguageData>
