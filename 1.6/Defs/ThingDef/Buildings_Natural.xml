@@ -74,6 +74,7 @@
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <transferOnEvolution>false</transferOnEvolution>
         <resources>
           <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
         </resources>
@@ -205,6 +206,7 @@
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <transferOnEvolution>false</transferOnEvolution>
         <resources>
           <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
         </resources>
