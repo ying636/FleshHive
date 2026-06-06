@@ -27,5 +27,35 @@
   
   <FH_Unit_Trispike.label>三爪兽</FH_Unit_Trispike.label>
   <FH_Unit_Trispike.description>生产一只三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike.description>
+
+  <FH_Unit_Shieldspike_Cancerous.label>癌变盾爪兽</FH_Unit_Shieldspike_Cancerous.label>
+  <FH_Unit_Shieldspike_Cancerous.description>生产一只带有癌变特性的盾爪兽。需要先发现对应融合配方。</FH_Unit_Shieldspike_Cancerous.description>
+
+  <FH_Unit_Toughspike_Sharp.label>锐利双爪兽</FH_Unit_Toughspike_Sharp.label>
+  <FH_Unit_Toughspike_Sharp.description>生产一只带有锐利特性的双爪兽。需要先发现对应融合配方。</FH_Unit_Toughspike_Sharp.description>
+
+  <FH_Unit_Trispike_Acidic.label>酸蚀三爪兽</FH_Unit_Trispike_Acidic.label>
+  <FH_Unit_Trispike_Acidic.description>生产一只带有酸蚀特性的三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike_Acidic.description>
+
+  <FH_Unit_Shieldspike_Tough.label>皮实盾爪兽</FH_Unit_Shieldspike_Tough.label>
+  <FH_Unit_Shieldspike_Tough.description>生产一只带有皮实特性的盾爪兽。需要先发现对应融合配方。</FH_Unit_Shieldspike_Tough.description>
+
+  <FH_Unit_Fleshwind_Swift.label>迅捷翼爪兽</FH_Unit_Fleshwind_Swift.label>
+  <FH_Unit_Fleshwind_Swift.description>生产一只带有迅捷特性的翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind_Swift.description>
+
+  <FH_Unit_Toughspike_Robust.label>健壮双爪兽</FH_Unit_Toughspike_Robust.label>
+  <FH_Unit_Toughspike_Robust.description>生产一只带有健壮特性的双爪兽。需要先发现对应融合配方。</FH_Unit_Toughspike_Robust.description>
+
+  <FH_Unit_Shatterspike_BoneSpurGrowth.label>骨刺增生碎爪兽</FH_Unit_Shatterspike_BoneSpurGrowth.label>
+  <FH_Unit_Shatterspike_BoneSpurGrowth.description>生产一只带有骨刺增生特性的碎爪兽。需要先发现对应融合配方。</FH_Unit_Shatterspike_BoneSpurGrowth.description>
+
+  <FH_Unit_Shatterspike_Domesticated.label>驯化碎爪兽</FH_Unit_Shatterspike_Domesticated.label>
+  <FH_Unit_Shatterspike_Domesticated.description>生产一只带有驯化特性的碎爪兽。需要先发现对应融合配方。</FH_Unit_Shatterspike_Domesticated.description>
+
+  <FH_Unit_Trispike_Split.label>分裂三爪兽</FH_Unit_Trispike_Split.label>
+  <FH_Unit_Trispike_Split.description>生产一只带有分裂特性的三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike_Split.description>
+
+  <FH_Unit_Fleshwind_ExpandedCapacity.label>扩容翼爪兽</FH_Unit_Fleshwind_ExpandedCapacity.label>
+  <FH_Unit_Fleshwind_ExpandedCapacity.description>生产一只带有扩容特性的翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind_ExpandedCapacity.description>
   
 </LanguageData>

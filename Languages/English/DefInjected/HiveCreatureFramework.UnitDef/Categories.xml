@@ -10,5 +10,15 @@
   <FH_Unit_Shieldspike.description>Spawn a shieldspike. Requires discovering the matching fusion recipe first.</FH_Unit_Shieldspike.description>
   <FH_Unit_Toughspike.description>Spawn a toughspike. Requires discovering the matching fusion recipe first.</FH_Unit_Toughspike.description>
   <FH_Unit_Trispike.description>Spawn a trispike. Requires discovering the matching fusion recipe first.</FH_Unit_Trispike.description>
+  <FH_Unit_Shieldspike_Cancerous.description>Spawn a shieldspike with the cancerous trait. Requires discovering the matching fusion recipe first.</FH_Unit_Shieldspike_Cancerous.description>
+  <FH_Unit_Toughspike_Sharp.description>Spawn a toughspike with the sharp trait. Requires discovering the matching fusion recipe first.</FH_Unit_Toughspike_Sharp.description>
+  <FH_Unit_Trispike_Acidic.description>Spawn a trispike with the acidic trait. Requires discovering the matching fusion recipe first.</FH_Unit_Trispike_Acidic.description>
+  <FH_Unit_Shieldspike_Tough.description>Spawn a shieldspike with the tough trait. Requires discovering the matching fusion recipe first.</FH_Unit_Shieldspike_Tough.description>
+  <FH_Unit_Fleshwind_Swift.description>Spawn a fleshwind with the swift trait. Requires discovering the matching fusion recipe first.</FH_Unit_Fleshwind_Swift.description>
+  <FH_Unit_Toughspike_Robust.description>Spawn a toughspike with the robust trait. Requires discovering the matching fusion recipe first.</FH_Unit_Toughspike_Robust.description>
+  <FH_Unit_Shatterspike_BoneSpurGrowth.description>Spawn a shatterspike with the bone spur growth trait. Requires discovering the matching fusion recipe first.</FH_Unit_Shatterspike_BoneSpurGrowth.description>
+  <FH_Unit_Shatterspike_Domesticated.description>Spawn a shatterspike with the domesticated trait. Requires discovering the matching fusion recipe first.</FH_Unit_Shatterspike_Domesticated.description>
+  <FH_Unit_Trispike_Split.description>Spawn a trispike with the split trait. Requires discovering the matching fusion recipe first.</FH_Unit_Trispike_Split.description>
+  <FH_Unit_Fleshwind_ExpandedCapacity.description>Spawn a fleshwind with the expanded capacity trait. Requires discovering the matching fusion recipe first.</FH_Unit_Fleshwind_ExpandedCapacity.description>
   
 </LanguageData>

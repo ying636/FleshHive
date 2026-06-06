@@ -84,6 +84,7 @@
         </tags>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
+        <compClass>HiveCreatureFramework.CompHiveSpawner_Detail</compClass>
         <UnitCategories>
         </UnitCategories>
       </li>
@@ -211,10 +212,10 @@
         </tags>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
+        <compClass>HiveCreatureFramework.CompHiveSpawner_Detail</compClass>
         <UnitCategories>
           <li>FH_Category_LittleFleshBeast</li>
           <li>FH_Category_MediumFleshBeast</li>
-          <li>FH_Category_MeldBeast</li>
         </UnitCategories>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">

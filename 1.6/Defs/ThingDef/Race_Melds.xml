@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-  <!-- 统合母兽 -->
+  <!-- 缁熷悎姣嶅吔 -->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Nexusmeld</defName>
@@ -149,7 +149,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 暴怒母�?-->
+  <!-- 鏆存?掓瘝鍏?-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Furiousmeld</defName>
@@ -311,7 +311,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 铁骸母兽 -->
+  <!-- 閾侀姣嶅吔 -->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Bastionmeld</defName>
@@ -447,7 +447,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 裂殖母兽 -->
+  <!-- 瑁傛畺姣嶅吔 -->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fissionmeld</defName>
@@ -580,7 +580,7 @@
     </lifeStages>
   </PawnKindDef> 
 
-  <!-- 血肉泰�?-->
+  <!-- 琛?鑲夋嘲鍧?-->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fleshtitan</defName>
@@ -749,7 +749,7 @@
     </lifeStages>
   </PawnKindDef>
 
-  <!-- 惊惧母兽 -->
+  <!-- 鎯婃儳姣嶅吔 -->
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Dreadmeld</defName>
@@ -859,28 +859,5 @@
       </li>
     </tools>
   </ThingDef>
-
-  <PawnKindDef ParentName="BaseFleshbeastKind">
-    <defName>FH_Dreadmeld</defName>
-    <label>dreadmeld</label>
-    <forceDeathOnDowned>true</forceDeathOnDowned>
-    <race>FH_Dreadmeld</race>
-    <combatPower>600</combatPower>
-    <startingHediffs>
-      <li>
-        <def>Regeneration</def>
-        <severity>1</severity>
-      </li>
-    </startingHediffs>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>4</drawSize>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
 
 </Defs>
