@@ -96,6 +96,7 @@
         </specialWorks>
         <tags>
           <li>Flesh</li>
+          <li>FH_FleshContainer</li>
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
@@ -125,8 +126,7 @@
         <resource>FH_Resource_Nutrition</resource>
         <healResource>FH_Resource_Nutrition</healResource>
         <tags>
-          <li>Flesh</li>
-          <li>FleshHive</li>
+          <li>FH_FleshContainer</li>
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
@@ -228,6 +228,7 @@
         </specialWorks>
         <tags>
           <li>Flesh</li>
+          <li>FH_FleshContainer</li>
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
@@ -251,8 +252,7 @@
         <resource>FH_Resource_Nutrition</resource>
         <healResource>FH_Resource_Nutrition</healResource>
         <tags>
-          <li>Flesh</li>
-          <li>FleshHive</li>
+          <li>FH_FleshContainer</li>
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
