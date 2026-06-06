@@ -9,10 +9,18 @@
             <li>Flesh</li>
         </tags>
         <options>
+            <li>FH_CategoryOption_FleshManagement</li>
             <li>HCF_CategoryOption_Group</li>
+            <li>HCF_CategoryOption_WorkSettings</li>
         </options>
         <texPath>UI/UI_Hive/Hive_Flesh</texPath>
     </HiveCreatureFramework.HiveRaceCategoryDef>
 
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_FleshManagement</defName>
+        <label>Flesh beast management</label>
+        <description>Manage flesh hive population, nutrition, activity, and fleshbeasts.</description>
+        <option Class="FleshHive.HiveTabOption_FleshManagement" />
+    </HiveCreatureFramework.HiveTabOptionDef>
 
 </Defs>

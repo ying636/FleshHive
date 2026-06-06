@@ -63,5 +63,16 @@
     <FH_RequireFleshHopper>需要至少一个可用的产出物喷口。</FH_RequireFleshHopper>
     <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
     <FleshHive_RaidParasiteChance>袭击单位携带血肉兽寄生概率：{0}</FleshHive_RaidParasiteChance>
+    <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
+    <HCF_Tag_FH_FleshContainer>血肉巢穴容器</HCF_Tag_FH_FleshContainer>
+    <FH_FleshManagement_HivePopulation>巢穴人口：{0} / {1}</FH_FleshManagement_HivePopulation>
+    <FH_FleshManagement_Nutrition>营养度</FH_FleshManagement_Nutrition>
+    <FH_FleshManagement_FleshCount>血肉数量：{0}</FH_FleshManagement_FleshCount>
+    <FH_FleshManagement_HiveEfficiency>巢穴效率：--</FH_FleshManagement_HiveEfficiency>
+    <FH_FleshManagement_Activity>活跃度</FH_FleshManagement_Activity>
+    <FH_FleshManagement_HivePopulationShort>巢穴人口：{0}/{1}</FH_FleshManagement_HivePopulationShort>
+    <FH_FleshManagement_Progress>巢穴进程</FH_FleshManagement_Progress>
+    <FH_FleshManagement_TemporaryGroup>临时血肉群组</FH_FleshManagement_TemporaryGroup>
+    <FH_FleshManagement_NoHive>无所属巢穴</FH_FleshManagement_NoHive>
 
 </LanguageData>

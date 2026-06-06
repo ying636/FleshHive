@@ -5,7 +5,7 @@
         <defName>FH_Resource_Nutrition</defName>
         <label>Nurtition</label>
         <description>Nurtition.</description>
-        <color>(0.7, 0.1, 0.1)</color>
+        <color>(0.55, 0.28, 0.25)</color>
         <graphic>
             <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
             <graphicClass>Graphic_Single</graphicClass>

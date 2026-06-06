@@ -91,6 +91,7 @@
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>
@@ -223,6 +224,7 @@
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>

@@ -65,4 +65,17 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HiveCreatureFramework.HiveTabOptionDef[defName="HCF_CategoryOption_Group"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="HiveCreatureFramework.ModExtension_HiveTabOptionGroup">
+					<forbiddenShowTags>
+						<li>FH_FleshContainer</li>
+					</forbiddenShowTags>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+
 </Patch>
