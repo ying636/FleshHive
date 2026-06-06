@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <FH_Trait_Acidic.label>acidic</FH_Trait_Acidic.label>
+  <FH_Trait_Acidic.description>This fleshbeast ruptures in a burst of acid when it dies.</FH_Trait_Acidic.description>
+  
+  <FH_Trait_BoneSpurGrowth.label>bone spur growth</FH_Trait_BoneSpurGrowth.label>
+  <FH_Trait_BoneSpurGrowth.description>This fleshbeast grows excess bone spurs, reducing the cooldown of its abilities.</FH_Trait_BoneSpurGrowth.description>
+  
+  <FH_Trait_Cancerous.label>cancerous</FH_Trait_Cancerous.label>
+  <FH_Trait_Cancerous.description>This fleshbeast regenerates like a ghoul, but its control decays much faster.</FH_Trait_Cancerous.description>
+  
+  <FH_Trait_Degraded.label>degraded</FH_Trait_Degraded.label>
+  <FH_Trait_Degraded.description>This fleshbeast's nervous tissue has degraded, reducing its consciousness.</FH_Trait_Degraded.description>
+  
+  <FH_Trait_Domesticated.label>domesticated</FH_Trait_Domesticated.label>
+  <FH_Trait_Domesticated.description>This fleshbeast is more stable under hive control.</FH_Trait_Domesticated.description>
+  
+  <FH_Trait_ExpandedCapacity.label>expanded capacity</FH_Trait_ExpandedCapacity.label>
+  <FH_Trait_ExpandedCapacity.description>This fleshbeast can hold additional parasite mass.</FH_Trait_ExpandedCapacity.description>
+  
+  <FH_Trait_Fragile.label>fragile</FH_Trait_Fragile.label>
+  <FH_Trait_Fragile.description>This fleshbeast's body is unstable and takes more damage.</FH_Trait_Fragile.description>
+  
+  <FH_Trait_None.label>none</FH_Trait_None.label>
+  <FH_Trait_None.description>This fleshbeast has no special trait.</FH_Trait_None.description>
+  
+  <FH_Trait_RapidGrowth.label>rapid growth</FH_Trait_RapidGrowth.label>
+  <FH_Trait_RapidGrowth.description>This fleshbeast grows unusually quickly.</FH_Trait_RapidGrowth.description>
+  
+  <FH_Trait_Robust.label>robust</FH_Trait_Robust.label>
+  <FH_Trait_Robust.description>This fleshbeast hits harder in melee.</FH_Trait_Robust.description>
+  
+  <FH_Trait_Runaway.label>runaway</FH_Trait_Runaway.label>
+  <FH_Trait_Runaway.description>This fleshbeast is prone to breaking free of control after fusion.</FH_Trait_Runaway.description>
+  
+  <FH_Trait_Sharp.label>sharp</FH_Trait_Sharp.label>
+  <FH_Trait_Sharp.description>This fleshbeast's sharp natural weapons pierce armor more easily.</FH_Trait_Sharp.description>
+  
+  <FH_Trait_Split.label>split</FH_Trait_Split.label>
+  <FH_Trait_Split.description>This fleshbeast splits into a small fleshbeast when it dies.</FH_Trait_Split.description>
+  
+  <FH_Trait_Swift.label>swift</FH_Trait_Swift.label>
+  <FH_Trait_Swift.description>This fleshbeast moves with abnormal speed.</FH_Trait_Swift.description>
+  
+  <FH_Trait_Tough.label>tough</FH_Trait_Tough.label>
+  <FH_Trait_Tough.description>This fleshbeast has a dense, resilient body and takes less damage.</FH_Trait_Tough.description>
+  
+</LanguageData>

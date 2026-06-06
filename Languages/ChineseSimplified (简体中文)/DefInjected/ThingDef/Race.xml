@@ -1,12 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: fingerspike -->
-  <FH_Fingerspike.label>你好 ̴́͊́̋͒̍̈͛̕͝͠ ̴̡̢̰̬͚̬͓̻̰̯͓̥̈́̐̾̆̾͆̇̀̑̽́̄͜ ̸̢̞͔̜̰͔͕́̾̾͆̀͆̔̿ ̵̤̭̟͗͜ ̸̫̙͉̠̺͙̺͐̈́̇͌̒͝ ̸̢̧̜̤̟̱͔̤̩͙̻̻͋͒͋̿͆͊̒̿͐̏́͜ͅ ̸̧̦̬͔̼̩̯̤̼̋̆̑̄͜͠ͅ ̵̙̳̅̃̃̓̔̑͋̐̋̎̐̇͝<</FH_Fingerspike.label>
+  <!-- EN: acidbulb -->
+  <FH_Acidbulb.label>TODO</FH_Acidbulb.label>
+  <!-- EN: TODO. -->
+  <FH_Acidbulb.description>TODO</FH_Acidbulb.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Acidbulb.comps.CompInspectStringEmergence.inspectString>TODO</FH_Acidbulb.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Acidbulb.tools.tentacle-0.label>TODO</FH_Acidbulb.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Acidbulb.tools.tentacle-1.label>TODO</FH_Acidbulb.tools.tentacle-1.label>
+  <!-- EN: tentacle -->
+  <FH_Acidbulb.tools.tentacle-2.label>TODO</FH_Acidbulb.tools.tentacle-2.label>
+  <!-- EN: tentacle -->
+  <FH_Acidbulb.tools.tentacle-3.label>TODO</FH_Acidbulb.tools.tentacle-3.label>
+  <!-- EN: tentacle -->
+  <FH_Acidbulb.tools.tentacle-4.label>TODO</FH_Acidbulb.tools.tentacle-4.label>
+  <!-- EN: head -->
+  <FH_Acidbulb.tools.head.label>TODO</FH_Acidbulb.tools.head.label>
+  
+  <!-- EN: bulbfreak -->
+  <FH_Bulbfreak.label>TODO</FH_Bulbfreak.label>
+  <!-- EN: A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts. -->
+  <FH_Bulbfreak.description>TODO</FH_Bulbfreak.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Bulbfreak.comps.CompInspectStringEmergence.inspectString>TODO</FH_Bulbfreak.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Bulbfreak.tools.tentacle-0.label>TODO</FH_Bulbfreak.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Bulbfreak.tools.tentacle-1.label>TODO</FH_Bulbfreak.tools.tentacle-1.label>
+  <!-- EN: tentacle -->
+  <FH_Bulbfreak.tools.tentacle-2.label>TODO</FH_Bulbfreak.tools.tentacle-2.label>
+  <!-- EN: tentacle -->
+  <FH_Bulbfreak.tools.tentacle-3.label>TODO</FH_Bulbfreak.tools.tentacle-3.label>
+  <!-- EN: tentacle -->
+  <FH_Bulbfreak.tools.tentacle-4.label>TODO</FH_Bulbfreak.tools.tentacle-4.label>
+  <!-- EN: head -->
+  <FH_Bulbfreak.tools.head.label>TODO</FH_Bulbfreak.tools.head.label>
+  
+  <!-- EN: Fingerspike -->
+  <FH_Fingerspike.label>TODO</FH_Fingerspike.label>
   <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
   <FH_Fingerspike.description>TODO</FH_Fingerspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Fingerspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fingerspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 宿主体表生长骨刺触手，造成刺击伤害。 -->
+  <FH_Fingerspike.comps.ParasitismComp.abilityDescription>TODO</FH_Fingerspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：骨刺触手 -->
+  <FH_Fingerspike.comps.ParasitismComp.abilityLabel>TODO</FH_Fingerspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: 全局工作效率+10%，魅力-1，“血肉寄生”心情-6 -->
+  <FH_Fingerspike.comps.ParasitismComp.effect>TODO</FH_Fingerspike.comps.ParasitismComp.effect>
   <!-- EN: spike -->
   <FH_Fingerspike.tools.spike.label>TODO</FH_Fingerspike.tools.spike.label>
   <!-- EN: spike -->
@@ -14,12 +58,37 @@
   <!-- EN: head -->
   <FH_Fingerspike.tools.head.label>TODO</FH_Fingerspike.tools.head.label>
   
+  <!-- EN: fleshwind -->
+  <FH_Fleshwind.label>TODO</FH_Fleshwind.label>
+  <!-- EN: A fleshbeast with huge spiked flying wings and a head covered in sharp keratinous plating. It is roughly the size of an adult human. Its loose, shifting structure allows it to fly through the air and quickly cross defensive fortifications. Fleshwind bodies are often host to smaller fleshbeasts; when the host dies, these parasites tear free, act independently, and attack. -->
+  <FH_Fleshwind.description>TODO</FH_Fleshwind.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left wing spike -->
+  <FH_Fleshwind.tools.left_wing_spike.label>TODO</FH_Fleshwind.tools.left_wing_spike.label>
+  <!-- EN: wing spike -->
+  <FH_Fleshwind.tools.left_wing_spike.labelNoLocation>TODO</FH_Fleshwind.tools.left_wing_spike.labelNoLocation>
+  <!-- EN: right wing spike -->
+  <FH_Fleshwind.tools.right_wing_spike.label>TODO</FH_Fleshwind.tools.right_wing_spike.label>
+  <!-- EN: wing spike -->
+  <FH_Fleshwind.tools.right_wing_spike.labelNoLocation>TODO</FH_Fleshwind.tools.right_wing_spike.labelNoLocation>
+  <!-- EN: horned head -->
+  <FH_Fleshwind.tools.horned_head.label>TODO</FH_Fleshwind.tools.horned_head.label>
+  <!-- EN: horned head -->
+  <FH_Fleshwind.tools.horned_head.labelNoLocation>TODO</FH_Fleshwind.tools.horned_head.labelNoLocation>
+  
   <!-- EN: 胃血兽 -->
   <FH_Gutspike.label>TODO</FH_Gutspike.label>
   <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
   <FH_Gutspike.description>TODO</FH_Gutspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Gutspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Gutspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 喷射酸浆。 -->
+  <FH_Gutspike.comps.ParasitismComp.abilityDescription>TODO</FH_Gutspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：酸浆喷射 -->
+  <FH_Gutspike.comps.ParasitismComp.abilityLabel>TODO</FH_Gutspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: 食物中毒系数×0%；抗感染：肠道蠕虫；疼痛+8% -->
+  <FH_Gutspike.comps.ParasitismComp.effect>TODO</FH_Gutspike.comps.ParasitismComp.effect>
   <!-- EN: teeth -->
   <FH_Gutspike.tools.teeth.label>TODO</FH_Gutspike.tools.teeth.label>
   <!-- EN: head -->
@@ -31,6 +100,12 @@
   <FH_Paraspike.description>TODO</FH_Paraspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Paraspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Paraspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 发射骨刺，造成刺击伤害。 -->
+  <FH_Paraspike.comps.ParasitismComp.abilityDescription>TODO</FH_Paraspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：骨刺射击 -->
+  <FH_Paraspike.comps.ParasitismComp.abilityLabel>TODO</FH_Paraspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: 失血速率×75%；抗感染：感染；疼痛+6%；后代继承寄血兽寄生效果 -->
+  <FH_Paraspike.comps.ParasitismComp.effect>TODO</FH_Paraspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Paraspike.tools.head.label>TODO</FH_Paraspike.tools.head.label>
   <!-- EN: spike -->
@@ -44,6 +119,12 @@
   <FH_Puffspike.description>TODO</FH_Puffspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Puffspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Puffspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 发射骨刺，造成刺击伤害。 -->
+  <FH_Puffspike.comps.ParasitismComp.abilityDescription>TODO</FH_Puffspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：骨刺射击 -->
+  <FH_Puffspike.comps.ParasitismComp.abilityLabel>TODO</FH_Puffspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: 完全免疫哮喘和肺瘟，并会治愈宿主肺中的这些疾病；移动速度+10%；有毒环境抗性+30%；疼痛+6% -->
+  <FH_Puffspike.comps.ParasitismComp.effect>TODO</FH_Puffspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Puffspike.tools.head.label>TODO</FH_Puffspike.tools.head.label>
   
@@ -53,6 +134,12 @@
   <FH_Shatterspike.description>TODO</FH_Shatterspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 远程发射骨刺碎片。 -->
+  <FH_Shatterspike.comps.ParasitismComp.abilityDescription>TODO</FH_Shatterspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：碎骨喷射 -->
+  <FH_Shatterspike.comps.ParasitismComp.abilityLabel>TODO</FH_Shatterspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: “血肉寄生”心情-6；魅力-1 -->
+  <FH_Shatterspike.comps.ParasitismComp.effect>TODO</FH_Shatterspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shatterspike.tools.left_spike.label>TODO</FH_Shatterspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -74,6 +161,12 @@
   <FH_Shieldspike.description>TODO</FH_Shieldspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 宿主获得盾爪，钝击附近敌人。 -->
+  <FH_Shieldspike.comps.ParasitismComp.abilityDescription>TODO</FH_Shieldspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：盾爪 -->
+  <FH_Shieldspike.comps.ParasitismComp.abilityLabel>TODO</FH_Shieldspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: 护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6 -->
+  <FH_Shieldspike.comps.ParasitismComp.effect>TODO</FH_Shieldspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shieldspike.tools.left_spike.label>TODO</FH_Shieldspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -85,12 +178,37 @@
   <!-- EN: head -->
   <FH_Shieldspike.tools.head.label>TODO</FH_Shieldspike.tools.head.label>
   
-  <!-- EN: toughspike -->
-  <FH_Toughspike.label>你好 ̴́͊́̋͒̍̈͛̕͝͠ ̴̡̢̰̬͚̬͓̻̰̯͓̥̈́̐̾̆̾͆̇̀̑̽́̄͜ ̸̢̞͔̜̰͔͕́̾̾͆̀͆̔̿ ̵̤̭̟͗͜ ̸̫̙͉̠̺͙̺͐̈́̇͌̒͝ ̸̢̧̜̤̟̱͔̤̩͙̻̻͋͒͋̿͆͊̒̿͐̏́͜ͅ ̸̧̦̬͔̼̩̯̤̼̋̆̑̄͜͠ͅ ̵̙̳̅̃̃̓̔̑͋̐̋̎̐̇͝<</FH_Toughspike.label>
+  <!-- EN: FH_Spitbulb -->
+  <FH_Spitbulb.label>TODO</FH_Spitbulb.label>
+  <!-- EN: A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts. -->
+  <FH_Spitbulb.description>TODO</FH_Spitbulb.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>TODO</FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Spitbulb.tools.tentacle-0.label>TODO</FH_Spitbulb.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Spitbulb.tools.tentacle-1.label>TODO</FH_Spitbulb.tools.tentacle-1.label>
+  <!-- EN: tentacle -->
+  <FH_Spitbulb.tools.tentacle-2.label>TODO</FH_Spitbulb.tools.tentacle-2.label>
+  <!-- EN: tentacle -->
+  <FH_Spitbulb.tools.tentacle-3.label>TODO</FH_Spitbulb.tools.tentacle-3.label>
+  <!-- EN: tentacle -->
+  <FH_Spitbulb.tools.tentacle-4.label>TODO</FH_Spitbulb.tools.tentacle-4.label>
+  <!-- EN: head -->
+  <FH_Spitbulb.tools.head.label>TODO</FH_Spitbulb.tools.head.label>
+  
+  <!-- EN: aaa -->
+  <FH_Toughspike.label>TODO</FH_Toughspike.label>
   <!-- EN: A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly. -->
   <FH_Toughspike.description>TODO</FH_Toughspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Toughspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Toughspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 宿主体表生长两条骨刺触手，造成刺击伤害。 -->
+  <FH_Toughspike.comps.ParasitismComp.abilityDescription>TODO</FH_Toughspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：骨刺触手 -->
+  <FH_Toughspike.comps.ParasitismComp.abilityLabel>TODO</FH_Toughspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: “血肉寄生”心情-6；魅力-1；全局工作效率+15%；宿主获得两条骨刺触手 -->
+  <FH_Toughspike.comps.ParasitismComp.effect>TODO</FH_Toughspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Toughspike.tools.left_spike.label>TODO</FH_Toughspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -108,6 +226,12 @@
   <FH_Trispike.description>TODO</FH_Trispike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Trispike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Trispike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 发射骨刺，造成刺击伤害。 -->
+  <FH_Trispike.comps.ParasitismComp.abilityDescription>TODO</FH_Trispike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：骨刺射击 -->
+  <FH_Trispike.comps.ParasitismComp.abilityLabel>TODO</FH_Trispike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: “血肉寄生”心情-6；魅力-1；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天） -->
+  <FH_Trispike.comps.ParasitismComp.effect>TODO</FH_Trispike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Trispike.tools.left_spike.label>TODO</FH_Trispike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -122,25 +246,6 @@
   <FH_Trispike.tools.top_spike.labelNoLocation>TODO</FH_Trispike.tools.top_spike.labelNoLocation>
   <!-- EN: head -->
   <FH_Trispike.tools.head.label>TODO</FH_Trispike.tools.head.label>
-
-  <!-- EN: fleshwind -->
-  <FH_Fleshwind.label>翼爪兽</FH_Fleshwind.label>
-  <!-- EN: A fleshbeast with huge spiked flying wings and a head covered in sharp keratinous plating. It is roughly the size of an adult human. Its loose, shifting structure allows it to fly through the air and quickly cross defensive fortifications. Fleshwind bodies are often host to smaller fleshbeasts; when the host dies, these parasites tear free, act independently, and attack. -->
-  <FH_Fleshwind.description>长着巨大尖刺飞翼的血肉兽，头部覆盖着尖锐的角质甲壳，体型与成年人相当。这种生物能够以松散的结构在空中飞行，快速穿越防御工事。翼爪兽身上通常寄生着小型血肉兽。死亡时，寄生的血肉兽就会从原本的宿主上跳出，独立行动并发起攻击。</FH_Fleshwind.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: left wing spike -->
-  <FH_Fleshwind.tools.left_wing_spike.label>左翼骨刺</FH_Fleshwind.tools.left_wing_spike.label>
-  <!-- EN: wing spike -->
-  <FH_Fleshwind.tools.left_wing_spike.labelNoLocation>翼骨刺</FH_Fleshwind.tools.left_wing_spike.labelNoLocation>
-  <!-- EN: right wing spike -->
-  <FH_Fleshwind.tools.right_wing_spike.label>右翼骨刺</FH_Fleshwind.tools.right_wing_spike.label>
-  <!-- EN: wing spike -->
-  <FH_Fleshwind.tools.right_wing_spike.labelNoLocation>翼骨刺</FH_Fleshwind.tools.right_wing_spike.labelNoLocation>
-  <!-- EN: horned head -->
-  <FH_Fleshwind.tools.horned_head.label>覆角头部</FH_Fleshwind.tools.horned_head.label>
-  <!-- EN: horned head -->
-  <FH_Fleshwind.tools.horned_head.labelNoLocation>覆角头部</FH_Fleshwind.tools.horned_head.labelNoLocation>
   
   <!-- EN: 鞭爪兽 -->
   <FH_Whipspike.label>TODO</FH_Whipspike.label>
@@ -148,77 +253,17 @@
   <FH_Whipspike.description>TODO</FH_Whipspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Whipspike.comps.CompInspectStringEmergence.inspectString>TODO</FH_Whipspike.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: 宿主体表生长血肉触鞭，鞭击附近敌人造成利器伤害。 -->
+  <FH_Whipspike.comps.ParasitismComp.abilityDescription>TODO</FH_Whipspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: 寄生武器：血肉触手 -->
+  <FH_Whipspike.comps.ParasitismComp.abilityLabel>TODO</FH_Whipspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: 魅力-1，“血肉寄生”心情-6 -->
+  <FH_Whipspike.comps.ParasitismComp.effect>TODO</FH_Whipspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Whipspike.tools.head.label>TODO</FH_Whipspike.tools.head.label>
   <!-- EN: spike -->
   <FH_Whipspike.tools.spike.label>TODO</FH_Whipspike.tools.spike.label>
   <!-- EN: spike -->
   <FH_Whipspike.tools.spike.labelNoLocation>TODO</FH_Whipspike.tools.spike.labelNoLocation>
-  
-  <!-- EN: nexusmeld -->
-  <FH_Nexusmeld.label>统合母兽</FH_Nexusmeld.label>
-  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. The nexusmeld is the core of the fleshbeast swarm's coordination, using its powerful psychic abilities to command other fleshbeasts in assaults. Nexusmelds rarely appear in raids, preferring to lurk within nests supported by fleshmass hearts, with which they share a psychic bond. -->
-  <FH_Nexusmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。统合母兽是血肉兽调配系统的核心，其强大的精神能力可以指挥其他血肉兽进行袭击。统合母兽很少出现在袭击中，它更喜欢躲在有血肉心脏支撑的巢穴中。它与血肉心脏间存在着心灵感应。</FH_Nexusmeld.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Nexusmeld.tools.tentacle.label>触手</FH_Nexusmeld.tools.tentacle.label>
-  <!-- EN: head -->
-  <FH_Nexusmeld.tools.head.label>头部</FH_Nexusmeld.tools.head.label>
-  
-  <!-- EN: furiousmeld -->
-  <FH_Furiousmeld.label>暴怒母兽</FH_Furiousmeld.label>
-  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses while掩护ing lesser fleshbeasts to overwhelm the enemy. -->
-  <FH_Furiousmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。生长着厚重的活铁质甲壳，并且可以投射出一个球形的生物防护力场让子弹能够射出而无法射入。暴怒母兽很少出现在袭击中，通常只能通过仪式召唤。暴怒母兽在战斗中通常会横冲直撞毁坏防御设施，掩护血肉兽淹没敌人。</FH_Furiousmeld.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Furiousmeld.tools.tentacle.label>触手</FH_Furiousmeld.tools.tentacle.label>
-  <!-- EN: head -->
-  <FH_Furiousmeld.tools.head.label>头部</FH_Furiousmeld.tools.head.label>
-  
-  <!-- EN: bastionmeld -->
-  <FH_Bastionmeld.label>铁骸母兽</FH_Bastionmeld.label>
-  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids, which it controls through some form of supernatural energy. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld constructs defensive fortifications and wears down enemies through sustained long-range combat. -->
-  <FH_Bastionmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。身躯上镶嵌着各种机械族的残骸。铁骸母兽通过某种超自然能量控制着这些原本属于机械族的武装。铁骸母兽很少出现在袭击中，通常只能通过仪式召唤。铁骸母兽在战斗中通常会构筑防御工事，并以远距离战斗不断消耗并战胜敌人。</FH_Bastionmeld.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Bastionmeld.tools.tentacle.label>触手</FH_Bastionmeld.tools.tentacle.label>
-  <!-- EN: head -->
-  <FH_Bastionmeld.tools.head.label>头部</FH_Bastionmeld.tools.head.label>
-  
-  <!-- EN: fissionmeld -->
-  <FH_Fissionmeld.label>裂殖母兽</FH_Fissionmeld.label>
-  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate. -->
-  <FH_Fissionmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。它的身体不断的快速增生，每隔一段时间就会有新的血肉兽从她的身上诞生。这些寄生的血肉兽使得裂殖母兽成为了一个可怖的绞肉机器。裂殖母兽很少出现在袭击中，通常只能通过仪式召唤。裂殖母兽在死亡时会进入休眠状态，并在一段时间后从中复生。</FH_Fissionmeld.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Fissionmeld.tools.tentacle.label>触手</FH_Fissionmeld.tools.tentacle.label>
-  <!-- EN: head -->
-  <FH_Fissionmeld.tools.head.label>头部</FH_Fissionmeld.tools.head.label>
-  
-  <!-- EN: dreadmeld -->
-  <FH_Dreadmeld.label>惊惧母兽</FH_Dreadmeld.label>
-  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It uses its massive claws to tunnel through solid rock. Dreadmelds rarely appear on the surface, preferring to lurk in caves constructed from fleshmass blocks, with which they share a psychic bond for construction. -->
-  <FH_Dreadmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。它能用巨大的爪子在坚硬的岩石中挖掘隧道。惊惧母兽很少出现在地表，它更喜欢躲在用血肉块筑成的洞穴中。它与负责建造洞穴的血肉块间存在着心灵感应。</FH_Dreadmeld.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Dreadmeld.tools.tentacle.label>触手</FH_Dreadmeld.tools.tentacle.label>
-  <!-- EN: head -->
-  <FH_Dreadmeld.tools.head.label>头部</FH_Dreadmeld.tools.head.label>
-  
-  <!-- EN: fleshtitan -->
-  <FH_Fleshtitan.label>血肉泰坦</FH_Fleshtitan.label>
-  <!-- EN: The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. -->
-  <FH_Fleshtitan.description>血肉兽灾变的核心，一只不知如何长出肢体的血肉心脏。超快的再生速度让心脏几乎无懈可击。几乎没有任何已知的方式能够伤害血肉泰坦。近乎无限的怪力使其可以摧毁一切阻挡它前进的障碍。血肉泰坦的移动极其缓慢，而且会在一段时间后重新变为血肉心脏。</FH_Fleshtitan.description>
-  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中涌现。</FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Fleshtitan.tools.tentacle.label>触手</FH_Fleshtitan.tools.tentacle.label>
-  <!-- EN: head -->
-  <FH_Fleshtitan.tools.head.label>头部</FH_Fleshtitan.tools.head.label>
   
 </LanguageData>

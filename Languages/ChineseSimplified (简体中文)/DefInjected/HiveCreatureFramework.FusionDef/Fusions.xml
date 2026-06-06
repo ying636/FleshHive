@@ -1,11 +1,84 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Titan fusion -->
-  <FH_Fusion_Shieldspike.label>TODO</FH_Fusion_Shieldspike.label>
-  <!-- EN: Shieldspike -->
-  <FH_Fusion_Shieldspike.results.0.result.label>TODO</FH_Fusion_Shieldspike.results.0.result.label>
-  <!-- EN: Shieldspike -->
-  <FH_Fusion_Shieldspike.results.0.result.description>TODO</FH_Fusion_Shieldspike.results.0.result.description>
+  <FH_Fusion_Default.label>未知血肉融合</FH_Fusion_Default.label>
+  <FH_Fusion_Default.description>不稳定的融合会崩解为扭曲肉。</FH_Fusion_Default.description>
+  <FH_Fusion_Default.results.0.result.label>扭曲肉</FH_Fusion_Default.results.0.result.label>
+  <FH_Fusion_Default.results.0.result.description>失败的融合崩解成一团团扭曲肉。</FH_Fusion_Default.results.0.result.description>
+  
+  <FH_Fusion_Fleshwind_Puffspike_Gutspike.label>迅捷翼爪兽融合</FH_Fusion_Fleshwind_Puffspike_Gutspike.label>
+  <FH_Fusion_Fleshwind_Puffspike_Gutspike.description>将肺血兽与胃血兽融合为迅捷翼爪兽。</FH_Fusion_Fleshwind_Puffspike_Gutspike.description>
+  <FH_Fusion_Fleshwind_Puffspike_Gutspike.results.0.result.label>迅捷翼爪兽</FH_Fusion_Fleshwind_Puffspike_Gutspike.results.0.result.label>
+  <FH_Fusion_Fleshwind_Puffspike_Gutspike.results.0.result.description>带有迅捷特性的翼爪兽。</FH_Fusion_Fleshwind_Puffspike_Gutspike.results.0.result.description>
+  
+  <FH_Fusion_Fleshwind_Whipspike_Paraspike.label>扩容翼爪兽融合</FH_Fusion_Fleshwind_Whipspike_Paraspike.label>
+  <FH_Fusion_Fleshwind_Whipspike_Paraspike.description>将鞭爪兽与寄血兽融合为扩容翼爪兽。</FH_Fusion_Fleshwind_Whipspike_Paraspike.description>
+  <FH_Fusion_Fleshwind_Whipspike_Paraspike.results.0.result.label>扩容翼爪兽</FH_Fusion_Fleshwind_Whipspike_Paraspike.results.0.result.label>
+  <FH_Fusion_Fleshwind_Whipspike_Paraspike.results.0.result.description>带有扩容特性的翼爪兽。</FH_Fusion_Fleshwind_Whipspike_Paraspike.results.0.result.description>
+  
+  <FH_Fusion_Fleshwind_Whipspike_Whipspike.label>翼爪兽融合</FH_Fusion_Fleshwind_Whipspike_Whipspike.label>
+  <FH_Fusion_Fleshwind_Whipspike_Whipspike.description>将两只鞭爪兽融合为翼爪兽。</FH_Fusion_Fleshwind_Whipspike_Whipspike.description>
+  <FH_Fusion_Fleshwind_Whipspike_Whipspike.results.0.result.label>翼爪兽</FH_Fusion_Fleshwind_Whipspike_Whipspike.results.0.result.label>
+  <FH_Fusion_Fleshwind_Whipspike_Whipspike.results.0.result.description>没有特殊特性的稳定翼爪兽。</FH_Fusion_Fleshwind_Whipspike_Whipspike.results.0.result.description>
+  
+  <FH_Fusion_Shatterspike_Gutspike_Gutspike.label>碎爪兽融合</FH_Fusion_Shatterspike_Gutspike_Gutspike.label>
+  <FH_Fusion_Shatterspike_Gutspike_Gutspike.description>将两只胃血兽融合为碎爪兽。</FH_Fusion_Shatterspike_Gutspike_Gutspike.description>
+  <FH_Fusion_Shatterspike_Gutspike_Gutspike.results.0.result.label>碎爪兽</FH_Fusion_Shatterspike_Gutspike_Gutspike.results.0.result.label>
+  <FH_Fusion_Shatterspike_Gutspike_Gutspike.results.0.result.description>没有特殊特性的稳定碎爪兽。</FH_Fusion_Shatterspike_Gutspike_Gutspike.results.0.result.description>
+  
+  <FH_Fusion_Shatterspike_Gutspike_Whipspike.label>驯化碎爪兽融合</FH_Fusion_Shatterspike_Gutspike_Whipspike.label>
+  <FH_Fusion_Shatterspike_Gutspike_Whipspike.description>将胃血兽与鞭爪兽融合为驯化碎爪兽。</FH_Fusion_Shatterspike_Gutspike_Whipspike.description>
+  <FH_Fusion_Shatterspike_Gutspike_Whipspike.results.0.result.label>驯化碎爪兽</FH_Fusion_Shatterspike_Gutspike_Whipspike.results.0.result.label>
+  <FH_Fusion_Shatterspike_Gutspike_Whipspike.results.0.result.description>带有驯化特性的碎爪兽。</FH_Fusion_Shatterspike_Gutspike_Whipspike.results.0.result.description>
+  
+  <FH_Fusion_Shatterspike_Puffspike_Paraspike.label>骨刺增生碎爪兽融合</FH_Fusion_Shatterspike_Puffspike_Paraspike.label>
+  <FH_Fusion_Shatterspike_Puffspike_Paraspike.description>将肺血兽与寄血兽融合为骨刺增生碎爪兽。</FH_Fusion_Shatterspike_Puffspike_Paraspike.description>
+  <FH_Fusion_Shatterspike_Puffspike_Paraspike.results.0.result.label>骨刺增生碎爪兽</FH_Fusion_Shatterspike_Puffspike_Paraspike.results.0.result.label>
+  <FH_Fusion_Shatterspike_Puffspike_Paraspike.results.0.result.description>带有骨刺增生特性的碎爪兽。</FH_Fusion_Shatterspike_Puffspike_Paraspike.results.0.result.description>
+  
+  <FH_Fusion_Shieldspike_Fingerspike_Paraspike.label>皮实盾爪兽融合</FH_Fusion_Shieldspike_Fingerspike_Paraspike.label>
+  <FH_Fusion_Shieldspike_Fingerspike_Paraspike.description>将独爪兽与寄血兽融合为皮实盾爪兽。</FH_Fusion_Shieldspike_Fingerspike_Paraspike.description>
+  <FH_Fusion_Shieldspike_Fingerspike_Paraspike.results.0.result.label>皮实盾爪兽</FH_Fusion_Shieldspike_Fingerspike_Paraspike.results.0.result.label>
+  <FH_Fusion_Shieldspike_Fingerspike_Paraspike.results.0.result.description>带有皮实特性的盾爪兽。</FH_Fusion_Shieldspike_Fingerspike_Paraspike.results.0.result.description>
+  
+  <FH_Fusion_Shieldspike_Fingerspike_Puffspike.label>癌变盾爪兽融合</FH_Fusion_Shieldspike_Fingerspike_Puffspike.label>
+  <FH_Fusion_Shieldspike_Fingerspike_Puffspike.description>将独爪兽与肺血兽融合为癌变盾爪兽。</FH_Fusion_Shieldspike_Fingerspike_Puffspike.description>
+  <FH_Fusion_Shieldspike_Fingerspike_Puffspike.results.0.result.label>癌变盾爪兽</FH_Fusion_Shieldspike_Fingerspike_Puffspike.results.0.result.label>
+  <FH_Fusion_Shieldspike_Fingerspike_Puffspike.results.0.result.description>带有癌变特性的盾爪兽。</FH_Fusion_Shieldspike_Fingerspike_Puffspike.results.0.result.description>
+  
+  <FH_Fusion_Shieldspike_Paraspike_Paraspike.label>盾爪兽融合</FH_Fusion_Shieldspike_Paraspike_Paraspike.label>
+  <FH_Fusion_Shieldspike_Paraspike_Paraspike.description>将两只寄血兽融合为盾爪兽。</FH_Fusion_Shieldspike_Paraspike_Paraspike.description>
+  <FH_Fusion_Shieldspike_Paraspike_Paraspike.results.0.result.label>盾爪兽</FH_Fusion_Shieldspike_Paraspike_Paraspike.results.0.result.label>
+  <FH_Fusion_Shieldspike_Paraspike_Paraspike.results.0.result.description>没有特殊特性的稳定盾爪兽。</FH_Fusion_Shieldspike_Paraspike_Paraspike.results.0.result.description>
+  
+  <FH_Fusion_Toughspike_Fingerspike_Fingerspike.label>双爪兽融合</FH_Fusion_Toughspike_Fingerspike_Fingerspike.label>
+  <FH_Fusion_Toughspike_Fingerspike_Fingerspike.description>将两只独爪兽融合为双爪兽。</FH_Fusion_Toughspike_Fingerspike_Fingerspike.description>
+  <FH_Fusion_Toughspike_Fingerspike_Fingerspike.results.0.result.label>双爪兽</FH_Fusion_Toughspike_Fingerspike_Fingerspike.results.0.result.label>
+  <FH_Fusion_Toughspike_Fingerspike_Fingerspike.results.0.result.description>没有特殊特性的稳定双爪兽。</FH_Fusion_Toughspike_Fingerspike_Fingerspike.results.0.result.description>
+  
+  <FH_Fusion_Toughspike_Fingerspike_Gutspike.label>锐利双爪兽融合</FH_Fusion_Toughspike_Fingerspike_Gutspike.label>
+  <FH_Fusion_Toughspike_Fingerspike_Gutspike.description>将独爪兽与胃血兽融合为锐利双爪兽。</FH_Fusion_Toughspike_Fingerspike_Gutspike.description>
+  <FH_Fusion_Toughspike_Fingerspike_Gutspike.results.0.result.label>锐利双爪兽</FH_Fusion_Toughspike_Fingerspike_Gutspike.results.0.result.label>
+  <FH_Fusion_Toughspike_Fingerspike_Gutspike.results.0.result.description>带有锐利特性的双爪兽。</FH_Fusion_Toughspike_Fingerspike_Gutspike.results.0.result.description>
+  
+  <FH_Fusion_Toughspike_Puffspike_Whipspike.label>健壮双爪兽融合</FH_Fusion_Toughspike_Puffspike_Whipspike.label>
+  <FH_Fusion_Toughspike_Puffspike_Whipspike.description>将肺血兽与鞭爪兽融合为健壮双爪兽。</FH_Fusion_Toughspike_Puffspike_Whipspike.description>
+  <FH_Fusion_Toughspike_Puffspike_Whipspike.results.0.result.label>健壮双爪兽</FH_Fusion_Toughspike_Puffspike_Whipspike.results.0.result.label>
+  <FH_Fusion_Toughspike_Puffspike_Whipspike.results.0.result.description>带有健壮特性的双爪兽。</FH_Fusion_Toughspike_Puffspike_Whipspike.results.0.result.description>
+  
+  <FH_Fusion_Trispike_Fingerspike_Whipspike.label>酸蚀三爪兽融合</FH_Fusion_Trispike_Fingerspike_Whipspike.label>
+  <FH_Fusion_Trispike_Fingerspike_Whipspike.description>将独爪兽与鞭爪兽融合为酸蚀三爪兽。</FH_Fusion_Trispike_Fingerspike_Whipspike.description>
+  <FH_Fusion_Trispike_Fingerspike_Whipspike.results.0.result.label>酸蚀三爪兽</FH_Fusion_Trispike_Fingerspike_Whipspike.results.0.result.label>
+  <FH_Fusion_Trispike_Fingerspike_Whipspike.results.0.result.description>带有酸蚀特性的三爪兽。</FH_Fusion_Trispike_Fingerspike_Whipspike.results.0.result.description>
+  
+  <FH_Fusion_Trispike_Gutspike_Paraspike.label>分裂三爪兽融合</FH_Fusion_Trispike_Gutspike_Paraspike.label>
+  <FH_Fusion_Trispike_Gutspike_Paraspike.description>将胃血兽与寄血兽融合为分裂三爪兽。</FH_Fusion_Trispike_Gutspike_Paraspike.description>
+  <FH_Fusion_Trispike_Gutspike_Paraspike.results.0.result.label>分裂三爪兽</FH_Fusion_Trispike_Gutspike_Paraspike.results.0.result.label>
+  <FH_Fusion_Trispike_Gutspike_Paraspike.results.0.result.description>带有分裂特性的三爪兽。</FH_Fusion_Trispike_Gutspike_Paraspike.results.0.result.description>
+  
+  <FH_Fusion_Trispike_Puffspike_Puffspike.label>三爪兽融合</FH_Fusion_Trispike_Puffspike_Puffspike.label>
+  <FH_Fusion_Trispike_Puffspike_Puffspike.description>将两只肺血兽融合为三爪兽。</FH_Fusion_Trispike_Puffspike_Puffspike.description>
+  <FH_Fusion_Trispike_Puffspike_Puffspike.results.0.result.label>三爪兽</FH_Fusion_Trispike_Puffspike_Puffspike.results.0.result.label>
+  <FH_Fusion_Trispike_Puffspike_Puffspike.results.0.result.description>没有特殊特性的稳定三爪兽。</FH_Fusion_Trispike_Puffspike_Puffspike.results.0.result.description>
   
 </LanguageData>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <FH_LostSpike_Paraspike.label>lost spike</FH_LostSpike_Paraspike.label>
+  <FH_LostSpike_Paraspike.description>The paraspike has lost the core spike it needs to sustain itself. If it cannot recover, it will wither and die.</FH_LostSpike_Paraspike.description>
+  
+  <FH_Parasitism_Fingerspike.label>fingerspike parasitism</FH_Parasitism_Fingerspike.label>
+  <FH_Parasitism_Fingerspike.description>After being parasitized by a fingerspike, the host grows a bony tentacle from the surface of its body.</FH_Parasitism_Fingerspike.description>
+  
+  <FH_Parasitism_Gutspike.label>gutspike parasitism</FH_Parasitism_Gutspike.label>
+  <FH_Parasitism_Gutspike.description>The host is almost immune to food poisoning, and gains immunity to gut worms while purging existing infestations.</FH_Parasitism_Gutspike.description>
+  
+  <FH_Parasitism_Paraspike.label>paraspike parasitism</FH_Parasitism_Paraspike.label>
+  <FH_Parasitism_Paraspike.description>Reduces bleeding and grants immunity to wound infections. Offspring of a creature parasitized by a paraspike will inherit the parasite.</FH_Parasitism_Paraspike.description>
+  
+  <FH_Parasitism_Puffspike.label>puffspike parasitism</FH_Parasitism_Puffspike.label>
+  <FH_Parasitism_Puffspike.description>Completely protects against asthma and lung rot, curing those diseases in the host's lungs. The host moves faster and tolerates toxic environments better.</FH_Parasitism_Puffspike.description>
+  
+  <FH_Parasitism_Shatterspike.label>shatterspike parasitism</FH_Parasitism_Shatterspike.label>
+  <FH_Parasitism_Shatterspike.description>The host grows a splintering bone-spike tentacle capable of firing bone shards at range.</FH_Parasitism_Shatterspike.description>
+  
+  <FH_Parasitism_Shieldspike.label>shieldspike parasitism</FH_Parasitism_Shieldspike.label>
+  <FH_Parasitism_Shieldspike.description>The host gains stronger armor and a shield claw.</FH_Parasitism_Shieldspike.description>
+  
+  <FH_Parasitism_Toughspike.label>toughspike parasitism</FH_Parasitism_Toughspike.label>
+  <FH_Parasitism_Toughspike.description>The host grows two bony tentacles and gains improved global work speed.</FH_Parasitism_Toughspike.description>
+  
+  <FH_Parasitism_Trispike.label>trispike parasitism</FH_Parasitism_Trispike.label>
+  <FH_Parasitism_Trispike.description>The host can release two random small fleshbeasts.</FH_Parasitism_Trispike.description>
+  
+  <FH_Parasitism_Whipspike.label>whipspike parasitism</FH_Parasitism_Whipspike.label>
+  <FH_Parasitism_Whipspike.description>The host grows a fleshy whip tentacle capable of striking nearby enemies.</FH_Parasitism_Whipspike.description>
+  
+  <FH_Spike_Paraspike.label>paraspike's spike</FH_Spike_Paraspike.label>
+  <FH_Spike_Paraspike.description>The paraspike's vital parasitic spike. It embeds in the host and continuously regulates flesh and blood.</FH_Spike_Paraspike.description>
+  
+</LanguageData>

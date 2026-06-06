@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: bone shard -->
+  <FH_Bullet_BoneShard.label>TODO</FH_Bullet_BoneShard.label>
+  
+  <!-- EN: acid spit -->
+  <FH_Bullet_Shell_AcidSpit.label>TODO</FH_Bullet_Shell_AcidSpit.label>
+  
+  <!-- EN: nexusmeld seed -->
+  <FH_Bullet_Shell_Spit.label>TODO</FH_Bullet_Shell_Spit.label>
+  
+  <!-- EN: spike -->
+  <FH_Spike_Parasitism_BoneSpike.label>TODO</FH_Spike_Parasitism_BoneSpike.label>
+  
   <!-- EN: spike -->
   <FH_Spike_Paraspike.label>TODO</FH_Spike_Paraspike.label>
   

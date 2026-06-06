@@ -1,78 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-    <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
-    <FleshParasitePod_Title>将一只血肉兽在血肉寄生仓的辅助下寄生在宿主的身体中。血肉兽将会消耗寄生目标的营养存活。不同的血肉兽会提供不同的能力，使宿主变得更加强大。</FleshParasitePod_Title>
+  <!-- EN: Cancel insert -->
+  <FleshParasitePod_CancelInsert>取消植入</FleshParasitePod_CancelInsert>
+  <!-- EN: Start -->
+  <FleshParasitePod_Start>开始</FleshParasitePod_Start>
+  <!-- EN: Parasitized flesh beasts -->
+  <FleshParasitePod_ParasitizedFleshBeasts>已寄生血肉兽</FleshParasitePod_ParasitizedFleshBeasts>
+  <!-- EN: Remove -->
+  <FleshParasitePod_Remove>移除</FleshParasitePod_Remove>
+  <!-- EN: Cannot parasite: insufficient capacity -->
+  <FleshParasitePod_InsufficientCapacity>无法寄生、空间不足</FleshParasitePod_InsufficientCapacity>
 
-    <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
-    <FleshParasitePod_Progress>进度：{0}</FleshParasitePod_Progress>
+  <!-- EN: Parasite -->
+  <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
+  <!-- EN: Add Parasite -->
+  <HCF_AddParasite>添加寄生兽</HCF_AddParasite>
+  <!-- EN: Select Parasite -->
+  <HCF_SelectParasite>选择寄生血肉兽</HCF_SelectParasite>
+  <!-- EN: Insufficient parasite space (remaining {0}, need {1}) -->
+  <HCF_Parasite_NoSpace>寄生空间不足（剩余{0}，需要{1}）</HCF_Parasite_NoSpace>
+  <!-- EN: Used parasite space: {0}/{1} -->
+  <HCF_Parasite_CapacityInfo>已使用寄生空间：{0}/{1}</HCF_Parasite_CapacityInfo>
+  <!-- EN: No available parasite beasts -->
+  <HCF_Parasite_NoChoices>没有可用的寄生血肉兽</HCF_Parasite_NoChoices>
+  <!-- EN: Already added -->
+  <HCF_Parasite_AlreadyAdded>已添加此寄生兽</HCF_Parasite_AlreadyAdded>
+  <!-- EN: Parasite -->
+  <HCF_Parasite_Noun>寄生</HCF_Parasite_Noun>
 
+  <!-- EN: Twisted Flesh: {0}/{1} -->
+  <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
 
-    <Tab_Parasitism>寄生</Tab_Parasitism>
-    <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
-    <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
+  <!-- EN: Toggle {0}'s tentacle attack mode -->
+  <ToggleTentacleAttackMode>开关{0}的触手攻击模式</ToggleTentacleAttackMode>
+  <!-- EN: Tentacle Attack: On -->
+  <TentacleAttackModeOn>触手攻击：开启</TentacleAttackModeOn>
+  <!-- EN: Tentacle Attack: Off -->
+  <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
 
-    <Unparasitized>未被寄生</Unparasitized>
-    <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
+  <!-- EN: Mark Prey -->
+  <FH_MarkPrey>标记猎物</FH_MarkPrey>
+  <!-- EN: Mark downed creatures to be carried to a flesh sack for digestion. -->
+  <FH_MarkPreyDesc>标记倒地生物，将其搬运至血肉囊进行消化。</FH_MarkPreyDesc>
+  <!-- EN: Target is not downed -->
+  <FH_MarkPrey_NotDowned>目标未倒地</FH_MarkPrey_NotDowned>
+  <!-- EN: Can only mark fleshy creatures -->
+  <FH_MarkPrey_NotFlesh>只能标记血肉生物</FH_MarkPrey_NotFlesh>
+  <!-- EN: Already marked -->
+  <FH_MarkPrey_AlreadyMarked>已标记</FH_MarkPrey_AlreadyMarked>
 
-    <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
+  <!-- EN: Digesting: {0} -->
+  <FH_FleshSack_Digesting>消化中：{0}</FH_FleshSack_Digesting>
+  <!-- EN: Contains: {0} -->
+  <FH_FleshSack_Inner>内含：{0}</FH_FleshSack_Inner>
+  <!-- EN: Empty -->
+  <FH_FleshSack_Empty>空</FH_FleshSack_Empty>
 
-    <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
-    <ParasitismAbility>寄生能力</ParasitismAbility>
+  <!-- EN: Friendly unit being digested -->
+  <FH_FleshSack_FriendlyTitle>友方单位被消化</FH_FleshSack_FriendlyTitle>
+  <!-- EN: {0} has been placed into a flesh sack for digestion. -->
+  <FH_FleshSack_FriendlyDesc>{0}被放入血肉囊中消化。</FH_FleshSack_FriendlyDesc>
 
-    <FleshParasitePod_CancelInsert>取消植入</FleshParasitePod_CancelInsert>
-    <FleshParasitePod_Start>开始</FleshParasitePod_Start>
-    <FleshParasitePod_ParasitizedFleshBeasts>已寄生血肉兽</FleshParasitePod_ParasitizedFleshBeasts>
-    <FleshParasitePod_Remove>移除</FleshParasitePod_Remove>
-    <FleshParasitePod_InsufficientCapacity>无法寄生、空间不足</FleshParasitePod_InsufficientCapacity>
-    <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
-    <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
+  <!-- EN: This building has been replaced by {0}. -->
+  <FH_Building_ReplacedBy>该建筑已被{0}取代。</FH_Building_ReplacedBy>
+  <!-- EN: This building is currently unavailable. -->
+  <FH_HiveBuildingUnavailable>该建筑当前不可用。</FH_HiveBuildingUnavailable>
+  <!-- EN: A hive can only support one flesh primary nest. -->
+  <FH_FleshPrimaryNest_OnlyOne>一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest_OnlyOne>
+  <!-- EN: Must be placed on flesh terrain. -->
+  <FH_MustPlaceOnFleshTerrain>必须放置在血肉地形上。</FH_MustPlaceOnFleshTerrain>
+  <!-- EN: An available flesh hopper is required. -->
+  <FH_RequireFleshHopper>需要至少一个可用的产出物喷口。</FH_RequireFleshHopper>
+  <!-- EN: Flesh Hive -->
+  <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
+  <!-- EN: Raid parasite carrier chance: {0} -->
+  <FleshHive_RaidParasiteChance>袭击单位携带血肉兽寄生概率：{0}</FleshHive_RaidParasiteChance>
+  <!-- EN: Flesh -->
+  <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
+  <!-- EN: Flesh hive container -->
+  <HCF_Tag_FH_FleshContainer>血肉巢穴容器</HCF_Tag_FH_FleshContainer>
+  <!-- EN: Hive population: {0} / {1} -->
+  <FH_FleshManagement_HivePopulation>巢穴人口：{0} / {1}</FH_FleshManagement_HivePopulation>
+  <!-- EN: Nutrition -->
+  <FH_FleshManagement_Nutrition>营养度</FH_FleshManagement_Nutrition>
+  <!-- EN: Flesh count: {0} -->
+  <FH_FleshManagement_FleshCount>血肉数量：{0}</FH_FleshManagement_FleshCount>
+  <!-- EN: Hive efficiency: - - -->
+  <FH_FleshManagement_HiveEfficiency>巢穴效率：--</FH_FleshManagement_HiveEfficiency>
+  <!-- EN: Activity -->
+  <FH_FleshManagement_Activity>活跃度</FH_FleshManagement_Activity>
+  <!-- EN: Hive population: {0}/{1} -->
+  <FH_FleshManagement_HivePopulationShort>巢穴人口：{0}/{1}</FH_FleshManagement_HivePopulationShort>
+  <!-- EN: Hive progress -->
+  <FH_FleshManagement_Progress>巢穴进程</FH_FleshManagement_Progress>
+  <!-- EN: Temporary fleshbeast group -->
+  <FH_FleshManagement_TemporaryGroup>临时血肉兽群组</FH_FleshManagement_TemporaryGroup>
+  <!-- EN: No linked hive -->
+  <FH_FleshManagement_NoHive>无所属巢穴</FH_FleshManagement_NoHive>
 
-    <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
-    <HCF_AddParasite>添加寄生兽</HCF_AddParasite>
-    <HCF_SelectParasite>选择寄生血肉兽</HCF_SelectParasite>
-    <HCF_Parasite_NoSpace>寄生空间不足（剩余{0}，需要{1}）</HCF_Parasite_NoSpace>
-    <HCF_Parasite_CapacityInfo>已使用寄生空间：{0}/{1}</HCF_Parasite_CapacityInfo>
-    <HCF_Parasite_NoChoices>没有可用的寄生血肉兽</HCF_Parasite_NoChoices>
-    <HCF_Parasite_AlreadyAdded>已添加此寄生兽</HCF_Parasite_AlreadyAdded>
-    <HCF_Parasite_Noun>寄生</HCF_Parasite_Noun>
-
-    <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
-
-    <ToggleTentacleAttackMode>开关{0}的触手攻击模式</ToggleTentacleAttackMode>
-    <TentacleAttackModeOn>触手攻击：开启</TentacleAttackModeOn>
-    <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
-
-    <FH_MarkPrey>标记猎物</FH_MarkPrey>
-    <FH_MarkPreyDesc>标记倒地生物，将其搬运至血肉囊进行消化。</FH_MarkPreyDesc>
-    <FH_MarkPrey_NotDowned>目标未倒地</FH_MarkPrey_NotDowned>
-    <FH_MarkPrey_NotFlesh>只能标记血肉生物</FH_MarkPrey_NotFlesh>
-    <FH_MarkPrey_AlreadyMarked>已标记</FH_MarkPrey_AlreadyMarked>
-
-    <FH_FleshSack_Digesting>消化中：{0}</FH_FleshSack_Digesting>
-    <FH_FleshSack_Inner>内含：{0}</FH_FleshSack_Inner>
-    <FH_FleshSack_Empty>空</FH_FleshSack_Empty>
-
-    <FH_FleshSack_FriendlyTitle>友方单位被消化</FH_FleshSack_FriendlyTitle>
-    <FH_FleshSack_FriendlyDesc>{0}被放入血肉囊中消化。</FH_FleshSack_FriendlyDesc>
-
-    <FH_Building_ReplacedBy>该建筑已被{0}取代。</FH_Building_ReplacedBy>
-    <FH_HiveBuildingUnavailable>该建筑当前不可用。</FH_HiveBuildingUnavailable>
-    <FH_FleshPrimaryNest_OnlyOne>一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest_OnlyOne>
-    <FH_MustPlaceOnFleshTerrain>必须放置在血肉地形上。</FH_MustPlaceOnFleshTerrain>
-    <FH_RequireFleshHopper>需要至少一个可用的产出物喷口。</FH_RequireFleshHopper>
-    <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
-    <FleshHive_RaidParasiteChance>袭击单位携带血肉兽寄生概率：{0}</FleshHive_RaidParasiteChance>
-    <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
-    <HCF_Tag_FH_FleshContainer>血肉巢穴容器</HCF_Tag_FH_FleshContainer>
-    <FH_FleshManagement_HivePopulation>巢穴人口：{0} / {1}</FH_FleshManagement_HivePopulation>
-    <FH_FleshManagement_Nutrition>营养度</FH_FleshManagement_Nutrition>
-    <FH_FleshManagement_FleshCount>血肉数量：{0}</FH_FleshManagement_FleshCount>
-    <FH_FleshManagement_HiveEfficiency>巢穴效率：--</FH_FleshManagement_HiveEfficiency>
-    <FH_FleshManagement_Activity>活跃度</FH_FleshManagement_Activity>
-    <FH_FleshManagement_HivePopulationShort>巢穴人口：{0}/{1}</FH_FleshManagement_HivePopulationShort>
-    <FH_FleshManagement_Progress>巢穴进程</FH_FleshManagement_Progress>
-    <FH_FleshManagement_TemporaryGroup>临时血肉群组</FH_FleshManagement_TemporaryGroup>
-    <FH_FleshManagement_NoHive>无所属巢穴</FH_FleshManagement_NoHive>
+  <!-- UNUSED -->
+  <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
+  <FleshParasitePod_Title>将一只血肉兽在血肉寄生仓的辅助下寄生在宿主的身体中。血肉兽将会消耗寄生目标的营养存活。不同的血肉兽会提供不同的能力，使宿主变得更加强大。</FleshParasitePod_Title>
+  <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
+  <FleshParasitePod_Progress>进度：{0}</FleshParasitePod_Progress>
+  <Tab_Parasitism>寄生</Tab_Parasitism>
+  <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
+  <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
+  <Unparasitized>未被寄生</Unparasitized>
+  <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
+  <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
+  <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
+  <ParasitismAbility>寄生能力</ParasitismAbility>
+  <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
+  <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
 
 </LanguageData>

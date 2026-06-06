@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: bastionmeld -->
+  <FH_Bastionmeld.label>TODO</FH_Bastionmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids, which it controls through some form of supernatural energy. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld constructs defensive fortifications and wears down enemies through sustained long-range combat. -->
+  <FH_Bastionmeld.description>TODO</FH_Bastionmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Bastionmeld.tools.tentacle-0.label>TODO</FH_Bastionmeld.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Bastionmeld.tools.tentacle-1.label>TODO</FH_Bastionmeld.tools.tentacle-1.label>
+  <!-- EN: head -->
+  <FH_Bastionmeld.tools.head.label>TODO</FH_Bastionmeld.tools.head.label>
+  
+  <!-- EN: dreadmeld -->
+  <FH_Dreadmeld.label>TODO</FH_Dreadmeld.label>
+  <!-- EN: A gargantuan amalgamation of dozens of smaller fleshbeasts linked together by a loosely shared central nervous system. It uses its massive claws to dig tunnels through solid rock. Fleshbeast dreadmelds are rarely seen above ground, instead sheltering in caverns built from living flesh. They share a psychic connection with the flesh used to create their burrow. -->
+  <FH_Dreadmeld.description>TODO</FH_Dreadmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Dreadmeld.tools.tentacle-0.label>TODO</FH_Dreadmeld.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Dreadmeld.tools.tentacle-1.label>TODO</FH_Dreadmeld.tools.tentacle-1.label>
+  <!-- EN: head -->
+  <FH_Dreadmeld.tools.head.label>TODO</FH_Dreadmeld.tools.head.label>
+  
+  <!-- EN: fissionmeld -->
+  <FH_Fissionmeld.label>TODO</FH_Fissionmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate. -->
+  <FH_Fissionmeld.description>TODO</FH_Fissionmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Fissionmeld.tools.tentacle-0.label>TODO</FH_Fissionmeld.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Fissionmeld.tools.tentacle-1.label>TODO</FH_Fissionmeld.tools.tentacle-1.label>
+  <!-- EN: head -->
+  <FH_Fissionmeld.tools.head.label>TODO</FH_Fissionmeld.tools.head.label>
+  
+  <!-- EN: fleshtitan -->
+  <FH_Fleshtitan.label>TODO</FH_Fleshtitan.label>
+  <!-- EN: The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. -->
+  <FH_Fleshtitan.description>TODO</FH_Fleshtitan.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Fleshtitan.tools.tentacle-0.label>TODO</FH_Fleshtitan.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Fleshtitan.tools.tentacle-1.label>TODO</FH_Fleshtitan.tools.tentacle-1.label>
+  <!-- EN: tentacle -->
+  <FH_Fleshtitan.tools.tentacle-2.label>TODO</FH_Fleshtitan.tools.tentacle-2.label>
+  <!-- EN: tentacle -->
+  <FH_Fleshtitan.tools.tentacle-3.label>TODO</FH_Fleshtitan.tools.tentacle-3.label>
+  <!-- EN: tentacle -->
+  <FH_Fleshtitan.tools.tentacle-4.label>TODO</FH_Fleshtitan.tools.tentacle-4.label>
+  <!-- EN: head -->
+  <FH_Fleshtitan.tools.head.label>TODO</FH_Fleshtitan.tools.head.label>
+  
+  <!-- EN: furiousmeld -->
+  <FH_Furiousmeld.label>TODO</FH_Furiousmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses, clearing a path for lesser fleshbeasts to overwhelm the enemy. -->
+  <FH_Furiousmeld.description>TODO</FH_Furiousmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left horn -->
+  <FH_Furiousmeld.tools.left_horn.label>TODO</FH_Furiousmeld.tools.left_horn.label>
+  <!-- EN: right horn -->
+  <FH_Furiousmeld.tools.right_horn.label>TODO</FH_Furiousmeld.tools.right_horn.label>
+  <!-- EN: carapace -->
+  <FH_Furiousmeld.tools.carapace.label>TODO</FH_Furiousmeld.tools.carapace.label>
+  <!-- EN: head -->
+  <FH_Furiousmeld.tools.head.label>TODO</FH_Furiousmeld.tools.head.label>
+  
+  <!-- EN: nexusmeld -->
+  <FH_Nexusmeld.label>TODO</FH_Nexusmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. The nexusmeld is the core of the fleshbeast swarm's coordination, using its powerful psychic abilities to command other fleshbeasts in assaults. Nexusmelds rarely appear in raids, preferring to lurk within nests supported by fleshmass hearts, with which they share a psychic bond. -->
+  <FH_Nexusmeld.description>TODO</FH_Nexusmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: tentacle -->
+  <FH_Nexusmeld.tools.tentacle-0.label>TODO</FH_Nexusmeld.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Nexusmeld.tools.tentacle-1.label>TODO</FH_Nexusmeld.tools.tentacle-1.label>
+  <!-- EN: head -->
+  <FH_Nexusmeld.tools.head.label>TODO</FH_Nexusmeld.tools.head.label>
+  
+</LanguageData>

@@ -1,24 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
-  <!-- EN: flesh unification -->
-  <FH_Unification.label>血肉统合</FH_Unification.label>
-  <!-- EN: The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced. -->
-  <FH_Unification.description>统合母兽的心灵力量强化了血肉。近战伤害提升，承受伤害降低。</FH_Unification.description>
-
+  
   <!-- EN: flesh berserk -->
   <FH_Berserk.label>血肉暴走</FH_Berserk.label>
   <!-- EN: The flesh beasts are driven into a frenzied berserk state. -->
   <FH_Berserk.description>血肉兽陷入狂暴状态。</FH_Berserk.description>
-
-  <!-- EN: nexusmeld parasitism -->
-  <FH_Parasitism_Nexusmeld.label>统合母兽寄生</FH_Parasitism_Nexusmeld.label>
-  <!-- EN: The nexusmeld latches onto the host, providing twisted flesh capacity and the ability to spread twisted flesh. -->
-  <FH_Parasitism_Nexusmeld.description>统合母兽寄生宿主，提供扭曲肉容量和释放血肉蔓延的能力。</FH_Parasitism_Nexusmeld.description>
-
+  <!-- EN: berserk -->
+  <FH_Berserk.stages.berserk.label>狂暴</FH_Berserk.stages.berserk.label>
+  
   <!-- EN: furiousmeld parasitism -->
   <FH_Parasitism_Furiousmeld.label>暴怒母兽寄生</FH_Parasitism_Furiousmeld.label>
-  <!-- EN: The furiousmeld latches onto the host, providing twisted flesh capacity. -->
+  <!-- EN: The furiousmeld latches onto the host, providing twisted flesh capacity, armor, and regeneration. -->
   <FH_Parasitism_Furiousmeld.description>暴怒母兽寄生宿主，提供扭曲肉容量。</FH_Parasitism_Furiousmeld.description>
-
+  <!-- EN: Shield Claw -->
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>盾爪</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Shield Claw -->
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>盾爪</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
+  <!-- EN: furiousmeld parasitism -->
+  <FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>暴怒母兽寄生</FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>
+  
+  <!-- EN: nexusmeld parasitism -->
+  <FH_Parasitism_Nexusmeld.label>统合母兽寄生</FH_Parasitism_Nexusmeld.label>
+  <!-- EN: The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts. -->
+  <FH_Parasitism_Nexusmeld.description>统合母兽寄生宿主，提供扭曲肉容量和释放血肉蔓延的能力。</FH_Parasitism_Nexusmeld.description>
+  <!-- EN: Left Spike -->
+  <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right Spike -->
+  <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <!-- EN: nexusmeld parasitism -->
+  <FH_Parasitism_Nexusmeld.stages.nexusmeld_parasitism.label>统合母兽寄生</FH_Parasitism_Nexusmeld.stages.nexusmeld_parasitism.label>
+  
+  <!-- EN: flesh unification -->
+  <FH_Unification.label>血肉统合</FH_Unification.label>
+  <!-- EN: The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced. -->
+  <FH_Unification.description>统合母兽的心灵力量强化了血肉。近战伤害提升，承受伤害降低。</FH_Unification.description>
+  
 </LanguageData>

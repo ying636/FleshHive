@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Little flesh beast -->
-  <FH_Category_LittleFleshBeast.label>TODO</FH_Category_LittleFleshBeast.label>
-  <!-- EN: Little flesh beast -->
-  <FH_Category_LittleFleshBeast.description>TODO</FH_Category_LittleFleshBeast.description>
+  <FH_Category_LittleFleshBeast.label>小型血肉兽</FH_Category_LittleFleshBeast.label>
+  <FH_Category_LittleFleshBeast.description>基础的小型血肉兽。</FH_Category_LittleFleshBeast.description>
   
-  <!-- EN: Meld beast -->
-  <FH_Category_MeldBeast.label>巨型母兽</FH_Category_MeldBeast.label>
-  <!-- EN: Meld beast -->
-  <FH_Category_MeldBeast.description>巨型母兽</FH_Category_MeldBeast.description>
+  <FH_Category_MediumFleshBeast.label>中型血肉兽</FH_Category_MediumFleshBeast.label>
+  <FH_Category_MediumFleshBeast.description>通过融合发现后可生产的中型血肉兽。</FH_Category_MediumFleshBeast.description>
   
 </LanguageData>

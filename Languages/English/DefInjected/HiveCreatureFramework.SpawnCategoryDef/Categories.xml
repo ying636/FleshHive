@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <FH_Category_LittleFleshBeast.label>little flesh beast</FH_Category_LittleFleshBeast.label>
+  <FH_Category_LittleFleshBeast.description>Basic small fleshbeasts.</FH_Category_LittleFleshBeast.description>
+  
+  <FH_Category_MediumFleshBeast.label>medium flesh beast</FH_Category_MediumFleshBeast.label>
+  <FH_Category_MediumFleshBeast.description>Medium fleshbeasts unlocked by discovering fusion recipes.</FH_Category_MediumFleshBeast.description>
+  
+</LanguageData>

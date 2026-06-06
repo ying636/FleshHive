@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <FH_ParasitismSystem.label>parasitism system</FH_ParasitismSystem.label>
+  <FH_ParasitismSystem.description>The host's internal fleshbeast parasitism system. It maintains parasitic fleshbeasts, tracks parasite capacity, and releases all parasites when the host dies.</FH_ParasitismSystem.description>
+  
+</LanguageData>

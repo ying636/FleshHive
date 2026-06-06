@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: carry prey to flesh sack -->
+  <FH_WorkGiver_FillFleshSack.label>TODO</FH_WorkGiver_FillFleshSack.label>
+  <!-- EN: carrying -->
+  <FH_WorkGiver_FillFleshSack.gerund>TODO</FH_WorkGiver_FillFleshSack.gerund>
+  <!-- EN: carry -->
+  <FH_WorkGiver_FillFleshSack.verb>TODO</FH_WorkGiver_FillFleshSack.verb>
+  
+  <!-- EN: carrry pawn to parasite pod -->
+  <FH_WorkGiver_PutPawnInParasitePod.label>TODO</FH_WorkGiver_PutPawnInParasitePod.label>
+  <!-- EN: carring -->
+  <FH_WorkGiver_PutPawnInParasitePod.gerund>TODO</FH_WorkGiver_PutPawnInParasitePod.gerund>
+  <!-- EN: carry -->
+  <FH_WorkGiver_PutPawnInParasitePod.verb>TODO</FH_WorkGiver_PutPawnInParasitePod.verb>
+  
+  <!-- EN: refill twisted flesh -->
+  <FH_WorkGiver_RefillTwistedFlesh.label>TODO</FH_WorkGiver_RefillTwistedFlesh.label>
+  <!-- EN: refilling -->
+  <FH_WorkGiver_RefillTwistedFlesh.gerund>TODO</FH_WorkGiver_RefillTwistedFlesh.gerund>
+  <!-- EN: refill -->
+  <FH_WorkGiver_RefillTwistedFlesh.verb>TODO</FH_WorkGiver_RefillTwistedFlesh.verb>
+  
+  <!-- EN: refill others' twisted flesh -->
+  <FH_WorkGiver_RefillTwistedFlesh_Help.label>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.label>
+  <!-- EN: refilling -->
+  <FH_WorkGiver_RefillTwistedFlesh_Help.gerund>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.gerund>
+  <!-- EN: refill -->
+  <FH_WorkGiver_RefillTwistedFlesh_Help.verb>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.verb>
+  
+</LanguageData>

@@ -1,8 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  
+  <!-- EN: Acidbulb -->
+  <FH_Acidbulb.label>TODO</FH_Acidbulb.label>
+  
+  <!-- EN: bulbfreak -->
+  <FH_Bulbfreak.label>TODO</FH_Bulbfreak.label>
   
   <!-- EN: fingerspike -->
   <FH_Fingerspike.label>TODO</FH_Fingerspike.label>
+  
+  <!-- EN: fleshwind -->
+  <FH_Fleshwind.label>翼爪兽</FH_Fleshwind.label>
   
   <!-- EN: 胃血兽 -->
   <FH_Gutspike.label>TODO</FH_Gutspike.label>
@@ -19,34 +28,16 @@
   <!-- EN: shieldspike -->
   <FH_Shieldspike.label>TODO</FH_Shieldspike.label>
   
+  <!-- EN: bulbfreak -->
+  <FH_Spitbulb.label>TODO</FH_Spitbulb.label>
+  
   <!-- EN: toughspike -->
   <FH_Toughspike.label>TODO</FH_Toughspike.label>
   
   <!-- EN: trispike -->
   <FH_Trispike.label>TODO</FH_Trispike.label>
-
-  <!-- EN: fleshwind -->
-  <FH_Fleshwind.label>翼爪兽</FH_Fleshwind.label>
   
   <!-- EN: 鞭爪兽 -->
   <FH_Whipspike.label>TODO</FH_Whipspike.label>
-  
-  <!-- EN: nexusmeld -->
-  <FH_Nexusmeld.label>统合母兽</FH_Nexusmeld.label>
-  
-  <!-- EN: furiousmeld -->
-  <FH_Furiousmeld.label>暴怒母兽</FH_Furiousmeld.label>
-  
-  <!-- EN: bastionmeld -->
-  <FH_Bastionmeld.label>铁骸母兽</FH_Bastionmeld.label>
-  
-  <!-- EN: fissionmeld -->
-  <FH_Fissionmeld.label>裂殖母兽</FH_Fissionmeld.label>
-  
-  <!-- EN: dreadmeld -->
-  <FH_Dreadmeld.label>惊惧母兽</FH_Dreadmeld.label>
-  
-  <!-- EN: fleshtitan -->
-  <FH_Fleshtitan.label>血肉泰坦</FH_Fleshtitan.label>
   
 </LanguageData>

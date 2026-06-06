@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: flesh berserk -->
+  <FH_FleshBerserk.label>血肉暴走</FH_FleshBerserk.label>
+  <!-- EN: All friendly flesh beasts on the map enter a frenzied berserk state for 6 hours, gaining increased move speed and melee damage. -->
+  <FH_FleshBerserk.description>地图中所有我方血肉兽进入狂暴状态6小时，提升移动速度和近战伤害。</FH_FleshBerserk.description>
+  
+  <!-- EN: flesh spread -->
+  <FH_FleshSpread.label>血肉蔓延</FH_FleshSpread.label>
+  <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
+  <FH_FleshSpread.description>在目标区域蔓延扭曲血肉，消耗宿主的扭曲肉。</FH_FleshSpread.description>
+  
+  <!-- EN: flesh spread -->
+  <FH_FleshSpread_Parasitism.label>TODO</FH_FleshSpread_Parasitism.label>
+  <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
+  <FH_FleshSpread_Parasitism.description>TODO</FH_FleshSpread_Parasitism.description>
+  
+  <!-- EN: rampage charge -->
+  <FH_RampageCharge.label>TODO</FH_RampageCharge.label>
+  <!-- EN: The furiousmeld charges forward, dealing damage to everything in its path. Buildings are destroyed until a cumulative limit is reached. -->
+  <FH_RampageCharge.description>TODO</FH_RampageCharge.description>
+  
+  <!-- EN: scarlet field -->
+  <FH_ScarletField.label>猩红立场</FH_ScarletField.label>
+  <!-- EN: Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh. -->
+  <FH_ScarletField.description>投射出生物防护力场，让友方子弹能够射出而无法射入。每拦截一次射击消耗1扭曲肉，每拦截一次近战攻击消耗20扭曲肉。</FH_ScarletField.description>
+  
+</LanguageData>

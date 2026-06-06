@@ -5,7 +5,7 @@
     <defName>FH_BuildingCategory_Flesh</defName>
     <label>Flesh</label>
     <description>Flesh structures built by the hive.</description>
-    <color>(0.7, 0.1, 0.1)</color>
+    <color>(1, 1, 1)</color>
     <backgroundPath>UI/UI_Hive/Hive_Flesh</backgroundPath>
   </HiveCreatureFramework.HiveBuildingCategoryDef>
 

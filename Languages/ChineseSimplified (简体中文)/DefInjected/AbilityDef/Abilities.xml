@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  
+  <!-- EN: acid launch -->
+  <FH_Acidbulb_Launch.label>TODO</FH_Acidbulb_Launch.label>
+  <!-- EN: Launch acid. -->
+  <FH_Acidbulb_Launch.description>TODO</FH_Acidbulb_Launch.description>
+  
+  <!-- EN: 骨刺射击 -->
+  <FH_Parasitism_BoneSpikeShot.label>TODO</FH_Parasitism_BoneSpikeShot.label>
+  <!-- EN: 发射一枚骨刺。 -->
+  <FH_Parasitism_BoneSpikeShot.description>TODO</FH_Parasitism_BoneSpikeShot.description>
   
   <!-- EN: spike launch -->
   <FH_SpikeLaunch_Paraspike.label>TODO</FH_SpikeLaunch_Paraspike.label>
@@ -16,19 +26,14 @@
   <!-- EN: Launch a bone spike at a target. -->
   <FH_SpikeLaunch_Whipspike.description>TODO</FH_SpikeLaunch_Whipspike.description>
   
-  <!-- EN: flesh berserk -->
-  <FH_FleshBerserk.label>血肉暴走</FH_FleshBerserk.label>
-  <!-- EN: All friendly flesh beasts on the map enter a frenzied berserk state for 6 hours, gaining increased move speed and melee damage. -->
-  <FH_FleshBerserk.description>地图中所有我方血肉兽进入狂暴状态6小时，提升移动速度和近战伤害。</FH_FleshBerserk.description>
+  <!-- EN: acid launch -->
+  <FH_Spitbulb_Launch.label>TODO</FH_Spitbulb_Launch.label>
+  <!-- EN: Launch acid. -->
+  <FH_Spitbulb_Launch.description>TODO</FH_Spitbulb_Launch.description>
   
-  <!-- EN: flesh spread -->
-  <FH_FleshSpread.label>血肉蔓延</FH_FleshSpread.label>
-  <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
-  <FH_FleshSpread.description>在目标区域蔓延扭曲血肉，消耗宿主的扭曲肉。</FH_FleshSpread.description>
+  <!-- EN: 释放血肉兽 -->
+  <FH_Trispike_ReleaseSpikes.label>TODO</FH_Trispike_ReleaseSpikes.label>
+  <!-- EN: 释放2只随机的小型血肉兽。 -->
+  <FH_Trispike_ReleaseSpikes.description>TODO</FH_Trispike_ReleaseSpikes.description>
   
-  <!-- EN: scarlet field -->
-  <FH_ScarletField.label>猩红立场</FH_ScarletField.label>
-  <!-- EN: Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh. -->
-  <FH_ScarletField.description>投射出生物防护力场，让友方子弹能够射出而无法射入。每拦截一次射击消耗1扭曲肉，每拦截一次近战攻击消耗20扭曲肉。</FH_ScarletField.description>
-
 </LanguageData>

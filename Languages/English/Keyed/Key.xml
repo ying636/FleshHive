@@ -51,7 +51,7 @@
   <FH_FleshManagement_Activity>Activity</FH_FleshManagement_Activity>
   <FH_FleshManagement_HivePopulationShort>Hive population: {0}/{1}</FH_FleshManagement_HivePopulationShort>
   <FH_FleshManagement_Progress>Hive progress</FH_FleshManagement_Progress>
-  <FH_FleshManagement_TemporaryGroup>Temporary flesh group</FH_FleshManagement_TemporaryGroup>
+  <FH_FleshManagement_TemporaryGroup>Temporary fleshbeast group</FH_FleshManagement_TemporaryGroup>
   <FH_FleshManagement_NoHive>No linked hive</FH_FleshManagement_NoHive>
 
 </LanguageData>

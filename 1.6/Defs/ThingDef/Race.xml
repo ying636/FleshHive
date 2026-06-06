@@ -20,6 +20,7 @@
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LittleFleshBeast" Abstract="True">
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Small</size>
       </li>
     </comps>
     <statBases>
@@ -49,6 +50,11 @@
   </ThingDef>
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_MediumFleshBeast" Abstract="True">
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
+      </li>
+    </comps>
     <race>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>

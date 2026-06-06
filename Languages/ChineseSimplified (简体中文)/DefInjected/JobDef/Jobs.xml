@@ -1,7 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
+  <!-- EN: enter parasite pod. -->
+  <FH_Job_EnterParasitePod.reportString>TODO</FH_Job_EnterParasitePod.reportString>
+  
+  <!-- EN: carrying TargetA to flesh sack. -->
+  <FH_Job_FillFleshSack.reportString>TODO</FH_Job_FillFleshSack.reportString>
+  
+  <!-- EN: fill trispike charge. -->
+  <FH_Job_FillTrispikeCharge.reportString>TODO</FH_Job_FillTrispikeCharge.reportString>
+  
+  <!-- EN: carrry TargetA to TargetB. -->
+  <FH_Job_PutPawnInParasitePod.reportString>TODO</FH_Job_PutPawnInParasitePod.reportString>
+  
   <!-- EN: refilling twisted flesh. -->
   <FH_Job_RefillTwistedFlesh.reportString>正在填充扭曲肉。</FH_Job_RefillTwistedFlesh.reportString>
-
+  
+  <!-- EN: refilling TargetB's twisted flesh. -->
+  <FH_Job_RefillTwistedFlesh_Help.reportString>TODO</FH_Job_RefillTwistedFlesh_Help.reportString>
+  
 </LanguageData>

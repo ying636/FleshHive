@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="FH_Bulbfreak" or defName="FH_Acidbulb" or defName="FH_Spitbulb"]/comps/li[@Class="FleshHive.CompProperties_FleshBeastCache"]</xpath>
+    <value>
+      <size>Large</size>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="FH_Nexusmeld" or defName="FH_Furiousmeld" or defName="FH_Bastionmeld" or defName="FH_Fissionmeld" or defName="FH_Fleshtitan" or defName="FH_Dreadmeld"]/comps/li[@Class="FleshHive.CompProperties_FleshBeastCache"]</xpath>
+    <value>
+      <size>Giant</size>
+    </value>
+  </Operation>
+</Patch>

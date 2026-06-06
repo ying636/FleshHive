@@ -15,6 +15,13 @@
         </units>
     </HiveCreatureFramework.SpawnCategoryDef>
 
+    <HiveCreatureFramework.SpawnCategoryDef>
+        <defName>FH_Category_MediumFleshBeast</defName>
+        <label>Medium flesh beast</label>
+        <description>Medium flesh beast</description>
+        <color>(0.75, 0.15, 0.15)</color>
+    </HiveCreatureFramework.SpawnCategoryDef>
+
     <HiveCreatureFramework.UnitDef>
         <defName>FH_Unit_Whipspike</defName>
         <label>Whipspike</label>
@@ -63,6 +70,76 @@
         <costs>
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Toughspike</defName>
+        <label>Toughspike</label>
+        <description>Toughspike</description>
+        <kind>FH_Toughspike</kind>
+        <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Fingerspike</prerequisiteFusion>
+        <costs>
+            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </costs>
+        <categories>
+            <li>FH_Category_MediumFleshBeast</li>
+        </categories>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Shieldspike</defName>
+        <label>Shieldspike</label>
+        <description>Shieldspike</description>
+        <kind>FH_Shieldspike</kind>
+        <prerequisiteFusion>FH_Fusion_Shieldspike_Paraspike_Paraspike</prerequisiteFusion>
+        <costs>
+            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </costs>
+        <categories>
+            <li>FH_Category_MediumFleshBeast</li>
+        </categories>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Trispike</defName>
+        <label>Trispike</label>
+        <description>Trispike</description>
+        <kind>FH_Trispike</kind>
+        <prerequisiteFusion>FH_Fusion_Trispike_Puffspike_Puffspike</prerequisiteFusion>
+        <costs>
+            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </costs>
+        <categories>
+            <li>FH_Category_MediumFleshBeast</li>
+        </categories>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Shatterspike</defName>
+        <label>Shatterspike</label>
+        <description>Shatterspike</description>
+        <kind>FH_Shatterspike</kind>
+        <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Gutspike</prerequisiteFusion>
+        <costs>
+            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </costs>
+        <categories>
+            <li>FH_Category_MediumFleshBeast</li>
+        </categories>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Fleshwind</defName>
+        <label>Fleshwind</label>
+        <description>Fleshwind</description>
+        <kind>FH_Fleshwind</kind>
+        <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Whipspike</prerequisiteFusion>
+        <costs>
+            <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+        </costs>
+        <categories>
+            <li>FH_Category_MediumFleshBeast</li>
+        </categories>
     </HiveCreatureFramework.UnitDef>
 
 </Defs> 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <FH_Unit_Fingerspike.description>Spawn a fingerspike.</FH_Unit_Fingerspike.description>
+  <FH_Unit_Fleshwind.description>Spawn a fleshwind. Requires discovering the matching fusion recipe first.</FH_Unit_Fleshwind.description>
+  <FH_Unit_Gutspike.description>Spawn a gutspike.</FH_Unit_Gutspike.description>
+  <FH_Unit_Paraspike.description>Spawn a paraspike.</FH_Unit_Paraspike.description>
+  <FH_Unit_Puffspike.description>Spawn a puffspike.</FH_Unit_Puffspike.description>
+  <FH_Unit_Shatterspike.description>Spawn a shatterspike. Requires discovering the matching fusion recipe first.</FH_Unit_Shatterspike.description>
+  <FH_Unit_Shieldspike.description>Spawn a shieldspike. Requires discovering the matching fusion recipe first.</FH_Unit_Shieldspike.description>
+  <FH_Unit_Toughspike.description>Spawn a toughspike. Requires discovering the matching fusion recipe first.</FH_Unit_Toughspike.description>
+  <FH_Unit_Trispike.description>Spawn a trispike. Requires discovering the matching fusion recipe first.</FH_Unit_Trispike.description>
+  
+</LanguageData>

@@ -1,69 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Fingerspike -->
-  <FH_Unit_Fingerspike.label>TODO</FH_Unit_Fingerspike.label>
-  <!-- EN: Fingerspike -->
-  <FH_Unit_Fingerspike.description>TODO</FH_Unit_Fingerspike.description>
+  <FH_Unit_Fingerspike.label>独爪兽</FH_Unit_Fingerspike.label>
+  <FH_Unit_Fingerspike.description>生产一只独爪兽。</FH_Unit_Fingerspike.description>
   
-  <!-- EN: Gutspike -->
-  <FH_Unit_Gutspike.label>TODO</FH_Unit_Gutspike.label>
-  <!-- EN: Gutspike -->
-  <FH_Unit_Gutspike.description>TODO</FH_Unit_Gutspike.description>
+  <FH_Unit_Fleshwind.label>翼爪兽</FH_Unit_Fleshwind.label>
+  <FH_Unit_Fleshwind.description>生产一只翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind.description>
   
-  <!-- EN: Paraspike -->
-  <FH_Unit_Paraspike.label>TODO</FH_Unit_Paraspike.label>
-  <!-- EN: Paraspike -->
-  <FH_Unit_Paraspike.description>TODO</FH_Unit_Paraspike.description>
+  <FH_Unit_Gutspike.label>胃血兽</FH_Unit_Gutspike.label>
+  <FH_Unit_Gutspike.description>生产一只胃血兽。</FH_Unit_Gutspike.description>
   
-  <!-- EN: Puffspike -->
-  <FH_Unit_Puffspike.label>TODO</FH_Unit_Puffspike.label>
-  <!-- EN: Puffspike -->
-  <FH_Unit_Puffspike.description>TODO</FH_Unit_Puffspike.description>
+  <FH_Unit_Paraspike.label>寄血兽</FH_Unit_Paraspike.label>
+  <FH_Unit_Paraspike.description>生产一只寄血兽。</FH_Unit_Paraspike.description>
   
-  <!-- EN: Whipspike -->
-  <FH_Unit_Whipspike.label>TODO</FH_Unit_Whipspike.label>
-  <!-- EN: Whipspike -->
-  <FH_Unit_Whipspike.description>TODO</FH_Unit_Whipspike.description>
+  <FH_Unit_Puffspike.label>肺血兽</FH_Unit_Puffspike.label>
+  <FH_Unit_Puffspike.description>生产一只肺血兽。</FH_Unit_Puffspike.description>
   
-  <!-- EN: Gutspike -->
-  <Test.label>TODO</Test.label>
-  <!-- EN: Gutspike -->
-  <Test.description>TODO</Test.description>
+  <FH_Unit_Shatterspike.label>碎爪兽</FH_Unit_Shatterspike.label>
+  <FH_Unit_Shatterspike.description>生产一只碎爪兽。需要先发现对应融合配方。</FH_Unit_Shatterspike.description>
   
-  <!-- EN: Gutspike -->
-  <Test2.label>TODO</Test2.label>
-  <!-- EN: Gutspike -->
-  <Test2.description>TODO</Test2.description>
+  <FH_Unit_Shieldspike.label>盾爪兽</FH_Unit_Shieldspike.label>
+  <FH_Unit_Shieldspike.description>生产一只盾爪兽。需要先发现对应融合配方。</FH_Unit_Shieldspike.description>
   
-  <!-- EN: Nexusmeld -->
-  <FH_Unit_Nexusmeld.label>统合母兽</FH_Unit_Nexusmeld.label>
-  <!-- EN: Nexusmeld -->
-  <FH_Unit_Nexusmeld.description>统合母兽</FH_Unit_Nexusmeld.description>
+  <FH_Unit_Toughspike.label>双爪兽</FH_Unit_Toughspike.label>
+  <FH_Unit_Toughspike.description>生产一只双爪兽。需要先发现对应融合配方。</FH_Unit_Toughspike.description>
   
-  <!-- EN: Furiousmeld -->
-  <FH_Unit_Furiousmeld.label>暴怒母兽</FH_Unit_Furiousmeld.label>
-  <!-- EN: Furiousmeld -->
-  <FH_Unit_Furiousmeld.description>暴怒母兽</FH_Unit_Furiousmeld.description>
-  
-  <!-- EN: Bastionmeld -->
-  <FH_Unit_Bastionmeld.label>铁骸母兽</FH_Unit_Bastionmeld.label>
-  <!-- EN: Bastionmeld -->
-  <FH_Unit_Bastionmeld.description>铁骸母兽</FH_Unit_Bastionmeld.description>
-  
-  <!-- EN: Fissionmeld -->
-  <FH_Unit_Fissionmeld.label>裂殖母兽</FH_Unit_Fissionmeld.label>
-  <!-- EN: Fissionmeld -->
-  <FH_Unit_Fissionmeld.description>裂殖母兽</FH_Unit_Fissionmeld.description>
-  
-  <!-- EN: Dreadmeld -->
-  <FH_Unit_Dreadmeld.label>惊惧母兽</FH_Unit_Dreadmeld.label>
-  <!-- EN: Dreadmeld -->
-  <FH_Unit_Dreadmeld.description>惊惧母兽</FH_Unit_Dreadmeld.description>
-  
-  <!-- EN: Fleshtitan -->
-  <FH_Unit_Fleshtitan.label>血肉泰坦</FH_Unit_Fleshtitan.label>
-  <!-- EN: Fleshtitan -->
-  <FH_Unit_Fleshtitan.description>血肉泰坦</FH_Unit_Fleshtitan.description>
+  <FH_Unit_Trispike.label>三爪兽</FH_Unit_Trispike.label>
+  <FH_Unit_Trispike.description>生产一只三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike.description>
   
 </LanguageData>

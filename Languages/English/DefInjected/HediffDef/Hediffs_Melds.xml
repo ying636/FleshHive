@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <FH_Berserk.label>flesh berserk</FH_Berserk.label>
+  <FH_Berserk.description>The flesh beasts are driven into a frenzied berserk state.</FH_Berserk.description>
+  <FH_Berserk.stages.berserk.label>berserk</FH_Berserk.stages.berserk.label>
+  
+  <FH_Parasitism_Furiousmeld.label>furiousmeld parasitism</FH_Parasitism_Furiousmeld.label>
+  <FH_Parasitism_Furiousmeld.description>The furiousmeld latches onto the host, providing twisted flesh capacity, armor, and regeneration.</FH_Parasitism_Furiousmeld.description>
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>Shield Claw</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>Shield Claw</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
+  <FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>furiousmeld parasitism</FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>
+  
+  <FH_Parasitism_Nexusmeld.label>nexusmeld parasitism</FH_Parasitism_Nexusmeld.label>
+  <FH_Parasitism_Nexusmeld.description>The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts.</FH_Parasitism_Nexusmeld.description>
+  <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>Left Spike</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>Right Spike</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <FH_Parasitism_Nexusmeld.stages.nexusmeld_parasitism.label>nexusmeld parasitism</FH_Parasitism_Nexusmeld.stages.nexusmeld_parasitism.label>
+  
+  <FH_Unification.label>flesh unification</FH_Unification.label>
+  <FH_Unification.description>The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced.</FH_Unification.description>
+  
+</LanguageData>

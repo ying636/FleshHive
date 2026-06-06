@@ -1,53 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <FH_Building_FleshSack.label>血肉囊</FH_Building_FleshSack.label>
-  <FH_Building_FleshSack.description>肿胀的肉袋。这些无法移动的血肉兽充当了消化器官。将活体生物放到血肉囊中，血肉囊就可以持续不断的为巢群提供营养。但它们无法消化无机物，当消化完成时，将会把风干的尸骨吐出来。</FH_Building_FleshSack.description>
-
-  <FH_Building_FleshBlock.label>血肉块</FH_Building_FleshBlock.label>
-  <FH_Building_FleshBlock.description>一团无法通过的扭曲肉块。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_Building_FleshBlock.description>
-
-  <FH_Building_ChitinFleshBlock.label>甲壳血肉块</FH_Building_ChitinFleshBlock.label>
-  <FH_Building_ChitinFleshBlock.description>一团无法通过的扭曲肉块，外层覆盖着硬化甲壳。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_Building_ChitinFleshBlock.description>
-
-  <FH_Building_FleshDoor.label>血肉门</FH_Building_FleshDoor.label>
-  <FH_Building_FleshDoor.description>由扭曲血肉生长而成的门。它会为靠近的生物蠕动着张开，并在其身后重新封闭通道。</FH_Building_FleshDoor.description>
-
-  <FH_Building_FleshBarricade.label>血肉掩体</FH_Building_FleshBarricade.label>
-  <FH_Building_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_FleshBarricade.description>
-
-  <FH_Building_FleshHopper.label>血肉产出口</FH_Building_FleshHopper.label>
-  <FH_Building_FleshHopper.description>使得血肉巢穴能够将内部加工的产物吐出的器官。通过血肉产出口，可以命令巢穴消耗营养生产物资。</FH_Building_FleshHopper.description>
-
-  <FH_Building_FleshBox.label>血肉囊泡</FH_Building_FleshBox.label>
-  <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。储存原料以供血肉巢穴使用。</FH_Building_FleshBox.description>
-
+  
+  <!-- EN: chitin flesh barricade -->
   <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>
+  <!-- EN: A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do. -->
   <FH_Building_ChitinFleshBarricade.description>一种齐腰高的坚固扭曲肉块，外层包覆着硬化的甲壳。用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮物体更好的掩护。甲壳血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_ChitinFleshBarricade.description>
-
-  <FH_Building_FleshLamp.label>血肉灯</FH_Building_FleshLamp.label>
-  <FH_Building_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_Building_FleshLamp.description>
-
-  <FH_Building_FleshColumn.label>血肉支撑柱</FH_Building_FleshColumn.label>
-  <FH_Building_FleshColumn.description>一个由血肉构成用于支撑屋顶的柱子，不影响视野和移动。</FH_Building_FleshColumn.description>
-
-  <FH_Building_FleshStool.label>血肉凳子</FH_Building_FleshStool.label>
-  <FH_Building_FleshStool.description>由血肉构成给人坐的简易凳子。意外的舒适。可以在餐桌和工作台或者别的什么附近使用。</FH_Building_FleshStool.description>
-
-  <FH_Building_FleshTableSmall.label>血肉桌子（1x2）</FH_Building_FleshTableSmall.label>
-  <FH_Building_FleshTableSmall.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableSmall.description>
-
-  <FH_Building_FleshTableSquare.label>血肉桌子（2x2）</FH_Building_FleshTableSquare.label>
-  <FH_Building_FleshTableSquare.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableSquare.description>
-
-  <FH_Building_FleshTableLong.label>血肉桌子（4x2）</FH_Building_FleshTableLong.label>
-  <FH_Building_FleshTableLong.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableLong.description>
-
-  <FH_Building_FleshTableLarge.label>血肉桌子（3x3）</FH_Building_FleshTableLarge.label>
-  <FH_Building_FleshTableLarge.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableLarge.description>
-
+  
+  <!-- EN: chitin flesh block -->
+  <FH_Building_ChitinFleshBlock.label>甲壳血肉块</FH_Building_ChitinFleshBlock.label>
+  <!-- EN: An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof. -->
+  <FH_Building_ChitinFleshBlock.description>一团无法通过的扭曲肉块，外层覆盖着硬化甲壳。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_Building_ChitinFleshBlock.description>
+  
+  <!-- EN: flesh barricade -->
+  <FH_Building_FleshBarricade.label>血肉掩体</FH_Building_FleshBarricade.label>
+  <!-- EN: A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do. -->
+  <FH_Building_FleshBarricade.description>一种齐腰高的坚固扭曲肉块。用于阻挡射入的子弹。虽然很难看，但能提供比其他低矮的物体更好的掩护。血肉掩体会像栅栏一样阻挡部分动物。</FH_Building_FleshBarricade.description>
+  
+  <!-- EN: flesh bed -->
   <FH_Building_FleshBed.label>血肉单人床</FH_Building_FleshBed.label>
+  <!-- EN: A single bed made of flesh. Soft flesh has grown into a pocket-like structure and a pillow for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly. -->
   <FH_Building_FleshBed.description>一张血肉构成的单人床，柔软的血肉上长出了一个口袋结构和枕头用于休息，意外的舒适，在上面休息的人能够更快的恢复伤势。</FH_Building_FleshBed.description>
-
+  
+  <!-- EN: flesh block -->
+  <FH_Building_FleshBlock.label>血肉块</FH_Building_FleshBlock.label>
+  <!-- EN: An impassable lump of twisted flesh. It pulses and trembles, filled with terrible vitality. It can support a roof. -->
+  <FH_Building_FleshBlock.description>一团无法通过的扭曲肉块。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_Building_FleshBlock.description>
+  
+  <!-- EN: flesh vesicle -->
+  <FH_Building_FleshBox.label>血肉囊泡</FH_Building_FleshBox.label>
+  <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive. -->
+  <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。储存原料以供血肉巢穴使用。</FH_Building_FleshBox.description>
+  
+  <!-- EN: flesh column -->
+  <FH_Building_FleshColumn.label>血肉支撑柱</FH_Building_FleshColumn.label>
+  <!-- EN: A column made of flesh, used to support roofs. It does not block sight or movement. -->
+  <FH_Building_FleshColumn.description>一个由血肉构成用于支撑屋顶的柱子，不影响视野和移动。</FH_Building_FleshColumn.description>
+  
+  <!-- EN: flesh door -->
+  <FH_Building_FleshDoor.label>血肉门</FH_Building_FleshDoor.label>
+  <!-- EN: A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them. -->
+  <FH_Building_FleshDoor.description>由扭曲血肉生长而成的门。它会为靠近的生物蠕动着张开，并在其身后重新封闭通道。</FH_Building_FleshDoor.description>
+  
+  <!-- EN: flesh double bed -->
   <FH_Building_FleshDoubleBed.label>血肉双人床</FH_Building_FleshDoubleBed.label>
+  <!-- EN: A double bed made of flesh. Soft flesh has grown into a pocket-like structure and pillows for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly. -->
   <FH_Building_FleshDoubleBed.description>一张血肉构成的双人床，柔软的血肉上长出了一个口袋结构和枕头用于休息，意外的舒适，在上面休息的人能够更快的恢复伤势。</FH_Building_FleshDoubleBed.description>
+  
+  <!-- EN: flesh hopper -->
+  <FH_Building_FleshHopper.label>血肉产出口</FH_Building_FleshHopper.label>
+  <!-- EN: An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies. -->
+  <FH_Building_FleshHopper.description>使得血肉巢穴能够将内部加工的产物吐出的器官。通过血肉产出口，可以命令巢穴消耗营养生产物资。</FH_Building_FleshHopper.description>
+  
+  <!-- EN: flesh lamp -->
+  <FH_Building_FleshLamp.label>血肉灯</FH_Building_FleshLamp.label>
+  <!-- EN: A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. -->
+  <FH_Building_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_Building_FleshLamp.description>
+  
+  <!-- EN: flesh sack -->
+  <FH_Building_FleshSack.label>血肉囊</FH_Building_FleshSack.label>
+  <!-- EN: A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains. -->
+  <FH_Building_FleshSack.description>肿胀的肉袋。这些无法移动的血肉兽充当了消化器官。将活体生物放到血肉囊中，血肉囊就可以持续不断的为巢群提供营养。但它们无法消化无机物，当消化完成时，将会把风干的尸骨吐出来。</FH_Building_FleshSack.description>
+  
+  <!-- EN: flesh stool -->
+  <FH_Building_FleshStool.label>血肉凳子</FH_Building_FleshStool.label>
+  <!-- EN: A simple stool made of flesh for people to sit on. It is unexpectedly comfortable. It can be used near dining tables, workbenches, or elsewhere. -->
+  <FH_Building_FleshStool.description>由血肉构成给人坐的简易凳子。意外的舒适。可以在餐桌和工作台或者别的什么附近使用。</FH_Building_FleshStool.description>
+  
+  <!-- EN: flesh table (3x3) -->
+  <FH_Building_FleshTableLarge.label>血肉桌子（3x3）</FH_Building_FleshTableLarge.label>
+  <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
+  <FH_Building_FleshTableLarge.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableLarge.description>
+  
+  <!-- EN: flesh table (4x2) -->
+  <FH_Building_FleshTableLong.label>血肉桌子（4x2）</FH_Building_FleshTableLong.label>
+  <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
+  <FH_Building_FleshTableLong.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableLong.description>
+  
+  <!-- EN: flesh table (1x2) -->
+  <FH_Building_FleshTableSmall.label>血肉桌子（1x2）</FH_Building_FleshTableSmall.label>
+  <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
+  <FH_Building_FleshTableSmall.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableSmall.description>
+  
+  <!-- EN: flesh table (2x2) -->
+  <FH_Building_FleshTableSquare.label>血肉桌子（2x2）</FH_Building_FleshTableSquare.label>
+  <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
+  <FH_Building_FleshTableSquare.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_Building_FleshTableSquare.description>
+  
 </LanguageData>

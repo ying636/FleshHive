@@ -1,32 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <FH_Research_BasicFleshHive.label>基础血肉巢穴</FH_Research_BasicFleshHive.label>
-  <FH_Research_BasicFleshHive.description>TODO</FH_Research_BasicFleshHive.description>
-
-  <FH_Research_FleshbeastCoexistence.label>血肉兽共存</FH_Research_FleshbeastCoexistence.label>
-  <FH_Research_FleshbeastCoexistence.description>TODO</FH_Research_FleshbeastCoexistence.description>
-
-  <FH_Research_EfficientFleshExpansion.label>高效血肉扩张</FH_Research_EfficientFleshExpansion.label>
-  <FH_Research_EfficientFleshExpansion.description>TODO</FH_Research_EfficientFleshExpansion.description>
-
-  <FH_Research_ComplexFleshHive.label>复杂血肉巢穴</FH_Research_ComplexFleshHive.label>
-  <FH_Research_ComplexFleshHive.description>TODO</FH_Research_ComplexFleshHive.description>
-
-  <FH_Research_BonePlatingFleshBlock.label>甲壳血肉块</FH_Research_BonePlatingFleshBlock.label>
-  <FH_Research_BonePlatingFleshBlock.description>TODO</FH_Research_BonePlatingFleshBlock.description>
-
-  <FH_Research_EfficientNutritionAbsorption.label>高效营养吸收</FH_Research_EfficientNutritionAbsorption.label>
-  <FH_Research_EfficientNutritionAbsorption.description>TODO</FH_Research_EfficientNutritionAbsorption.description>
-
+  
+  <!-- EN: 高级血肉巢穴 -->
   <FH_Research_AdvancedFleshHive.label>高级血肉巢穴</FH_Research_AdvancedFleshHive.label>
+  <!-- EN: TODO -->
   <FH_Research_AdvancedFleshHive.description>TODO</FH_Research_AdvancedFleshHive.description>
-
-  <FH_Research_SelfRepairFlesh.label>自修复血肉</FH_Research_SelfRepairFlesh.label>
-  <FH_Research_SelfRepairFlesh.description>TODO</FH_Research_SelfRepairFlesh.description>
-
-  <FH_Research_FleshHeartControl.label>血肉心脏控制</FH_Research_FleshHeartControl.label>
-  <FH_Research_FleshHeartControl.description>TODO</FH_Research_FleshHeartControl.description>
-
+  
+  <!-- EN: 基础血肉巢穴 -->
+  <FH_Research_BasicFleshHive.label>基础血肉巢穴</FH_Research_BasicFleshHive.label>
+  <!-- EN: TODO -->
+  <FH_Research_BasicFleshHive.description>TODO</FH_Research_BasicFleshHive.description>
+  
+  <!-- EN: 骨甲血肉块 -->
+  <FH_Research_BonePlatingFleshBlock.label>甲壳血肉块</FH_Research_BonePlatingFleshBlock.label>
+  <!-- EN: TODO -->
+  <FH_Research_BonePlatingFleshBlock.description>TODO</FH_Research_BonePlatingFleshBlock.description>
+  
+  <!-- EN: 复杂血肉巢穴 -->
+  <FH_Research_ComplexFleshHive.label>复杂血肉巢穴</FH_Research_ComplexFleshHive.label>
+  <!-- EN: TODO -->
+  <FH_Research_ComplexFleshHive.description>TODO</FH_Research_ComplexFleshHive.description>
+  
+  <!-- EN: 高效细胞分裂 -->
   <FH_Research_EfficientCellDivision.label>高效细胞分裂</FH_Research_EfficientCellDivision.label>
+  <!-- EN: TODO -->
   <FH_Research_EfficientCellDivision.description>TODO</FH_Research_EfficientCellDivision.description>
+  
+  <!-- EN: 高效血肉扩张 -->
+  <FH_Research_EfficientFleshExpansion.label>高效血肉扩张</FH_Research_EfficientFleshExpansion.label>
+  <!-- EN: TODO -->
+  <FH_Research_EfficientFleshExpansion.description>TODO</FH_Research_EfficientFleshExpansion.description>
+  
+  <!-- EN: 高效营养吸收 -->
+  <FH_Research_EfficientNutritionAbsorption.label>高效营养吸收</FH_Research_EfficientNutritionAbsorption.label>
+  <!-- EN: TODO -->
+  <FH_Research_EfficientNutritionAbsorption.description>TODO</FH_Research_EfficientNutritionAbsorption.description>
+  
+  <!-- EN: 血肉兽共存 -->
+  <FH_Research_FleshbeastCoexistence.label>血肉兽共存</FH_Research_FleshbeastCoexistence.label>
+  <!-- EN: TODO -->
+  <FH_Research_FleshbeastCoexistence.description>TODO</FH_Research_FleshbeastCoexistence.description>
+  
+  <!-- EN: 血肉心脏控制 -->
+  <FH_Research_FleshHeartControl.label>血肉心脏控制</FH_Research_FleshHeartControl.label>
+  <!-- EN: TODO -->
+  <FH_Research_FleshHeartControl.description>TODO</FH_Research_FleshHeartControl.description>
+  
+  <!-- EN: 自修复血肉 -->
+  <FH_Research_SelfRepairFlesh.label>自修复血肉</FH_Research_SelfRepairFlesh.label>
+  <!-- EN: TODO -->
+  <FH_Research_SelfRepairFlesh.description>TODO</FH_Research_SelfRepairFlesh.description>
+  
 </LanguageData>
