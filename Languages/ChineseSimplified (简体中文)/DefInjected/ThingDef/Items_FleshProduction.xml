@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <FH_NerveFlesh.label>神经块</FH_NerveFlesh.label>
+  <FH_NerveFlesh.description>血肉神经的必须部分。许多复杂的血肉结构需要神经块才能够完成制作。</FH_NerveFlesh.description>
+
+  <Tentacle.label>血肉触手</Tentacle.label>
+  <Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</Tentacle.description>
+
+  <FleshWhip.label>血肉触鞭</FleshWhip.label>
+  <FleshWhip.description>强健发达、末端带刃的肉乎乎触手。这只血肉触鞭算是不错的近战武器。\n\n这个部件有自己的神经结构，将其移除可能招致危险。</FleshWhip.description>
+
+  <FleshmassStomach.label>血肉胃</FleshmassStomach.label>
+  <FleshmassStomach.description>一块有不完全知觉的肿瘤血肉胃。其中含有的强酸会给安装者带来痛苦，但也能完全避免食物中毒。\n\n这个器官有自己的神经结构，将其移除可能招致危险。</FleshmassStomach.description>
+
+  <FleshmassLung.label>血肉肺</FleshmassLung.label>
+  <FleshmassLung.description>一块有不完全知觉的肿瘤血肉肺。其上组织不断再生更替，能使安装者免疫肺瘟、哮喘等疾病。\n\n这个器官有自己的神经结构，将其移除可能招致危险。</FleshmassLung.description>
+
+</LanguageData>

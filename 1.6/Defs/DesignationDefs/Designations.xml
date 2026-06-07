@@ -7,4 +7,10 @@
     <texturePath>Things/Building/FH_FleshSack/FH_FleshSack_A</texturePath>
   </DesignationDef>
 
+  <DesignationDef>
+    <defName>FH_InfectHarbingerTree</defName>
+    <label>infect harbinger tree</label>
+    <texturePath>Things/Plant/FH_FleshTree/FH_FleshTree_4</texturePath>
+  </DesignationDef>
+
 </Defs>

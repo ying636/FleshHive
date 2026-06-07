@@ -30,6 +30,11 @@
   <FH_Building_FleshBox.label>血肉囊泡</FH_Building_FleshBox.label>
   <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive. -->
   <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。储存原料以供血肉巢穴使用。</FH_Building_FleshBox.description>
+
+  <!-- EN: flesh parasite vat -->
+  <FH_Building_FleshParasiteVat.label>血肉寄生仓</FH_Building_FleshParasiteVat.label>
+  <!-- EN: A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily. -->
+  <FH_Building_FleshParasiteVat.description>一个由尖锐的骨刺触手和血肉结块构成的血肉装置。该设备会将血肉兽的细胞逐渐吞噬，并逐步将这些细胞植入到宿主的身体中。这让血肉兽能在宿主体内独立存活，强化宿主，并主动攻击宿主的敌人。血肉兽的生存营养也要由宿主提供，所以宿主会更容易感到饥饿。</FH_Building_FleshParasiteVat.description>
   
   <!-- EN: flesh column -->
   <FH_Building_FleshColumn.label>血肉支撑柱</FH_Building_FleshColumn.label>

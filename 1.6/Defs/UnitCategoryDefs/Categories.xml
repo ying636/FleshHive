@@ -26,16 +26,6 @@
             <li>FH_Unit_Trispike</li>
             <li>FH_Unit_Shatterspike</li>
             <li>FH_Unit_Fleshwind</li>
-            <li>FH_Unit_Shieldspike_Cancerous</li>
-            <li>FH_Unit_Toughspike_Sharp</li>
-            <li>FH_Unit_Trispike_Acidic</li>
-            <li>FH_Unit_Shieldspike_Tough</li>
-            <li>FH_Unit_Fleshwind_Swift</li>
-            <li>FH_Unit_Toughspike_Robust</li>
-            <li>FH_Unit_Shatterspike_BoneSpurGrowth</li>
-            <li>FH_Unit_Shatterspike_Domesticated</li>
-            <li>FH_Unit_Trispike_Split</li>
-            <li>FH_Unit_Fleshwind_ExpandedCapacity</li>
         </units>
     </HiveCreatureFramework.SpawnCategoryDef>
 
@@ -93,6 +83,7 @@
         <defName>FH_Unit_Toughspike</defName>
         <label>Toughspike</label>
         <description>Toughspike</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Toughspike</kind>
         <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Fingerspike</prerequisiteFusion>
         <costs>
@@ -104,6 +95,7 @@
         <defName>FH_Unit_Shieldspike</defName>
         <label>Shieldspike</label>
         <description>Shieldspike</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Shieldspike</kind>
         <prerequisiteFusion>FH_Fusion_Shieldspike_Paraspike_Paraspike</prerequisiteFusion>
         <costs>
@@ -115,6 +107,7 @@
         <defName>FH_Unit_Trispike</defName>
         <label>Trispike</label>
         <description>Trispike</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Trispike</kind>
         <prerequisiteFusion>FH_Fusion_Trispike_Puffspike_Puffspike</prerequisiteFusion>
         <costs>
@@ -126,6 +119,7 @@
         <defName>FH_Unit_Shatterspike</defName>
         <label>Shatterspike</label>
         <description>Shatterspike</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Shatterspike</kind>
         <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Gutspike</prerequisiteFusion>
         <costs>
@@ -137,171 +131,12 @@
         <defName>FH_Unit_Fleshwind</defName>
         <label>Fleshwind</label>
         <description>Fleshwind</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Fleshwind</kind>
         <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Whipspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Shieldspike_Cancerous</defName>
-        <label>Cancerous shieldspike</label>
-        <description>Cancerous shieldspike</description>
-        <kind>FH_Shieldspike</kind>
-        <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Puffspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Cancerous>1</FH_Trait_Cancerous>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Toughspike_Sharp</defName>
-        <label>Sharp toughspike</label>
-        <description>Sharp toughspike</description>
-        <kind>FH_Toughspike</kind>
-        <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Gutspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Sharp>1</FH_Trait_Sharp>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Trispike_Acidic</defName>
-        <label>Acidic trispike</label>
-        <description>Acidic trispike</description>
-        <kind>FH_Trispike</kind>
-        <prerequisiteFusion>FH_Fusion_Trispike_Fingerspike_Whipspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Acidic>1</FH_Trait_Acidic>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Shieldspike_Tough</defName>
-        <label>Tough shieldspike</label>
-        <description>Tough shieldspike</description>
-        <kind>FH_Shieldspike</kind>
-        <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Paraspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Tough>1</FH_Trait_Tough>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Fleshwind_Swift</defName>
-        <label>Swift fleshwind</label>
-        <description>Swift fleshwind</description>
-        <kind>FH_Fleshwind</kind>
-        <prerequisiteFusion>FH_Fusion_Fleshwind_Puffspike_Gutspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Swift>1</FH_Trait_Swift>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Toughspike_Robust</defName>
-        <label>Robust toughspike</label>
-        <description>Robust toughspike</description>
-        <kind>FH_Toughspike</kind>
-        <prerequisiteFusion>FH_Fusion_Toughspike_Puffspike_Whipspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Robust>1</FH_Trait_Robust>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Shatterspike_BoneSpurGrowth</defName>
-        <label>Bone spur shatterspike</label>
-        <description>Bone spur shatterspike</description>
-        <kind>FH_Shatterspike</kind>
-        <prerequisiteFusion>FH_Fusion_Shatterspike_Puffspike_Paraspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_BoneSpurGrowth>1</FH_Trait_BoneSpurGrowth>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Shatterspike_Domesticated</defName>
-        <label>Domesticated shatterspike</label>
-        <description>Domesticated shatterspike</description>
-        <kind>FH_Shatterspike</kind>
-        <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Whipspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Domesticated>1</FH_Trait_Domesticated>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Trispike_Split</defName>
-        <label>Split trispike</label>
-        <description>Split trispike</description>
-        <kind>FH_Trispike</kind>
-        <prerequisiteFusion>FH_Fusion_Trispike_Gutspike_Paraspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_Split>1</FH_Trait_Split>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
-    <HiveCreatureFramework.UnitDef>
-        <defName>FH_Unit_Fleshwind_ExpandedCapacity</defName>
-        <label>Expanded fleshwind</label>
-        <description>Expanded fleshwind</description>
-        <kind>FH_Fleshwind</kind>
-        <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Paraspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
-        </costs>
-        <worker Class="HiveCreatureFramework.UnitSpawnWorker_Hediff">
-            <hediffs>
-                <FH_Trait_ExpandedCapacity>1</FH_Trait_ExpandedCapacity>
-            </hediffs>
-        </worker>
-    </HiveCreatureFramework.UnitDef>
-
 </Defs> 
+

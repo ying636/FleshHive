@@ -6,6 +6,8 @@
   <FleshParasitePod_ParasitizedFleshBeasts>Parasitized flesh beasts</FleshParasitePod_ParasitizedFleshBeasts>
   <FleshParasitePod_Remove>Remove</FleshParasitePod_Remove>
   <FleshParasitePod_InsufficientCapacity>Cannot parasite: insufficient capacity</FleshParasitePod_InsufficientCapacity>
+  <FleshParasitePod_InsufficientNutrition>Cannot parasite: requires {0} nutrition</FleshParasitePod_InsufficientNutrition>
+  <FleshParasitePod_NutritionCost>Parasitism cost: {0} nutrition</FleshParasitePod_NutritionCost>
 
   <HCF_FormulaCategory_Parasite>Parasite</HCF_FormulaCategory_Parasite>
   <HCF_AddParasite>Add Parasite</HCF_AddParasite>
@@ -53,5 +55,10 @@
   <FH_FleshManagement_Progress>Hive progress</FH_FleshManagement_Progress>
   <FH_FleshManagement_TemporaryGroup>Temporary fleshbeast group</FH_FleshManagement_TemporaryGroup>
   <FH_FleshManagement_NoHive>No linked hive</FH_FleshManagement_NoHive>
+  <FH_InfectHarbingerTree>Infect harbinger tree</FH_InfectHarbingerTree>
+  <FH_InfectHarbingerTreeDesc>Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree.</FH_InfectHarbingerTreeDesc>
+  <FH_FleshTree_TerraformNutrition>Terraform nutrition: {0} ({1})</FH_FleshTree_TerraformNutrition>
+  <FH_Spawner_Trait>Trait</FH_Spawner_Trait>
+  <FH_Spawner_TraitNone>None</FH_Spawner_TraitNone>
 
 </LanguageData>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_NerveFlesh</defName>
+    <label>nerve flesh</label>
+    <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_NerveFlesh</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>Tentacle</defName>
+    <label>flesh tentacle</label>
+    <description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FleshWhip</defName>
+    <label>flesh whip</label>
+    <description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FleshmassStomach</defName>
+    <label>fleshmass stomach</label>
+    <description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FleshmassLung</defName>
+    <label>fleshmass lung</label>
+    <description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

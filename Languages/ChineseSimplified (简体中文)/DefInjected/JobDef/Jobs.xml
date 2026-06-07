@@ -6,6 +6,9 @@
   
   <!-- EN: carrying TargetA to flesh sack. -->
   <FH_Job_FillFleshSack.reportString>TODO</FH_Job_FillFleshSack.reportString>
+
+  <!-- EN: infecting TargetA. -->
+  <FH_Job_InfectHarbingerTree.reportString>正在感染TargetA。</FH_Job_InfectHarbingerTree.reportString>
   
   <!-- EN: fill trispike charge. -->
   <FH_Job_FillTrispikeCharge.reportString>TODO</FH_Job_FillTrispikeCharge.reportString>

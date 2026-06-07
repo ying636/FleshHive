@@ -35,7 +35,7 @@
     <costList>
       <InsectJelly>50</InsectJelly>
     </costList>
-    <designationCategory>FH_Flesh</designationCategory>
+    <designationCategory>HCF_Hive</designationCategory>
     <building>
       <storageGroupTag>Hive</storageGroupTag>
       <fixedStorageSettings>
@@ -83,9 +83,11 @@
           <li>FleshHive</li>
         </tags>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
-        <compClass>HiveCreatureFramework.CompHiveSpawner_Detail</compClass>
+      <li Class="FleshHive.CompPropertiesHiveSpawner_FleshTrait">
+        <compClass>FleshHive.CompHiveSpawner_FleshTrait</compClass>
         <UnitCategories>
+          <li>FH_Category_LittleFleshBeast</li>
+          <li>FH_Category_MediumFleshBeast</li>
         </UnitCategories>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
@@ -211,12 +213,65 @@
           <li>FleshHive</li>
         </tags>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveSpawner">
-        <compClass>HiveCreatureFramework.CompHiveSpawner_Detail</compClass>
+      <li Class="FleshHive.CompPropertiesHiveSpawner_FleshTrait">
+        <compClass>FleshHive.CompHiveSpawner_FleshTrait</compClass>
         <UnitCategories>
           <li>FH_Category_LittleFleshBeast</li>
           <li>FH_Category_MediumFleshBeast</li>
+          <li>FH_Category_FleshItems</li>
         </UnitCategories>
+        <traitOptions>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Fingerspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Puffspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Puffspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Puffspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Gutspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Paraspike</prerequisiteFusion>
+          </li>
+        </traitOptions>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
@@ -263,15 +318,15 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FH_FleshParasiteVat</defName>
     <label>flesh parasite vat</label>
-    <description>TODO</description>
+    <description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</description>
     <thingClass>FleshHive.FleshParasitePod</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(3.5,2.5)</drawSize>
+      <drawSize>(2.5,3.5)</drawSize>
     </graphicData>
     <drawerType>RealtimeOnly</drawerType>
-    <size>(3,2)</size>
+    <size>(2,3)</size>
     <uiIconScale>0.65</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
@@ -289,12 +344,11 @@
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
     <killedLeavings>
-      <InsectJelly>30</InsectJelly>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
     </killedLeavings>
     <costList>
-      <InsectJelly>50</InsectJelly>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
     </costList>
-    <designationCategory>FH_Flesh</designationCategory>
     <building>
 
     </building>
@@ -1014,6 +1068,91 @@
         <size>(1,1)</size>
       </li>
     </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>FH_FleshTree</defName>
+    <label>flesh tree</label>
+    <description>A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself.</description>
+    <thingClass>FleshHive.FleshTree</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Indexed</graphicClass>
+      <texPath>Things/Plant/FH_FleshTree/Stages</texPath>
+      <shadowData>
+        <volume>(0.4, 0.3, 0.1)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </shadowData>
+    </graphicData>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <Beauty>-10</Beauty>
+      <BeautyOutdoors>-10</BeautyOutdoors>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>230</MaxHitPoints>
+      <MeditationFocusStrength>0.14</MeditationFocusStrength>
+    </statBases>
+    <ingestible />
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>false</neverMultiSelect>
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <canScatterOver>false</canScatterOver>
+    <plant>
+      <pollution>Any</pollution>
+      <growDays>10</growDays>
+      <visualSizeRange>1.5~2.1</visualSizeRange>
+      <sowMinSkill>0</sowMinSkill>
+      <sowTags Inherit="False"/>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <wildClusterWeight>0</wildClusterWeight>
+      <sowWork>400</sowWork>
+      <harvestYield>15</harvestYield>
+      <harvestedThingDef>Bioferrite</harvestedThingDef>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <sowResearchPrerequisites Inherit="False" />
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <harvestWork>1000</harvestWork>
+      <choppedThingDef>FH_ChoppedStump_FleshTree</choppedThingDef>
+      <smashedThingDef>FH_SmashedStump_FleshTree</smashedThingDef>
+    </plant>
+    <comps>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Void</li>
+        </focusTypes>
+      </li>
+      <li Class="CompProperties_PlantPreventCutting"/>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpChoppedBase">
+    <defName>FH_ChoppedStump_FleshTree</defName>
+    <label>chopped flesh tree stump</label>
+    <description>A stump left behind after a flesh tree has been felled.</description>
+    <graphicData>
+      <texPath>Things/Plant/FH_FleshTree/FH_StumpChopped_FleshTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpSmashedBase">
+    <defName>FH_SmashedStump_FleshTree</defName>
+    <label>smashed flesh tree stump</label>
+    <description>The pulped remains of a destroyed flesh tree.</description>
+    <graphicData>
+      <texPath>Things/Plant/FH_FleshTree/StumpSmashed_FleshTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
   </ThingDef>
 
 </Defs>

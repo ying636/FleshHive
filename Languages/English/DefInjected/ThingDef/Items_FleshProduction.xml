@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <FH_NerveFlesh.label>nerve flesh</FH_NerveFlesh.label>
+  <FH_NerveFlesh.description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</FH_NerveFlesh.description>
+
+  <Tentacle.label>flesh tentacle</Tentacle.label>
+  <Tentacle.description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</Tentacle.description>
+
+  <FleshWhip.label>flesh whip</FleshWhip.label>
+  <FleshWhip.description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</FleshWhip.description>
+
+  <FleshmassStomach.label>fleshmass stomach</FleshmassStomach.label>
+  <FleshmassStomach.description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</FleshmassStomach.description>
+
+  <FleshmassLung.label>fleshmass lung</FleshmassLung.label>
+  <FleshmassLung.description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</FleshmassLung.description>
+
+</LanguageData>

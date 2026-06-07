@@ -11,6 +11,10 @@
   <FleshParasitePod_Remove>移除</FleshParasitePod_Remove>
   <!-- EN: Cannot parasite: insufficient capacity -->
   <FleshParasitePod_InsufficientCapacity>无法寄生、空间不足</FleshParasitePod_InsufficientCapacity>
+  <!-- EN: Cannot parasite: requires {0} nutrition -->
+  <FleshParasitePod_InsufficientNutrition>无法寄生，需要{0}营养</FleshParasitePod_InsufficientNutrition>
+  <!-- EN: Parasitism cost: {0} nutrition -->
+  <FleshParasitePod_NutritionCost>寄生消耗：{0}营养</FleshParasitePod_NutritionCost>
 
   <!-- EN: Parasite -->
   <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
@@ -98,6 +102,16 @@
   <FH_FleshManagement_TemporaryGroup>临时血肉兽群组</FH_FleshManagement_TemporaryGroup>
   <!-- EN: No linked hive -->
   <FH_FleshManagement_NoHive>无所属巢穴</FH_FleshManagement_NoHive>
+  <!-- EN: Infect harbinger tree -->
+  <FH_InfectHarbingerTree>感染噩兆噬树</FH_InfectHarbingerTree>
+  <!-- EN: Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree. -->
+  <FH_InfectHarbingerTreeDesc>标记这棵噩兆噬树，使用扭曲肉将其感染并转化为血肉树。</FH_InfectHarbingerTreeDesc>
+  <!-- EN: Terraform nutrition: {0} ({1}) -->
+  <FH_FleshTree_TerraformNutrition>地形转化营养：{0}（{1}）</FH_FleshTree_TerraformNutrition>
+  <!-- EN: Trait -->
+  <FH_Spawner_Trait>特性</FH_Spawner_Trait>
+  <!-- EN: None -->
+  <FH_Spawner_TraitNone>无</FH_Spawner_TraitNone>
 
   <!-- UNUSED -->
   <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>

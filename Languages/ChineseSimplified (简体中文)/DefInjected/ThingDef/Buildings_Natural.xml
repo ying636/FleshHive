@@ -55,6 +55,19 @@
   <FH_FleshHopper.label>血肉产出口</FH_FleshHopper.label>
   <!-- EN: An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies. -->
   <FH_FleshHopper.description>使得血肉巢穴能够将内部加工的产物吐出的器官。通过血肉产出口，可以命令巢穴消耗营养生产物资。</FH_FleshHopper.description>
+
+  <!-- EN: flesh tree -->
+  <FH_FleshTree.label>血肉树</FH_FleshTree.label>
+  <!-- EN: A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself. -->
+  <FH_FleshTree.description>一种完全由肉质构成的参天大树。将噩兆噬树用扭曲肉感染，即可使其变化为血肉树。以置放在它周围的尸体、生肉和头颅为食。与噩兆噬树不同的是，血肉树连接着血肉巢穴，它吸收的营养用于供给整个巢群使用，而非自我繁殖。</FH_FleshTree.description>
+  <!-- EN: chopped flesh tree stump -->
+  <FH_ChoppedStump_FleshTree.label>被砍伐的血肉树桩</FH_ChoppedStump_FleshTree.label>
+  <!-- EN: A stump left behind after a flesh tree has been felled. -->
+  <FH_ChoppedStump_FleshTree.description>血肉树被砍伐后留下的树桩。</FH_ChoppedStump_FleshTree.description>
+  <!-- EN: smashed flesh tree stump -->
+  <FH_SmashedStump_FleshTree.label>被摧毁的血肉树桩</FH_SmashedStump_FleshTree.label>
+  <!-- EN: The pulped remains of a destroyed flesh tree. -->
+  <FH_SmashedStump_FleshTree.description>血肉树被摧毁后留下的糜烂残骸。</FH_SmashedStump_FleshTree.description>
   
   <!-- EN: flesh lamp -->
   <FH_FleshLamp.label>血肉灯</FH_FleshLamp.label>
@@ -62,9 +75,9 @@
   <FH_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_FleshLamp.description>
   
   <!-- EN: flesh parasite vat -->
-  <FH_FleshParasiteVat.label>TODO</FH_FleshParasiteVat.label>
-  <!-- EN: TODO -->
-  <FH_FleshParasiteVat.description>TODO</FH_FleshParasiteVat.description>
+  <FH_FleshParasiteVat.label>血肉寄生仓</FH_FleshParasiteVat.label>
+  <!-- EN: A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily. -->
+  <FH_FleshParasiteVat.description>一个由尖锐的骨刺触手和血肉结块构成的血肉装置。该设备会将血肉兽的细胞逐渐吞噬，并逐步将这些细胞植入到宿主的身体中。这让血肉兽能在宿主体内独立存活，强化宿主，并主动攻击宿主的敌人。血肉兽的生存营养也要由宿主提供，所以宿主会更容易感到饥饿。</FH_FleshParasiteVat.description>
   
   <!-- EN: flesh primary nest -->
   <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>

@@ -7,6 +7,13 @@
   <FH_WorkGiver_FillFleshSack.gerund>TODO</FH_WorkGiver_FillFleshSack.gerund>
   <!-- EN: carry -->
   <FH_WorkGiver_FillFleshSack.verb>TODO</FH_WorkGiver_FillFleshSack.verb>
+
+  <!-- EN: infect harbinger tree -->
+  <FH_WorkGiver_InfectHarbingerTree.label>感染噩兆噬树</FH_WorkGiver_InfectHarbingerTree.label>
+  <!-- EN: infecting -->
+  <FH_WorkGiver_InfectHarbingerTree.gerund>感染中</FH_WorkGiver_InfectHarbingerTree.gerund>
+  <!-- EN: infect -->
+  <FH_WorkGiver_InfectHarbingerTree.verb>感染</FH_WorkGiver_InfectHarbingerTree.verb>
   
   <!-- EN: carrry pawn to parasite pod -->
   <FH_WorkGiver_PutPawnInParasitePod.label>TODO</FH_WorkGiver_PutPawnInParasitePod.label>

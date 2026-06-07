@@ -6,5 +6,8 @@
   
   <FH_Category_MediumFleshBeast.label>中型血肉兽</FH_Category_MediumFleshBeast.label>
   <FH_Category_MediumFleshBeast.description>通过融合发现后可生产的中型血肉兽。</FH_Category_MediumFleshBeast.description>
+
+  <FH_Category_FleshItems.label>血肉物品</FH_Category_FleshItems.label>
+  <FH_Category_FleshItems.description>由血肉巢穴生产的材料与血肉肢体。</FH_Category_FleshItems.description>
   
 </LanguageData>

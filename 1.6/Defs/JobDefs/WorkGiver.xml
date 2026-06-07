@@ -61,4 +61,19 @@
         </requiredCapacities>
     </WorkGiverDef>
 
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_InfectHarbingerTree</defName>
+        <label>infect harbinger tree</label>
+        <giverClass>FleshHive.WorkGiver_InfectHarbingerTree</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>infect</verb>
+        <gerund>infecting</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>22</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
 </Defs> 

@@ -128,6 +128,25 @@
   </FleshHive.FleshHiveBuildingDef>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshParasiteVat</defName>
+    <label>flesh parasite vat</label>
+    <description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</description>
+    <building>FH_FleshParasiteVat</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>300</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
     <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>

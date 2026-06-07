@@ -37,4 +37,10 @@
     <reportString>carrying TargetA to flesh sack.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_InfectHarbingerTree</defName>
+    <driverClass>FleshHive.JobDriver_InfectHarbingerTree</driverClass>
+    <reportString>infecting TargetA.</reportString>
+  </JobDef>
+
 </Defs> 

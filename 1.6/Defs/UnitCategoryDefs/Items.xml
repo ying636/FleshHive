@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HiveCreatureFramework.SpawnCategoryDef>
+    <defName>FH_Category_FleshItems</defName>
+    <label>flesh items</label>
+    <description>Materials and body parts produced by the flesh hive.</description>
+    <color>(0.75, 0.15, 0.15)</color>
+    <items>
+      <li>FH_Item_TwistedMeat</li>
+      <li>FH_Item_Bioferrite</li>
+      <li>FH_Item_NerveFlesh</li>
+      <li>FH_Item_Tentacle</li>
+      <li>FH_Item_FleshWhip</li>
+      <li>FH_Item_FleshmassStomach</li>
+      <li>FH_Item_FleshmassLung</li>
+    </items>
+  </HiveCreatureFramework.SpawnCategoryDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_TwistedMeat</defName>
+    <label>twisted meat</label>
+    <description>Pieces of twisted muscle and gristle, bloated with tumorous growths. These bizarre shreds of flesh must have come from a horrific creature.</description>
+    <thing>Meat_Twisted</thing>
+    <stackCountRange>10~10</stackCountRange>
+    <spawningDay>0.05~0.05</spawningDay>
+    <costs>
+      <FH_Resource_Nutrition>0.6</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_Bioferrite</defName>
+    <label>bioferrite</label>
+    <description>An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel.</description>
+    <thing>Bioferrite</thing>
+    <stackCountRange>7~7</stackCountRange>
+    <spawningDay>1~1</spawningDay>
+    <costs>
+      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_NerveFlesh</defName>
+    <label>nerve flesh</label>
+    <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
+    <thing>FH_NerveFlesh</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.166667~0.166667</spawningDay>
+    <costs>
+      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_Tentacle</defName>
+    <label>flesh tentacle</label>
+    <description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</description>
+    <thing>Tentacle</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <requirements>
+      <Bioferrite>15</Bioferrite>
+      <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirements>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshWhip</defName>
+    <label>flesh whip</label>
+    <description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</description>
+    <thing>FleshWhip</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <requirements>
+      <Bioferrite>15</Bioferrite>
+      <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirements>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshmassStomach</defName>
+    <label>fleshmass stomach</label>
+    <description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <thing>FleshmassStomach</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <requirements>
+      <Bioferrite>15</Bioferrite>
+      <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirements>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshmassLung</defName>
+    <label>fleshmass lung</label>
+    <description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <thing>FleshmassLung</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <requirements>
+      <Bioferrite>15</Bioferrite>
+      <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirements>
+  </HiveCreatureFramework.ItemDef>
+
+</Defs>
