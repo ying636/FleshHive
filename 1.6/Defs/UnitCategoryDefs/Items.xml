@@ -19,6 +19,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_TwistedMeat</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>twisted meat</label>
     <description>Pieces of twisted muscle and gristle, bloated with tumorous growths. These bizarre shreds of flesh must have come from a horrific creature.</description>
     <thing>Meat_Twisted</thing>
@@ -31,6 +32,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_Bioferrite</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>bioferrite</label>
     <description>An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel.</description>
     <thing>Bioferrite</thing>
@@ -43,6 +45,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_NerveFlesh</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>nerve flesh</label>
     <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
     <thing>FH_NerveFlesh</thing>
@@ -55,6 +58,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_Tentacle</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>flesh tentacle</label>
     <description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</description>
     <thing>Tentacle</thing>
@@ -68,6 +72,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_FleshWhip</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>flesh whip</label>
     <description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</description>
     <thing>FleshWhip</thing>
@@ -81,6 +86,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_FleshmassStomach</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>fleshmass stomach</label>
     <description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
     <thing>FleshmassStomach</thing>
@@ -94,6 +100,7 @@
 
   <HiveCreatureFramework.ItemDef>
     <defName>FH_Item_FleshmassLung</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>fleshmass lung</label>
     <description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
     <thing>FleshmassLung</thing>

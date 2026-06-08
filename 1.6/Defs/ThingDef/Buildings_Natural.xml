@@ -8,7 +8,7 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3.5,3)</drawSize>
+      <drawSize>(3.5,3.5)</drawSize>
     </graphicData>
     <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
@@ -323,13 +323,13 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2.5,3.5)</drawSize>
+      <drawSize>(3.5,2.5)</drawSize>
     </graphicData>
     <drawerType>RealtimeOnly</drawerType>
-    <size>(2,3)</size>
+    <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
-    <rotatable>false</rotatable>
+    <rotatable>true</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
       <li>FleshHive.ITab_Parasitism</li>
@@ -352,6 +352,15 @@
     <building>
 
     </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_BuildingOutline">
+        <graphicData>
+          <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Outline</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>(3.5,2.5)</drawSize>
+        </graphicData>
+      </li>
+    </comps>
   </ThingDef>
 
 
@@ -826,7 +835,7 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshColumn/FH_FleshColumn</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(0.5,1.25)</drawSize>
+      <drawSize>(1,1.5)</drawSize>
       <drawOffset>(0,0,0.2)</drawOffset>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
@@ -1105,6 +1114,7 @@
       <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
       <fertilityMin>0.5</fertilityMin>
       <fertilitySensitivity>0.5</fertilitySensitivity>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility>
       <wildClusterWeight>0</wildClusterWeight>
       <sowWork>400</sowWork>
       <harvestYield>15</harvestYield>
