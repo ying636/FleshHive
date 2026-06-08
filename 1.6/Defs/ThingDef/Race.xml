@@ -10,7 +10,7 @@
       </li>
     </comps>
     <race>
-      <thinkTreeMain>HCF_ThinkTree_Unit</thinkTreeMain>
+      <thinkTreeMain>FH_ThinkTree_FleshBeast</thinkTreeMain>
       <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
       <foodType>None</foodType>
       <needsRest>false</needsRest>
@@ -1207,6 +1207,7 @@
     <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Large</size>
       </li>
     </comps>
     <statBases>
@@ -1355,6 +1356,7 @@
     <description>TODO.</description>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Large</size>
       </li>
     </comps>
     <statBases>
@@ -1507,6 +1509,7 @@
     <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Large</size>
       </li>
     </comps>
     <statBases>
@@ -1656,6 +1659,10 @@
 
 
 </Defs>
+
+
+
+
 
 
 

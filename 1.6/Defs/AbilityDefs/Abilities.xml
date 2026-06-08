@@ -39,9 +39,8 @@
       <defaultCooldownTime>0.5</defaultCooldownTime>
     </verbProperties>
     <comps>
-      <li Class="CompProperties_AbilityGiveHediff">
+      <li Class="HiveCreatureFramework.CompPropertiesAbilityEffect_GiveHediff_Unit">
         <durationSecondsOverride>50</durationSecondsOverride>
-        <compClass>HiveCreatureFramework.CompAbilityEffect_GiveHediff_Unit</compClass>
         <hediffDef>FH_LostSpike_Paraspike</hediffDef>
         <onlyApplyToSelf>True</onlyApplyToSelf>
         <applyToSelf>True</applyToSelf>
@@ -85,6 +84,8 @@
     <defName>FH_Acidbulb_Launch</defName>
     <label>acid launch</label>
     <description>Launch acid.</description>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>1200</cooldownTicksRange>
     <verbProperties>
       <range>40</range>
@@ -188,6 +189,7 @@
     <label>骨刺射击</label>
     <description>发射一枚骨刺。</description>
     <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>240</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_AbilityShoot</verbClass>

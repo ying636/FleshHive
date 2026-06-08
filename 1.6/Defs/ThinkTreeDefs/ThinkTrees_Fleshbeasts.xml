@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>FH_ThinkTree_FleshBeast</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+          <subNodes>
+            <li Class="ThinkNode_QueuedJob">
+              <inBedOnly>true</inBedOnly>
+            </li>
+            <li Class="JobGiver_KeepLyingDown" />
+          </subNodes>
+        </li>
+
+        <li Class="ThinkNode_Subtree">
+          <treeDef>Downed</treeDef>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>BurningResponse</treeDef>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_Dormancy" />
+        <li Class="ThinkNode_Subtree">
+          <treeDef>MentalStateCritical</treeDef>
+        </li>
+
+        <li Class="ThinkNode_QueuedJob" />
+        <li Class="ThinkNode_Tagger">
+          <tagToGive>DraftedOrder</tagToGive>
+          <subNodes>
+            <li Class="JobGiver_MoveToStandable" />
+            <li Class="JobGiver_Orders" />
+          </subNodes>
+        </li>
+        <li Class="ThinkNode_Subtree">
+          <treeDef>MentalStateNonCritical</treeDef>
+        </li>
+
+        <li Class="ThinkNode_ConditionalForcedGoto">
+          <subNodes>
+            <li Class="ThinkNode_Tagger">
+              <tagToGive>Misc</tagToGive>
+              <subNodes>
+                <li Class="JobGiver_ForcedGoto" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <li Class="HiveCreatureFramework.JobGiver_EnterFuser" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
+        <li Class="FleshHive.ThinkNode_AssaultOverrideDutyAttack" />
+        <li Class="ThinkNode_Subtree">
+          <treeDef>HCF_ThinkTree_LordDuty</treeDef>
+        </li>
+        <li Class="ThinkNode_SubtreesByTag">
+          <insertTag>Animal_PreMain</insertTag>
+        </li>
+
+        <li Class="JobGiver_LayEgg" />
+
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="HiveCreatureFramework.JobGiver_GetMaintenance" />
+          </subNodes>
+        </li>
+
+        <li Class="ThinkNode_ConditionalHasFaction">
+          <subNodes>
+            <li Class="ThinkNode_ChancePerHour_Nuzzle">
+              <subNodes>
+                <li Class="ThinkNode_Tagger">
+                  <tagToGive>Misc</tagToGive>
+                  <subNodes>
+                    <li Class="JobGiver_Nuzzle" />
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+
+            <li Class="ThinkNode_ChancePerDay_Roam">
+              <subNodes>
+                <li Class="ThinkNode_Tagger">
+                  <tagToGive>Misc</tagToGive>
+                  <subNodes>
+                    <li Class="JobGiver_StartRoaming" />
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+
+            <li Class="ThinkNode_ChancePerHour_Constant">
+              <mtbHours>1.5</mtbHours>
+              <subNodes>
+                <li Class="ThinkNode_ConditionalRequireCapacities">
+                  <requiredCapacities>
+                    <li>Manipulation</li>
+                  </requiredCapacities>
+                  <subNodes>
+                    <li Class="ThinkNode_ConditionalTrainableCompleted">
+                      <trainable>Haul</trainable>
+                      <subNodes>
+                        <li Class="ThinkNode_Tagger">
+                          <tagToGive>TrainedAnimalBehavior</tagToGive>
+                          <subNodes>
+                            <li Class="JobGiver_Haul" />
+                          </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+
+            <li Class="ThinkNode_ConditionalTrainableCompleted" MayRequire="Ludeon.RimWorld.Odyssey">
+              <trainable>Forage</trainable>
+              <subNodes>
+                <li Class="ThinkNode_ChancePerHour_Forage">
+                  <subNodes>
+                    <li Class="ThinkNode_ConditionalAnimalShouldForage">
+                      <subNodes>
+                        <li Class="JobGiver_Forage" />
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+
+            <li Class="ThinkNode_ConditionalTrainableCompleted" MayRequire="Ludeon.RimWorld.Odyssey">
+              <trainable>Dig</trainable>
+              <subNodes>
+                <li Class="ThinkNode_ConditionalAnimalShouldDig">
+                  <subNodes>
+                    <li Class="JobGiver_Mine" />
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+
+        <li Class="ThinkNode_SubtreesByTag">
+          <insertTag>Animal_PreWander</insertTag>
+        </li>
+
+        <li Class="ThinkNode_Tagger">
+          <tagToGive>Idle</tagToGive>
+          <subNodes>
+            <li Class="ThinkNode_ConditionalHerdAnimal">
+              <subNodes>
+                <li Class="JobGiver_WanderHerd">
+                  <maxDanger>Deadly</maxDanger>
+                  <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+                </li>
+              </subNodes>
+            </li>
+
+            <li Class="JobGiver_WanderAnywhere">
+              <maxDanger>Deadly</maxDanger>
+              <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+            </li>
+          </subNodes>
+        </li>
+
+        <li Class="JobGiver_IdleError" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

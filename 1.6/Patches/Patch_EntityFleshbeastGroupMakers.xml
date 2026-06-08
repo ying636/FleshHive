@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="Fleshbeasts"]/options</xpath>
+    <value>
+      <FH_Fingerspike>10</FH_Fingerspike>
+      <FH_Puffspike>10</FH_Puffspike>
+      <FH_Whipspike>10</FH_Whipspike>
+      <FH_Gutspike>10</FH_Gutspike>
+      <FH_Paraspike>10</FH_Paraspike>
+      <FH_Toughspike>5</FH_Toughspike>
+      <FH_Shieldspike>5</FH_Shieldspike>
+      <FH_Trispike>5</FH_Trispike>
+      <FH_Shatterspike>5</FH_Shatterspike>
+      <FH_Fleshwind>5</FH_Fleshwind>
+      <FH_Bulbfreak>1</FH_Bulbfreak>
+      <FH_Acidbulb>1</FH_Acidbulb>
+      <FH_Spitbulb>1</FH_Spitbulb>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName="Entities"]/pawnGroupMakers/li[kindDef="FleshbeastsWithDreadmeld"]/options</xpath>
+    <value>
+      <FH_Fingerspike>10</FH_Fingerspike>
+      <FH_Puffspike>10</FH_Puffspike>
+      <FH_Whipspike>10</FH_Whipspike>
+      <FH_Gutspike>10</FH_Gutspike>
+      <FH_Paraspike>10</FH_Paraspike>
+      <FH_Toughspike>5</FH_Toughspike>
+      <FH_Shieldspike>5</FH_Shieldspike>
+      <FH_Trispike>5</FH_Trispike>
+      <FH_Shatterspike>5</FH_Shatterspike>
+      <FH_Fleshwind>5</FH_Fleshwind>
+      <FH_Bulbfreak>3</FH_Bulbfreak>
+      <FH_Acidbulb>3</FH_Acidbulb>
+      <FH_Spitbulb>3</FH_Spitbulb>
+    </value>
+  </Operation>
+</Patch>

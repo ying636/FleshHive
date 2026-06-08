@@ -72,6 +72,7 @@
         <damageThreshold>200</damageThreshold>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
       </li>
       <li Class="FleshHive.CompProperties_FH_UnifyAura" />
       <li Class="FleshHive.CompProperties_TwistedFlesh">
@@ -225,6 +226,7 @@
         <damageThreshold>200</damageThreshold>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
       </li>
       <li Class="FleshHive.CompProperties_ScarletField" />
       <li Class="FleshHive.CompProperties_TwistedFlesh">
@@ -384,6 +386,7 @@
         <damageThreshold>200</damageThreshold>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
       </li>
     </comps>
     <tools>
@@ -517,6 +520,7 @@
         <damageThreshold>150</damageThreshold>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
       </li>
     </comps>
     <tools>
@@ -653,6 +657,7 @@
         <damageThreshold>300</damageThreshold>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
       </li>
     </comps>
     <tools>
@@ -820,6 +825,7 @@
         <damageThreshold>250</damageThreshold>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
       </li>
     </comps>
     <tools>
