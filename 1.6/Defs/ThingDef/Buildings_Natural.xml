@@ -289,7 +289,7 @@
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
-      </li> 
+      </li>
       <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
         <category>LittleFlesh</category>
@@ -579,6 +579,7 @@
     <graphicData>
       <texPath>FH_FleshBox/FH_FleshBox</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.1,1.1)</drawSize>
     </graphicData>
     <uiIconPath>FH_FleshBox/FH_FleshBox</uiIconPath>
     <uiIconScale>0.9</uiIconScale>
@@ -1060,7 +1061,7 @@
     <rotatable>false</rotatable>
     <comps>
       <li Class="CompProperties_Glower">
-        <glowRadius>10</glowRadius>
+        <glowRadius>20</glowRadius>
         <glowColor>(0.4,0.8,0.3,0)</glowColor>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
@@ -1070,7 +1071,7 @@
         <initialErosionCount>0</initialErosionCount>
       </li>
       <li Class="FleshHive.CompProperties_HiveNutritionProducer">
-        <nutritionPerDay>0.1</nutritionPerDay>
+        <nutritionPerInterval>0.1</nutritionPerInterval>
         <intervalTicks>2500</intervalTicks>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">

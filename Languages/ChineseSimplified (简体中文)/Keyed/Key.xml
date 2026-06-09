@@ -108,6 +108,8 @@
   <FH_InfectHarbingerTreeDesc>标记这棵噩兆噬树，使用扭曲肉将其感染并转化为血肉树。</FH_InfectHarbingerTreeDesc>
   <!-- EN: Terraform nutrition: {0} ({1}) -->
   <FH_FleshTree_TerraformNutrition>地形转化营养：{0}（{1}）</FH_FleshTree_TerraformNutrition>
+  <!-- EN: Every {0}: {1} nutrition -->
+  <FH_HiveNutritionProducer_Value>每{0}产生{1}营养</FH_HiveNutritionProducer_Value>
   <!-- EN: Trait -->
   <FH_Spawner_Trait>特性</FH_Spawner_Trait>
   <!-- EN: None -->

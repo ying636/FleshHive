@@ -58,6 +58,7 @@
   <FH_InfectHarbingerTree>Infect harbinger tree</FH_InfectHarbingerTree>
   <FH_InfectHarbingerTreeDesc>Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree.</FH_InfectHarbingerTreeDesc>
   <FH_FleshTree_TerraformNutrition>Terraform nutrition: {0} ({1})</FH_FleshTree_TerraformNutrition>
+  <FH_HiveNutritionProducer_Value>Every {0}: {1} nutrition</FH_HiveNutritionProducer_Value>
   <FH_Spawner_Trait>Trait</FH_Spawner_Trait>
   <FH_Spawner_TraitNone>None</FH_Spawner_TraitNone>
 
