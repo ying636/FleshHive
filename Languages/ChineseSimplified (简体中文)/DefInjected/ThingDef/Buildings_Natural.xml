@@ -78,6 +78,26 @@
   <FH_FleshParasiteVat.label>血肉寄生仓</FH_FleshParasiteVat.label>
   <!-- EN: A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily. -->
   <FH_FleshParasiteVat.description>一个由尖锐的骨刺触手和血肉结块构成的血肉装置。该设备会将血肉兽的细胞逐渐吞噬，并逐步将这些细胞植入到宿主的身体中。这让血肉兽能在宿主体内独立存活，强化宿主，并主动攻击宿主的敌人。血肉兽的生存营养也要由宿主提供，所以宿主会更容易感到饥饿。</FH_FleshParasiteVat.description>
+
+  <!-- EN: bone spitter -->
+  <FH_FleshTurret.label>骨刺喷吐器</FH_FleshTurret.label>
+  <!-- EN: A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes. -->
+  <FH_FleshTurret.description>一种小型、短程的防御性血肉块器官。长期使用后需要大量的营养来生产备用骨刺。</FH_FleshTurret.description>
+
+  <!-- EN: fleshmass spitter -->
+  <FH_FleshmassSpitter.label>血肉喷吐器</FH_FleshmassSpitter.label>
+  <!-- EN: A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass. -->
+  <FH_FleshmassSpitter.description>可远距离喷吐酸性涎液的防御性血肉块器官。这种酸性涎液是从周围生物质中过滤出的天然有毒副产物。</FH_FleshmassSpitter.description>
+
+  <!-- EN: flesh burster -->
+  <FH_FleshSpreader.label>血肉爆炸器</FH_FleshSpreader.label>
+  <!-- EN: A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm. -->
+  <FH_FleshSpreader.description>由大量高压囊泡和脆弱外壁组成的血肉器官。被生物触发或子弹击中后会引发爆炸并在附近地面生成血肉板块。由于它隐藏在周围的地形中，因此不能与其他陷阱相邻。动物可以在非狂暴状态下感知陷阱。</FH_FleshSpreader.description>
+  
+  <!-- EN: guard tentacle nexus -->
+  <FH_FleshDigester.label>警卫触手中枢</FH_FleshDigester.label>
+  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
+  <FH_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。这些被活化的板块也会像血肉树一样吞噬尸体和肉类，补充巢穴营养。</FH_FleshDigester.description>
   
   <!-- EN: flesh primary nest -->
   <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>

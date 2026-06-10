@@ -59,7 +59,13 @@
   <FH_InfectHarbingerTreeDesc>Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree.</FH_InfectHarbingerTreeDesc>
   <FH_FleshTree_TerraformNutrition>Terraform nutrition: {0} ({1})</FH_FleshTree_TerraformNutrition>
   <FH_HiveNutritionProducer_Value>Every {0}: {1} nutrition</FH_HiveNutritionProducer_Value>
+  <FH_HiveNutritionRefuelable_NutritionPerFuel>Automatically consumes {0} hive nutrition per replacement shot.</FH_HiveNutritionRefuelable_NutritionPerFuel>
   <FH_Spawner_Trait>Trait</FH_Spawner_Trait>
   <FH_Spawner_TraitNone>None</FH_Spawner_TraitNone>
+  <FH_FleshDigester_NutritionUpkeep>Daily nutrition upkeep: {0}</FH_FleshDigester_NutritionUpkeep>
+  <FH_FleshDigester_AttackRadius>Attack radius: {0}</FH_FleshDigester_AttackRadius>
+  <FH_FleshDigester_ConsumeRadius>Consume radius: {0}</FH_FleshDigester_ConsumeRadius>
+  <FH_FleshDigester_Status_Active>Status: Active</FH_FleshDigester_Status_Active>
+  <FH_FleshDigester_Status_Inactive>Status: Inactive (insufficient nutrition)</FH_FleshDigester_Status_Inactive>
 
 </LanguageData>

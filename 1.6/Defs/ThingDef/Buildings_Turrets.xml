@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Bullet_FleshTurret</defName>
+    <label>bone spike</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <thingClass>Bullet</thingClass>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_FleshTurret</defName>
+    <label>bone spitter</label>
+    <description>A simple bone-spitting organ grown to act as a turret weapon.</description>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTurret/FH_FleshTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>-3</Beauty>
+      <SellPriceFactor>0.2</SellPriceFactor>
+      <AccuracyTouch>0.77</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <Mass>5</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>FH_Bullet_FleshTurret</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>28.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTurret</defName>
+    <label>bone spitter</label>
+    <description>A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTurret/FH_FleshTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshTurret/FH_FleshTurret_image</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>50</pathCost>
+    <passability>PassThroughOnly</passability>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>Fleshmass_Damaged</soundImpactDefault>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>8</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <building>
+      <combatPower>45</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>FH_Gun_FleshTurret</turretGunDef>
+      <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="FleshHive.CompProperties_HiveNutritionRefuelable">
+        <fuelLabel>replacement bone spikes</fuelLabel>
+        <fuelGizmoLabel>bone spike reserves</fuelGizmoLabel>
+        <fuelCapacity>60</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</fuelIconPath>
+        <nutritionPerFuel>0.1</nutritionPerFuel>
+      </li>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs>
+          <li>Stun</li>
+          <li>EMP</li>
+        </affectedDamageDefs>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshmassSpitter</defName>
+    <label>fleshmass spitter</label>
+    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Indexed_SquashNStretch</graphicClass>
+      <texPath>Things/Building/Fleshmass/FleshmassSpitter</texPath>
+      <drawSize>(2.5, 2.5)</drawSize>
+      <drawOffset>(0, 0.02, 0)</drawOffset>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+      <damageData>
+        <rect>(0.3, 0.3, 1.4, 1.4)</rect>
+        <scratches>
+          <li>Damage/FleshScratch1</li>
+          <li>Damage/FleshScratch2</li>
+          <li>Damage/FleshScratch3</li>
+        </scratches>
+      </damageData>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.75</fillPercent>
+    <pathCost>42</pathCost>
+    <passability>Impassable</passability>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <soundImpactDefault>Fleshmass_Damaged</soundImpactDefault>
+    <soundSpawned>SpitterSpawn</soundSpawned>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+      <quickTargetable>true</quickTargetable>
+      <isTargetable>true</isTargetable>
+      <destroyEffecter>FleshmassDestroyed</destroyEffecter>
+    </building>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>4</warmupTime>
+        <forcedMissRadius>3</forcedMissRadius>
+        <defaultProjectile>Bullet_Shell_AcidSpit</defaultProjectile>
+        <isMortar>true</isMortar>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>6.9</minRange>
+        <range>41.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>SpitterSpit</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li>
+        <compClass>CompFleshmassSpitter</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshSpreader</defName>
+    <label>flesh burster</label>
+    <description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</description>
+    <thingClass>Building_TrapExplosive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshSpreader/FH_FleshSpreader</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <drawerType>MapMeshOnly</drawerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <fillPercent>0.2</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <specialDisplayRadius>3.9</specialDisplayRadius>
+    <soundImpactDefault>Fleshmass_Damaged</soundImpactDefault>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>1400</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-4</Beauty>
+      <TrapSpringChance>1</TrapSpringChance>
+      <Mass>2</Mass>
+    </statBases>
+    <building>
+      <isTrap>true</isTrap>
+      <trapPeacefulWildAnimalsSpringChanceFactor>0.25</trapPeacefulWildAnimalsSpringChanceFactor>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>3.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpreadOnDetonation">
+        <radius>3.9</radius>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshDigester</defName>
+    <label>flesh digester</label>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshDigester/FH_FleshDigester</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5,2.5)</drawSize>
+      <damageData>
+        <rect>(0.2,0.15,1.6,1.6)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshDigester/FH_FleshDigester_Icon</uiIconPath>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.7</fillPercent>
+    <pathCost>42</pathCost>
+    <passability>Impassable</passability>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <soundImpactDefault>Fleshmass_Damaged</soundImpactDefault>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+      <quickTargetable>true</quickTargetable>
+      <isTargetable>true</isTargetable>
+      <destroyEffecter>FleshmassDestroyed</destroyEffecter>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshDigester">
+        <attackDurationTicks>90</attackDurationTicks>
+        <attackDamageDef>Blunt</attackDamageDef>
+        <attackDamage>8</attackDamage>
+        <attackArmorPenetration>0</attackArmorPenetration>
+        <attackAngle>-1</attackAngle>
+      </li>
+      <li Class="FleshHive.CompProperties_BuildingOutline">
+        <graphicData>
+          <texPath>Things/Building/FH_FleshDigester/FH_FleshDigester_Outline</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(2.5,2.5)</drawSize>
+        </graphicData>
+      </li> 
+    </comps>
+  </ThingDef>
+
+</Defs>

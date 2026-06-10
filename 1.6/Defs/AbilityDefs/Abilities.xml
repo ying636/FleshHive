@@ -86,7 +86,7 @@
     <description>Launch acid.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>1200</cooldownTicksRange>
+    <cooldownTicksRange>120000</cooldownTicksRange>
     <verbProperties>
       <range>40</range>
       <defaultProjectile>FH_Bullet_Shell_AcidSpit</defaultProjectile>

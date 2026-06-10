@@ -147,6 +147,79 @@
   </FleshHive.FleshHiveBuildingDef>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshTurret</defName>
+    <label>bone spitter</label>
+    <description>A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes.</description>
+    <building>FH_FleshTurret</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>180</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshmassSpitter</defName>
+    <label>fleshmass spitter</label>
+    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.</description>
+    <building>FH_FleshmassSpitter</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>300</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshmassSpitterGhost" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>2</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshSpreader</defName>
+    <label>flesh burster</label>
+    <description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</description>
+    <building>FH_FleshSpreader</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>180</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDigester</defName>
+    <label>flesh digester</label>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
+    <building>FH_FleshDigester</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>520</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>80</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
     <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>

@@ -110,10 +110,22 @@
   <FH_FleshTree_TerraformNutrition>地形转化营养：{0}（{1}）</FH_FleshTree_TerraformNutrition>
   <!-- EN: Every {0}: {1} nutrition -->
   <FH_HiveNutritionProducer_Value>每{0}产生{1}营养</FH_HiveNutritionProducer_Value>
+  <!-- EN: Automatically consumes {0} hive nutrition per replacement shot. -->
+  <FH_HiveNutritionRefuelable_NutritionPerFuel>每补充1发备用骨刺自动消耗{0}巢穴营养。</FH_HiveNutritionRefuelable_NutritionPerFuel>
   <!-- EN: Trait -->
   <FH_Spawner_Trait>特性</FH_Spawner_Trait>
   <!-- EN: None -->
   <FH_Spawner_TraitNone>无</FH_Spawner_TraitNone>
+  <!-- EN: Daily nutrition upkeep: {0} -->
+  <FH_FleshDigester_NutritionUpkeep>每日消耗巢穴营养：{0}</FH_FleshDigester_NutritionUpkeep>
+  <!-- EN: Attack radius: {0} -->
+  <FH_FleshDigester_AttackRadius>攻击范围：{0}</FH_FleshDigester_AttackRadius>
+  <!-- EN: Consume radius: {0} -->
+  <FH_FleshDigester_ConsumeRadius>吞噬范围：{0}</FH_FleshDigester_ConsumeRadius>
+  <!-- EN: Status: Active -->
+  <FH_FleshDigester_Status_Active>状态：活跃</FH_FleshDigester_Status_Active>
+  <!-- EN: Status: Inactive (insufficient nutrition) -->
+  <FH_FleshDigester_Status_Inactive>状态：停用（营养不足）</FH_FleshDigester_Status_Inactive>
 
   <!-- UNUSED -->
   <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>

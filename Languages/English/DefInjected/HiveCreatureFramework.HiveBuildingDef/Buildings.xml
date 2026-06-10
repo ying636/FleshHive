@@ -3,5 +3,13 @@
 
   <FH_Building_FleshParasiteVat.label>flesh parasite vat</FH_Building_FleshParasiteVat.label>
   <FH_Building_FleshParasiteVat.description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</FH_Building_FleshParasiteVat.description>
+  <FH_Building_FleshTurret.label>bone spitter</FH_Building_FleshTurret.label>
+  <FH_Building_FleshTurret.description>A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes.</FH_Building_FleshTurret.description>
+  <FH_Building_FleshmassSpitter.label>fleshmass spitter</FH_Building_FleshmassSpitter.label>
+  <FH_Building_FleshmassSpitter.description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.</FH_Building_FleshmassSpitter.description>
+  <FH_Building_FleshSpreader.label>flesh burster</FH_Building_FleshSpreader.label>
+  <FH_Building_FleshSpreader.description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</FH_Building_FleshSpreader.description>
+  <FH_Building_FleshDigester.label>guard tentacle nexus</FH_Building_FleshDigester.label>
+  <FH_Building_FleshDigester.description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</FH_Building_FleshDigester.description>
 
 </LanguageData>
