@@ -220,6 +220,25 @@
   </FleshHive.FleshHiveBuildingDef>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDigesterS</defName>
+    <label>small flesh digester</label>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
+    <building>FH_FleshDigesterS</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>130</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>20</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
     <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>

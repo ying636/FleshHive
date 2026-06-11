@@ -275,15 +275,15 @@
     <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
     <thingClass>Building</thingClass>
     <graphicData>
-      <texPath>Things/Building/FH_FleshDigester/FH_FleshDigester</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/FH_FleshDigester/Main</texPath>
+      <graphicClass>Graphic_Indexed</graphicClass>
       <drawSize>(2.5,2.5)</drawSize>
       <damageData>
         <rect>(0.2,0.15,1.6,1.6)</rect>
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/FH_FleshDigester/FH_FleshDigester_Icon</uiIconPath>
-    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <size>(2,2)</size>
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
@@ -312,6 +312,7 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshDigester">
         <attackDurationTicks>90</attackDurationTicks>
+        <attackMouthOpenTicks>60</attackMouthOpenTicks>
         <maxAttackTargets>15</maxAttackTargets>
         <attackDamageDef>Bite</attackDamageDef>
         <attackDamage>8</attackDamage>
@@ -323,6 +324,67 @@
           <texPath>Things/Building/FH_FleshDigester/FH_FleshDigester_Outline</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <drawSize>(2.5,2.5)</drawSize>
+        </graphicData>
+      </li> 
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshDigesterS</defName>
+    <label>small flesh digester</label>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshDigester/Small</texPath>
+      <graphicClass>Graphic_Indexed</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,0.8,0.8)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshDigester/FH_FleshDigesterS_Icon</uiIconPath>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.7</fillPercent>
+    <pathCost>42</pathCost>
+    <passability>Impassable</passability>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <soundImpactDefault>Fleshmass_Damaged</soundImpactDefault>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+      <quickTargetable>true</quickTargetable>
+      <isTargetable>true</isTargetable>
+      <destroyEffecter>FleshmassDestroyed</destroyEffecter>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshDigester">
+        <attackDurationTicks>90</attackDurationTicks>
+        <attackMouthOpenTicks>60</attackMouthOpenTicks>
+        <maxAttackTargets>1</maxAttackTargets>
+        <attackDamageDef>Bite</attackDamageDef>
+        <attackDamage>6</attackDamage>
+        <attackArmorPenetration>0</attackArmorPenetration>
+        <attackAngle>-1</attackAngle>
+        <upkeepNutritionCost>0.5</upkeepNutritionCost>
+      </li>
+      <li Class="FleshHive.CompProperties_BuildingOutline">
+        <graphicData>
+          <texPath>Things/Building/FH_FleshDigester/FH_FleshDigesterS_Outline</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(1.5,1.5)</drawSize>
         </graphicData>
       </li> 
     </comps>

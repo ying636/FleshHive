@@ -7,7 +7,7 @@
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
-      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(3.5,3.5)</drawSize>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
@@ -16,6 +16,7 @@
     <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
@@ -143,7 +144,7 @@
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</texPath>
-      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>3.5</drawSize>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
@@ -153,6 +154,7 @@
     <uiIconPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</uiIconPath>
     <uiIconScale>0.58</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
@@ -385,6 +387,7 @@
     </graphicData>
     <size>(2,2)</size>
     <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <statBases>
@@ -549,7 +552,7 @@
     <thingClass>FleshHive.Building_FleshHopper</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHopper/FH_FleshHopper</texPath>
-      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
@@ -557,7 +560,7 @@
     <uiIconPath>Things/Building/FH_FleshHopper/FH_FleshHopper</uiIconPath>
     <uiIconScale>0.9</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
-    <drawerType>MapMeshOnly</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <fillPercent>0.5</fillPercent>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -590,7 +593,7 @@
     <thingClass>FleshHive.Building_FleshBox</thingClass>
     <graphicData>
       <texPath>FH_FleshBox/FH_FleshBox</texPath>
-      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(1.1,1.1)</drawSize>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
@@ -599,7 +602,7 @@
     <uiIconPath>FH_FleshBox/FH_FleshBox</uiIconPath>
     <uiIconScale>0.9</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
-    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <fillPercent>0.5</fillPercent>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -850,7 +853,7 @@
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshColumn/FH_FleshColumn</texPath>
-      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(1,1.5)</drawSize>
       <drawOffset>(0,0,0.2)</drawOffset>
       <shaderType>BuildingSquashNStretch</shaderType>
@@ -858,7 +861,7 @@
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
-    <drawerType>MapMeshOnly</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <fillPercent>0.25</fillPercent>
     <holdsRoof>true</holdsRoof>
     <passability>PassThroughOnly</passability>
@@ -1072,6 +1075,7 @@
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
     <pathCost>0</pathCost>
