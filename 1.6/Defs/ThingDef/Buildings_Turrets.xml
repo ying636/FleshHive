@@ -312,7 +312,8 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshDigester">
         <attackDurationTicks>90</attackDurationTicks>
-        <attackDamageDef>Blunt</attackDamageDef>
+        <maxAttackTargets>15</maxAttackTargets>
+        <attackDamageDef>Bite</attackDamageDef>
         <attackDamage>8</attackDamage>
         <attackArmorPenetration>0</attackArmorPenetration>
         <attackAngle>-1</attackAngle>

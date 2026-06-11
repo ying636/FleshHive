@@ -7,8 +7,11 @@
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
       <drawSize>(3.5,3.5)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
@@ -140,8 +143,11 @@
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
       <drawSize>3.5</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(3,3)</size>
     <uiIconPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</uiIconPath>
@@ -371,8 +377,11 @@
     <thingClass>FleshHive.FleshSack</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshSack</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
+      <graphicClass>FleshHive.Graphic_Random_SquashNStretch</graphicClass>
       <drawSize>2.5</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(2,2)</size>
     <altitudeLayer>Building</altitudeLayer>
@@ -540,7 +549,10 @@
     <thingClass>FleshHive.Building_FleshHopper</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHopper/FH_FleshHopper</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <uiIconPath>Things/Building/FH_FleshHopper/FH_FleshHopper</uiIconPath>
     <uiIconScale>0.9</uiIconScale>
@@ -578,8 +590,11 @@
     <thingClass>FleshHive.Building_FleshBox</thingClass>
     <graphicData>
       <texPath>FH_FleshBox/FH_FleshBox</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
       <drawSize>(1.1,1.1)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <uiIconPath>FH_FleshBox/FH_FleshBox</uiIconPath>
     <uiIconScale>0.9</uiIconScale>
@@ -835,9 +850,12 @@
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshColumn/FH_FleshColumn</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Single_SquashNStretch</graphicClass>
       <drawSize>(1,1.5)</drawSize>
       <drawOffset>(0,0,0.2)</drawOffset>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>MapMeshOnly</drawerType>
@@ -1047,8 +1065,11 @@
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshbulb/Variants</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
+      <graphicClass>FleshHive.Graphic_Random_SquashNStretch</graphicClass>
       <drawSize>0.9</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <tickerType>Normal</tickerType>
