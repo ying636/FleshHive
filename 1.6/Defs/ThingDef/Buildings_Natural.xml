@@ -9,6 +9,7 @@
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
       <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(3.5,3.5)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
@@ -368,6 +369,9 @@
           <drawSize>(3.5,2.5)</drawSize>
         </graphicData>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshParasiteVat</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -408,6 +412,9 @@
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(2,2)</size>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshSack</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -433,6 +440,7 @@
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
+    <holdsRoof>true</holdsRoof>
     <statBases>
       <MaxHitPoints>160</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -447,6 +455,11 @@
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBlock</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -470,6 +483,7 @@
     <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
+    <holdsRoof>true</holdsRoof>
     <statBases>
       <MaxHitPoints>320</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -484,6 +498,11 @@
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_ChitinFleshBlock</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -536,6 +555,12 @@
       <li Class="CompProperties_Forbiddable">
         <allowNonPlayer>true</allowNonPlayer>
       </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(1,1)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshDoor</building>
+      </li>
     </comps>
     <replaceTags>
       <li>Door</li>
@@ -582,6 +607,9 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(1,1)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshHopper</building>
       </li>
     </comps>
   </ThingDef>
@@ -645,14 +673,13 @@
       <defaultStorageSettings>
         <priority>Important</priority>
         <filter>
+          <thingDefs>
+            <li>Bioferrite</li>
+            <li>FH_NerveFlesh</li>
+            <li>Shard</li>
+          </thingDefs>
           <categories>
-            <li>Foods</li>
-            <li>Manufactured</li>
-            <li>ResourcesRaw</li>
-            <li>Items</li>
-            <li>Weapons</li>
-            <li>Apparel</li>
-            <li>BodyParts</li>
+            <li>MeatRaw</li>
           </categories>
         </filter>
       </defaultStorageSettings>
@@ -660,8 +687,8 @@
       <isInert>true</isInert>
     </building>
     <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(1,1)</size>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBox</building>
       </li>
     </comps>
   </ThingDef>
@@ -706,6 +733,11 @@
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBarricade</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -747,6 +779,11 @@
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_ChitinFleshBarricade</building>
+      </li>
+    </comps>
   </ThingDef>
 
 
@@ -794,6 +831,9 @@
       <li Class="CompProperties_AssignableToPawn">
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBed</building>
       </li>
     </comps>
   </ThingDef>
@@ -843,6 +883,9 @@
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshDoubleBed</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -882,6 +925,9 @@
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(1,1)</size>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshColumn</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -914,6 +960,11 @@
     <replaceTags>
       <li>Chair</li>
     </replaceTags>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshStool</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -950,6 +1001,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableSmall</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -986,6 +1042,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableSquare</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1022,6 +1083,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableLong</building>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1058,6 +1124,11 @@
     <replaceTags>
       <li>Table</li>
     </replaceTags>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableLarge</building>
+      </li>
+    </comps>
   </ThingDef>
 
 
@@ -1087,7 +1158,7 @@
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>20</glowRadius>
-        <glowColor>(0.4,0.8,0.3,0)</glowColor>
+        <glowColor>(204,51,38,0)</glowColor>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
         <intervalDays>3</intervalDays>
@@ -1101,6 +1172,9 @@
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(1,1)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshLamp</building>
       </li>
     </comps>
   </ThingDef>
@@ -1192,3 +1266,4 @@
   </ThingDef>
 
 </Defs>
+

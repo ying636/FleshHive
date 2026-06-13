@@ -23,6 +23,7 @@
     <description>An impassable lump of twisted flesh. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
     <building>FH_FleshBlock</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Walls</drawStyleCategory>
     <workAmount>150</workAmount>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
@@ -43,6 +44,7 @@
     <description>An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
     <building>FH_ChitinFleshBlock</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Walls</drawStyleCategory>
     <workAmount>150</workAmount>
     <researchPrerequisites>
       <li>FH_Research_BonePlatingFleshBlock</li>
@@ -81,6 +83,7 @@
     <description>A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
     <building>FH_FleshBarricade</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Defenses</drawStyleCategory>
     <workAmount>150</workAmount>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
@@ -192,9 +195,6 @@
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
     </placeWorkers>
-    <requirments>
-      <FH_NerveFlesh>1</FH_NerveFlesh>
-    </requirments>
     <resourcesCosts>
       <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
     </resourcesCosts>
@@ -244,6 +244,7 @@
     <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
     <building>FH_ChitinFleshBarricade</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Defenses</drawStyleCategory>
     <workAmount>150</workAmount>
     <researchPrerequisites>
       <li>FH_Research_BonePlatingFleshBlock</li>

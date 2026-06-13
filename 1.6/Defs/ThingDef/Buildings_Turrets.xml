@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <ThingDef ParentName="BaseBullet">
@@ -131,6 +131,9 @@
           <li>EMP</li>
         </affectedDamageDefs>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTurret</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -208,6 +211,9 @@
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(2,2)</size>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshmassSpitter</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -265,6 +271,9 @@
       </li>
       <li Class="FleshHive.CompProperties_FleshSpreadOnDetonation">
         <radius>3.9</radius>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshSpreader</building>
       </li>
     </comps>
   </ThingDef>
@@ -326,6 +335,9 @@
           <drawSize>(2.5,2.5)</drawSize>
         </graphicData>
       </li> 
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshDigester</building>
+      </li>
     </comps>
   </ThingDef>
 
@@ -387,7 +399,11 @@
           <drawSize>(1.5,1.5)</drawSize>
         </graphicData>
       </li> 
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshDigesterS</building>
+      </li>
     </comps>
   </ThingDef>
 
 </Defs>
+
