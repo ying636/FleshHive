@@ -592,10 +592,13 @@
     <castEdgeShadows>true</castEdgeShadows>
     <surfaceType>Item</surfaceType>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <tickerType>Rare</tickerType>
+    <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_Hive</li>
+    </inspectorTabs>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -605,6 +608,25 @@
       <isInert>true</isInert>
     </building>
     <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <transferOnEvolution>false</transferOnEvolution>
+        <resources>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
+        </resources>
+        <tags>
+          <li>Flesh</li>
+          <li>FleshHive</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompPropertiesHiveSpawner_FleshTrait">
+        <compClass>FleshHive.CompHiveSpawner_FleshTrait</compClass>
+        <UnitCategories>
+          <li>FH_Category_FleshItems</li>
+        </UnitCategories>
+      </li>
+      <li>
+        <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
+      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(1,1)</size>
       </li>
