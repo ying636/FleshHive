@@ -46,6 +46,7 @@
   <FleshHive_RaidParasiteChance>Raid parasite carrier chance: {0}</FleshHive_RaidParasiteChance>
   <HCF_Tag_Flesh>Flesh</HCF_Tag_Flesh>
   <HCF_Tag_FH_FleshContainer>Flesh hive container</HCF_Tag_FH_FleshContainer>
+  <FH_GroupReject_HivePopulationCapacity>Hive population limit reached.</FH_GroupReject_HivePopulationCapacity>
   <FH_FleshManagement_HivePopulation>Hive population: {0} / {1}</FH_FleshManagement_HivePopulation>
   <FH_FleshManagement_Nutrition>Nutrition</FH_FleshManagement_Nutrition>
   <FH_FleshManagement_FleshCount>Flesh count: {0}</FH_FleshManagement_FleshCount>

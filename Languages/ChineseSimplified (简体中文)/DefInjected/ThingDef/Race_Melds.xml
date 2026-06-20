@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+  <!-- EN: Beam Incinerator Cannon -->
+  <FH_Gun_BastionmeldTrackingLaser.label>焚灭脉冲炮</FH_Gun_BastionmeldTrackingLaser.label>
+  <!-- EN: A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close. -->
+  <FH_Gun_BastionmeldTrackingLaser.description>专为大范围杀伤而设计的追踪型热光束加农炮。需要锁定目标充能数秒，随后发射一道持续的炙热光束。光束末段会自行修正弹道，任何被扫到的单位都将严重灼伤，地面亦会燃起大火。必须不停移动才能逃脱。无法射击过近目标。</FH_Gun_BastionmeldTrackingLaser.description>
   
   <!-- EN: bastionmeld -->
   <FH_Bastionmeld.label>TODO</FH_Bastionmeld.label>

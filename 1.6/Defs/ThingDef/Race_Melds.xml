@@ -1,7 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <!-- 缁熷悎姣嶅吔 -->
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BastionmeldTrackingLaser</defName>
+    <label>Beam Incinerator Cannon</label>
+    <description>A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close.</description>
+    <graphicData>
+      <texPath>Things/Weapon/FH_HellsphereCannon/FH_HellsphereCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
+      <Mass>5</Mass>
+    </statBases>
+    <verbs>
+      <li Class="HiveCreatureFramework.VerbProperties_TrackingLaser">
+        <label>Beam Incinerator Cannon</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <category>Misc</category>
+        <range>24.9</range>
+        <warmupTime>3</warmupTime>
+        <defaultCooldownTime>3.6</defaultCooldownTime>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetFires>false</canTargetFires>
+          <canTargetItems>false</canTargetItems>
+        </targetParams>
+        <beamMoteDef>FH_Mote_BeamIncinerator_RedLine</beamMoteDef>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>HCF_Fleck_BeamBurn_White</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamLineFleckDef>HCF_Fleck_BeamSpark_White</beamLineFleckDef>
+        <beamStartOffset>0.2</beamStartOffset>
+        <beamEndEffecterDef>HCF_GraserBeam_End_White</beamEndEffecterDef>
+        <aimingTargetMote>FH_Missile_Target</aimingTargetMote>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+        <damageAmount>20</damageAmount>
+        <armorPenetration>0.5</armorPenetration>
+        <laserDurationTicks>600</laserDurationTicks>
+        <damageIntervalTicks>15</damageIntervalTicks>
+        <trackingSpeedPerSecond>4</trackingSpeedPerSecond>
+        <beamHitRadius>0.4</beamHitRadius>
+        <damagePawnsAlongBeam>true</damagePawnsAlongBeam>
+        <allowFriendlyFire>false</allowFriendlyFire>
+        <stopWhenTargetDowned>true</stopWhenTargetDowned>
+        <requireLineOfSight>true</requireLineOfSight>
+      </li>
+    </verbs>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+  </ThingDef>
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Nexusmeld</defName>
@@ -20,16 +87,10 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="DeathActionProperties_Divide">
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>5</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Toughspike</li>
-          <li>FH_Trispike</li>
-          <li>FH_Shieldspike</li>
-          <li>FH_Shatterspike</li>
-          <li>FH_Bulbfreak</li>
-        </dividePawnKindOptions>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -174,16 +235,10 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="DeathActionProperties_Divide">
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Toughspike</li>
-          <li>FH_Trispike</li>
-          <li>FH_Shieldspike</li>
-          <li>FH_Fingerspike</li>
-          <li>FH_Gutspike</li>
-        </dividePawnKindOptions>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -335,15 +390,10 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="DeathActionProperties_Divide">
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Shatterspike</li>
-          <li>FH_Paraspike</li>
-          <li>FH_Trispike</li>
-          <li>FH_Fingerspike</li>
-        </dividePawnKindOptions>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -387,6 +437,19 @@
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Giant</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompProperties_UnitTurret">
+        <turretDef>FH_Gun_BastionmeldTrackingLaser</turretDef>
+        <renderNodeProperties>
+          <li>
+            <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitTurret</nodeClass>
+            <workerClass>PawnRenderNodeWorker_TurretGun</workerClass>
+            <parentTagDef>Body</parentTagDef>
+            <overrideMeshSize>(1, 1)</overrideMeshSize>
+            <baseLayer>20</baseLayer>
+            <pawnType>Any</pawnType>
+          </li>
+        </renderNodeProperties>
       </li>
     </comps>
     <tools>
@@ -469,15 +532,10 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="DeathActionProperties_Divide">
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>4~6</divideBloodFilthCountRange>
-        <dividePawnCount>5</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Whipspike</li>
-          <li>FH_Gutspike</li>
-          <li>FH_Puffspike</li>
-        </dividePawnKindOptions>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -605,16 +663,10 @@
       <baseHealthScale>1.5</baseHealthScale>
       <lifeExpectancy>50</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving> 
-      <deathAction Class="DeathActionProperties_Divide">
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>4~6</divideBloodFilthCountRange>
-        <dividePawnCount>5</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Toughspike</li>
-          <li>FH_Trispike</li>
-          <li>FH_Shieldspike</li>
-          <li>FH_Puffspike</li>
-          <li>FH_Fingerspike</li>
-        </dividePawnKindOptions>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -773,16 +825,10 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="DeathActionProperties_Divide">
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>5</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Toughspike</li>
-          <li>FH_Trispike</li>
-          <li>FH_Shieldspike</li>
-          <li>FH_Shatterspike</li>
-          <li>FH_Bulbfreak</li>
-        </dividePawnKindOptions>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -867,3 +913,4 @@
   </ThingDef>
 
 </Defs>
+

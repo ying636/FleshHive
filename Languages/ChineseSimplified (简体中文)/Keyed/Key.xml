@@ -84,6 +84,8 @@
   <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
   <!-- EN: Flesh hive container -->
   <HCF_Tag_FH_FleshContainer>血肉巢穴容器</HCF_Tag_FH_FleshContainer>
+  <!-- EN: Hive population limit reached. -->
+  <FH_GroupReject_HivePopulationCapacity>巢穴人口已达上限。</FH_GroupReject_HivePopulationCapacity>
   <!-- EN: Hive population: {0} / {1} -->
   <FH_FleshManagement_HivePopulation>巢穴人口：{0} / {1}</FH_FleshManagement_HivePopulation>
   <!-- EN: Nutrition -->

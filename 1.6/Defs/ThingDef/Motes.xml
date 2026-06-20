@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>FH_Mote_BeamIncinerator_RedLine</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <category>Mote</category>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteBeam</shaderType>
+      <texPath>Things/Mote/TrackingLaser/FH_RedLineGlow</texPath>
+      <color>(1.0, 1.0, 1.0, 1.0)</color>
+      <shaderParameters>
+        <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+        <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+        <_ScrollSpeedA>-4</_ScrollSpeedA>
+        <_ScrollSpeedB>3</_ScrollSpeedB>
+        <_Intensity>2</_Intensity>
+      </shaderParameters>
+    </graphicData>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>true</needsMaintenance>
+      <rotateTowardsTarget>true</rotateTowardsTarget>
+      <scaleToConnectTargets>true</scaleToConnectTargets>
+      <fadeOutUnmaintained>true</fadeOutUnmaintained>
+    </mote>
+    <rotatable>false</rotatable>
+    <thingClass>MoteDualAttached</thingClass>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>FH_Missile_Target</defName>
+    <label>missile target</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <category>Mote</category>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <texPath>Things/Mote/Target/FH_Missile_Target</texPath>
+      <drawSize>3</drawSize>
+      <color>(1, 1, 1, 1)</color>
+    </graphicData>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.08</fadeInTime>
+      <solidTime>999999</solidTime>
+      <fadeOutTime>0.15</fadeOutTime>
+      <needsMaintenance>true</needsMaintenance>
+      <fadeOutUnmaintained>true</fadeOutUnmaintained>
+    </mote>
+    <rotatable>false</rotatable>
+    <thingClass>FleshHive.Mote_MissileTarget</thingClass>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+</Defs>
