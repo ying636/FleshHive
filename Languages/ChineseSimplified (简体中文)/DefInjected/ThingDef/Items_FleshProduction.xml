@@ -7,6 +7,21 @@
   <FH_FleshBerry.label>肉果</FH_FleshBerry.label>
   <FH_FleshBerry.description>一种从扭曲肉果丛上长出的红色肉质果实。可以生吃，但浓重的金属味会令人不适地久久残留。</FH_FleshBerry.description>
 
+  <FH_DreadmeldSeed.label>惊惧母兽结块</FH_DreadmeldSeed.label>
+  <FH_DreadmeldSeed.description>惊惧母兽内部的血肉核心，整体是由血肉构成的瘤块。像心脏一样不停跳动着。惊惧母兽结块能够用于培育你自己的血肉巢穴或者巨型血肉兽。</FH_DreadmeldSeed.description>
+
+  <FH_NexusmeldSeed.label>统合母兽结块</FH_NexusmeldSeed.label>
+  <FH_NexusmeldSeed.description>统合母兽内部的血肉核心，整体是由血肉构成的瘤块，上面生长着神经组织的绿色纹路。像心脏一样不停跳动着。统合母兽结块能够用于培育你自己的巨型血肉兽。</FH_NexusmeldSeed.description>
+
+  <FH_FuriousmeldSeed.label>暴怒母兽结块</FH_FuriousmeldSeed.label>
+  <FH_FuriousmeldSeed.description>暴怒母兽内部的血肉核心，整体是由血肉构成的瘤块，上面生长着一层红色的甲壳。像心脏一样不停跳动着。暴怒母兽结块能够用于培育你自己的巨型血肉兽。</FH_FuriousmeldSeed.description>
+
+  <FH_FissionmeldSeed.label>裂殖母兽结块</FH_FissionmeldSeed.label>
+  <FH_FissionmeldSeed.description>裂殖母兽内部的血肉核心，整体是由血肉构成的瘤块，上面生长着许多骨质尖刺。像心脏一样不停跳动着。裂殖母兽结块能够用于培育你自己的巨型血肉兽。</FH_FissionmeldSeed.description>
+
+  <FH_BastionmeldSeed.label>铁骸母兽结块</FH_BastionmeldSeed.label>
+  <FH_BastionmeldSeed.description>铁骸母兽内部的血肉核心，整体是由血肉构成的瘤块，上面覆盖着一些金属甲壳。像心脏一样不停跳动着。铁骸母兽结块能够用于培育你自己的巨型血肉兽。</FH_BastionmeldSeed.description>
+
   <Tentacle.label>血肉触手</Tentacle.label>
   <Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</Tentacle.description>
 

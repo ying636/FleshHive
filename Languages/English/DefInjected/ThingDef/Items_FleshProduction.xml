@@ -7,6 +7,21 @@
   <FH_FleshBerry.label>fleshberry</FH_FleshBerry.label>
   <FH_FleshBerry.description>A red, fleshy fruit grown from a twisted flesh bush. It is edible raw, but the dense metallic taste lingers unpleasantly.</FH_FleshBerry.description>
 
+  <FH_DreadmeldSeed.label>dreadmeld seed</FH_DreadmeldSeed.label>
+  <FH_DreadmeldSeed.description>The fleshy core of a dreadmeld. It is a tumor-like lump made entirely of flesh, beating endlessly like a heart. A dreadmeld seed can be used to cultivate your own flesh hive or giant fleshbeast.</FH_DreadmeldSeed.description>
+
+  <FH_NexusmeldSeed.label>nexusmeld seed</FH_NexusmeldSeed.label>
+  <FH_NexusmeldSeed.description>The fleshy core of a nexusmeld. It is a tumor-like lump made entirely of flesh, with green patterns of nerve tissue growing across it. It beats endlessly like a heart. A nexusmeld seed can be used to cultivate your own giant fleshbeast.</FH_NexusmeldSeed.description>
+
+  <FH_FuriousmeldSeed.label>furiousmeld seed</FH_FuriousmeldSeed.label>
+  <FH_FuriousmeldSeed.description>The fleshy core of a furiousmeld. It is a tumor-like lump made entirely of flesh, covered with a layer of red carapace. It beats endlessly like a heart. A furiousmeld seed can be used to cultivate your own giant fleshbeast.</FH_FuriousmeldSeed.description>
+
+  <FH_FissionmeldSeed.label>fissionmeld seed</FH_FissionmeldSeed.label>
+  <FH_FissionmeldSeed.description>The fleshy core of a fissionmeld. It is a tumor-like lump made entirely of flesh, with many bony spikes growing from it. It beats endlessly like a heart. A fissionmeld seed can be used to cultivate your own giant fleshbeast.</FH_FissionmeldSeed.description>
+
+  <FH_BastionmeldSeed.label>bastionmeld seed</FH_BastionmeldSeed.label>
+  <FH_BastionmeldSeed.description>The fleshy core of a bastionmeld. It is a tumor-like lump made entirely of flesh, covered with pieces of metallic carapace. It beats endlessly like a heart. A bastionmeld seed can be used to cultivate your own giant fleshbeast.</FH_BastionmeldSeed.description>
+
   <Tentacle.label>flesh tentacle</Tentacle.label>
   <Tentacle.description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</Tentacle.description>
 

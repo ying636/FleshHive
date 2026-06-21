@@ -1,8 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <!-- 缁熷悎姣嶅吔 -->
-
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>FH_Gun_BastionmeldTrackingLaser</defName>
     <label>Beam Incinerator Cannon</label>
@@ -75,7 +73,6 @@
       <li>TurretGun</li>
     </weaponTags>
   </ThingDef>
-
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Nexusmeld</defName>
     <label>nexusmeld</label>
@@ -93,10 +90,11 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_NexusmeldSeed</dropThing>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -189,7 +187,6 @@
       </li>
     </tools>
   </ThingDef>
-
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Nexusmeld</defName>
     <label>nexusmeld</label>
@@ -216,9 +213,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-
   <!-- 鏆存?掓瘝鍏?-->
-
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Furiousmeld</defName>
     <label>furiousmeld</label>
@@ -241,10 +236,11 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_FuriousmeldSeed</dropThing>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -346,7 +342,6 @@
       </li>
     </tools>
   </ThingDef>
-
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Furiousmeld</defName>
     <label>furiousmeld</label>
@@ -373,9 +368,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-
   <!-- 閾侀姣嶅吔 -->
-
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
@@ -396,10 +389,11 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_BastionmeldSeed</dropThing>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -501,7 +495,6 @@
       </li>
     </tools>
   </ThingDef>
-
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
@@ -524,9 +517,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-
   <!-- 瑁傛畺姣嶅吔 -->
-
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fissionmeld</defName>
     <label>fissionmeld</label>
@@ -544,10 +535,11 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
         <divideBloodFilthCountRange>4~6</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_FissionmeldSeed</dropThing>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -630,7 +622,6 @@
       </li>
     </tools>
   </ThingDef>
-
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Fissionmeld</defName>
     <label>fissionmeld</label>
@@ -652,10 +643,8 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-  </PawnKindDef> 
-
+  </PawnKindDef>
   <!-- 琛?鑲夋嘲鍧?-->
-
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fleshtitan</defName>
     <label>fleshtitan</label>
@@ -674,7 +663,7 @@
       <baseBodySize>5.0</baseBodySize>
       <baseHealthScale>1.5</baseHealthScale>
       <lifeExpectancy>50</lifeExpectancy>
-      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving> 
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>4~6</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
@@ -794,7 +783,6 @@
       </li>
     </tools>
   </ThingDef>
-
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Fleshtitan</defName>
     <label>fleshtitan</label>
@@ -817,9 +805,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-
   <!-- 鎯婃儳姣嶅吔 -->
-
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Dreadmeld</defName>
     <label>dreadmeld</label>
@@ -837,10 +823,11 @@
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_DreadmeldSeed</dropThing>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -923,6 +910,4 @@
       </li>
     </tools>
   </ThingDef>
-
 </Defs>
-

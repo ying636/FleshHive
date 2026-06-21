@@ -60,6 +60,116 @@
     </thingCategories>
   </ThingDef>
 
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_DreadmeldSeed</defName>
+    <label>dreadmeld seed</label>
+    <description>The fleshy core of a dreadmeld. It is a tumor-like lump made entirely of flesh, beating endlessly like a heart. A dreadmeld seed can be used to cultivate your own flesh hive or giant fleshbeast.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_DreadmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_NexusmeldSeed</defName>
+    <label>nexusmeld seed</label>
+    <description>The fleshy core of a nexusmeld. It is a tumor-like lump made entirely of flesh, with green patterns of nerve tissue growing across it. It beats endlessly like a heart. A nexusmeld seed can be used to cultivate your own giant fleshbeast.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_NexusmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_FuriousmeldSeed</defName>
+    <label>furiousmeld seed</label>
+    <description>The fleshy core of a furiousmeld. It is a tumor-like lump made entirely of flesh, covered with a layer of red carapace. It beats endlessly like a heart. A furiousmeld seed can be used to cultivate your own giant fleshbeast.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FuriousmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_FissionmeldSeed</defName>
+    <label>fissionmeld seed</label>
+    <description>The fleshy core of a fissionmeld. It is a tumor-like lump made entirely of flesh, with many bony spikes growing from it. It beats endlessly like a heart. A fissionmeld seed can be used to cultivate your own giant fleshbeast.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FissionmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_BastionmeldSeed</defName>
+    <label>bastionmeld seed</label>
+    <description>The fleshy core of a bastionmeld. It is a tumor-like lump made entirely of flesh, covered with pieces of metallic carapace. It beats endlessly like a heart. A bastionmeld seed can be used to cultivate your own giant fleshbeast.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_BastionmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
   <ThingDef ParentName="BodyPartBase">
     <defName>Tentacle</defName>
     <label>flesh tentacle</label>
