@@ -20,7 +20,7 @@
       <Mass>5</Mass>
     </statBases>
     <verbs>
-      <li Class="HiveCreatureFramework.VerbProperties_TrackingLaser">
+      <li Class="FleshHive.VerbProperties_BastionmeldTrackingLaser">
         <label>Beam Incinerator Cannon</label>
         <hasStandardCommand>true</hasStandardCommand>
         <category>Misc</category>
@@ -42,7 +42,13 @@
         <beamLineFleckDef>HCF_Fleck_BeamSpark_White</beamLineFleckDef>
         <beamStartOffset>0.2</beamStartOffset>
         <beamEndEffecterDef>HCF_GraserBeam_End_White</beamEndEffecterDef>
-        <aimingTargetMote>FH_Missile_Target</aimingTargetMote>
+        <persistentTargetMote>FH_Missile_Target</persistentTargetMote>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
         <beamLineFleckChanceCurve>
           <points>
             <li>(0, 0)</li>
