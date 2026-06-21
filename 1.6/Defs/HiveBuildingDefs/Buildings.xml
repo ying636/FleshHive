@@ -294,6 +294,22 @@
   </FleshHive.FleshHiveBuildingDef>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBush</defName>
+    <label>fleshberry bush</label>
+    <description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</description>
+    <building>FH_FleshBush</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>100</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshPlantBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshStool</defName>
     <label>flesh stool</label>
     <description>A simple stool made of flesh for people to sit on. It is unexpectedly comfortable. It can be used near dining tables, workbenches, or elsewhere.</description>

@@ -1267,6 +1267,72 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>
 
+  <ThingDef ParentName="PlantBase">
+    <defName>FH_FleshBush</defName>
+    <label>fleshberry bush</label>
+    <description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</description>
+    <thingClass>FleshHive.FleshBush</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <fillPercent>0.2</fillPercent>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutPlant</shaderType>
+      <texPath>Things/Plant/FH_FleshBush/FH_FleshBush</texPath>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+    </graphicData>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <pathCost>30</pathCost>
+    <plant>
+      <pollution>Any</pollution>
+      <fertilityMin>0</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility>
+      <soundHarvesting>Harvest_Standard</soundHarvesting>
+      <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+      <sowTags Inherit="False" />
+      <sowWork>170</sowWork>
+      <harvestWork>250</harvestWork>
+      <visualSizeRange>0.95~1.7</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <growDays>6</growDays>
+      <leaflessGraphicPath>Things/Plant/FH_FleshBush/FH_FleshBush</leaflessGraphicPath>
+      <immatureGraphicPath>Things/Plant/FH_FleshBush/FH_FleshBushImmature</immatureGraphicPath>
+      <harvestYield>10</harvestYield>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.3</harvestAfterGrowth>
+      <harvestedThingDef>FH_FleshBerry</harvestedThingDef>
+      <wildClusterRadius>5</wildClusterRadius>
+      <wildClusterWeight>250</wildClusterWeight>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <minGrowthTemperature>-9999</minGrowthTemperature>
+      <maxGrowthTemperature>9999</maxGrowthTemperature>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+    </plant>
+    <selectable>true</selectable>
+    <statBases>
+      <Flammability>0</Flammability>
+      <BeautyOutdoors>-2</BeautyOutdoors>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+    <comps>
+      <li Class="FleshHive.CompProperties_AdditionalHarvestYield">
+        <yields>
+          <Meat_Twisted>20</Meat_Twisted>
+        </yields>
+      </li>
+    </comps>
+  </ThingDef>
+
   <ThingDef ParentName="StumpChoppedBase">
     <defName>FH_ChoppedStump_FleshTree</defName>
     <label>chopped flesh tree stump</label>

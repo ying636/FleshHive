@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <FH_AteRawFleshberry.stages.0.label>ate raw fleshberries</FH_AteRawFleshberry.stages.0.label>
+  <FH_AteRawFleshberry.stages.0.description>The fleshberries were sweet, but eating them raw left a disturbing taste of living meat.</FH_AteRawFleshberry.stages.0.description>
+
+  <FH_AteCookedFleshberry.stages.0.label>ate cooked fleshberries</FH_AteCookedFleshberry.stages.0.label>
+  <FH_AteCookedFleshberry.stages.0.description>The fleshberries were cooked, but the meal still carried a faint fleshy aftertaste.</FH_AteCookedFleshberry.stages.0.description>
+
+</LanguageData>

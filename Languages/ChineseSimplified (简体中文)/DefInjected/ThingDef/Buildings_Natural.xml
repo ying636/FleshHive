@@ -60,6 +60,10 @@
   <FH_FleshTree.label>血肉树</FH_FleshTree.label>
   <!-- EN: A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself. -->
   <FH_FleshTree.description>一种完全由肉质构成的参天大树。将噩兆噬树用扭曲肉感染，即可使其变化为血肉树。以置放在它周围的尸体、生肉和头颅为食。与噩兆噬树不同的是，血肉树连接着血肉巢穴，它吸收的营养用于供给整个巢群使用，而非自我繁殖。</FH_FleshTree.description>
+  <!-- EN: fleshberry bush -->
+  <FH_FleshBush.label>肉果丛</FH_FleshBush.label>
+  <!-- EN: A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested. -->
+  <FH_FleshBush.description>一种长有少量棘刺的特殊肉团，仿佛某种灌木的扭曲复制品。其上会长出可以生吃的美味红色肉果，采集时也会收获大量扭曲肉。</FH_FleshBush.description>
   <!-- EN: chopped flesh tree stump -->
   <FH_ChoppedStump_FleshTree.label>被砍伐的血肉树桩</FH_ChoppedStump_FleshTree.label>
   <!-- EN: A stump left behind after a flesh tree has been felled. -->

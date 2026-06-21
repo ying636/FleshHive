@@ -23,6 +23,43 @@
     </thingCategories>
   </ThingDef>
 
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>FH_FleshBerry</defName>
+    <label>fleshberry</label>
+    <description>A red, fleshy fruit grown from a twisted flesh bush. It is edible raw, but the dense metallic taste lingers unpleasantly.</description>
+    <graphicData>
+      <texPath>Things/Plant/FH_FleshBush/FH_MeatBerries</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Mass>0.027</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.25</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <MarketValue>1.2</MarketValue>
+    </statBases>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought/>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>Meat</foodType>
+      <specialThoughtDirect>FH_AteRawFleshberry</specialThoughtDirect>
+      <specialThoughtAsIngredient>FH_AteCookedFleshberry</specialThoughtAsIngredient>
+    </ingestible>
+    <ingredient>
+      <mergeCompatibilityTags>
+        <li>Meat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
+    <thingCategories Inherit="False">
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
   <ThingDef ParentName="BodyPartBase">
     <defName>Tentacle</defName>
     <label>flesh tentacle</label>

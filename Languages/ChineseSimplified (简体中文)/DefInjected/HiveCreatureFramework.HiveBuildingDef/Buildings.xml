@@ -60,6 +60,11 @@
   <FH_Building_FleshColumn.label>血肉支撑柱</FH_Building_FleshColumn.label>
   <!-- EN: A column made of flesh, used to support roofs. It does not block sight or movement. -->
   <FH_Building_FleshColumn.description>一个由血肉构成用于支撑屋顶的柱子，不影响视野和移动。</FH_Building_FleshColumn.description>
+
+  <!-- EN: fleshberry bush -->
+  <FH_Building_FleshBush.label>肉果丛</FH_Building_FleshBush.label>
+  <!-- EN: A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested. -->
+  <FH_Building_FleshBush.description>一种长有少量棘刺的特殊肉团，仿佛某种灌木的扭曲复制品。其上会长出可以生吃的美味红色肉果，采集时也会收获大量扭曲肉。</FH_Building_FleshBush.description>
   
   <!-- EN: flesh door -->
   <FH_Building_FleshDoor.label>血肉门</FH_Building_FleshDoor.label>

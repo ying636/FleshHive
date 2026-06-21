@@ -4,6 +4,9 @@
   <FH_NerveFlesh.label>神经块</FH_NerveFlesh.label>
   <FH_NerveFlesh.description>血肉神经的必须部分。许多复杂的血肉结构需要神经块才能够完成制作。</FH_NerveFlesh.description>
 
+  <FH_FleshBerry.label>肉果</FH_FleshBerry.label>
+  <FH_FleshBerry.description>一种从扭曲肉果丛上长出的红色肉质果实。可以生吃，但浓重的金属味会令人不适地久久残留。</FH_FleshBerry.description>
+
   <Tentacle.label>血肉触手</Tentacle.label>
   <Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</Tentacle.description>
 

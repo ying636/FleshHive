@@ -4,6 +4,9 @@
   <FH_NerveFlesh.label>nerve flesh</FH_NerveFlesh.label>
   <FH_NerveFlesh.description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</FH_NerveFlesh.description>
 
+  <FH_FleshBerry.label>fleshberry</FH_FleshBerry.label>
+  <FH_FleshBerry.description>A red, fleshy fruit grown from a twisted flesh bush. It is edible raw, but the dense metallic taste lingers unpleasantly.</FH_FleshBerry.description>
+
   <Tentacle.label>flesh tentacle</Tentacle.label>
   <Tentacle.description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</Tentacle.description>
 

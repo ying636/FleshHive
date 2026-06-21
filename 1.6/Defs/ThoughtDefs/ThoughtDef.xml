@@ -12,4 +12,34 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>FH_AteRawFleshberry</defName>
+        <thoughtClass>Thought_FoodEaten</thoughtClass>
+        <durationDays>1</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <stages>
+            <li>
+                <label>ate raw fleshberries</label>
+                <description>The fleshberries were sweet, but eating them raw left a disturbing taste of living meat.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>FH_AteCookedFleshberry</defName>
+        <thoughtClass>Thought_FoodEaten</thoughtClass>
+        <durationDays>1</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <stages>
+            <li>
+                <label>ate cooked fleshberries</label>
+                <description>The fleshberries were cooked, but the meal still carried a faint fleshy aftertaste.</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>

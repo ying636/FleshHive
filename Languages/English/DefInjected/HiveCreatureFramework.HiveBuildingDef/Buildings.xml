@@ -11,5 +11,7 @@
   <FH_Building_FleshSpreader.description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</FH_Building_FleshSpreader.description>
   <FH_Building_FleshDigester.label>guard tentacle nexus</FH_Building_FleshDigester.label>
   <FH_Building_FleshDigester.description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</FH_Building_FleshDigester.description>
+  <FH_Building_FleshBush.label>fleshberry bush</FH_Building_FleshBush.label>
+  <FH_Building_FleshBush.description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</FH_Building_FleshBush.description>
 
 </LanguageData>

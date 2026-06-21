@@ -7,5 +7,15 @@
   <FH_Thought_FleshParasitism.stages.0.label>TODO</FH_Thought_FleshParasitism.stages.0.label>
   <!-- EN: 被寄生. -->
   <FH_Thought_FleshParasitism.stages.0.description>TODO</FH_Thought_FleshParasitism.stages.0.description>
+
+  <!-- EN: ate raw fleshberries -->
+  <FH_AteRawFleshberry.stages.0.label>生吃肉果</FH_AteRawFleshberry.stages.0.label>
+  <!-- EN: The fleshberries were sweet, but eating them raw left a disturbing taste of living meat. -->
+  <FH_AteRawFleshberry.stages.0.description>肉果确实带着甜味，但生吃后留下了一股令人不安的活肉味。</FH_AteRawFleshberry.stages.0.description>
+
+  <!-- EN: ate cooked fleshberries -->
+  <FH_AteCookedFleshberry.stages.0.label>吃了烹饪过的肉果</FH_AteCookedFleshberry.stages.0.label>
+  <!-- EN: The fleshberries were cooked, but the meal still carried a faint fleshy aftertaste. -->
+  <FH_AteCookedFleshberry.stages.0.description>肉果已经烹饪过了，但这顿饭里仍然残留着一丝肉质回味。</FH_AteCookedFleshberry.stages.0.description>
   
 </LanguageData>
