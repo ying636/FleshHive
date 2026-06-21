@@ -55,7 +55,7 @@
         <laserDurationTicks>600</laserDurationTicks>
         <damageIntervalTicks>15</damageIntervalTicks>
         <trackingSpeedPerSecond>4</trackingSpeedPerSecond>
-        <beamHitRadius>0.4</beamHitRadius>
+        <beamHitRadius>1.5</beamHitRadius>
         <damagePawnsAlongBeam>true</damagePawnsAlongBeam>
         <allowFriendlyFire>false</allowFriendlyFire>
         <stopWhenTargetDowned>true</stopWhenTargetDowned>
@@ -440,6 +440,7 @@
       </li>
       <li Class="HiveCreatureFramework.CompProperties_UnitTurret">
         <turretDef>FH_Gun_BastionmeldTrackingLaser</turretDef>
+        <angleOffset>-90</angleOffset>
         <renderNodeProperties>
           <li>
             <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitTurret</nodeClass>
@@ -448,6 +449,11 @@
             <overrideMeshSize>(1, 1)</overrideMeshSize>
             <baseLayer>20</baseLayer>
             <pawnType>Any</pawnType>
+            <drawData>
+              <dataWest>
+                <rotationOffset>180</rotationOffset>
+              </dataWest>
+            </drawData>
           </li>
         </renderNodeProperties>
       </li>
