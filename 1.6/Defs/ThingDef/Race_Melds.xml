@@ -59,7 +59,7 @@
         <damagePawnsAlongBeam>true</damagePawnsAlongBeam>
         <allowFriendlyFire>false</allowFriendlyFire>
         <stopWhenTargetDowned>true</stopWhenTargetDowned>
-        <requireLineOfSight>true</requireLineOfSight>
+        <requireLineOfSight>false</requireLineOfSight>
       </li>
     </verbs>
     <weaponClasses>
@@ -377,8 +377,8 @@
     <statBases>
       <MoveSpeed>3.2</MoveSpeed>
       <MinimumContainmentStrength>110</MinimumContainmentStrength>
-      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
