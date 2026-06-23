@@ -68,5 +68,6 @@
   <FH_FleshDigester_ConsumeRadius>Consume radius: {0}</FH_FleshDigester_ConsumeRadius>
   <FH_FleshDigester_Status_Active>Status: Active</FH_FleshDigester_Status_Active>
   <FH_FleshDigester_Status_Inactive>Status: Inactive (insufficient nutrition)</FH_FleshDigester_Status_Inactive>
+  <FH_FleshWeaponMount>Flesh weapon mount</FH_FleshWeaponMount>
 
 </LanguageData>

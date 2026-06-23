@@ -100,8 +100,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -179,8 +183,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -261,8 +269,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -352,9 +364,13 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
           <li>HCF_UnitWork_Build</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -445,8 +461,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -534,8 +554,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -678,8 +702,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -822,8 +850,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -978,8 +1010,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -1118,8 +1154,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -1253,8 +1293,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -1403,8 +1447,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -1557,8 +1605,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -1659,10 +1711,5 @@
 
 
 </Defs>
-
-
-
-
-
 
 

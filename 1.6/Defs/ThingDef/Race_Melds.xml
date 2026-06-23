@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 缁熷悎姣嶅吔 -->
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>FH_Gun_BastionmeldTrackingLaser</defName>
     <label>Beam Incinerator Cannon</label>
     <description>A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close.</description>
+    <destroyOnDrop>true</destroyOnDrop>
     <graphicData>
       <texPath>Things/Weapon/FH_HellsphereCannon/FH_HellsphereCannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <relicChance>0</relicChance>
     <statBases>
       <AccuracyTouch>1</AccuracyTouch>
       <AccuracyShort>1</AccuracyShort>
@@ -17,6 +19,7 @@
       <RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
       <Mass>5</Mass>
     </statBases>
+    <tradeability>None</tradeability>
     <verbs>
       <li Class="FleshHive.VerbProperties_BastionmeldTrackingLaser">
         <label>Beam Incinerator Cannon</label>
@@ -38,7 +41,21 @@
         <beamGroundFleckDef>HCF_Fleck_BeamBurn_White</beamGroundFleckDef>
         <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
         <beamLineFleckDef>HCF_Fleck_BeamSpark_White</beamLineFleckDef>
-        <beamStartOffset>0.2</beamStartOffset>
+        <beamStartOffset>0.5</beamStartOffset>
+        <startDrawData>
+          <dataNorth>
+            <offset>(-0.75, 0, 0.95)</offset>
+          </dataNorth>
+          <dataEast>
+            <offset>(-1.0, 0, 0.72)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(-0.75, 0, 0.65)</offset>
+          </dataSouth>
+          <dataWest>
+            <offset>(1.0, 0, 0.72)</offset>
+          </dataWest>
+        </startDrawData>
         <beamEndEffecterDef>HCF_GraserBeam_End_White</beamEndEffecterDef>
         <persistentTargetMote>FH_Missile_Target</persistentTargetMote>
         <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
@@ -56,8 +73,11 @@
         </beamLineFleckChanceCurve>
         <damageAmount>20</damageAmount>
         <armorPenetration>0.5</armorPenetration>
+        <buildingDamageMultiplier>3</buildingDamageMultiplier>
         <laserDurationTicks>600</laserDurationTicks>
         <damageIntervalTicks>15</damageIntervalTicks>
+        <fireChancePerDamageTick>0.6</fireChancePerDamageTick>
+        <fireSize>0.5</fireSize>
         <trackingSpeedPerSecond>4</trackingSpeedPerSecond>
         <beamHitRadius>1.5</beamHitRadius>
         <damagePawnsAlongBeam>true</damagePawnsAlongBeam>
@@ -70,8 +90,82 @@
       <li>Ranged</li>
     </weaponClasses>
     <weaponTags>
+      <li>FH_BastionmeldTrackingLaser</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BastionmeldChargeLance</defName>
+    <label>charge lance</label>
+    <description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <statBases>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
       <li>TurretGun</li>
     </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeLance</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>32.9</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BastionmeldInfernoCannon</defName>
+    <label>inferno cannon</label>
+    <description>An incendiary-shot mini-artillery device. It fires a large incendiary warhead.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>18</Mass>
+      <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>None</tradeability>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_InfernoCannon</defaultProjectile>
+        <forcedMissRadius>3.5</forcedMissRadius>
+        <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+        <warmupTime>1.25</warmupTime>
+        <range>26.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
   </ThingDef>
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Nexusmeld</defName>
@@ -117,8 +211,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -263,8 +361,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -372,20 +474,27 @@
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
-    <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids, which it controls through some form of supernatural energy. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld constructs defensive fortifications and wears down enemies through sustained long-range combat.</description>
+    <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld usually constructs defensive fortifications and wears enemies down through sustained long-range combat.</description>
     <statBases>
-      <MoveSpeed>3.2</MoveSpeed>
+      <MoveSpeed>1.25</MoveSpeed>
       <MinimumContainmentStrength>110</MinimumContainmentStrength>
-      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.5</ArmorRating_Heat>
-      <ToxicResistance>0.5</ToxicResistance>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.50</ArmorRating_Heat>
+      <ToxicResistance>0.80</ToxicResistance>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <FilthMultiplier>1</FilthMultiplier>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld_east</uiIconPath>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_UnitTurret</li>
+    </inspectorTabs>
     <race>
       <body>Bulbfreak</body>
-      <baseBodySize>3.5</baseBodySize>
-      <baseHealthScale>0.5</baseHealthScale>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
@@ -416,8 +525,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -438,24 +551,111 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Giant</size>
       </li>
-      <li Class="HiveCreatureFramework.CompProperties_UnitTurret">
-        <turretDef>FH_Gun_BastionmeldTrackingLaser</turretDef>
-        <angleOffset>-90</angleOffset>
-        <renderNodeProperties>
+      <li Class="HiveCreatureFramework.CompProperties_UnitMultiTurret">
+        <turrets>
           <li>
-            <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitTurret</nodeClass>
-            <workerClass>PawnRenderNodeWorker_TurretGun</workerClass>
-            <parentTagDef>Body</parentTagDef>
-            <overrideMeshSize>(1, 1)</overrideMeshSize>
-            <baseLayer>20</baseLayer>
-            <pawnType>Any</pawnType>
-            <drawData>
-              <dataWest>
-                <rotationOffset>180</rotationOffset>
-              </dataWest>
-            </drawData>
+            <label>Beam Incinerator Cannon</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>FH_Gun_BastionmeldTrackingLaser</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>false</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1, 1)</overrideMeshSize>
+                <baseLayer>20</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(-0.75, 0, 0.95)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(-0.65, 0, 0.85)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(-0.75, 0, 0.65)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(0.65, 0, 0.85)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
           </li>
-        </renderNodeProperties>
+          <li>
+            <label>Flesh weapon mount</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>FH_Gun_BastionmeldChargeLance</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>true</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1.15, 1.15)</overrideMeshSize>
+                <baseLayer>21</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(-0.7, 0, -0.2)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(-0.35, 0, -0.25)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(-0.7, 0, -0.35)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(0.35, 0, -0.25)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <label>Flesh weapon mount</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>FH_Gun_BastionmeldInfernoCannon</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>true</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1.25, 1.25)</overrideMeshSize>
+                <baseLayer>22</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(0.75, 0, 0.05)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(0.35, 0, 0.05)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(0.75, 0, -0.05)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(-0.35, 0, 0.05)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+        </turrets>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>400</capacity>
       </li>
     </comps>
     <tools>
@@ -464,7 +664,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
@@ -475,7 +675,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8</power>
+        <power>12</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
@@ -512,7 +712,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
+          <drawSize>5</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -562,8 +762,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -690,8 +894,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -850,8 +1058,12 @@
         </recycledResources>
         <works>
           <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>

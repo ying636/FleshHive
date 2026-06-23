@@ -5,11 +5,27 @@
   <FH_Gun_BastionmeldTrackingLaser.label>焚灭脉冲炮</FH_Gun_BastionmeldTrackingLaser.label>
   <!-- EN: A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close. -->
   <FH_Gun_BastionmeldTrackingLaser.description>专为大范围杀伤而设计的追踪型热光束加农炮。需要锁定目标充能数秒，随后发射一道持续的炙热光束。光束末段会自行修正弹道，任何被扫到的单位都将严重灼伤，地面亦会燃起大火。必须不停移动才能逃脱。无法射击过近目标。</FH_Gun_BastionmeldTrackingLaser.description>
-  
+
+  <!-- EN: charge lance -->
+  <FH_Gun_BastionmeldChargeLance.label>电荷标枪</FH_Gun_BastionmeldChargeLance.label>
+  <!-- EN: A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail. -->
+  <FH_Gun_BastionmeldChargeLance.description>一种脉冲充能的轨道辅助标枪武器。它会以高速发射单发弹丸，并在弹丸离开加速轨道时为其注入不稳定能量。</FH_Gun_BastionmeldChargeLance.description>
+
+  <!-- EN: inferno cannon -->
+  <FH_Gun_BastionmeldInfernoCannon.label>地狱火加农炮</FH_Gun_BastionmeldInfernoCannon.label>
+  <!-- EN: An incendiary-shot mini-artillery device. It fires a large incendiary warhead. -->
+  <FH_Gun_BastionmeldInfernoCannon.description>一种发射燃烧弹的小型火炮装置。它会射出大型燃烧弹头。</FH_Gun_BastionmeldInfernoCannon.description>
+
   <!-- EN: bastionmeld -->
-  <FH_Bastionmeld.label>TODO</FH_Bastionmeld.label>
+  <FH_Bastionmeld.label>铁骸母兽</FH_Bastionmeld.label>
   <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids, which it controls through some form of supernatural energy. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld constructs defensive fortifications and wears down enemies through sustained long-range combat. -->
-  <FH_Bastionmeld.description>TODO</FH_Bastionmeld.description>
+  <FH_Bastionmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。身躯上镶嵌着各种机械族的残骸。铁骸母兽通过某种超自然能量控制着这些原本属于机械族的武装。铁骸母兽很少出现在袭击中，通常只能通过仪式召唤。铁骸母兽在战斗中通常会构筑防御工事，并以远距离战斗不断消耗并战胜敌人。</FH_Bastionmeld.description>
+  <!-- EN: Beam Incinerator Cannon -->
+  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>焚灭脉冲炮</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>
+  <!-- EN: Flesh weapon mount -->
+  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>
+  <!-- EN: Flesh weapon mount -->
+  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: tentacle -->

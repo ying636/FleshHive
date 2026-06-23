@@ -128,6 +128,8 @@
   <FH_FleshDigester_Status_Active>状态：活跃</FH_FleshDigester_Status_Active>
   <!-- EN: Status: Inactive (insufficient nutrition) -->
   <FH_FleshDigester_Status_Inactive>状态：停用（营养不足）</FH_FleshDigester_Status_Inactive>
+  <!-- EN: Flesh weapon mount -->
+  <FH_FleshWeaponMount>血肉武器基座</FH_FleshWeaponMount>
 
   <!-- UNUSED -->
   <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
