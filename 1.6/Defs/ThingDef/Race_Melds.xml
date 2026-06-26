@@ -1,172 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 缁熷悎姣嶅吔 -->
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>FH_Gun_BastionmeldTrackingLaser</defName>
-    <label>Beam Incinerator Cannon</label>
-    <description>A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close.</description>
-    <destroyOnDrop>true</destroyOnDrop>
-    <graphicData>
-      <texPath>Things/Weapon/FH_HellsphereCannon/FH_HellsphereCannon</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <relicChance>0</relicChance>
-    <statBases>
-      <AccuracyTouch>1</AccuracyTouch>
-      <AccuracyShort>1</AccuracyShort>
-      <AccuracyMedium>1</AccuracyMedium>
-      <AccuracyLong>1</AccuracyLong>
-      <RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
-      <Mass>5</Mass>
-    </statBases>
-    <tradeability>None</tradeability>
-    <verbs>
-      <li Class="FleshHive.VerbProperties_BastionmeldTrackingLaser">
-        <label>Beam Incinerator Cannon</label>
-        <hasStandardCommand>true</hasStandardCommand>
-        <category>Misc</category>
-        <range>24.9</range>
-        <warmupTime>3</warmupTime>
-        <defaultCooldownTime>3.6</defaultCooldownTime>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-          <canTargetPawns>true</canTargetPawns>
-          <canTargetBuildings>true</canTargetBuildings>
-          <canTargetFires>false</canTargetFires>
-          <canTargetItems>false</canTargetItems>
-        </targetParams>
-        <beamMoteDef>FH_Mote_BeamIncinerator_RedLine</beamMoteDef>
-        <beamDamageDef>Beam</beamDamageDef>
-        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
-        <beamGroundFleckDef>HCF_Fleck_BeamBurn_White</beamGroundFleckDef>
-        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-        <beamLineFleckDef>HCF_Fleck_BeamSpark_White</beamLineFleckDef>
-        <beamStartOffset>0.5</beamStartOffset>
-        <startDrawData>
-          <dataNorth>
-            <offset>(-0.75, 0, 0.95)</offset>
-          </dataNorth>
-          <dataEast>
-            <offset>(-1.0, 0, 0.72)</offset>
-          </dataEast>
-          <dataSouth>
-            <offset>(-0.75, 0, 0.65)</offset>
-          </dataSouth>
-          <dataWest>
-            <offset>(1.0, 0, 0.72)</offset>
-          </dataWest>
-        </startDrawData>
-        <beamEndEffecterDef>HCF_GraserBeam_End_White</beamEndEffecterDef>
-        <persistentTargetMote>FH_Missile_Target</persistentTargetMote>
-        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
-        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
-        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
-        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
-        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
-        <soundAiming>HellsphereCannon_Aiming</soundAiming>
-        <beamLineFleckChanceCurve>
-          <points>
-            <li>(0, 0)</li>
-            <li>(0.65, 0.4)</li>
-            <li>(1, 0.75)</li>
-          </points>
-        </beamLineFleckChanceCurve>
-        <damageAmount>20</damageAmount>
-        <armorPenetration>0.5</armorPenetration>
-        <buildingDamageMultiplier>3</buildingDamageMultiplier>
-        <laserDurationTicks>600</laserDurationTicks>
-        <damageIntervalTicks>15</damageIntervalTicks>
-        <fireChancePerDamageTick>0.6</fireChancePerDamageTick>
-        <fireSize>0.5</fireSize>
-        <trackingSpeedPerSecond>4</trackingSpeedPerSecond>
-        <beamHitRadius>1.5</beamHitRadius>
-        <damagePawnsAlongBeam>true</damagePawnsAlongBeam>
-        <allowFriendlyFire>false</allowFriendlyFire>
-        <stopWhenTargetDowned>true</stopWhenTargetDowned>
-        <requireLineOfSight>false</requireLineOfSight>
-      </li>
-    </verbs>
-    <weaponClasses>
-      <li>Ranged</li>
-    </weaponClasses>
-    <weaponTags>
-      <li>FH_BastionmeldTrackingLaser</li>
-    </weaponTags>
-  </ThingDef>
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>FH_Gun_BastionmeldChargeLance</defName>
-    <label>charge lance</label>
-    <description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_ChargeLance</soundInteract>
-    <statBases>
-      <Mass>8</Mass>
-      <AccuracyTouch>0.65</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.85</AccuracyMedium>
-      <AccuracyLong>0.75</AccuracyLong>
-      <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponClasses>
-      <li>RangedHeavy</li>
-    </weaponClasses>
-    <weaponTags>
-      <li>TurretGun</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_ChargeLance</defaultProjectile>
-        <warmupTime>1.7</warmupTime>
-        <range>32.9</range>
-        <soundCast>ChargeLance_Fire</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>FH_Gun_BastionmeldInfernoCannon</defName>
-    <label>inferno cannon</label>
-    <description>An incendiary-shot mini-artillery device. It fires a large incendiary warhead.</description>
-    <techLevel>Spacer</techLevel>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>1400</MarketValue>
-      <Mass>18</Mass>
-      <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
-    </statBases>
-    <tradeability>None</tradeability>
-    <weaponClasses>
-      <li>RangedHeavy</li>
-    </weaponClasses>
-    <weaponTags>
-      <li>TurretGun</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_InfernoCannon</defaultProjectile>
-        <forcedMissRadius>3.5</forcedMissRadius>
-        <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-        <warmupTime>1.25</warmupTime>
-        <range>26.9</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>InfernoCannon_Fire</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>14</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
+  <!-- 统合母兽 -->
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Nexusmeld</defName>
     <label>nexusmeld</label>
@@ -311,7 +145,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 鏆存?掓瘝鍏?-->
+  <!-- 暴怒母兽 -->
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Furiousmeld</defName>
     <label>furiousmeld</label>
@@ -470,7 +304,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 閾侀姣嶅吔 -->
+
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
@@ -570,17 +404,17 @@
                 <pawnType>Any</pawnType>
                 <drawData>
                   <dataNorth>
-                    <offset>(-0.75, 0, 0.95)</offset>
+                    <offset>(0.95, 0, -0.3)</offset>
                   </dataNorth>
                   <dataEast>
-                    <offset>(-0.65, 0, 0.85)</offset>
+                    <offset>(0.3, 0, -0.95)</offset>
                   </dataEast>
                   <dataSouth>
-                    <offset>(-0.75, 0, 0.65)</offset>
+                    <offset>(-0.95, 0, 0.3)</offset>
                   </dataSouth>
                   <dataWest>
                     <rotationOffset>180</rotationOffset>
-                    <offset>(0.65, 0, 0.85)</offset>
+                    <offset>(-0.3, 0, 0.95)</offset>
                   </dataWest>
                 </drawData>
               </li>
@@ -589,7 +423,7 @@
           <li>
             <label>Flesh weapon mount</label>
             <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
-            <turretDef>FH_Gun_BastionmeldChargeLance</turretDef>
+            <turretDef>Gun_ChargeBlasterHeavyTurret</turretDef>
             <angleOffset>-90</angleOffset>
             <mainWeapon>false</mainWeapon>
             <canBeUnmounted>true</canBeUnmounted>
@@ -603,17 +437,17 @@
                 <pawnType>Any</pawnType>
                 <drawData>
                   <dataNorth>
-                    <offset>(-0.7, 0, -0.2)</offset>
+                    <offset>(-0.75, 0, -0.3)</offset>
                   </dataNorth>
                   <dataEast>
-                    <offset>(-0.35, 0, -0.25)</offset>
+                    <offset>(0.3, 0, 0.75)</offset>
                   </dataEast>
                   <dataSouth>
-                    <offset>(-0.7, 0, -0.35)</offset>
+                    <offset>(0.75, 0, 0.3)</offset>
                   </dataSouth>
                   <dataWest>
                     <rotationOffset>180</rotationOffset>
-                    <offset>(0.35, 0, -0.25)</offset>
+                    <offset>(-0.3, 0, -0.75)</offset>
                   </dataWest>
                 </drawData>
               </li>
@@ -636,17 +470,50 @@
                 <pawnType>Any</pawnType>
                 <drawData>
                   <dataNorth>
-                    <offset>(0.75, 0, 0.05)</offset>
+                    <offset>(0.95, 0, 0.55)</offset>
                   </dataNorth>
                   <dataEast>
-                    <offset>(0.35, 0, 0.05)</offset>
+                    <offset>(-0.55, 0, -0.95)</offset>
                   </dataEast>
                   <dataSouth>
-                    <offset>(0.75, 0, -0.05)</offset>
+                    <offset>(-0.95, 0, -0.55)</offset>
                   </dataSouth>
                   <dataWest>
                     <rotationOffset>180</rotationOffset>
-                    <offset>(-0.35, 0, 0.05)</offset>
+                    <offset>(0.55, 0, 0.95)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <label>Flesh weapon mount</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>FH_Gun_BastionmeldChargeLance</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>true</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1.15, 1.15)</overrideMeshSize>
+                <baseLayer>22</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(-0.75, 0, 0.55)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(-0.55, 0, 0.75)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(0.75, 0, -0.55)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(0.55, 0, -0.75)</offset>
                   </dataWest>
                 </drawData>
               </li>
@@ -695,12 +562,38 @@
       </li>
     </tools>
   </ThingDef>
+  <!-- 血肉死卫 -->
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_FleshDeadguard</defName>
+    <label>flesh deadguard</label>
+    <race>FH_Fingerspike</race>
+    <combatPower>30</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>FH_Bastionmeld</race>
     <combatPower>550</combatPower>
+    <abilities>
+      <li>FH_BastionmeldSummonDeadguard</li>
+      <li>FH_BastionmeldFleshPulse</li>
+    </abilities>
     <startingHediffs>
       <li>
         <def>Regeneration</def>
@@ -717,7 +610,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 瑁傛畺姣嶅吔 -->
+  <!-- 裂殖母兽 -->
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fissionmeld</defName>
     <label>fissionmeld</label>
@@ -848,7 +741,8 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 琛?鑲夋嘲鍧?-->
+  <!-- 铁骸母兽 -->
+  <!-- 血肉泰坦 -->
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Fleshtitan</defName>
     <label>fleshtitan</label>
@@ -1013,7 +907,7 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 鎯婃儳姣嶅吔 -->
+  <!-- 惊惧母兽 -->
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Dreadmeld</defName>
     <label>dreadmeld</label>
@@ -1122,4 +1016,4 @@
       </li>
     </tools>
   </ThingDef>
-</Defs>
+  </Defs>

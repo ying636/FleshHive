@@ -2,6 +2,66 @@
 <Defs>
 
   <AbilityDef>
+    <defName>FH_BastionmeldSummonDeadguard</defName>
+    <label>summon flesh deadguard</label>
+    <description>Release 4 flesh deadguards armed with scavenged mechanoid firearms.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_SkillIcon32</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityBastionmeldSummonDeadguard">
+        <summonKind>FH_FleshDeadguard</summonKind>
+        <summonCount>4</summonCount>
+        <twistedFleshCost>50</twistedFleshCost>
+        <aiSearchRadius>50</aiSearchRadius>
+        <weaponOptions>
+          <li>Gun_Slugthrower</li>
+          <li>Gun_MiniShotgun</li>
+          <li>Gun_Spiner</li>
+        </weaponOptions>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_BastionmeldFleshPulse</defName>
+    <label>flesh pulse</label>
+    <description>Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>240000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>4</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityBastionmeldFleshPulse">
+        <radius>10.9</radius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
     <defName>FH_FleshBerserk</defName>
     <label>flesh berserk</label>
     <description>All friendly flesh beasts on the map enter a frenzied berserk state for 6 hours, gaining increased move speed and melee damage.</description>

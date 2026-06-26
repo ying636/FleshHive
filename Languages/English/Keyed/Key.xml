@@ -70,4 +70,6 @@
   <FH_FleshDigester_Status_Inactive>Status: Inactive (insufficient nutrition)</FH_FleshDigester_Status_Inactive>
   <FH_FleshWeaponMount>Flesh weapon mount</FH_FleshWeaponMount>
 
+  <TemporaryFleshGroup>Temporary fleshbeast group</TemporaryFleshGroup>
+
 </LanguageData>

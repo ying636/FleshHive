@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
   <ThingDef ParentName="BaseFleshbeast" Name="FH_BaseFleshBeast" Abstract="True">
@@ -79,8 +79,7 @@
     <uiIconPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</uiIconPath>
     <race>
       <body>Fingerspike</body>
-      <renderTree>Fingerspike</renderTree>
-    </race>
+      </race>
     <comps>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_Fingerspike</iconPath> 

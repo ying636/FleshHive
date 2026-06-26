@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 铁骸母兽武器：焚灭脉冲炮 -->
+  <!-- 焚灭脉冲炮 (Beam Incinerator Cannon) -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BastionmeldTrackingLaser</defName>
+    <label>Beam Incinerator Cannon</label>
+    <description>A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close.</description>
+    <destroyOnDrop>true</destroyOnDrop>
+    <graphicData>
+      <texPath>Things/Weapon/FH_HellsphereCannon/FH_HellsphereCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <relicChance>0</relicChance>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
+      <Mass>5</Mass>
+    </statBases>
+    <tradeability>None</tradeability>
+    <verbs>
+      <li Class="FleshHive.VerbProperties_BastionmeldTrackingLaser">
+        <label>Beam Incinerator Cannon</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <category>Misc</category>
+        <range>24.9</range>
+        <warmupTime>3</warmupTime>
+        <defaultCooldownTime>3.6</defaultCooldownTime>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>true</canTargetPawns>
+          <canTargetBuildings>true</canTargetBuildings>
+          <canTargetFires>false</canTargetFires>
+          <canTargetItems>false</canTargetItems>
+        </targetParams>
+        <beamMoteDef>FH_Mote_BeamIncinerator_RedLine</beamMoteDef>
+        <beamDamageDef>Beam</beamDamageDef>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>HCF_Fleck_BeamBurn_White</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamLineFleckDef>HCF_Fleck_BeamSpark_White</beamLineFleckDef>
+        <beamStartOffset>0.5</beamStartOffset>
+        <startDrawData>
+          <dataNorth>
+            <offset>(0.95, 0, -0.3)</offset>
+          </dataNorth>
+          <dataEast>
+            <offset>(0.3, 0, -0.95)</offset>
+          </dataEast>
+          <dataSouth>
+            <offset>(-0.95, 0, 0.3)</offset>
+          </dataSouth>
+          <dataWest>
+            <rotationOffset>180</rotationOffset>
+            <offset>(-0.3, 0, 0.95)</offset>
+          </dataWest>
+        </startDrawData>
+        <beamEndEffecterDef>HCF_GraserBeam_End_White</beamEndEffecterDef>
+        <persistentTargetMote>FH_Missile_Target</persistentTargetMote>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+        <damageAmount>20</damageAmount>
+        <armorPenetration>0.5</armorPenetration>
+        <buildingDamageMultiplier>3</buildingDamageMultiplier>
+        <laserDurationTicks>600</laserDurationTicks>
+        <damageIntervalTicks>15</damageIntervalTicks>
+        <fireChancePerDamageTick>0.6</fireChancePerDamageTick>
+        <fireSize>0.5</fireSize>
+        <trackingSpeedPerSecond>4</trackingSpeedPerSecond>
+        <beamHitRadius>1.5</beamHitRadius>
+        <damagePawnsAlongBeam>true</damagePawnsAlongBeam>
+        <allowFriendlyFire>false</allowFriendlyFire>
+        <stopWhenTargetDowned>true</stopWhenTargetDowned>
+        <requireLineOfSight>false</requireLineOfSight>
+      </li>
+    </verbs>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>FH_BastionmeldTrackingLaser</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- 电荷骑枪 (Charge Lance) -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BastionmeldChargeLance</defName>
+    <label>charge lance</label>
+    <description>A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <statBases>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeLance</defaultProjectile>
+        <warmupTime>1.7</warmupTime>
+        <range>32.9</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- 地狱火炮 (Inferno Cannon) -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BastionmeldInfernoCannon</defName>
+    <label>inferno cannon</label>
+    <description>An incendiary-shot mini-artillery device. It fires a large incendiary warhead.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>18</Mass>
+      <RangedWeapon_Cooldown>8.4</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>None</tradeability>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_InfernoCannon</defaultProjectile>
+        <forcedMissRadius>3.5</forcedMissRadius>
+        <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+        <warmupTime>1.25</warmupTime>
+        <range>26.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>
