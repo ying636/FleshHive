@@ -25,6 +25,9 @@
   <Tentacle.label>flesh tentacle</Tentacle.label>
   <Tentacle.description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</Tentacle.description>
 
+  <FH_FleshAdaptationModule.label>flesh adaptation module</FH_FleshAdaptationModule.label>
+  <FH_FleshAdaptationModule.description>A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive.</FH_FleshAdaptationModule.description>
+
   <FleshWhip.label>flesh whip</FleshWhip.label>
   <FleshWhip.description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</FleshWhip.description>
 

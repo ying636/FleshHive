@@ -13,6 +13,16 @@
   <FH_Item_Tentacle.label>血肉触手</FH_Item_Tentacle.label>
   <FH_Item_Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</FH_Item_Tentacle.description>
 
+  <!-- EN: flesh adaptation module -->
+  <FH_Item_FleshAdaptationModule.label>血肉适应模块</FH_Item_FleshAdaptationModule.label>
+  <!-- EN: A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive. -->
+  <FH_Item_FleshAdaptationModule.description>血肉巢穴生产的一个肉瘤型模块。植入后，它会细微地重塑宿主心智，使宿主不再对血肉生物、血肉制品和扭曲肉产生厌恶情绪，从而能更好地与血肉巢穴共同生活。</FH_Item_FleshAdaptationModule.description>
+
+  <!-- EN: flesh pack -->
+  <FH_Item_FleshPack.label>寄生背包</FH_Item_FleshPack.label>
+  <!-- EN: A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's parasitism capacity. -->
+  <FH_Item_FleshPack.description>配有适合血肉兽生长环境的背包，血肉兽可以以更小的体积压缩在里边。它可以增强佩戴者的寄生空间上限。</FH_Item_FleshPack.description>
+
   <FH_Item_FleshWhip.label>血肉触鞭</FH_Item_FleshWhip.label>
   <FH_Item_FleshWhip.description>强健发达、末端带刃的肉乎乎触手。这只血肉触鞭算是不错的近战武器。\n\n这个部件有自己的神经结构，将其移除可能招致危险。</FH_Item_FleshWhip.description>
 

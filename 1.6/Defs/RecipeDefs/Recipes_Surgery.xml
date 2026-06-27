@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FH_InstallFleshAdaptationModule</defName>
+    <label>install flesh adaptation module</label>
+    <description>Install a flesh adaptation module.</description>
+    <addsHediff>FH_FleshAdaptation</addsHediff>
+    <appliedOnFixedBodyParts>
+      <li>Head</li>
+    </appliedOnFixedBodyParts>
+    <descriptionHyperlinks>
+      <ThingDef>FH_FleshAdaptationModule</ThingDef>
+      <HediffDef>FH_FleshAdaptation</HediffDef>
+    </descriptionHyperlinks>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>FH_FleshAdaptationModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FH_FleshAdaptationModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <jobString>Installing flesh adaptation module.</jobString>
+    <recipeUsers>
+      <li>Human</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workAmount>2500</workAmount>
+  </RecipeDef>
+
+</Defs>

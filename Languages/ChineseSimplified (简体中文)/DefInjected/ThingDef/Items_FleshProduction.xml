@@ -25,6 +25,11 @@
   <Tentacle.label>血肉触手</Tentacle.label>
   <Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</Tentacle.description>
 
+  <!-- EN: flesh adaptation module -->
+  <FH_FleshAdaptationModule.label>血肉适应模块</FH_FleshAdaptationModule.label>
+  <!-- EN: A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive. -->
+  <FH_FleshAdaptationModule.description>血肉巢穴生产的一个肉瘤型模块。植入后，它会细微地重塑宿主心智，使宿主不再对血肉生物、血肉制品和扭曲肉产生厌恶情绪，从而能更好地与血肉巢穴共同生活。</FH_FleshAdaptationModule.description>
+
   <FleshWhip.label>血肉触鞭</FleshWhip.label>
   <FleshWhip.description>强健发达、末端带刃的肉乎乎触手。这只血肉触鞭算是不错的近战武器。\n\n这个部件有自己的神经结构，将其移除可能招致危险。</FleshWhip.description>
 

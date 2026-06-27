@@ -95,6 +95,9 @@
       <Beauty>-20</Beauty>
       <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <combatPower>45</combatPower>
       <ai_combatDangerous>true</ai_combatDangerous>
@@ -176,6 +179,9 @@
       <Flammability>0.7</Flammability>
       <Beauty>-12</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <isInert>true</isInert>
@@ -247,6 +253,9 @@
       <TrapSpringChance>1</TrapSpringChance>
       <Mass>2</Mass>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <isTrap>true</isTrap>
       <trapPeacefulWildAnimalsSpringChanceFactor>0.25</trapPeacefulWildAnimalsSpringChanceFactor>
@@ -308,6 +317,9 @@
       <Flammability>0.7</Flammability>
       <Beauty>-10</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <isInert>true</isInert>
@@ -371,6 +383,9 @@
       <Flammability>0.7</Flammability>
       <Beauty>-10</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <isInert>true</isInert>
@@ -406,4 +421,6 @@
   </ThingDef>
 
 </Defs>
+
+
 

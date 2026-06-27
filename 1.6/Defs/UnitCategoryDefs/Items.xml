@@ -11,6 +11,8 @@
       <li>FH_Item_Bioferrite</li>
       <li>FH_Item_NerveFlesh</li>
       <li>FH_Item_Tentacle</li>
+      <li>FH_Item_FleshAdaptationModule</li>
+      <li>FH_Item_FleshPack</li>
       <li>FH_Item_FleshWhip</li>
       <li>FH_Item_FleshmassStomach</li>
       <li>FH_Item_FleshmassLung</li>
@@ -67,6 +69,34 @@
     <requirements>
       <Bioferrite>15</Bioferrite>
       <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirements>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshAdaptationModule</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh adaptation module</label>
+    <description>A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive.</description>
+    <thing>FH_FleshAdaptationModule</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <requirements>
+      <Bioferrite>30</Bioferrite>
+      <FH_NerveFlesh>6</FH_NerveFlesh>
+    </requirements>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshPack</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh pack</label>
+    <description>A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's parasitism capacity.</description>
+    <thing>FH_FleshPack</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.233333~0.233333</spawningDay>
+    <requirements>
+      <Bioferrite>20</Bioferrite>
+      <FH_NerveFlesh>5</FH_NerveFlesh>
     </requirements>
   </HiveCreatureFramework.ItemDef>
 

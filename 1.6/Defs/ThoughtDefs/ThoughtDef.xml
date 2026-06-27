@@ -2,7 +2,7 @@
 <Defs>
     <ThoughtDef>
         <defName>FH_Thought_FleshParasitism</defName>
-        <thoughtClass>Thought_Memory</thoughtClass>
+        <thoughtClass>FleshHive.Thought_Memory_FleshAdapted</thoughtClass>
         <label>血肉寄生</label>
         <stages>
             <li>
@@ -15,7 +15,7 @@
 
     <ThoughtDef>
         <defName>FH_AteRawFleshberry</defName>
-        <thoughtClass>Thought_FoodEaten</thoughtClass>
+        <thoughtClass>FleshHive.Thought_FoodEaten_FleshAdapted</thoughtClass>
         <durationDays>1</durationDays>
         <showBubble>true</showBubble>
         <icon>Things/Mote/ThoughtSymbol/Food</icon>
@@ -30,7 +30,7 @@
 
     <ThoughtDef>
         <defName>FH_AteCookedFleshberry</defName>
-        <thoughtClass>Thought_FoodEaten</thoughtClass>
+        <thoughtClass>FleshHive.Thought_FoodEaten_FleshAdapted</thoughtClass>
         <durationDays>1</durationDays>
         <showBubble>true</showBubble>
         <icon>Things/Mote/ThoughtSymbol/Food</icon>

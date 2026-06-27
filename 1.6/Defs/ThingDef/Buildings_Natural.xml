@@ -29,6 +29,9 @@
       <Flammability>1.0</Flammability>
       <HCF_Stat_HiveCapacity>50</HCF_Stat_HiveCapacity>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <pathCost>42</pathCost>
     <receivesSignals>true</receivesSignals>
     <blockWind>true</blockWind>
@@ -167,6 +170,9 @@
       <Flammability>1.0</Flammability>
       <HCF_Stat_HiveCapacity>100</HCF_Stat_HiveCapacity>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <pathCost>42</pathCost>
     <receivesSignals>true</receivesSignals>
     <blockWind>true</blockWind>
@@ -347,6 +353,9 @@
       <MaxHitPoints>500</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <pathCost>42</pathCost>
     <receivesSignals>true</receivesSignals>
     <blockWind>true</blockWind>
@@ -398,6 +407,9 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <pathCost>42</pathCost>
     <blockWind>true</blockWind>
     <tickerType>Normal</tickerType>
@@ -445,6 +457,9 @@
       <MaxHitPoints>160</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
@@ -488,6 +503,9 @@
       <MaxHitPoints>320</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
@@ -537,6 +555,9 @@
       <Flammability>1.0</Flammability>
       <WorkToBuild>850</WorkToBuild>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <isInert>true</isInert>
       <canPlaceOverWall>true</canPlaceOverWall>
@@ -603,6 +624,9 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
@@ -671,6 +695,9 @@
       <Flammability>1.0</Flammability>
       <Beauty>0</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <storageGroupTag>FH_FleshBox</storageGroupTag>
       <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
@@ -743,6 +770,9 @@
       <Beauty>-3</Beauty>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
@@ -789,6 +819,9 @@
       <Beauty>-3</Beauty>
       <Flammability>1.0</Flammability>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
@@ -840,6 +873,9 @@
       <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
       <Beauty>1</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <buildingTags>
         <li>Bed</li>
@@ -891,6 +927,9 @@
       <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
       <Beauty>2</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <buildingTags>
         <li>Bed</li>
@@ -939,6 +978,9 @@
       <Flammability>1.0</Flammability>
       <Beauty>2</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <isInert>true</isInert>
       <ai_chillDestination>false</ai_chillDestination>
@@ -976,6 +1018,9 @@
       <Comfort>0.70</Comfort>
       <Beauty>1</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <isSittable>true</isSittable>
     </building>
@@ -1015,6 +1060,9 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <buildingTags>
         <li>RitualFocus</li>
@@ -1056,6 +1104,9 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <buildingTags>
         <li>RitualFocus</li>
@@ -1097,6 +1148,9 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <buildingTags>
         <li>RitualFocus</li>
@@ -1138,6 +1192,9 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <building>
       <buildingTags>
         <li>RitualFocus</li>
@@ -1175,12 +1232,21 @@
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
       <Flammability>1.0</Flammability>
+      <Beauty>-12</Beauty>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <rotatable>false</rotatable>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>20</glowRadius>
         <glowColor>(204,51,38,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>21</heatPerSecond>
+        <heatPushMinTemperature>-999</heatPushMinTemperature>
+        <heatPushMaxTemperature>21</heatPushMaxTemperature>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
         <intervalDays>3</intervalDays>
@@ -1222,6 +1288,9 @@
       <MaxHitPoints>230</MaxHitPoints>
       <MeditationFocusStrength>0.14</MeditationFocusStrength>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <ingestible />
     <tickerType>Normal</tickerType>
     <neverMultiSelect>false</neverMultiSelect>
@@ -1324,6 +1393,9 @@
       <MaxHitPoints>120</MaxHitPoints>
       <Nutrition>2.5</Nutrition>
     </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
     <comps>
       <li Class="FleshHive.CompProperties_AdditionalHarvestYield">
         <yields>
@@ -1354,4 +1426,6 @@
   </ThingDef>
 
 </Defs>
+
+
 
