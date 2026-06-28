@@ -55,6 +55,14 @@
   <FH_Building_FleshDigester.label>警卫触手中枢</FH_Building_FleshDigester.label>
   <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
   <FH_Building_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。这些被活化的板块也会像血肉树一样吞噬尸体和肉类，补充巢穴营养。</FH_Building_FleshDigester.description>
+  <!-- EN: hive nerve bundle -->
+  <FH_Building_NerveBundle.label>巢群神经结节</FH_Building_NerveBundle.label>
+  <!-- EN: A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. -->
+  <FH_Building_NerveBundle.description>血肉块神经系统的节点。可以扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。</FH_Building_NerveBundle.description>
+  <!-- EN: hive nerve center -->
+  <FH_Building_NerveCenter.label>巢群神经中枢</FH_Building_NerveCenter.label>
+  <!-- EN: The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control. -->
+  <FH_Building_NerveCenter.description>血肉块神经系统的核心节点。可以大幅度扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。巢群神经中枢会使血肉兽更容易控制。</FH_Building_NerveCenter.description>
   
   <!-- EN: flesh column -->
   <FH_Building_FleshColumn.label>血肉支撑柱</FH_Building_FleshColumn.label>

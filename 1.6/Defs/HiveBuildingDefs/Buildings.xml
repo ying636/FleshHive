@@ -2,6 +2,45 @@
 <Defs>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_NerveBundle</defName>
+    <label>hive nerve bundle</label>
+    <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
+    <building>FH_NerveBundle</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>400</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>25</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_NerveCenter</defName>
+    <label>hive nerve center</label>
+    <description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</description>
+    <building>FH_NerveCenter</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>700</workAmount>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>5</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshSack</defName>
     <label>flesh sack</label>
     <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains.</description>

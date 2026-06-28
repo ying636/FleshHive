@@ -135,6 +135,11 @@
           <li>FH_FleshContainer</li>
         </tags>
       </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>FH_NerveCenter</li>
+        </linkableFacilities>
+      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(3,2)</size>
       </li>
@@ -323,8 +328,190 @@
           <li>FH_FleshContainer</li>
         </tags>
       </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>FH_NerveCenter</li>
+        </linkableFacilities>
+      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(3,3)</size>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_NerveBundle</defName>
+    <label>hive nerve bundle</label>
+    <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
+    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_NerveBundle/FH_FleshmassNerveBundle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_Hive</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <HCF_Stat_HiveCapacity>10</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>10</capacity>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>1</dailyNutritionCost>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>5.5</radius>
+        <cellsPerErosion>2</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveContainer">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <tags>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>FH_NerveCenter</li>
+        </linkableFacilities>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_NerveBundle</building>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_NerveCenter</defName>
+    <label>hive nerve center</label>
+    <description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</description>
+    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_NerveCenter/FH_NerveCenter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,3)</drawSize>
+    </graphicData>
+    <size>(2,3)</size>
+    <uiIconPath>Things/Building/FH_NerveCenter/FH_NerveCenter_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_Hive</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <HCF_Stat_HiveCapacity>30</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>30</capacity>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>3</dailyNutritionCost>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <HCF_Stat_HiveMaintenanceFactor>0.2</HCF_Stat_HiveMaintenanceFactor>
+        </statOffsets>
+        <linkableBuildings>
+          <li>FH_FleshHive</li>
+          <li>FH_FleshPrimaryNest</li>
+          <li>FH_NerveBundle</li>
+          <li>FH_NerveCenter</li>
+        </linkableBuildings>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+        <requiresLOS>false</requiresLOS>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>10.5</radius>
+        <cellsPerErosion>3</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveContainer">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <tags>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>FH_NerveCenter</li>
+        </linkableFacilities>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,3)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_NerveCenter</building>
       </li>
     </comps>
   </ThingDef>

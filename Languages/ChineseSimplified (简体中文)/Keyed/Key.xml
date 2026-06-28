@@ -112,6 +112,8 @@
   <FH_FleshTree_TerraformNutrition>地形转化营养：{0}（{1}）</FH_FleshTree_TerraformNutrition>
   <!-- EN: Every {0}: {1} nutrition -->
   <FH_HiveNutritionProducer_Value>每{0}产生{1}营养</FH_HiveNutritionProducer_Value>
+  <!-- EN: Daily nutrition upkeep: {0} -->
+  <FH_HiveNutritionUpkeep_Value>每日消耗巢穴营养：{0}</FH_HiveNutritionUpkeep_Value>
   <!-- EN: Automatically consumes {0} hive nutrition per replacement shot. -->
   <FH_HiveNutritionRefuelable_NutritionPerFuel>每补充1发备用骨刺自动消耗{0}巢穴营养。</FH_HiveNutritionRefuelable_NutritionPerFuel>
   <!-- EN: Trait -->

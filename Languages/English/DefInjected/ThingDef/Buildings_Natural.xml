@@ -19,5 +19,9 @@
   <FH_FleshSpreader.description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</FH_FleshSpreader.description>
   <FH_FleshDigester.label>guard tentacle nexus</FH_FleshDigester.label>
   <FH_FleshDigester.description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</FH_FleshDigester.description>
+  <FH_NerveBundle.label>hive nerve bundle</FH_NerveBundle.label>
+  <FH_NerveBundle.description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</FH_NerveBundle.description>
+  <FH_NerveCenter.label>hive nerve center</FH_NerveCenter.label>
+  <FH_NerveCenter.description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</FH_NerveCenter.description>
 
 </LanguageData>

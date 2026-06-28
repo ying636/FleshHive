@@ -107,6 +107,14 @@
   <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>
   <!-- EN: The core of a large flesh hive. It can gestate and fuse flesh beasts within the nest, and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shard, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. A hive can only support one flesh primary nest. -->
   <FH_FleshPrimaryNest.description>大型血肉巢群的核心，可以在巢穴中孕育和融合血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest.description>
+  <!-- EN: hive nerve bundle -->
+  <FH_NerveBundle.label>巢群神经结节</FH_NerveBundle.label>
+  <!-- EN: A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. -->
+  <FH_NerveBundle.description>血肉块神经系统的节点。可以扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。</FH_NerveBundle.description>
+  <!-- EN: hive nerve center -->
+  <FH_NerveCenter.label>巢群神经中枢</FH_NerveCenter.label>
+  <!-- EN: The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control. -->
+  <FH_NerveCenter.description>血肉块神经系统的核心节点。可以大幅度扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。巢群神经中枢会使血肉兽更容易控制。</FH_NerveCenter.description>
   
   <!-- EN: flesh sack -->
   <FH_FleshSack.label>血肉囊</FH_FleshSack.label>
