@@ -138,5 +138,6 @@
             <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
+
 </Defs> 
 

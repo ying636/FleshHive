@@ -30,7 +30,6 @@
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
     <requirments>
       <FH_NerveFlesh>5</FH_NerveFlesh>

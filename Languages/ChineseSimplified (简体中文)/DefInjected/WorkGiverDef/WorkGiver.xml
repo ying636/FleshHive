@@ -35,5 +35,12 @@
   <FH_WorkGiver_RefillTwistedFlesh_Help.gerund>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.gerund>
   <!-- EN: refill -->
   <FH_WorkGiver_RefillTwistedFlesh_Help.verb>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.verb>
+
+  <!-- EN: suppress flesh hive activity -->
+  <FH_WorkGiver_SuppressFleshHiveActivity.label>压制血肉巢穴活跃度</FH_WorkGiver_SuppressFleshHiveActivity.label>
+  <!-- EN: suppressing -->
+  <FH_WorkGiver_SuppressFleshHiveActivity.gerund>压制中</FH_WorkGiver_SuppressFleshHiveActivity.gerund>
+  <!-- EN: suppress -->
+  <FH_WorkGiver_SuppressFleshHiveActivity.verb>压制</FH_WorkGiver_SuppressFleshHiveActivity.verb>
   
 </LanguageData>

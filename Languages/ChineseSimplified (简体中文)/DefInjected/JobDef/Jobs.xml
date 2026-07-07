@@ -21,5 +21,8 @@
   
   <!-- EN: refilling TargetB's twisted flesh. -->
   <FH_Job_RefillTwistedFlesh_Help.reportString>TODO</FH_Job_RefillTwistedFlesh_Help.reportString>
+
+  <!-- EN: suppressing TargetA. -->
+  <FH_Job_SuppressFleshHiveActivity.reportString>正在压制TargetA。</FH_Job_SuppressFleshHiveActivity.reportString>
   
 </LanguageData>

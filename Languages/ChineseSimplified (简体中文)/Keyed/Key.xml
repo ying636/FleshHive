@@ -84,26 +84,48 @@
   <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
   <!-- EN: Flesh hive container -->
   <HCF_Tag_FH_FleshContainer>血肉巢穴容器</HCF_Tag_FH_FleshContainer>
-  <!-- EN: Hive population limit reached. -->
-  <FH_GroupReject_HivePopulationCapacity>巢穴人口已达上限。</FH_GroupReject_HivePopulationCapacity>
-  <!-- EN: Hive population: {0} / {1} -->
-  <FH_FleshManagement_HivePopulation>巢穴人口：{0} / {1}</FH_FleshManagement_HivePopulation>
+  <!-- EN: Hive scale capacity reached. -->
+  <FH_GroupReject_HivePopulationCapacity>巢穴规模容量已达上限。</FH_GroupReject_HivePopulationCapacity>
+  <!-- EN: The hive is too hungry to accept returning units. -->
+  <FH_GroupReject_Hungry>巢穴过于饥饿，无法接收返回的单位。</FH_GroupReject_Hungry>
+  <!-- EN: Hive cluster scale: {0} -->
+  <FH_FleshManagement_HiveScale>巢群规模：{0}</FH_FleshManagement_HiveScale>
+  <!-- EN: Hive scale sources: -->
+  <FH_FleshManagement_HiveScaleTooltipTitle>巢穴规模来源：</FH_FleshManagement_HiveScaleTooltipTitle>
+  <!-- EN: Flesh terrain: {0} tiles, +{1} scale -->
+  <FH_FleshManagement_HiveScaleTooltipTerrain>血肉地形：{0}格，+{1}规模</FH_FleshManagement_HiveScaleTooltipTerrain>
+  <!-- EN: {0} x{1}: +{2} scale -->
+  <FH_FleshManagement_HiveScaleTooltipBuilding>{0} x{1}：+{2}规模</FH_FleshManagement_HiveScaleTooltipBuilding>
+  <!-- EN: Buildings: +0 scale -->
+  <FH_FleshManagement_HiveScaleTooltipBuildingsNone>建筑：+0规模</FH_FleshManagement_HiveScaleTooltipBuildingsNone>
+  <!-- EN: Total: {0} -->
+  <FH_FleshManagement_HiveScaleTooltipTotal>总计：{0}</FH_FleshManagement_HiveScaleTooltipTotal>
+  <!-- EN: Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale. -->
+  <FH_FleshManagement_HiveScaleTooltipRule>每50格血肉地形提供1巢穴规模。血肉巢穴、血肉主巢、巢群神经结节和巢群神经中枢会额外提供规模。</FH_FleshManagement_HiveScaleTooltipRule>
   <!-- EN: Nutrition -->
   <FH_FleshManagement_Nutrition>营养度</FH_FleshManagement_Nutrition>
-  <!-- EN: Flesh count: {0} -->
-  <FH_FleshManagement_FleshCount>血肉数量：{0}</FH_FleshManagement_FleshCount>
-  <!-- EN: Hive efficiency: - - -->
-  <FH_FleshManagement_HiveEfficiency>巢穴效率：--</FH_FleshManagement_HiveEfficiency>
   <!-- EN: Activity -->
   <FH_FleshManagement_Activity>活跃度</FH_FleshManagement_Activity>
-  <!-- EN: Hive population: {0}/{1} -->
-  <FH_FleshManagement_HivePopulationShort>巢穴人口：{0}/{1}</FH_FleshManagement_HivePopulationShort>
+  <!-- EN: Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot. -->
+  <FH_FleshManagement_ActivityTooltip>巢穴活跃度会随血肉兽和巢穴规模上升。可在血肉巢穴或神经结节处进行压制，降低暴动概率。</FH_FleshManagement_ActivityTooltip>
+  <!-- EN: Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold. -->
+  <FH_FleshManagement_AutoSuppressTooltip>自动压制：开启后，活跃度高于压制阈值时，殖民者会自动压制巢穴活跃度。</FH_FleshManagement_AutoSuppressTooltip>
+  <!-- EN: Hive scale: {0} -->
+  <FH_FleshManagement_HiveScaleShort>巢穴规模：{0}</FH_FleshManagement_HiveScaleShort>
   <!-- EN: Hive progress -->
   <FH_FleshManagement_Progress>巢穴进程</FH_FleshManagement_Progress>
   <!-- EN: Temporary fleshbeast group -->
   <FH_FleshManagement_TemporaryGroup>临时血肉兽群组</FH_FleshManagement_TemporaryGroup>
   <!-- EN: No linked hive -->
   <FH_FleshManagement_NoHive>无所属巢穴</FH_FleshManagement_NoHive>
+  <!-- EN: Hive activity: {0} -->
+  <FH_Suppressible_Inspect>巢穴活跃度：{0}</FH_Suppressible_Inspect>
+  <!-- EN: Flesh hive activity: {0} -->
+  <FH_DebugActivity>血肉巢穴活跃度：{0}</FH_DebugActivity>
+  <!-- EN: Flesh hive riot -->
+  <FH_FleshHiveRiot_Label>血肉巢穴暴动</FH_FleshHiveRiot_Label>
+  <!-- EN: The flesh hive can no longer be controlled. {0} fleshbeasts have broken loose and turned hostile. -->
+  <FH_FleshHiveRiot_Text>血肉巢穴已经无法控制。{0}只血肉兽挣脱巢群约束，并转为敌对。</FH_FleshHiveRiot_Text>
   <!-- EN: Infect harbinger tree -->
   <FH_InfectHarbingerTree>感染噩兆噬树</FH_InfectHarbingerTree>
   <!-- EN: Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree. -->
@@ -114,6 +136,18 @@
   <FH_HiveNutritionProducer_Value>每{0}产生{1}营养</FH_HiveNutritionProducer_Value>
   <!-- EN: Daily nutrition upkeep: {0} -->
   <FH_HiveNutritionUpkeep_Value>每日消耗巢穴营养：{0}</FH_HiveNutritionUpkeep_Value>
+  <!-- EN: I am very hungry. I need to feed... -->
+  <FH_HiveHungryInspect>我很饥饿，需要进食.......</FH_HiveHungryInspect>
+  <!-- EN: HUNGRY -->
+  <FH_HiveHungryBanner>饥饿</FH_HiveHungryBanner>
+  <!-- EN: I am so hungry............. -->
+  <FH_HiveHungryWhisper1>我很饿.............</FH_HiveHungryWhisper1>
+  <!-- EN: Fo....od........ -->
+  <FH_HiveHungryWhisper2>食....物........</FH_HiveHungryWhisper2>
+  <!-- EN: Hungry hungry hungry hungry hungry -->
+  <FH_HiveHungryWhisper3>饿饿饿饿饿</FH_HiveHungryWhisper3>
+  <!-- EN: Flesh........... -->
+  <FH_HiveHungryWhisper4>血肉...........</FH_HiveHungryWhisper4>
   <!-- EN: Automatically consumes {0} hive nutrition per replacement shot. -->
   <FH_HiveNutritionRefuelable_NutritionPerFuel>每补充1发备用骨刺自动消耗{0}巢穴营养。</FH_HiveNutritionRefuelable_NutritionPerFuel>
   <!-- EN: Trait -->
@@ -132,6 +166,26 @@
   <FH_FleshDigester_Status_Inactive>状态：停用（营养不足）</FH_FleshDigester_Status_Inactive>
   <!-- EN: Flesh weapon mount -->
   <FH_FleshWeaponMount>血肉武器基座</FH_FleshWeaponMount>
+  <!-- EN: Switch to large -->
+  <FH_Fusion_SwitchToLarge>大型融合</FH_Fusion_SwitchToLarge>
+  <!-- EN: Switch to medium -->
+  <FH_Fusion_SwitchToMedium>中型融合</FH_Fusion_SwitchToMedium>
+  <!-- EN: Small fleshbeast -->
+  <FH_Fusion_SlotSmall>小型血肉兽</FH_Fusion_SlotSmall>
+  <!-- EN: Medium fleshbeast -->
+  <FH_Fusion_SlotMedium>中型血肉兽</FH_Fusion_SlotMedium>
+  <!-- EN: Large fleshbeast -->
+  <FH_Fusion_SlotLarge>大型血肉兽</FH_Fusion_SlotLarge>
+  <!-- EN: Unknown -->
+  <FH_Fusion_Unknown>未知</FH_Fusion_Unknown>
+  <!-- EN: None -->
+  <FH_Fusion_NoTrait>无</FH_Fusion_NoTrait>
+  <!-- EN: Fleshbeast type: {0} -->
+  <FH_Fusion_ResultType>血肉兽类型：{0}</FH_Fusion_ResultType>
+  <!-- EN: Trait: {0} -->
+  <FH_Fusion_ResultTraits>特性：{0}</FH_Fusion_ResultTraits>
+  <!-- EN: Perform this fusion once to learn the result. -->
+  <FH_Fusion_ResultHint>只有进行一次融合后才能了解融合结果。</FH_Fusion_ResultHint>
 
   <!-- UNUSED -->
   <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>

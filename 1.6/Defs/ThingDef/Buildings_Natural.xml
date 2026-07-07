@@ -21,13 +21,13 @@
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
-      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>FleshHive.ITab_FleshHive</li>
       <li>ITab_Storage</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <HCF_Stat_HiveCapacity>50</HCF_Stat_HiveCapacity>
+      <HCF_Stat_HiveCapacity>20</HCF_Stat_HiveCapacity>
     </statBases>
     <tradeTags>
       <li>FH_FleshBuilding</li>
@@ -109,6 +109,15 @@
           <li>FH_FleshContainer</li>
         </tags>
       </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>20</capacity>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>20</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>2</dailyNutritionCost>
+      </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
         <intervalDays>3</intervalDays>
         <radius>10.5</radius>
@@ -140,6 +149,9 @@
           <li>FH_NerveCenter</li>
         </linkableFacilities>
       </li>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
+      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(3,2)</size>
       </li>
@@ -167,13 +179,13 @@
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
-      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>FleshHive.ITab_FleshHive</li>
       <li>ITab_Storage</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>220</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <HCF_Stat_HiveCapacity>100</HCF_Stat_HiveCapacity>
+      <HCF_Stat_HiveCapacity>50</HCF_Stat_HiveCapacity>
     </statBases>
     <tradeTags>
       <li>FH_FleshBuilding</li>
@@ -304,15 +316,25 @@
           <li>FH_FleshContainer</li>
         </tags>
       </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>50</capacity>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>50</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>3</dailyNutritionCost>
+      </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
         <intervalDays>3</intervalDays>
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesUnitFuser">
+      <li Class="FleshHive.CompProperties_FleshHiveUnitFuser">
         <defaultFusion>FH_Fusion_Default</defaultFusion>
         <category>LittleFlesh</category>
+        <largeCategory>LargeFlesh</largeCategory>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveUpgrader">
         <upgrades>
@@ -332,6 +354,9 @@
         <linkableFacilities>
           <li>FH_NerveCenter</li>
         </linkableFacilities>
+      </li>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(3,3)</size>
@@ -357,7 +382,7 @@
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
-      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>FleshHive.ITab_FleshHive</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>160</MaxHitPoints>
@@ -391,6 +416,9 @@
       <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
         <capacity>10</capacity>
       </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>10</scale>
+      </li>
       <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
         <dailyNutritionCost>1</dailyNutritionCost>
       </li>
@@ -400,17 +428,8 @@
         <cellsPerErosion>2</cellsPerErosion>
         <initialErosionCount>0</initialErosionCount>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveContainer">
-        <resource>FH_Resource_Nutrition</resource>
-        <healResource>FH_Resource_Nutrition</healResource>
-        <tags>
-          <li>FH_FleshContainer</li>
-        </tags>
-      </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>FH_NerveCenter</li>
-        </linkableFacilities>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(2,2)</size>
@@ -429,16 +448,15 @@
     <graphicData>
       <texPath>Things/Building/FH_NerveCenter/FH_NerveCenter</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2,3)</drawSize>
+      <drawSize>(2,2)</drawSize>
     </graphicData>
     <size>(2,3)</size>
-    <uiIconPath>Things/Building/FH_NerveCenter/FH_NerveCenter_Icon</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>MapMeshOnly</drawerType>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
-      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>FleshHive.ITab_FleshHive</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>320</MaxHitPoints>
@@ -472,6 +490,9 @@
       <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
         <capacity>30</capacity>
       </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>30</scale>
+      </li>
       <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
         <dailyNutritionCost>3</dailyNutritionCost>
       </li>
@@ -482,7 +503,6 @@
         <linkableBuildings>
           <li>FH_FleshHive</li>
           <li>FH_FleshPrimaryNest</li>
-          <li>FH_NerveBundle</li>
           <li>FH_NerveCenter</li>
         </linkableBuildings>
         <maxSimultaneous>1</maxSimultaneous>
@@ -502,10 +522,8 @@
           <li>FH_FleshContainer</li>
         </tags>
       </li>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li>FH_NerveCenter</li>
-        </linkableFacilities>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(2,3)</size>
@@ -805,7 +823,7 @@
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
     <inspectorTabs>
-      <li>HiveCreatureFramework.ITab_Hive</li>
+      <li>FleshHive.ITab_FleshHive</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>

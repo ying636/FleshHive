@@ -46,21 +46,38 @@
   <FleshHive_RaidParasiteChance>Raid parasite carrier chance: {0}</FleshHive_RaidParasiteChance>
   <HCF_Tag_Flesh>Flesh</HCF_Tag_Flesh>
   <HCF_Tag_FH_FleshContainer>Flesh hive container</HCF_Tag_FH_FleshContainer>
-  <FH_GroupReject_HivePopulationCapacity>Hive population limit reached.</FH_GroupReject_HivePopulationCapacity>
-  <FH_FleshManagement_HivePopulation>Hive population: {0} / {1}</FH_FleshManagement_HivePopulation>
+  <FH_GroupReject_HivePopulationCapacity>Hive scale capacity reached.</FH_GroupReject_HivePopulationCapacity>
+  <FH_GroupReject_Hungry>The hive is too hungry to accept returning units.</FH_GroupReject_Hungry>
+  <FH_FleshManagement_HiveScale>Hive cluster scale: {0}</FH_FleshManagement_HiveScale>
+  <FH_FleshManagement_HiveScaleTooltipTitle>Hive scale sources:</FH_FleshManagement_HiveScaleTooltipTitle>
+  <FH_FleshManagement_HiveScaleTooltipTerrain>Flesh terrain: {0} tiles, +{1} scale</FH_FleshManagement_HiveScaleTooltipTerrain>
+  <FH_FleshManagement_HiveScaleTooltipBuilding>{0} x{1}: +{2} scale</FH_FleshManagement_HiveScaleTooltipBuilding>
+  <FH_FleshManagement_HiveScaleTooltipBuildingsNone>Buildings: +0 scale</FH_FleshManagement_HiveScaleTooltipBuildingsNone>
+  <FH_FleshManagement_HiveScaleTooltipTotal>Total: {0}</FH_FleshManagement_HiveScaleTooltipTotal>
+  <FH_FleshManagement_HiveScaleTooltipRule>Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale.</FH_FleshManagement_HiveScaleTooltipRule>
   <FH_FleshManagement_Nutrition>Nutrition</FH_FleshManagement_Nutrition>
-  <FH_FleshManagement_FleshCount>Flesh count: {0}</FH_FleshManagement_FleshCount>
-  <FH_FleshManagement_HiveEfficiency>Hive efficiency: --</FH_FleshManagement_HiveEfficiency>
   <FH_FleshManagement_Activity>Activity</FH_FleshManagement_Activity>
-  <FH_FleshManagement_HivePopulationShort>Hive population: {0}/{1}</FH_FleshManagement_HivePopulationShort>
+  <FH_FleshManagement_ActivityTooltip>Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot.</FH_FleshManagement_ActivityTooltip>
+  <FH_FleshManagement_AutoSuppressTooltip>Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold.</FH_FleshManagement_AutoSuppressTooltip>
+  <FH_FleshManagement_HiveScaleShort>Hive scale: {0}</FH_FleshManagement_HiveScaleShort>
   <FH_FleshManagement_Progress>Hive progress</FH_FleshManagement_Progress>
   <FH_FleshManagement_TemporaryGroup>Temporary fleshbeast group</FH_FleshManagement_TemporaryGroup>
   <FH_FleshManagement_NoHive>No linked hive</FH_FleshManagement_NoHive>
+  <FH_Suppressible_Inspect>Hive activity: {0}</FH_Suppressible_Inspect>
+  <FH_DebugActivity>Flesh hive activity: {0}</FH_DebugActivity>
+  <FH_FleshHiveRiot_Label>Flesh hive riot</FH_FleshHiveRiot_Label>
+  <FH_FleshHiveRiot_Text>The flesh hive can no longer be controlled. {0} fleshbeasts have broken loose and turned hostile.</FH_FleshHiveRiot_Text>
   <FH_InfectHarbingerTree>Infect harbinger tree</FH_InfectHarbingerTree>
   <FH_InfectHarbingerTreeDesc>Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree.</FH_InfectHarbingerTreeDesc>
   <FH_FleshTree_TerraformNutrition>Terraform nutrition: {0} ({1})</FH_FleshTree_TerraformNutrition>
   <FH_HiveNutritionProducer_Value>Every {0}: {1} nutrition</FH_HiveNutritionProducer_Value>
   <FH_HiveNutritionUpkeep_Value>Daily nutrition upkeep: {0}</FH_HiveNutritionUpkeep_Value>
+  <FH_HiveHungryInspect>I am very hungry. I need to feed...</FH_HiveHungryInspect>
+  <FH_HiveHungryBanner>HUNGRY</FH_HiveHungryBanner>
+  <FH_HiveHungryWhisper1>I am so hungry.............</FH_HiveHungryWhisper1>
+  <FH_HiveHungryWhisper2>Fo....od........</FH_HiveHungryWhisper2>
+  <FH_HiveHungryWhisper3>Hungry hungry hungry hungry hungry</FH_HiveHungryWhisper3>
+  <FH_HiveHungryWhisper4>Flesh...........</FH_HiveHungryWhisper4>
   <FH_HiveNutritionRefuelable_NutritionPerFuel>Automatically consumes {0} hive nutrition per replacement shot.</FH_HiveNutritionRefuelable_NutritionPerFuel>
   <FH_Spawner_Trait>Trait</FH_Spawner_Trait>
   <FH_Spawner_TraitNone>None</FH_Spawner_TraitNone>
@@ -70,6 +87,16 @@
   <FH_FleshDigester_Status_Active>Status: Active</FH_FleshDigester_Status_Active>
   <FH_FleshDigester_Status_Inactive>Status: Inactive (insufficient nutrition)</FH_FleshDigester_Status_Inactive>
   <FH_FleshWeaponMount>Flesh weapon mount</FH_FleshWeaponMount>
+  <FH_Fusion_SwitchToLarge>Large fusion</FH_Fusion_SwitchToLarge>
+  <FH_Fusion_SwitchToMedium>Medium fusion</FH_Fusion_SwitchToMedium>
+  <FH_Fusion_SlotSmall>Small fleshbeast</FH_Fusion_SlotSmall>
+  <FH_Fusion_SlotMedium>Medium fleshbeast</FH_Fusion_SlotMedium>
+  <FH_Fusion_SlotLarge>Large fleshbeast</FH_Fusion_SlotLarge>
+  <FH_Fusion_Unknown>Unknown</FH_Fusion_Unknown>
+  <FH_Fusion_NoTrait>None</FH_Fusion_NoTrait>
+  <FH_Fusion_ResultType>Fleshbeast type: {0}</FH_Fusion_ResultType>
+  <FH_Fusion_ResultTraits>Trait: {0}</FH_Fusion_ResultTraits>
+  <FH_Fusion_ResultHint>Perform this fusion once to learn the result.</FH_Fusion_ResultHint>
 
   <TemporaryFleshGroup>Temporary fleshbeast group</TemporaryFleshGroup>
 

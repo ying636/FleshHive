@@ -76,4 +76,18 @@
         </requiredCapacities>
     </WorkGiverDef>
 
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_SuppressFleshHiveActivity</defName>
+        <label>suppress flesh hive activity</label>
+        <giverClass>FleshHive.WorkGiver_SuppressFleshHiveActivity</giverClass>
+        <workType>Warden</workType>
+        <verb>suppress</verb>
+        <gerund>suppressing</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>95</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
 </Defs> 

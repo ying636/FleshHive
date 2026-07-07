@@ -43,4 +43,11 @@
     <reportString>infecting TargetA.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_SuppressFleshHiveActivity</defName>
+    <driverClass>FleshHive.JobDriver_SuppressFleshHiveActivity</driverClass>
+    <reportString>suppressing TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
 </Defs> 
