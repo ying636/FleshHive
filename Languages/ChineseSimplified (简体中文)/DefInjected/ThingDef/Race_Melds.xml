@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
   <!-- EN: Beam Incinerator Cannon -->
@@ -26,6 +26,12 @@
   <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>
   <!-- EN: Flesh weapon mount -->
   <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -1; grants impossible regeneration; adds two parasitic weapon mounts. -->
+  <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；宿主获得再生（不可思议）；提供2个额外的寄生武器装备位。</FH_Bastionmeld.comps.ParasitismComp.effect>
+  <!-- EN: Parasitic weapons: left mount, right mount, electromagnetic pulse -->
+  <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>铁骸母兽触手攻击</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Release an EMP pulse centered on the host, matching an IED EMP trap's radius. -->
+  <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>以宿主为中心释放圆形EMP脉冲，范围与EMP地雷一致。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: tentacle -->
@@ -49,17 +55,17 @@
   <FH_Dreadmeld.tools.head.label>TODO</FH_Dreadmeld.tools.head.label>
   
   <!-- EN: fissionmeld -->
-  <FH_Fissionmeld.label>TODO</FH_Fissionmeld.label>
+  <FH_Fissionmeld.label>裂殖母兽</FH_Fissionmeld.label>
   <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate. -->
-  <FH_Fissionmeld.description>TODO</FH_Fissionmeld.description>
+  <FH_Fissionmeld.description>由数十只小型血肉兽聚合而成的庞然巨物，以松散连接的中枢神经系统维系整体。它的身体持续高速增生，会定期从躯体上萌生新的血肉兽。这些寄生子嗣让裂殖母兽成为可怕的血肉绞肉机。裂殖母兽很少出现在袭击中，通常只能通过仪式召唤。死亡后，裂殖母兽会进入休眠状态，并最终再生。</FH_Fissionmeld.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Fissionmeld.tools.tentacle-0.label>TODO</FH_Fissionmeld.tools.tentacle-0.label>
-  <!-- EN: tentacle -->
-  <FH_Fissionmeld.tools.tentacle-1.label>TODO</FH_Fissionmeld.tools.tentacle-1.label>
+  <FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left bone spike -->
+  <FH_Fissionmeld.tools.left_bone_spike.label>左骨刺</FH_Fissionmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Fissionmeld.tools.right_bone_spike.label>右骨刺</FH_Fissionmeld.tools.right_bone_spike.label>
   <!-- EN: head -->
-  <FH_Fissionmeld.tools.head.label>TODO</FH_Fissionmeld.tools.head.label>
+  <FH_Fissionmeld.tools.head.label>头</FH_Fissionmeld.tools.head.label>
   
   <!-- EN: fleshtitan -->
   <FH_Fleshtitan.label>TODO</FH_Fleshtitan.label>
@@ -107,5 +113,4 @@
   <FH_Nexusmeld.tools.tentacle-1.label>TODO</FH_Nexusmeld.tools.tentacle-1.label>
   <!-- EN: head -->
   <FH_Nexusmeld.tools.head.label>TODO</FH_Nexusmeld.tools.head.label>
-  
 </LanguageData>

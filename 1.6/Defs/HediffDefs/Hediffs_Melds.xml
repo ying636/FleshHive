@@ -191,4 +191,76 @@
     </comps>
   </HediffDef>
 
+  <HediffDef>
+    <defName>FH_Parasitism_Bastionmeld</defName>
+    <label>bastionmeld parasitism</label>
+    <description>The bastionmeld latches onto the host, grafting two parasitic weapon mounts onto the body and allowing the host to release an EMP pulse.</description>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.45, 0.55, 0.65)</defaultLabelColor>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+        <label>bastionmeld parasitism</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_ParasitismWeaponMounts">
+        <tentacles>
+          <li Class="FleshHive.TentacleProperties_WeaponMount">
+            <tentacleClass>FleshHive.Tentacle_WeaponMount</tentacleClass>
+            <slotLabel>FH_LeftParasiticWeaponSlot</slotLabel>
+            <renderNode>
+              <nodeClass>FleshHive.PawnNodeRender_Tentacle</nodeClass>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <parentTagDef>Body</parentTagDef>
+              <overrideMeshSize>(1, 1)</overrideMeshSize>
+              <baseLayer>100</baseLayer>
+              <pawnType>Any</pawnType>
+              <debugLabel>Left weapon mount</debugLabel>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li Class="FleshHive.TentacleProperties_WeaponMount">
+            <tentacleClass>FleshHive.Tentacle_WeaponMount</tentacleClass>
+            <slotLabel>FH_RightParasiticWeaponSlot</slotLabel>
+            <renderNode>
+              <nodeClass>FleshHive.PawnNodeRender_Tentacle</nodeClass>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <parentTagDef>Body</parentTagDef>
+              <overrideMeshSize>(1, 1)</overrideMeshSize>
+              <baseLayer>100</baseLayer>
+              <pawnType>Any</pawnType>
+              <debugLabel>Right weapon mount</debugLabel>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_BastionmeldFleshPulse_Parasitism</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_Regeneration">
+        <regenHediff>Regeneration</regenHediff>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

@@ -11,6 +11,14 @@
   <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>Shield Claw</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
   <FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>furiousmeld parasitism</FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>
   
+  <FH_Parasitism_Bastionmeld.label>bastionmeld parasitism</FH_Parasitism_Bastionmeld.label>
+  <FH_Parasitism_Bastionmeld.description>The bastionmeld latches onto the host, grafting two parasitic weapon mounts onto the body and allowing the host to release an EMP pulse.</FH_Parasitism_Bastionmeld.description>
+  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.0.label>left parasitic weapon mount</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.0.label>
+  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.0.renderNodeProperties.0.debugLabel>Left weapon mount</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.0.renderNodeProperties.0.debugLabel>
+  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.label>right parasitic weapon mount</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.label>
+  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.renderNodeProperties.0.debugLabel>Right weapon mount</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.renderNodeProperties.0.debugLabel>
+  <FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>bastionmeld parasitism</FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>
+  
   <FH_Parasitism_Nexusmeld.label>nexusmeld parasitism</FH_Parasitism_Nexusmeld.label>
   <FH_Parasitism_Nexusmeld.description>The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts.</FH_Parasitism_Nexusmeld.description>
   <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>Left Spike</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
@@ -19,5 +27,4 @@
   
   <FH_Unification.label>flesh unification</FH_Unification.label>
   <FH_Unification.description>The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced.</FH_Unification.description>
-  
 </LanguageData>

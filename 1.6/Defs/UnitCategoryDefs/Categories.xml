@@ -29,6 +29,23 @@
         </units>
     </HiveCreatureFramework.SpawnCategoryDef>
 
+    <HiveCreatureFramework.SpawnCategoryDef>
+        <defName>FH_Category_GiantFleshBeast</defName>
+        <label>Giant flesh beast</label>
+        <description>Giant flesh beast</description>
+        <color>(0.85, 0.18, 0.18)</color>
+        <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
+            <research>FH_Research_AdvancedFleshHive</research>
+        </worker>
+        <units>
+            <li>FH_Unit_Dreadmeld</li>
+            <li>FH_Unit_Furiousmeld</li>
+            <li>FH_Unit_Bastionmeld</li>
+            <li>FH_Unit_Nexusmeld</li>
+            <li>FH_Unit_Fissionmeld</li>
+        </units>
+    </HiveCreatureFramework.SpawnCategoryDef>
+
     <HiveCreatureFramework.UnitDef>
         <defName>FH_Unit_Whipspike</defName>
         <label>Whipspike</label>
@@ -136,6 +153,86 @@
         <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Whipspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Dreadmeld</defName>
+        <label>Dreadmeld</label>
+        <description>Dreadmeld</description>
+        <kind>FH_Dreadmeld</kind>
+        <spawningDay>15~15</spawningDay>
+        <requirements>
+            <Shard>6</Shard>
+            <Bioferrite>24</Bioferrite>
+            <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
+        </requirements>
+        <costs>
+            <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Furiousmeld</defName>
+        <label>Furiousmeld</label>
+        <description>Furiousmeld</description>
+        <kind>FH_Furiousmeld</kind>
+        <spawningDay>15~15</spawningDay>
+        <requirements>
+            <Shard>6</Shard>
+            <Bioferrite>24</Bioferrite>
+            <FH_FuriousmeldSeed>1</FH_FuriousmeldSeed>
+        </requirements>
+        <costs>
+            <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Bastionmeld</defName>
+        <label>Bastionmeld</label>
+        <description>Bastionmeld</description>
+        <kind>FH_Bastionmeld</kind>
+        <spawningDay>15~15</spawningDay>
+        <requirements>
+            <Shard>6</Shard>
+            <Bioferrite>24</Bioferrite>
+            <FH_BastionmeldSeed>1</FH_BastionmeldSeed>
+        </requirements>
+        <costs>
+            <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Nexusmeld</defName>
+        <label>Nexusmeld</label>
+        <description>Nexusmeld</description>
+        <kind>FH_Nexusmeld</kind>
+        <spawningDay>15~15</spawningDay>
+        <requirements>
+            <Shard>6</Shard>
+            <Bioferrite>24</Bioferrite>
+            <FH_NexusmeldSeed>1</FH_NexusmeldSeed>
+        </requirements>
+        <costs>
+            <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Fissionmeld</defName>
+        <label>Fissionmeld</label>
+        <description>Fissionmeld</description>
+        <kind>FH_Fissionmeld</kind>
+        <spawningDay>15~15</spawningDay>
+        <requirements>
+            <Shard>6</Shard>
+            <Bioferrite>24</Bioferrite>
+            <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
+        </requirements>
+        <costs>
+            <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 

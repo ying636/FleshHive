@@ -28,5 +28,20 @@
   <FH_Unit_Trispike.label>三爪兽</FH_Unit_Trispike.label>
   <FH_Unit_Trispike.description>生产一只三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike.description>
 
+  <FH_Unit_Dreadmeld.label>惊惧母兽</FH_Unit_Dreadmeld.label>
+  <FH_Unit_Dreadmeld.description>在血肉主巢中培养一只惊惧母兽。</FH_Unit_Dreadmeld.description>
+
+  <FH_Unit_Furiousmeld.label>暴怒母兽</FH_Unit_Furiousmeld.label>
+  <FH_Unit_Furiousmeld.description>在血肉主巢中培养一只暴怒母兽。</FH_Unit_Furiousmeld.description>
+
+  <FH_Unit_Bastionmeld.label>铁骸母兽</FH_Unit_Bastionmeld.label>
+  <FH_Unit_Bastionmeld.description>在血肉主巢中培养一只铁骸母兽。</FH_Unit_Bastionmeld.description>
+
+  <FH_Unit_Nexusmeld.label>统合母兽</FH_Unit_Nexusmeld.label>
+  <FH_Unit_Nexusmeld.description>在血肉主巢中培养一只统合母兽。</FH_Unit_Nexusmeld.description>
+
+  <FH_Unit_Fissionmeld.label>裂殖母兽</FH_Unit_Fissionmeld.label>
+  <FH_Unit_Fissionmeld.description>在血肉主巢中培养一只裂殖母兽。</FH_Unit_Fissionmeld.description>
+
 </LanguageData>
 

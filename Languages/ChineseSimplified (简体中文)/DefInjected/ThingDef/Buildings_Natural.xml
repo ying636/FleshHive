@@ -146,4 +146,9 @@
   <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
   <FH_FleshTableSquare.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableSquare.description>
   
+  <!-- EN: weakened fissionmeld -->
+  <FH_DormantFissionmeld.label>虚弱裂殖母兽</FH_DormantFissionmeld.label>
+  <!-- EN: A structure produced by a fissionmeld in its weakened state to prevent its own complete death. -->
+  <FH_DormantFissionmeld.description>裂殖母兽在虚弱状态产生的结构，防止自身彻底死亡。</FH_DormantFissionmeld.description>
+  
 </LanguageData>

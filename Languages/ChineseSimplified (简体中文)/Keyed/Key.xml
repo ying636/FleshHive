@@ -102,6 +102,8 @@
   <FH_FleshManagement_HiveScaleTooltipTotal>总计：{0}</FH_FleshManagement_HiveScaleTooltipTotal>
   <!-- EN: Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale. -->
   <FH_FleshManagement_HiveScaleTooltipRule>每50格血肉地形提供1巢穴规模。血肉巢穴、血肉主巢、巢群神经结节和巢群神经中枢会额外提供规模。</FH_FleshManagement_HiveScaleTooltipRule>
+  <!-- EN: Fleshbeast scale: {0} / {1} -->
+  <FH_FleshManagement_HiveCapacityTooltip>血肉兽规模：{0} / {1}</FH_FleshManagement_HiveCapacityTooltip>
   <!-- EN: Nutrition -->
   <FH_FleshManagement_Nutrition>营养度</FH_FleshManagement_Nutrition>
   <!-- EN: Activity -->
@@ -110,10 +112,14 @@
   <FH_FleshManagement_ActivityTooltip>巢穴活跃度会随血肉兽和巢穴规模上升。可在血肉巢穴或神经结节处进行压制，降低暴动概率。</FH_FleshManagement_ActivityTooltip>
   <!-- EN: Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold. -->
   <FH_FleshManagement_AutoSuppressTooltip>自动压制：开启后，活跃度高于压制阈值时，殖民者会自动压制巢穴活跃度。</FH_FleshManagement_AutoSuppressTooltip>
-  <!-- EN: Hive scale: {0} -->
-  <FH_FleshManagement_HiveScaleShort>巢穴规模：{0}</FH_FleshManagement_HiveScaleShort>
+  <!-- EN: Flesh terrain: {0} -->
+  <FH_FleshManagement_FleshCount>血肉数量：{0}</FH_FleshManagement_FleshCount>
+  <!-- EN: Owned fleshbeasts: {0} -->
+  <FH_FleshManagement_HiveScaleShort>拥有血肉兽：{0}</FH_FleshManagement_HiveScaleShort>
   <!-- EN: Hive progress -->
   <FH_FleshManagement_Progress>巢穴进程</FH_FleshManagement_Progress>
+  <!-- EN: Breeding -->
+  <FH_FleshManagement_Breeding>培育中</FH_FleshManagement_Breeding>
   <!-- EN: Temporary fleshbeast group -->
   <FH_FleshManagement_TemporaryGroup>临时血肉兽群组</FH_FleshManagement_TemporaryGroup>
   <!-- EN: No linked hive -->
@@ -166,6 +172,10 @@
   <FH_FleshDigester_Status_Inactive>状态：停用（营养不足）</FH_FleshDigester_Status_Inactive>
   <!-- EN: Flesh weapon mount -->
   <FH_FleshWeaponMount>血肉武器基座</FH_FleshWeaponMount>
+  <!-- EN: Mount {0} to parasitic weapon slot -->
+  <FH_MountParasiticWeapon>将{0}挂载到寄生武器槽</FH_MountParasiticWeapon>
+  <!-- EN: Cannot mount {0} to parasitic weapon slot -->
+  <FH_CannotMountParasiticWeapon>无法将{0}挂载到寄生武器槽</FH_CannotMountParasiticWeapon>
   <!-- EN: Switch to large -->
   <FH_Fusion_SwitchToLarge>大型融合</FH_Fusion_SwitchToLarge>
   <!-- EN: Switch to medium -->
@@ -202,7 +212,14 @@
   <ParasitismAbility>寄生能力</ParasitismAbility>
   <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
   <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
+  <FH_TabParasiticWeapons>寄生武器</FH_TabParasiticWeapons>
+  <FH_ParasiticWeaponSlot>寄生武器槽</FH_ParasiticWeaponSlot>
+  <FH_LeftParasiticWeaponSlot>寄生武器：左装备栏</FH_LeftParasiticWeaponSlot>
+  <FH_RightParasiticWeaponSlot>寄生武器：右装备栏</FH_RightParasiticWeaponSlot>
+  <FH_ParasiticWeaponSlotEmpty>空</FH_ParasiticWeaponSlotEmpty>
+  <FH_UnmountParasiticWeaponDesc>从{0}卸下{1}</FH_UnmountParasiticWeaponDesc>
 
   <TemporaryFleshGroup>临时血肉兽群组</TemporaryFleshGroup>
+  <FH_FissionmeldDormant_ResurrectsIn>复生剩余时间：{0}</FH_FissionmeldDormant_ResurrectsIn>
 
 </LanguageData>

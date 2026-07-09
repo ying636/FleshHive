@@ -8,6 +8,9 @@
     <building>FH_NerveBundle</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>400</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -27,6 +30,9 @@
     <building>FH_NerveCenter</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>700</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -46,6 +52,9 @@
     <building>FH_FleshSack</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>400</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -63,6 +72,9 @@
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Walls</drawStyleCategory>
     <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
       <showWhenFinished>false</showWhenFinished>
@@ -106,6 +118,9 @@
     <building>FH_FleshDoor</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -123,6 +138,9 @@
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Defenses</drawStyleCategory>
     <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
       <showWhenFinished>false</showWhenFinished>
@@ -143,6 +161,9 @@
     <building>FH_FleshHopper</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>120</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -159,6 +180,9 @@
     <building>FH_FleshBox</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>120</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -175,6 +199,9 @@
     <building>FH_FleshParasiteVat</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>300</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_FleshbeastCoexistence</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -194,6 +221,9 @@
     <building>FH_FleshTurret</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>180</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -210,6 +240,9 @@
     <building>FH_FleshmassSpitter</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>300</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshmassSpitterGhost" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -229,6 +262,9 @@
     <building>FH_FleshSpreader</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>180</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -245,6 +281,9 @@
     <building>FH_FleshDigester</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>520</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -264,6 +303,9 @@
     <building>FH_FleshDigesterS</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>130</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_FleshbeastCoexistence</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -306,6 +348,9 @@
     <building>FH_FleshLamp</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />

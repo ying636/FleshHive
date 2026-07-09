@@ -2,8 +2,8 @@
 <Defs>
   <ResearchProjectDef>
     <defName>FH_Research_BasicFleshHive</defName>
-    <label>基础血肉巢穴</label>
-    <description>TODO</description>
+    <label>basic flesh hive</label>
+    <description>Unlocks basic flesh hive cultivation, basic fleshbeasts, flesh hoppers, flesh trees, flesh doors, flesh blocks, flesh lamps, and efficient flesh expansion research.</description>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
     <researchViewX>0</researchViewX>
@@ -13,8 +13,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_FleshbeastCoexistence</defName>
-    <label>血肉兽共存</label>
-    <description>TODO</description>
+    <label>fleshbeast coexistence</label>
+    <description>Unlocks flesh parasite vats, flesh tendrils, flesh whips, fleshmass lungs, fleshmass stomachs, and flesh adaptation modules.</description>
     <baseCost>400</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -27,8 +27,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_EfficientFleshExpansion</defName>
-    <label>高效血肉扩张</label>
-    <description>TODO</description>
+    <label>efficient flesh expansion</label>
+    <description>Increases global flesh terrain spread speed by 50%.</description>
     <baseCost>400</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -41,8 +41,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_ComplexFleshHive</defName>
-    <label>复杂血肉巢穴</label>
-    <description>TODO</description>
+    <label>complex flesh hive</label>
+    <description>Unlocks whipspike cultivation, medium fleshbeast fusion, flesh sacks, flesh bunkers, flesh recycler pools, flesh primary nests, bone spike spitters, and nerve bundles.</description>
     <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -55,8 +55,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_BonePlatingFleshBlock</defName>
-    <label>骨甲血肉块</label>
-    <description>TODO</description>
+    <label>chitin-plated flesh blocks</label>
+    <description>Unlocks chitin-plated flesh blocks and chitin-plated flesh barricades.</description>
     <baseCost>600</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -69,8 +69,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_EfficientNutritionAbsorption</defName>
-    <label>高效营养吸收</label>
-    <description>TODO</description>
+    <label>efficient nutrition absorption</label>
+    <description>Increases nutrition gained from corpses, food, and flesh sacks by 50%.</description>
     <baseCost>600</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -83,8 +83,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_AdvancedFleshHive</defName>
-    <label>高级血肉巢穴</label>
-    <description>TODO</description>
+    <label>advanced flesh hive</label>
+    <description>Unlocks large fleshbeast fusion, advanced mother-beast fusion when the required mother-beast node is available, nerve centers, fleshmass spitters, flesh burst launchers, and parasite expansion packs.</description>
     <baseCost>1200</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -97,8 +97,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_SelfRepairFlesh</defName>
-    <label>自修复血肉</label>
-    <description>TODO</description>
+    <label>self-repairing flesh</label>
+    <description>Allows flesh buildings to consume hive nutrition to repair their own hit points over time.</description>
     <baseCost>900</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -111,8 +111,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_FleshHeartControl</defName>
-    <label>血肉心脏控制</label>
-    <description>TODO</description>
+    <label>flesh heart control</label>
+    <description>Reduces global flesh hive activity growth speed by 50%.</description>
     <baseCost>900</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -125,8 +125,8 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_EfficientCellDivision</defName>
-    <label>高效细胞分裂</label>
-    <description>TODO</description>
+    <label>efficient cell division</label>
+    <description>Increases fleshbeast production speed by 50%.</description>
     <baseCost>900</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>

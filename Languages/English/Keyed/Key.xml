@@ -55,12 +55,15 @@
   <FH_FleshManagement_HiveScaleTooltipBuildingsNone>Buildings: +0 scale</FH_FleshManagement_HiveScaleTooltipBuildingsNone>
   <FH_FleshManagement_HiveScaleTooltipTotal>Total: {0}</FH_FleshManagement_HiveScaleTooltipTotal>
   <FH_FleshManagement_HiveScaleTooltipRule>Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale.</FH_FleshManagement_HiveScaleTooltipRule>
+  <FH_FleshManagement_HiveCapacityTooltip>Fleshbeast scale: {0} / {1}</FH_FleshManagement_HiveCapacityTooltip>
   <FH_FleshManagement_Nutrition>Nutrition</FH_FleshManagement_Nutrition>
   <FH_FleshManagement_Activity>Activity</FH_FleshManagement_Activity>
   <FH_FleshManagement_ActivityTooltip>Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot.</FH_FleshManagement_ActivityTooltip>
   <FH_FleshManagement_AutoSuppressTooltip>Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold.</FH_FleshManagement_AutoSuppressTooltip>
-  <FH_FleshManagement_HiveScaleShort>Hive scale: {0}</FH_FleshManagement_HiveScaleShort>
+  <FH_FleshManagement_FleshCount>Flesh terrain: {0}</FH_FleshManagement_FleshCount>
+  <FH_FleshManagement_HiveScaleShort>Owned fleshbeasts: {0}</FH_FleshManagement_HiveScaleShort>
   <FH_FleshManagement_Progress>Hive progress</FH_FleshManagement_Progress>
+  <FH_FleshManagement_Breeding>Breeding</FH_FleshManagement_Breeding>
   <FH_FleshManagement_TemporaryGroup>Temporary fleshbeast group</FH_FleshManagement_TemporaryGroup>
   <FH_FleshManagement_NoHive>No linked hive</FH_FleshManagement_NoHive>
   <FH_Suppressible_Inspect>Hive activity: {0}</FH_Suppressible_Inspect>
@@ -87,6 +90,8 @@
   <FH_FleshDigester_Status_Active>Status: Active</FH_FleshDigester_Status_Active>
   <FH_FleshDigester_Status_Inactive>Status: Inactive (insufficient nutrition)</FH_FleshDigester_Status_Inactive>
   <FH_FleshWeaponMount>Flesh weapon mount</FH_FleshWeaponMount>
+  <FH_MountParasiticWeapon>Mount {0} to parasitic weapon slot</FH_MountParasiticWeapon>
+  <FH_CannotMountParasiticWeapon>Cannot mount {0} to parasitic weapon slot</FH_CannotMountParasiticWeapon>
   <FH_Fusion_SwitchToLarge>Large fusion</FH_Fusion_SwitchToLarge>
   <FH_Fusion_SwitchToMedium>Medium fusion</FH_Fusion_SwitchToMedium>
   <FH_Fusion_SlotSmall>Small fleshbeast</FH_Fusion_SlotSmall>
@@ -97,7 +102,14 @@
   <FH_Fusion_ResultType>Fleshbeast type: {0}</FH_Fusion_ResultType>
   <FH_Fusion_ResultTraits>Trait: {0}</FH_Fusion_ResultTraits>
   <FH_Fusion_ResultHint>Perform this fusion once to learn the result.</FH_Fusion_ResultHint>
+  <FH_TabParasiticWeapons>Parasitic weapons</FH_TabParasiticWeapons>
+  <FH_ParasiticWeaponSlot>Parasitic weapon slot</FH_ParasiticWeaponSlot>
+  <FH_LeftParasiticWeaponSlot>Parasitic weapon: left slot</FH_LeftParasiticWeaponSlot>
+  <FH_RightParasiticWeaponSlot>Parasitic weapon: right slot</FH_RightParasiticWeaponSlot>
+  <FH_ParasiticWeaponSlotEmpty>Empty</FH_ParasiticWeaponSlotEmpty>
+  <FH_UnmountParasiticWeaponDesc>Unmount {1} from {0}</FH_UnmountParasiticWeaponDesc>
 
   <TemporaryFleshGroup>Temporary fleshbeast group</TemporaryFleshGroup>
+  <FH_FissionmeldDormant_ResurrectsIn>Resurrects in: {0}</FH_FissionmeldDormant_ResurrectsIn>
 
 </LanguageData>

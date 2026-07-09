@@ -23,5 +23,7 @@
   <FH_NerveBundle.description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</FH_NerveBundle.description>
   <FH_NerveCenter.label>hive nerve center</FH_NerveCenter.label>
   <FH_NerveCenter.description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</FH_NerveCenter.description>
+  <FH_DormantFissionmeld.label>weakened fissionmeld</FH_DormantFissionmeld.label>
+  <FH_DormantFissionmeld.description>A structure produced by a fissionmeld in its weakened state to prevent its own complete death.</FH_DormantFissionmeld.description>
 
 </LanguageData>

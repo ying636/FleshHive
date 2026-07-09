@@ -8,7 +8,7 @@
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
     <cooldownTicksRange>30000</cooldownTicksRange>
-    <iconPath>UI/Ability/FH_SkillIcon32</iconPath>
+    <iconPath>UI/Ability/FH_BastionmeldSummonDeadguard</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
@@ -38,6 +38,32 @@
   <AbilityDef>
     <defName>FH_BastionmeldFleshPulse</defName>
     <label>flesh pulse</label>
+    <description>Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>240000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>4</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityBastionmeldFleshPulse">
+        <radius>10.9</radius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_BastionmeldFleshPulse_Parasitism</defName>
+    <label>electromagnetic pulse</label>
     <description>Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
@@ -191,6 +217,33 @@
     </modExtensions>
   </AbilityDef>
 
+  <AbilityDef>
+    <defName>FH_FissionmeldFission</defName>
+    <label>flesh fission</label>
+    <description>The fissionmeld consumes twisted flesh and immediately buds a parasitic fleshbeast from its own body.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_FissionmeldFission</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityFissionmeldFission">
+        <twistedFleshCost>200</twistedFleshCost>
+        <spawnRadius>5</spawnRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
   <ThingDef ParentName="BaseBullet">
     <defName>FH_Projectile_Rampage</defName>
     <label>rampage</label>
@@ -233,5 +286,4 @@
       </li>
     </comps>
   </ThingDef>
-
 </Defs>

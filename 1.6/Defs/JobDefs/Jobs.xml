@@ -50,4 +50,10 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-</Defs> 
+  <JobDef>
+    <defName>FH_Job_MountParasiticWeapon</defName>
+    <driverClass>FleshHive.JobDriver_MountParasiticWeapon</driverClass>
+    <reportString>mounting TargetA.</reportString>
+  </JobDef>
+
+</Defs>

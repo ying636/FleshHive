@@ -250,6 +250,7 @@
         <UnitCategories>
           <li>FH_Category_LittleFleshBeast</li>
           <li>FH_Category_MediumFleshBeast</li>
+          <li>FH_Category_GiantFleshBeast</li>
           <li>FH_Category_FleshItems</li>
         </UnitCategories>
         <traitOptions>
@@ -373,12 +374,15 @@
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_NerveBundle/FH_FleshmassNerveBundle</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(2,2)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(2,2)</size>
     <altitudeLayer>Building</altitudeLayer>
-    <drawerType>MapMeshOnly</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
@@ -447,12 +451,15 @@
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_NerveCenter/FH_NerveCenter</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(2,2)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(2,3)</size>
     <altitudeLayer>Building</altitudeLayer>
-    <drawerType>MapMeshOnly</drawerType>
+    <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
@@ -505,7 +512,7 @@
           <li>FH_FleshPrimaryNest</li>
           <li>FH_NerveCenter</li>
         </linkableBuildings>
-        <maxSimultaneous>1</maxSimultaneous>
+        <maxSimultaneous>5</maxSimultaneous>
         <maxDistance>8</maxDistance>
         <requiresLOS>false</requiresLOS>
       </li>
@@ -1628,6 +1635,47 @@
       <texPath>Things/Plant/FH_FleshTree/StumpSmashed_FleshTree</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_DormantFissionmeld</defName>
+    <label>weakened fissionmeld</label>
+    <description>A structure produced by a fissionmeld in its weakened state to prevent its own complete death.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld_Build</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4.5,4.5)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+    </graphicData>
+    <size>(3,3)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>1</fillPercent>
+    <tickerType>Normal</tickerType>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="FleshHive.CompProperties_FissionmeldDormant">
+        <resurrectKind>FH_Fissionmeld</resurrectKind>
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <spawnPointsRange>100~300</spawnPointsRange>
+        <spawnRadius>5</spawnRadius>
+        <spawnIntervalTicks>24000</spawnIntervalTicks>
+        <resurrectTicks>60000</resurrectTicks>
+      </li>
+    </comps>
   </ThingDef>
 
 </Defs>

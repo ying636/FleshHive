@@ -27,7 +27,10 @@
     <resourceCosts>
       <FH_Resource_Nutrition>300</FH_Resource_Nutrition>
     </resourceCosts>
-     <changeConditions>
+    <changeConditions>
+      <li Class="FleshHive.ChangeCondition_ResearchFinished">
+        <research>FH_Research_ComplexFleshHive</research>
+      </li>
       <li Class="FleshHive.ChangeCondition_OnlyOnePrimaryNest" />
     </changeConditions>  
     <progressTick>60000</progressTick>

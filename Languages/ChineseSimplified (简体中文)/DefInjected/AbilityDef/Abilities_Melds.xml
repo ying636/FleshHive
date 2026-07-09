@@ -37,4 +37,13 @@
   <!-- EN: Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields. -->
   <FH_BastionmeldFleshPulse.description>以自身为中心释放EMP脉冲，干扰附近的机械族、炮塔和子弹护盾。</FH_BastionmeldFleshPulse.description>
 
+  <!-- EN: electromagnetic pulse -->
+  <FH_BastionmeldFleshPulse_Parasitism.label>电磁脉冲</FH_BastionmeldFleshPulse_Parasitism.label>
+  <!-- EN: Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields. -->
+  <FH_BastionmeldFleshPulse_Parasitism.description>以自身为中心释放EMP脉冲，干扰附近的机械族、炮塔和子弹护盾。</FH_BastionmeldFleshPulse_Parasitism.description>
+
+  <!-- EN: flesh fission -->
+  <FH_FissionmeldFission.label>血肉裂殖</FH_FissionmeldFission.label>
+  <!-- EN: The fissionmeld consumes twisted flesh and immediately buds a parasitic fleshbeast from its own body. -->
+  <FH_FissionmeldFission.description>裂殖母兽消耗扭曲肉，立刻从自身躯体上萌生一只寄生血肉兽。</FH_FissionmeldFission.description>
 </LanguageData>

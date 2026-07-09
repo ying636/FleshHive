@@ -10,5 +10,10 @@
   <FH_Unit_Shieldspike.description>Spawn a shieldspike. Requires discovering the matching fusion recipe first.</FH_Unit_Shieldspike.description>
   <FH_Unit_Toughspike.description>Spawn a toughspike. Requires discovering the matching fusion recipe first.</FH_Unit_Toughspike.description>
   <FH_Unit_Trispike.description>Spawn a trispike. Requires discovering the matching fusion recipe first.</FH_Unit_Trispike.description>
+  <FH_Unit_Dreadmeld.description>Cultivate a dreadmeld in a flesh primary nest.</FH_Unit_Dreadmeld.description>
+  <FH_Unit_Furiousmeld.description>Cultivate a furiousmeld in a flesh primary nest.</FH_Unit_Furiousmeld.description>
+  <FH_Unit_Bastionmeld.description>Cultivate a bastionmeld in a flesh primary nest.</FH_Unit_Bastionmeld.description>
+  <FH_Unit_Nexusmeld.description>Cultivate a nexusmeld in a flesh primary nest.</FH_Unit_Nexusmeld.description>
+  <FH_Unit_Fissionmeld.description>Cultivate a fissionmeld in a flesh primary nest.</FH_Unit_Fissionmeld.description>
 </LanguageData>
 

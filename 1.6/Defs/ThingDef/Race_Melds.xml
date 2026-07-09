@@ -524,6 +524,14 @@
       <li Class="FleshHive.CompProperties_TwistedFlesh">
         <capacity>400</capacity>
       </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Bastionmeld</hediff>
+        <effect>Flesh parasitism mood -6; Social Impact -1; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
+        <abilityLabel>Bastionmeld tentacle attack</abilityLabel>
+        <abilityDescription>Release an EMP pulse centered on the host, matching an IED EMP trap's radius.</abilityDescription>
+      </li>
     </comps>
     <tools>
       <li>
@@ -616,23 +624,37 @@
     <label>fissionmeld</label>
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate.</description>
     <statBases>
-      <MoveSpeed>3.0</MoveSpeed>
+      <MoveSpeed>1.25</MoveSpeed>
       <MinimumContainmentStrength>90</MinimumContainmentStrength>
-      <ToxicResistance>0.5</ToxicResistance>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <ToxicResistance>0.80</ToxicResistance>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <FilthRate>1.0</FilthRate>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <FH_Stat_ParasitismCapacity>-1</FH_Stat_ParasitismCapacity>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld_east</uiIconPath>
     <race>
       <body>Bulbfreak</body>
-      <baseBodySize>3.5</baseBodySize>
-      <baseHealthScale>0.3</baseHealthScale>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
-      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
-        <divideBloodFilthCountRange>4~6</divideBloodFilthCountRange>
-        <dividePawnCount>3</dividePawnCount>
-        <dividePawnSize>Large</dividePawnSize>
-        <dropThing>FH_FissionmeldSeed</dropThing>
+      <deathAction Class="FleshHive.DeathActionProperties_FissionmeldDormancy">
+        <dormantThing>FH_DormantFissionmeld</dormantThing>
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <spawnPointsRange>100~300</spawnPointsRange>
+        <spawnRadius>5</spawnRadius>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -681,36 +703,41 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Giant</size>
       </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>800</capacity>
+      </li>
     </comps>
     <tools>
       <li>
-        <label>tentacle</label>
+        <label>left bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Cut</li>
+          <li>Stab</li>
         </capacities>
-        <power>9</power>
+        <power>24</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Stab</soundMeleeHit>
       </li>
       <li>
-        <label>tentacle</label>
+        <label>right bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Cut</li>
+          <li>Stab</li>
         </capacities>
-        <power>9</power>
+        <power>24</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Stab</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>5</power>
+        <power>10</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -725,9 +752,16 @@
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>FH_Fissionmeld</race>
     <combatPower>450</combatPower>
+    <abilities>
+      <li>FH_FissionmeldFission</li>
+    </abilities>
     <startingHediffs>
       <li>
         <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+      <li>
+        <def>FH_ParasitismSystem</def>
         <severity>1</severity>
       </li>
     </startingHediffs>
@@ -1016,4 +1050,26 @@
       </li>
     </tools>
   </ThingDef>
-  </Defs>
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Dreadmeld</defName>
+    <label>dreadmeld</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>FH_Dreadmeld</race>
+    <combatPower>600</combatPower>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>
