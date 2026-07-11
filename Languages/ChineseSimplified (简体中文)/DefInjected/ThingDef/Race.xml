@@ -76,6 +76,21 @@
   <FH_Fleshwind.tools.horned_head.label>TODO</FH_Fleshwind.tools.horned_head.label>
   <!-- EN: horned head -->
   <FH_Fleshwind.tools.horned_head.labelNoLocation>TODO</FH_Fleshwind.tools.horned_head.labelNoLocation>
+
+  <!-- EN: Flesh replica -->
+  <FH_FleshReplica.label>血肉拟像</FH_FleshReplica.label>
+  <!-- EN: TODO. -->
+  <FH_FleshReplica.description>TODO</FH_FleshReplica.description>
+  <!-- EN: fist -->
+  <FH_FleshReplica.tools.fist.label>拳头</FH_FleshReplica.tools.fist.label>
+  <!-- EN: head -->
+  <FH_FleshReplica.tools.head.label>头部</FH_FleshReplica.tools.head.label>
+  <!-- EN: The flesh replica synchronizes with the host instead of living inside the host. -->
+  <FH_FleshReplica.comps.ParasitismComp.abilityDescription>血肉拟像与宿主同步，而不是寄居在宿主体内。</FH_FleshReplica.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Synchronization: flesh replica -->
+  <FH_FleshReplica.comps.ParasitismComp.abilityLabel>同步：血肉拟像</FH_FleshReplica.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Synchronizes with the host. The flesh replica remains active and mirrors the host's skill levels. -->
+  <FH_FleshReplica.comps.ParasitismComp.effect>与宿主同步。血肉拟像会保留行动能力，并同步宿主的技能等级。</FH_FleshReplica.comps.ParasitismComp.effect>
   
   <!-- EN: 胃血兽 -->
   <FH_Gutspike.label>TODO</FH_Gutspike.label>

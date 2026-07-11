@@ -40,6 +40,11 @@
   <FH_Parasitism_Toughspike.label>双爪兽寄生</FH_Parasitism_Toughspike.label>
   <!-- EN: 宿主体表生长两条骨刺触手，提高全局工作效率。 -->
   <FH_Parasitism_Toughspike.description>宿主体表生长两条骨刺触手，提高全局工作效率。</FH_Parasitism_Toughspike.description>
+
+  <!-- EN: flesh replica synchronization -->
+  <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>
+  <!-- EN: TODO. -->
+  <FH_Parasitism_FleshReplica.description>TODO</FH_Parasitism_FleshReplica.description>
   
   <!-- EN: 三爪兽寄生 -->
   <FH_Parasitism_Trispike.label>三爪兽寄生</FH_Parasitism_Trispike.label>

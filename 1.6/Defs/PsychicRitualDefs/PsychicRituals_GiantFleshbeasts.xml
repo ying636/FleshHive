@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonNexusmeld</defName>
+    <label>draw nexusmeld</label>
+    <description>Create a psychic pulse which will draw a nexusmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <researchPrerequisite>SummonFleshbeastsPlayer</researchPrerequisite>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>120</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Nexusmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonFleshbeasts</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonDreadmeld</defName>
+    <label>draw dreadmeld</label>
+    <description>Create a psychic pulse which will draw a dreadmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <researchPrerequisite>SummonFleshbeastsPlayer</researchPrerequisite>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>120</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Dreadmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonFleshbeasts</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonFuriousmeld</defName>
+    <label>draw furiousmeld</label>
+    <description>Create a psychic pulse which will draw a furiousmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <researchPrerequisite>SummonFleshbeastsPlayer</researchPrerequisite>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>120</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Furiousmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonFleshbeasts</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonBastionmeld</defName>
+    <label>draw bastionmeld</label>
+    <description>Create a psychic pulse which will draw a bastionmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <researchPrerequisite>SummonFleshbeastsPlayer</researchPrerequisite>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>120</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Bastionmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonFleshbeasts</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonFissionmeld</defName>
+    <label>draw fissionmeld</label>
+    <description>Create a psychic pulse which will draw a fissionmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <researchPrerequisite>SummonFleshbeastsPlayer</researchPrerequisite>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>120</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Fissionmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>UI/PsychicRituals/PsychicRitual_SummonFleshbeasts</iconPath>
+  </PsychicRitualDef>
+</Defs>

@@ -6,6 +6,9 @@
   
   <FH_Unit_Fleshwind.label>翼爪兽</FH_Unit_Fleshwind.label>
   <FH_Unit_Fleshwind.description>生产一只翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind.description>
+
+  <FH_Unit_FleshReplica.label>血肉拟像</FH_Unit_FleshReplica.label>
+  <FH_Unit_FleshReplica.description>生产一只血肉拟像。</FH_Unit_FleshReplica.description>
   
   <FH_Unit_Gutspike.label>胃血兽</FH_Unit_Gutspike.label>
   <FH_Unit_Gutspike.description>生产一只胃血兽。</FH_Unit_Gutspike.description>

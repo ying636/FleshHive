@@ -46,4 +46,9 @@
   <FH_FissionmeldFission.label>血肉裂殖</FH_FissionmeldFission.label>
   <!-- EN: The fissionmeld consumes twisted flesh and immediately buds a parasitic fleshbeast from its own body. -->
   <FH_FissionmeldFission.description>裂殖母兽消耗扭曲肉，立刻从自身躯体上萌生一只寄生血肉兽。</FH_FissionmeldFission.description>
+
+  <!-- EN: flesh rebirth -->
+  <FH_FleshRebirth.label>血肉重生</FH_FleshRebirth.label>
+  <!-- EN: Consume twisted flesh to prepare a death refusal, allowing the host to rapidly rebuild their body after death. -->
+  <FH_FleshRebirth.description>消耗200扭曲肉准备一次死亡规避，使宿主死亡后能够快速重塑躯体。</FH_FleshRebirth.description>
 </LanguageData>

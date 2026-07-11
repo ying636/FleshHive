@@ -706,6 +706,12 @@
       <li Class="FleshHive.CompProperties_TwistedFlesh">
         <capacity>800</capacity>
       </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_FleshRebirth</iconPath>
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Fissionmeld</hediff>
+        <twistedFleshCapacity>800</twistedFleshCapacity>
+      </li>
     </comps>
     <tools>
       <li>

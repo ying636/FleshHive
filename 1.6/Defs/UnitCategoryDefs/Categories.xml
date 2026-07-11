@@ -22,6 +22,7 @@
         <color>(0.75, 0.15, 0.15)</color>
         <units>
             <li>FH_Unit_Toughspike</li>
+            <li>FH_Unit_FleshReplica</li>
             <li>FH_Unit_Shieldspike</li>
             <li>FH_Unit_Trispike</li>
             <li>FH_Unit_Shatterspike</li>
@@ -103,6 +104,16 @@
         <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Toughspike</kind>
         <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Fingerspike</prerequisiteFusion>
+        <costs>
+            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_FleshReplica</defName>
+        <label>Flesh replica</label>
+        <description>Spawn a flesh replica.</description>
+        <kind>FH_FleshReplica</kind>
         <costs>
             <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </costs>

@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshHive</defName>
     <label>flesh hive</label>
-    <description>TODO</description>
+    <description>The foundation of a flesh hive. It can gestate fleshbeasts within the nest and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shards, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive.</description>
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
@@ -23,6 +23,7 @@
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
       <li>ITab_Storage</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
@@ -41,7 +42,8 @@
       <InsectJelly>30</InsectJelly>
     </killedLeavings>
     <costList>
-      <InsectJelly>50</InsectJelly>
+      <Shard>2</Shard>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
     </costList>
     <designationCategory>HCF_Hive</designationCategory>
     <building>
@@ -151,6 +153,12 @@
       </li>
       <li Class="FleshHive.CompProperties_Suppressible">
         <suppressIfAbove>0.05</suppressIfAbove>
+      </li>
+      <li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <anomalyKnowledge>1</anomalyKnowledge>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(3,2)</size>

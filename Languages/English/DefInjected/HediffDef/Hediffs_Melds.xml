@@ -18,6 +18,12 @@
   <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.label>right parasitic weapon mount</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.label>
   <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.renderNodeProperties.0.debugLabel>Right weapon mount</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.renderNodeProperties.0.debugLabel>
   <FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>bastionmeld parasitism</FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>
+
+  <FH_Parasitism_Fissionmeld.label>fissionmeld parasitism</FH_Parasitism_Fissionmeld.label>
+  <FH_Parasitism_Fissionmeld.description>The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, and allowing the host to prepare a flesh rebirth.</FH_Parasitism_Fissionmeld.description>
+  <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>Left Bone Spike</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>Right Bone Spike</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>fissionmeld parasitism</FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>
   
   <FH_Parasitism_Nexusmeld.label>nexusmeld parasitism</FH_Parasitism_Nexusmeld.label>
   <FH_Parasitism_Nexusmeld.description>The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts.</FH_Parasitism_Nexusmeld.description>

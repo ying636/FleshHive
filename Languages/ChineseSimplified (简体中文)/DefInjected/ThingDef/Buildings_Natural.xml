@@ -47,9 +47,9 @@
   <FH_FleshDoubleBed.description>一张血肉构成的双人床，柔软的血肉上长出了一个口袋结构和枕头用于休息，意外的舒适，在上面休息的人能够更快的恢复伤势。</FH_FleshDoubleBed.description>
   
   <!-- EN: flesh hive -->
-  <FH_FleshHive.label>TODO</FH_FleshHive.label>
-  <!-- EN: TODO -->
-  <FH_FleshHive.description>TODO</FH_FleshHive.description>
+  <FH_FleshHive.label>血肉巢穴</FH_FleshHive.label>
+  <!-- EN: The foundation of a flesh hive. It can gestate fleshbeasts within the nest and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shards, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. -->
+  <FH_FleshHive.description>血肉巢群的基础，可以在巢穴中孕育血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。</FH_FleshHive.description>
   
   <!-- EN: flesh hopper -->
   <FH_FleshHopper.label>血肉产出口</FH_FleshHopper.label>

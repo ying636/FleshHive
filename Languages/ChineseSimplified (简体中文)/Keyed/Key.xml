@@ -35,6 +35,8 @@
 
   <!-- EN: Twisted Flesh: {0}/{1} -->
   <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
+  <!-- EN: Requires {0} twisted flesh. -->
+  <FH_NotEnoughTwistedFlesh>需要{0}扭曲肉。</FH_NotEnoughTwistedFlesh>
 
   <!-- EN: Toggle {0}'s tentacle attack mode -->
   <ToggleTentacleAttackMode>开关{0}的触手攻击模式</ToggleTentacleAttackMode>
@@ -221,5 +223,7 @@
 
   <TemporaryFleshGroup>临时血肉兽群组</TemporaryFleshGroup>
   <FH_FissionmeldDormant_ResurrectsIn>复生剩余时间：{0}</FH_FissionmeldDormant_ResurrectsIn>
+  <!-- EN: {0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground! -->
+  <FH_SummonGiantFleshbeastCompleteText>{0_nameDef}完成了{RITUAL_definite}仪式。{GIANT_label}和它的血肉兽护卫正在从地下出现！</FH_SummonGiantFleshbeastCompleteText>
 
 </LanguageData>

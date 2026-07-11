@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <AbilityDef>
@@ -21,10 +21,12 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>50</twistedFleshCost>
+      </li>
       <li Class="FleshHive.CompProperties_AbilityBastionmeldSummonDeadguard">
         <summonKind>FH_FleshDeadguard</summonKind>
         <summonCount>4</summonCount>
-        <twistedFleshCost>50</twistedFleshCost>
         <aiSearchRadius>50</aiSearchRadius>
         <weaponOptions>
           <li>Gun_Slugthrower</li>
@@ -130,8 +132,10 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="FleshHive.CompProperties_AbilityFleshSpread">
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
         <twistedFleshCost>100</twistedFleshCost>
+      </li>
+      <li Class="FleshHive.CompProperties_AbilityFleshSpread">
         <explosionRadius>4.5</explosionRadius>
         <baseDamage>5</baseDamage>
       </li>
@@ -157,8 +161,10 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="FleshHive.CompProperties_AbilityFleshSpread">
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
         <twistedFleshCost>100</twistedFleshCost>
+      </li>
+      <li Class="FleshHive.CompProperties_AbilityFleshSpread">
         <explosionRadius>5</explosionRadius>
         <baseDamage>5</baseDamage>
       </li>
@@ -237,9 +243,40 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="FleshHive.CompProperties_AbilityFissionmeldFission">
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
         <twistedFleshCost>200</twistedFleshCost>
+      </li>
+      <li Class="FleshHive.CompProperties_AbilityFissionmeldFission">
         <spawnRadius>5</spawnRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_FleshRebirth</defName>
+    <label>flesh rebirth</label>
+    <description>Consume twisted flesh to prepare a death refusal, allowing the host to rapidly rebuild their body after death.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>60000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_FleshRebirth</iconPath>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>200</twistedFleshCost>
+      </li>
+      <li Class="FleshHive.CompProperties_AbilityFleshRebirth">
+        <deathRefusalHediff>DeathRefusal</deathRefusalHediff>
       </li>
     </comps>
   </AbilityDef>

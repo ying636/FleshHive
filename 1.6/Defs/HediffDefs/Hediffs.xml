@@ -340,6 +340,20 @@
   </HediffDef>
 
   <HediffDef>
+    <defName>FH_Parasitism_FleshReplica</defName>
+    <label>flesh replica synchronization</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>TODO.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
     <defName>FH_Parasitism_Trispike</defName>
     <label>三爪兽寄生</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>

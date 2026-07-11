@@ -19,6 +19,7 @@
   <HCF_Parasite_Noun>Parasite</HCF_Parasite_Noun>
 
   <TwistedFleshCapacity>Twisted Flesh: {0}/{1}</TwistedFleshCapacity>
+  <FH_NotEnoughTwistedFlesh>Requires {0} twisted flesh.</FH_NotEnoughTwistedFlesh>
 
   <ToggleTentacleAttackMode>Toggle {0}'s tentacle attack mode</ToggleTentacleAttackMode>
   <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>
@@ -111,5 +112,6 @@
 
   <TemporaryFleshGroup>Temporary fleshbeast group</TemporaryFleshGroup>
   <FH_FissionmeldDormant_ResurrectsIn>Resurrects in: {0}</FH_FissionmeldDormant_ResurrectsIn>
+  <FH_SummonGiantFleshbeastCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground!</FH_SummonGiantFleshbeastCompleteText>
 
 </LanguageData>

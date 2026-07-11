@@ -33,6 +33,17 @@
   <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.renderNodeProperties.0.debugLabel>右装备栏</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.turrets.1.renderNodeProperties.0.debugLabel>
   <!-- EN: bastionmeld parasitism -->
   <FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>铁骸母兽寄生</FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>
+
+  <!-- EN: fissionmeld parasitism -->
+  <FH_Parasitism_Fissionmeld.label>裂殖母兽寄生</FH_Parasitism_Fissionmeld.label>
+  <!-- EN: The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, and allowing the host to prepare a flesh rebirth. -->
+  <FH_Parasitism_Fissionmeld.description>裂殖母兽寄生宿主，嫁接骨刺，提升扭曲肉容量，提供再生，并允许宿主准备血肉重生。</FH_Parasitism_Fissionmeld.description>
+  <!-- EN: Left Bone Spike -->
+  <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right Bone Spike -->
+  <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <!-- EN: fissionmeld parasitism -->
+  <FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>裂殖母兽寄生</FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>
   
   <!-- EN: nexusmeld parasitism -->
   <FH_Parasitism_Nexusmeld.label>统合母兽寄生</FH_Parasitism_Nexusmeld.label>

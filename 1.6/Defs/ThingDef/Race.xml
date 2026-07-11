@@ -15,6 +15,16 @@
       <foodType>None</foodType>
       <needsRest>false</needsRest>
     </race>
+    <inspectorTabs Inherit="false">
+      <li>HiveCreatureFramework.ITab_Unit</li>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
   </ThingDef>
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LittleFleshBeast" Abstract="True">
@@ -817,6 +827,136 @@
         </dessicatedBodyGraphicData>
         <silhouetteGraphicData>
           <texPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 血肉拟像-->
+
+  <ThingDef ParentName="FH_MediumFleshBeast">
+    <defName>FH_FleshReplica</defName>
+    <label>Flesh replica</label>
+    <thingClass>FleshHive.FleshReplicaUnit</thingClass>
+    <description>TODO.</description>
+    <statBases>
+      <MoveSpeed>4.3</MoveSpeed>
+      <MinimumContainmentStrength>50</MinimumContainmentStrength>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <comps>
+      <li Class="HiveCreatureFramework.UnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+        <skill Class="FleshHive.FleshReplicaSkillData">
+          <availableSkills>
+            <li>Shooting</li>
+            <li>Melee</li>
+            <li>Construction</li>
+            <li>Mining</li>
+            <li>Cooking</li>
+            <li>Plants</li>
+            <li>Animals</li>
+            <li>Crafting</li>
+            <li>Artistic</li>
+            <li>Medicine</li>
+            <li>Social</li>
+            <li>Intellectual</li>
+          </availableSkills>
+        </skill>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>Things/Pawn/Fleshbeast/FH_FleshReplica/FH_FleshReplica_south</iconPath>
+        <cost>2</cost>
+        <hediff>FH_Parasitism_FleshReplica</hediff>
+        <effect>Synchronizes with the host. The flesh replica remains active and mirrors the host's skill levels.</effect>
+        <abilityLabel>Synchronization: flesh replica</abilityLabel>
+        <abilityDescription>The flesh replica synchronizes with the host instead of living inside the host.</abilityDescription>
+        <synchronizeHost>true</synchronizeHost>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshReplicaGear</li>
+    </inspectorTabs>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_FleshReplica/FH_FleshReplica_south</uiIconPath>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <renderTree>FH_FleshReplica</renderTree>
+      <body>Human</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>0.66</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>FullyFormed_Toughspike</def>
+          <soundWounded>Pawn_Fleshbeast_Toughspike_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Toughspike_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Toughspike_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Hands</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Melee_Punch_HitPawn</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_FleshReplica</defName>
+    <label>flesh replica</label>
+    <race>FH_FleshReplica</race>
+    <combatPower>70</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_FleshReplica/FH_FleshReplica</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_FleshReplica/FH_FleshReplica_south</texPath>
           <graphicClass>Graphic_Single</graphicClass>
           <drawSize>2</drawSize>
         </silhouetteGraphicData>

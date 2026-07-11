@@ -208,4 +208,59 @@
     </root>
   </PawnRenderTreeDef>
 
+  <PawnRenderTreeDef>
+    <defName>FH_FleshReplica</defName>
+    <root Class="PawnRenderNodeProperties_Parent">
+      <debugLabel>Root</debugLabel>
+      <tagDef>Root</tagDef>
+      <children>
+        <li>
+          <debugLabel>Body</debugLabel>
+          <nodeClass>FleshHive.PawnRenderNode_FleshReplicaBody</nodeClass>
+          <workerClass>PawnRenderNodeWorker_Body</workerClass>
+          <tagDef>Body</tagDef>
+          <skipFlag>Body</skipFlag>
+          <colorType>Skin</colorType>
+          <useRottenColor>true</useRottenColor>
+          <useSkinShader>true</useSkinShader>
+        </li>
+        <li>
+          <debugLabel>Head</debugLabel>
+          <nodeClass>FleshHive.PawnRenderNode_FleshReplicaHead</nodeClass>
+          <workerClass>FleshHive.PawnRenderNodeWorker_FleshReplicaHead</workerClass>
+          <tagDef>Head</tagDef>
+          <skipFlag>Head</skipFlag>
+          <baseLayer>50</baseLayer>
+          <colorType>Skin</colorType>
+          <useRottenColor>true</useRottenColor>
+          <useSkinShader>true</useSkinShader>
+          <children>
+            <li>
+              <debugLabel>Beard</debugLabel>
+              <nodeClass>FleshHive.PawnRenderNode_FleshReplicaBeard</nodeClass>
+              <workerClass>PawnRenderNodeWorker_Beard</workerClass>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <colorType>Hair</colorType>
+              <skipFlag>Beard</skipFlag>
+              <baseLayer>60</baseLayer>
+            </li>
+            <li>
+              <debugLabel>Hair</debugLabel>
+              <nodeClass>FleshHive.PawnRenderNode_FleshReplicaHair</nodeClass>
+              <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <colorType>Hair</colorType>
+              <skipFlag>Hair</skipFlag>
+              <baseLayer>62</baseLayer>
+            </li>
+          </children>
+        </li>
+        <li Class="PawnRenderNodeProperties_Carried">
+          <debugLabel>Weapon/carried thing</debugLabel>
+          <workerClass>PawnRenderNodeWorker_Carried</workerClass>
+        </li>
+      </children>
+    </root>
+  </PawnRenderTreeDef>
+
 </Defs>

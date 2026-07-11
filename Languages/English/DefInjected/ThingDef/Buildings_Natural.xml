@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
+  <FH_FleshHive.label>flesh hive</FH_FleshHive.label>
+  <FH_FleshHive.description>The foundation of a flesh hive. It can gestate fleshbeasts within the nest and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shards, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive.</FH_FleshHive.description>
   <FH_FleshTree.label>flesh tree</FH_FleshTree.label>
   <FH_FleshTree.description>A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself.</FH_FleshTree.description>
   <FH_FleshBush.label>fleshberry bush</FH_FleshBush.label>

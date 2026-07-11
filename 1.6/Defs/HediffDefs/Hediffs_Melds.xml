@@ -263,4 +263,73 @@
       </li>
     </comps>
   </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Fissionmeld</defName>
+    <label>fissionmeld parasitism</label>
+    <description>The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, and allowing the host to prepare a flesh rebirth.</description>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.75, 0.25, 0.2)</defaultLabelColor>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+        <label>fissionmeld parasitism</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>14</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Left Bone Spike</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>14</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Right Bone Spike</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_FleshRebirth</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_Regeneration">
+        <regenHediff>Regeneration</regenHediff>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

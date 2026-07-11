@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: draw nexusmeld -->
+  <FH_SummonNexusmeld.label>吸引统合母兽</FH_SummonNexusmeld.label>
+  <!-- EN: Create a psychic pulse which will draw a nexusmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts. -->
+  <FH_SummonNexusmeld.description>制造一道心灵脉冲，吸引一只统合母兽向上挖掘，并在你的敌人附近出现。低质量仪式不够精准，会吸引更多血肉兽护卫。</FH_SummonNexusmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonNexusmeld.outcomeDescription>仪式质量越高，吸引的血肉兽护卫越少。</FH_SummonNexusmeld.outcomeDescription>
+
+  <!-- EN: draw dreadmeld -->
+  <FH_SummonDreadmeld.label>吸引惊惧母兽</FH_SummonDreadmeld.label>
+  <!-- EN: Create a psychic pulse which will draw a dreadmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts. -->
+  <FH_SummonDreadmeld.description>制造一道心灵脉冲，吸引一只惊惧母兽向上挖掘，并在你的敌人附近出现。低质量仪式不够精准，会吸引更多血肉兽护卫。</FH_SummonDreadmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonDreadmeld.outcomeDescription>仪式质量越高，吸引的血肉兽护卫越少。</FH_SummonDreadmeld.outcomeDescription>
+
+  <!-- EN: draw furiousmeld -->
+  <FH_SummonFuriousmeld.label>吸引暴怒母兽</FH_SummonFuriousmeld.label>
+  <!-- EN: Create a psychic pulse which will draw a furiousmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts. -->
+  <FH_SummonFuriousmeld.description>制造一道心灵脉冲，吸引一只暴怒母兽向上挖掘，并在你的敌人附近出现。低质量仪式不够精准，会吸引更多血肉兽护卫。</FH_SummonFuriousmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonFuriousmeld.outcomeDescription>仪式质量越高，吸引的血肉兽护卫越少。</FH_SummonFuriousmeld.outcomeDescription>
+
+  <!-- EN: draw bastionmeld -->
+  <FH_SummonBastionmeld.label>吸引铁骸母兽</FH_SummonBastionmeld.label>
+  <!-- EN: Create a psychic pulse which will draw a bastionmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts. -->
+  <FH_SummonBastionmeld.description>制造一道心灵脉冲，吸引一只铁骸母兽向上挖掘，并在你的敌人附近出现。低质量仪式不够精准，会吸引更多血肉兽护卫。</FH_SummonBastionmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonBastionmeld.outcomeDescription>仪式质量越高，吸引的血肉兽护卫越少。</FH_SummonBastionmeld.outcomeDescription>
+
+  <!-- EN: draw fissionmeld -->
+  <FH_SummonFissionmeld.label>吸引裂殖母兽</FH_SummonFissionmeld.label>
+  <!-- EN: Create a psychic pulse which will draw a fissionmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts. -->
+  <FH_SummonFissionmeld.description>制造一道心灵脉冲，吸引一只裂殖母兽向上挖掘，并在你的敌人附近出现。低质量仪式不够精准，会吸引更多血肉兽护卫。</FH_SummonFissionmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonFissionmeld.outcomeDescription>仪式质量越高，吸引的血肉兽护卫越少。</FH_SummonFissionmeld.outcomeDescription>
+</LanguageData>
