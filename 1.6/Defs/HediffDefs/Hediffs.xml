@@ -6,7 +6,7 @@
     <defName>FH_Spike_Paraspike</defName>
     <label>paraspike's spike</label>
     <hediffClass>FleshHive.Hediff_FH_Spike_Paraspike</hediffClass>
-    <description>TODO</description>
+    <description>A paraspike's core bone spike, used to parasite a host and sustain its life. It remains embedded in the host, continuously regulating flesh and blood.</description>
     <isBad>true</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <comps>
@@ -27,7 +27,7 @@
     <defName>FH_LostSpike_Paraspike</defName>
     <label>lost spike</label>
     <hediffClass>HediffWithComps</hediffClass>
-    <description>TODO</description>
+    <description>The paraspike has lost the core bone spike it needs to survive. Unless it regenerates soon, it will weaken and die.</description>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <isBad>true</isBad>
     <comps>
@@ -343,7 +343,7 @@
     <defName>FH_Parasitism_FleshReplica</defName>
     <label>flesh replica synchronization</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>TODO.</description>
+    <description>A synchronization link between a flesh replica and its host, allowing the replica to mimic the host's appearance and equipment.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -472,6 +472,129 @@
             </renderNode>
           </li>
         </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Bulbfreak</defName>
+    <label>bulbfreak parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>The host grows two blunt tentacles and can consume twisted flesh to release two random medium fleshbeasts.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_BulbfreakReleaseFleshbeasts</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Acidbulb</defName>
+    <label>acidbulb parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>The host becomes immune to toxic buildup and gains acid mortar and acid spray abilities.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+          <ToxicResistance>1</ToxicResistance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>FH_Parasitism_AcidMortar</li>
+          <li>FH_Parasitism_AcidSpray</li>
+        </abilityDefs>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Spitbulb</defName>
+    <label>spitbulb parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_FleshMortar</abilityDef>
       </li>
       <li Class="HediffCompProperties_ThoughtSetter">
         <thought>FH_Thought_FleshParasitism</thought>

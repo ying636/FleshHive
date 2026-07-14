@@ -56,4 +56,10 @@
     <reportString>mounting TargetA.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_UseShardOnHela</defName>
+    <driverClass>FleshHive.JobDriver_UseShardOnHela</driverClass>
+    <reportString>using TargetA to expand parasite capacity.</reportString>
+  </JobDef>
+
 </Defs>

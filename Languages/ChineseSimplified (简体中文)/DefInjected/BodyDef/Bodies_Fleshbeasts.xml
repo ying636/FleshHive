@@ -2,26 +2,26 @@
 <LanguageData>
   
   <!-- EN: FleshBeastWithoutSpine -->
-  <FH_FleshBeastWithoutSpine.label>TODO</FH_FleshBeastWithoutSpine.label>
+  <FH_FleshBeastWithoutSpine.label>无脊血肉兽</FH_FleshBeastWithoutSpine.label>
   <!-- EN: left lung -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.left_lung.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_lung.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_lung.customLabel>左肺</FH_FleshBeastWithoutSpine.corePart.parts.left_lung.customLabel>
   <!-- EN: right lung -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.right_lung.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_lung.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_lung.customLabel>右肺</FH_FleshBeastWithoutSpine.corePart.parts.right_lung.customLabel>
   <!-- EN: left kidney -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.left_kidney.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_kidney.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_kidney.customLabel>左肾</FH_FleshBeastWithoutSpine.corePart.parts.left_kidney.customLabel>
   <!-- EN: right kidney -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.right_kidney.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_kidney.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_kidney.customLabel>右肾</FH_FleshBeastWithoutSpine.corePart.parts.right_kidney.customLabel>
   <!-- EN: left eye -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.left_eye.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.left_eye.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.left_eye.customLabel>左眼</FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.left_eye.customLabel>
   <!-- EN: right eye -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.right_eye.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.right_eye.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.right_eye.customLabel>右眼</FH_FleshBeastWithoutSpine.corePart.parts.Neck.parts.FleshbeastHead.parts.right_eye.customLabel>
   <!-- EN: left shoulder -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.left_shoulder.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_shoulder.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_shoulder.customLabel>左肩</FH_FleshBeastWithoutSpine.corePart.parts.left_shoulder.customLabel>
   <!-- EN: right shoulder -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.right_shoulder.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_shoulder.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_shoulder.customLabel>右肩</FH_FleshBeastWithoutSpine.corePart.parts.right_shoulder.customLabel>
   <!-- EN: left tentacle -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.left_tentacle.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.left_tentacle.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.left_tentacle.customLabel>左触手</FH_FleshBeastWithoutSpine.corePart.parts.left_tentacle.customLabel>
   <!-- EN: right tentacle -->
-  <FH_FleshBeastWithoutSpine.corePart.parts.right_tentacle.customLabel>TODO</FH_FleshBeastWithoutSpine.corePart.parts.right_tentacle.customLabel>
+  <FH_FleshBeastWithoutSpine.corePart.parts.right_tentacle.customLabel>右触手</FH_FleshBeastWithoutSpine.corePart.parts.right_tentacle.customLabel>
   
 </LanguageData>

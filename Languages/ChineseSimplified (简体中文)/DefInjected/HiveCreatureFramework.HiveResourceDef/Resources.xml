@@ -2,8 +2,13 @@
 <LanguageData>
   
   <!-- EN: Nurtition -->
-  <FH_Resource_Nutrition.label>TODO</FH_Resource_Nutrition.label>
+  <FH_Resource_Nutrition.label>营养</FH_Resource_Nutrition.label>
   <!-- EN: Nurtition. -->
-  <FH_Resource_Nutrition.description>TODO</FH_Resource_Nutrition.description>
+  <FH_Resource_Nutrition.description>供血肉巢穴使用的营养。</FH_Resource_Nutrition.description>
+
+  <!-- EN: twisted flesh -->
+  <FH_Resource_TwistedFlesh.label>扭曲肉</FH_Resource_TwistedFlesh.label>
+  <!-- EN: Twisted flesh stored within a fleshbeast. -->
+  <FH_Resource_TwistedFlesh.description>储存在血肉兽体内的扭曲肉。</FH_Resource_TwistedFlesh.description>
   
 </LanguageData>

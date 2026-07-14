@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: bone spike -->
+  <FH_Bullet_FleshTurret.label>骨刺</FH_Bullet_FleshTurret.label>
+
+  <!-- EN: small flesh digester -->
+  <FH_FleshDigesterS.label>小型警卫触手中枢</FH_FleshDigesterS.label>
+  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
+  <FH_FleshDigesterS.description>负责警卫血肉巢穴的小型神经中枢器官。它会活化附近的血肉，使其抽打入侵者、阻碍移动并造成伤害。它也能吞噬附近的尸体和生肉，为巢穴补充营养。</FH_FleshDigesterS.description>
+
+  <!-- EN: bone spitter -->
+  <FH_Gun_FleshTurret.label>骨刺喷吐器</FH_Gun_FleshTurret.label>
+  <!-- EN: A simple bone-spitting organ grown to act as a turret weapon. -->
+  <FH_Gun_FleshTurret.description>一种作为炮塔武器生长出来的简易骨刺喷吐器官。</FH_Gun_FleshTurret.description>
+
+</LanguageData>

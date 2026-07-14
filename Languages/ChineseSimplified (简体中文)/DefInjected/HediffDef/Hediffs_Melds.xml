@@ -36,14 +36,30 @@
 
   <!-- EN: fissionmeld parasitism -->
   <FH_Parasitism_Fissionmeld.label>裂殖母兽寄生</FH_Parasitism_Fissionmeld.label>
-  <!-- EN: The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, and allowing the host to prepare a flesh rebirth. -->
-  <FH_Parasitism_Fissionmeld.description>裂殖母兽寄生宿主，嫁接骨刺，提升扭曲肉容量，提供再生，并允许宿主准备血肉重生。</FH_Parasitism_Fissionmeld.description>
+  <!-- EN: The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, sustaining flesh undying while enough twisted flesh is stored, and allowing the host to purge harmful conditions. -->
+  <FH_Parasitism_Fissionmeld.description>裂殖母兽寄生宿主，嫁接骨刺，提升扭曲肉容量，提供再生；扭曲肉充足时维持血肉不死，并允许宿主清除负面状态和伤口。</FH_Parasitism_Fissionmeld.description>
   <!-- EN: Left Bone Spike -->
   <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <!-- EN: Right Bone Spike -->
   <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
   <!-- EN: fissionmeld parasitism -->
   <FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>裂殖母兽寄生</FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>
+
+  <!-- EN: flesh undying -->
+  <FH_FleshUndying.label>血肉不死</FH_FleshUndying.label>
+  <!-- EN: Stored twisted flesh keeps the host from dying while the parasite rebuilds ruined tissue. -->
+  <FH_FleshUndying.description>储存的扭曲肉会阻止宿主死亡，并由寄生体重塑破损组织。</FH_FleshUndying.description>
+
+  <!-- EN: dreadmeld parasitism -->
+  <FH_Parasitism_Dreadmeld.label>惊惧母兽寄生</FH_Parasitism_Dreadmeld.label>
+  <!-- EN: The dreadmeld latches onto the host, grafting bone spikes, granting incredible regeneration, improving mining work, and allowing the host to unleash a terror roar. -->
+  <FH_Parasitism_Dreadmeld.description>惊惧母兽寄生宿主，嫁接骨刺，赋予不可思议的再生，强化采矿工作，并允许宿主释放惊惧咆哮。</FH_Parasitism_Dreadmeld.description>
+  <!-- EN: Left Bone Spike -->
+  <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right Bone Spike -->
+  <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <!-- EN: dreadmeld parasitism -->
+  <FH_Parasitism_Dreadmeld.stages.dreadmeld_parasitism.label>惊惧母兽寄生</FH_Parasitism_Dreadmeld.stages.dreadmeld_parasitism.label>
   
   <!-- EN: nexusmeld parasitism -->
   <FH_Parasitism_Nexusmeld.label>统合母兽寄生</FH_Parasitism_Nexusmeld.label>
@@ -60,4 +76,9 @@
   <FH_Unification.label>血肉统合</FH_Unification.label>
   <!-- EN: The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced. -->
   <FH_Unification.description>统合母兽的心灵力量强化了血肉。近战伤害提升，承受伤害降低。</FH_Unification.description>
+
+  <!-- EN: devastating strike ready -->
+  <FH_TitanDevastatingStrikeReady.label>毁灭重击已蓄力</FH_TitanDevastatingStrikeReady.label>
+  <!-- EN: The next melee attack that hits will shatter everything. -->
+  <FH_TitanDevastatingStrikeReady.description>下一次命中的近战攻击将会粉碎一切</FH_TitanDevastatingStrikeReady.description>
 </LanguageData>

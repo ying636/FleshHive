@@ -36,11 +36,6 @@
   <!-- EN: This fleshbeast's body is unstable and takes more damage. -->
   <FH_Trait_Fragile.description>这只血肉兽的躯体结构不稳定，受到的伤害提高。</FH_Trait_Fragile.description>
   
-  <!-- EN: none -->
-  <FH_Trait_None.label>无</FH_Trait_None.label>
-  <!-- EN: This fleshbeast has no special trait. -->
-  <FH_Trait_None.description>这只血肉兽没有特殊特性。</FH_Trait_None.description>
-  
   <!-- EN: rapid growth -->
   <FH_Trait_RapidGrowth.label>猛长</FH_Trait_RapidGrowth.label>
   <!-- EN: This fleshbeast grows unusually quickly. -->

@@ -150,5 +150,10 @@
   <FH_DormantFissionmeld.label>虚弱裂殖母兽</FH_DormantFissionmeld.label>
   <!-- EN: A structure produced by a fissionmeld in its weakened state to prevent its own complete death. -->
   <FH_DormantFissionmeld.description>裂殖母兽在虚弱状态产生的结构，防止自身彻底死亡。</FH_DormantFissionmeld.description>
+
+  <!-- EN: harnessed fleshmass heart -->
+  <FH_HarnessedFleshmassHeart.label>受控血肉心脏</FH_HarnessedFleshmassHeart.label>
+  <!-- EN: The primary organ of a fleshmass catastrophe. The heart draws material through roots extending deep underground. Once it has gathered enough, it spreads fleshmass around itself in cancer-like growth. It will continue growing until it consumes everything. Under the restraint of an archotechnological device, some of the heart's functions have been brought under control.\n\nThe heart can produce an endless supply of flesh and greatly expand the scale of a flesh hive. When needed, the harnessed fleshmass heart can consume a large amount of nutrition and transform into a harnessed fleshtitan to join the battle. -->
+  <FH_HarnessedFleshmassHeart.description>血肉兽灾变的核心器官。心脏通过伸入地下的根系汲取物质。一旦收集足够物质，它就会像癌细胞一样向周围扩散血肉块。它会不断生长，直到吞噬一切。然而在超凡智能装置的约束下，这颗心脏的部分机能已经受到控制。\n\n心脏可以生产出无穷无尽的血肉，并且极大地扩展血肉巢穴的规模。在需要时，受控血肉心脏也可以消耗大量营养变为血肉泰坦参与战斗。</FH_HarnessedFleshmassHeart.description>
   
 </LanguageData>

@@ -1,39 +1,59 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: acid launch -->
-  <FH_Acidbulb_Launch.label>TODO</FH_Acidbulb_Launch.label>
+  <FH_Acidbulb_Launch.label>酸液投射</FH_Acidbulb_Launch.label>
   <!-- EN: Launch acid. -->
-  <FH_Acidbulb_Launch.description>TODO</FH_Acidbulb_Launch.description>
-  
+  <FH_Acidbulb_Launch.description>发射一枚酸液炮弹。</FH_Acidbulb_Launch.description>
+
+  <!-- EN: release fleshbeasts -->
+  <FH_BulbfreakReleaseFleshbeasts.label>释放血肉兽</FH_BulbfreakReleaseFleshbeasts.label>
+  <!-- EN: Consume 200 twisted flesh to release two random medium fleshbeasts. -->
+  <FH_BulbfreakReleaseFleshbeasts.description>消耗200扭曲肉，释放两只随机中型血肉兽。</FH_BulbfreakReleaseFleshbeasts.description>
+
+  <!-- EN: acid mortar -->
+  <FH_Parasitism_AcidMortar.label>酸蚀迫击炮</FH_Parasitism_AcidMortar.label>
+  <!-- EN: Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns. -->
+  <FH_Parasitism_AcidMortar.description>发射一枚覆盖3×3区域的酸蚀炮弹。被击中的目标会持续受到酸蚀伤害。</FH_Parasitism_AcidMortar.description>
+
+  <!-- EN: acid spray -->
+  <FH_Parasitism_AcidSpray.label>酸液喷吐</FH_Parasitism_AcidSpray.label>
+  <!-- EN: Spray sticky acid over a target area. The acid sticks to targets and continues to burn them. -->
+  <FH_Parasitism_AcidSpray.description>向目标区域喷吐黏稠酸液。酸液会附着在目标上并持续灼蚀。</FH_Parasitism_AcidSpray.description>
+
   <!-- EN: 骨刺射击 -->
-  <FH_Parasitism_BoneSpikeShot.label>TODO</FH_Parasitism_BoneSpikeShot.label>
+  <FH_Parasitism_BoneSpikeShot.label>骨刺射击</FH_Parasitism_BoneSpikeShot.label>
   <!-- EN: 发射一枚骨刺。 -->
-  <FH_Parasitism_BoneSpikeShot.description>TODO</FH_Parasitism_BoneSpikeShot.description>
-  
+  <FH_Parasitism_BoneSpikeShot.description>发射一枚骨刺。</FH_Parasitism_BoneSpikeShot.description>
+
   <!-- EN: spike launch -->
-  <FH_SpikeLaunch_Paraspike.label>TODO</FH_SpikeLaunch_Paraspike.label>
+  <FH_SpikeLaunch_Paraspike.label>骨刺发射</FH_SpikeLaunch_Paraspike.label>
   <!-- EN: Launch a bone spike at a target. -->
-  <FH_SpikeLaunch_Paraspike.description>TODO</FH_SpikeLaunch_Paraspike.description>
-  
+  <FH_SpikeLaunch_Paraspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Paraspike.description>
+
   <!-- EN: spike launch -->
-  <FH_SpikeLaunch_Shatterspike.label>TODO</FH_SpikeLaunch_Shatterspike.label>
+  <FH_SpikeLaunch_Shatterspike.label>骨刺发射</FH_SpikeLaunch_Shatterspike.label>
   <!-- EN: Launch a bone spike at a target. -->
-  <FH_SpikeLaunch_Shatterspike.description>TODO</FH_SpikeLaunch_Shatterspike.description>
-  
+  <FH_SpikeLaunch_Shatterspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Shatterspike.description>
+
   <!-- EN: spike launch -->
-  <FH_SpikeLaunch_Whipspike.label>TODO</FH_SpikeLaunch_Whipspike.label>
+  <FH_SpikeLaunch_Whipspike.label>骨刺发射</FH_SpikeLaunch_Whipspike.label>
   <!-- EN: Launch a bone spike at a target. -->
-  <FH_SpikeLaunch_Whipspike.description>TODO</FH_SpikeLaunch_Whipspike.description>
-  
-  <!-- EN: acid launch -->
-  <FH_Spitbulb_Launch.label>TODO</FH_Spitbulb_Launch.label>
-  <!-- EN: Launch acid. -->
-  <FH_Spitbulb_Launch.description>TODO</FH_Spitbulb_Launch.description>
-  
+  <FH_SpikeLaunch_Whipspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Whipspike.description>
+
+  <!-- EN: flesh mortar -->
+  <FH_Spitbulb_Launch.label>血肉迫击炮</FH_Spitbulb_Launch.label>
+  <!-- EN: Launch an explosive flesh shell that releases three random small fleshbeasts at the impact point. -->
+  <FH_Spitbulb_Launch.description>发射一枚爆炸性血肉炮弹，并在命中位置释放三只随机小型血肉兽。</FH_Spitbulb_Launch.description>
+
+  <!-- EN: flesh mortar -->
+  <FH_Parasitism_FleshMortar.label>血肉迫击炮</FH_Parasitism_FleshMortar.label>
+  <!-- EN: Consume 25 twisted flesh to launch an explosive flesh shell. The explosion covers a 3-by-3 area and releases one random small fleshbeast at the impact point. -->
+  <FH_Parasitism_FleshMortar.description>消耗25扭曲肉发射一枚爆炸性血肉炮弹。爆炸覆盖3×3区域，并在命中位置释放一只随机小型血肉兽。</FH_Parasitism_FleshMortar.description>
+
   <!-- EN: 释放血肉兽 -->
-  <FH_Trispike_ReleaseSpikes.label>TODO</FH_Trispike_ReleaseSpikes.label>
+  <FH_Trispike_ReleaseSpikes.label>释放血肉兽</FH_Trispike_ReleaseSpikes.label>
   <!-- EN: 释放2只随机的小型血肉兽。 -->
-  <FH_Trispike_ReleaseSpikes.description>TODO</FH_Trispike_ReleaseSpikes.description>
-  
+  <FH_Trispike_ReleaseSpikes.description>释放2只随机的小型血肉兽。</FH_Trispike_ReleaseSpikes.description>
+
 </LanguageData>

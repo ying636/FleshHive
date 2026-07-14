@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef>
+    <defName>FH_FuriousmeldPitBurrowSpawner</defName>
+    <label>underground emergence</label>
+    <description>Something is emerging from the ground here.</description>
+    <building>
+      <groundSpawnerSustainedEffecter>EmergencePointSustained2X2</groundSpawnerSustainedEffecter>
+      <groundSpawnerCompleteEffecter>EmergencePointComplete2X2</groundSpawnerCompleteEffecter>
+      <groundSpawnerThingToSpawn>FH_FuriousmeldPitBurrow</groundSpawnerThingToSpawn>
+      <groundSpawnerSpawnDelay>600</groundSpawnerSpawnDelay>
+      <groundSpawnerDestroyAdjacent>true</groundSpawnerDestroyAdjacent>
+      <groundSpawnerSustainerSound>PitBurrowOpening</groundSpawnerSustainerSound>
+    </building>
+    <destroyable>false</destroyable>
+    <drawerType>RealtimeOnly</drawerType>
+    <holdsRoof>true</holdsRoof>
+    <selectable>true</selectable>
+    <size>(3, 3)</size>
+    <thingClass>BuildingGroundSpawner</thingClass>
+    <tickerType>Normal</tickerType>
+    <uiIconPath>UI/Icons/UndergroundEmergence</uiIconPath>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>FH_FuriousmeldPitBurrow</defName>
+    <label>pit burrow</label>
+    <description>A small hole connecting to some unseen cave network deep under the surface. The walls are too steep to climb. It is inherently unstable and will collapse after some time.</description>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <building>
+      <deconstructible>false</deconstructible>
+      <isTargetable>false</isTargetable>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <expandHomeArea>false</expandHomeArea>
+      <crater>true</crater>
+      <canLandGravshipOn>true</canLandGravshipOn>
+      <uninstallWork>2500</uninstallWork>
+    </building>
+    <canOverlapZones>false</canOverlapZones>
+    <category>Building</category>
+    <comps>
+      <li Class="CompProperties_LeaveFilthOnDestroyed">
+        <filthDef>Filth_LooseGround</filthDef>
+        <thickness>2</thickness>
+      </li>
+    </comps>
+    <drawerType>MapMeshOnly</drawerType>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <texPath>Things/Building/PitBurrow</texPath>
+      <drawSize>(3, 3)</drawSize>
+    </graphicData>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <repairEffect>Repair</repairEffect>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <size>(3, 3)</size>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <SellPriceFactor>0.7</SellPriceFactor>
+      <Flammability>0</Flammability>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <thingClass>FleshHive.PitBurrow_Furiousmeld</thingClass>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+</Defs>

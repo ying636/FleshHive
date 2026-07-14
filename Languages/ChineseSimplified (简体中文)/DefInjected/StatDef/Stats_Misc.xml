@@ -2,8 +2,8 @@
 <LanguageData>
   
   <!-- EN: parasitism capacity -->
-  <FH_Stat_ParasitismCapacity.label>TODO</FH_Stat_ParasitismCapacity.label>
+  <FH_Stat_ParasitismCapacity.label>寄生空间</FH_Stat_ParasitismCapacity.label>
   <!-- EN: ParasitismCapacity -->
-  <FH_Stat_ParasitismCapacity.description>TODO</FH_Stat_ParasitismCapacity.description>
+  <FH_Stat_ParasitismCapacity.description>宿主能够容纳血肉兽寄生体的总空间。</FH_Stat_ParasitismCapacity.description>
   
 </LanguageData>

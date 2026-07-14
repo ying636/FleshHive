@@ -12,6 +12,7 @@
     <race>
       <thinkTreeMain>FH_ThinkTree_FleshBeast</thinkTreeMain>
       <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <alwaysViolent>true</alwaysViolent>
       <foodType>None</foodType>
       <needsRest>false</needsRest>
     </race>
@@ -35,6 +36,7 @@
     </comps>
     <statBases>
       <MoveSpeed>5.1</MoveSpeed>
+      <MarketValue>120</MarketValue>
       <MinimumContainmentStrength>20</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -65,6 +67,9 @@
         <size>Medium</size>
       </li>
     </comps>
+    <statBases>
+      <MarketValue>300</MarketValue>
+    </statBases>
     <race>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
@@ -99,8 +104,10 @@
         <abilityLabel>寄生武器：骨刺触手</abilityLabel>
         <abilityDescription>宿主体表生长骨刺触手，造成刺击伤害。</abilityDescription>
       </li>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -114,6 +121,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -156,6 +164,11 @@
     <abilities>
       <li>SpikeLaunch_Fingerspike</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Fingerspike</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>25</combatPower>
     <lifeStages>
       <li>
@@ -197,13 +210,14 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon1</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_Puffspike</iconPath>
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Puffspike</hediff>
@@ -266,10 +280,10 @@
       <renderTree>FH_Whipspike</renderTree>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Whipspike</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_HuntEnemies_Whipspike</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -283,6 +297,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -333,6 +348,11 @@
     <abilities>
       <li>FH_SpikeLaunch_Whipspike</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Whipspike</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>25</combatPower>
     <lifeStages>
       <li>
@@ -361,10 +381,10 @@
       <body>FH_FleshBeastWithoutSpine</body>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Gutspike</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_HuntEnemies_Gutspike</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -379,6 +399,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -430,6 +451,11 @@
     <abilities>
       <li>CorrosiveSpray</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Gutspike</skillDuty>
+      </li>
+    </modExtensions>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -458,10 +484,10 @@
       <renderTree>FH_Paraspike</renderTree>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Paraspike</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_HuntEnemies_Paraspike</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -475,13 +501,14 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon4</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_Paraspike</iconPath>
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Paraspike</hediff>
@@ -526,6 +553,11 @@
     <abilities>
       <li>FH_SpikeLaunch_Paraspike</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Paraspike</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>25</combatPower>
     <lifeStages>
       <li>
@@ -548,13 +580,13 @@
   <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Shatterspike</defName>
     <label>shatterspike</label>
-    <description>TODO.</description>
+    <description>A man-sized fleshbeast covered in brittle but razor-sharp bone spikes. It launches volleys of bone fragments from range, tearing targets apart with dense barrages.</description>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Shatterspike</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_HuntEnemies_Shatterspike</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -568,13 +600,14 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon8</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
         <effect>“血肉寄生”心情-6；魅力-1</effect>
@@ -667,6 +700,11 @@
     <abilities>
       <li>FH_SpikeLaunch_Shatterspike</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Shatterspike</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>90</combatPower>
     <lifeStages>
       <li>
@@ -699,10 +737,10 @@
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Toughspike</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_HuntEnemies_Toughspike</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -716,6 +754,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -795,6 +834,11 @@
     <abilities>
       <li>SpikeLaunch_Toughspike</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Toughspike</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>70</combatPower>
     <lifeStages>
       <li>
@@ -840,7 +884,7 @@
     <defName>FH_FleshReplica</defName>
     <label>Flesh replica</label>
     <thingClass>FleshHive.FleshReplicaUnit</thingClass>
-    <description>TODO.</description>
+    <description>A humanoid fleshbeast covered in a small amount of carapace and roughly the size of an adult human. Flesh replicas can use human weapons, most of which are scavenged from the victims of fleshbeasts. After a flesh replica parasitizes a host, its original body remains independent and mimics the host's appearance. A flesh replica with a host can perform complex work just like a human.</description>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>
       <MinimumContainmentStrength>50</MinimumContainmentStrength>
@@ -851,6 +895,8 @@
     <comps>
       <li Class="HiveCreatureFramework.UnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -863,6 +909,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -948,6 +995,53 @@
     <label>flesh replica</label>
     <race>FH_FleshReplica</race>
     <combatPower>70</combatPower>
+    <modExtensions>
+      <li Class="FleshHive.FleshReplicaWeaponExtension">
+        <weapons>
+          <li>
+            <weapon>ElephantTusk</weapon>
+          </li>
+          <li>
+            <weapon>WoodLog</weapon>
+          </li>
+          <li>
+            <weapon>ThrumboHorn</weapon>
+            <weight>0.1</weight>
+          </li>
+          <li>
+            <weapon>MeleeWeapon_Knife</weapon>
+          </li>
+          <li>
+            <weapon>MeleeWeapon_Club</weapon>
+          </li>
+          <li>
+            <weapon>MeleeWeapon_Ikwa</weapon>
+          </li>
+          <li>
+            <weapon>Bow_Short</weapon>
+          </li>
+          <li>
+            <weapon>Bow_Great</weapon>
+          </li>
+          <li>
+            <weapon>Bow_Recurve</weapon>
+          </li>
+          <li>
+            <weapon>Pila</weapon>
+          </li>
+          <li>
+            <weapon>Gun_Autopistol</weapon>
+          </li>
+          <li>
+            <weapon>Gun_MachinePistol</weapon>
+          </li>
+          <li>
+            <weapon>Gun_ChargeLance</weapon>
+            <weight>0.1</weight>
+          </li>
+        </weapons>
+      </li>
+    </modExtensions>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -969,7 +1063,7 @@
   <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Shieldspike</defName>
     <label>shieldspike</label>
-    <description>TODO</description>
+    <description>A heavily armored, man-sized fleshbeast with two broad shield-like bone claws. It advances steadily, battering nearby enemies with its massive claws while its resilient carapace shrugs off attacks.</description>
     <statBases>
       <MoveSpeed>3.5</MoveSpeed>
       <MinimumContainmentStrength>50</MinimumContainmentStrength>
@@ -981,6 +1075,8 @@
     <comps>
       <li Class="HiveCreatureFramework.UnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -994,13 +1090,14 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon6</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
         <effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6</effect>
@@ -1010,7 +1107,7 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
     </comps>
-    <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Shieldspike/FH_Shieldspike_east</uiIconPath>
     <race>
       <body>Toughspike</body>
       <baseBodySize>1</baseBodySize>
@@ -1136,11 +1233,11 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Trispike</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_HuntEnemies_Trispike</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1154,13 +1251,14 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon7</iconPath>
+        <iconPath>UI/Ability/FH_Trispike_ReleaseSpikes</iconPath>
         <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
@@ -1232,6 +1330,11 @@
     <abilities>
       <li>SpikeLaunch_Toughspike</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Trispike</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>90</combatPower>
     <lifeStages>
       <li>
@@ -1285,6 +1388,8 @@
       <li Class="HiveCreatureFramework.UnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1357,23 +1462,23 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2.2</drawSize>
+          <drawSize>1.1</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Dessicated_Fleshwind</texPath>
-          <drawSize>2.2</drawSize>
+          <drawSize>1.1</drawSize>
         </dessicatedBodyGraphicData>
         <silhouetteGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_east</texPath>
           <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>2</drawSize>
+          <drawSize>1</drawSize>
         </silhouetteGraphicData>
       </li>
     </lifeStages>
     <flyingAnimationFramePathPrefix>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_Flying_</flyingAnimationFramePathPrefix>
     <flyingAnimationFrameCount>8</flyingAnimationFrameCount>
     <flyingAnimationTicksPerFrame>2</flyingAnimationTicksPerFrame>
-    <flyingAnimationDrawSize>2.2</flyingAnimationDrawSize>
+    <flyingAnimationDrawSize>1.1</flyingAnimationDrawSize>
     <flyingAnimationDrawSizeIsMultiplier>false</flyingAnimationDrawSizeIsMultiplier>
     <flyingAnimationInheritColors>true</flyingAnimationInheritColors>
   </PawnKindDef>
@@ -1391,6 +1496,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>700</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1424,6 +1530,8 @@
     <comps>
       <li Class="HiveCreatureFramework.UnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1441,6 +1549,15 @@
         <tags>
           <li>Flesh</li>
         </tags>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_BulbfreakReleaseFleshbeasts</iconPath>
+        <cost>4</cost>
+        <hediff>FH_Parasitism_Bulbfreak</hediff>
+        <effect>Flesh parasitism mood -6; Social Impact -1; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
+        <abilityLabel>Parasitic weapons: tentacles and release fleshbeasts</abilityLabel>
+        <abilityDescription>Two tentacles deal 10 blunt damage with a 2-second cooldown. The active ability consumes 200 twisted flesh to release two random medium fleshbeasts.</abilityDescription>
+        <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -1536,7 +1653,7 @@
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Acidbulb</defName>
     <label>acidbulb</label>
-    <description>TODO.</description>
+    <description>A giant bulbous fleshbeast swollen with corrosive fluids. It tears at nearby enemies with multiple tentacles and spits corrosive acid at distant targets.</description>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Large</size>
@@ -1544,6 +1661,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>700</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1575,8 +1693,10 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1595,6 +1715,14 @@
         <tags>
           <li>Flesh</li>
         </tags>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
+        <cost>4</cost>
+        <hediff>FH_Parasitism_Acidbulb</hediff>
+        <effect>Flesh parasitism mood -6; Social Impact -1; Toxic Resistance +100%; grants acid mortar and acid spray abilities.</effect>
+        <abilityLabel>Parasitic abilities: acid mortar and acid spray</abilityLabel>
+        <abilityDescription>Launch an acid mortar shell at long range or spray sticky acid over a target area.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -1677,6 +1805,11 @@
     <abilities>
       <li>FH_Acidbulb_Launch</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Acidbulb</skillDuty>
+      </li>
+    </modExtensions>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -1692,7 +1825,7 @@
 
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Spitbulb</defName>
-    <label>FH_Spitbulb</label>
+    <label>spitbulb</label>
     <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
@@ -1701,6 +1834,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>700</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1732,9 +1866,11 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>5</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1753,6 +1889,15 @@
         <tags>
           <li>Flesh</li>
         </tags>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
+        <cost>4</cost>
+        <hediff>FH_Parasitism_Spitbulb</hediff>
+        <effect>Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +250; grants the flesh mortar ability.</effect>
+        <abilityLabel>Parasitic weapon: flesh mortar</abilityLabel>
+        <abilityDescription>Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point.</abilityDescription>
+        <twistedFleshCapacity>250</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -1828,12 +1973,17 @@
 
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Spitbulb</defName>
-    <label>bulbfreak</label>
+    <label>spitbulb</label>
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>FH_Spitbulb</race>
     <abilities>
       <li>FH_Spitbulb_Launch</li>
     </abilities>
+    <modExtensions>
+      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+        <skillDuty>FH_Skill_Spitbulb</skillDuty>
+      </li>
+    </modExtensions>
     <combatPower>360</combatPower>
     <lifeStages>
       <li>

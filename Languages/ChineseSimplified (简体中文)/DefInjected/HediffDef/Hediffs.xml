@@ -5,6 +5,21 @@
   <FH_LostSpike_Paraspike.label>失去骨刺</FH_LostSpike_Paraspike.label>
   <!-- EN: The paraspike has lost the core spike it needs to sustain itself. If it cannot recover, it will wither and die. -->
   <FH_LostSpike_Paraspike.description>寄血兽失去了维持生命所需的核心骨刺。若无法及时恢复，它将逐渐衰竭并死亡。</FH_LostSpike_Paraspike.description>
+
+  <!-- EN: bulbfreak parasitism -->
+  <FH_Parasitism_Bulbfreak.label>恶臭瘤兽寄生</FH_Parasitism_Bulbfreak.label>
+  <!-- EN: The host grows two blunt tentacles and can consume twisted flesh to release two random medium fleshbeasts. -->
+  <FH_Parasitism_Bulbfreak.description>宿主生长两条钝击触手，并可消耗扭曲肉释放两只随机中型血肉兽。</FH_Parasitism_Bulbfreak.description>
+
+  <!-- EN: acidbulb parasitism -->
+  <FH_Parasitism_Acidbulb.label>腐蚀瘤兽寄生</FH_Parasitism_Acidbulb.label>
+  <!-- EN: The host becomes immune to toxic buildup and gains acid mortar and acid spray abilities. -->
+  <FH_Parasitism_Acidbulb.description>宿主免疫毒素积累，并获得“酸蚀迫击炮”和“酸液喷吐”能力。</FH_Parasitism_Acidbulb.description>
+
+  <!-- EN: spitbulb parasitism -->
+  <FH_Parasitism_Spitbulb.label>喷射瘤兽寄生</FH_Parasitism_Spitbulb.label>
+  <!-- EN: The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point. -->
+  <FH_Parasitism_Spitbulb.description>宿主获得一门消耗扭曲肉的血肉迫击炮，并在命中位置释放一只小型血肉兽。</FH_Parasitism_Spitbulb.description>
   
   <!-- EN: fingerspike parasitism -->
   <FH_Parasitism_Fingerspike.label>独爪兽寄生</FH_Parasitism_Fingerspike.label>
@@ -44,7 +59,7 @@
   <!-- EN: flesh replica synchronization -->
   <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>
   <!-- EN: TODO. -->
-  <FH_Parasitism_FleshReplica.description>TODO</FH_Parasitism_FleshReplica.description>
+  <FH_Parasitism_FleshReplica.description>血肉拟像与宿主之间的同步连接，使拟像能够模仿宿主的外貌与装备。</FH_Parasitism_FleshReplica.description>
   
   <!-- EN: 三爪兽寄生 -->
   <FH_Parasitism_Trispike.label>三爪兽寄生</FH_Parasitism_Trispike.label>

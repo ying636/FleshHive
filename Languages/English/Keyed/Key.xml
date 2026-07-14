@@ -8,6 +8,29 @@
   <FleshParasitePod_InsufficientCapacity>Cannot parasite: insufficient capacity</FleshParasitePod_InsufficientCapacity>
   <FleshParasitePod_InsufficientNutrition>Cannot parasite: requires {0} nutrition</FleshParasitePod_InsufficientNutrition>
   <FleshParasitePod_NutritionCost>Parasitism cost: {0} nutrition</FleshParasitePod_NutritionCost>
+  <FleshParasitePod_CurQuest>A parasitism task already exists</FleshParasitePod_CurQuest>
+  <FleshParasitePod_Flesh>Insert fleshbeast</FleshParasitePod_Flesh>
+  <FleshParasitePod_Inner>Contains: {0}, {1}</FleshParasitePod_Inner>
+  <FleshParasitePod_Progress>Progress: {0}</FleshParasitePod_Progress>
+  <FleshParasitePod_Starting>Performing parasitism task</FleshParasitePod_Starting>
+  <FleshParasitePod_Target>Insert host</FleshParasitePod_Target>
+  <FleshParasitePod_Title>Implant a fleshbeast into a host with the aid of a flesh parasite vat. The fleshbeast consumes the host's nutrition to survive. Different fleshbeasts grant different abilities, making the host more powerful.</FleshParasitePod_Title>
+  <ParasitismAbility>Parasitic abilities</ParasitismAbility>
+  <ParasitismCapacity>Parasite capacity: {0}/{1}</ParasitismCapacity>
+  <ParasitismCapacityCost>Capacity cost:</ParasitismCapacityCost>
+  <ParasitismFleshBeast>{0} parasitism</ParasitismFleshBeast>
+  <Tab_Parasitism>Parasitism</Tab_Parasitism>
+  <Unparasitized>Unparasitized</Unparasitized>
+  <FH_HungerRate>Hunger rate offset: {0}</FH_HungerRate>
+  <ParasitismSucceed>{0}: parasitism succeeded</ParasitismSucceed>
+  <ParasitismSucceedDesc>{1} has successfully parasitized {0}.</ParasitismSucceedDesc>
+  <ParasitismFail>{0}: parasitism failed</ParasitismFail>
+  <ParasitismFailDesc>The attempt to parasite {0} failed. The fleshbeast has been released.</ParasitismFailDesc>
+  <FH_Parasitism_VatSelector>Flesh parasite vats</FH_Parasitism_VatSelector>
+  <FH_Parasitism_NoVats>No player-controlled flesh parasite vats are available on this map.</FH_Parasitism_NoVats>
+  <FH_Parasitism_VatIdle>Idle</FH_Parasitism_VatIdle>
+  <FH_Parasitism_VatQueued>Task queued</FH_Parasitism_VatQueued>
+  <FH_Parasitism_VatWorking>Parasitizing: {0}</FH_Parasitism_VatWorking>
 
   <HCF_FormulaCategory_Parasite>Parasite</HCF_FormulaCategory_Parasite>
   <HCF_AddParasite>Add Parasite</HCF_AddParasite>
@@ -20,6 +43,13 @@
 
   <TwistedFleshCapacity>Twisted Flesh: {0}/{1}</TwistedFleshCapacity>
   <FH_NotEnoughTwistedFlesh>Requires {0} twisted flesh.</FH_NotEnoughTwistedFlesh>
+  <FH_TrispikeFill>Fill with twisted flesh</FH_TrispikeFill>
+  <FH_TrispikeFillCharged>Fill with twisted flesh: charged</FH_TrispikeFillCharged>
+  <FH_TrispikeFillNeed>Fill with twisted flesh: requires {0}</FH_TrispikeFillNeed>
+  <FH_TrispikeNeedsTwistedFlesh>Requires twisted flesh to be loaded</FH_TrispikeNeedsTwistedFlesh>
+  <FH_DevAddTwistedFlesh>DEV: +10% twisted flesh</FH_DevAddTwistedFlesh>
+  <FH_DevFillTwistedFlesh>DEV: fill twisted flesh</FH_DevFillTwistedFlesh>
+  <FH_DevGiveParasite>DEV: add parasite</FH_DevGiveParasite>
 
   <ToggleTentacleAttackMode>Toggle {0}'s tentacle attack mode</ToggleTentacleAttackMode>
   <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>
@@ -100,9 +130,24 @@
   <FH_Fusion_SlotLarge>Large fleshbeast</FH_Fusion_SlotLarge>
   <FH_Fusion_Unknown>Unknown</FH_Fusion_Unknown>
   <FH_Fusion_NoTrait>None</FH_Fusion_NoTrait>
+  <FH_Fusion_NotFleshbeast>Cannot fuse</FH_Fusion_NotFleshbeast>
+  <FH_Fusion_Failed>Fusion failed</FH_Fusion_Failed>
   <FH_Fusion_ResultType>Fleshbeast type: {0}</FH_Fusion_ResultType>
   <FH_Fusion_ResultTraits>Trait: {0}</FH_Fusion_ResultTraits>
   <FH_Fusion_ResultHint>Perform this fusion once to learn the result.</FH_Fusion_ResultHint>
+  <FH_Fusion_Result>Result: {0}</FH_Fusion_Result>
+  <FH_Fusion_MaterialRequirement>Materials: {0} x{1}</FH_Fusion_MaterialRequirement>
+  <FH_Fusion_Time>Fusion time: {0} days</FH_Fusion_Time>
+  <FH_Fusion_Value>Value: {0}</FH_Fusion_Value>
+  <FH_Fusion_Description>Select the fleshbeasts to consume in the fusion. Different materials produce fleshbeasts with different traits, and the result is only revealed after the fusion is complete.\nCompleted combinations are recorded automatically as discovered templates for later reuse.</FH_Fusion_Description>
+  <FH_Fusion_Start>Fuse fleshbeasts</FH_Fusion_Start>
+  <FH_Fusion_SelectMaterial>Select fusion material</FH_Fusion_SelectMaterial>
+  <FH_Fusion_ClearSlot>Clear selection</FH_Fusion_ClearSlot>
+  <FH_Fusion_SavedTemplates>Discovered templates</FH_Fusion_SavedTemplates>
+  <FH_Fusion_NoTemplates>No fusion templates have been discovered.</FH_Fusion_NoTemplates>
+  <FH_Fusion_ApplyTemplate>Apply</FH_Fusion_ApplyTemplate>
+  <FH_Fusion_TemplateMissingMaterials>The required fleshbeasts are not currently available.</FH_Fusion_TemplateMissingMaterials>
+  <FH_Fusion_NoValidFusion>Select all required fusion materials first.</FH_Fusion_NoValidFusion>
   <FH_TabParasiticWeapons>Parasitic weapons</FH_TabParasiticWeapons>
   <FH_ParasiticWeaponSlot>Parasitic weapon slot</FH_ParasiticWeaponSlot>
   <FH_LeftParasiticWeaponSlot>Parasitic weapon: left slot</FH_LeftParasiticWeaponSlot>
@@ -113,5 +158,76 @@
   <TemporaryFleshGroup>Temporary fleshbeast group</TemporaryFleshGroup>
   <FH_FissionmeldDormant_ResurrectsIn>Resurrects in: {0}</FH_FissionmeldDormant_ResurrectsIn>
   <FH_SummonGiantFleshbeastCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground!</FH_SummonGiantFleshbeastCompleteText>
+  <FH_HarnessedFleshmassHeart_TransformLabel>Become fleshtitan</FH_HarnessedFleshmassHeart_TransformLabel>
+  <FH_HarnessedFleshmassHeart_TransformDesc>Consume {0} hive nutrition and transform this heart into a harnessed fleshtitan.</FH_HarnessedFleshmassHeart_TransformDesc>
+  <FH_HarnessedFleshmassHeart_TransformDisabled>Requires {0} hive nutrition. Available: {1}.</FH_HarnessedFleshmassHeart_TransformDisabled>
+  <FH_HarnessedFleshmassHeart_TransformConfirm>Consume {0} hive nutrition and permanently transform this heart into a harnessed fleshtitan?</FH_HarnessedFleshmassHeart_TransformConfirm>
+  <FH_HarnessedFleshmassHeart_TransformFailed>There is not enough hive nutrition to transform the heart.</FH_HarnessedFleshmassHeart_TransformFailed>
+  <FH_HarnessedFleshmassHeart_Transformed>{TITAN_labelShort} has emerged from the harnessed fleshmass heart.</FH_HarnessedFleshmassHeart_Transformed>
+  <FH_FleshmassHeartTitanCountdown>Transformation into fleshtitan: {0}</FH_FleshmassHeartTitanCountdown>
+  <FH_FleshmassHeartTitanWarningLabel>Fleshmass heart transforming</FH_FleshmassHeartTitanWarningLabel>
+  <FH_FleshmassHeartTitanWarningText>The fleshmass heart will transform into a fleshtitan in {0}.</FH_FleshmassHeartTitanWarningText>
+  <FH_FleshtitanReversionCountdown>Reversion to fleshmass heart: {0}</FH_FleshtitanReversionCountdown>
+
+  <FH_Quest_FleshSurvivor_Name>Flesh survivor</FH_Quest_FleshSurvivor_Name>
+  <FH_Quest_FleshSurvivor_Description>A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information.\n\nAccept: Hela Bates joins.</FH_Quest_FleshSurvivor_Description>
+  <FH_Quest_FleshSurvivor_AttackIn>Fleshbeasts will arrive in {0}.</FH_Quest_FleshSurvivor_AttackIn>
+  <FH_Quest_FleshSurvivor_AttackLabel>Fleshbeasts incoming</FH_Quest_FleshSurvivor_AttackLabel>
+  <FH_Quest_FleshSurvivor_AttackText>The frenzied fleshbeasts pursuing Hela Bates have reached the colony.</FH_Quest_FleshSurvivor_AttackText>
+
+  <FH_Hela_ParasiteCapacityInfo>Parasite capacity: {0}/{1}</FH_Hela_ParasiteCapacityInfo>
+  <FH_Hela_BodyPartHealthInfo>Occupied parasite space: {0}; body part health: {1}</FH_Hela_BodyPartHealthInfo>
+  <FH_Hela_NodeLimitInfo>Fleshbeast control limit: {0}</FH_Hela_NodeLimitInfo>
+  <FH_Hela_TwistedFleshInfo>Twisted flesh: {0}/{1}; automatically sustains controlled fleshbeasts</FH_Hela_TwistedFleshInfo>
+  <FH_Hela_UseShard>Use {0} to expand parasite capacity</FH_Hela_UseShard>
+  <FH_Hela_CannotUseShard>Cannot use {0}</FH_Hela_CannotUseShard>
+  <FH_Hela_CannotUseShardMax>Cannot use {0}: parasite capacity has reached its maximum of {1}</FH_Hela_CannotUseShardMax>
+  <FH_Hela_CannotUseShardDowned>Cannot use {0}: Hela is downed</FH_Hela_CannotUseShardDowned>
+  <FH_Hela_CannotUseShardReserved>Cannot use {0}: reserved by someone else</FH_Hela_CannotUseShardReserved>
+  <FH_Hela_ShardUsed>{0} has expanded her parasite capacity to {1} and fallen into a one-day coma.</FH_Hela_ShardUsed>
+
+  <FH_ItemProduction_Cost>Cost: {0}</FH_ItemProduction_Cost>
+  <FH_ItemProduction_Time>Production time: {0} days</FH_ItemProduction_Time>
+  <FH_ItemProduction_Output>Output: {0}</FH_ItemProduction_Output>
+  <FH_ItemProduction_Value>Market value: {0}</FH_ItemProduction_Value>
+  <FH_ItemProduction_Repeat>Repeat:</FH_ItemProduction_Repeat>
+  <FH_ItemProduction_Produce>Produce</FH_ItemProduction_Produce>
+  <FH_ItemProduction_AddBill>Add bill</FH_ItemProduction_AddBill>
+  <FH_ItemProduction_CancelTask>Cancel production task</FH_ItemProduction_CancelTask>
+  <FH_ItemProduction_NoHoppers>No flesh hoppers are available.</FH_ItemProduction_NoHoppers>
+  <FH_ItemProduction_NoAvailableItems>No items are currently available for production.</FH_ItemProduction_NoAvailableItems>
+  <FH_ItemProduction_NoCost>None</FH_ItemProduction_NoCost>
+  <FH_ItemProduction_Range>{0}-{1}</FH_ItemProduction_Range>
+  <FH_ItemProduction_UnknownReason>Unknown reason</FH_ItemProduction_UnknownReason>
+  <FH_ItemProduction_PartialQueue>Added {0} of {1} production tasks. {2}</FH_ItemProduction_PartialQueue>
+
+  <FH_Gestation_Cost>Cost: {0}</FH_Gestation_Cost>
+  <FH_Gestation_Time>Gestation time: {0} days; actual: {1} days</FH_Gestation_Time>
+  <FH_Gestation_GroupCost>Hive capacity: {0}</FH_Gestation_GroupCost>
+  <FH_Gestation_Node>Assigned node: {0}</FH_Gestation_Node>
+  <FH_Gestation_Value>Market value: {0}</FH_Gestation_Value>
+  <FH_Gestation_Repeat>Repeat:</FH_Gestation_Repeat>
+  <FH_Gestation_Start>Gestate</FH_Gestation_Start>
+  <FH_Gestation_AddBill>Add bill</FH_Gestation_AddBill>
+  <FH_Gestation_NodeCapacity>Hive capacity: {0}/{1}</FH_Gestation_NodeCapacity>
+  <FH_Gestation_CancelTask>Cancel gestation task</FH_Gestation_CancelTask>
+  <FH_Gestation_NoSpawners>No flesh hive nodes are available for gestation.</FH_Gestation_NoSpawners>
+  <FH_Gestation_NoAvailableUnits>No fleshbeasts are currently available for gestation.</FH_Gestation_NoAvailableUnits>
+  <FH_Gestation_QuotaUnit>Fleshbeast</FH_Gestation_QuotaUnit>
+  <FH_Gestation_QuotaCurrent>Current</FH_Gestation_QuotaCurrent>
+  <FH_Gestation_QuotaMaintain>Maintain</FH_Gestation_QuotaMaintain>
+  <FH_Gestation_QuotaMaximum>Maximum</FH_Gestation_QuotaMaximum>
+  <FH_Gestation_QuotaHelp>Gestation tasks are created automatically when the current and queued count is below the maintain target. Fleshbeasts above the maximum are reclaimed into nutrition.</FH_Gestation_QuotaHelp>
+  <FH_Gestation_SetFiniteMaximum>Set a finite maximum equal to the greater of the current and maintain counts.</FH_Gestation_SetFiniteMaximum>
+  <FH_Gestation_SetInfiniteMaximum>Remove the maximum limit.</FH_Gestation_SetInfiniteMaximum>
+  <FH_Gestation_NoCost>None</FH_Gestation_NoCost>
+  <FH_Gestation_Range>{0}-{1}</FH_Gestation_Range>
+  <FH_Gestation_UnknownReason>Unknown reason</FH_Gestation_UnknownReason>
+  <FH_Gestation_PartialQueue>Added {0} of {1} gestation tasks. {2}</FH_Gestation_PartialQueue>
+  <FH_Gestation_CustomFormula>Custom formulas</FH_Gestation_CustomFormula>
+  <FH_Gestation_CustomFormulaTitle>Custom formulas</FH_Gestation_CustomFormulaTitle>
+  <FH_Gestation_CustomFormulaMenuEntry>Custom formula: {0}</FH_Gestation_CustomFormulaMenuEntry>
+  <FH_Gestation_CustomFormulaUnavailable>This custom formula is not available at this producer.</FH_Gestation_CustomFormulaUnavailable>
+  <FH_Gestation_CustomFormulaInsufficientResources>There are not enough resources to produce this custom formula.</FH_Gestation_CustomFormulaInsufficientResources>
 
 </LanguageData>

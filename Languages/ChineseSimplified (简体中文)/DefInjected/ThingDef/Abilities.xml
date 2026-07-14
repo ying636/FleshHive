@@ -2,24 +2,30 @@
 <LanguageData>
   
   <!-- EN: bone shard -->
-  <FH_Bullet_BoneShard.label>TODO</FH_Bullet_BoneShard.label>
+  <FH_Bullet_BoneShard.label>骨片</FH_Bullet_BoneShard.label>
   
   <!-- EN: acid spit -->
-  <FH_Bullet_Shell_AcidSpit.label>TODO</FH_Bullet_Shell_AcidSpit.label>
+  <FH_Bullet_Shell_AcidSpit.label>酸液喷吐物</FH_Bullet_Shell_AcidSpit.label>
+
+  <!-- EN: acid -->
+  <FH_Projectile_Parasitism_AcidSpray.label>酸液</FH_Projectile_Parasitism_AcidSpray.label>
   
   <!-- EN: nexusmeld seed -->
-  <FH_Bullet_Shell_Spit.label>TODO</FH_Bullet_Shell_Spit.label>
+  <FH_Bullet_Shell_Spit.label>统合母兽种子</FH_Bullet_Shell_Spit.label>
+
+  <!-- EN: flesh mortar shell -->
+  <FH_Bullet_Shell_ParasitismSpit.label>血肉迫击炮弹</FH_Bullet_Shell_ParasitismSpit.label>
   
   <!-- EN: spike -->
-  <FH_Spike_Parasitism_BoneSpike.label>TODO</FH_Spike_Parasitism_BoneSpike.label>
+  <FH_Spike_Parasitism_BoneSpike.label>骨刺</FH_Spike_Parasitism_BoneSpike.label>
   
   <!-- EN: spike -->
-  <FH_Spike_Paraspike.label>TODO</FH_Spike_Paraspike.label>
+  <FH_Spike_Paraspike.label>骨刺</FH_Spike_Paraspike.label>
   
   <!-- EN: spike -->
-  <FH_Spike_Shatterspike.label>TODO</FH_Spike_Shatterspike.label>
+  <FH_Spike_Shatterspike.label>骨刺</FH_Spike_Shatterspike.label>
   
   <!-- EN: spike -->
-  <FH_Spike_Whipspike.label>TODO</FH_Spike_Whipspike.label>
+  <FH_Spike_Whipspike.label>骨刺</FH_Spike_Whipspike.label>
   
 </LanguageData>

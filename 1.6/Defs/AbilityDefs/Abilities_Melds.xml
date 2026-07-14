@@ -129,6 +129,7 @@
       <ai_IsWeapon>false</ai_IsWeapon>
       <targetParams>
         <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
       </targetParams>
     </verbProperties>
     <comps>
@@ -176,7 +177,7 @@
     <label>scarlet field</label>
     <description>Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh.</description>
     <abilityClass>Ability</abilityClass>
-    <aiCanUse>true</aiCanUse>
+    <aiCanUse>false</aiCanUse>
     <iconPath>UI/Ability/FH_ScarletField</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -255,10 +256,11 @@
   <AbilityDef>
     <defName>FH_FleshRebirth</defName>
     <label>flesh rebirth</label>
-    <description>Consume twisted flesh to prepare a death refusal, allowing the host to rapidly rebuild their body after death.</description>
-    <abilityClass>Ability</abilityClass>
+    <description>Consume twisted flesh to purge harmful conditions and rebuild damaged flesh.</description>
+    <abilityClass>FleshHive.Ability_FleshRebirth</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>60000</cooldownTicksRange>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <iconPath>UI/Ability/FH_FleshRebirth</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -275,8 +277,62 @@
       <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
         <twistedFleshCost>200</twistedFleshCost>
       </li>
-      <li Class="FleshHive.CompProperties_AbilityFleshRebirth">
-        <deathRefusalHediff>DeathRefusal</deathRefusalHediff>
+      <li Class="FleshHive.CompProperties_AbilityFleshRebirth" />
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_DreadmeldTerrorRoar</defName>
+    <label>terror roar</label>
+    <description>Release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror.</description>
+    <iconPath>UI/Ability/FH_DreadmeldTerrorRoar</iconPath>
+    <cooldownTicksRange>7500</cooldownTicksRange>
+    <stunTargetWhileCasting>true</stunTargetWhileCasting>
+    <targetRequired>false</targetRequired>
+    <aiCanUse>true</aiCanUse>
+    <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+    <displayOrder>300</displayOrder>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <statBases>
+      <Ability_EffectRadius>23.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>23.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <soundCast>Ability_TerrorRoar</soundCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetEntities>false</canTargetEntities>
+        <canTargetSubhumans>false</canTargetSubhumans>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveMentalState">
+        <compClass>CompAbilityEffect_GiveMentalState</compClass>
+        <stateDef>Terror</stateDef>
+      </li>
+      <li Class="CompProperties_AbilityEffect">
+        <compClass>CompAbilityEffect_OnlyTargetHostiles</compClass>
+      </li>
+      <li Class="CompProperties_AbilityAnimalRoar">
+        <chanceFromHearingCurve>
+          <points>
+            <li>(0.0, 0.0)</li>
+            <li>(1.0, 0.75)</li>
+          </points>
+        </chanceFromHearingCurve>
+      </li>
+      <li Class="CompProperties_AbilityEffecterOnCaster">
+        <effecterDef>TerrorRoar</effecterDef>
+        <maintainTicks>20</maintainTicks>
       </li>
     </comps>
   </AbilityDef>
@@ -284,7 +340,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>FH_Projectile_Rampage</defName>
     <label>rampage</label>
-    <thingClass>HiveCreatureFramework.Projectile_Charge</thingClass>
+    <thingClass>FleshHive.Projectile_RampageCharge</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld_east</texPath>
@@ -320,6 +376,239 @@
       </li>
       <li Class="HiveCreatureFramework.EffectCompPropertiesEffecter">
         <effect>ImpactSmallDustCloud</effect>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <AbilityDef>
+    <defName>FH_TitanDevastatingStrike</defName>
+    <label>devastating strike</label>
+    <description>The next melee attack that hits will shatter everything.</description>
+    <abilityClass>Ability</abilityClass>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>720000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_DevastatingStrike</iconPath>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>5</warmupTime>
+      <targetable>false</targetable>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityTitanDevastatingStrike">
+        <hediffDef>FH_TitanDevastatingStrikeReady</hediffDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_TitanGroundSlam</defName>
+    <label>titan ground slam</label>
+    <description>The fleshtitan leaps high and slams into the ground, dealing blunt damage to all nearby creatures, throwing them into the air, and stunning them for a long time.</description>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>180000</cooldownTicksRange>
+    <iconPath>UI/Ability/FH_TitanGroundSlam</iconPath>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>12</range>
+      <defaultProjectile>FH_Flyer_TitanGroundSlam</defaultProjectile>
+      <defaultCooldownTime>5</defaultCooldownTime>
+      <verbClass>HiveCreatureFramework.Verb_VerticalFlyer</verbClass>
+      <warmupTime>5</warmupTime>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>FH_TitanGroundSlamDust</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+      <drawSize>8</drawSize>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.08</fadeInTime>
+    <solidTime>0.06</solidTime>
+    <fadeOutTime>1</fadeOutTime>
+  </FleckDef>
+
+  <ThingDef>
+    <defName>FH_Flyer_TitanGroundSlam</defName>
+    <label>titan ground slam</label>
+    <thingClass>HiveCreatureFramework.ThingFlyer_Vertical</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan_east</texPath>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_FleckEmitter">
+        <fleck>FH_TitanGroundSlamDust</fleck>
+        <emissionInterval>10</emissionInterval>
+      </li>
+      <li Class="HiveCreatureFramework.ShakeCompProperties">
+        <mag>6</mag>
+      </li>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesShockWave">
+        <trigger>FH_TitanGroundSlamTrigger</trigger>
+        <effecter>ImpactSmallDustCloud</effecter>
+        <radius>12</radius>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_Vertical">
+        <height>15</height>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>FH_TitanGroundSlamTrigger</defName>
+    <label>titan ground slam trigger</label>
+    <thingClass>HiveCreatureFramework.DelayedTrigger</thingClass>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <hideInspect>true</hideInspect>
+    <drawerType>None</drawerType>
+    <comps>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesFlyPawn_Vertical">
+        <flyer>FH_Flyer_TitanGroundSlamVictim</flyer>
+        <damageDef>Blunt</damageDef>
+        <amount>56</amount>
+      </li>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesEffecter">
+        <effect>ImpactSmallDustCloud</effect>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>FH_Flyer_TitanGroundSlamVictim</defName>
+    <label>titan ground slam impact</label>
+    <thingClass>HiveCreatureFramework.ThingFlyer_Vertical</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan_east</texPath>
+    </graphicData>
+    <comps>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesEffecter">
+        <effect>ImpactSmallDustCloud</effect>
+      </li>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesDamage">
+        <damageDef>Blunt</damageDef>
+        <amount>56</amount>
+      </li>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesDamage">
+        <damageDef>Stun</damageDef>
+        <amount>20</amount>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_Vertical">
+        <height>10</height>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <AbilityDef>
+    <defName>FH_TitanCharge</defName>
+    <label>titan charge</label>
+    <description>The fleshtitan surges forward, destroying buildings in its path and dealing blunt damage to anything it collides with.</description>
+    <iconPath>UI/Ability/FH_TitanCharge</iconPath>
+    <targetRequired>true</targetRequired>
+    <cooldownTicksRange>120000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <requireLineOfSight>false</requireLineOfSight>
+      <range>40</range>
+      <defaultProjectile>FH_Projectile_TitanCharge</defaultProjectile>
+      <defaultCooldownTime>5</defaultCooldownTime>
+      <verbClass>HiveCreatureFramework.Verb_ShootCharge</verbClass>
+      <warmupTime>5</warmupTime>
+      <soundCast>Pawn_Gorehulk_Attack</soundCast>
+      <ai_IsWeapon>false</ai_IsWeapon>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_ShootCharge">
+        <dist>30</dist>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Projectile_TitanCharge</defName>
+    <label>titan charge</label>
+    <thingClass>FleshHive.Projectile_RampageCharge</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan_east</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>56</damageAmountBase>
+      <speed>50</speed>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_FleckEmitter">
+        <fleck>FH_TitanGroundSlamDust</fleck>
+        <emissionInterval>4</emissionInterval>
+      </li>
+      <li Class="HiveCreatureFramework.ShakeCompProperties">
+        <mag>6</mag>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_Charge">
+        <damageDef>Blunt</damageDef>
+        <amount>56</amount>
+        <effect>ImpactSmallDustCloud</effect>
+        <flyer>FH_PawnFlyer_TitanCharge</flyer>
+        <canDestroyBuildings>true</canDestroyBuildings>
+        <buildingDamageThreshold>10000</buildingDamageThreshold>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="PawnFlyerBase">
+    <defName>FH_PawnFlyer_TitanCharge</defName>
+    <thingClass>HiveCreatureFramework.HCFPawnFlyer</thingClass>
+    <pawnFlyer>
+      <flightSpeed>24</flightSpeed>
+      <heightFactor>0.5</heightFactor>
+    </pawnFlyer>
+    <comps>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesDamage">
+        <damageDef>Blunt</damageDef>
+        <amount>10</amount>
+      </li>
+      <li Class="HiveCreatureFramework.EffectCompPropertiesEffecter">
+        <effect>ImpactSmallDustCloud</effect>
+        <sound>Pawn_Gorehulk_Attack</sound>
       </li>
     </comps>
   </ThingDef>

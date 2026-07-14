@@ -12,14 +12,14 @@
   <FH_FleshSpread.description>在目标区域蔓延扭曲血肉，消耗宿主的扭曲肉。</FH_FleshSpread.description>
   
   <!-- EN: flesh spread -->
-  <FH_FleshSpread_Parasitism.label>TODO</FH_FleshSpread_Parasitism.label>
+  <FH_FleshSpread_Parasitism.label>血肉蔓延</FH_FleshSpread_Parasitism.label>
   <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
-  <FH_FleshSpread_Parasitism.description>TODO</FH_FleshSpread_Parasitism.description>
+  <FH_FleshSpread_Parasitism.description>消耗宿主的扭曲肉，在一片区域内蔓延扭曲血肉。</FH_FleshSpread_Parasitism.description>
   
   <!-- EN: rampage charge -->
-  <FH_RampageCharge.label>TODO</FH_RampageCharge.label>
+  <FH_RampageCharge.label>狂暴冲锋</FH_RampageCharge.label>
   <!-- EN: The furiousmeld charges forward, dealing damage to everything in its path. Buildings are destroyed until a cumulative limit is reached. -->
-  <FH_RampageCharge.description>TODO</FH_RampageCharge.description>
+  <FH_RampageCharge.description>暴怒母兽向前冲锋，对路径上的一切目标造成伤害，并持续摧毁建筑，直至达到累计破坏上限。</FH_RampageCharge.description>
   
   <!-- EN: scarlet field -->
   <FH_ScarletField.label>猩红立场</FH_ScarletField.label>
@@ -49,6 +49,26 @@
 
   <!-- EN: flesh rebirth -->
   <FH_FleshRebirth.label>血肉重生</FH_FleshRebirth.label>
-  <!-- EN: Consume twisted flesh to prepare a death refusal, allowing the host to rapidly rebuild their body after death. -->
-  <FH_FleshRebirth.description>消耗200扭曲肉准备一次死亡规避，使宿主死亡后能够快速重塑躯体。</FH_FleshRebirth.description>
+  <!-- EN: Consume twisted flesh to purge harmful conditions and rebuild damaged flesh. -->
+  <FH_FleshRebirth.description>消耗200扭曲肉，清除宿主身上的负面状态和伤口。</FH_FleshRebirth.description>
+
+  <!-- EN: terror roar -->
+  <FH_DreadmeldTerrorRoar.label>惊惧咆哮</FH_DreadmeldTerrorRoar.label>
+  <!-- EN: Release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror. -->
+  <FH_DreadmeldTerrorRoar.description>发出令人胆裂的咆哮，有一定几率使附近敌人与动物惊逃四散。</FH_DreadmeldTerrorRoar.description>
+
+  <!-- EN: devastating strike -->
+  <FH_TitanDevastatingStrike.label>毁灭重击</FH_TitanDevastatingStrike.label>
+  <!-- EN: The next melee attack that hits will shatter everything. -->
+  <FH_TitanDevastatingStrike.description>下一次命中的近战攻击将会粉碎一切</FH_TitanDevastatingStrike.description>
+
+  <!-- EN: titan ground slam -->
+  <FH_TitanGroundSlam.label>泰坦震地</FH_TitanGroundSlam.label>
+  <!-- EN: The fleshtitan leaps high and slams into the ground, dealing blunt damage to all nearby creatures, throwing them into the air, and stunning them for a long time. -->
+  <FH_TitanGroundSlam.description>血肉泰坦高高跃起并重击地面，使附近所有生物受到钝击伤害、被震飞并长时间眩晕。</FH_TitanGroundSlam.description>
+
+  <!-- EN: titan charge -->
+  <FH_TitanCharge.label>泰坦冲锋</FH_TitanCharge.label>
+  <!-- EN: The fleshtitan surges forward, destroying buildings in its path and dealing blunt damage to anything it collides with. -->
+  <FH_TitanCharge.description>血肉泰坦向前快速冲刺，摧毁途经的建筑，并对冲撞到的目标造成钝击伤害。</FH_TitanCharge.description>
 </LanguageData>

@@ -22,9 +22,6 @@
   <FH_Trait_Fragile.label>fragile</FH_Trait_Fragile.label>
   <FH_Trait_Fragile.description>This fleshbeast's body is unstable and takes more damage.</FH_Trait_Fragile.description>
   
-  <FH_Trait_None.label>none</FH_Trait_None.label>
-  <FH_Trait_None.description>This fleshbeast has no special trait.</FH_Trait_None.description>
-  
   <FH_Trait_RapidGrowth.label>rapid growth</FH_Trait_RapidGrowth.label>
   <FH_Trait_RapidGrowth.description>This fleshbeast grows unusually quickly.</FH_Trait_RapidGrowth.description>
   

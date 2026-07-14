@@ -15,6 +15,24 @@
   <FleshParasitePod_InsufficientNutrition>无法寄生，需要{0}营养</FleshParasitePod_InsufficientNutrition>
   <!-- EN: Parasitism cost: {0} nutrition -->
   <FleshParasitePod_NutritionCost>寄生消耗：{0}营养</FleshParasitePod_NutritionCost>
+  <!-- EN: {0}: parasitism succeeded -->
+  <ParasitismSucceed>{0}寄生成功</ParasitismSucceed>
+  <!-- EN: {1} has successfully parasitized {0}. -->
+  <ParasitismSucceedDesc>{1}已成功寄生于{0}体内。</ParasitismSucceedDesc>
+  <!-- EN: {0}: parasitism failed -->
+  <ParasitismFail>{0}寄生失败</ParasitismFail>
+  <!-- EN: The attempt to parasite {0} failed. The fleshbeast has been released. -->
+  <ParasitismFailDesc>对{0}的寄生未能完成，血肉兽已被释放。</ParasitismFailDesc>
+  <!-- EN: Flesh parasite vats -->
+  <FH_Parasitism_VatSelector>血肉寄生仓</FH_Parasitism_VatSelector>
+  <!-- EN: No player-controlled flesh parasite vats are available on this map. -->
+  <FH_Parasitism_NoVats>当前地图上没有可用的血肉寄生仓。</FH_Parasitism_NoVats>
+  <!-- EN: Idle -->
+  <FH_Parasitism_VatIdle>空闲</FH_Parasitism_VatIdle>
+  <!-- EN: Task queued -->
+  <FH_Parasitism_VatQueued>任务已建立</FH_Parasitism_VatQueued>
+  <!-- EN: Parasitizing: {0} -->
+  <FH_Parasitism_VatWorking>寄生中：{0}</FH_Parasitism_VatWorking>
 
   <!-- EN: Parasite -->
   <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
@@ -37,6 +55,20 @@
   <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
   <!-- EN: Requires {0} twisted flesh. -->
   <FH_NotEnoughTwistedFlesh>需要{0}扭曲肉。</FH_NotEnoughTwistedFlesh>
+  <!-- EN: Fill with twisted flesh -->
+  <FH_TrispikeFill>填充扭曲肉</FH_TrispikeFill>
+  <!-- EN: Fill with twisted flesh: charged -->
+  <FH_TrispikeFillCharged>填充扭曲肉：已充能</FH_TrispikeFillCharged>
+  <!-- EN: Fill with twisted flesh: requires {0} -->
+  <FH_TrispikeFillNeed>填充扭曲肉：需要{0}</FH_TrispikeFillNeed>
+  <!-- EN: Requires twisted flesh to be loaded -->
+  <FH_TrispikeNeedsTwistedFlesh>需要填充扭曲肉</FH_TrispikeNeedsTwistedFlesh>
+  <!-- EN: DEV: +10% twisted flesh -->
+  <FH_DevAddTwistedFlesh>开发：增加10%扭曲肉</FH_DevAddTwistedFlesh>
+  <!-- EN: DEV: fill twisted flesh -->
+  <FH_DevFillTwistedFlesh>开发：填满扭曲肉</FH_DevFillTwistedFlesh>
+  <!-- EN: DEV: add parasite -->
+  <FH_DevGiveParasite>开发：添加寄生体</FH_DevGiveParasite>
 
   <!-- EN: Toggle {0}'s tentacle attack mode -->
   <ToggleTentacleAttackMode>开关{0}的触手攻击模式</ToggleTentacleAttackMode>
@@ -192,12 +224,42 @@
   <FH_Fusion_Unknown>未知</FH_Fusion_Unknown>
   <!-- EN: None -->
   <FH_Fusion_NoTrait>无</FH_Fusion_NoTrait>
+  <!-- EN: Cannot fuse -->
+  <FH_Fusion_NotFleshbeast>不可融合</FH_Fusion_NotFleshbeast>
+  <!-- EN: Fusion failed -->
+  <FH_Fusion_Failed>融合失败</FH_Fusion_Failed>
   <!-- EN: Fleshbeast type: {0} -->
   <FH_Fusion_ResultType>血肉兽类型：{0}</FH_Fusion_ResultType>
   <!-- EN: Trait: {0} -->
   <FH_Fusion_ResultTraits>特性：{0}</FH_Fusion_ResultTraits>
   <!-- EN: Perform this fusion once to learn the result. -->
   <FH_Fusion_ResultHint>只有进行一次融合后才能了解融合结果。</FH_Fusion_ResultHint>
+  <!-- EN: Result: {0} -->
+  <FH_Fusion_Result>融合结果：{0}</FH_Fusion_Result>
+  <!-- EN: Materials: {0} x{1} -->
+  <FH_Fusion_MaterialRequirement>所需素材：{0} x{1}</FH_Fusion_MaterialRequirement>
+  <!-- EN: Fusion time: {0} days -->
+  <FH_Fusion_Time>融合时间：{0}天</FH_Fusion_Time>
+  <!-- EN: Value: {0} -->
+  <FH_Fusion_Value>价值：{0}</FH_Fusion_Value>
+  <!-- EN: Select the fleshbeasts to consume in the fusion. Different materials produce fleshbeasts with different traits, and the result is only revealed after the fusion is complete. Completed combinations are recorded automatically as discovered templates for later reuse. -->
+  <FH_Fusion_Description>选择融合所消耗的血肉兽，不同的材料会融合出带有不同特性的血肉兽，只有在融合结束后才能知道结果。\n已完成的组合会自动记录为已发现模板，供之后再次使用。</FH_Fusion_Description>
+  <!-- EN: Fuse fleshbeasts -->
+  <FH_Fusion_Start>融合血肉兽</FH_Fusion_Start>
+  <!-- EN: Select fusion material -->
+  <FH_Fusion_SelectMaterial>选择融合素材</FH_Fusion_SelectMaterial>
+  <!-- EN: Clear selection -->
+  <FH_Fusion_ClearSlot>清除选择</FH_Fusion_ClearSlot>
+  <!-- EN: Discovered templates -->
+  <FH_Fusion_SavedTemplates>已发现模板</FH_Fusion_SavedTemplates>
+  <!-- EN: No fusion templates have been discovered. -->
+  <FH_Fusion_NoTemplates>尚未发现融合模板。</FH_Fusion_NoTemplates>
+  <!-- EN: Apply -->
+  <FH_Fusion_ApplyTemplate>应用</FH_Fusion_ApplyTemplate>
+  <!-- EN: The required fleshbeasts are not currently available. -->
+  <FH_Fusion_TemplateMissingMaterials>当前没有足够的血肉兽来应用该模板。</FH_Fusion_TemplateMissingMaterials>
+  <!-- EN: Select all required fusion materials first. -->
+  <FH_Fusion_NoValidFusion>请先选择全部融合素材。</FH_Fusion_NoValidFusion>
 
   <!-- UNUSED -->
   <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
@@ -225,5 +287,143 @@
   <FH_FissionmeldDormant_ResurrectsIn>复生剩余时间：{0}</FH_FissionmeldDormant_ResurrectsIn>
   <!-- EN: {0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground! -->
   <FH_SummonGiantFleshbeastCompleteText>{0_nameDef}完成了{RITUAL_definite}仪式。{GIANT_label}和它的血肉兽护卫正在从地下出现！</FH_SummonGiantFleshbeastCompleteText>
+  <!-- EN: Become fleshtitan -->
+  <FH_HarnessedFleshmassHeart_TransformLabel>化身血肉泰坦</FH_HarnessedFleshmassHeart_TransformLabel>
+  <!-- EN: Consume {0} hive nutrition and transform this heart into a harnessed fleshtitan. -->
+  <FH_HarnessedFleshmassHeart_TransformDesc>消耗{0}巢穴营养，将这颗心脏转化为受控血肉泰坦。</FH_HarnessedFleshmassHeart_TransformDesc>
+  <!-- EN: Requires {0} hive nutrition. Available: {1}. -->
+  <FH_HarnessedFleshmassHeart_TransformDisabled>需要{0}巢穴营养。当前拥有：{1}。</FH_HarnessedFleshmassHeart_TransformDisabled>
+  <!-- EN: Consume {0} hive nutrition and permanently transform this heart into a harnessed fleshtitan? -->
+  <FH_HarnessedFleshmassHeart_TransformConfirm>是否消耗{0}巢穴营养，将这颗心脏永久转化为受控血肉泰坦？</FH_HarnessedFleshmassHeart_TransformConfirm>
+  <!-- EN: There is not enough hive nutrition to transform the heart. -->
+  <FH_HarnessedFleshmassHeart_TransformFailed>巢穴营养不足，无法转化心脏。</FH_HarnessedFleshmassHeart_TransformFailed>
+  <!-- EN: {TITAN_labelShort} has emerged from the harnessed fleshmass heart. -->
+  <FH_HarnessedFleshmassHeart_Transformed>{TITAN_labelShort}已从受控血肉心脏中诞生。</FH_HarnessedFleshmassHeart_Transformed>
+  <!-- EN: Transformation into fleshtitan: {0} -->
+  <FH_FleshmassHeartTitanCountdown>化身血肉泰坦：{0}</FH_FleshmassHeartTitanCountdown>
+  <!-- EN: Fleshmass heart transforming -->
+  <FH_FleshmassHeartTitanWarningLabel>血肉心脏正在蜕变</FH_FleshmassHeartTitanWarningLabel>
+  <!-- EN: The fleshmass heart will transform into a fleshtitan in {0}. -->
+  <FH_FleshmassHeartTitanWarningText>血肉心脏将在{0}后化身为血肉泰坦。</FH_FleshmassHeartTitanWarningText>
+  <!-- EN: Reversion to fleshmass heart: {0} -->
+  <FH_FleshtitanReversionCountdown>恢复血肉心脏：{0}</FH_FleshtitanReversionCountdown>
+
+  <!-- EN: Flesh survivor -->
+  <FH_Quest_FleshSurvivor_Name>血肉幸存者</FH_Quest_FleshSurvivor_Name>
+  <!-- EN: A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information.\n\nAccept: Hela Bates joins. -->
+  <FH_Quest_FleshSurvivor_Description>一位浑身血迹的研究员正在接近殖民地。她在附近发来通讯，称她刚从一场失控的研究所灾难中逃脱。她对具体情况的记忆已经十分模糊，现在正被一群狂暴的血肉兽追杀。她希望你能在殖民地保护她，并答应事后加入。\n\n如果你接受她的请求，一群血肉兽将在1小时内出现。\n\n研究员因为某些原因出现了严重失忆，你也无法获得更多情报。\n\n接取：海拉·贝茨加入。</FH_Quest_FleshSurvivor_Description>
+  <!-- EN: Fleshbeasts will arrive in {0}. -->
+  <FH_Quest_FleshSurvivor_AttackIn>血肉兽将在{0}后抵达。</FH_Quest_FleshSurvivor_AttackIn>
+  <!-- EN: Fleshbeasts incoming -->
+  <FH_Quest_FleshSurvivor_AttackLabel>血肉兽来袭</FH_Quest_FleshSurvivor_AttackLabel>
+  <!-- EN: The frenzied fleshbeasts pursuing Hela Bates have reached the colony. -->
+  <FH_Quest_FleshSurvivor_AttackText>追踪海拉·贝茨的狂暴血肉兽已经抵达殖民地。</FH_Quest_FleshSurvivor_AttackText>
+
+  <!-- EN: Parasite capacity: {0}/{1} -->
+  <FH_Hela_ParasiteCapacityInfo>寄生空间：{0}/{1}</FH_Hela_ParasiteCapacityInfo>
+  <!-- EN: Occupied parasite space: {0}; body part health: {1} -->
+  <FH_Hela_BodyPartHealthInfo>已激活寄生空间：{0}；部位生命值：{1}</FH_Hela_BodyPartHealthInfo>
+  <!-- EN: Fleshbeast control limit: {0} -->
+  <FH_Hela_NodeLimitInfo>血肉兽统御上限：{0}</FH_Hela_NodeLimitInfo>
+  <!-- EN: Twisted flesh: {0}/{1}; automatically sustains controlled fleshbeasts -->
+  <FH_Hela_TwistedFleshInfo>扭曲肉：{0}/{1}；自动维护受统御的血肉兽</FH_Hela_TwistedFleshInfo>
+  <!-- EN: Use {0} to expand parasite capacity -->
+  <FH_Hela_UseShard>使用{0}扩展寄生空间</FH_Hela_UseShard>
+  <!-- EN: Cannot use {0} -->
+  <FH_Hela_CannotUseShard>无法使用{0}</FH_Hela_CannotUseShard>
+  <!-- EN: Cannot use {0}: parasite capacity has reached its maximum of {1} -->
+  <FH_Hela_CannotUseShardMax>无法使用{0}：寄生空间已达到上限{1}</FH_Hela_CannotUseShardMax>
+  <!-- EN: Cannot use {0}: Hela is downed -->
+  <FH_Hela_CannotUseShardDowned>无法使用{0}：海拉已经倒地</FH_Hela_CannotUseShardDowned>
+  <!-- EN: Cannot use {0}: reserved by someone else -->
+  <FH_Hela_CannotUseShardReserved>无法使用{0}：已被其他人预留</FH_Hela_CannotUseShardReserved>
+  <!-- EN: {0} has expanded her parasite capacity to {1} and fallen into a one-day coma. -->
+  <FH_Hela_ShardUsed>{0}的寄生空间已扩展至{1}，并陷入了为期一天的昏迷。</FH_Hela_ShardUsed>
+
+  <!-- EN: Cost: {0} -->
+  <FH_ItemProduction_Cost>消耗：{0}</FH_ItemProduction_Cost>
+  <!-- EN: Production time: {0} days -->
+  <FH_ItemProduction_Time>生产时间：{0}天</FH_ItemProduction_Time>
+  <!-- EN: Output: {0} -->
+  <FH_ItemProduction_Output>产量：{0}</FH_ItemProduction_Output>
+  <!-- EN: Market value: {0} -->
+  <FH_ItemProduction_Value>市场价值：{0}</FH_ItemProduction_Value>
+  <!-- EN: Repeat: -->
+  <FH_ItemProduction_Repeat>重复：</FH_ItemProduction_Repeat>
+  <!-- EN: Produce -->
+  <FH_ItemProduction_Produce>生产</FH_ItemProduction_Produce>
+  <!-- EN: Add bill -->
+  <FH_ItemProduction_AddBill>添加清单</FH_ItemProduction_AddBill>
+  <!-- EN: Cancel production task -->
+  <FH_ItemProduction_CancelTask>取消生产任务</FH_ItemProduction_CancelTask>
+  <!-- EN: No flesh hoppers are available. -->
+  <FH_ItemProduction_NoHoppers>当前没有可用的产出物喷口。</FH_ItemProduction_NoHoppers>
+  <!-- EN: No items are currently available for production. -->
+  <FH_ItemProduction_NoAvailableItems>当前没有可生产的物品。</FH_ItemProduction_NoAvailableItems>
+  <!-- EN: None -->
+  <FH_ItemProduction_NoCost>无</FH_ItemProduction_NoCost>
+  <!-- EN: {0}-{1} -->
+  <FH_ItemProduction_Range>{0}-{1}</FH_ItemProduction_Range>
+  <!-- EN: Unknown reason -->
+  <FH_ItemProduction_UnknownReason>未知原因</FH_ItemProduction_UnknownReason>
+  <!-- EN: Added {0} of {1} production tasks. {2} -->
+  <FH_ItemProduction_PartialQueue>已添加{0}/{1}个生产任务。{2}</FH_ItemProduction_PartialQueue>
+
+  <!-- EN: Cost: {0} -->
+  <FH_Gestation_Cost>消耗：{0}</FH_Gestation_Cost>
+  <!-- EN: Gestation time: {0} days; actual: {1} days -->
+  <FH_Gestation_Time>孕育时间：{0}天；实际孕育时间：{1}天</FH_Gestation_Time>
+  <!-- EN: Hive capacity: {0} -->
+  <FH_Gestation_GroupCost>巢穴占用：{0}</FH_Gestation_GroupCost>
+  <!-- EN: Assigned node: {0} -->
+  <FH_Gestation_Node>归属节点：{0}</FH_Gestation_Node>
+  <!-- EN: Market value: {0} -->
+  <FH_Gestation_Value>市场价值：{0}</FH_Gestation_Value>
+  <!-- EN: Repeat: -->
+  <FH_Gestation_Repeat>重复：</FH_Gestation_Repeat>
+  <!-- EN: Gestate -->
+  <FH_Gestation_Start>孕育</FH_Gestation_Start>
+  <!-- EN: Add bill -->
+  <FH_Gestation_AddBill>添加清单</FH_Gestation_AddBill>
+  <!-- EN: Hive capacity: {0}/{1} -->
+  <FH_Gestation_NodeCapacity>巢穴规模：{0}/{1}</FH_Gestation_NodeCapacity>
+  <!-- EN: Cancel gestation task -->
+  <FH_Gestation_CancelTask>取消孕育任务</FH_Gestation_CancelTask>
+  <!-- EN: No flesh hive nodes are available for gestation. -->
+  <FH_Gestation_NoSpawners>当前没有可用于孕育的血肉巢穴节点。</FH_Gestation_NoSpawners>
+  <!-- EN: No fleshbeasts are currently available for gestation. -->
+  <FH_Gestation_NoAvailableUnits>当前没有可孕育的血肉兽。</FH_Gestation_NoAvailableUnits>
+  <!-- EN: Fleshbeast -->
+  <FH_Gestation_QuotaUnit>血肉兽</FH_Gestation_QuotaUnit>
+  <!-- EN: Current -->
+  <FH_Gestation_QuotaCurrent>当前</FH_Gestation_QuotaCurrent>
+  <!-- EN: Maintain -->
+  <FH_Gestation_QuotaMaintain>维持</FH_Gestation_QuotaMaintain>
+  <!-- EN: Maximum -->
+  <FH_Gestation_QuotaMaximum>最大</FH_Gestation_QuotaMaximum>
+  <!-- EN: Gestation tasks are created automatically when the current and queued count is below the maintain target. Fleshbeasts above the maximum are reclaimed into nutrition. -->
+  <FH_Gestation_QuotaHelp>当前数量与已排队数量之和低于维持值时，将自动建立孕育任务。超过最大值的血肉兽会被回收为营养。</FH_Gestation_QuotaHelp>
+  <!-- EN: Set a finite maximum equal to the greater of the current and maintain counts. -->
+  <FH_Gestation_SetFiniteMaximum>设置有限最大值，初始值取当前数量与维持值中的较大者。</FH_Gestation_SetFiniteMaximum>
+  <!-- EN: Remove the maximum limit. -->
+  <FH_Gestation_SetInfiniteMaximum>取消最大数量限制。</FH_Gestation_SetInfiniteMaximum>
+  <!-- EN: None -->
+  <FH_Gestation_NoCost>无</FH_Gestation_NoCost>
+  <!-- EN: {0}-{1} -->
+  <FH_Gestation_Range>{0}-{1}</FH_Gestation_Range>
+  <!-- EN: Unknown reason -->
+  <FH_Gestation_UnknownReason>未知原因</FH_Gestation_UnknownReason>
+  <!-- EN: Added {0} of {1} gestation tasks. {2} -->
+  <FH_Gestation_PartialQueue>已添加{0}/{1}个孕育任务。{2}</FH_Gestation_PartialQueue>
+  <!-- EN: Custom formulas -->
+  <FH_Gestation_CustomFormula>自定义配方</FH_Gestation_CustomFormula>
+  <!-- EN: Custom formulas -->
+  <FH_Gestation_CustomFormulaTitle>自定义配方</FH_Gestation_CustomFormulaTitle>
+  <!-- EN: Custom formula: {0} -->
+  <FH_Gestation_CustomFormulaMenuEntry>自定义配方：{0}</FH_Gestation_CustomFormulaMenuEntry>
+  <!-- EN: This custom formula is not available at this producer. -->
+  <FH_Gestation_CustomFormulaUnavailable>当前生产方无法使用此自定义配方。</FH_Gestation_CustomFormulaUnavailable>
+  <!-- EN: There are not enough resources to produce this custom formula. -->
+  <FH_Gestation_CustomFormulaInsufficientResources>资源不足，无法生产此自定义配方。</FH_Gestation_CustomFormulaInsufficientResources>
 
 </LanguageData>

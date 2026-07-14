@@ -5,5 +5,25 @@
   <FH_CategoryOption_FleshManagement.label>血肉兽管理</FH_CategoryOption_FleshManagement.label>
   <!-- EN: Manage flesh hive population, nutrition, activity, and fleshbeasts. -->
   <FH_CategoryOption_FleshManagement.description>总览并管理血肉巢穴的人口、营养度、活跃度和血肉兽。</FH_CategoryOption_FleshManagement.description>
+
+  <!-- EN: Fleshbeast gestation -->
+  <FH_CategoryOption_FleshbeastGestation.label>血肉兽孕育</FH_CategoryOption_FleshbeastGestation.label>
+  <!-- EN: Manage fleshbeast gestation tasks and population targets. -->
+  <FH_CategoryOption_FleshbeastGestation.description>管理血肉兽孕育任务和数量配额。</FH_CategoryOption_FleshbeastGestation.description>
+
+  <!-- EN: Fleshbeast parasitism -->
+  <FH_CategoryOption_Parasitism.label>血肉兽寄生</FH_CategoryOption_Parasitism.label>
+  <!-- EN: Manage fleshbeast parasitism tasks at flesh parasite vats. -->
+  <FH_CategoryOption_Parasitism.description>管理血肉寄生仓中的血肉兽寄生任务。</FH_CategoryOption_Parasitism.description>
+
+  <!-- EN: Produce items -->
+  <FH_CategoryOption_ItemProduction.label>生产物品</FH_CategoryOption_ItemProduction.label>
+  <!-- EN: Manage item production tasks for flesh hoppers. -->
+  <FH_CategoryOption_ItemProduction.description>管理产出物喷口的物品生产任务。</FH_CategoryOption_ItemProduction.description>
+
+  <!-- EN: Fleshbeast fusion -->
+  <FH_CategoryOption_FleshbeastFusion.label>血肉兽融合</FH_CategoryOption_FleshbeastFusion.label>
+  <!-- EN: Fuse fleshbeasts at the flesh primary nest. -->
+  <FH_CategoryOption_FleshbeastFusion.description>在血肉主巢中融合血肉兽。</FH_CategoryOption_FleshbeastFusion.description>
   
 </LanguageData>

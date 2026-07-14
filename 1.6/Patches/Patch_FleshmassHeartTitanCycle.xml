@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="FleshmassHeart"]/comps/li[@Class="CompProperties_GrowsFleshmassTendrils"]/compClass</xpath>
+    <value>
+      <compClass>FleshHive.CompFleshmassHeartTitanCycle</compClass>
+    </value>
+  </Operation>
+</Patch>

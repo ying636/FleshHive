@@ -23,4 +23,17 @@
 
 
 
+    <HiveCreatureFramework.HiveResourceDef>
+        <defName>FH_Resource_TwistedFlesh</defName>
+        <label>twisted flesh</label>
+        <description>Twisted flesh stored within a fleshbeast.</description>
+        <color>(0.65, 0.08, 0.08)</color>
+        <graphic>
+            <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphic>
+        <thing>Meat_Twisted</thing>
+    </HiveCreatureFramework.HiveResourceDef>
+
 </Defs>

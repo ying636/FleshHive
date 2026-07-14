@@ -265,9 +265,83 @@
   </HediffDef>
 
   <HediffDef>
+    <defName>FH_Parasitism_Dreadmeld</defName>
+    <label>dreadmeld parasitism</label>
+    <description>The dreadmeld latches onto the host, grafting bone spikes, granting incredible regeneration, improving mining work, and allowing the host to unleash a terror roar.</description>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.45, 0.2, 0.15)</defaultLabelColor>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <MiningSpeed>2.6</MiningSpeed>
+          <DeepDrillingSpeed>1.7</DeepDrillingSpeed>
+        </statFactors>
+        <label>dreadmeld parasitism</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>14</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Left Bone Spike</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>14</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Right Bone Spike</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Meld_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_DreadmeldTerrorRoar</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_Regeneration">
+        <regenHediff>Regeneration</regenHediff>
+        <regenSeverity>0.5</regenSeverity>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
     <defName>FH_Parasitism_Fissionmeld</defName>
     <label>fissionmeld parasitism</label>
-    <description>The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, and allowing the host to prepare a flesh rebirth.</description>
+    <description>The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, sustaining flesh undying while enough twisted flesh is stored, and allowing the host to purge harmful conditions.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.75, 0.25, 0.2)</defaultLabelColor>
@@ -327,9 +401,41 @@
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_FleshRebirth</abilityDef>
       </li>
+      <li Class="FleshHive.HediffCompProperties_FissionmeldUndying">
+        <undyingHediff>FH_FleshUndying</undyingHediff>
+        <requiredTwistedFlesh>200</requiredTwistedFlesh>
+        <downedConsumeIntervalTicks>60</downedConsumeIntervalTicks>
+      </li>
       <li Class="FleshHive.HediffCompProperties_Regeneration">
         <regenHediff>Regeneration</regenHediff>
       </li>
     </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_FleshUndying</defName>
+    <label>flesh undying</label>
+    <description>Stored twisted flesh keeps the host from dying while the parasite rebuilds ruined tissue.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <preventsDeath>true</preventsDeath>
+    <defaultLabelColor>(0.75, 0.1, 0.1)</defaultLabelColor>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_TitanDevastatingStrikeReady</defName>
+    <label>devastating strike ready</label>
+    <description>The next melee attack that hits will shatter everything.</description>
+    <hediffClass>FleshHive.Hediff_TitanDevastatingStrike</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <defaultLabelColor>(0.75, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>2000</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
   </HediffDef>
 </Defs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HairDef>
+    <defName>FH_Hair_Victoria</defName>
+    <label>victoria</label>
+    <category>Urban</category>
+    <styleGender>Female</styleGender>
+    <styleTags>
+      <li>Urban</li>
+      <li>Rural</li>
+      <li>HairLong</li>
+    </styleTags>
+    <texPath>Things/Pawn/Humanlike/Hairs/FH_Victoria/Victoria</texPath>
+  </HairDef>
+
+</Defs>

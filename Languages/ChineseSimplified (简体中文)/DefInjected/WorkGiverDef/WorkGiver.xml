@@ -2,11 +2,11 @@
 <LanguageData>
   
   <!-- EN: carry prey to flesh sack -->
-  <FH_WorkGiver_FillFleshSack.label>TODO</FH_WorkGiver_FillFleshSack.label>
+  <FH_WorkGiver_FillFleshSack.label>将猎物搬运至血肉囊</FH_WorkGiver_FillFleshSack.label>
   <!-- EN: carrying -->
-  <FH_WorkGiver_FillFleshSack.gerund>TODO</FH_WorkGiver_FillFleshSack.gerund>
+  <FH_WorkGiver_FillFleshSack.gerund>搬运中</FH_WorkGiver_FillFleshSack.gerund>
   <!-- EN: carry -->
-  <FH_WorkGiver_FillFleshSack.verb>TODO</FH_WorkGiver_FillFleshSack.verb>
+  <FH_WorkGiver_FillFleshSack.verb>搬运</FH_WorkGiver_FillFleshSack.verb>
 
   <!-- EN: infect harbinger tree -->
   <FH_WorkGiver_InfectHarbingerTree.label>感染噩兆噬树</FH_WorkGiver_InfectHarbingerTree.label>
@@ -16,25 +16,25 @@
   <FH_WorkGiver_InfectHarbingerTree.verb>感染</FH_WorkGiver_InfectHarbingerTree.verb>
   
   <!-- EN: carrry pawn to parasite pod -->
-  <FH_WorkGiver_PutPawnInParasitePod.label>TODO</FH_WorkGiver_PutPawnInParasitePod.label>
+  <FH_WorkGiver_PutPawnInParasitePod.label>将目标搬运至血肉寄生仓</FH_WorkGiver_PutPawnInParasitePod.label>
   <!-- EN: carring -->
-  <FH_WorkGiver_PutPawnInParasitePod.gerund>TODO</FH_WorkGiver_PutPawnInParasitePod.gerund>
+  <FH_WorkGiver_PutPawnInParasitePod.gerund>搬运中</FH_WorkGiver_PutPawnInParasitePod.gerund>
   <!-- EN: carry -->
-  <FH_WorkGiver_PutPawnInParasitePod.verb>TODO</FH_WorkGiver_PutPawnInParasitePod.verb>
+  <FH_WorkGiver_PutPawnInParasitePod.verb>搬运</FH_WorkGiver_PutPawnInParasitePod.verb>
   
   <!-- EN: refill twisted flesh -->
-  <FH_WorkGiver_RefillTwistedFlesh.label>TODO</FH_WorkGiver_RefillTwistedFlesh.label>
+  <FH_WorkGiver_RefillTwistedFlesh.label>补充扭曲肉</FH_WorkGiver_RefillTwistedFlesh.label>
   <!-- EN: refilling -->
-  <FH_WorkGiver_RefillTwistedFlesh.gerund>TODO</FH_WorkGiver_RefillTwistedFlesh.gerund>
+  <FH_WorkGiver_RefillTwistedFlesh.gerund>补充中</FH_WorkGiver_RefillTwistedFlesh.gerund>
   <!-- EN: refill -->
-  <FH_WorkGiver_RefillTwistedFlesh.verb>TODO</FH_WorkGiver_RefillTwistedFlesh.verb>
+  <FH_WorkGiver_RefillTwistedFlesh.verb>补充</FH_WorkGiver_RefillTwistedFlesh.verb>
   
   <!-- EN: refill others' twisted flesh -->
-  <FH_WorkGiver_RefillTwistedFlesh_Help.label>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.label>
+  <FH_WorkGiver_RefillTwistedFlesh_Help.label>为他人补充扭曲肉</FH_WorkGiver_RefillTwistedFlesh_Help.label>
   <!-- EN: refilling -->
-  <FH_WorkGiver_RefillTwistedFlesh_Help.gerund>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.gerund>
+  <FH_WorkGiver_RefillTwistedFlesh_Help.gerund>补充中</FH_WorkGiver_RefillTwistedFlesh_Help.gerund>
   <!-- EN: refill -->
-  <FH_WorkGiver_RefillTwistedFlesh_Help.verb>TODO</FH_WorkGiver_RefillTwistedFlesh_Help.verb>
+  <FH_WorkGiver_RefillTwistedFlesh_Help.verb>补充</FH_WorkGiver_RefillTwistedFlesh_Help.verb>
 
   <!-- EN: suppress flesh hive activity -->
   <FH_WorkGiver_SuppressFleshHiveActivity.label>压制血肉巢穴活跃度</FH_WorkGiver_SuppressFleshHiveActivity.label>

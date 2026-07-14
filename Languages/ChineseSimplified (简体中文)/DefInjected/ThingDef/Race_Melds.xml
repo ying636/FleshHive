@@ -33,26 +33,32 @@
   <!-- EN: Release an EMP pulse centered on the host, matching an IED EMP trap's radius. -->
   <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>以宿主为中心释放圆形EMP脉冲，范围与EMP地雷一致。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
+  <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: tentacle -->
-  <FH_Bastionmeld.tools.tentacle-0.label>TODO</FH_Bastionmeld.tools.tentacle-0.label>
+  <FH_Bastionmeld.tools.tentacle-0.label>触手</FH_Bastionmeld.tools.tentacle-0.label>
   <!-- EN: tentacle -->
-  <FH_Bastionmeld.tools.tentacle-1.label>TODO</FH_Bastionmeld.tools.tentacle-1.label>
+  <FH_Bastionmeld.tools.tentacle-1.label>触手</FH_Bastionmeld.tools.tentacle-1.label>
   <!-- EN: head -->
-  <FH_Bastionmeld.tools.head.label>TODO</FH_Bastionmeld.tools.head.label>
+  <FH_Bastionmeld.tools.head.label>头</FH_Bastionmeld.tools.head.label>
   
   <!-- EN: dreadmeld -->
-  <FH_Dreadmeld.label>TODO</FH_Dreadmeld.label>
+  <FH_Dreadmeld.label>惊惧母兽</FH_Dreadmeld.label>
   <!-- EN: A gargantuan amalgamation of dozens of smaller fleshbeasts linked together by a loosely shared central nervous system. It uses its massive claws to dig tunnels through solid rock. Fleshbeast dreadmelds are rarely seen above ground, instead sheltering in caverns built from living flesh. They share a psychic connection with the flesh used to create their burrow. -->
-  <FH_Dreadmeld.description>TODO</FH_Dreadmeld.description>
+  <FH_Dreadmeld.description>由数十只小型血肉兽聚合而成的庞然巨物，以松散共享的中枢神经系统连接在一起。它会用巨大的爪肢在坚岩中挖掘隧道。惊惧母兽很少出现在地表，通常栖身于活体血肉构成的洞窟中，并与构成巢穴的血肉保持心灵连接。</FH_Dreadmeld.description>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -1; grants incredible regeneration, Mining Speed +160%, Deep Drilling Speed +70%; parasitic weapons: left bone spike, right bone spike, terror roar. -->
+  <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；宿主获得再生（不可思议）；采矿速度+160%；深钻井操作速度+70%；寄生武器：左骨刺、右骨刺、惊惧咆哮。</FH_Dreadmeld.comps.ParasitismComp.effect>
+  <!-- EN: Parasitic weapons: left bone spike, right bone spike, terror roar -->
+  <FH_Dreadmeld.comps.ParasitismComp.abilityLabel>惊惧母兽寄生武器</FH_Dreadmeld.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Release a terrifying roar like an alpha thrumbo, frightening nearby hostile humans and animals. -->
+  <FH_Dreadmeld.comps.ParasitismComp.abilityDescription>释放阿尔法敲击兽般的恐怖咆哮，惊吓附近敌对人类与动物。</FH_Dreadmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
+  <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: tentacle -->
-  <FH_Dreadmeld.tools.tentacle-0.label>TODO</FH_Dreadmeld.tools.tentacle-0.label>
+  <FH_Dreadmeld.tools.tentacle-0.label>触手</FH_Dreadmeld.tools.tentacle-0.label>
   <!-- EN: tentacle -->
-  <FH_Dreadmeld.tools.tentacle-1.label>TODO</FH_Dreadmeld.tools.tentacle-1.label>
+  <FH_Dreadmeld.tools.tentacle-1.label>触手</FH_Dreadmeld.tools.tentacle-1.label>
   <!-- EN: head -->
-  <FH_Dreadmeld.tools.head.label>TODO</FH_Dreadmeld.tools.head.label>
+  <FH_Dreadmeld.tools.head.label>头</FH_Dreadmeld.tools.head.label>
   
   <!-- EN: fissionmeld -->
   <FH_Fissionmeld.label>裂殖母兽</FH_Fissionmeld.label>
@@ -68,49 +74,62 @@
   <FH_Fissionmeld.tools.head.label>头</FH_Fissionmeld.tools.head.label>
   
   <!-- EN: fleshtitan -->
-  <FH_Fleshtitan.label>TODO</FH_Fleshtitan.label>
+  <FH_Fleshtitan.label>血肉泰坦</FH_Fleshtitan.label>
   <!-- EN: The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. -->
-  <FH_Fleshtitan.description>TODO</FH_Fleshtitan.description>
+  <FH_Fleshtitan.description>血肉兽灾变的核心，一只不知如何长出肢体的血肉心脏。超快的再生速度让心脏几乎无懈可击。几乎没有任何已知的方式能够伤害血肉泰坦。近乎无限的怪力使其可以摧毁一切阻挡它前进的障碍。血肉泰坦的移动极其缓慢，而且会在一段时间后重新变为血肉心脏。</FH_Fleshtitan.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>TODO</FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: tentacle -->
-  <FH_Fleshtitan.tools.tentacle-0.label>TODO</FH_Fleshtitan.tools.tentacle-0.label>
-  <!-- EN: tentacle -->
-  <FH_Fleshtitan.tools.tentacle-1.label>TODO</FH_Fleshtitan.tools.tentacle-1.label>
-  <!-- EN: tentacle -->
-  <FH_Fleshtitan.tools.tentacle-2.label>TODO</FH_Fleshtitan.tools.tentacle-2.label>
-  <!-- EN: tentacle -->
-  <FH_Fleshtitan.tools.tentacle-3.label>TODO</FH_Fleshtitan.tools.tentacle-3.label>
-  <!-- EN: tentacle -->
-  <FH_Fleshtitan.tools.tentacle-4.label>TODO</FH_Fleshtitan.tools.tentacle-4.label>
+  <FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left arm -->
+  <FH_Fleshtitan.tools.left_arm.label>左臂</FH_Fleshtitan.tools.left_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_Fleshtitan.tools.left_arm.labelNoLocation>重拳</FH_Fleshtitan.tools.left_arm.labelNoLocation>
+  <!-- EN: right arm -->
+  <FH_Fleshtitan.tools.right_arm.label>右臂</FH_Fleshtitan.tools.right_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_Fleshtitan.tools.right_arm.labelNoLocation>重拳</FH_Fleshtitan.tools.right_arm.labelNoLocation>
   <!-- EN: head -->
-  <FH_Fleshtitan.tools.head.label>TODO</FH_Fleshtitan.tools.head.label>
+  <FH_Fleshtitan.tools.head.label>头</FH_Fleshtitan.tools.head.label>
+
+  <!-- EN: harnessed fleshtitan -->
+  <FH_HarnessedFleshtitan.label>受控血肉泰坦</FH_HarnessedFleshtitan.label>
+  <!-- EN: The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. Under the restraint of an archotechnological device, the fleshtitan can accept simple commands and participate in combat. -->
+  <FH_HarnessedFleshtitan.description>血肉兽灾变的核心，一只不知如何长出肢体的血肉心脏。超快的再生速度让心脏几乎无懈可击。几乎没有任何已知的方式能够伤害血肉泰坦。近乎无限的怪力使其可以摧毁一切阻挡它前进的障碍。血肉泰坦的移动极其缓慢，而且会在一段时间后重新变为血肉心脏。在超凡智能装置的约束下，血肉泰坦能够接受简单的指令并参与战斗。</FH_HarnessedFleshtitan.description>
+  <!-- EN: left arm -->
+  <FH_HarnessedFleshtitan.tools.left_arm.label>左臂</FH_HarnessedFleshtitan.tools.left_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_HarnessedFleshtitan.tools.left_arm.labelNoLocation>重拳</FH_HarnessedFleshtitan.tools.left_arm.labelNoLocation>
+  <!-- EN: right arm -->
+  <FH_HarnessedFleshtitan.tools.right_arm.label>右臂</FH_HarnessedFleshtitan.tools.right_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_HarnessedFleshtitan.tools.right_arm.labelNoLocation>重拳</FH_HarnessedFleshtitan.tools.right_arm.labelNoLocation>
+  <!-- EN: head -->
+  <FH_HarnessedFleshtitan.tools.head.label>头</FH_HarnessedFleshtitan.tools.head.label>
   
   <!-- EN: furiousmeld -->
-  <FH_Furiousmeld.label>TODO</FH_Furiousmeld.label>
+  <FH_Furiousmeld.label>暴怒母兽</FH_Furiousmeld.label>
   <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses, clearing a path for lesser fleshbeasts to overwhelm the enemy. -->
-  <FH_Furiousmeld.description>TODO</FH_Furiousmeld.description>
+  <FH_Furiousmeld.description>由数十只小型血肉兽聚合而成的庞然巨物，以松散连接的中枢神经系统维系整体。它生有厚重的活体钢铁甲壳，并能投射球形生物防护力场，允许子弹由内向外穿过，却会阻挡外部射击。暴怒母兽很少出现在袭击中，通常只能通过仪式召唤。战斗时，它会正面冲锋摧毁防御，为较小的血肉兽开辟突破敌阵的道路。</FH_Furiousmeld.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>
+  <FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: left horn -->
-  <FH_Furiousmeld.tools.left_horn.label>TODO</FH_Furiousmeld.tools.left_horn.label>
+  <FH_Furiousmeld.tools.left_horn.label>左角</FH_Furiousmeld.tools.left_horn.label>
   <!-- EN: right horn -->
-  <FH_Furiousmeld.tools.right_horn.label>TODO</FH_Furiousmeld.tools.right_horn.label>
+  <FH_Furiousmeld.tools.right_horn.label>右角</FH_Furiousmeld.tools.right_horn.label>
   <!-- EN: carapace -->
-  <FH_Furiousmeld.tools.carapace.label>TODO</FH_Furiousmeld.tools.carapace.label>
+  <FH_Furiousmeld.tools.carapace.label>甲壳</FH_Furiousmeld.tools.carapace.label>
   <!-- EN: head -->
-  <FH_Furiousmeld.tools.head.label>TODO</FH_Furiousmeld.tools.head.label>
+  <FH_Furiousmeld.tools.head.label>头</FH_Furiousmeld.tools.head.label>
   
   <!-- EN: nexusmeld -->
-  <FH_Nexusmeld.label>TODO</FH_Nexusmeld.label>
+  <FH_Nexusmeld.label>统合母兽</FH_Nexusmeld.label>
   <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. The nexusmeld is the core of the fleshbeast swarm's coordination, using its powerful psychic abilities to command other fleshbeasts in assaults. Nexusmelds rarely appear in raids, preferring to lurk within nests supported by fleshmass hearts, with which they share a psychic bond. -->
-  <FH_Nexusmeld.description>TODO</FH_Nexusmeld.description>
+  <FH_Nexusmeld.description>由数十只小型血肉兽聚合而成的庞然巨物，以松散连接的中枢神经系统维系整体。统合母兽是血肉兽群协调行动的核心，利用强大的心灵能力指挥其他血肉兽发起进攻。它们很少出现在袭击中，更喜欢潜伏在由血肉心脏支撑的巢穴内，并与心脏保持心灵连接。</FH_Nexusmeld.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
-  <FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>TODO</FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>
+  <FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: tentacle -->
-  <FH_Nexusmeld.tools.tentacle-0.label>TODO</FH_Nexusmeld.tools.tentacle-0.label>
+  <FH_Nexusmeld.tools.tentacle-0.label>触手</FH_Nexusmeld.tools.tentacle-0.label>
   <!-- EN: tentacle -->
-  <FH_Nexusmeld.tools.tentacle-1.label>TODO</FH_Nexusmeld.tools.tentacle-1.label>
+  <FH_Nexusmeld.tools.tentacle-1.label>触手</FH_Nexusmeld.tools.tentacle-1.label>
   <!-- EN: head -->
-  <FH_Nexusmeld.tools.head.label>TODO</FH_Nexusmeld.tools.head.label>
+  <FH_Nexusmeld.tools.head.label>头</FH_Nexusmeld.tools.head.label>
 </LanguageData>

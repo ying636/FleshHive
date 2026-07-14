@@ -6,7 +6,7 @@
     <defName>FH_ParasitismSystem</defName>
     <label>ParasitismSystem</label>
     <hediffClass>FleshHive.ParasitismSystem</hediffClass>
-    <description>TODO</description>
+    <description>The fleshbeast parasitism system within the host. It sustains parasitic fleshbeasts, tracks parasite capacity, and releases all parasites when the host dies.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor> 
     <stages>

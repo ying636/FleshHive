@@ -2,8 +2,8 @@
 <LanguageData>
   
   <!-- EN: control -->
-  <FH_Need_Control.label>TODO</FH_Need_Control.label>
+  <FH_Need_Control.label>控制度</FH_Need_Control.label>
   <!-- EN: Control represents how much control the colony has over this unit.\nWhen it reaches zero, the unit will attempt to break free from control. -->
-  <FH_Need_Control.description>TODO</FH_Need_Control.description>
+  <FH_Need_Control.description>控制度代表殖民地对该单位的控制程度。\n当控制度降至零时，该单位会试图挣脱控制。</FH_Need_Control.description>
   
 </LanguageData>

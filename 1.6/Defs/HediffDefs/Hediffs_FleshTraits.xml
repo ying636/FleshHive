@@ -2,15 +2,6 @@
 <Defs>
 
   <HediffDef>
-    <defName>FH_Trait_None</defName>
-    <label>none</label>
-    <description>This fleshbeast has no special trait.</description>
-    <hediffClass>Hediff</hediffClass>
-    <isBad>false</isBad>
-    <scenarioCanAdd>false</scenarioCanAdd>
-  </HediffDef>
-
-  <HediffDef>
     <defName>FH_Trait_Tough</defName>
     <label>tough</label>
     <description>This fleshbeast has a dense, resilient body and takes less damage.</description>

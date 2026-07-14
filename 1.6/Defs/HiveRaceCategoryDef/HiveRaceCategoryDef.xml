@@ -10,6 +10,10 @@
         </tags>
         <options>
             <li>FH_CategoryOption_FleshManagement</li>
+            <li>FH_CategoryOption_FleshbeastGestation</li>
+            <li>FH_CategoryOption_Parasitism</li>
+            <li>FH_CategoryOption_ItemProduction</li>
+            <li>FH_CategoryOption_FleshbeastFusion</li>
             <li>HCF_CategoryOption_Group</li>
             <li>HCF_CategoryOption_WorkSettings</li>
         </options>
@@ -21,6 +25,34 @@
         <label>Flesh beast management</label>
         <description>Manage flesh hive population, nutrition, activity, and fleshbeasts.</description>
         <option Class="FleshHive.HiveTabOption_FleshManagement" />
+    </HiveCreatureFramework.HiveTabOptionDef>
+
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_FleshbeastGestation</defName>
+        <label>Fleshbeast gestation</label>
+        <description>Manage fleshbeast gestation tasks and population targets.</description>
+        <option Class="FleshHive.HiveTabOption_FleshbeastGestation" />
+    </HiveCreatureFramework.HiveTabOptionDef>
+
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_Parasitism</defName>
+        <label>Fleshbeast parasitism</label>
+        <description>Manage fleshbeast parasitism tasks at flesh parasite vats.</description>
+        <option Class="FleshHive.HiveTabOption_Parasitism" />
+    </HiveCreatureFramework.HiveTabOptionDef>
+
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_ItemProduction</defName>
+        <label>Produce items</label>
+        <description>Manage item production tasks for flesh hoppers.</description>
+        <option Class="FleshHive.HiveTabOption_ItemProduction" />
+    </HiveCreatureFramework.HiveTabOptionDef>
+
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_FleshbeastFusion</defName>
+        <label>Fleshbeast fusion</label>
+        <description>Fuse fleshbeasts at the flesh primary nest.</description>
+        <option Class="FleshHive.HiveTabOption_FleshbeastFusion" />
     </HiveCreatureFramework.HiveTabOptionDef>
 
 </Defs>

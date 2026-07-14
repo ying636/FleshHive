@@ -4,7 +4,7 @@
     <defName>FH_FleshHive</defName>
     <label>flesh hive</label>
     <description>The foundation of a flesh hive. It can gestate fleshbeasts within the nest and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shards, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive.</description>
-    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <thingClass>FleshHive.Building_RenameableFleshHive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
       <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
@@ -170,7 +170,7 @@
     <defName>FH_FleshPrimaryNest</defName>
     <label>flesh primary nest</label>
     <description>The core of a large flesh hive. It can gestate and fuse flesh beasts within the nest, and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shard, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. A hive can only support one flesh primary nest.</description>
-    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <thingClass>FleshHive.Building_RenameableFleshHive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</texPath>
       <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
@@ -376,6 +376,71 @@
 
 
   <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_HarnessedFleshmassHeart</defName>
+    <label>harnessed fleshmass heart</label>
+    <description>The primary organ of a fleshmass catastrophe. The heart draws material through roots extending deep underground. Once it has gathered enough, it spreads fleshmass around itself in cancer-like growth. It will continue growing until it consumes everything. Under the restraint of an archotechnological device, some of the heart's functions have been brought under control.\n\nThe heart can produce an endless supply of flesh and greatly expand the scale of a flesh hive. When needed, the harnessed fleshmass heart can consume a large amount of nutrition and transform into a harnessed fleshtitan to join the battle.</description>
+    <thingClass>FleshHive.Building_HarnessedFleshmassHeart</thingClass>
+    <size>(3,3)</size>
+    <uiIconPath>Things/Building/FH_HarnessedFleshmassHeart/HarnessedFleshmassHeart</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.75</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>Impassable</passability>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <selectable>true</selectable>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isEdifice>true</isEdifice>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>100</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionProducer">
+        <nutritionPerInterval>2</nutritionPerInterval>
+        <intervalTicks>2500</intervalTicks>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>1</intervalDays>
+        <radius>40</radius>
+        <cellsPerErosion>5</cellsPerErosion>
+        <initialErosionCount>10</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_HarnessedFleshmassHeartTransform">
+        <titanKind>FH_HarnessedFleshtitan</titanKind>
+        <nutritionCost>1000</nutritionCost>
+        <iconPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_HarnessedFleshtitan_east</iconPath>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(3,3)</size>
+      </li>
+      <li Class="CompProperties_AmbientSound">
+        <sound>FleshmassHeart_Ambience</sound>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_NerveBundle</defName>
     <label>hive nerve bundle</label>
     <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
@@ -529,13 +594,6 @@
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>0</initialErosionCount>
-      </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveContainer">
-        <resource>FH_Resource_Nutrition</resource>
-        <healResource>FH_Resource_Nutrition</healResource>
-        <tags>
-          <li>FH_FleshContainer</li>
-        </tags>
       </li>
       <li Class="FleshHive.CompProperties_Suppressible">
         <suppressIfAbove>0.05</suppressIfAbove>
@@ -1206,9 +1264,6 @@
       <ai_chillDestination>false</ai_chillDestination>
     </building>
     <comps>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(1,1)</size>
-      </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshColumn</building>
       </li>
@@ -1677,6 +1732,7 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
+          <li>FH_FleshReplica</li>
         </spawnOptions>
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>

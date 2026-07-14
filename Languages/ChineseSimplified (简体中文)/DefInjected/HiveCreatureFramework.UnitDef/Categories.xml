@@ -18,6 +18,9 @@
   
   <FH_Unit_Puffspike.label>肺血兽</FH_Unit_Puffspike.label>
   <FH_Unit_Puffspike.description>生产一只肺血兽。</FH_Unit_Puffspike.description>
+
+  <FH_Unit_Whipspike.label>鞭爪兽</FH_Unit_Whipspike.label>
+  <FH_Unit_Whipspike.description>生产一只鞭爪兽。</FH_Unit_Whipspike.description>
   
   <FH_Unit_Shatterspike.label>碎爪兽</FH_Unit_Shatterspike.label>
   <FH_Unit_Shatterspike.description>生产一只碎爪兽。需要先发现对应融合配方。</FH_Unit_Shatterspike.description>
