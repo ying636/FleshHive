@@ -170,15 +170,13 @@
   <FH_FleshtitanReversionCountdown>Reversion to fleshmass heart: {0}</FH_FleshtitanReversionCountdown>
 
   <FH_Quest_FleshSurvivor_Name>Flesh survivor</FH_Quest_FleshSurvivor_Name>
-  <FH_Quest_FleshSurvivor_Description>A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information.\n\nAccept: Hela Bates joins.</FH_Quest_FleshSurvivor_Description>
+  <FH_Quest_FleshSurvivor_Description>A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information.</FH_Quest_FleshSurvivor_Description>
   <FH_Quest_FleshSurvivor_AttackIn>Fleshbeasts will arrive in {0}.</FH_Quest_FleshSurvivor_AttackIn>
   <FH_Quest_FleshSurvivor_AttackLabel>Fleshbeasts incoming</FH_Quest_FleshSurvivor_AttackLabel>
   <FH_Quest_FleshSurvivor_AttackText>The frenzied fleshbeasts pursuing Hela Bates have reached the colony.</FH_Quest_FleshSurvivor_AttackText>
 
   <FH_Hela_ParasiteCapacityInfo>Parasite capacity: {0}/{1}</FH_Hela_ParasiteCapacityInfo>
   <FH_Hela_BodyPartHealthInfo>Occupied parasite space: {0}; body part health: {1}</FH_Hela_BodyPartHealthInfo>
-  <FH_Hela_NodeLimitInfo>Fleshbeast control limit: {0}</FH_Hela_NodeLimitInfo>
-  <FH_Hela_TwistedFleshInfo>Twisted flesh: {0}/{1}; automatically sustains controlled fleshbeasts</FH_Hela_TwistedFleshInfo>
   <FH_Hela_UseShard>Use {0} to expand parasite capacity</FH_Hela_UseShard>
   <FH_Hela_CannotUseShard>Cannot use {0}</FH_Hela_CannotUseShard>
   <FH_Hela_CannotUseShardMax>Cannot use {0}: parasite capacity has reached its maximum of {1}</FH_Hela_CannotUseShardMax>

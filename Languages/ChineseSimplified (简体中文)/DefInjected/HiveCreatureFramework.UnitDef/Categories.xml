@@ -1,53 +1,84 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: Bastionmeld -->
+  <FH_Unit_Bastionmeld.label>铁骸母兽</FH_Unit_Bastionmeld.label>
+  <!-- EN: Bastionmeld -->
+  <FH_Unit_Bastionmeld.description>在血肉主巢中培养一只铁骸母兽。</FH_Unit_Bastionmeld.description>
+  
+  <!-- EN: Dreadmeld -->
+  <FH_Unit_Dreadmeld.label>惊惧母兽</FH_Unit_Dreadmeld.label>
+  <!-- EN: Dreadmeld -->
+  <FH_Unit_Dreadmeld.description>在血肉主巢中培养一只惊惧母兽。</FH_Unit_Dreadmeld.description>
+  
+  <!-- EN: Fingerspike -->
   <FH_Unit_Fingerspike.label>独爪兽</FH_Unit_Fingerspike.label>
+  <!-- EN: Fingerspike -->
   <FH_Unit_Fingerspike.description>生产一只独爪兽。</FH_Unit_Fingerspike.description>
   
-  <FH_Unit_Fleshwind.label>翼爪兽</FH_Unit_Fleshwind.label>
-  <FH_Unit_Fleshwind.description>生产一只翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind.description>
-
+  <!-- EN: Fissionmeld -->
+  <FH_Unit_Fissionmeld.label>裂殖母兽</FH_Unit_Fissionmeld.label>
+  <!-- EN: Fissionmeld -->
+  <FH_Unit_Fissionmeld.description>在血肉主巢中培养一只裂殖母兽。</FH_Unit_Fissionmeld.description>
+  
+  <!-- EN: Flesh replica -->
   <FH_Unit_FleshReplica.label>血肉拟像</FH_Unit_FleshReplica.label>
+  <!-- EN: Spawn a flesh replica. -->
   <FH_Unit_FleshReplica.description>生产一只血肉拟像。</FH_Unit_FleshReplica.description>
   
+  <!-- EN: Fleshwind -->
+  <FH_Unit_Fleshwind.label>翼爪兽</FH_Unit_Fleshwind.label>
+  <!-- EN: Fleshwind -->
+  <FH_Unit_Fleshwind.description>生产一只翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind.description>
+  
+  <!-- EN: Furiousmeld -->
+  <FH_Unit_Furiousmeld.label>暴怒母兽</FH_Unit_Furiousmeld.label>
+  <!-- EN: Furiousmeld -->
+  <FH_Unit_Furiousmeld.description>在血肉主巢中培养一只暴怒母兽。</FH_Unit_Furiousmeld.description>
+  
+  <!-- EN: Gutspike -->
   <FH_Unit_Gutspike.label>胃血兽</FH_Unit_Gutspike.label>
+  <!-- EN: Gutspike -->
   <FH_Unit_Gutspike.description>生产一只胃血兽。</FH_Unit_Gutspike.description>
   
+  <!-- EN: Nexusmeld -->
+  <FH_Unit_Nexusmeld.label>统合母兽</FH_Unit_Nexusmeld.label>
+  <!-- EN: Nexusmeld -->
+  <FH_Unit_Nexusmeld.description>在血肉主巢中培养一只统合母兽。</FH_Unit_Nexusmeld.description>
+  
+  <!-- EN: Paraspike -->
   <FH_Unit_Paraspike.label>寄血兽</FH_Unit_Paraspike.label>
+  <!-- EN: Paraspike -->
   <FH_Unit_Paraspike.description>生产一只寄血兽。</FH_Unit_Paraspike.description>
   
+  <!-- EN: Puffspike -->
   <FH_Unit_Puffspike.label>肺血兽</FH_Unit_Puffspike.label>
+  <!-- EN: Puffspike -->
   <FH_Unit_Puffspike.description>生产一只肺血兽。</FH_Unit_Puffspike.description>
-
-  <FH_Unit_Whipspike.label>鞭爪兽</FH_Unit_Whipspike.label>
-  <FH_Unit_Whipspike.description>生产一只鞭爪兽。</FH_Unit_Whipspike.description>
   
+  <!-- EN: Shatterspike -->
   <FH_Unit_Shatterspike.label>碎爪兽</FH_Unit_Shatterspike.label>
+  <!-- EN: Shatterspike -->
   <FH_Unit_Shatterspike.description>生产一只碎爪兽。需要先发现对应融合配方。</FH_Unit_Shatterspike.description>
   
+  <!-- EN: Shieldspike -->
   <FH_Unit_Shieldspike.label>盾爪兽</FH_Unit_Shieldspike.label>
+  <!-- EN: Shieldspike -->
   <FH_Unit_Shieldspike.description>生产一只盾爪兽。需要先发现对应融合配方。</FH_Unit_Shieldspike.description>
   
+  <!-- EN: Toughspike -->
   <FH_Unit_Toughspike.label>双爪兽</FH_Unit_Toughspike.label>
+  <!-- EN: Toughspike -->
   <FH_Unit_Toughspike.description>生产一只双爪兽。需要先发现对应融合配方。</FH_Unit_Toughspike.description>
   
+  <!-- EN: Trispike -->
   <FH_Unit_Trispike.label>三爪兽</FH_Unit_Trispike.label>
+  <!-- EN: Trispike -->
   <FH_Unit_Trispike.description>生产一只三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike.description>
-
-  <FH_Unit_Dreadmeld.label>惊惧母兽</FH_Unit_Dreadmeld.label>
-  <FH_Unit_Dreadmeld.description>在血肉主巢中培养一只惊惧母兽。</FH_Unit_Dreadmeld.description>
-
-  <FH_Unit_Furiousmeld.label>暴怒母兽</FH_Unit_Furiousmeld.label>
-  <FH_Unit_Furiousmeld.description>在血肉主巢中培养一只暴怒母兽。</FH_Unit_Furiousmeld.description>
-
-  <FH_Unit_Bastionmeld.label>铁骸母兽</FH_Unit_Bastionmeld.label>
-  <FH_Unit_Bastionmeld.description>在血肉主巢中培养一只铁骸母兽。</FH_Unit_Bastionmeld.description>
-
-  <FH_Unit_Nexusmeld.label>统合母兽</FH_Unit_Nexusmeld.label>
-  <FH_Unit_Nexusmeld.description>在血肉主巢中培养一只统合母兽。</FH_Unit_Nexusmeld.description>
-
-  <FH_Unit_Fissionmeld.label>裂殖母兽</FH_Unit_Fissionmeld.label>
-  <FH_Unit_Fissionmeld.description>在血肉主巢中培养一只裂殖母兽。</FH_Unit_Fissionmeld.description>
-
+  
+  <!-- EN: Whipspike -->
+  <FH_Unit_Whipspike.label>鞭爪兽</FH_Unit_Whipspike.label>
+  <!-- EN: Whipspike -->
+  <FH_Unit_Whipspike.description>生产一只鞭爪兽。</FH_Unit_Whipspike.description>
+  
 </LanguageData>
-

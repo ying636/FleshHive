@@ -1,35 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
-  <FH_Item_TwistedMeat.label>扭曲肉</FH_Item_TwistedMeat.label>
-  <FH_Item_TwistedMeat.description>扭曲的肌肉与软骨碎块，上面遍布着赘生的肿瘤组织。这些诡异的碎肉一定来自某种恐怖生物。</FH_Item_TwistedMeat.description>
-
+  
+  <!-- EN: bioferrite -->
   <FH_Item_Bioferrite.label>活铁</FH_Item_Bioferrite.label>
+  <!-- EN: An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel. -->
   <FH_Item_Bioferrite.description>一种奇异的金属状纤维物质，兼具有机物与金属的特性。活铁通常由故障的纳米机械加工生物质材料得来，而这些纳米机械全都产生了与癌症相似的系统混乱状况。\n\n这种材料以其与几种灵流的良好相性而闻名。若在特定环境下施加压力，活铁会变得极度易燃，使其成为不错的燃料。</FH_Item_Bioferrite.description>
-
-  <FH_Item_NerveFlesh.label>神经块</FH_Item_NerveFlesh.label>
-  <FH_Item_NerveFlesh.description>血肉神经的必须部分。许多复杂的血肉结构需要神经块才能够完成制作。</FH_Item_NerveFlesh.description>
-
-  <FH_Item_Tentacle.label>血肉触手</FH_Item_Tentacle.label>
-  <FH_Item_Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</FH_Item_Tentacle.description>
-
+  
   <!-- EN: flesh adaptation module -->
   <FH_Item_FleshAdaptationModule.label>血肉适应模块</FH_Item_FleshAdaptationModule.label>
   <!-- EN: A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive. -->
   <FH_Item_FleshAdaptationModule.description>血肉巢穴生产的一个肉瘤型模块。植入后，它会细微地重塑宿主心智，使宿主不再对血肉生物、血肉制品和扭曲肉产生厌恶情绪，从而能更好地与血肉巢穴共同生活。</FH_Item_FleshAdaptationModule.description>
-
+  
+  <!-- EN: fleshmass lung -->
+  <FH_Item_FleshmassLung.label>血肉肺</FH_Item_FleshmassLung.label>
+  <!-- EN: A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_FleshmassLung.description>一块有不完全知觉的肿瘤血肉肺。其上组织不断再生更替，能使安装者免疫肺瘟、哮喘等疾病。\n\n这个器官有自己的神经结构，将其移除可能招致危险。</FH_Item_FleshmassLung.description>
+  
+  <!-- EN: fleshmass stomach -->
+  <FH_Item_FleshmassStomach.label>血肉胃</FH_Item_FleshmassStomach.label>
+  <!-- EN: A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_FleshmassStomach.description>一块有不完全知觉的肿瘤血肉胃。其中含有的强酸会给安装者带来痛苦，但也能完全避免食物中毒。\n\n这个器官有自己的神经结构，将其移除可能招致危险。</FH_Item_FleshmassStomach.description>
+  
   <!-- EN: flesh pack -->
   <FH_Item_FleshPack.label>寄生背包</FH_Item_FleshPack.label>
   <!-- EN: A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's parasitism capacity. -->
   <FH_Item_FleshPack.description>配有适合血肉兽生长环境的背包，血肉兽可以以更小的体积压缩在里边。它可以增强佩戴者的寄生空间上限。</FH_Item_FleshPack.description>
-
+  
+  <!-- EN: flesh whip -->
   <FH_Item_FleshWhip.label>血肉触鞭</FH_Item_FleshWhip.label>
+  <!-- EN: A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed. -->
   <FH_Item_FleshWhip.description>强健发达、末端带刃的肉乎乎触手。这只血肉触鞭算是不错的近战武器。\n\n这个部件有自己的神经结构，将其移除可能招致危险。</FH_Item_FleshWhip.description>
-
-  <FH_Item_FleshmassStomach.label>血肉胃</FH_Item_FleshmassStomach.label>
-  <FH_Item_FleshmassStomach.description>一块有不完全知觉的肿瘤血肉胃。其中含有的强酸会给安装者带来痛苦，但也能完全避免食物中毒。\n\n这个器官有自己的神经结构，将其移除可能招致危险。</FH_Item_FleshmassStomach.description>
-
-  <FH_Item_FleshmassLung.label>血肉肺</FH_Item_FleshmassLung.label>
-  <FH_Item_FleshmassLung.description>一块有不完全知觉的肿瘤血肉肺。其上组织不断再生更替，能使安装者免疫肺瘟、哮喘等疾病。\n\n这个器官有自己的神经结构，将其移除可能招致危险。</FH_Item_FleshmassLung.description>
-
+  
+  <!-- EN: nerve flesh -->
+  <FH_Item_NerveFlesh.label>神经块</FH_Item_NerveFlesh.label>
+  <!-- EN: An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction. -->
+  <FH_Item_NerveFlesh.description>血肉神经的必须部分。许多复杂的血肉结构需要神经块才能够完成制作。</FH_Item_NerveFlesh.description>
+  
+  <!-- EN: flesh tentacle -->
+  <FH_Item_Tentacle.label>血肉触手</FH_Item_Tentacle.label>
+  <!-- EN: A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_Tentacle.description>强健发达、已经有点血肉兽样子的肉乎乎触手。这只触手操控起来还是非常趁手的。\n\n这只血肉触手有自己的神经结构，将其移除可能招致危险。</FH_Item_Tentacle.description>
+  
+  <!-- EN: twisted meat -->
+  <FH_Item_TwistedMeat.label>扭曲肉</FH_Item_TwistedMeat.label>
+  <!-- EN: Pieces of twisted muscle and gristle, bloated with tumorous growths. These bizarre shreds of flesh must have come from a horrific creature. -->
+  <FH_Item_TwistedMeat.description>扭曲的肌肉与软骨碎块，上面遍布着赘生的肿瘤组织。这些诡异的碎肉一定来自某种恐怖生物。</FH_Item_TwistedMeat.description>
+  
 </LanguageData>

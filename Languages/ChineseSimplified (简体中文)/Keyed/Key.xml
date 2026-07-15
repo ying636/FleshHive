@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
   <!-- EN: Cancel insert -->
@@ -15,6 +15,34 @@
   <FleshParasitePod_InsufficientNutrition>无法寄生，需要{0}营养</FleshParasitePod_InsufficientNutrition>
   <!-- EN: Parasitism cost: {0} nutrition -->
   <FleshParasitePod_NutritionCost>寄生消耗：{0}营养</FleshParasitePod_NutritionCost>
+  <!-- EN: A parasitism task already exists -->
+  <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
+  <!-- EN: Insert fleshbeast -->
+  <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
+  <!-- EN: Contains: {0}, {1} -->
+  <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
+  <!-- EN: Progress: {0} -->
+  <FleshParasitePod_Progress>进度：{0}</FleshParasitePod_Progress>
+  <!-- EN: Performing parasitism task -->
+  <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
+  <!-- EN: Insert host -->
+  <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
+  <!-- EN: Implant a fleshbeast into a host with the aid of a flesh parasite vat. The fleshbeast consumes the host's nutrition to survive. Different fleshbeasts grant different abilities, making the host more powerful. -->
+  <FleshParasitePod_Title>将一只血肉兽在血肉寄生仓的辅助下寄生在宿主的身体中。血肉兽将会消耗寄生目标的营养存活。不同的血肉兽会提供不同的能力，使宿主变得更加强大。</FleshParasitePod_Title>
+  <!-- EN: Parasitic abilities -->
+  <ParasitismAbility>寄生能力</ParasitismAbility>
+  <!-- EN: Parasite capacity: {0}/{1} -->
+  <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
+  <!-- EN: Capacity cost: -->
+  <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
+  <!-- EN: {0} parasitism -->
+  <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
+  <!-- EN: Parasitism -->
+  <Tab_Parasitism>寄生</Tab_Parasitism>
+  <!-- EN: Unparasitized -->
+  <Unparasitized>未被寄生</Unparasitized>
+  <!-- EN: Hunger rate offset: {0} -->
+  <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
   <!-- EN: {0}: parasitism succeeded -->
   <ParasitismSucceed>{0}寄生成功</ParasitismSucceed>
   <!-- EN: {1} has successfully parasitized {0}. -->
@@ -210,9 +238,9 @@
   <FH_MountParasiticWeapon>将{0}挂载到寄生武器槽</FH_MountParasiticWeapon>
   <!-- EN: Cannot mount {0} to parasitic weapon slot -->
   <FH_CannotMountParasiticWeapon>无法将{0}挂载到寄生武器槽</FH_CannotMountParasiticWeapon>
-  <!-- EN: Switch to large -->
+  <!-- EN: Large fusion -->
   <FH_Fusion_SwitchToLarge>大型融合</FH_Fusion_SwitchToLarge>
-  <!-- EN: Switch to medium -->
+  <!-- EN: Medium fusion -->
   <FH_Fusion_SwitchToMedium>中型融合</FH_Fusion_SwitchToMedium>
   <!-- EN: Small fleshbeast -->
   <FH_Fusion_SlotSmall>小型血肉兽</FH_Fusion_SlotSmall>
@@ -242,7 +270,7 @@
   <FH_Fusion_Time>融合时间：{0}天</FH_Fusion_Time>
   <!-- EN: Value: {0} -->
   <FH_Fusion_Value>价值：{0}</FH_Fusion_Value>
-  <!-- EN: Select the fleshbeasts to consume in the fusion. Different materials produce fleshbeasts with different traits, and the result is only revealed after the fusion is complete. Completed combinations are recorded automatically as discovered templates for later reuse. -->
+  <!-- EN: Select the fleshbeasts to consume in the fusion. Different materials produce fleshbeasts with different traits, and the result is only revealed after the fusion is complete.\nCompleted combinations are recorded automatically as discovered templates for later reuse. -->
   <FH_Fusion_Description>选择融合所消耗的血肉兽，不同的材料会融合出带有不同特性的血肉兽，只有在融合结束后才能知道结果。\n已完成的组合会自动记录为已发现模板，供之后再次使用。</FH_Fusion_Description>
   <!-- EN: Fuse fleshbeasts -->
   <FH_Fusion_Start>融合血肉兽</FH_Fusion_Start>
@@ -260,30 +288,22 @@
   <FH_Fusion_TemplateMissingMaterials>当前没有足够的血肉兽来应用该模板。</FH_Fusion_TemplateMissingMaterials>
   <!-- EN: Select all required fusion materials first. -->
   <FH_Fusion_NoValidFusion>请先选择全部融合素材。</FH_Fusion_NoValidFusion>
-
-  <!-- UNUSED -->
-  <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
-  <FleshParasitePod_Title>将一只血肉兽在血肉寄生仓的辅助下寄生在宿主的身体中。血肉兽将会消耗寄生目标的营养存活。不同的血肉兽会提供不同的能力，使宿主变得更加强大。</FleshParasitePod_Title>
-  <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
-  <FleshParasitePod_Progress>进度：{0}</FleshParasitePod_Progress>
-  <Tab_Parasitism>寄生</Tab_Parasitism>
-  <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
-  <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
-  <Unparasitized>未被寄生</Unparasitized>
-  <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
-  <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
-  <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
-  <ParasitismAbility>寄生能力</ParasitismAbility>
-  <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
-  <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
+  <!-- EN: Parasitic weapons -->
   <FH_TabParasiticWeapons>寄生武器</FH_TabParasiticWeapons>
+  <!-- EN: Parasitic weapon slot -->
   <FH_ParasiticWeaponSlot>寄生武器槽</FH_ParasiticWeaponSlot>
+  <!-- EN: Parasitic weapon: left slot -->
   <FH_LeftParasiticWeaponSlot>寄生武器：左装备栏</FH_LeftParasiticWeaponSlot>
+  <!-- EN: Parasitic weapon: right slot -->
   <FH_RightParasiticWeaponSlot>寄生武器：右装备栏</FH_RightParasiticWeaponSlot>
+  <!-- EN: Empty -->
   <FH_ParasiticWeaponSlotEmpty>空</FH_ParasiticWeaponSlotEmpty>
+  <!-- EN: Unmount {1} from {0} -->
   <FH_UnmountParasiticWeaponDesc>从{0}卸下{1}</FH_UnmountParasiticWeaponDesc>
 
+  <!-- EN: Temporary fleshbeast group -->
   <TemporaryFleshGroup>临时血肉兽群组</TemporaryFleshGroup>
+  <!-- EN: Resurrects in: {0} -->
   <FH_FissionmeldDormant_ResurrectsIn>复生剩余时间：{0}</FH_FissionmeldDormant_ResurrectsIn>
   <!-- EN: {0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground! -->
   <FH_SummonGiantFleshbeastCompleteText>{0_nameDef}完成了{RITUAL_definite}仪式。{GIANT_label}和它的血肉兽护卫正在从地下出现！</FH_SummonGiantFleshbeastCompleteText>
@@ -310,8 +330,8 @@
 
   <!-- EN: Flesh survivor -->
   <FH_Quest_FleshSurvivor_Name>血肉幸存者</FH_Quest_FleshSurvivor_Name>
-  <!-- EN: A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information.\n\nAccept: Hela Bates joins. -->
-  <FH_Quest_FleshSurvivor_Description>一位浑身血迹的研究员正在接近殖民地。她在附近发来通讯，称她刚从一场失控的研究所灾难中逃脱。她对具体情况的记忆已经十分模糊，现在正被一群狂暴的血肉兽追杀。她希望你能在殖民地保护她，并答应事后加入。\n\n如果你接受她的请求，一群血肉兽将在1小时内出现。\n\n研究员因为某些原因出现了严重失忆，你也无法获得更多情报。\n\n接取：海拉·贝茨加入。</FH_Quest_FleshSurvivor_Description>
+  <!-- EN: A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information. -->
+  <FH_Quest_FleshSurvivor_Description>一位浑身血迹的研究员正在接近殖民地。她在附近发来通讯，称她刚从一场失控的研究所灾难中逃脱。她对具体情况的记忆已经十分模糊，现在正被一群狂暴的血肉兽追杀。她希望你能在殖民地保护她，并答应事后加入。\n\n如果你接受她的请求，一群血肉兽将在1小时内出现。\n\n研究员因为某些原因出现了严重失忆，你也无法获得更多情报。</FH_Quest_FleshSurvivor_Description>
   <!-- EN: Fleshbeasts will arrive in {0}. -->
   <FH_Quest_FleshSurvivor_AttackIn>血肉兽将在{0}后抵达。</FH_Quest_FleshSurvivor_AttackIn>
   <!-- EN: Fleshbeasts incoming -->
@@ -323,10 +343,6 @@
   <FH_Hela_ParasiteCapacityInfo>寄生空间：{0}/{1}</FH_Hela_ParasiteCapacityInfo>
   <!-- EN: Occupied parasite space: {0}; body part health: {1} -->
   <FH_Hela_BodyPartHealthInfo>已激活寄生空间：{0}；部位生命值：{1}</FH_Hela_BodyPartHealthInfo>
-  <!-- EN: Fleshbeast control limit: {0} -->
-  <FH_Hela_NodeLimitInfo>血肉兽统御上限：{0}</FH_Hela_NodeLimitInfo>
-  <!-- EN: Twisted flesh: {0}/{1}; automatically sustains controlled fleshbeasts -->
-  <FH_Hela_TwistedFleshInfo>扭曲肉：{0}/{1}；自动维护受统御的血肉兽</FH_Hela_TwistedFleshInfo>
   <!-- EN: Use {0} to expand parasite capacity -->
   <FH_Hela_UseShard>使用{0}扩展寄生空间</FH_Hela_UseShard>
   <!-- EN: Cannot use {0} -->

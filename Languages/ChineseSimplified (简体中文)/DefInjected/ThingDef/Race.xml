@@ -3,7 +3,7 @@
   
   <!-- EN: acidbulb -->
   <FH_Acidbulb.label>腐蚀瘤兽</FH_Acidbulb.label>
-  <!-- EN: TODO. -->
+  <!-- EN: A giant bulbous fleshbeast swollen with corrosive fluids. It tears at nearby enemies with multiple tentacles and spits corrosive acid at distant targets. -->
   <FH_Acidbulb.description>一种因腐蚀性体液而膨胀的巨型瘤状血肉兽。它会用多条触手撕扯近身敌人，并从远处喷射腐蚀性酸液。</FH_Acidbulb.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Acidbulb.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Acidbulb.comps.CompInspectStringEmergence.inspectString>
@@ -70,6 +70,23 @@
   <!-- EN: head -->
   <FH_Fingerspike.tools.head.label>头部</FH_Fingerspike.tools.head.label>
   
+  <!-- EN: Flesh replica -->
+  <FH_FleshReplica.label>血肉拟像</FH_FleshReplica.label>
+  <!-- EN: A humanoid fleshbeast covered in a small amount of carapace and roughly the size of an adult human. Flesh replicas can use human weapons, most of which are scavenged from the victims of fleshbeasts. After a flesh replica parasitizes a host, its original body remains independent and mimics the host's appearance. A flesh replica with a host can perform complex work just like a human. -->
+  <FH_FleshReplica.description>形似人类的血肉兽，覆盖着少量甲壳，体型与成年人相当。血肉拟像可以使用人类的武器，这些武器大多是从血肉兽的受害者那里掠夺而来的。血肉拟像寄生到宿主之后本体依然会保持独立并且会模拟成宿主的外形，拥有宿主的血肉拟像可以像人类一样进行复杂工作。</FH_FleshReplica.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_FleshReplica.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_FleshReplica.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: The flesh replica synchronizes with the host instead of living inside the host. -->
+  <FH_FleshReplica.comps.ParasitismComp.abilityDescription>血肉拟像与宿主同步，而不是寄居在宿主体内。</FH_FleshReplica.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Synchronization: flesh replica -->
+  <FH_FleshReplica.comps.ParasitismComp.abilityLabel>同步：血肉拟像</FH_FleshReplica.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Synchronizes with the host. The flesh replica remains active and mirrors the host's skill levels. -->
+  <FH_FleshReplica.comps.ParasitismComp.effect>与宿主同步。血肉拟像会保留行动能力，并同步宿主的技能等级。</FH_FleshReplica.comps.ParasitismComp.effect>
+  <!-- EN: fist -->
+  <FH_FleshReplica.tools.fist.label>拳头</FH_FleshReplica.tools.fist.label>
+  <!-- EN: head -->
+  <FH_FleshReplica.tools.head.label>头部</FH_FleshReplica.tools.head.label>
+  
   <!-- EN: fleshwind -->
   <FH_Fleshwind.label>翼爪兽</FH_Fleshwind.label>
   <!-- EN: A fleshbeast with huge spiked flying wings and a head covered in sharp keratinous plating. It is roughly the size of an adult human. Its loose, shifting structure allows it to fly through the air and quickly cross defensive fortifications. Fleshwind bodies are often host to smaller fleshbeasts; when the host dies, these parasites tear free, act independently, and attack. -->
@@ -88,21 +105,6 @@
   <FH_Fleshwind.tools.horned_head.label>角质头部</FH_Fleshwind.tools.horned_head.label>
   <!-- EN: horned head -->
   <FH_Fleshwind.tools.horned_head.labelNoLocation>角质头部</FH_Fleshwind.tools.horned_head.labelNoLocation>
-
-  <!-- EN: Flesh replica -->
-  <FH_FleshReplica.label>血肉拟像</FH_FleshReplica.label>
-  <!-- EN: A humanoid fleshbeast covered in a small amount of carapace and roughly the size of an adult human. Flesh replicas can use human weapons, most of which are scavenged from the victims of fleshbeasts. After a flesh replica parasitizes a host, its original body remains independent and mimics the host's appearance. A flesh replica with a host can perform complex work just like a human. -->
-  <FH_FleshReplica.description>形似人类的血肉兽，覆盖着少量甲壳，体型与成年人相当。血肉拟像可以使用人类的武器，这些武器大多是从血肉兽的受害者那里掠夺而来的。血肉拟像寄生到宿主之后本体依然会保持独立并且会模拟成宿主的外形，拥有宿主的血肉拟像可以像人类一样进行复杂工作。</FH_FleshReplica.description>
-  <!-- EN: fist -->
-  <FH_FleshReplica.tools.fist.label>拳头</FH_FleshReplica.tools.fist.label>
-  <!-- EN: head -->
-  <FH_FleshReplica.tools.head.label>头部</FH_FleshReplica.tools.head.label>
-  <!-- EN: The flesh replica synchronizes with the host instead of living inside the host. -->
-  <FH_FleshReplica.comps.ParasitismComp.abilityDescription>血肉拟像与宿主同步，而不是寄居在宿主体内。</FH_FleshReplica.comps.ParasitismComp.abilityDescription>
-  <!-- EN: Synchronization: flesh replica -->
-  <FH_FleshReplica.comps.ParasitismComp.abilityLabel>同步：血肉拟像</FH_FleshReplica.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Synchronizes with the host. The flesh replica remains active and mirrors the host's skill levels. -->
-  <FH_FleshReplica.comps.ParasitismComp.effect>与宿主同步。血肉拟像会保留行动能力，并同步宿主的技能等级。</FH_FleshReplica.comps.ParasitismComp.effect>
   
   <!-- EN: 胃血兽 -->
   <FH_Gutspike.label>胃血兽</FH_Gutspike.label>
@@ -157,7 +159,7 @@
   
   <!-- EN: shatterspike -->
   <FH_Shatterspike.label>碎爪兽</FH_Shatterspike.label>
-  <!-- EN: TODO. -->
+  <!-- EN: A man-sized fleshbeast covered in brittle but razor-sharp bone spikes. It launches volleys of bone fragments from range, tearing targets apart with dense barrages. -->
   <FH_Shatterspike.description>一种体型接近成年人的血肉兽，躯体上遍布易碎却锋利的骨刺。它能够从远处发射成片的骨刺碎片，以密集射击撕裂目标。</FH_Shatterspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>
@@ -184,7 +186,7 @@
   
   <!-- EN: shieldspike -->
   <FH_Shieldspike.label>盾爪兽</FH_Shieldspike.label>
-  <!-- EN: TODO -->
+  <!-- EN: A heavily armored, man-sized fleshbeast with two broad shield-like bone claws. It advances steadily, battering nearby enemies with its massive claws while its resilient carapace shrugs off attacks. -->
   <FH_Shieldspike.description>一种体型接近成年人的重甲血肉兽，生有两只宽阔的盾形骨爪。它会稳步逼近敌人，以沉重的盾爪发动钝击，并凭借坚韧甲壳抵挡攻击。</FH_Shieldspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>

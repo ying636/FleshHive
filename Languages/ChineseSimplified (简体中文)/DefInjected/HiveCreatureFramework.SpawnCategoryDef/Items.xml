@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: flesh items -->
+  <FH_Category_FleshItems.label>血肉物品</FH_Category_FleshItems.label>
+  <!-- EN: Materials and body parts produced by the flesh hive. -->
+  <FH_Category_FleshItems.description>由血肉巢穴生产的材料与血肉肢体。</FH_Category_FleshItems.description>
+  
+</LanguageData>

@@ -24,8 +24,8 @@
         <emergency>false</emergency>
         <verb>refill</verb>
         <gerund>refilling</gerund>
-        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
-        <priorityInType>20</priorityInType>
+        <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+        <priorityInType>23</priorityInType>
         <requiredCapacities>
             <li>Manipulation</li>
         </requiredCapacities>
@@ -39,7 +39,7 @@
         <emergency>false</emergency>
         <verb>refill</verb>
         <gerund>refilling</gerund>
-        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
         <priorityInType>21</priorityInType>
         <requiredCapacities>
             <li>Manipulation</li>

@@ -3,28 +3,28 @@
   
   <!-- EN: lost spike -->
   <FH_LostSpike_Paraspike.label>失去骨刺</FH_LostSpike_Paraspike.label>
-  <!-- EN: The paraspike has lost the core spike it needs to sustain itself. If it cannot recover, it will wither and die. -->
+  <!-- EN: The paraspike has lost the core bone spike it needs to survive. Unless it regenerates soon, it will weaken and die. -->
   <FH_LostSpike_Paraspike.description>寄血兽失去了维持生命所需的核心骨刺。若无法及时恢复，它将逐渐衰竭并死亡。</FH_LostSpike_Paraspike.description>
-
-  <!-- EN: bulbfreak parasitism -->
-  <FH_Parasitism_Bulbfreak.label>恶臭瘤兽寄生</FH_Parasitism_Bulbfreak.label>
-  <!-- EN: The host grows two blunt tentacles and can consume twisted flesh to release two random medium fleshbeasts. -->
-  <FH_Parasitism_Bulbfreak.description>宿主生长两条钝击触手，并可消耗扭曲肉释放两只随机中型血肉兽。</FH_Parasitism_Bulbfreak.description>
-
+  
   <!-- EN: acidbulb parasitism -->
   <FH_Parasitism_Acidbulb.label>腐蚀瘤兽寄生</FH_Parasitism_Acidbulb.label>
   <!-- EN: The host becomes immune to toxic buildup and gains acid mortar and acid spray abilities. -->
   <FH_Parasitism_Acidbulb.description>宿主免疫毒素积累，并获得“酸蚀迫击炮”和“酸液喷吐”能力。</FH_Parasitism_Acidbulb.description>
-
-  <!-- EN: spitbulb parasitism -->
-  <FH_Parasitism_Spitbulb.label>喷射瘤兽寄生</FH_Parasitism_Spitbulb.label>
-  <!-- EN: The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point. -->
-  <FH_Parasitism_Spitbulb.description>宿主获得一门消耗扭曲肉的血肉迫击炮，并在命中位置释放一只小型血肉兽。</FH_Parasitism_Spitbulb.description>
+  
+  <!-- EN: bulbfreak parasitism -->
+  <FH_Parasitism_Bulbfreak.label>恶臭瘤兽寄生</FH_Parasitism_Bulbfreak.label>
+  <!-- EN: The host grows two blunt tentacles and can consume twisted flesh to release two random medium fleshbeasts. -->
+  <FH_Parasitism_Bulbfreak.description>宿主生长两条钝击触手，并可消耗扭曲肉释放两只随机中型血肉兽。</FH_Parasitism_Bulbfreak.description>
   
   <!-- EN: fingerspike parasitism -->
   <FH_Parasitism_Fingerspike.label>独爪兽寄生</FH_Parasitism_Fingerspike.label>
   <!-- EN: 被独爪兽寄生后，宿主体表生长骨刺触手。 -->
   <FH_Parasitism_Fingerspike.description>被独爪兽寄生后，宿主体表生长骨刺触手。</FH_Parasitism_Fingerspike.description>
+  
+  <!-- EN: flesh replica synchronization -->
+  <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>
+  <!-- EN: A synchronization link between a flesh replica and its host, allowing the replica to mimic the host's appearance and equipment. -->
+  <FH_Parasitism_FleshReplica.description>血肉拟像与宿主之间的同步连接，使拟像能够模仿宿主的外貌与装备。</FH_Parasitism_FleshReplica.description>
   
   <!-- EN: 胃血兽寄生 -->
   <FH_Parasitism_Gutspike.label>胃血兽寄生</FH_Parasitism_Gutspike.label>
@@ -51,15 +51,15 @@
   <!-- EN: 宿主获得更强的护甲与一只盾爪。 -->
   <FH_Parasitism_Shieldspike.description>宿主获得更强的护甲与一只盾爪。</FH_Parasitism_Shieldspike.description>
   
+  <!-- EN: spitbulb parasitism -->
+  <FH_Parasitism_Spitbulb.label>喷射瘤兽寄生</FH_Parasitism_Spitbulb.label>
+  <!-- EN: The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point. -->
+  <FH_Parasitism_Spitbulb.description>宿主获得一门消耗扭曲肉的血肉迫击炮，并在命中位置释放一只小型血肉兽。</FH_Parasitism_Spitbulb.description>
+  
   <!-- EN: 双爪兽寄生 -->
   <FH_Parasitism_Toughspike.label>双爪兽寄生</FH_Parasitism_Toughspike.label>
   <!-- EN: 宿主体表生长两条骨刺触手，提高全局工作效率。 -->
   <FH_Parasitism_Toughspike.description>宿主体表生长两条骨刺触手，提高全局工作效率。</FH_Parasitism_Toughspike.description>
-
-  <!-- EN: flesh replica synchronization -->
-  <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>
-  <!-- EN: TODO. -->
-  <FH_Parasitism_FleshReplica.description>血肉拟像与宿主之间的同步连接，使拟像能够模仿宿主的外貌与装备。</FH_Parasitism_FleshReplica.description>
   
   <!-- EN: 三爪兽寄生 -->
   <FH_Parasitism_Trispike.label>三爪兽寄生</FH_Parasitism_Trispike.label>
@@ -73,7 +73,7 @@
   
   <!-- EN: paraspike's spike -->
   <FH_Spike_Paraspike.label>寄血兽骨刺</FH_Spike_Paraspike.label>
-  <!-- EN: The paraspike's vital parasitic spike. It embeds in the host and continuously regulates flesh and blood. -->
+  <!-- EN: A paraspike's core bone spike, used to parasite a host and sustain its life. It remains embedded in the host, continuously regulating flesh and blood. -->
   <FH_Spike_Paraspike.description>寄血兽用于寄生与维持生命的骨刺。它嵌入宿主体内，持续调节血肉与血液。</FH_Spike_Paraspike.description>
   
 </LanguageData>

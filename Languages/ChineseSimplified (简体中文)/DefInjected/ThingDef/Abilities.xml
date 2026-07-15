@@ -6,15 +6,18 @@
   
   <!-- EN: acid spit -->
   <FH_Bullet_Shell_AcidSpit.label>酸液喷吐物</FH_Bullet_Shell_AcidSpit.label>
-
-  <!-- EN: acid -->
-  <FH_Projectile_Parasitism_AcidSpray.label>酸液</FH_Projectile_Parasitism_AcidSpray.label>
+  
+  <!-- EN: parasitic acid mortar shell -->
+  <FH_Bullet_Shell_ParasitismAcidMortar.label>寄生酸蚀迫击炮弹</FH_Bullet_Shell_ParasitismAcidMortar.label>
+  
+  <!-- EN: flesh mortar shell -->
+  <FH_Bullet_Shell_ParasitismSpit.label>血肉迫击炮弹</FH_Bullet_Shell_ParasitismSpit.label>
   
   <!-- EN: nexusmeld seed -->
   <FH_Bullet_Shell_Spit.label>统合母兽种子</FH_Bullet_Shell_Spit.label>
-
-  <!-- EN: flesh mortar shell -->
-  <FH_Bullet_Shell_ParasitismSpit.label>血肉迫击炮弹</FH_Bullet_Shell_ParasitismSpit.label>
+  
+  <!-- EN: acid -->
+  <FH_Projectile_Parasitism_AcidSpray.label>酸液</FH_Projectile_Parasitism_AcidSpray.label>
   
   <!-- EN: spike -->
   <FH_Spike_Parasitism_BoneSpike.label>骨刺</FH_Spike_Parasitism_BoneSpike.label>

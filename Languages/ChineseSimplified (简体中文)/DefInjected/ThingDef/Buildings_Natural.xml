@@ -11,6 +11,16 @@
   <!-- EN: An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof. -->
   <FH_ChitinFleshBlock.description>一团无法通过的扭曲肉块，外层覆盖着硬化甲壳。它跳动着，颤抖着，充满了可怕的活力。可以支撑起屋顶。</FH_ChitinFleshBlock.description>
   
+  <!-- EN: chopped flesh tree stump -->
+  <FH_ChoppedStump_FleshTree.label>被砍伐的血肉树桩</FH_ChoppedStump_FleshTree.label>
+  <!-- EN: A stump left behind after a flesh tree has been felled. -->
+  <FH_ChoppedStump_FleshTree.description>血肉树被砍伐后留下的树桩。</FH_ChoppedStump_FleshTree.description>
+  
+  <!-- EN: weakened fissionmeld -->
+  <FH_DormantFissionmeld.label>虚弱裂殖母兽</FH_DormantFissionmeld.label>
+  <!-- EN: A structure produced by a fissionmeld in its weakened state to prevent its own complete death. -->
+  <FH_DormantFissionmeld.description>裂殖母兽在虚弱状态产生的结构，防止自身彻底死亡。</FH_DormantFissionmeld.description>
+  
   <!-- EN: flesh barricade -->
   <FH_FleshBarricade.label>血肉掩体</FH_FleshBarricade.label>
   <!-- EN: A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do. -->
@@ -30,6 +40,11 @@
   <FH_FleshBox.label>血肉囊泡</FH_FleshBox.label>
   <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive. -->
   <FH_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。储存原料以供血肉巢穴使用。</FH_FleshBox.description>
+  
+  <!-- EN: fleshberry bush -->
+  <FH_FleshBush.label>肉果丛</FH_FleshBush.label>
+  <!-- EN: A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested. -->
+  <FH_FleshBush.description>一种长有少量棘刺的特殊肉团，仿佛某种灌木的扭曲复制品。其上会长出可以生吃的美味红色肉果，采集时也会收获大量扭曲肉。</FH_FleshBush.description>
   
   <!-- EN: flesh column -->
   <FH_FleshColumn.label>血肉支撑柱</FH_FleshColumn.label>
@@ -55,23 +70,6 @@
   <FH_FleshHopper.label>血肉产出口</FH_FleshHopper.label>
   <!-- EN: An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies. -->
   <FH_FleshHopper.description>使得血肉巢穴能够将内部加工的产物吐出的器官。通过血肉产出口，可以命令巢穴消耗营养生产物资。</FH_FleshHopper.description>
-
-  <!-- EN: flesh tree -->
-  <FH_FleshTree.label>血肉树</FH_FleshTree.label>
-  <!-- EN: A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself. -->
-  <FH_FleshTree.description>一种完全由肉质构成的参天大树。将噩兆噬树用扭曲肉感染，即可使其变化为血肉树。以置放在它周围的尸体、生肉和头颅为食。与噩兆噬树不同的是，血肉树连接着血肉巢穴，它吸收的营养用于供给整个巢群使用，而非自我繁殖。</FH_FleshTree.description>
-  <!-- EN: fleshberry bush -->
-  <FH_FleshBush.label>肉果丛</FH_FleshBush.label>
-  <!-- EN: A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested. -->
-  <FH_FleshBush.description>一种长有少量棘刺的特殊肉团，仿佛某种灌木的扭曲复制品。其上会长出可以生吃的美味红色肉果，采集时也会收获大量扭曲肉。</FH_FleshBush.description>
-  <!-- EN: chopped flesh tree stump -->
-  <FH_ChoppedStump_FleshTree.label>被砍伐的血肉树桩</FH_ChoppedStump_FleshTree.label>
-  <!-- EN: A stump left behind after a flesh tree has been felled. -->
-  <FH_ChoppedStump_FleshTree.description>血肉树被砍伐后留下的树桩。</FH_ChoppedStump_FleshTree.description>
-  <!-- EN: smashed flesh tree stump -->
-  <FH_SmashedStump_FleshTree.label>被摧毁的血肉树桩</FH_SmashedStump_FleshTree.label>
-  <!-- EN: The pulped remains of a destroyed flesh tree. -->
-  <FH_SmashedStump_FleshTree.description>血肉树被摧毁后留下的糜烂残骸。</FH_SmashedStump_FleshTree.description>
   
   <!-- EN: flesh lamp -->
   <FH_FleshLamp.label>血肉灯</FH_FleshLamp.label>
@@ -82,39 +80,11 @@
   <FH_FleshParasiteVat.label>血肉寄生仓</FH_FleshParasiteVat.label>
   <!-- EN: A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily. -->
   <FH_FleshParasiteVat.description>一个由尖锐的骨刺触手和血肉结块构成的血肉装置。该设备会将血肉兽的细胞逐渐吞噬，并逐步将这些细胞植入到宿主的身体中。这让血肉兽能在宿主体内独立存活，强化宿主，并主动攻击宿主的敌人。血肉兽的生存营养也要由宿主提供，所以宿主会更容易感到饥饿。</FH_FleshParasiteVat.description>
-
-  <!-- EN: bone spitter -->
-  <FH_FleshTurret.label>骨刺喷吐器</FH_FleshTurret.label>
-  <!-- EN: A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes. -->
-  <FH_FleshTurret.description>一种小型、短程的防御性血肉块器官。长期使用后需要大量的营养来生产备用骨刺。</FH_FleshTurret.description>
-
-  <!-- EN: fleshmass spitter -->
-  <FH_FleshmassSpitter.label>血肉喷吐器</FH_FleshmassSpitter.label>
-  <!-- EN: A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass. -->
-  <FH_FleshmassSpitter.description>可远距离喷吐酸性涎液的防御性血肉块器官。这种酸性涎液是从周围生物质中过滤出的天然有毒副产物。</FH_FleshmassSpitter.description>
-
-  <!-- EN: flesh burster -->
-  <FH_FleshSpreader.label>血肉爆炸器</FH_FleshSpreader.label>
-  <!-- EN: A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm. -->
-  <FH_FleshSpreader.description>由大量高压囊泡和脆弱外壁组成的血肉器官。被生物触发或子弹击中后会引发爆炸并在附近地面生成血肉板块。由于它隐藏在周围的地形中，因此不能与其他陷阱相邻。动物可以在非狂暴状态下感知陷阱。</FH_FleshSpreader.description>
-  
-  <!-- EN: guard tentacle nexus -->
-  <FH_FleshDigester.label>警卫触手中枢</FH_FleshDigester.label>
-  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
-  <FH_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。这些被活化的板块也会像血肉树一样吞噬尸体和肉类，补充巢穴营养。</FH_FleshDigester.description>
   
   <!-- EN: flesh primary nest -->
   <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>
   <!-- EN: The core of a large flesh hive. It can gestate and fuse flesh beasts within the nest, and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shard, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. A hive can only support one flesh primary nest. -->
   <FH_FleshPrimaryNest.description>大型血肉巢群的核心，可以在巢穴中孕育和融合血肉兽，会向四周扩张生长血肉菌毯来扩张巢穴。因为人工植入的暗黑超凡碎片使其无法像原本一样无限制地扩张，也无法自主吸取周围的营养，只能依靠人工投喂这种更加安全的方式来获取养分。一个巢群只能有一个血肉主巢。</FH_FleshPrimaryNest.description>
-  <!-- EN: hive nerve bundle -->
-  <FH_NerveBundle.label>巢群神经结节</FH_NerveBundle.label>
-  <!-- EN: A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. -->
-  <FH_NerveBundle.description>血肉块神经系统的节点。可以扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。</FH_NerveBundle.description>
-  <!-- EN: hive nerve center -->
-  <FH_NerveCenter.label>巢群神经中枢</FH_NerveCenter.label>
-  <!-- EN: The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control. -->
-  <FH_NerveCenter.description>血肉块神经系统的核心节点。可以大幅度扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。巢群神经中枢会使血肉兽更容易控制。</FH_NerveCenter.description>
   
   <!-- EN: flesh sack -->
   <FH_FleshSack.label>血肉囊</FH_FleshSack.label>
@@ -146,14 +116,29 @@
   <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
   <FH_FleshTableSquare.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableSquare.description>
   
-  <!-- EN: weakened fissionmeld -->
-  <FH_DormantFissionmeld.label>虚弱裂殖母兽</FH_DormantFissionmeld.label>
-  <!-- EN: A structure produced by a fissionmeld in its weakened state to prevent its own complete death. -->
-  <FH_DormantFissionmeld.description>裂殖母兽在虚弱状态产生的结构，防止自身彻底死亡。</FH_DormantFissionmeld.description>
-
+  <!-- EN: flesh tree -->
+  <FH_FleshTree.label>血肉树</FH_FleshTree.label>
+  <!-- EN: A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself. -->
+  <FH_FleshTree.description>一种完全由肉质构成的参天大树。将噩兆噬树用扭曲肉感染，即可使其变化为血肉树。以置放在它周围的尸体、生肉和头颅为食。与噩兆噬树不同的是，血肉树连接着血肉巢穴，它吸收的营养用于供给整个巢群使用，而非自我繁殖。</FH_FleshTree.description>
+  
   <!-- EN: harnessed fleshmass heart -->
   <FH_HarnessedFleshmassHeart.label>受控血肉心脏</FH_HarnessedFleshmassHeart.label>
   <!-- EN: The primary organ of a fleshmass catastrophe. The heart draws material through roots extending deep underground. Once it has gathered enough, it spreads fleshmass around itself in cancer-like growth. It will continue growing until it consumes everything. Under the restraint of an archotechnological device, some of the heart's functions have been brought under control.\n\nThe heart can produce an endless supply of flesh and greatly expand the scale of a flesh hive. When needed, the harnessed fleshmass heart can consume a large amount of nutrition and transform into a harnessed fleshtitan to join the battle. -->
   <FH_HarnessedFleshmassHeart.description>血肉兽灾变的核心器官。心脏通过伸入地下的根系汲取物质。一旦收集足够物质，它就会像癌细胞一样向周围扩散血肉块。它会不断生长，直到吞噬一切。然而在超凡智能装置的约束下，这颗心脏的部分机能已经受到控制。\n\n心脏可以生产出无穷无尽的血肉，并且极大地扩展血肉巢穴的规模。在需要时，受控血肉心脏也可以消耗大量营养变为血肉泰坦参与战斗。</FH_HarnessedFleshmassHeart.description>
+  
+  <!-- EN: hive nerve bundle -->
+  <FH_NerveBundle.label>巢群神经结节</FH_NerveBundle.label>
+  <!-- EN: A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. -->
+  <FH_NerveBundle.description>血肉块神经系统的节点。可以扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。</FH_NerveBundle.description>
+  
+  <!-- EN: hive nerve center -->
+  <FH_NerveCenter.label>巢群神经中枢</FH_NerveCenter.label>
+  <!-- EN: The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control. -->
+  <FH_NerveCenter.description>血肉块神经系统的核心节点。可以大幅度扩大巢群规模，还会提供一个独立的巢群控制信标，会向四周扩张生长血肉菌毯来扩张巢穴。血肉兽的控制度较低时，需要回到节点来恢复控制度。否则血肉兽将可能进入狂暴状态。巢群神经中枢会使血肉兽更容易控制。</FH_NerveCenter.description>
+  
+  <!-- EN: smashed flesh tree stump -->
+  <FH_SmashedStump_FleshTree.label>被摧毁的血肉树桩</FH_SmashedStump_FleshTree.label>
+  <!-- EN: The pulped remains of a destroyed flesh tree. -->
+  <FH_SmashedStump_FleshTree.description>血肉树被摧毁后留下的糜烂残骸。</FH_SmashedStump_FleshTree.description>
   
 </LanguageData>

@@ -7,7 +7,7 @@
   <FH_WorkGiver_FillFleshSack.gerund>搬运中</FH_WorkGiver_FillFleshSack.gerund>
   <!-- EN: carry -->
   <FH_WorkGiver_FillFleshSack.verb>搬运</FH_WorkGiver_FillFleshSack.verb>
-
+  
   <!-- EN: infect harbinger tree -->
   <FH_WorkGiver_InfectHarbingerTree.label>感染噩兆噬树</FH_WorkGiver_InfectHarbingerTree.label>
   <!-- EN: infecting -->
@@ -35,7 +35,7 @@
   <FH_WorkGiver_RefillTwistedFlesh_Help.gerund>补充中</FH_WorkGiver_RefillTwistedFlesh_Help.gerund>
   <!-- EN: refill -->
   <FH_WorkGiver_RefillTwistedFlesh_Help.verb>补充</FH_WorkGiver_RefillTwistedFlesh_Help.verb>
-
+  
   <!-- EN: suppress flesh hive activity -->
   <FH_WorkGiver_SuppressFleshHiveActivity.label>压制血肉巢穴活跃度</FH_WorkGiver_SuppressFleshHiveActivity.label>
   <!-- EN: suppressing -->

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: Weapon/carried thing -->
+  <FH_FleshReplica.root.children.2.debugLabel>武器/携带物</FH_FleshReplica.root.children.2.debugLabel>
+  
   <!-- EN: Carried thing -->
   <FH_Paraspike.root.children.1.debugLabel>携带物</FH_Paraspike.root.children.1.debugLabel>
   

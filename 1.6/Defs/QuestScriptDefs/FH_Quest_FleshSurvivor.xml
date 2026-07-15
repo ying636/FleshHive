@@ -4,6 +4,7 @@
   <QuestScriptDef>
     <defName>FH_Quest_FleshSurvivor</defName>
     <root Class="FleshHive.QuestNode_Root_FleshSurvivor" />
+    <expireDaysRange>2</expireDaysRange>
     <randomlySelectable>false</randomlySelectable>
     <isRootSpecial>true</isRootSpecial>
     <affectedByPoints>false</affectedByPoints>

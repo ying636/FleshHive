@@ -3,7 +3,7 @@
   
   <!-- EN: ParasitismSystem -->
   <FH_ParasitismSystem.label>寄生系统</FH_ParasitismSystem.label>
-  <!-- EN: The host's internal fleshbeast parasitism system. It maintains parasitic fleshbeasts, tracks parasite capacity, and releases all parasites when the host dies. -->
+  <!-- EN: The fleshbeast parasitism system within the host. It sustains parasitic fleshbeasts, tracks parasite capacity, and releases all parasites when the host dies. -->
   <FH_ParasitismSystem.description>宿主体内的血肉兽寄生系统。它维持寄生血肉兽、统计寄生容量，并在宿主死亡时释放所有寄生体。</FH_ParasitismSystem.description>
   
 </LanguageData>

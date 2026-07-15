@@ -41,7 +41,7 @@
     </verbProperties>
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesAbilityEffect_GiveHediff_Unit">
-        <durationSecondsOverride>50</durationSecondsOverride>
+        <durationSecondsOverride>25</durationSecondsOverride>
         <hediffDef>FH_LostSpike_Paraspike</hediffDef>
         <onlyApplyToSelf>True</onlyApplyToSelf>
         <applyToSelf>True</applyToSelf>
@@ -113,7 +113,7 @@
     <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
     <verbProperties>
       <range>50</range>
-      <defaultProjectile>FH_Bullet_Shell_AcidSpit</defaultProjectile>
+      <defaultProjectile>FH_Bullet_Shell_ParasitismAcidMortar</defaultProjectile>
       <defaultCooldownTime>5</defaultCooldownTime>
       <verbClass>Verb_AbilityShoot</verbClass>
       <warmupTime>0.5</warmupTime>
@@ -124,6 +124,43 @@
       </targetParams>
     </verbProperties>
   </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Bullet_Shell_ParasitismAcidMortar</defName>
+    <label>parasitic acid mortar shell</label>
+    <graphicData>
+      <graphicClass>Graphic_Single_AgeSecs</graphicClass>
+      <texPath>Things/Projectile/FleshmassSpitterProjectileSheet</texPath>
+      <drawSize>(.75, .75)</drawSize>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <useGraphicClass>True</useGraphicClass>
+      <shadowSize>1</shadowSize>
+      <damageDef>AcidBurn</damageDef>
+      <spinRate>20</spinRate>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>41</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <explosionRadius>1.95</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>SpitterSpitLands</soundExplode>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+      <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+      <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+      <doExplosionVFX>false</doExplosionVFX>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>Shell_AcidSpitStream</effecterDef>
+      </li>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>Shell_AcidSpitLaunched</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
 
   <ThingDef ParentName="BaseBullet">
     <defName>FH_Bullet_Shell_AcidSpit</defName>
