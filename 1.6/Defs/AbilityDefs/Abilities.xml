@@ -31,7 +31,7 @@
     <abilityClass>FleshHive.Ability_SpikeLaunch_Paraspike</abilityClass>
     <aiCanUse>true</aiCanUse>
     <verbProperties>
-      <warmupTime>0.5</warmupTime>
+      <warmupTime>1</warmupTime>
       <soundCast>Ability_SpineLaunch</soundCast>
       <ai_IsWeapon>false</ai_IsWeapon>
       <verbClass>HiveCreatureFramework.Verb_AbilityShootWithEffects</verbClass>
@@ -370,6 +370,34 @@
       <defaultProjectile>FH_Spike_Parasitism_BoneSpike</defaultProjectile>
       <ai_IsWeapon>false</ai_IsWeapon>
     </verbProperties>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_CorrosiveSpray_Gutspike</defName>
+    <label>corrosive spray</label>
+    <description>Use the corrosive heart to spray acid a short distance. The heart pumps the corrosive fluid through a surgically implanted duct, allowing the ghoul to spew it from their mouth at high velocity.</description>
+    <iconPath>UI/Abilities/AcidSpray</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayOrder>300</displayOrder>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>11.9</range>
+      <warmupTime>0.25</warmupTime>
+      <soundCast>AcidSpray_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilitySprayLiquid">
+        <projectileDef>Proj_CorrosiveFluid</projectileDef>
+        <numCellsToHit>9</numCellsToHit>
+        <sprayEffecter>AcidSpray_Directional</sprayEffecter>
+      </li>
+    </comps>
   </AbilityDef>
 
   <ThingDef ParentName="SpikeBase">

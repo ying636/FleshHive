@@ -119,7 +119,7 @@
     <thinkNode Class="JobGiver_AIAbilityFight">
       <targetAcquireRadius>48</targetAcquireRadius>
       <targetKeepRadius>36</targetKeepRadius>
-      <ability>CorrosiveSpray</ability>
+      <ability>FH_CorrosiveSpray_Gutspike</ability>
     </thinkNode>
   </DutyDef>
 
@@ -144,8 +144,8 @@
   <DutyDef>
     <defName>FH_Skill_Shatterspike</defName>
     <thinkNode Class="JobGiver_AIAbilityFight">
-      <targetAcquireRadius>12</targetAcquireRadius>
-      <targetKeepRadius>12</targetKeepRadius>
+      <targetAcquireRadius>48</targetAcquireRadius>
+      <targetKeepRadius>36</targetKeepRadius>
       <ability>FH_SpikeLaunch_Shatterspike</ability>
     </thinkNode>
   </DutyDef>

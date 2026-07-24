@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: pit burrow -->
+  <FH_GiantFleshbeastPitBurrow.label>坑洞</FH_GiantFleshbeastPitBurrow.label>
+  <!-- EN: A small hole connecting to some unseen cave network deep under the surface. The walls are too steep to climb. It is inherently unstable and will collapse after some time. -->
+  <FH_GiantFleshbeastPitBurrow.description>直通地表深处的小洞，连通着一些不可见的洞穴网络。洞壁过于陡峭，无法攀爬。它本身就不稳定，一段时间后便会坍塌。</FH_GiantFleshbeastPitBurrow.description>
+
+  <!-- EN: underground emergence -->
+  <FH_GiantFleshbeastPitBurrowSpawner.label>正在塌陷的地面</FH_GiantFleshbeastPitBurrowSpawner.label>
+  <!-- EN: Something is emerging from the ground here. -->
+  <FH_GiantFleshbeastPitBurrowSpawner.description>有什么东西破土而出。</FH_GiantFleshbeastPitBurrowSpawner.description>
+</LanguageData>

@@ -9,13 +9,14 @@
       <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
       <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
       <drawSize>(3.5,3.5)</drawSize>
-      <drawOffset>(0,0,0.2)</drawOffset>
+      <drawOffset>(0,0,0.6)</drawOffset>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(3,2)</size>
     <uiIconScale>0.65</uiIconScale>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -45,6 +46,9 @@
       <Shard>2</Shard>
       <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
     </costList>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
     <designationCategory>HCF_Hive</designationCategory>
     <building>
       <storageGroupTag>Hive</storageGroupTag>
@@ -100,6 +104,7 @@
           <li>FH_Category_MediumFleshBeast</li>
         </UnitCategories>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHivePlan" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
@@ -121,9 +126,9 @@
         <dailyNutritionCost>2</dailyNutritionCost>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
-        <intervalDays>3</intervalDays>
+        <intervalDays>1</intervalDays>
         <radius>10.5</radius>
-        <cellsPerErosion>3</cellsPerErosion>
+        <cellsPerErosion>12</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
       </li>
       <li Class="FleshHive.CompProperties_HiveInitialNutrition">
@@ -178,10 +183,12 @@
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
+      <drawOffset>(0,0,0.6)</drawOffset>
     </graphicData>
     <size>(3,3)</size>
     <uiIconPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</uiIconPath>
     <uiIconScale>0.58</uiIconScale>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -314,6 +321,7 @@
           </li>
         </traitOptions>
       </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHivePlan" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
@@ -382,6 +390,7 @@
     <thingClass>FleshHive.Building_HarnessedFleshmassHeart</thingClass>
     <size>(3,3)</size>
     <uiIconPath>Things/Building/FH_HarnessedFleshmassHeart/HarnessedFleshmassHeart</uiIconPath>
+    <specialDisplayRadius>40</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -454,6 +463,7 @@
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(2,2)</size>
+    <specialDisplayRadius>5.5</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -531,6 +541,7 @@
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(2,3)</size>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -677,6 +688,7 @@
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
     <size>(2,2)</size>
+    <specialDisplayRadius>3</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
@@ -805,16 +817,17 @@
     <defName>FH_FleshDoor</defName>
     <label>flesh door</label>
     <description>A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them.</description>
-    <thingClass>Building_Door</thingClass>
+    <thingClass>FleshHive.Building_FleshDoor</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshDoor/FH_FleshDoor_Mover</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.3,1.3)</drawSize>
       <damageData>
         <enabled>false</enabled>
       </damageData>
     </graphicData>
     <uiIconPath>Things/Building/FH_FleshDoor/FH_FleshDoor_MenuIcon</uiIconPath>
-    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <fillPercent>1</fillPercent>
     <useHitPoints>true</useHitPoints>
     <tickerType>Normal</tickerType>
@@ -928,9 +941,6 @@
       </li>
       <li>
         <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
-      </li>
-      <li Class="FleshHive.CompProperties_FleshmassBase">
-        <size>(1,1)</size>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshHopper</building>
@@ -1499,6 +1509,7 @@
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
     </graphicData>
+    <specialDisplayRadius>3</specialDisplayRadius>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <tickerType>Normal</tickerType>
@@ -1524,9 +1535,9 @@
         <heatPushMaxTemperature>21</heatPushMaxTemperature>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
-        <intervalDays>3</intervalDays>
+        <intervalDays>1</intervalDays>
         <radius>3</radius>
-        <cellsPerErosion>1</cellsPerErosion>
+        <cellsPerErosion>4</cellsPerErosion>
         <initialErosionCount>0</initialErosionCount>
       </li>
       <li Class="FleshHive.CompProperties_HiveNutritionProducer">
@@ -1555,7 +1566,7 @@
         <offset>(0,0,-0.3)</offset>
       </shadowData>
     </graphicData>
-    <minifiedDef IsNull="True" />
+    <minifiedDef>MinifiedTree</minifiedDef>
     <statBases>
       <Beauty>-10</Beauty>
       <BeautyOutdoors>-10</BeautyOutdoors>

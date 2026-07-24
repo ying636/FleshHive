@@ -7,6 +7,7 @@
     <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
     <building>FH_NerveBundle</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>5.5</specialDisplayRadius>
     <workAmount>400</workAmount>
     <researchPrerequisites>
       <li>FH_Research_ComplexFleshHive</li>
@@ -29,6 +30,7 @@
     <description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</description>
     <building>FH_NerveCenter</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
     <workAmount>700</workAmount>
     <researchPrerequisites>
       <li>FH_Research_AdvancedFleshHive</li>
@@ -51,6 +53,7 @@
     <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains.</description>
     <building>FH_FleshSack</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>3</specialDisplayRadius>
     <workAmount>400</workAmount>
     <researchPrerequisites>
       <li>FH_Research_ComplexFleshHive</li>
@@ -347,6 +350,7 @@
     <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow.</description>
     <building>FH_FleshLamp</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>3</specialDisplayRadius>
     <workAmount>100</workAmount>
     <researchPrerequisites>
       <li>FH_Research_BasicFleshHive</li>

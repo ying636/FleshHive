@@ -94,7 +94,8 @@
     <uiIconPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</uiIconPath>
     <race>
       <body>Fingerspike</body>
-      </race>
+      <renderTree>Fingerspike</renderTree>
+    </race>
     <comps>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_Fingerspike</iconPath> 
@@ -210,6 +211,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Cleaning</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -449,7 +451,7 @@
     <race>FH_Gutspike</race>
     <combatPower>25</combatPower>
     <abilities>
-      <li>CorrosiveSpray</li>
+      <li>FH_CorrosiveSpray_Gutspike</li>
     </abilities>
     <modExtensions>
       <li Class="FleshHive.FleshbeastSkillDutyExtension">
@@ -1375,6 +1377,17 @@
       <flightStartChanceOnJobStart>0.25</flightStartChanceOnJobStart>
       <flightSpeedFactor>2.5</flightSpeedFactor>
       <canFlyIntoMap>true</canFlyIntoMap>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>2</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Puffspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
       <lifeStageAges>
         <li>
           <def>EntityFullyFormed</def>
@@ -1462,23 +1475,23 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.1</drawSize>
+          <drawSize>1.65</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Dessicated_Fleshwind</texPath>
-          <drawSize>1.1</drawSize>
+          <drawSize>1.65</drawSize>
         </dessicatedBodyGraphicData>
         <silhouetteGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_east</texPath>
           <graphicClass>Graphic_Single</graphicClass>
-          <drawSize>1</drawSize>
+          <drawSize>1.5</drawSize>
         </silhouetteGraphicData>
       </li>
     </lifeStages>
     <flyingAnimationFramePathPrefix>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_Flying_</flyingAnimationFramePathPrefix>
     <flyingAnimationFrameCount>8</flyingAnimationFrameCount>
     <flyingAnimationTicksPerFrame>2</flyingAnimationTicksPerFrame>
-    <flyingAnimationDrawSize>1.1</flyingAnimationDrawSize>
+    <flyingAnimationDrawSize>2.1</flyingAnimationDrawSize>
     <flyingAnimationDrawSizeIsMultiplier>false</flyingAnimationDrawSizeIsMultiplier>
     <flyingAnimationInheritColors>true</flyingAnimationInheritColors>
   </PawnKindDef>

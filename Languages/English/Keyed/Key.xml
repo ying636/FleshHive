@@ -32,6 +32,11 @@
   <FH_Parasitism_VatQueued>Task queued</FH_Parasitism_VatQueued>
   <FH_Parasitism_VatWorking>Parasitizing: {0}</FH_Parasitism_VatWorking>
 
+  <FH_HivePlan_Selector>Flesh hives</FH_HivePlan_Selector>
+  <FH_HivePlan_NoHives>No flesh hives or flesh primary nest are available on this map.</FH_HivePlan_NoHives>
+  <FH_HivePlan_StatusEmpty>No plans</FH_HivePlan_StatusEmpty>
+  <FH_HivePlan_StatusEntries>{0} plans, {1} active</FH_HivePlan_StatusEntries>
+
   <HCF_FormulaCategory_Parasite>Parasite</HCF_FormulaCategory_Parasite>
   <HCF_AddParasite>Add Parasite</HCF_AddParasite>
   <HCF_SelectParasite>Select Parasite</HCF_SelectParasite>
@@ -50,6 +55,8 @@
   <FH_DevAddTwistedFlesh>DEV: +10% twisted flesh</FH_DevAddTwistedFlesh>
   <FH_DevFillTwistedFlesh>DEV: fill twisted flesh</FH_DevFillTwistedFlesh>
   <FH_DevGiveParasite>DEV: add parasite</FH_DevGiveParasite>
+  <FH_DevCompleteFleshSackDigestion>DEV: complete flesh sack digestion</FH_DevCompleteFleshSackDigestion>
+  <FH_DevCompleteFleshSackDigestionDesc>Immediately finish the current flesh sack digestion and eject its contents.</FH_DevCompleteFleshSackDigestionDesc>
 
   <ToggleTentacleAttackMode>Toggle {0}'s tentacle attack mode</ToggleTentacleAttackMode>
   <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>

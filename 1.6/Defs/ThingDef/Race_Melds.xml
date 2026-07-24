@@ -490,17 +490,17 @@
                 <pawnType>Any</pawnType>
                 <drawData>
                   <dataNorth>
-                    <offset>(-0.75, 0, -0.3)</offset>
+                    <offset>(-0.95, 0, -0.3)</offset>
                   </dataNorth>
                   <dataEast>
-                    <offset>(0.3, 0, 0.75)</offset>
+                    <offset>(0.3, 0, 0.95)</offset>
                   </dataEast>
                   <dataSouth>
-                    <offset>(0.75, 0, 0.3)</offset>
+                    <offset>(0.95, 0, 0.3)</offset>
                   </dataSouth>
                   <dataWest>
                     <rotationOffset>180</rotationOffset>
-                    <offset>(-0.3, 0, -0.75)</offset>
+                    <offset>(-0.3, 0, -0.95)</offset>
                   </dataWest>
                 </drawData>
               </li>
@@ -556,17 +556,17 @@
                 <pawnType>Any</pawnType>
                 <drawData>
                   <dataNorth>
-                    <offset>(-0.75, 0, 0.55)</offset>
+                    <offset>(-0.95, 0, 0.55)</offset>
                   </dataNorth>
                   <dataEast>
-                    <offset>(-0.55, 0, 0.75)</offset>
+                    <offset>(-0.55, 0, 0.95)</offset>
                   </dataEast>
                   <dataSouth>
-                    <offset>(0.75, 0, -0.55)</offset>
+                    <offset>(0.95, 0, -0.55)</offset>
                   </dataSouth>
                   <dataWest>
                     <rotationOffset>180</rotationOffset>
-                    <offset>(0.55, 0, -0.75)</offset>
+                    <offset>(0.55, 0, -0.95)</offset>
                   </dataWest>
                 </drawData>
               </li>

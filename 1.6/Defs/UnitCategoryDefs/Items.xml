@@ -66,10 +66,14 @@
     <thing>Tentacle</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
-    <requirements>
-      <Bioferrite>15</Bioferrite>
-      <FH_NerveFlesh>4</FH_NerveFlesh>
-    </requirements>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
   </HiveCreatureFramework.ItemDef>
 
   <HiveCreatureFramework.ItemDef>
@@ -80,10 +84,14 @@
     <thing>FH_FleshAdaptationModule</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
-    <requirements>
-      <Bioferrite>30</Bioferrite>
-      <FH_NerveFlesh>6</FH_NerveFlesh>
-    </requirements>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>30</Bioferrite>
+          <FH_NerveFlesh>6</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
   </HiveCreatureFramework.ItemDef>
 
   <HiveCreatureFramework.ItemDef>
@@ -94,10 +102,14 @@
     <thing>FH_FleshPack</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.233333~0.233333</spawningDay>
-    <requirements>
-      <Bioferrite>20</Bioferrite>
-      <FH_NerveFlesh>5</FH_NerveFlesh>
-    </requirements>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>20</Bioferrite>
+          <FH_NerveFlesh>5</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
   </HiveCreatureFramework.ItemDef>
 
   <HiveCreatureFramework.ItemDef>
@@ -108,10 +120,14 @@
     <thing>FleshWhip</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
-    <requirements>
-      <Bioferrite>15</Bioferrite>
-      <FH_NerveFlesh>4</FH_NerveFlesh>
-    </requirements>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
   </HiveCreatureFramework.ItemDef>
 
   <HiveCreatureFramework.ItemDef>
@@ -122,10 +138,14 @@
     <thing>FleshmassStomach</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
-    <requirements>
-      <Bioferrite>15</Bioferrite>
-      <FH_NerveFlesh>4</FH_NerveFlesh>
-    </requirements>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
   </HiveCreatureFramework.ItemDef>
 
   <HiveCreatureFramework.ItemDef>
@@ -136,10 +156,14 @@
     <thing>FleshmassLung</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
-    <requirements>
-      <Bioferrite>15</Bioferrite>
-      <FH_NerveFlesh>4</FH_NerveFlesh>
-    </requirements>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
   </HiveCreatureFramework.ItemDef>
 
 </Defs>

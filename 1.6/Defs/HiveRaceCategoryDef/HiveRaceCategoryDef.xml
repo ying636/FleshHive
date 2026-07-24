@@ -10,6 +10,7 @@
         </tags>
         <options>
             <li>FH_CategoryOption_FleshManagement</li>
+            <li>FH_CategoryOption_HivePlan</li>
             <li>FH_CategoryOption_FleshbeastGestation</li>
             <li>FH_CategoryOption_Parasitism</li>
             <li>FH_CategoryOption_ItemProduction</li>
@@ -25,6 +26,13 @@
         <label>Flesh beast management</label>
         <description>Manage flesh hive population, nutrition, activity, and fleshbeasts.</description>
         <option Class="FleshHive.HiveTabOption_FleshManagement" />
+    </HiveCreatureFramework.HiveTabOptionDef>
+
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_HivePlan</defName>
+        <label>Hive plans</label>
+        <description>Quickly select a flesh hive or the flesh primary nest and arrange its production plans.</description>
+        <option Class="FleshHive.HiveTabOption_HivePlan" />
     </HiveCreatureFramework.HiveTabOptionDef>
 
     <HiveCreatureFramework.HiveTabOptionDef>

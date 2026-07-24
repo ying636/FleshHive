@@ -55,6 +55,7 @@
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>
         <kind>FH_Whipspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -62,6 +63,7 @@
         <label>Puffspike</label>
         <description>Puffspike</description>
         <kind>FH_Puffspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <costs>
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>
@@ -72,6 +74,7 @@
         <label>Paraspike</label>
         <description>Paraspike</description>
         <kind>FH_Paraspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <costs>
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>
@@ -82,6 +85,7 @@
         <label>Fingerspike</label>
         <description>Fingerspike</description>
         <kind>FH_Fingerspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <costs>
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>
@@ -92,6 +96,7 @@
         <label>Gutspike</label>
         <description>Gutspike</description>
         <kind>FH_Gutspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <costs>
             <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
         </costs>
@@ -103,6 +108,7 @@
         <description>Toughspike</description>
         <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Toughspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Fingerspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
@@ -114,6 +120,7 @@
         <label>Flesh replica</label>
         <description>Spawn a flesh replica.</description>
         <kind>FH_FleshReplica</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <costs>
             <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </costs>
@@ -125,6 +132,7 @@
         <description>Shieldspike</description>
         <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Shieldspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Shieldspike_Paraspike_Paraspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
@@ -137,6 +145,7 @@
         <description>Trispike</description>
         <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Trispike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Trispike_Puffspike_Puffspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
@@ -149,6 +158,7 @@
         <description>Shatterspike</description>
         <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Shatterspike</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Gutspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
@@ -161,6 +171,7 @@
         <description>Fleshwind</description>
         <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Fleshwind</kind>
+        <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Whipspike</prerequisiteFusion>
         <costs>
             <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
@@ -172,12 +183,16 @@
         <label>Dreadmeld</label>
         <description>Dreadmeld</description>
         <kind>FH_Dreadmeld</kind>
-        <spawningDay>15~15</spawningDay>
-        <requirements>
-            <Shard>6</Shard>
-            <Bioferrite>24</Bioferrite>
-            <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
-        </requirements>
+        <spawningDay>3.75~3.75</spawningDay>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <Shard>6</Shard>
+                    <Bioferrite>24</Bioferrite>
+                    <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
+                </requirements>
+            </li>
+        </specialResources>
         <costs>
             <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </costs>
@@ -188,12 +203,16 @@
         <label>Furiousmeld</label>
         <description>Furiousmeld</description>
         <kind>FH_Furiousmeld</kind>
-        <spawningDay>15~15</spawningDay>
-        <requirements>
-            <Shard>6</Shard>
-            <Bioferrite>24</Bioferrite>
-            <FH_FuriousmeldSeed>1</FH_FuriousmeldSeed>
-        </requirements>
+        <spawningDay>3.75~3.75</spawningDay>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <Shard>6</Shard>
+                    <Bioferrite>24</Bioferrite>
+                    <FH_FuriousmeldSeed>1</FH_FuriousmeldSeed>
+                </requirements>
+            </li>
+        </specialResources>
         <costs>
             <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </costs>
@@ -204,12 +223,16 @@
         <label>Bastionmeld</label>
         <description>Bastionmeld</description>
         <kind>FH_Bastionmeld</kind>
-        <spawningDay>15~15</spawningDay>
-        <requirements>
-            <Shard>6</Shard>
-            <Bioferrite>24</Bioferrite>
-            <FH_BastionmeldSeed>1</FH_BastionmeldSeed>
-        </requirements>
+        <spawningDay>3.75~3.75</spawningDay>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <Shard>6</Shard>
+                    <Bioferrite>24</Bioferrite>
+                    <FH_BastionmeldSeed>1</FH_BastionmeldSeed>
+                </requirements>
+            </li>
+        </specialResources>
         <costs>
             <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </costs>
@@ -220,12 +243,16 @@
         <label>Nexusmeld</label>
         <description>Nexusmeld</description>
         <kind>FH_Nexusmeld</kind>
-        <spawningDay>15~15</spawningDay>
-        <requirements>
-            <Shard>6</Shard>
-            <Bioferrite>24</Bioferrite>
-            <FH_NexusmeldSeed>1</FH_NexusmeldSeed>
-        </requirements>
+        <spawningDay>3.75~3.75</spawningDay>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <Shard>6</Shard>
+                    <Bioferrite>24</Bioferrite>
+                    <FH_NexusmeldSeed>1</FH_NexusmeldSeed>
+                </requirements>
+            </li>
+        </specialResources>
         <costs>
             <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </costs>
@@ -236,12 +263,16 @@
         <label>Fissionmeld</label>
         <description>Fissionmeld</description>
         <kind>FH_Fissionmeld</kind>
-        <spawningDay>15~15</spawningDay>
-        <requirements>
-            <Shard>6</Shard>
-            <Bioferrite>24</Bioferrite>
-            <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
-        </requirements>
+        <spawningDay>3.75~3.75</spawningDay>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <Shard>6</Shard>
+                    <Bioferrite>24</Bioferrite>
+                    <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
+                </requirements>
+            </li>
+        </specialResources>
         <costs>
             <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </costs>

@@ -62,6 +62,15 @@
   <!-- EN: Parasitizing: {0} -->
   <FH_Parasitism_VatWorking>寄生中：{0}</FH_Parasitism_VatWorking>
 
+  <!-- EN: Flesh hives -->
+  <FH_HivePlan_Selector>血肉巢穴</FH_HivePlan_Selector>
+  <!-- EN: No flesh hives or flesh primary nest are available on this map. -->
+  <FH_HivePlan_NoHives>当前地图没有可用的血肉巢穴或血肉主巢。</FH_HivePlan_NoHives>
+  <!-- EN: No plans -->
+  <FH_HivePlan_StatusEmpty>暂无计划</FH_HivePlan_StatusEmpty>
+  <!-- EN: {0} plans, {1} active -->
+  <FH_HivePlan_StatusEntries>{0}项计划，{1}项启用</FH_HivePlan_StatusEntries>
+
   <!-- EN: Parasite -->
   <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
   <!-- EN: Add Parasite -->
@@ -97,6 +106,10 @@
   <FH_DevFillTwistedFlesh>开发：填满扭曲肉</FH_DevFillTwistedFlesh>
   <!-- EN: DEV: add parasite -->
   <FH_DevGiveParasite>开发：添加寄生体</FH_DevGiveParasite>
+  <!-- EN: DEV: complete flesh sack digestion -->
+  <FH_DevCompleteFleshSackDigestion>开发：完成血肉囊消化</FH_DevCompleteFleshSackDigestion>
+  <!-- EN: Immediately finish the current flesh sack digestion and eject its contents. -->
+  <FH_DevCompleteFleshSackDigestionDesc>立即完成当前血肉囊的消化并排出内容物。</FH_DevCompleteFleshSackDigestionDesc>
 
   <!-- EN: Toggle {0}'s tentacle attack mode -->
   <ToggleTentacleAttackMode>开关{0}的触手攻击模式</ToggleTentacleAttackMode>
