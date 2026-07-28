@@ -59,8 +59,8 @@
       <li Class="HiveCreatureFramework.NodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
-        <maintenancePerInterval>0.1</maintenancePerInterval>
-        <maintenancePerResource>1</maintenancePerResource>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -221,8 +221,8 @@
       <li Class="HiveCreatureFramework.NodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
-        <maintenancePerInterval>0.1</maintenancePerInterval>
-        <maintenancePerResource>1</maintenancePerResource>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -397,8 +397,8 @@
       <li Class="HiveCreatureFramework.NodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
-        <maintenancePerInterval>0.1</maintenancePerInterval>
-        <maintenancePerResource>1</maintenancePerResource>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
@@ -728,8 +728,8 @@
       <li Class="HiveCreatureFramework.NodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
-        <maintenancePerInterval>0.1</maintenancePerInterval>
-        <maintenancePerResource>1</maintenancePerResource>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -891,8 +891,8 @@
       <li Class="HiveCreatureFramework.NodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
-        <maintenancePerInterval>0.1</maintenancePerInterval>
-        <maintenancePerResource>1</maintenancePerResource>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -1058,8 +1058,8 @@
       <li Class="HiveCreatureFramework.NodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
-        <maintenancePerInterval>0.1</maintenancePerInterval>
-        <maintenancePerResource>1</maintenancePerResource>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
