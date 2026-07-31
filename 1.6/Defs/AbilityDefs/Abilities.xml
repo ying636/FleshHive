@@ -483,5 +483,74 @@
     </projectile>
   </ThingDef>
 
+  <AbilityDef>
+    <defName>FH_Parasitism_FleshJump</defName>
+    <label>flesh jump</label>
+    <description>Consume 25 twisted flesh to directionally detonate explosive sacs and leap a long distance.</description>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <iconPath>UI/Ability/FH_ParasitismFleshJump</iconPath>
+    <jobDef>CastJump</jobDef>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>jump</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>4</warmupTime>
+      <range>18</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>25</twistedFleshCost>
+      </li>
+      <li Class="FleshHive.CompProperties_AbilityFleshJumpExplosion">
+        <baseDamage>5</baseDamage>
+        <explosionRadius>4.5</explosionRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>FH_FleshJump</defName>
+    <label>flesh jump</label>
+    <description>Directionally detonate some of the explosive sacs inside the body. With the protection of cushioning tissue, the blast can propel the fleshbeast across a long distance with ease.</description>
+    <aiCanUse>true</aiCanUse>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <iconPath>UI/Ability/FH_FleshJump</iconPath>
+    <jobDef>CastJump</jobDef>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>jump</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>4</warmupTime>
+      <range>18</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityFleshJumpExplosion">
+        <baseDamage>5</baseDamage>
+        <explosionRadius>4.5</explosionRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
 
 </Defs>

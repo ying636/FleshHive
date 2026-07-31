@@ -40,7 +40,6 @@
     <inheritProgresses>true</inheritProgresses>
     <inheritUpgrades>true</inheritUpgrades>
     <inheritGroups>true</inheritGroups>
-    <inheritStorageSettings>true</inheritStorageSettings>
     <inheritHitPoints>true</inheritHitPoints>
     <inheritFaction>true</inheritFaction>
   </HiveCreatureFramework.Evolution.HiveEvolutionOptionDef>

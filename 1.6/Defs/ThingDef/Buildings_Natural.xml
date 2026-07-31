@@ -23,7 +23,6 @@
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
-      <li>ITab_Storage</li>
       <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
     </inspectorTabs>
     <statBases>
@@ -50,41 +49,6 @@
       <li>FH_Research_BasicFleshHive</li>
     </researchPrerequisites>
     <designationCategory>HCF_Hive</designationCategory>
-    <building>
-      <storageGroupTag>Hive</storageGroupTag>
-      <fixedStorageSettings>
-        <filter>
-          <disallowNotEverStorable>true</disallowNotEverStorable>
-          <categories>
-            <li>Root</li>
-          </categories>
-          <disallowedCategories>
-            <li>Chunks</li>
-            <li>Plants</li>
-            <li>Buildings</li>
-            <li>CorpsesMechanoid</li>
-          </disallowedCategories>
-          <specialFiltersToDisallow>
-            <li>AllowRotten</li>
-          </specialFiltersToDisallow>
-        </filter>
-      </fixedStorageSettings>
-      <defaultStorageSettings>
-        <priority>Preferred</priority>
-        <filter>
-          <categories>
-            <li>Foods</li>
-            <li>Manufactured</li>
-            <li>ResourcesRaw</li>
-            <li>Items</li>
-            <li>Weapons</li>
-            <li>Apparel</li>
-            <li>BodyParts</li>
-            <li>Corpses</li>
-          </categories>
-        </filter>
-      </defaultStorageSettings>
-    </building>
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
@@ -108,6 +72,7 @@
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>
@@ -160,10 +125,10 @@
         <suppressIfAbove>0.05</suppressIfAbove>
       </li>
       <li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>FleshHive.CompStudiable_FleshHive</compClass>
         <frequencyTicks>120000</frequencyTicks>
         <knowledgeCategory>Basic</knowledgeCategory>
         <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
-        <anomalyKnowledge>1</anomalyKnowledge>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(3,2)</size>
@@ -195,7 +160,6 @@
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
-      <li>ITab_Storage</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>220</MaxHitPoints>
@@ -213,41 +177,6 @@
     <killedLeavings>
       <InsectJelly>30</InsectJelly>
     </killedLeavings>
-    <building>
-      <storageGroupTag>Hive</storageGroupTag>
-      <fixedStorageSettings>
-        <filter>
-          <disallowNotEverStorable>true</disallowNotEverStorable>
-          <categories>
-            <li>Root</li>
-          </categories>
-          <disallowedCategories>
-            <li>Chunks</li>
-            <li>Plants</li>
-            <li>Buildings</li>
-            <li>CorpsesMechanoid</li>
-          </disallowedCategories>
-          <specialFiltersToDisallow>
-            <li>AllowRotten</li>
-          </specialFiltersToDisallow>
-        </filter>
-      </fixedStorageSettings>
-      <defaultStorageSettings>
-        <priority>Preferred</priority>
-        <filter>
-          <categories>
-            <li>Foods</li>
-            <li>Manufactured</li>
-            <li>ResourcesRaw</li>
-            <li>Items</li>
-            <li>Weapons</li>
-            <li>Apparel</li>
-            <li>BodyParts</li>
-            <li>Corpses</li>
-          </categories>
-        </filter>
-      </defaultStorageSettings>
-    </building>
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
@@ -325,6 +254,7 @@
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>
@@ -492,6 +422,7 @@
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>
@@ -570,6 +501,7 @@
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>
@@ -1152,6 +1084,9 @@
     <selectable>true</selectable>
     <drawGUIOverlay>true</drawGUIOverlay>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -1177,6 +1112,12 @@
       <li Class="CompProperties_AssignableToPawn">
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshBed</building>
@@ -1206,6 +1147,9 @@
     <selectable>true</selectable>
     <drawGUIOverlay>true</drawGUIOverlay>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -1231,6 +1175,12 @@
       <li Class="CompProperties_AssignableToPawn">
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshDoubleBed</building>

@@ -15,7 +15,6 @@
             <li>FH_CategoryOption_Parasitism</li>
             <li>FH_CategoryOption_ItemProduction</li>
             <li>FH_CategoryOption_FleshbeastFusion</li>
-            <li>HCF_CategoryOption_Group</li>
             <li>HCF_CategoryOption_WorkSettings</li>
         </options>
         <texPath>UI/UI_Hive/Hive_Flesh</texPath>

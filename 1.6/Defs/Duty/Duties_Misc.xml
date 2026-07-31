@@ -6,7 +6,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_AIDefendPoint">
           <targetAcquireRadius>36</targetAcquireRadius>
           <targetKeepRadius>24</targetKeepRadius>
@@ -28,7 +28,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_AIFightEnemies">
           <targetAcquireRadius>36</targetAcquireRadius>
           <targetKeepRadius>24</targetKeepRadius>
@@ -45,7 +45,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_FleeForDistance">
           <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
           <fleeDistRange>6~12</fleeDistRange>
@@ -71,7 +71,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_FleeForDistance">
           <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
           <fleeDistRange>6~12</fleeDistRange>
@@ -111,6 +111,14 @@
       <targetAcquireRadius>48</targetAcquireRadius>
       <targetKeepRadius>36</targetKeepRadius>
       <ability>FH_Spitbulb_Launch</ability>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_Skill_Bulbplump</defName>
+    <thinkNode Class="FleshHive.JobGiver_AIFleshJumpToJobTarget">
+      <ability>FH_FleshJump</ability>
+      <targetIndex>A</targetIndex>
     </thinkNode>
   </DutyDef>
 
@@ -247,7 +255,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="FleshHive.ThinkNode_FleshbeastEscortSkillDuty" />
         <li Class="JobGiver_TakeCombatEnhancingDrug">
           <onlyIfInDanger>true</onlyIfInDanger>
         </li>
@@ -272,7 +280,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_TakeCombatEnhancingDrug" />
         <li Class="JobGiver_AIFightEnemies">
           <targetAcquireRadius>12</targetAcquireRadius>
@@ -295,7 +303,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="FleshHive.ThinkNode_FleshbeastSkillDuty" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_AIFightEnemies">
           <targetAcquireRadius>15</targetAcquireRadius>
           <targetKeepRadius>20</targetKeepRadius>

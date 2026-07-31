@@ -166,7 +166,7 @@
       <li>SpikeLaunch_Fingerspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Fingerspike</skillDuty>
       </li>
     </modExtensions>
@@ -351,7 +351,7 @@
       <li>FH_SpikeLaunch_Whipspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Whipspike</skillDuty>
       </li>
     </modExtensions>
@@ -408,7 +408,7 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon3</iconPath>
+        <iconPath>UI/Ability/FH_BoneBurst</iconPath>
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Gutspike</hediff>
@@ -454,7 +454,7 @@
       <li>FH_CorrosiveSpray_Gutspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Gutspike</skillDuty>
       </li>
     </modExtensions>
@@ -556,7 +556,7 @@
       <li>FH_SpikeLaunch_Paraspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Paraspike</skillDuty>
       </li>
     </modExtensions>
@@ -703,7 +703,7 @@
       <li>FH_SpikeLaunch_Shatterspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Shatterspike</skillDuty>
       </li>
     </modExtensions>
@@ -837,7 +837,7 @@
       <li>SpikeLaunch_Toughspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Toughspike</skillDuty>
       </li>
     </modExtensions>
@@ -1099,7 +1099,7 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
+        <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
         <effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6</effect>
@@ -1333,7 +1333,7 @@
       <li>SpikeLaunch_Toughspike</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Trispike</skillDuty>
       </li>
     </modExtensions>
@@ -1819,7 +1819,7 @@
       <li>FH_Acidbulb_Launch</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Acidbulb</skillDuty>
       </li>
     </modExtensions>
@@ -1993,7 +1993,7 @@
       <li>FH_Spitbulb_Launch</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Spitbulb</skillDuty>
       </li>
     </modExtensions>
@@ -2002,6 +2002,281 @@
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Spitbulb/FH_Spitbulb</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 增生瘤兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Bulbplump</defName>
+    <label>bulbplump</label>
+    <description>A terrifying amalgamation of many smaller fleshbeasts controlled by a single nervous system. Its body is covered in explosive sacs that store energy. In combat, it detonates these sacs to propel itself rapidly toward enemies. Fresh flesh continually grows across its body and can be harvested as a resource. It is relatively slow and easy to kill, but on death it erupts violently and splits into a horde of smaller fleshbeasts.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Bulbplump/FH_Bulbplump</uiIconPath>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>700</MarketValue>
+      <MinimumContainmentStrength>75</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideExplosion">
+        <baseDamage>5</baseDamage>
+        <explosionRadius>4.5</explosionRadius>
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>4</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Toughspike</li>
+          <li>FH_Trispike</li>
+          <li>FH_Shieldspike</li>
+          <li>FH_Shatterspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <renderTree>Bulbfreak</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Large</size>
+      </li>
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>5</groupCost>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+        <cost>4</cost>
+        <hediff>FH_Parasitism_Bulbplump</hediff>
+        <effect>Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +100; hunger rate x50%.</effect>
+        <abilityLabel>Parasitic weapon: flesh tentacles</abilityLabel>
+        <abilityDescription>Two flesh tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown.</abilityDescription>
+        <twistedFleshCapacity>100</twistedFleshCapacity>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Bulbplump</defName>
+    <label>bulbplump</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>FH_Bulbplump</race>
+    <combatPower>360</combatPower>
+    <abilities>
+      <li>FH_FleshJump</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Bulbplump</skillDuty>
+      </li>
+    </modExtensions>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Bulbplump/FH_Bulbplump</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- 共鸣瘤兽 -->
+
+  <ThingDef ParentName="FH_BaseFleshBeast">
+    <defName>FH_Synbulb</defName>
+    <label>synbulb</label>
+    <description>A terrifying amalgamation of many smaller fleshbeasts controlled by a single nervous system. Numerous pheromone-storage organs grow within its body. These pheromones stimulate nearby fleshbeasts into an active state and enhance their combat capabilities. It is relatively slow and easy to kill. On death, it erupts violently, scattering pheromones into the air to strengthen nearby entities, and splits into a horde of smaller fleshbeasts.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Synbulb/FH_Synbulb</uiIconPath>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>700</MarketValue>
+      <MinimumContainmentStrength>75</MinimumContainmentStrength>
+      <ToxicResistance>0.5</ToxicResistance>
+    </statBases>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.5</baseBodySize>
+      <baseHealthScale>0.3</baseHealthScale>
+      <lifeExpectancy>15</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideAreaHediff">
+        <hediff>FH_SynbulbRampage</hediff>
+        <radius>12</radius>
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>4</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Toughspike</li>
+          <li>FH_Trispike</li>
+          <li>FH_Shieldspike</li>
+          <li>FH_Shatterspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
+      <renderTree>Bulbfreak</renderTree>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Large</size>
+      </li>
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>5</groupCost>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_Hunt</li>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>UI/Ability/FH_BoneBurst</iconPath>
+        <cost>4</cost>
+        <hediff>FH_Parasitism_Synbulb</hediff>
+        <effect>Flesh parasitism mood -6; Social Impact -1; grants the psychic harmonizer condition.</effect>
+        <abilityLabel>Parasitic weapon: bone burst</abilityLabel>
+        <abilityDescription>Two tentacles aim for 1 second, then fire bone shards at enemies within 16 cells.</abilityDescription>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>tentacle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Synbulb</defName>
+    <label>synbulb</label>
+    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <race>FH_Synbulb</race>
+    <combatPower>360</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Synbulb/FH_Synbulb</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3</drawSize>
         </bodyGraphicData>

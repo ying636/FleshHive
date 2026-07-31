@@ -93,6 +93,7 @@
   <FH_FleshManagement_HiveScaleTooltipBuildingsNone>Buildings: +0 scale</FH_FleshManagement_HiveScaleTooltipBuildingsNone>
   <FH_FleshManagement_HiveScaleTooltipTotal>Total: {0}</FH_FleshManagement_HiveScaleTooltipTotal>
   <FH_FleshManagement_HiveScaleTooltipRule>Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale.</FH_FleshManagement_HiveScaleTooltipRule>
+  <FH_FleshManagement_FleshbeastScale>Beast scale</FH_FleshManagement_FleshbeastScale>
   <FH_FleshManagement_HiveCapacityTooltip>Fleshbeast scale: {0} / {1}</FH_FleshManagement_HiveCapacityTooltip>
   <FH_FleshManagement_Nutrition>Nutrition</FH_FleshManagement_Nutrition>
   <FH_FleshManagement_Activity>Activity</FH_FleshManagement_Activity>
@@ -104,6 +105,8 @@
   <FH_FleshManagement_Breeding>Breeding</FH_FleshManagement_Breeding>
   <FH_FleshManagement_TemporaryGroup>Temporary fleshbeast group</FH_FleshManagement_TemporaryGroup>
   <FH_FleshManagement_NoHive>No linked hive</FH_FleshManagement_NoHive>
+  <FH_FleshManagement_GroupColor>Set group color</FH_FleshManagement_GroupColor>
+  <FH_FleshManagement_GroupSettings>Other group settings</FH_FleshManagement_GroupSettings>
   <FH_Suppressible_Inspect>Hive activity: {0}</FH_Suppressible_Inspect>
   <FH_DebugActivity>Flesh hive activity: {0}</FH_DebugActivity>
   <FH_FleshHiveRiot_Label>Flesh hive riot</FH_FleshHiveRiot_Label>
@@ -205,6 +208,7 @@
   <FH_ItemProduction_Range>{0}-{1}</FH_ItemProduction_Range>
   <FH_ItemProduction_UnknownReason>Unknown reason</FH_ItemProduction_UnknownReason>
   <FH_ItemProduction_PartialQueue>Added {0} of {1} production tasks. {2}</FH_ItemProduction_PartialQueue>
+  <FH_ItemProduction_OpenPageFailed>Could not open the flesh hopper production page. Check the error log for details.</FH_ItemProduction_OpenPageFailed>
 
   <FH_Gestation_Cost>Cost: {0}</FH_Gestation_Cost>
   <FH_Gestation_Time>Gestation time: {0} days; actual: {1} days</FH_Gestation_Time>
@@ -234,5 +238,6 @@
   <FH_Gestation_CustomFormulaMenuEntry>Custom formula: {0}</FH_Gestation_CustomFormulaMenuEntry>
   <FH_Gestation_CustomFormulaUnavailable>This custom formula is not available at this producer.</FH_Gestation_CustomFormulaUnavailable>
   <FH_Gestation_CustomFormulaInsufficientResources>There are not enough resources to produce this custom formula.</FH_Gestation_CustomFormulaInsufficientResources>
+  <FH_HiveOwnedFleshbeasts>Owned fleshbeasts: {0}</FH_HiveOwnedFleshbeasts>
 
 </LanguageData>

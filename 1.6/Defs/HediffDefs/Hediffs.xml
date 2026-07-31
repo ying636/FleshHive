@@ -603,4 +603,162 @@
     </comps>
   </HediffDef>
 
+  <HediffDef>
+    <defName>FH_SynbulbRampage</defName>
+    <label>synbulb rampage</label>
+    <description>Pheromones released by a dying synbulb drive the fleshbeast into a violent rampage.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <MoveSpeed>1.75</MoveSpeed>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+        <label>rampage</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Bulbplump</defName>
+    <label>bulbplump parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>The host's hunger rate is reduced, and two explosive-sac-fed flesh tentacles grow from its body. The host can consume twisted flesh to perform a flesh jump.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <hungerRateFactor>0.5</hungerRateFactor>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_FleshJump</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Synbulb</defName>
+    <label>synbulb parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>The host enters psychic harmonization and grows two bone-burst tentacles capable of firing bone shards at range.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li Class="FleshHive.TentacleProperties_RangeAttack">
+            <tentacleClass>FleshHive.Tentacle_RangeAttackWithWarmup</tentacleClass>
+            <projectile>FH_Bullet_BoneShard</projectile>
+            <range>16</range>
+            <rotatingTime>60</rotatingTime>
+            <cooldown>1.5</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li Class="FleshHive.TentacleProperties_RangeAttack">
+            <tentacleClass>FleshHive.Tentacle_RangeAttackWithWarmup</tentacleClass>
+            <projectile>FH_Bullet_BoneShard</projectile>
+            <range>16</range>
+            <rotatingTime>60</rotatingTime>
+            <cooldown>1.5</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_GrantLinkedHediff">
+        <hediff MayRequire="Ludeon.RimWorld.Royalty">PsychicHarmonizer</hediff>
+        <bodyPart>Brain</bodyPart>
+      </li>
+      <li Class="HediffCompProperties_ThoughtSetter">
+        <thought>FH_Thought_FleshParasitism</thought>
+        <moodOffset>-6</moodOffset>
+      </li>
+    </comps>
+  </HediffDef>
+
 </Defs>

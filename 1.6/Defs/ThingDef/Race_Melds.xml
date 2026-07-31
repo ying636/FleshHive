@@ -9,6 +9,7 @@
         <groupCount>1</groupCount>
         <defaultUnitLimit>30</defaultUnitLimit>
         <groupType>FleshHive.UnitGroup_FleshNode</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
         </specialWorks>
@@ -159,7 +160,7 @@
       <li>FH_FleshSpread</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Nexusmeld</skillDuty>
       </li>
     </modExtensions>
@@ -330,7 +331,7 @@
       <li>FH_RampageCharge</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Furiousmeld</skillDuty>
       </li>
     </modExtensions>
@@ -656,7 +657,7 @@
       <li>FH_BastionmeldFleshPulse</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Bastionmeld</skillDuty>
       </li>
     </modExtensions>
@@ -828,7 +829,7 @@
       <li>FH_FissionmeldFission</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Fissionmeld</skillDuty>
       </li>
     </modExtensions>
@@ -1001,7 +1002,7 @@
       <li>FH_TitanCharge</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Fleshtitan</skillDuty>
       </li>
     </modExtensions>
@@ -1155,7 +1156,7 @@
       <li>FH_DreadmeldTerrorRoar</li>
     </abilities>
     <modExtensions>
-      <li Class="FleshHive.FleshbeastSkillDutyExtension">
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Dreadmeld</skillDuty>
       </li>
     </modExtensions>

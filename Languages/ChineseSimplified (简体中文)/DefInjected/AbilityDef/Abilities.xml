@@ -54,4 +54,14 @@
   <!-- EN: 释放2只随机的小型血肉兽。 -->
   <FH_Trispike_ReleaseSpikes.description>释放2只随机的小型血肉兽。</FH_Trispike_ReleaseSpikes.description>
   
+  <!-- EN: flesh jump -->
+  <FH_FleshJump.label>血肉跳跃</FH_FleshJump.label>
+  <!-- EN: Directionally detonate some of the explosive sacs inside the body. With the protection of cushioning tissue, the blast can propel the fleshbeast across a long distance with ease. -->
+  <FH_FleshJump.description>将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下，可以借此轻松跨越很长的距离。</FH_FleshJump.description>
+
+  <!-- EN: flesh jump -->
+  <FH_Parasitism_FleshJump.label>血肉跳跃</FH_Parasitism_FleshJump.label>
+  <!-- EN: Consume 25 twisted flesh to directionally detonate explosive sacs and leap a long distance. -->
+  <FH_Parasitism_FleshJump.description>消耗25扭曲肉，将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下借此轻松跨越很长的距离。</FH_Parasitism_FleshJump.description>
+
 </LanguageData>

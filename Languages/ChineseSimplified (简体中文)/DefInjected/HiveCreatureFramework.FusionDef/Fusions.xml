@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: unknown flesh fusion -->
@@ -442,275 +442,275 @@
   <!-- EN: A spitbulb with the degraded trait. -->
   <FH_Fusion_L45_Spitbulb_Puffspike_Shieldspike_Puffspike.results.0.result.description>带有劣化特性的喷射瘤兽。</FH_Fusion_L45_Spitbulb_Puffspike_Shieldspike_Puffspike.results.0.result.description>
   
-  <!-- EN: expanded fissionmeld fusion -->
-  <FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.label>扩容增生瘤兽融合</FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.label>
-  <!-- EN: Fuse a shatterspike, a shatterspike, and a whipspike into an expanded fissionmeld. -->
-  <FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.description>将碎爪兽、碎爪兽与鞭爪兽融合为扩容增生瘤兽。</FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.description>
-  <!-- EN: expanded fissionmeld -->
-  <FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.results.0.result.label>扩容增生瘤兽</FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the expanded capacity trait. -->
-  <FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.results.0.result.description>带有扩容特性的增生瘤兽。</FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike.results.0.result.description>
+  <!-- EN: expanded bulbplump fusion -->
+  <FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.label>扩容增生瘤兽融合</FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.label>
+  <!-- EN: Fuse a shatterspike, a shatterspike, and a whipspike into an expanded bulbplump. -->
+  <FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.description>将碎爪兽、碎爪兽与鞭爪兽融合为扩容增生瘤兽。</FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.description>
+  <!-- EN: expanded bulbplump -->
+  <FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.results.0.result.label>扩容增生瘤兽</FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.results.0.result.label>
+  <!-- EN: A bulbplump with the expanded capacity trait. -->
+  <FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.results.0.result.description>带有扩容特性的增生瘤兽。</FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike.results.0.result.description>
   
-  <!-- EN: domesticated fissionmeld fusion -->
-  <FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.label>驯化增生瘤兽融合</FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.label>
-  <!-- EN: Fuse a shatterspike, a shieldspike, and a puffspike into a domesticated fissionmeld. -->
-  <FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.description>将碎爪兽、盾爪兽与肺血兽融合为驯化增生瘤兽。</FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.description>
-  <!-- EN: domesticated fissionmeld -->
-  <FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.results.0.result.label>驯化增生瘤兽</FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the domesticated trait. -->
-  <FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.results.0.result.description>带有驯化特性的增生瘤兽。</FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike.results.0.result.description>
+  <!-- EN: domesticated bulbplump fusion -->
+  <FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.label>驯化增生瘤兽融合</FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.label>
+  <!-- EN: Fuse a shatterspike, a shieldspike, and a puffspike into a domesticated bulbplump. -->
+  <FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.description>将碎爪兽、盾爪兽与肺血兽融合为驯化增生瘤兽。</FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.description>
+  <!-- EN: domesticated bulbplump -->
+  <FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.results.0.result.label>驯化增生瘤兽</FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.results.0.result.label>
+  <!-- EN: A bulbplump with the domesticated trait. -->
+  <FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.results.0.result.description>带有驯化特性的增生瘤兽。</FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike.results.0.result.description>
   
-  <!-- EN: rapid growth fissionmeld fusion -->
-  <FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.label>猛长增生瘤兽融合</FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.label>
-  <!-- EN: Fuse a shatterspike, a trispike, and a fingerspike into a rapid growth fissionmeld. -->
-  <FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.description>将碎爪兽、三爪兽与独爪兽融合为猛长增生瘤兽。</FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.description>
-  <!-- EN: rapid growth fissionmeld -->
-  <FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.results.0.result.label>猛长增生瘤兽</FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the rapid growth trait. -->
-  <FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.results.0.result.description>带有猛长特性的增生瘤兽。</FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike.results.0.result.description>
+  <!-- EN: rapid growth bulbplump fusion -->
+  <FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.label>猛长增生瘤兽融合</FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.label>
+  <!-- EN: Fuse a shatterspike, a trispike, and a fingerspike into a rapid growth bulbplump. -->
+  <FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.description>将碎爪兽、三爪兽与独爪兽融合为猛长增生瘤兽。</FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.description>
+  <!-- EN: rapid growth bulbplump -->
+  <FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.results.0.result.label>猛长增生瘤兽</FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.results.0.result.label>
+  <!-- EN: A bulbplump with the rapid growth trait. -->
+  <FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.results.0.result.description>带有猛长特性的增生瘤兽。</FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike.results.0.result.description>
   
-  <!-- EN: fissionmeld fusion -->
-  <FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.label>增生瘤兽融合</FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.label>
-  <!-- EN: Fuse a shieldspike, a shieldspike, and a gutspike into a fissionmeld. -->
-  <FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.description>将盾爪兽、盾爪兽与胃血兽融合为增生瘤兽。</FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.description>
-  <!-- EN: fissionmeld -->
-  <FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.results.0.result.label>增生瘤兽</FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.results.0.result.label>
-  <!-- EN: A stable fissionmeld with no special trait. -->
-  <FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.results.0.result.description>没有特殊特性的稳定增生瘤兽。</FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike.results.0.result.description>
+  <!-- EN: bulbplump fusion -->
+  <FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.label>增生瘤兽融合</FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.label>
+  <!-- EN: Fuse a shieldspike, a shieldspike, and a gutspike into a bulbplump. -->
+  <FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.description>将盾爪兽、盾爪兽与胃血兽融合为增生瘤兽。</FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.description>
+  <!-- EN: bulbplump -->
+  <FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.results.0.result.label>增生瘤兽</FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.results.0.result.label>
+  <!-- EN: A stable bulbplump with no special trait. -->
+  <FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.results.0.result.description>没有特殊特性的稳定增生瘤兽。</FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike.results.0.result.description>
   
-  <!-- EN: cancerous fissionmeld fusion -->
-  <FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.label>癌变增生瘤兽融合</FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.label>
-  <!-- EN: Fuse a shieldspike, a trispike, and a paraspike into a cancerous fissionmeld. -->
-  <FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.description>将盾爪兽、三爪兽与寄血兽融合为癌变增生瘤兽。</FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.description>
-  <!-- EN: cancerous fissionmeld -->
-  <FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.results.0.result.label>癌变增生瘤兽</FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the cancerous trait. -->
-  <FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.results.0.result.description>带有癌变特性的增生瘤兽。</FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike.results.0.result.description>
+  <!-- EN: cancerous bulbplump fusion -->
+  <FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.label>癌变增生瘤兽融合</FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.label>
+  <!-- EN: Fuse a shieldspike, a trispike, and a paraspike into a cancerous bulbplump. -->
+  <FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.description>将盾爪兽、三爪兽与寄血兽融合为癌变增生瘤兽。</FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.description>
+  <!-- EN: cancerous bulbplump -->
+  <FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.results.0.result.label>癌变增生瘤兽</FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.results.0.result.label>
+  <!-- EN: A bulbplump with the cancerous trait. -->
+  <FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.results.0.result.description>带有癌变特性的增生瘤兽。</FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike.results.0.result.description>
   
-  <!-- EN: robust fissionmeld fusion -->
-  <FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.label>健壮增生瘤兽融合</FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.label>
-  <!-- EN: Fuse a trispike, a trispike, and a whipspike into a robust fissionmeld. -->
-  <FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.description>将三爪兽、三爪兽与鞭爪兽融合为健壮增生瘤兽。</FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.description>
-  <!-- EN: robust fissionmeld -->
-  <FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.results.0.result.label>健壮增生瘤兽</FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the robust trait. -->
-  <FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.results.0.result.description>带有健壮特性的增生瘤兽。</FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike.results.0.result.description>
+  <!-- EN: robust bulbplump fusion -->
+  <FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.label>健壮增生瘤兽融合</FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.label>
+  <!-- EN: Fuse a trispike, a trispike, and a whipspike into a robust bulbplump. -->
+  <FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.description>将三爪兽、三爪兽与鞭爪兽融合为健壮增生瘤兽。</FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.description>
+  <!-- EN: robust bulbplump -->
+  <FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.results.0.result.label>健壮增生瘤兽</FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.results.0.result.label>
+  <!-- EN: A bulbplump with the robust trait. -->
+  <FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.results.0.result.description>带有健壮特性的增生瘤兽。</FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike.results.0.result.description>
   
-  <!-- EN: degraded fissionmeld fusion -->
-  <FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.label>劣化增生瘤兽融合</FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.label>
-  <!-- EN: Fuse a shatterspike, a toughspike, and a fingerspike into a degraded fissionmeld. -->
-  <FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.description>将碎爪兽、双爪兽与独爪兽融合为劣化增生瘤兽。</FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.description>
-  <!-- EN: degraded fissionmeld -->
-  <FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.results.0.result.label>劣化增生瘤兽</FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the degraded trait. -->
-  <FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.results.0.result.description>带有劣化特性的增生瘤兽。</FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike.results.0.result.description>
+  <!-- EN: degraded bulbplump fusion -->
+  <FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.label>劣化增生瘤兽融合</FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.label>
+  <!-- EN: Fuse a shatterspike, a toughspike, and a fingerspike into a degraded bulbplump. -->
+  <FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.description>将碎爪兽、双爪兽与独爪兽融合为劣化增生瘤兽。</FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.description>
+  <!-- EN: degraded bulbplump -->
+  <FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.results.0.result.label>劣化增生瘤兽</FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.results.0.result.label>
+  <!-- EN: A bulbplump with the degraded trait. -->
+  <FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.results.0.result.description>带有劣化特性的增生瘤兽。</FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike.results.0.result.description>
   
-  <!-- EN: tough fissionmeld fusion -->
-  <FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.label>皮实增生瘤兽融合</FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.label>
-  <!-- EN: Fuse a shieldspike, a toughspike, and a whipspike into a tough fissionmeld. -->
-  <FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.description>将盾爪兽、双爪兽与鞭爪兽融合为皮实增生瘤兽。</FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.description>
-  <!-- EN: tough fissionmeld -->
-  <FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.results.0.result.label>皮实增生瘤兽</FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the tough trait. -->
-  <FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.results.0.result.description>带有皮实特性的增生瘤兽。</FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike.results.0.result.description>
+  <!-- EN: tough bulbplump fusion -->
+  <FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.label>皮实增生瘤兽融合</FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.label>
+  <!-- EN: Fuse a shieldspike, a toughspike, and a whipspike into a tough bulbplump. -->
+  <FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.description>将盾爪兽、双爪兽与鞭爪兽融合为皮实增生瘤兽。</FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.description>
+  <!-- EN: tough bulbplump -->
+  <FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.results.0.result.label>皮实增生瘤兽</FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.results.0.result.label>
+  <!-- EN: A bulbplump with the tough trait. -->
+  <FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.results.0.result.description>带有皮实特性的增生瘤兽。</FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike.results.0.result.description>
   
-  <!-- EN: fissionmeld fusion -->
-  <FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.label>增生瘤兽融合</FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.label>
-  <!-- EN: Fuse a trispike, a toughspike, and a fingerspike into a fissionmeld. -->
-  <FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.description>将三爪兽、双爪兽与独爪兽融合为增生瘤兽。</FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.description>
-  <!-- EN: fissionmeld -->
-  <FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.results.0.result.label>增生瘤兽</FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.results.0.result.label>
-  <!-- EN: A stable fissionmeld with no special trait. -->
-  <FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.results.0.result.description>没有特殊特性的稳定增生瘤兽。</FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike.results.0.result.description>
+  <!-- EN: bulbplump fusion -->
+  <FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.label>增生瘤兽融合</FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.label>
+  <!-- EN: Fuse a trispike, a toughspike, and a fingerspike into a bulbplump. -->
+  <FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.description>将三爪兽、双爪兽与独爪兽融合为增生瘤兽。</FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.description>
+  <!-- EN: bulbplump -->
+  <FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.results.0.result.label>增生瘤兽</FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.results.0.result.label>
+  <!-- EN: A stable bulbplump with no special trait. -->
+  <FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.results.0.result.description>没有特殊特性的稳定增生瘤兽。</FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike.results.0.result.description>
   
-  <!-- EN: bone spur fissionmeld fusion -->
-  <FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.label>骨刺增生增生瘤兽融合</FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.label>
-  <!-- EN: Fuse a toughspike, a toughspike, and a paraspike into a bone spur fissionmeld. -->
-  <FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.description>将双爪兽、双爪兽与寄血兽融合为骨刺增生增生瘤兽。</FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.description>
-  <!-- EN: bone spur fissionmeld -->
-  <FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.results.0.result.label>骨刺增生增生瘤兽</FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the bone spur growth trait. -->
-  <FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.results.0.result.description>带有骨刺增生特性的增生瘤兽。</FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike.results.0.result.description>
+  <!-- EN: bone spur bulbplump fusion -->
+  <FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.label>骨刺增生增生瘤兽融合</FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.label>
+  <!-- EN: Fuse a toughspike, a toughspike, and a paraspike into a bone spur bulbplump. -->
+  <FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.description>将双爪兽、双爪兽与寄血兽融合为骨刺增生增生瘤兽。</FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.description>
+  <!-- EN: bone spur bulbplump -->
+  <FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.results.0.result.label>骨刺增生增生瘤兽</FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.results.0.result.label>
+  <!-- EN: A bulbplump with the bone spur growth trait. -->
+  <FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.results.0.result.description>带有骨刺增生特性的增生瘤兽。</FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike.results.0.result.description>
   
-  <!-- EN: split fissionmeld fusion -->
-  <FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.label>分裂增生瘤兽融合</FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.label>
-  <!-- EN: Fuse a shatterspike, a fleshwind, and a puffspike into a split fissionmeld. -->
-  <FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.description>将碎爪兽、翼爪兽与肺血兽融合为分裂增生瘤兽。</FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.description>
-  <!-- EN: split fissionmeld -->
-  <FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.results.0.result.label>分裂增生瘤兽</FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the split trait. -->
-  <FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.results.0.result.description>带有分裂特性的增生瘤兽。</FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike.results.0.result.description>
+  <!-- EN: split bulbplump fusion -->
+  <FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.label>分裂增生瘤兽融合</FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.label>
+  <!-- EN: Fuse a shatterspike, a fleshwind, and a puffspike into a split bulbplump. -->
+  <FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.description>将碎爪兽、翼爪兽与肺血兽融合为分裂增生瘤兽。</FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.description>
+  <!-- EN: split bulbplump -->
+  <FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.results.0.result.label>分裂增生瘤兽</FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.results.0.result.label>
+  <!-- EN: A bulbplump with the split trait. -->
+  <FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.results.0.result.description>带有分裂特性的增生瘤兽。</FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike.results.0.result.description>
   
-  <!-- EN: swift fissionmeld fusion -->
-  <FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.label>迅捷增生瘤兽融合</FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.label>
-  <!-- EN: Fuse a shieldspike, a fleshwind, and a fingerspike into a swift fissionmeld. -->
-  <FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.description>将盾爪兽、翼爪兽与独爪兽融合为迅捷增生瘤兽。</FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.description>
-  <!-- EN: swift fissionmeld -->
-  <FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.results.0.result.label>迅捷增生瘤兽</FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the swift trait. -->
-  <FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.results.0.result.description>带有迅捷特性的增生瘤兽。</FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike.results.0.result.description>
+  <!-- EN: swift bulbplump fusion -->
+  <FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.label>迅捷增生瘤兽融合</FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.label>
+  <!-- EN: Fuse a shieldspike, a fleshwind, and a fingerspike into a swift bulbplump. -->
+  <FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.description>将盾爪兽、翼爪兽与独爪兽融合为迅捷增生瘤兽。</FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.description>
+  <!-- EN: swift bulbplump -->
+  <FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.results.0.result.label>迅捷增生瘤兽</FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.results.0.result.label>
+  <!-- EN: A bulbplump with the swift trait. -->
+  <FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.results.0.result.description>带有迅捷特性的增生瘤兽。</FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike.results.0.result.description>
   
-  <!-- EN: runaway fissionmeld fusion -->
-  <FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.label>失控增生瘤兽融合</FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.label>
-  <!-- EN: Fuse a puffspike, a fleshwind, and a gutspike into a runaway fissionmeld. -->
-  <FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.description>将肺血兽、翼爪兽与胃血兽融合为失控增生瘤兽。</FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.description>
-  <!-- EN: runaway fissionmeld -->
-  <FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.results.0.result.label>失控增生瘤兽</FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the runaway trait. -->
-  <FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.results.0.result.description>带有失控特性的增生瘤兽。</FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike.results.0.result.description>
+  <!-- EN: runaway bulbplump fusion -->
+  <FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.label>失控增生瘤兽融合</FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.label>
+  <!-- EN: Fuse a puffspike, a fleshwind, and a gutspike into a runaway bulbplump. -->
+  <FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.description>将肺血兽、翼爪兽与胃血兽融合为失控增生瘤兽。</FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.description>
+  <!-- EN: runaway bulbplump -->
+  <FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.results.0.result.label>失控增生瘤兽</FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.results.0.result.label>
+  <!-- EN: A bulbplump with the runaway trait. -->
+  <FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.results.0.result.description>带有失控特性的增生瘤兽。</FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike.results.0.result.description>
   
-  <!-- EN: sharp fissionmeld fusion -->
-  <FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.label>锐利增生瘤兽融合</FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.label>
-  <!-- EN: Fuse a puffspike, a trispike, and a paraspike into a sharp fissionmeld. -->
-  <FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.description>将肺血兽、三爪兽与寄血兽融合为锐利增生瘤兽。</FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.description>
-  <!-- EN: sharp fissionmeld -->
-  <FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.results.0.result.label>锐利增生瘤兽</FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the sharp trait. -->
-  <FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.results.0.result.description>带有锐利特性的增生瘤兽。</FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike.results.0.result.description>
+  <!-- EN: sharp bulbplump fusion -->
+  <FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.label>锐利增生瘤兽融合</FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.label>
+  <!-- EN: Fuse a puffspike, a trispike, and a paraspike into a sharp bulbplump. -->
+  <FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.description>将肺血兽、三爪兽与寄血兽融合为锐利增生瘤兽。</FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.description>
+  <!-- EN: sharp bulbplump -->
+  <FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.results.0.result.label>锐利增生瘤兽</FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.results.0.result.label>
+  <!-- EN: A bulbplump with the sharp trait. -->
+  <FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.results.0.result.description>带有锐利特性的增生瘤兽。</FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike.results.0.result.description>
   
-  <!-- EN: acidic fissionmeld fusion -->
-  <FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.label>酸蚀增生瘤兽融合</FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.label>
-  <!-- EN: Fuse a puffspike, a shieldspike, and a whipspike into an acidic fissionmeld. -->
-  <FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.description>将肺血兽、盾爪兽与鞭爪兽融合为酸蚀增生瘤兽。</FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.description>
-  <!-- EN: acidic fissionmeld -->
-  <FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.results.0.result.label>酸蚀增生瘤兽</FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.results.0.result.label>
-  <!-- EN: A fissionmeld with the acidic trait. -->
-  <FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.results.0.result.description>带有酸蚀特性的增生瘤兽。</FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike.results.0.result.description>
+  <!-- EN: acidic bulbplump fusion -->
+  <FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.label>酸蚀增生瘤兽融合</FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.label>
+  <!-- EN: Fuse a puffspike, a shieldspike, and a whipspike into an acidic bulbplump. -->
+  <FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.description>将肺血兽、盾爪兽与鞭爪兽融合为酸蚀增生瘤兽。</FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.description>
+  <!-- EN: acidic bulbplump -->
+  <FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.results.0.result.label>酸蚀增生瘤兽</FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.results.0.result.label>
+  <!-- EN: A bulbplump with the acidic trait. -->
+  <FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.results.0.result.description>带有酸蚀特性的增生瘤兽。</FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike.results.0.result.description>
   
-  <!-- EN: nexusmeld fusion -->
-  <FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.label>共鸣瘤兽融合</FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.label>
-  <!-- EN: Fuse a shatterspike, a shatterspike, and a gutspike into a nexusmeld. -->
-  <FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.description>将碎爪兽、碎爪兽与胃血兽融合为共鸣瘤兽。</FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.description>
-  <!-- EN: nexusmeld -->
-  <FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.results.0.result.label>共鸣瘤兽</FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.results.0.result.label>
-  <!-- EN: A stable nexusmeld with no special trait. -->
-  <FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.results.0.result.description>没有特殊特性的稳定共鸣瘤兽。</FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike.results.0.result.description>
+  <!-- EN: synbulb fusion -->
+  <FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.label>共鸣瘤兽融合</FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.label>
+  <!-- EN: Fuse a shatterspike, a shatterspike, and a gutspike into a synbulb. -->
+  <FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.description>将碎爪兽、碎爪兽与胃血兽融合为共鸣瘤兽。</FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.description>
+  <!-- EN: synbulb -->
+  <FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.results.0.result.label>共鸣瘤兽</FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.results.0.result.label>
+  <!-- EN: A stable synbulb with no special trait. -->
+  <FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.results.0.result.description>没有特殊特性的稳定共鸣瘤兽。</FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike.results.0.result.description>
   
-  <!-- EN: cancerous nexusmeld fusion -->
-  <FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.label>癌变共鸣瘤兽融合</FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.label>
-  <!-- EN: Fuse a shatterspike, a shieldspike, and a whipspike into a cancerous nexusmeld. -->
-  <FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.description>将碎爪兽、盾爪兽与鞭爪兽融合为癌变共鸣瘤兽。</FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.description>
-  <!-- EN: cancerous nexusmeld -->
-  <FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.results.0.result.label>癌变共鸣瘤兽</FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the cancerous trait. -->
-  <FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.results.0.result.description>带有癌变特性的共鸣瘤兽。</FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike.results.0.result.description>
+  <!-- EN: cancerous synbulb fusion -->
+  <FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.label>癌变共鸣瘤兽融合</FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.label>
+  <!-- EN: Fuse a shatterspike, a shieldspike, and a whipspike into a cancerous synbulb. -->
+  <FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.description>将碎爪兽、盾爪兽与鞭爪兽融合为癌变共鸣瘤兽。</FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.description>
+  <!-- EN: cancerous synbulb -->
+  <FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.results.0.result.label>癌变共鸣瘤兽</FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.results.0.result.label>
+  <!-- EN: A synbulb with the cancerous trait. -->
+  <FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.results.0.result.description>带有癌变特性的共鸣瘤兽。</FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike.results.0.result.description>
   
-  <!-- EN: acidic nexusmeld fusion -->
-  <FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.label>酸蚀共鸣瘤兽融合</FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.label>
-  <!-- EN: Fuse a shatterspike, a trispike, and a puffspike into an acidic nexusmeld. -->
-  <FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.description>将碎爪兽、三爪兽与肺血兽融合为酸蚀共鸣瘤兽。</FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.description>
-  <!-- EN: acidic nexusmeld -->
-  <FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.results.0.result.label>酸蚀共鸣瘤兽</FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the acidic trait. -->
-  <FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.results.0.result.description>带有酸蚀特性的共鸣瘤兽。</FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike.results.0.result.description>
+  <!-- EN: acidic synbulb fusion -->
+  <FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.label>酸蚀共鸣瘤兽融合</FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.label>
+  <!-- EN: Fuse a shatterspike, a trispike, and a puffspike into an acidic synbulb. -->
+  <FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.description>将碎爪兽、三爪兽与肺血兽融合为酸蚀共鸣瘤兽。</FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.description>
+  <!-- EN: acidic synbulb -->
+  <FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.results.0.result.label>酸蚀共鸣瘤兽</FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.results.0.result.label>
+  <!-- EN: A synbulb with the acidic trait. -->
+  <FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.results.0.result.description>带有酸蚀特性的共鸣瘤兽。</FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike.results.0.result.description>
   
-  <!-- EN: rapid growth nexusmeld fusion -->
-  <FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.label>猛长共鸣瘤兽融合</FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.label>
-  <!-- EN: Fuse a shieldspike, a shieldspike, and a paraspike into a rapid growth nexusmeld. -->
-  <FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.description>将盾爪兽、盾爪兽与寄血兽融合为猛长共鸣瘤兽。</FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.description>
-  <!-- EN: rapid growth nexusmeld -->
-  <FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.results.0.result.label>猛长共鸣瘤兽</FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the rapid growth trait. -->
-  <FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.results.0.result.description>带有猛长特性的共鸣瘤兽。</FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike.results.0.result.description>
+  <!-- EN: rapid growth synbulb fusion -->
+  <FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.label>猛长共鸣瘤兽融合</FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.label>
+  <!-- EN: Fuse a shieldspike, a shieldspike, and a paraspike into a rapid growth synbulb. -->
+  <FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.description>将盾爪兽、盾爪兽与寄血兽融合为猛长共鸣瘤兽。</FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.description>
+  <!-- EN: rapid growth synbulb -->
+  <FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.results.0.result.label>猛长共鸣瘤兽</FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.results.0.result.label>
+  <!-- EN: A synbulb with the rapid growth trait. -->
+  <FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.results.0.result.description>带有猛长特性的共鸣瘤兽。</FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike.results.0.result.description>
   
-  <!-- EN: runaway nexusmeld fusion -->
-  <FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.label>失控共鸣瘤兽融合</FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.label>
-  <!-- EN: Fuse a shieldspike, a trispike, and a whipspike into a runaway nexusmeld. -->
-  <FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.description>将盾爪兽、三爪兽与鞭爪兽融合为失控共鸣瘤兽。</FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.description>
-  <!-- EN: runaway nexusmeld -->
-  <FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.results.0.result.label>失控共鸣瘤兽</FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the runaway trait. -->
-  <FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.results.0.result.description>带有失控特性的共鸣瘤兽。</FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike.results.0.result.description>
+  <!-- EN: runaway synbulb fusion -->
+  <FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.label>失控共鸣瘤兽融合</FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.label>
+  <!-- EN: Fuse a shieldspike, a trispike, and a whipspike into a runaway synbulb. -->
+  <FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.description>将盾爪兽、三爪兽与鞭爪兽融合为失控共鸣瘤兽。</FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.description>
+  <!-- EN: runaway synbulb -->
+  <FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.results.0.result.label>失控共鸣瘤兽</FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.results.0.result.label>
+  <!-- EN: A synbulb with the runaway trait. -->
+  <FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.results.0.result.description>带有失控特性的共鸣瘤兽。</FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike.results.0.result.description>
   
-  <!-- EN: split nexusmeld fusion -->
-  <FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.label>分裂共鸣瘤兽融合</FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.label>
-  <!-- EN: Fuse a trispike, a trispike, and a puffspike into a split nexusmeld. -->
-  <FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.description>将三爪兽、三爪兽与肺血兽融合为分裂共鸣瘤兽。</FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.description>
-  <!-- EN: split nexusmeld -->
-  <FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.results.0.result.label>分裂共鸣瘤兽</FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the split trait. -->
-  <FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.results.0.result.description>带有分裂特性的共鸣瘤兽。</FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike.results.0.result.description>
+  <!-- EN: split synbulb fusion -->
+  <FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.label>分裂共鸣瘤兽融合</FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.label>
+  <!-- EN: Fuse a trispike, a trispike, and a puffspike into a split synbulb. -->
+  <FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.description>将三爪兽、三爪兽与肺血兽融合为分裂共鸣瘤兽。</FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.description>
+  <!-- EN: split synbulb -->
+  <FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.results.0.result.label>分裂共鸣瘤兽</FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.results.0.result.label>
+  <!-- EN: A synbulb with the split trait. -->
+  <FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.results.0.result.description>带有分裂特性的共鸣瘤兽。</FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike.results.0.result.description>
   
-  <!-- EN: robust nexusmeld fusion -->
-  <FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.label>健壮共鸣瘤兽融合</FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.label>
-  <!-- EN: Fuse a shatterspike, a toughspike, and a paraspike into a robust nexusmeld. -->
-  <FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.description>将碎爪兽、双爪兽与寄血兽融合为健壮共鸣瘤兽。</FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.description>
-  <!-- EN: robust nexusmeld -->
-  <FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.results.0.result.label>健壮共鸣瘤兽</FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the robust trait. -->
-  <FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.results.0.result.description>带有健壮特性的共鸣瘤兽。</FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike.results.0.result.description>
+  <!-- EN: robust synbulb fusion -->
+  <FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.label>健壮共鸣瘤兽融合</FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.label>
+  <!-- EN: Fuse a shatterspike, a toughspike, and a paraspike into a robust synbulb. -->
+  <FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.description>将碎爪兽、双爪兽与寄血兽融合为健壮共鸣瘤兽。</FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.description>
+  <!-- EN: robust synbulb -->
+  <FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.results.0.result.label>健壮共鸣瘤兽</FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.results.0.result.label>
+  <!-- EN: A synbulb with the robust trait. -->
+  <FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.results.0.result.description>带有健壮特性的共鸣瘤兽。</FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike.results.0.result.description>
   
-  <!-- EN: swift nexusmeld fusion -->
-  <FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.label>迅捷共鸣瘤兽融合</FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.label>
-  <!-- EN: Fuse a shieldspike, a toughspike, and a gutspike into a swift nexusmeld. -->
-  <FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.description>将盾爪兽、双爪兽与胃血兽融合为迅捷共鸣瘤兽。</FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.description>
-  <!-- EN: swift nexusmeld -->
-  <FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.results.0.result.label>迅捷共鸣瘤兽</FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the swift trait. -->
-  <FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.results.0.result.description>带有迅捷特性的共鸣瘤兽。</FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike.results.0.result.description>
+  <!-- EN: swift synbulb fusion -->
+  <FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.label>迅捷共鸣瘤兽融合</FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.label>
+  <!-- EN: Fuse a shieldspike, a toughspike, and a gutspike into a swift synbulb. -->
+  <FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.description>将盾爪兽、双爪兽与胃血兽融合为迅捷共鸣瘤兽。</FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.description>
+  <!-- EN: swift synbulb -->
+  <FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.results.0.result.label>迅捷共鸣瘤兽</FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.results.0.result.label>
+  <!-- EN: A synbulb with the swift trait. -->
+  <FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.results.0.result.description>带有迅捷特性的共鸣瘤兽。</FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike.results.0.result.description>
   
-  <!-- EN: tough nexusmeld fusion -->
-  <FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.label>皮实共鸣瘤兽融合</FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.label>
-  <!-- EN: Fuse a trispike, a toughspike, and a whipspike into a tough nexusmeld. -->
-  <FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.description>将三爪兽、双爪兽与鞭爪兽融合为皮实共鸣瘤兽。</FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.description>
-  <!-- EN: tough nexusmeld -->
-  <FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.results.0.result.label>皮实共鸣瘤兽</FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the tough trait. -->
-  <FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.results.0.result.description>带有皮实特性的共鸣瘤兽。</FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike.results.0.result.description>
+  <!-- EN: tough synbulb fusion -->
+  <FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.label>皮实共鸣瘤兽融合</FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.label>
+  <!-- EN: Fuse a trispike, a toughspike, and a whipspike into a tough synbulb. -->
+  <FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.description>将三爪兽、双爪兽与鞭爪兽融合为皮实共鸣瘤兽。</FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.description>
+  <!-- EN: tough synbulb -->
+  <FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.results.0.result.label>皮实共鸣瘤兽</FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.results.0.result.label>
+  <!-- EN: A synbulb with the tough trait. -->
+  <FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.results.0.result.description>带有皮实特性的共鸣瘤兽。</FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike.results.0.result.description>
   
-  <!-- EN: sharp nexusmeld fusion -->
-  <FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.label>锐利共鸣瘤兽融合</FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.label>
-  <!-- EN: Fuse a toughspike, a toughspike, and a whipspike into a sharp nexusmeld. -->
-  <FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.description>将双爪兽、双爪兽与鞭爪兽融合为锐利共鸣瘤兽。</FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.description>
-  <!-- EN: sharp nexusmeld -->
-  <FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.results.0.result.label>锐利共鸣瘤兽</FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the sharp trait. -->
-  <FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.results.0.result.description>带有锐利特性的共鸣瘤兽。</FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike.results.0.result.description>
+  <!-- EN: sharp synbulb fusion -->
+  <FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.label>锐利共鸣瘤兽融合</FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.label>
+  <!-- EN: Fuse a toughspike, a toughspike, and a whipspike into a sharp synbulb. -->
+  <FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.description>将双爪兽、双爪兽与鞭爪兽融合为锐利共鸣瘤兽。</FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.description>
+  <!-- EN: sharp synbulb -->
+  <FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.results.0.result.label>锐利共鸣瘤兽</FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.results.0.result.label>
+  <!-- EN: A synbulb with the sharp trait. -->
+  <FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.results.0.result.description>带有锐利特性的共鸣瘤兽。</FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike.results.0.result.description>
   
-  <!-- EN: domesticated nexusmeld fusion -->
-  <FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.label>驯化共鸣瘤兽融合</FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.label>
-  <!-- EN: Fuse a shatterspike, a fleshwind, and a whipspike into a domesticated nexusmeld. -->
-  <FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.description>将碎爪兽、翼爪兽与鞭爪兽融合为驯化共鸣瘤兽。</FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.description>
-  <!-- EN: domesticated nexusmeld -->
-  <FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.results.0.result.label>驯化共鸣瘤兽</FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the domesticated trait. -->
-  <FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.results.0.result.description>带有驯化特性的共鸣瘤兽。</FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike.results.0.result.description>
+  <!-- EN: domesticated synbulb fusion -->
+  <FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.label>驯化共鸣瘤兽融合</FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.label>
+  <!-- EN: Fuse a shatterspike, a fleshwind, and a whipspike into a domesticated synbulb. -->
+  <FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.description>将碎爪兽、翼爪兽与鞭爪兽融合为驯化共鸣瘤兽。</FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.description>
+  <!-- EN: domesticated synbulb -->
+  <FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.results.0.result.label>驯化共鸣瘤兽</FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.results.0.result.label>
+  <!-- EN: A synbulb with the domesticated trait. -->
+  <FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.results.0.result.description>带有驯化特性的共鸣瘤兽。</FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike.results.0.result.description>
   
-  <!-- EN: bone spur nexusmeld fusion -->
-  <FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.label>骨刺增生共鸣瘤兽融合</FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.label>
-  <!-- EN: Fuse a puffspike, a fleshwind, and a fingerspike into a bone spur nexusmeld. -->
-  <FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.description>将肺血兽、翼爪兽与独爪兽融合为骨刺增生共鸣瘤兽。</FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.description>
-  <!-- EN: bone spur nexusmeld -->
-  <FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.results.0.result.label>骨刺增生共鸣瘤兽</FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the bone spur growth trait. -->
-  <FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.results.0.result.description>带有骨刺增生特性的共鸣瘤兽。</FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike.results.0.result.description>
+  <!-- EN: bone spur synbulb fusion -->
+  <FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.label>骨刺增生共鸣瘤兽融合</FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.label>
+  <!-- EN: Fuse a puffspike, a fleshwind, and a fingerspike into a bone spur synbulb. -->
+  <FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.description>将肺血兽、翼爪兽与独爪兽融合为骨刺增生共鸣瘤兽。</FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.description>
+  <!-- EN: bone spur synbulb -->
+  <FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.results.0.result.label>骨刺增生共鸣瘤兽</FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.results.0.result.label>
+  <!-- EN: A synbulb with the bone spur growth trait. -->
+  <FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.results.0.result.description>带有骨刺增生特性的共鸣瘤兽。</FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike.results.0.result.description>
   
-  <!-- EN: expanded nexusmeld fusion -->
-  <FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.label>扩容共鸣瘤兽融合</FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.label>
-  <!-- EN: Fuse a puffspike, a trispike, and a whipspike into an expanded nexusmeld. -->
-  <FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.description>将肺血兽、三爪兽与鞭爪兽融合为扩容共鸣瘤兽。</FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.description>
-  <!-- EN: expanded nexusmeld -->
-  <FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.results.0.result.label>扩容共鸣瘤兽</FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the expanded capacity trait. -->
-  <FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.results.0.result.description>带有扩容特性的共鸣瘤兽。</FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike.results.0.result.description>
+  <!-- EN: expanded synbulb fusion -->
+  <FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.label>扩容共鸣瘤兽融合</FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.label>
+  <!-- EN: Fuse a puffspike, a trispike, and a whipspike into an expanded synbulb. -->
+  <FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.description>将肺血兽、三爪兽与鞭爪兽融合为扩容共鸣瘤兽。</FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.description>
+  <!-- EN: expanded synbulb -->
+  <FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.results.0.result.label>扩容共鸣瘤兽</FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.results.0.result.label>
+  <!-- EN: A synbulb with the expanded capacity trait. -->
+  <FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.results.0.result.description>带有扩容特性的共鸣瘤兽。</FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike.results.0.result.description>
   
-  <!-- EN: nexusmeld fusion -->
-  <FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.label>共鸣瘤兽融合</FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.label>
-  <!-- EN: Fuse a puffspike, a toughspike, and a paraspike into a nexusmeld. -->
-  <FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.description>将肺血兽、双爪兽与寄血兽融合为共鸣瘤兽。</FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.description>
-  <!-- EN: nexusmeld -->
-  <FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.results.0.result.label>共鸣瘤兽</FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.results.0.result.label>
-  <!-- EN: A stable nexusmeld with no special trait. -->
-  <FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.results.0.result.description>没有特殊特性的稳定共鸣瘤兽。</FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike.results.0.result.description>
+  <!-- EN: synbulb fusion -->
+  <FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.label>共鸣瘤兽融合</FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.label>
+  <!-- EN: Fuse a puffspike, a toughspike, and a paraspike into a synbulb. -->
+  <FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.description>将肺血兽、双爪兽与寄血兽融合为共鸣瘤兽。</FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.description>
+  <!-- EN: synbulb -->
+  <FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.results.0.result.label>共鸣瘤兽</FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.results.0.result.label>
+  <!-- EN: A stable synbulb with no special trait. -->
+  <FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.results.0.result.description>没有特殊特性的稳定共鸣瘤兽。</FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike.results.0.result.description>
   
-  <!-- EN: fragile nexusmeld fusion -->
-  <FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.label>脆弱共鸣瘤兽融合</FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.label>
-  <!-- EN: Fuse a puffspike, a shieldspike, and a fingerspike into a fragile nexusmeld. -->
-  <FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.description>将肺血兽、盾爪兽与独爪兽融合为脆弱共鸣瘤兽。</FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.description>
-  <!-- EN: fragile nexusmeld -->
-  <FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.results.0.result.label>脆弱共鸣瘤兽</FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.results.0.result.label>
-  <!-- EN: A nexusmeld with the fragile trait. -->
-  <FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.results.0.result.description>带有脆弱特性的共鸣瘤兽。</FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike.results.0.result.description>
+  <!-- EN: fragile synbulb fusion -->
+  <FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.label>脆弱共鸣瘤兽融合</FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.label>
+  <!-- EN: Fuse a puffspike, a shieldspike, and a fingerspike into a fragile synbulb. -->
+  <FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.description>将肺血兽、盾爪兽与独爪兽融合为脆弱共鸣瘤兽。</FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.description>
+  <!-- EN: fragile synbulb -->
+  <FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.results.0.result.label>脆弱共鸣瘤兽</FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.results.0.result.label>
+  <!-- EN: A synbulb with the fragile trait. -->
+  <FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.results.0.result.description>带有脆弱特性的共鸣瘤兽。</FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike.results.0.result.description>
   
   <!-- EN: shatterspike fusion -->
   <FH_Fusion_Shatterspike_Gutspike_Gutspike.label>碎爪兽融合</FH_Fusion_Shatterspike_Gutspike_Gutspike.label>

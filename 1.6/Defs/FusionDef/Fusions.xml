@@ -1904,9 +1904,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L46_Fissionmeld_Shatterspike_Shatterspike_Whipspike</defName>
-    <label>expanded fissionmeld fusion</label>
-    <description>Fuse a shatterspike, a shatterspike, and a whipspike into an expanded fissionmeld.</description>
+    <defName>FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike</defName>
+    <label>expanded bulbplump fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a whipspike into an expanded bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -1924,9 +1924,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>expanded fissionmeld</label>
-          <description>A fissionmeld with the expanded capacity trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>expanded bulbplump</label>
+          <description>A bulbplump with the expanded capacity trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_ExpandedCapacity</li>
           </hediffs>
@@ -1937,9 +1937,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L47_Fissionmeld_Shatterspike_Shieldspike_Puffspike</defName>
-    <label>domesticated fissionmeld fusion</label>
-    <description>Fuse a shatterspike, a shieldspike, and a puffspike into a domesticated fissionmeld.</description>
+    <defName>FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike</defName>
+    <label>domesticated bulbplump fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a puffspike into a domesticated bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -1957,9 +1957,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>domesticated fissionmeld</label>
-          <description>A fissionmeld with the domesticated trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>domesticated bulbplump</label>
+          <description>A bulbplump with the domesticated trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Domesticated</li>
           </hediffs>
@@ -1970,9 +1970,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L48_Fissionmeld_Shatterspike_Trispike_Fingerspike</defName>
-    <label>rapid growth fissionmeld fusion</label>
-    <description>Fuse a shatterspike, a trispike, and a fingerspike into a rapid growth fissionmeld.</description>
+    <defName>FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike</defName>
+    <label>rapid growth bulbplump fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a fingerspike into a rapid growth bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -1990,9 +1990,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>rapid growth fissionmeld</label>
-          <description>A fissionmeld with the rapid growth trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>rapid growth bulbplump</label>
+          <description>A bulbplump with the rapid growth trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_RapidGrowth</li>
           </hediffs>
@@ -2003,9 +2003,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L49_Fissionmeld_Shieldspike_Shieldspike_Gutspike</defName>
-    <label>fissionmeld fusion</label>
-    <description>Fuse a shieldspike, a shieldspike, and a gutspike into a fissionmeld.</description>
+    <defName>FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike</defName>
+    <label>bulbplump fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a gutspike into a bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2023,9 +2023,9 @@
     <results>
       <li>
         <result Class="HiveCreatureFramework.FusionResult_PawnKind">
-          <label>fissionmeld</label>
-          <description>A stable fissionmeld with no special trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>bulbplump</label>
+          <description>A stable bulbplump with no special trait.</description>
+          <kind>FH_Bulbplump</kind>
         </result>
         <weight>1</weight>
       </li>
@@ -2033,9 +2033,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L50_Fissionmeld_Shieldspike_Trispike_Paraspike</defName>
-    <label>cancerous fissionmeld fusion</label>
-    <description>Fuse a shieldspike, a trispike, and a paraspike into a cancerous fissionmeld.</description>
+    <defName>FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike</defName>
+    <label>cancerous bulbplump fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a paraspike into a cancerous bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2053,9 +2053,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>cancerous fissionmeld</label>
-          <description>A fissionmeld with the cancerous trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>cancerous bulbplump</label>
+          <description>A bulbplump with the cancerous trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Cancerous</li>
           </hediffs>
@@ -2066,9 +2066,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L51_Fissionmeld_Trispike_Trispike_Whipspike</defName>
-    <label>robust fissionmeld fusion</label>
-    <description>Fuse a trispike, a trispike, and a whipspike into a robust fissionmeld.</description>
+    <defName>FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike</defName>
+    <label>robust bulbplump fusion</label>
+    <description>Fuse a trispike, a trispike, and a whipspike into a robust bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2086,9 +2086,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>robust fissionmeld</label>
-          <description>A fissionmeld with the robust trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>robust bulbplump</label>
+          <description>A bulbplump with the robust trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Robust</li>
           </hediffs>
@@ -2099,9 +2099,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L52_Fissionmeld_Shatterspike_Toughspike_Fingerspike</defName>
-    <label>degraded fissionmeld fusion</label>
-    <description>Fuse a shatterspike, a toughspike, and a fingerspike into a degraded fissionmeld.</description>
+    <defName>FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike</defName>
+    <label>degraded bulbplump fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a fingerspike into a degraded bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2119,9 +2119,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>degraded fissionmeld</label>
-          <description>A fissionmeld with the degraded trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>degraded bulbplump</label>
+          <description>A bulbplump with the degraded trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Degraded</li>
           </hediffs>
@@ -2132,9 +2132,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L53_Fissionmeld_Shieldspike_Toughspike_Whipspike</defName>
-    <label>tough fissionmeld fusion</label>
-    <description>Fuse a shieldspike, a toughspike, and a whipspike into a tough fissionmeld.</description>
+    <defName>FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike</defName>
+    <label>tough bulbplump fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a whipspike into a tough bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2152,9 +2152,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>tough fissionmeld</label>
-          <description>A fissionmeld with the tough trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>tough bulbplump</label>
+          <description>A bulbplump with the tough trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Tough</li>
           </hediffs>
@@ -2165,9 +2165,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L54_Fissionmeld_Trispike_Toughspike_Fingerspike</defName>
-    <label>fissionmeld fusion</label>
-    <description>Fuse a trispike, a toughspike, and a fingerspike into a fissionmeld.</description>
+    <defName>FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike</defName>
+    <label>bulbplump fusion</label>
+    <description>Fuse a trispike, a toughspike, and a fingerspike into a bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2185,9 +2185,9 @@
     <results>
       <li>
         <result Class="HiveCreatureFramework.FusionResult_PawnKind">
-          <label>fissionmeld</label>
-          <description>A stable fissionmeld with no special trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>bulbplump</label>
+          <description>A stable bulbplump with no special trait.</description>
+          <kind>FH_Bulbplump</kind>
         </result>
         <weight>1</weight>
       </li>
@@ -2195,9 +2195,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L55_Fissionmeld_Toughspike_Toughspike_Paraspike</defName>
-    <label>bone spur fissionmeld fusion</label>
-    <description>Fuse a toughspike, a toughspike, and a paraspike into a bone spur fissionmeld.</description>
+    <defName>FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike</defName>
+    <label>bone spur bulbplump fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a paraspike into a bone spur bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2215,9 +2215,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>bone spur fissionmeld</label>
-          <description>A fissionmeld with the bone spur growth trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>bone spur bulbplump</label>
+          <description>A bulbplump with the bone spur growth trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_BoneSpurGrowth</li>
           </hediffs>
@@ -2228,9 +2228,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L56_Fissionmeld_Shatterspike_Fleshwind_Puffspike</defName>
-    <label>split fissionmeld fusion</label>
-    <description>Fuse a shatterspike, a fleshwind, and a puffspike into a split fissionmeld.</description>
+    <defName>FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike</defName>
+    <label>split bulbplump fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a puffspike into a split bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2248,9 +2248,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>split fissionmeld</label>
-          <description>A fissionmeld with the split trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>split bulbplump</label>
+          <description>A bulbplump with the split trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Split</li>
           </hediffs>
@@ -2261,9 +2261,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L57_Fissionmeld_Shieldspike_Fleshwind_Fingerspike</defName>
-    <label>swift fissionmeld fusion</label>
-    <description>Fuse a shieldspike, a fleshwind, and a fingerspike into a swift fissionmeld.</description>
+    <defName>FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike</defName>
+    <label>swift bulbplump fusion</label>
+    <description>Fuse a shieldspike, a fleshwind, and a fingerspike into a swift bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2281,9 +2281,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>swift fissionmeld</label>
-          <description>A fissionmeld with the swift trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>swift bulbplump</label>
+          <description>A bulbplump with the swift trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Swift</li>
           </hediffs>
@@ -2294,9 +2294,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L58_Fissionmeld_Puffspike_Fleshwind_Gutspike</defName>
-    <label>runaway fissionmeld fusion</label>
-    <description>Fuse a puffspike, a fleshwind, and a gutspike into a runaway fissionmeld.</description>
+    <defName>FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike</defName>
+    <label>runaway bulbplump fusion</label>
+    <description>Fuse a puffspike, a fleshwind, and a gutspike into a runaway bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2314,9 +2314,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>runaway fissionmeld</label>
-          <description>A fissionmeld with the runaway trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>runaway bulbplump</label>
+          <description>A bulbplump with the runaway trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Runaway</li>
           </hediffs>
@@ -2327,9 +2327,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L59_Fissionmeld_Puffspike_Trispike_Paraspike</defName>
-    <label>sharp fissionmeld fusion</label>
-    <description>Fuse a puffspike, a trispike, and a paraspike into a sharp fissionmeld.</description>
+    <defName>FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike</defName>
+    <label>sharp bulbplump fusion</label>
+    <description>Fuse a puffspike, a trispike, and a paraspike into a sharp bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2347,9 +2347,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>sharp fissionmeld</label>
-          <description>A fissionmeld with the sharp trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>sharp bulbplump</label>
+          <description>A bulbplump with the sharp trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Sharp</li>
           </hediffs>
@@ -2360,9 +2360,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L60_Fissionmeld_Puffspike_Shieldspike_Whipspike</defName>
-    <label>acidic fissionmeld fusion</label>
-    <description>Fuse a puffspike, a shieldspike, and a whipspike into an acidic fissionmeld.</description>
+    <defName>FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike</defName>
+    <label>acidic bulbplump fusion</label>
+    <description>Fuse a puffspike, a shieldspike, and a whipspike into an acidic bulbplump.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2380,9 +2380,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>acidic fissionmeld</label>
-          <description>A fissionmeld with the acidic trait.</description>
-          <kind>FH_Fissionmeld</kind>
+          <label>acidic bulbplump</label>
+          <description>A bulbplump with the acidic trait.</description>
+          <kind>FH_Bulbplump</kind>
           <hediffs>
             <li>FH_Trait_Acidic</li>
           </hediffs>
@@ -2393,9 +2393,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L61_Nexusmeld_Shatterspike_Shatterspike_Gutspike</defName>
-    <label>nexusmeld fusion</label>
-    <description>Fuse a shatterspike, a shatterspike, and a gutspike into a nexusmeld.</description>
+    <defName>FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike</defName>
+    <label>synbulb fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a gutspike into a synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2413,9 +2413,9 @@
     <results>
       <li>
         <result Class="HiveCreatureFramework.FusionResult_PawnKind">
-          <label>nexusmeld</label>
-          <description>A stable nexusmeld with no special trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>synbulb</label>
+          <description>A stable synbulb with no special trait.</description>
+          <kind>FH_Synbulb</kind>
         </result>
         <weight>1</weight>
       </li>
@@ -2423,9 +2423,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L62_Nexusmeld_Shatterspike_Shieldspike_Whipspike</defName>
-    <label>cancerous nexusmeld fusion</label>
-    <description>Fuse a shatterspike, a shieldspike, and a whipspike into a cancerous nexusmeld.</description>
+    <defName>FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike</defName>
+    <label>cancerous synbulb fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a whipspike into a cancerous synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2443,9 +2443,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>cancerous nexusmeld</label>
-          <description>A nexusmeld with the cancerous trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>cancerous synbulb</label>
+          <description>A synbulb with the cancerous trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Cancerous</li>
           </hediffs>
@@ -2456,9 +2456,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L63_Nexusmeld_Shatterspike_Trispike_Puffspike</defName>
-    <label>acidic nexusmeld fusion</label>
-    <description>Fuse a shatterspike, a trispike, and a puffspike into an acidic nexusmeld.</description>
+    <defName>FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike</defName>
+    <label>acidic synbulb fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a puffspike into an acidic synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2476,9 +2476,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>acidic nexusmeld</label>
-          <description>A nexusmeld with the acidic trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>acidic synbulb</label>
+          <description>A synbulb with the acidic trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Acidic</li>
           </hediffs>
@@ -2489,9 +2489,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L64_Nexusmeld_Shieldspike_Shieldspike_Paraspike</defName>
-    <label>rapid growth nexusmeld fusion</label>
-    <description>Fuse a shieldspike, a shieldspike, and a paraspike into a rapid growth nexusmeld.</description>
+    <defName>FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike</defName>
+    <label>rapid growth synbulb fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a paraspike into a rapid growth synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2509,9 +2509,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>rapid growth nexusmeld</label>
-          <description>A nexusmeld with the rapid growth trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>rapid growth synbulb</label>
+          <description>A synbulb with the rapid growth trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_RapidGrowth</li>
           </hediffs>
@@ -2522,9 +2522,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L65_Nexusmeld_Shieldspike_Trispike_Whipspike</defName>
-    <label>runaway nexusmeld fusion</label>
-    <description>Fuse a shieldspike, a trispike, and a whipspike into a runaway nexusmeld.</description>
+    <defName>FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike</defName>
+    <label>runaway synbulb fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a whipspike into a runaway synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2542,9 +2542,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>runaway nexusmeld</label>
-          <description>A nexusmeld with the runaway trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>runaway synbulb</label>
+          <description>A synbulb with the runaway trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Runaway</li>
           </hediffs>
@@ -2555,9 +2555,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L66_Nexusmeld_Trispike_Trispike_Puffspike</defName>
-    <label>split nexusmeld fusion</label>
-    <description>Fuse a trispike, a trispike, and a puffspike into a split nexusmeld.</description>
+    <defName>FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike</defName>
+    <label>split synbulb fusion</label>
+    <description>Fuse a trispike, a trispike, and a puffspike into a split synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2575,9 +2575,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>split nexusmeld</label>
-          <description>A nexusmeld with the split trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>split synbulb</label>
+          <description>A synbulb with the split trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Split</li>
           </hediffs>
@@ -2588,9 +2588,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L67_Nexusmeld_Shatterspike_Toughspike_Paraspike</defName>
-    <label>robust nexusmeld fusion</label>
-    <description>Fuse a shatterspike, a toughspike, and a paraspike into a robust nexusmeld.</description>
+    <defName>FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike</defName>
+    <label>robust synbulb fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a paraspike into a robust synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2608,9 +2608,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>robust nexusmeld</label>
-          <description>A nexusmeld with the robust trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>robust synbulb</label>
+          <description>A synbulb with the robust trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Robust</li>
           </hediffs>
@@ -2621,9 +2621,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L68_Nexusmeld_Shieldspike_Toughspike_Gutspike</defName>
-    <label>swift nexusmeld fusion</label>
-    <description>Fuse a shieldspike, a toughspike, and a gutspike into a swift nexusmeld.</description>
+    <defName>FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike</defName>
+    <label>swift synbulb fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a gutspike into a swift synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2641,9 +2641,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>swift nexusmeld</label>
-          <description>A nexusmeld with the swift trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>swift synbulb</label>
+          <description>A synbulb with the swift trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Swift</li>
           </hediffs>
@@ -2654,9 +2654,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L69_Nexusmeld_Trispike_Toughspike_Whipspike</defName>
-    <label>tough nexusmeld fusion</label>
-    <description>Fuse a trispike, a toughspike, and a whipspike into a tough nexusmeld.</description>
+    <defName>FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike</defName>
+    <label>tough synbulb fusion</label>
+    <description>Fuse a trispike, a toughspike, and a whipspike into a tough synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2674,9 +2674,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>tough nexusmeld</label>
-          <description>A nexusmeld with the tough trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>tough synbulb</label>
+          <description>A synbulb with the tough trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Tough</li>
           </hediffs>
@@ -2687,9 +2687,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L70_Nexusmeld_Toughspike_Toughspike_Whipspike</defName>
-    <label>sharp nexusmeld fusion</label>
-    <description>Fuse a toughspike, a toughspike, and a whipspike into a sharp nexusmeld.</description>
+    <defName>FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike</defName>
+    <label>sharp synbulb fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a whipspike into a sharp synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2707,9 +2707,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>sharp nexusmeld</label>
-          <description>A nexusmeld with the sharp trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>sharp synbulb</label>
+          <description>A synbulb with the sharp trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Sharp</li>
           </hediffs>
@@ -2720,9 +2720,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L71_Nexusmeld_Shatterspike_Fleshwind_Whipspike</defName>
-    <label>domesticated nexusmeld fusion</label>
-    <description>Fuse a shatterspike, a fleshwind, and a whipspike into a domesticated nexusmeld.</description>
+    <defName>FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike</defName>
+    <label>domesticated synbulb fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a whipspike into a domesticated synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2740,9 +2740,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>domesticated nexusmeld</label>
-          <description>A nexusmeld with the domesticated trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>domesticated synbulb</label>
+          <description>A synbulb with the domesticated trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Domesticated</li>
           </hediffs>
@@ -2753,9 +2753,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L72_Nexusmeld_Puffspike_Fleshwind_Fingerspike</defName>
-    <label>bone spur nexusmeld fusion</label>
-    <description>Fuse a puffspike, a fleshwind, and a fingerspike into a bone spur nexusmeld.</description>
+    <defName>FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike</defName>
+    <label>bone spur synbulb fusion</label>
+    <description>Fuse a puffspike, a fleshwind, and a fingerspike into a bone spur synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2773,9 +2773,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>bone spur nexusmeld</label>
-          <description>A nexusmeld with the bone spur growth trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>bone spur synbulb</label>
+          <description>A synbulb with the bone spur growth trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_BoneSpurGrowth</li>
           </hediffs>
@@ -2786,9 +2786,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L73_Nexusmeld_Puffspike_Trispike_Whipspike</defName>
-    <label>expanded nexusmeld fusion</label>
-    <description>Fuse a puffspike, a trispike, and a whipspike into an expanded nexusmeld.</description>
+    <defName>FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike</defName>
+    <label>expanded synbulb fusion</label>
+    <description>Fuse a puffspike, a trispike, and a whipspike into an expanded synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2806,9 +2806,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>expanded nexusmeld</label>
-          <description>A nexusmeld with the expanded capacity trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>expanded synbulb</label>
+          <description>A synbulb with the expanded capacity trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_ExpandedCapacity</li>
           </hediffs>
@@ -2819,9 +2819,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L74_Nexusmeld_Puffspike_Toughspike_Paraspike</defName>
-    <label>nexusmeld fusion</label>
-    <description>Fuse a puffspike, a toughspike, and a paraspike into a nexusmeld.</description>
+    <defName>FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike</defName>
+    <label>synbulb fusion</label>
+    <description>Fuse a puffspike, a toughspike, and a paraspike into a synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2839,9 +2839,9 @@
     <results>
       <li>
         <result Class="HiveCreatureFramework.FusionResult_PawnKind">
-          <label>nexusmeld</label>
-          <description>A stable nexusmeld with no special trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>synbulb</label>
+          <description>A stable synbulb with no special trait.</description>
+          <kind>FH_Synbulb</kind>
         </result>
         <weight>1</weight>
       </li>
@@ -2849,9 +2849,9 @@
   </HiveCreatureFramework.FusionDef>
 
   <HiveCreatureFramework.FusionDef>
-    <defName>FH_Fusion_L75_Nexusmeld_Puffspike_Shieldspike_Fingerspike</defName>
-    <label>fragile nexusmeld fusion</label>
-    <description>Fuse a puffspike, a shieldspike, and a fingerspike into a fragile nexusmeld.</description>
+    <defName>FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike</defName>
+    <label>fragile synbulb fusion</label>
+    <description>Fuse a puffspike, a shieldspike, and a fingerspike into a fragile synbulb.</description>
     <category>LargeFlesh</category>
     <progressTick>60000</progressTick>
     <hiden>true</hiden>
@@ -2869,9 +2869,9 @@
     <results>
       <li>
         <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
-          <label>fragile nexusmeld</label>
-          <description>A nexusmeld with the fragile trait.</description>
-          <kind>FH_Nexusmeld</kind>
+          <label>fragile synbulb</label>
+          <description>A synbulb with the fragile trait.</description>
+          <kind>FH_Synbulb</kind>
           <hediffs>
             <li>FH_Trait_Fragile</li>
           </hediffs>

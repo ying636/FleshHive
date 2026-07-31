@@ -43,4 +43,10 @@
   <!-- EN: 鞭爪兽 -->
   <FH_Whipspike.label>鞭爪兽</FH_Whipspike.label>
   
+  <!-- EN: bulbplump -->
+  <FH_Bulbplump.label>增生瘤兽</FH_Bulbplump.label>
+
+  <!-- EN: synbulb -->
+  <FH_Synbulb.label>共鸣瘤兽</FH_Synbulb.label>
+
 </LanguageData>

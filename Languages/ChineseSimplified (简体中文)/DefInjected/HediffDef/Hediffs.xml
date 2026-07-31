@@ -76,4 +76,21 @@
   <!-- EN: A paraspike's core bone spike, used to parasite a host and sustain its life. It remains embedded in the host, continuously regulating flesh and blood. -->
   <FH_Spike_Paraspike.description>寄血兽用于寄生与维持生命的骨刺。它嵌入宿主体内，持续调节血肉与血液。</FH_Spike_Paraspike.description>
   
+  <!-- EN: synbulb rampage -->
+  <FH_SynbulbRampage.label>共鸣暴走</FH_SynbulbRampage.label>
+  <!-- EN: Pheromones released by a dying synbulb drive the fleshbeast into a violent rampage. -->
+  <FH_SynbulbRampage.description>共鸣瘤兽死亡时释放的信息素使血肉兽陷入暴走。</FH_SynbulbRampage.description>
+  <!-- EN: rampage -->
+  <FH_SynbulbRampage.stages.rampage.label>暴走</FH_SynbulbRampage.stages.rampage.label>
+
+  <!-- EN: synbulb parasitism -->
+  <FH_Parasitism_Synbulb.label>共鸣瘤兽寄生</FH_Parasitism_Synbulb.label>
+  <!-- EN: The host enters psychic harmonization and grows two bone-burst tentacles capable of firing bone shards at range. -->
+  <FH_Parasitism_Synbulb.description>宿主进入心灵同调状态，并生长两条能够远程发射骨刺碎片的碎骨喷发触手。</FH_Parasitism_Synbulb.description>
+
+  <!-- EN: bulbplump parasitism -->
+  <FH_Parasitism_Bulbplump.label>增生瘤兽寄生</FH_Parasitism_Bulbplump.label>
+  <!-- EN: The host's hunger rate is reduced, and two explosive-sac-fed flesh tentacles grow from its body. The host can consume twisted flesh to perform a flesh jump. -->
+  <FH_Parasitism_Bulbplump.description>宿主的饥饿速度降低，并生长两条由爆炸囊供能的血肉触手。宿主可以消耗扭曲肉进行血肉跳跃。</FH_Parasitism_Bulbplump.description>
+
 </LanguageData>

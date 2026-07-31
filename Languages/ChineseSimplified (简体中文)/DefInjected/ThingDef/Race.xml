@@ -301,4 +301,38 @@
   <!-- EN: spike -->
   <FH_Whipspike.tools.spike.labelNoLocation>骨刺</FH_Whipspike.tools.spike.labelNoLocation>
   
+  <!-- EN: bulbplump -->
+  <FH_Bulbplump.label>增生瘤兽</FH_Bulbplump.label>
+  <!-- EN: A terrifying amalgamation of many smaller fleshbeasts controlled by a single nervous system. Its body is covered in explosive sacs that store energy. In combat, it detonates these sacs to propel itself rapidly toward enemies. Fresh flesh continually grows across its body and can be harvested as a resource. It is relatively slow and easy to kill, but on death it erupts violently and splits into a horde of smaller fleshbeasts. -->
+  <FH_Bulbplump.description>由许多小型血肉兽组成的可怕混合体，这些血肉兽都由同一个神经系统控制。其身体上生长着许多储能的爆炸囊，在战斗中会通过爆破快速抵达敌人附近。增生瘤兽的身体会不断长出新鲜血肉，可以作为产出收集。它的行动相对缓慢，也很容易被消灭，死后会剧烈爆炸并分裂成一群小型血肉兽。</FH_Bulbplump.description>
+  <!-- EN: Two flesh tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown. -->
+  <FH_Bulbplump.comps.ParasitismComp.abilityDescription>两条血肉触手攻击附近敌人，造成10点钝器伤害，攻击冷却2秒。</FH_Bulbplump.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic weapon: flesh tentacles -->
+  <FH_Bulbplump.comps.ParasitismComp.abilityLabel>寄生武器：血肉触手</FH_Bulbplump.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +100; hunger rate x50%. -->
+  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；扭曲肉容量+100；饥饿度×50%。</FH_Bulbplump.comps.ParasitismComp.effect>
+  <!-- EN: tentacle -->
+  <FH_Bulbplump.tools.tentacle-0.label>触手</FH_Bulbplump.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Bulbplump.tools.tentacle-1.label>触手</FH_Bulbplump.tools.tentacle-1.label>
+  <!-- EN: head -->
+  <FH_Bulbplump.tools.head.label>头部</FH_Bulbplump.tools.head.label>
+
+  <!-- EN: synbulb -->
+  <FH_Synbulb.label>共鸣瘤兽</FH_Synbulb.label>
+  <!-- EN: A terrifying amalgamation of many smaller fleshbeasts controlled by a single nervous system. Numerous pheromone-storage organs grow within its body. These pheromones stimulate nearby fleshbeasts into an active state and enhance their combat capabilities. It is relatively slow and easy to kill. On death, it erupts violently, scattering pheromones into the air to strengthen nearby entities, and splits into a horde of smaller fleshbeasts. -->
+  <FH_Synbulb.description>由许多小型血肉兽组成的可怕混合体，这些血肉兽都由同一个神经系统控制。其体内生长着许多信息素储存器官。这些信息素会刺激血肉兽进入活性化状态，增强战斗能力。它的行动相对缓慢，也很容易被消灭，死后会剧烈爆炸，将信息素抛洒到空气里强化附近的实体，并分裂成一群小型血肉兽。</FH_Synbulb.description>
+  <!-- EN: Two tentacles aim for 1 second, then fire bone shards at enemies within 16 cells. -->
+  <FH_Synbulb.comps.ParasitismComp.abilityDescription>两条触手瞄准1秒后，向16格内的敌人发射骨刺碎片。</FH_Synbulb.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic weapon: bone burst -->
+  <FH_Synbulb.comps.ParasitismComp.abilityLabel>寄生武器：碎骨喷发</FH_Synbulb.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -1; grants the psychic harmonizer condition. -->
+  <FH_Synbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；获得状态“心灵同调”。</FH_Synbulb.comps.ParasitismComp.effect>
+  <!-- EN: tentacle -->
+  <FH_Synbulb.tools.tentacle-0.label>触手</FH_Synbulb.tools.tentacle-0.label>
+  <!-- EN: tentacle -->
+  <FH_Synbulb.tools.tentacle-1.label>触手</FH_Synbulb.tools.tentacle-1.label>
+  <!-- EN: head -->
+  <FH_Synbulb.tools.head.label>头部</FH_Synbulb.tools.head.label>
+
 </LanguageData>
