@@ -239,5 +239,27 @@
   <FH_Gestation_CustomFormulaUnavailable>This custom formula is not available at this producer.</FH_Gestation_CustomFormulaUnavailable>
   <FH_Gestation_CustomFormulaInsufficientResources>There are not enough resources to produce this custom formula.</FH_Gestation_CustomFormulaInsufficientResources>
   <FH_HiveOwnedFleshbeasts>Owned fleshbeasts: {0}</FH_HiveOwnedFleshbeasts>
+  <FH_Upgrade_PageTitle>Flesh hive upgrades</FH_Upgrade_PageTitle>
+  <FH_Upgrade_NoActive>No upgrade is currently processing.</FH_Upgrade_NoActive>
+  <FH_Upgrade_Active>{0}: {1} complete, {2} remaining</FH_Upgrade_Active>
+  <FH_Upgrade_Cost>Cost: {0} nutrition; processing time: {1}</FH_Upgrade_Cost>
+  <FH_Upgrade_Start>Start upgrade</FH_Upgrade_Start>
+  <FH_Upgrade_Locked>Locked</FH_Upgrade_Locked>
+  <FH_Upgrade_Completed>Completed</FH_Upgrade_Completed>
+  <FH_Upgrade_Processing>Processing</FH_Upgrade_Processing>
+  <FH_Upgrade_PrerequisiteTooltip>Requires: {0}</FH_Upgrade_PrerequisiteTooltip>
+  <FH_Upgrade_NutritionTooltip>Requires {0} nutrition.</FH_Upgrade_NutritionTooltip>
+  <FH_Upgrade_PrimaryNestTooltip>Requires a flesh primary nest on this map.</FH_Upgrade_PrimaryNestTooltip>
+  <FH_Upgrade_AlreadyProcessing>{0} is already processing.</FH_Upgrade_AlreadyProcessing>
+  <FH_Upgrade_AlreadyCompleted>{0} is already completed.</FH_Upgrade_AlreadyCompleted>
+  <FH_Upgrade_MissingPrerequisite>Prerequisites for {0} are not complete.</FH_Upgrade_MissingPrerequisite>
+  <FH_Upgrade_InsufficientNutrition>Insufficient nutrition. Requires {0}.</FH_Upgrade_InsufficientNutrition>
+  <FH_Upgrade_RequiresPrimaryNest>{0} requires a flesh primary nest on this map.</FH_Upgrade_RequiresPrimaryNest>
+  <FH_Upgrade_Started>Started processing {0}.</FH_Upgrade_Started>
+  <FH_Upgrade_CompletedMessage>Completed upgrade: {0}.</FH_Upgrade_CompletedMessage>
+  <FH_Upgrade_DebugUnlock>Unlock all upgrades</FH_Upgrade_DebugUnlock>
+  <FH_Upgrade_DebugUnlocked>All flesh hive upgrades unlocked.</FH_Upgrade_DebugUnlocked>
 
+  <FH_AutoRepair_Label>Automatic flesh building repair</FH_AutoRepair_Label>
+  <FH_AutoRepair_Description>Toggle automatic repair of flesh buildings using hive nutrition.</FH_AutoRepair_Description>
 </LanguageData>

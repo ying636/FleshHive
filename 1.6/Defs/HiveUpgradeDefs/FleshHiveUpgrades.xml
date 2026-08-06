@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FleshExpansion1</defName>
+    <label>flesh rapid expansion I</label>
+    <description>All flesh buildings that grow outward grow 50% faster on this map.</description>
+    <effect>FleshExpansion</effect>
+    <effectValue>0.5</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FleshExpansion2</defName>
+    <label>flesh rapid expansion II</label>
+    <description>All flesh buildings that grow outward grow another 50% faster on this map.</description>
+    <effect>FleshExpansion</effect>
+    <effectValue>0.5</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <prerequisites><li>FH_Upgrade_FleshExpansion1</li></prerequisites>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_NutritionAbsorption</defName>
+    <label>efficient nutrition absorption</label>
+    <description>Nutrition gained from corpses and flesh sacks increases by 50%. Food nutrition is unchanged.</description>
+    <effect>NutritionAbsorption</effect>
+    <effectValue>0.5</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_SelfRepair1</defName>
+    <label>self-repairing flesh I</label>
+    <description>Enables the flesh hive auto-repair switch. Each hour, up to 200 hit points are repaired for 4 nutrition.</description>
+    <effect>SelfRepair</effect>
+    <effectValue>1</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_SelfRepair2</defName>
+    <label>self-repairing flesh II</label>
+    <description>Auto-repair capacity becomes 400 hit points per hour for 8 nutrition.</description>
+    <effect>SelfRepair</effect>
+    <effectValue>1</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <prerequisites><li>FH_Upgrade_SelfRepair1</li></prerequisites>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_CellDivision</defName>
+    <label>efficient cell division</label>
+    <description>Flesh hive production of fleshbeasts is 150% faster on this map.</description>
+    <effect>CellDivision</effect>
+    <effectValue>0.5</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_Reactivation</defName>
+    <label>reactivation</label>
+    <description>Each player fleshbeast has a 10% chance to create an extra puffspike when it dies.</description>
+    <effect>Reactivation</effect>
+    <effectValue>0.1</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_Agility</defName>
+    <label>agility</label>
+    <description>Small player fleshbeasts have a 20% chance to dodge any damage.</description>
+    <effect>Agility</effect>
+    <effectValue>0.2</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_BoneSpikePenetration</defName>
+    <label>monomolecular bone spikes</label>
+    <description>Bone spike skills used by player fleshbeasts have 90% armor penetration.</description>
+    <effect>BoneSpikePenetration</effect>
+    <effectValue>0.9</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_GiantFleshExpansion</defName>
+    <label>giant flesh expansion</label>
+    <description>Large and giant fleshbeasts gain 2 parasitic spaces.</description>
+    <effect>ParasiticSpace</effect>
+    <effectValue>2</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_NestMasterCarapace</defName>
+    <label>nest master carapace</label>
+    <description>Giant fleshbeasts gain +45% blunt armor, +106% sharp armor, and +54% heat armor.</description>
+    <effect>NestMasterCarapace</effect>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_NestTaming1</defName>
+    <label>nest taming I</label>
+    <description>Flesh hive activity rises 25% more slowly on this map.</description>
+    <effect>NestTaming</effect>
+    <effectValue>-0.25</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_NestTaming2</defName>
+    <label>nest taming II</label>
+    <description>Flesh hive activity rises another 25% more slowly on this map.</description>
+    <effect>NestTaming</effect>
+    <effectValue>-0.25</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <prerequisites><li>FH_Upgrade_NestTaming1</li></prerequisites>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FastHealing</defName>
+    <label>rapid healing</label>
+    <description>Fleshbeasts recover wounds in flesh hives 50% faster.</description>
+    <effect>NestHealing</effect>
+    <effectValue>0.5</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FleshbeastTaming1</defName>
+    <label>fleshbeast taming I</label>
+    <description>Player fleshbeast control decays 25% more slowly.</description>
+    <effect>FleshbeastTaming</effect>
+    <effectValue>-0.25</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FleshbeastTaming2</defName>
+    <label>fleshbeast taming II</label>
+    <description>Player fleshbeast control decays another 25% more slowly.</description>
+    <effect>FleshbeastTaming</effect>
+    <effectValue>-0.25</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <prerequisites><li>FH_Upgrade_FleshbeastTaming1</li></prerequisites>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FleshShaping1</defName>
+    <label>flesh shaping I</label>
+    <description>Flesh production outlets work 25% faster.</description>
+    <effect>FleshShaping</effect>
+    <effectValue>0.25</effectValue>
+    <nutritionCost>300</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_FleshShaping2</defName>
+    <label>flesh shaping II</label>
+    <description>Flesh production outlets work another 25% faster.</description>
+    <effect>FleshShaping</effect>
+    <effectValue>0.25</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <prerequisites><li>FH_Upgrade_FleshShaping1</li></prerequisites>
+    <nutritionCost>600</nutritionCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+</Defs>

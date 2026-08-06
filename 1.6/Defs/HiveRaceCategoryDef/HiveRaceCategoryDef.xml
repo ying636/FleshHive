@@ -15,6 +15,7 @@
             <li>FH_CategoryOption_Parasitism</li>
             <li>FH_CategoryOption_ItemProduction</li>
             <li>FH_CategoryOption_FleshbeastFusion</li>
+            <li>FH_CategoryOption_FleshHiveUpgrades</li>
             <li>HCF_CategoryOption_WorkSettings</li>
         </options>
         <texPath>UI/UI_Hive/Hive_Flesh</texPath>
@@ -53,6 +54,13 @@
         <label>Produce items</label>
         <description>Manage item production tasks for flesh hoppers.</description>
         <option Class="FleshHive.HiveTabOption_ItemProduction" />
+    </HiveCreatureFramework.HiveTabOptionDef>
+
+    <HiveCreatureFramework.HiveTabOptionDef>
+        <defName>FH_CategoryOption_FleshHiveUpgrades</defName>
+        <label>Flesh hive upgrades</label>
+        <description>Process permanent upgrades that affect the whole flesh hive map.</description>
+        <option Class="FleshHive.HiveTabOption_FleshHiveUpgrades" />
     </HiveCreatureFramework.HiveTabOptionDef>
 
     <HiveCreatureFramework.HiveTabOptionDef>

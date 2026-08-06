@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <FH_Upgrade_FleshExpansion1.label>血肉快速扩张 I</FH_Upgrade_FleshExpansion1.label>
+  <FH_Upgrade_FleshExpansion1.description>所有向外生长血肉的建筑生长速度提高50%。</FH_Upgrade_FleshExpansion1.description>
+  <FH_Upgrade_FleshExpansion2.label>血肉快速扩张 II</FH_Upgrade_FleshExpansion2.label>
+  <FH_Upgrade_FleshExpansion2.description>所有向外生长血肉的建筑生长速度再提高50%。</FH_Upgrade_FleshExpansion2.description>
+  <FH_Upgrade_NutritionAbsorption.label>高效营养吸收</FH_Upgrade_NutritionAbsorption.label>
+  <FH_Upgrade_NutritionAbsorption.description>从尸体（血肉树）、血肉袋获取的营养量增加50%，不增加从食物获取的营养。</FH_Upgrade_NutritionAbsorption.description>
+  <FH_Upgrade_SelfRepair1.label>自修复血肉 I</FH_Upgrade_SelfRepair1.label>
+  <FH_Upgrade_SelfRepair1.description>允许血肉建筑消耗巢穴营养自动修补，每小时修复200点，消耗4营养。</FH_Upgrade_SelfRepair1.description>
+  <FH_Upgrade_SelfRepair2.label>自修复血肉 II</FH_Upgrade_SelfRepair2.label>
+  <FH_Upgrade_SelfRepair2.description>自动修补速度提高到每小时400点，消耗8营养。</FH_Upgrade_SelfRepair2.description>
+  <FH_Upgrade_CellDivision.label>高效细胞分裂</FH_Upgrade_CellDivision.label>
+  <FH_Upgrade_CellDivision.description>血肉巢穴生产血肉兽的速度提高150%。</FH_Upgrade_CellDivision.description>
+  <FH_Upgrade_Reactivation.label>再活性化</FH_Upgrade_Reactivation.label>
+  <FH_Upgrade_Reactivation.description>所有血肉兽死亡时有10%的概率额外生成一只肺血兽。</FH_Upgrade_Reactivation.description>
+  <FH_Upgrade_Agility.label>敏捷化</FH_Upgrade_Agility.label>
+  <FH_Upgrade_Agility.description>小型血肉兽受到任何伤害时，有20%的概率躲避这次伤害。</FH_Upgrade_Agility.description>
+  <FH_Upgrade_BoneSpikePenetration.label>单分子骨刺</FH_Upgrade_BoneSpikePenetration.label>
+  <FH_Upgrade_BoneSpikePenetration.description>所有血肉兽的投掷骨刺技能护甲穿透变为90%。</FH_Upgrade_BoneSpikePenetration.description>
+  <FH_Upgrade_GiantFleshExpansion.label>巨型血肉扩展</FH_Upgrade_GiantFleshExpansion.label>
+  <FH_Upgrade_GiantFleshExpansion.description>大型、巨型血肉兽的寄生空间增加2。</FH_Upgrade_GiantFleshExpansion.description>
+  <FH_Upgrade_NestMasterCarapace.label>巢主甲壳</FH_Upgrade_NestMasterCarapace.label>
+  <FH_Upgrade_NestMasterCarapace.description>巨型血肉兽的钝器护甲提高45%，利器护甲提高106%，热能护甲提高54%。</FH_Upgrade_NestMasterCarapace.description>
+  <FH_Upgrade_NestTaming1.label>巢穴驯化 I</FH_Upgrade_NestTaming1.label>
+  <FH_Upgrade_NestTaming1.description>巢穴活跃度提升速度降低25%。</FH_Upgrade_NestTaming1.description>
+  <FH_Upgrade_NestTaming2.label>巢穴驯化 II</FH_Upgrade_NestTaming2.label>
+  <FH_Upgrade_NestTaming2.description>巢穴活跃度提升速度再降低25%。</FH_Upgrade_NestTaming2.description>
+  <FH_Upgrade_FastHealing.label>高速愈合</FH_Upgrade_FastHealing.label>
+  <FH_Upgrade_FastHealing.description>血肉兽在巢穴中的伤口恢复速度提高50%。</FH_Upgrade_FastHealing.description>
+  <FH_Upgrade_FleshbeastTaming1.label>血肉驯化 I</FH_Upgrade_FleshbeastTaming1.label>
+  <FH_Upgrade_FleshbeastTaming1.description>血肉兽控制度降低速度降低25%。</FH_Upgrade_FleshbeastTaming1.description>
+  <FH_Upgrade_FleshbeastTaming2.label>血肉驯化 II</FH_Upgrade_FleshbeastTaming2.label>
+  <FH_Upgrade_FleshbeastTaming2.description>血肉兽控制度降低速度再降低25%。</FH_Upgrade_FleshbeastTaming2.description>
+  <FH_Upgrade_FleshShaping1.label>血肉塑形 I</FH_Upgrade_FleshShaping1.label>
+  <FH_Upgrade_FleshShaping1.description>血肉产出口生产速度提高25%。</FH_Upgrade_FleshShaping1.description>
+  <FH_Upgrade_FleshShaping2.label>血肉塑形 II</FH_Upgrade_FleshShaping2.label>
+  <FH_Upgrade_FleshShaping2.description>血肉产出口生产速度再提高25%。</FH_Upgrade_FleshShaping2.description>
+</LanguageData>

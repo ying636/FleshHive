@@ -29,7 +29,7 @@
   <!-- EN: Fleshwind -->
   <FH_Unit_Fleshwind.label>翼爪兽</FH_Unit_Fleshwind.label>
   <!-- EN: Fleshwind -->
-  <FH_Unit_Fleshwind.description>生产一只翼爪兽。需要先发现对应融合配方。</FH_Unit_Fleshwind.description>
+  <FH_Unit_Fleshwind.description>生产一只翼爪兽。</FH_Unit_Fleshwind.description>
   
   <!-- EN: Furiousmeld -->
   <FH_Unit_Furiousmeld.label>暴怒母兽</FH_Unit_Furiousmeld.label>
@@ -59,26 +59,37 @@
   <!-- EN: Shatterspike -->
   <FH_Unit_Shatterspike.label>碎爪兽</FH_Unit_Shatterspike.label>
   <!-- EN: Shatterspike -->
-  <FH_Unit_Shatterspike.description>生产一只碎爪兽。需要先发现对应融合配方。</FH_Unit_Shatterspike.description>
+  <FH_Unit_Shatterspike.description>生产一只碎爪兽。</FH_Unit_Shatterspike.description>
   
   <!-- EN: Shieldspike -->
   <FH_Unit_Shieldspike.label>盾爪兽</FH_Unit_Shieldspike.label>
   <!-- EN: Shieldspike -->
-  <FH_Unit_Shieldspike.description>生产一只盾爪兽。需要先发现对应融合配方。</FH_Unit_Shieldspike.description>
+  <FH_Unit_Shieldspike.description>生产一只盾爪兽。</FH_Unit_Shieldspike.description>
   
   <!-- EN: Toughspike -->
   <FH_Unit_Toughspike.label>双爪兽</FH_Unit_Toughspike.label>
   <!-- EN: Toughspike -->
-  <FH_Unit_Toughspike.description>生产一只双爪兽。需要先发现对应融合配方。</FH_Unit_Toughspike.description>
+  <FH_Unit_Toughspike.description>生产一只双爪兽。</FH_Unit_Toughspike.description>
   
   <!-- EN: Trispike -->
   <FH_Unit_Trispike.label>三爪兽</FH_Unit_Trispike.label>
   <!-- EN: Trispike -->
-  <FH_Unit_Trispike.description>生产一只三爪兽。需要先发现对应融合配方。</FH_Unit_Trispike.description>
+  <FH_Unit_Trispike.description>生产一只三爪兽。</FH_Unit_Trispike.description>
   
   <!-- EN: Whipspike -->
   <FH_Unit_Whipspike.label>鞭爪兽</FH_Unit_Whipspike.label>
   <!-- EN: Whipspike -->
   <FH_Unit_Whipspike.description>生产一只鞭爪兽。</FH_Unit_Whipspike.description>
-  
+
+  <FH_Unit_Bulbfreak.label>恶臭瘤兽</FH_Unit_Bulbfreak.label>
+  <FH_Unit_Bulbfreak.description>培育一只恶臭瘤兽。</FH_Unit_Bulbfreak.description>
+  <FH_Unit_Acidbulb.label>腐蚀瘤兽</FH_Unit_Acidbulb.label>
+  <FH_Unit_Acidbulb.description>培育一只腐蚀瘤兽。</FH_Unit_Acidbulb.description>
+  <FH_Unit_Spitbulb.label>喷射瘤兽</FH_Unit_Spitbulb.label>
+  <FH_Unit_Spitbulb.description>培育一只喷射瘤兽。</FH_Unit_Spitbulb.description>
+  <FH_Unit_Bulbplump.label>增生瘤兽</FH_Unit_Bulbplump.label>
+  <FH_Unit_Bulbplump.description>培育一只增生瘤兽。</FH_Unit_Bulbplump.description>
+  <FH_Unit_Synbulb.label>共鸣瘤兽</FH_Unit_Synbulb.label>
+  <FH_Unit_Synbulb.description>培育一只共鸣瘤兽。</FH_Unit_Synbulb.description>
+
 </LanguageData>

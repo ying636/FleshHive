@@ -33,7 +33,7 @@
     <specialDisplayRadius>10.5</specialDisplayRadius>
     <workAmount>700</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_AdvancedFleshHive</li>
+      <li>FH_Research_FleshPrimaryHive</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -56,7 +56,7 @@
     <specialDisplayRadius>3</specialDisplayRadius>
     <workAmount>400</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_ComplexFleshHive</li>
+      <li>FH_Research_NutritionCycle</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -142,7 +142,7 @@
     <drawStyleCategory>Defenses</drawStyleCategory>
     <workAmount>150</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_ComplexFleshHive</li>
+      <li>FH_Research_ImmuneSystem</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
       <research>FH_Research_BonePlatingFleshBlock</research>
@@ -165,7 +165,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>120</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_BasicFleshHive</li>
+      <li>FH_Research_NutritionCycle</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -184,7 +184,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>120</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_ComplexFleshHive</li>
+      <li>FH_Research_BasicFleshHive</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -225,7 +225,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>180</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_ComplexFleshHive</li>
+      <li>FH_Research_ImmuneSystem</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -244,7 +244,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>300</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_AdvancedFleshHive</li>
+      <li>FH_Research_ComplexImmuneSystem</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshmassSpitterGhost" />
     <placeWorkers>
@@ -266,7 +266,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>180</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_AdvancedFleshHive</li>
+      <li>FH_Research_ComplexImmuneSystem</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -285,7 +285,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>520</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_AdvancedFleshHive</li>
+      <li>FH_Research_ComplexImmuneSystem</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -307,7 +307,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>130</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_FleshbeastCoexistence</li>
+      <li>FH_Research_ImmuneSystem</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -353,7 +353,7 @@
     <specialDisplayRadius>3</specialDisplayRadius>
     <workAmount>100</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_BasicFleshHive</li>
+      <li>FH_Research_NutritionCycle</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -371,6 +371,7 @@
     <building>FH_FleshColumn</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -387,6 +388,7 @@
     <building>FH_FleshBush</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshPlantBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -403,6 +405,7 @@
     <building>FH_FleshStool</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -419,6 +422,7 @@
     <building>FH_FleshTableSmall</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -435,6 +439,7 @@
     <building>FH_FleshTableSquare</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>140</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -451,6 +456,7 @@
     <building>FH_FleshTableLong</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>220</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -467,6 +473,7 @@
     <building>FH_FleshTableLarge</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>240</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -483,6 +490,7 @@
     <building>FH_FleshBed</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
@@ -499,6 +507,7 @@
     <building>FH_FleshDoubleBed</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>160</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />

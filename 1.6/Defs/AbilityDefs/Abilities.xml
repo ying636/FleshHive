@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <AbilityDef ParentName="SpikeLaunchBase">
+    <defName>FH_SpikeLaunch_Fingerspike</defName>
+    <verbProperties>
+      <range>3.9</range>
+      <defaultProjectile>FH_Spike_Fingerspike</defaultProjectile>
+    </verbProperties>
+  </AbilityDef>
+  <ThingDef ParentName="SpikeBase">
+    <defName>FH_Spike_Fingerspike</defName>
+    <thingClass>FleshHive.Projectile_FleshHiveBoneSpike</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>7</damageAmountBase>
+    </projectile>
+  </ThingDef>
+
+  <AbilityDef ParentName="SpikeLaunchBase">
+    <defName>FH_SpikeLaunch_Toughspike</defName>
+    <verbProperties>
+      <range>5.9</range>
+      <defaultProjectile>FH_Spike_Toughspike</defaultProjectile>
+    </verbProperties>
+  </AbilityDef>
+  <ThingDef ParentName="SpikeBase">
+    <defName>FH_Spike_Toughspike</defName>
+    <thingClass>FleshHive.Projectile_FleshHiveBoneSpike</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Projectile_Toughspike</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>9</damageAmountBase>
+    </projectile>
+  </ThingDef>
+
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Whipspike</defName>
@@ -13,6 +49,7 @@
   </AbilityDef>
   <ThingDef ParentName="SpikeBase">
     <defName>FH_Spike_Whipspike</defName>
+    <thingClass>FleshHive.Projectile_FleshHiveBoneSpike</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
     </graphicData>
@@ -36,7 +73,7 @@
       <ai_IsWeapon>false</ai_IsWeapon>
       <verbClass>HiveCreatureFramework.Verb_AbilityShootWithEffects</verbClass>
       <range>36.9</range>
-      <defaultProjectile>FH_Spike_Paraspike</defaultProjectile>
+      <defaultProjectile>FH_Projectile_Spike_Paraspike</defaultProjectile>
       <defaultCooldownTime>0.5</defaultCooldownTime>
     </verbProperties>
     <comps>
@@ -50,7 +87,8 @@
     </comps>
   </AbilityDef>
   <ThingDef ParentName="SpikeBase">
-    <defName>FH_Spike_Paraspike</defName>
+    <defName>FH_Projectile_Spike_Paraspike</defName>
+    <thingClass>FleshHive.Projectile_FleshHiveBoneSpike</thingClass>
     <thingClass>FleshHive.Spike_Paraspike</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
@@ -72,6 +110,7 @@
   </AbilityDef>
   <ThingDef ParentName="SpikeBase">
     <defName>FH_Spike_Shatterspike</defName>
+    <thingClass>FleshHive.Projectile_FleshHiveBoneSpike</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Projectile_Fingerspike</texPath>
     </graphicData>

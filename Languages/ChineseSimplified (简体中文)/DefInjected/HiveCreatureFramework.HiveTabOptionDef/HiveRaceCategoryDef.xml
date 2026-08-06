@@ -16,6 +16,11 @@
   <!-- EN: Manage flesh hive population, nutrition, activity, and fleshbeasts. -->
   <FH_CategoryOption_FleshManagement.description>总览并管理血肉巢穴的人口、营养度、活跃度和血肉兽。</FH_CategoryOption_FleshManagement.description>
 
+  <!-- EN: Flesh hive upgrades -->
+  <FH_CategoryOption_FleshHiveUpgrades.label>血肉巢群升级</FH_CategoryOption_FleshHiveUpgrades.label>
+  <!-- EN: Process permanent upgrades that affect the whole flesh hive map. -->
+  <FH_CategoryOption_FleshHiveUpgrades.description>处理作用于本地图全局的永久性血肉巢群升级。</FH_CategoryOption_FleshHiveUpgrades.description>
+
   <!-- EN: Hive plans -->
   <FH_CategoryOption_HivePlan.label>巢穴计划</FH_CategoryOption_HivePlan.label>
   <!-- EN: Quickly select a flesh hive or the flesh primary nest and arrange its production plans. -->

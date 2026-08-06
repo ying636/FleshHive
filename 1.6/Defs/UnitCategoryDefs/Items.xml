@@ -27,6 +27,7 @@
     <thing>Meat_Twisted</thing>
     <stackCountRange>10~10</stackCountRange>
     <spawningDay>0.05~0.05</spawningDay>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
     <costs>
       <FH_Resource_Nutrition>0.6</FH_Resource_Nutrition>
     </costs>
@@ -40,6 +41,7 @@
     <thing>Bioferrite</thing>
     <stackCountRange>7~7</stackCountRange>
     <spawningDay>1~1</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
     <costs>
       <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
     </costs>
@@ -53,6 +55,7 @@
     <thing>FH_NerveFlesh</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.166667~0.166667</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
     <costs>
       <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
     </costs>
@@ -66,6 +69,7 @@
     <thing>Tentacle</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
     <specialResources>
       <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
         <requirements>
@@ -84,6 +88,7 @@
     <thing>FH_FleshAdaptationModule</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
     <specialResources>
       <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
         <requirements>
@@ -102,6 +107,7 @@
     <thing>FH_FleshPack</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.233333~0.233333</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshFusion</li></researchPrerequisites>
     <specialResources>
       <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
         <requirements>
@@ -120,6 +126,7 @@
     <thing>FleshWhip</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
     <specialResources>
       <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
         <requirements>
@@ -138,6 +145,7 @@
     <thing>FleshmassStomach</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
     <specialResources>
       <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
         <requirements>
@@ -156,6 +164,7 @@
     <thing>FleshmassLung</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
     <specialResources>
       <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
         <requirements>

@@ -8,6 +8,7 @@
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
+      <li Class="FleshHive.CompProperties_FleshBeastAgility" />
     </comps>
     <race>
       <thinkTreeMain>FH_ThinkTree_FleshBeast</thinkTreeMain>
@@ -122,6 +123,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -162,8 +164,9 @@
     <defName>FH_Fingerspike</defName>
     <label>fingerspike</label>
     <race>FH_Fingerspike</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
     <abilities>
-      <li>SpikeLaunch_Fingerspike</li>
+      <li>FH_SpikeLaunch_Fingerspike</li>
     </abilities>
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
@@ -205,7 +208,6 @@
           <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
@@ -252,6 +254,7 @@
     <defName>FH_Puffspike</defName>
     <label>肺血兽</label>
     <race>FH_Puffspike</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
 
     <combatPower>25</combatPower>
     <lifeStages>
@@ -299,6 +302,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -347,6 +351,7 @@
     <defName>FH_Whipspike</defName>
     <label>鞭爪兽</label>
     <race>FH_Whipspike</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
     <abilities>
       <li>FH_SpikeLaunch_Whipspike</li>
     </abilities>
@@ -401,6 +406,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -449,6 +455,7 @@
     <defName>FH_Gutspike</defName>
     <label>胃血兽</label>
     <race>FH_Gutspike</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
     <combatPower>25</combatPower>
     <abilities>
       <li>FH_CorrosiveSpray_Gutspike</li>
@@ -497,7 +504,6 @@
           <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
@@ -552,6 +558,7 @@
     <defName>FH_Paraspike</defName>
     <label>寄血兽</label>
     <race>FH_Paraspike</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
     <abilities>
       <li>FH_SpikeLaunch_Paraspike</li>
     </abilities>
@@ -602,6 +609,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -756,6 +764,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -834,7 +843,7 @@
     <label>toughspike</label>
     <race>FH_Toughspike</race>
     <abilities>
-      <li>SpikeLaunch_Toughspike</li>
+      <li>FH_SpikeLaunch_Toughspike</li>
     </abilities>
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
@@ -907,10 +916,12 @@
           <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </recycledResources>
         <works>
+          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -1092,6 +1103,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -1253,6 +1265,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -1330,7 +1343,7 @@
     <race>FH_Trispike</race>
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <abilities>
-      <li>SpikeLaunch_Toughspike</li>
+      <li>FH_SpikeLaunch_Toughspike</li>
     </abilities>
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
@@ -1416,6 +1429,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1558,6 +1572,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1724,6 +1739,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1898,6 +1914,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -2067,7 +2084,6 @@
           <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
@@ -2215,6 +2231,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>

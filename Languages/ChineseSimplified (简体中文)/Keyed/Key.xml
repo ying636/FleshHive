@@ -464,5 +464,45 @@
   <FH_Gestation_CustomFormulaInsufficientResources>资源不足，无法生产此自定义配方。</FH_Gestation_CustomFormulaInsufficientResources>
   <!-- EN: Owned fleshbeasts: {0} -->
   <FH_HiveOwnedFleshbeasts>拥有血肉兽：{0}</FH_HiveOwnedFleshbeasts>
+  <!-- EN: Flesh hive upgrades -->
+  <FH_Upgrade_PageTitle>血肉巢群升级</FH_Upgrade_PageTitle>
+  <!-- EN: No upgrade is currently processing. -->
+  <FH_Upgrade_NoActive>当前没有正在处理的升级。</FH_Upgrade_NoActive>
+  <!-- EN: {0}: {1} complete, {2} remaining -->
+  <FH_Upgrade_Active>{0}：已完成{1}，剩余{2}</FH_Upgrade_Active>
+  <!-- EN: Cost: {0} nutrition; processing time: {1} -->
+  <FH_Upgrade_Cost>消耗：{0}营养；处理时间：{1}</FH_Upgrade_Cost>
+  <!-- EN: Start upgrade -->
+  <FH_Upgrade_Start>开始升级</FH_Upgrade_Start>
+  <!-- EN: Locked -->
+  <FH_Upgrade_Locked>未解锁</FH_Upgrade_Locked>
+  <!-- EN: Completed -->
+  <FH_Upgrade_Completed>已完成</FH_Upgrade_Completed>
+  <!-- EN: Processing -->
+  <FH_Upgrade_Processing>处理中</FH_Upgrade_Processing>
+  <!-- EN: Requires: {0} -->
+  <FH_Upgrade_PrerequisiteTooltip>需要完成：{0}</FH_Upgrade_PrerequisiteTooltip>
+  <!-- EN: Requires {0} nutrition. -->
+  <FH_Upgrade_NutritionTooltip>需要{0}营养。</FH_Upgrade_NutritionTooltip>
+  <!-- EN: Requires a flesh primary nest on this map. -->
+  <FH_Upgrade_PrimaryNestTooltip>需要本地图存在血肉主巢。</FH_Upgrade_PrimaryNestTooltip>
+  <!-- EN: {0} is already processing. -->
+  <FH_Upgrade_AlreadyProcessing>{0}正在处理中。</FH_Upgrade_AlreadyProcessing>
+  <!-- EN: {0} is already completed. -->
+  <FH_Upgrade_AlreadyCompleted>{0}已经完成。</FH_Upgrade_AlreadyCompleted>
+  <!-- EN: Prerequisites for {0} are not complete. -->
+  <FH_Upgrade_MissingPrerequisite>{0}的前置升级尚未完成。</FH_Upgrade_MissingPrerequisite>
+  <!-- EN: Insufficient nutrition. Requires {0}. -->
+  <FH_Upgrade_InsufficientNutrition>营养不足，需要{0}。</FH_Upgrade_InsufficientNutrition>
+  <!-- EN: {0} requires a flesh primary nest on this map. -->
+  <FH_Upgrade_RequiresPrimaryNest>{0}需要本地图存在血肉主巢。</FH_Upgrade_RequiresPrimaryNest>
+  <!-- EN: Started processing {0}. -->
+  <FH_Upgrade_Started>开始处理升级：{0}。</FH_Upgrade_Started>
+  <!-- EN: Completed upgrade: {0}. -->
+  <FH_Upgrade_CompletedMessage>升级完成：{0}。</FH_Upgrade_CompletedMessage>
+  <FH_Upgrade_DebugUnlock>一键解锁全部升级</FH_Upgrade_DebugUnlock>
+  <FH_Upgrade_DebugUnlocked>已解锁全部血肉巢群升级。</FH_Upgrade_DebugUnlocked>
 
+  <FH_AutoRepair_Label>自动修补血肉建筑</FH_AutoRepair_Label>
+  <FH_AutoRepair_Description>切换是否消耗巢穴营养自动修补血肉建筑。</FH_AutoRepair_Description>
 </LanguageData>

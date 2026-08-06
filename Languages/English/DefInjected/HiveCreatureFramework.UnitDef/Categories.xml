@@ -2,14 +2,14 @@
 <LanguageData>
   
   <FH_Unit_Fingerspike.description>Spawn a fingerspike.</FH_Unit_Fingerspike.description>
-  <FH_Unit_Fleshwind.description>Spawn a fleshwind. Requires discovering the matching fusion recipe first.</FH_Unit_Fleshwind.description>
+  <FH_Unit_Fleshwind.description>Spawn a fleshwind.</FH_Unit_Fleshwind.description>
   <FH_Unit_Gutspike.description>Spawn a gutspike.</FH_Unit_Gutspike.description>
   <FH_Unit_Paraspike.description>Spawn a paraspike.</FH_Unit_Paraspike.description>
   <FH_Unit_Puffspike.description>Spawn a puffspike.</FH_Unit_Puffspike.description>
-  <FH_Unit_Shatterspike.description>Spawn a shatterspike. Requires discovering the matching fusion recipe first.</FH_Unit_Shatterspike.description>
-  <FH_Unit_Shieldspike.description>Spawn a shieldspike. Requires discovering the matching fusion recipe first.</FH_Unit_Shieldspike.description>
-  <FH_Unit_Toughspike.description>Spawn a toughspike. Requires discovering the matching fusion recipe first.</FH_Unit_Toughspike.description>
-  <FH_Unit_Trispike.description>Spawn a trispike. Requires discovering the matching fusion recipe first.</FH_Unit_Trispike.description>
+  <FH_Unit_Shatterspike.description>Spawn a shatterspike.</FH_Unit_Shatterspike.description>
+  <FH_Unit_Shieldspike.description>Spawn a shieldspike.</FH_Unit_Shieldspike.description>
+  <FH_Unit_Toughspike.description>Spawn a toughspike.</FH_Unit_Toughspike.description>
+  <FH_Unit_Trispike.description>Spawn a trispike.</FH_Unit_Trispike.description>
   <FH_Unit_Dreadmeld.description>Cultivate a dreadmeld in a flesh primary nest.</FH_Unit_Dreadmeld.description>
   <FH_Unit_Furiousmeld.description>Cultivate a furiousmeld in a flesh primary nest.</FH_Unit_Furiousmeld.description>
   <FH_Unit_Bastionmeld.description>Cultivate a bastionmeld in a flesh primary nest.</FH_Unit_Bastionmeld.description>

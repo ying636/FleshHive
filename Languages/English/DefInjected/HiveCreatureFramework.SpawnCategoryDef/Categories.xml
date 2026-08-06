@@ -5,10 +5,10 @@
   <FH_Category_LittleFleshBeast.description>Basic small fleshbeasts.</FH_Category_LittleFleshBeast.description>
   
   <FH_Category_MediumFleshBeast.label>medium flesh beast</FH_Category_MediumFleshBeast.label>
-  <FH_Category_MediumFleshBeast.description>Medium fleshbeasts unlocked by discovering fusion recipes.</FH_Category_MediumFleshBeast.description>
+  <FH_Category_MediumFleshBeast.description>Medium fleshbeasts unlocked by complex flesh hive research.</FH_Category_MediumFleshBeast.description>
 
-  <FH_Category_GiantFleshBeast.label>giant flesh beast</FH_Category_GiantFleshBeast.label>
-  <FH_Category_GiantFleshBeast.description>Giant fleshbeasts that can be cultivated in a flesh primary nest.</FH_Category_GiantFleshBeast.description>
+  <FH_Category_GiantFleshBeast.label>mother flesh beast</FH_Category_GiantFleshBeast.label>
+  <FH_Category_GiantFleshBeast.description>Mother beasts unlocked by mother-beast control research.</FH_Category_GiantFleshBeast.description>
 
   <FH_Category_FleshItems.label>flesh items</FH_Category_FleshItems.label>
   <FH_Category_FleshItems.description>Materials and body parts produced by the flesh hive.</FH_Category_FleshItems.description>

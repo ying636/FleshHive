@@ -28,6 +28,7 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
+        <li Class="HiveCreatureFramework.JobGiver_GroupAttackTarget" />
         <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_AIFightEnemies">
           <targetAcquireRadius>36</targetAcquireRadius>
@@ -71,11 +72,12 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_FleeForDistance">
           <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
           <fleeDistRange>6~12</fleeDistRange>
         </li>
+        <li Class="HiveCreatureFramework.JobGiver_GroupAttackTarget" />
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
         <li Class="JobGiver_AIFightEnemies">
           <targetAcquireRadius>48</targetAcquireRadius>
           <targetKeepRadius>36</targetKeepRadius>
@@ -92,7 +94,7 @@
     <thinkNode Class="JobGiver_AIAbilityFight">
       <targetAcquireRadius>24</targetAcquireRadius>
       <targetKeepRadius>30</targetKeepRadius>
-      <ability>SpikeLaunch_Fingerspike</ability>
+      <ability>FH_SpikeLaunch_Fingerspike</ability>
     </thinkNode>
   </DutyDef>
 
@@ -163,7 +165,7 @@
     <thinkNode Class="JobGiver_AIAbilityFight">
       <targetAcquireRadius>12</targetAcquireRadius>
       <targetKeepRadius>12</targetKeepRadius>
-      <ability>SpikeLaunch_Toughspike</ability>
+      <ability>FH_SpikeLaunch_Toughspike</ability>
     </thinkNode>
   </DutyDef>
 
@@ -172,7 +174,7 @@
     <thinkNode Class="JobGiver_AIAbilityFight">
       <targetAcquireRadius>12</targetAcquireRadius>
       <targetKeepRadius>12</targetKeepRadius>
-      <ability>SpikeLaunch_Toughspike</ability>
+      <ability>FH_SpikeLaunch_Toughspike</ability>
     </thinkNode>
   </DutyDef>
 

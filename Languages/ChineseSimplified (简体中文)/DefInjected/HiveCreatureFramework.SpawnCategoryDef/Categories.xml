@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: Giant flesh beast -->
-  <FH_Category_GiantFleshBeast.label>巨型血肉兽</FH_Category_GiantFleshBeast.label>
-  <!-- EN: Giant flesh beast -->
-  <FH_Category_GiantFleshBeast.description>可在血肉主巢中培养的巨型血肉兽。</FH_Category_GiantFleshBeast.description>
+  <!-- EN: Mother flesh beast -->
+  <FH_Category_GiantFleshBeast.label>血肉母兽</FH_Category_GiantFleshBeast.label>
+  <!-- EN: Mother flesh beast -->
+  <FH_Category_GiantFleshBeast.description>研究血肉母兽控制后可培育的母兽。</FH_Category_GiantFleshBeast.description>
   
   <!-- EN: Little flesh beast -->
   <FH_Category_LittleFleshBeast.label>小型血肉兽</FH_Category_LittleFleshBeast.label>
@@ -14,6 +14,12 @@
   <!-- EN: Medium flesh beast -->
   <FH_Category_MediumFleshBeast.label>中型血肉兽</FH_Category_MediumFleshBeast.label>
   <!-- EN: Medium flesh beast -->
-  <FH_Category_MediumFleshBeast.description>通过融合发现后可生产的中型血肉兽。</FH_Category_MediumFleshBeast.description>
+  <FH_Category_MediumFleshBeast.description>研究复杂血肉巢穴后可生产的非拟像中型血肉兽。</FH_Category_MediumFleshBeast.description>
+
+  <FH_Category_FleshReplica.label>血肉拟像</FH_Category_FleshReplica.label>
+  <FH_Category_FleshReplica.description>研究血肉拟像后可培育的拟像血肉兽。</FH_Category_FleshReplica.description>
+
+  <FH_Category_LargeFleshBeast.label>大型血肉兽</FH_Category_LargeFleshBeast.label>
+  <FH_Category_LargeFleshBeast.description>研究血肉主巢穴后可培育的大型血肉兽。</FH_Category_LargeFleshBeast.description>
   
 </LanguageData>

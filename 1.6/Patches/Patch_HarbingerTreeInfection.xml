@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+  <!-- 新科技树未包含血肉树，停用先兆树感染入口。
   <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName="Plant_TreeHarbinger"]/comps</xpath>
     <value>
       <li Class="FleshHive.CompProperties_InfectHarbingerTree" />
     </value>
   </Operation>
+  -->
 </Patch>

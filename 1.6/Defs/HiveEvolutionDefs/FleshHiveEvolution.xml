@@ -29,7 +29,7 @@
     </resourceCosts>
     <changeConditions>
       <li Class="FleshHive.ChangeCondition_ResearchFinished">
-        <research>FH_Research_ComplexFleshHive</research>
+        <research>FH_Research_FleshPrimaryHive</research>
       </li>
       <li Class="FleshHive.ChangeCondition_OnlyOnePrimaryNest" />
     </changeConditions>  

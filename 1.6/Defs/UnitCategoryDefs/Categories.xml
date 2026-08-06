@@ -6,6 +6,9 @@
         <label>Little flesh beast</label>
         <description>Little flesh beast</description>
         <color>(0.7, 0.1, 0.1)</color>
+        <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
+            <research>FH_Research_BasicFleshHive</research>
+        </worker>
         <units>
             <li>FH_Unit_Whipspike</li>
             <li>FH_Unit_Puffspike</li>
@@ -20,9 +23,11 @@
         <label>Medium flesh beast</label>
         <description>Medium flesh beast</description>
         <color>(0.75, 0.15, 0.15)</color>
+        <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
+            <research>FH_Research_ComplexFleshHive</research>
+        </worker>
         <units>
             <li>FH_Unit_Toughspike</li>
-            <li>FH_Unit_FleshReplica</li>
             <li>FH_Unit_Shieldspike</li>
             <li>FH_Unit_Trispike</li>
             <li>FH_Unit_Shatterspike</li>
@@ -31,12 +36,42 @@
     </HiveCreatureFramework.SpawnCategoryDef>
 
     <HiveCreatureFramework.SpawnCategoryDef>
+        <defName>FH_Category_FleshReplica</defName>
+        <label>Flesh replica</label>
+        <description>Flesh replica</description>
+        <color>(0.78, 0.2, 0.2)</color>
+        <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
+            <research>FH_Research_FleshReplica</research>
+        </worker>
+        <units>
+            <li>FH_Unit_FleshReplica</li>
+        </units>
+    </HiveCreatureFramework.SpawnCategoryDef>
+
+    <HiveCreatureFramework.SpawnCategoryDef>
+        <defName>FH_Category_LargeFleshBeast</defName>
+        <label>Large flesh beast</label>
+        <description>Large flesh beast</description>
+        <color>(0.82, 0.17, 0.17)</color>
+        <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
+            <research>FH_Research_FleshPrimaryHive</research>
+        </worker>
+        <units>
+            <li>FH_Unit_Bulbfreak</li>
+            <li>FH_Unit_Acidbulb</li>
+            <li>FH_Unit_Spitbulb</li>
+            <li>FH_Unit_Bulbplump</li>
+            <li>FH_Unit_Synbulb</li>
+        </units>
+    </HiveCreatureFramework.SpawnCategoryDef>
+
+    <HiveCreatureFramework.SpawnCategoryDef>
         <defName>FH_Category_GiantFleshBeast</defName>
-        <label>Giant flesh beast</label>
-        <description>Giant flesh beast</description>
+        <label>Mother flesh beast</label>
+        <description>Mother flesh beast</description>
         <color>(0.85, 0.18, 0.18)</color>
         <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
-            <research>FH_Research_AdvancedFleshHive</research>
+            <research>FH_Research_MotherBeastControl</research>
         </worker>
         <units>
             <li>FH_Unit_Dreadmeld</li>
@@ -176,6 +211,61 @@
         <costs>
             <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
         </costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Bulbfreak</defName>
+        <label>Bulbfreak</label>
+        <description>Spawn a bulbfreak.</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
+        <kind>FH_Bulbfreak</kind>
+        <spawningDay>3.75~3.75</spawningDay>
+        <prerequisiteFusion>FH_Fusion_L01_Bulbfreak_Shatterspike_Shatterspike_Fingerspike</prerequisiteFusion>
+        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Acidbulb</defName>
+        <label>Acidbulb</label>
+        <description>Spawn an acidbulb.</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
+        <kind>FH_Acidbulb</kind>
+        <spawningDay>3.75~3.75</spawningDay>
+        <prerequisiteFusion>FH_Fusion_L18_Acidbulb_Shatterspike_Trispike_Whipspike</prerequisiteFusion>
+        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Spitbulb</defName>
+        <label>Spitbulb</label>
+        <description>Spawn a spitbulb.</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
+        <kind>FH_Spitbulb</kind>
+        <spawningDay>3.75~3.75</spawningDay>
+        <prerequisiteFusion>FH_Fusion_L32_Spitbulb_Shatterspike_Shieldspike_Paraspike</prerequisiteFusion>
+        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Bulbplump</defName>
+        <label>Bulbplump</label>
+        <description>Spawn a bulbplump.</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
+        <kind>FH_Bulbplump</kind>
+        <spawningDay>3.75~3.75</spawningDay>
+        <prerequisiteFusion>FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike</prerequisiteFusion>
+        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+    </HiveCreatureFramework.UnitDef>
+
+    <HiveCreatureFramework.UnitDef>
+        <defName>FH_Unit_Synbulb</defName>
+        <label>Synbulb</label>
+        <description>Spawn a synbulb.</description>
+        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
+        <kind>FH_Synbulb</kind>
+        <spawningDay>3.75~3.75</spawningDay>
+        <prerequisiteFusion>FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike</prerequisiteFusion>
+        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>

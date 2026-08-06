@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_Reactivation</defName>
+    <label>reactivation</label>
+    <description>This fleshbeast has a 10% chance to produce an additional puffspike when it dies.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_FleshUpgradeReactivation">
+        <spawnKind>FH_Puffspike</spawnKind>
+        <chance>0.1</chance>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_Agility</defName>
+    <label>agility</label>
+    <description>This small fleshbeast has a 20% chance to dodge any incoming damage.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_BoneSpikePenetration</defName>
+    <label>monomolecular bone spikes</label>
+    <description>This fleshbeast's bone-spike throwing skills have 90% armor penetration.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_ParasiticSpace</defName>
+    <label>giant flesh expansion</label>
+    <description>This large or giant fleshbeast has 2 additional parasitic spaces.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <stages>
+      <li>
+        <statOffsets>
+          <FH_Stat_ParasitismCapacity>2</FH_Stat_ParasitismCapacity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_NestMasterCarapace</defName>
+    <label>nest master carapace</label>
+    <description>This giant fleshbeast gains +45% blunt armor, +106% sharp armor, and +54% heat armor.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+          <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.54</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_FastHealing</defName>
+    <label>rapid healing</label>
+    <description>This fleshbeast recovers wounds 50% faster while inside a flesh hive.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_FleshbeastTaming</defName>
+    <label>fleshbeast taming</label>
+    <description>This fleshbeast loses control more slowly.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <maxSeverity>2</maxSeverity>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>I</label>
+        <statFactors>
+          <HCF_Stat_MaintenanceDecayRate>0.75</HCF_Stat_MaintenanceDecayRate>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>II</label>
+        <statFactors>
+          <HCF_Stat_MaintenanceDecayRate>0.5</HCF_Stat_MaintenanceDecayRate>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>
