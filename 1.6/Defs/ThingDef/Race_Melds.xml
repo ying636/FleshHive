@@ -795,7 +795,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Stab</soundMeleeHit>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>right bone spike</label>
@@ -807,7 +807,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Stab</soundMeleeHit>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+  <FH_GroupHunt_AllowUndesignatedAnimals>Allow hunting undesignated creatures</FH_GroupHunt_AllowUndesignatedAnimals>
+  <FH_GroupHunt_AllowUndesignatedAnimalsTip>When enabled, a group in hunt mode automatically targets wild animals if no target has an original hunt designation. When disabled, the group only hunts designated targets.</FH_GroupHunt_AllowUndesignatedAnimalsTip>
+  <FH_GroupHunt_MinimumHealthyHunters>Minimum healthy hunters</FH_GroupHunt_MinimumHealthyHunters>
+  <FH_GroupHunt_MinimumHealthyHuntersTip>The group only attempts to hunt when at least this many members are fully recovered and healthy. It also waits for this number after each hunt.</FH_GroupHunt_MinimumHealthyHuntersTip>
 
   <FleshParasitePod_CancelInsert>Cancel insert</FleshParasitePod_CancelInsert>
   <FleshParasitePod_Start>Start</FleshParasitePod_Start>
   <FleshParasitePod_ParasitizedFleshBeasts>Parasitized flesh beasts</FleshParasitePod_ParasitizedFleshBeasts>
   <FleshParasitePod_Remove>Remove</FleshParasitePod_Remove>
   <FleshParasitePod_InsufficientCapacity>Cannot parasite: insufficient capacity</FleshParasitePod_InsufficientCapacity>
+  <FH_ActiveParasitism_InvalidTarget>Select a living, player-controlled organic creature.</FH_ActiveParasitism_InvalidTarget>
+  <FH_ActiveParasitism_Failed>Active parasitism failed. Check the error log for details.</FH_ActiveParasitism_Failed>
   <FleshParasitePod_InsufficientNutrition>Cannot parasite: requires {0} nutrition</FleshParasitePod_InsufficientNutrition>
   <FleshParasitePod_NutritionCost>Parasitism cost: {0} nutrition</FleshParasitePod_NutritionCost>
   <FleshParasitePod_CurQuest>A parasitism task already exists</FleshParasitePod_CurQuest>
@@ -99,14 +105,23 @@
   <FH_FleshManagement_Activity>Activity</FH_FleshManagement_Activity>
   <FH_FleshManagement_ActivityTooltip>Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot.</FH_FleshManagement_ActivityTooltip>
   <FH_FleshManagement_AutoSuppressTooltip>Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold.</FH_FleshManagement_AutoSuppressTooltip>
+  <FH_FleshManagement_ActivityThreshold>Suppression threshold: {0}</FH_FleshManagement_ActivityThreshold>
+  <FH_FleshManagement_ActivityThresholdTooltip>Colonists start suppressing activity when it reaches {0}.</FH_FleshManagement_ActivityThresholdTooltip>
   <FH_FleshManagement_FleshCount>Flesh terrain: {0}</FH_FleshManagement_FleshCount>
   <FH_FleshManagement_HiveScaleShort>Owned fleshbeasts: {0}</FH_FleshManagement_HiveScaleShort>
   <FH_FleshManagement_Progress>Hive progress</FH_FleshManagement_Progress>
   <FH_FleshManagement_Breeding>Breeding</FH_FleshManagement_Breeding>
-  <FH_FleshManagement_TemporaryGroup>Temporary fleshbeast group</FH_FleshManagement_TemporaryGroup>
+  <FH_FleshManagement_TemporaryGroup>Stray fleshbeasts</FH_FleshManagement_TemporaryGroup>
+  <FH_FleshManagement_Ungrouped>Ungrouped fleshbeasts</FH_FleshManagement_Ungrouped>
+  <FH_FleshManagement_UngroupedHint>Add them to a group to restore normal behavior.</FH_FleshManagement_UngroupedHint>
   <FH_FleshManagement_NoHive>No linked hive</FH_FleshManagement_NoHive>
   <FH_FleshManagement_GroupColor>Set group color</FH_FleshManagement_GroupColor>
   <FH_FleshManagement_GroupSettings>Other group settings</FH_FleshManagement_GroupSettings>
+  <FH_FleshManagement_RecallTemporary>Recall stray fleshbeasts</FH_FleshManagement_RecallTemporary>
+  <FH_FleshManagement_RecallTemporaryEmpty>There are no stray fleshbeasts to recall.</FH_FleshManagement_RecallTemporaryEmpty>
+  <FH_FleshManagement_RecallTemporaryNoHive>There are no available flesh hive groups to receive stray fleshbeasts.</FH_FleshManagement_RecallTemporaryNoHive>
+  <FH_FleshManagement_RecallTemporaryComplete>Recalled {0} stray fleshbeast(s).</FH_FleshManagement_RecallTemporaryComplete>
+  <FH_FleshManagement_RecallTemporaryPartial>Recalled {0} stray fleshbeast(s); {1} remain. Cannot continue: {2}</FH_FleshManagement_RecallTemporaryPartial>
   <FH_Suppressible_Inspect>Hive activity: {0}</FH_Suppressible_Inspect>
   <FH_DebugActivity>Flesh hive activity: {0}</FH_DebugActivity>
   <FH_FleshHiveRiot_Label>Flesh hive riot</FH_FleshHiveRiot_Label>
@@ -165,7 +180,7 @@
   <FH_ParasiticWeaponSlotEmpty>Empty</FH_ParasiticWeaponSlotEmpty>
   <FH_UnmountParasiticWeaponDesc>Unmount {1} from {0}</FH_UnmountParasiticWeaponDesc>
 
-  <TemporaryFleshGroup>Temporary fleshbeast group</TemporaryFleshGroup>
+  <TemporaryFleshGroup>Stray fleshbeasts</TemporaryFleshGroup>
   <FH_FissionmeldDormant_ResurrectsIn>Resurrects in: {0}</FH_FissionmeldDormant_ResurrectsIn>
   <FH_SummonGiantFleshbeastCompleteText>{0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground!</FH_SummonGiantFleshbeastCompleteText>
   <FH_HarnessedFleshmassHeart_TransformLabel>Become fleshtitan</FH_HarnessedFleshmassHeart_TransformLabel>
@@ -209,6 +224,15 @@
   <FH_ItemProduction_UnknownReason>Unknown reason</FH_ItemProduction_UnknownReason>
   <FH_ItemProduction_PartialQueue>Added {0} of {1} production tasks. {2}</FH_ItemProduction_PartialQueue>
   <FH_ItemProduction_OpenPageFailed>Could not open the flesh hopper production page. Check the error log for details.</FH_ItemProduction_OpenPageFailed>
+  <FH_HiveGroup_OpenPageFailed>Could not open the hive group production page. Check the error log for details.</FH_HiveGroup_OpenPageFailed>
+  <FH_ITab_HiveGroup>Hive group</FH_ITab_HiveGroup>
+  <FH_FleshHive_EvolutionButton>Evolution</FH_FleshHive_EvolutionButton>
+  <FH_FleshHive_EvolutionButtonDesc>Consume the required resources and immediately begin evolving this flesh hive into a flesh primary nest.</FH_FleshHive_EvolutionButtonDesc>
+  <FH_FleshHive_EvolutionUnavailable>The flesh hive evolution configuration is invalid. Check the error log for details.</FH_FleshHive_EvolutionUnavailable>
+  <FH_FleshHive_EvolutionInProgress>This flesh hive is already evolving.</FH_FleshHive_EvolutionInProgress>
+  <FH_FleshHive_EvolutionResourceChanged>The flesh hive resource state has changed, so evolution cannot begin.</FH_FleshHive_EvolutionResourceChanged>
+  <FH_FleshHive_EvolutionBlockedReason>Cannot evolve: {0}</FH_FleshHive_EvolutionBlockedReason>
+  <FH_FleshHive_EvolutionUnknownReason>Evolution is currently unavailable, but no specific reason was provided.</FH_FleshHive_EvolutionUnknownReason>
 
   <FH_Gestation_Cost>Cost: {0}</FH_Gestation_Cost>
   <FH_Gestation_Time>Gestation time: {0} days; actual: {1} days</FH_Gestation_Time>
@@ -226,7 +250,11 @@
   <FH_Gestation_QuotaCurrent>Current</FH_Gestation_QuotaCurrent>
   <FH_Gestation_QuotaMaintain>Maintain</FH_Gestation_QuotaMaintain>
   <FH_Gestation_QuotaMaximum>Maximum</FH_Gestation_QuotaMaximum>
-  <FH_Gestation_QuotaHelp>Gestation tasks are created automatically when the current and queued count is below the maintain target. Fleshbeasts above the maximum are reclaimed into nutrition.</FH_Gestation_QuotaHelp>
+  <FH_Gestation_QuotaUnitTip>Types of fleshbeasts in the hive.</FH_Gestation_QuotaUnitTip>
+  <FH_Gestation_QuotaCurrentTip>Number of fleshbeasts currently in the hive.</FH_Gestation_QuotaCurrentTip>
+  <FH_Gestation_QuotaMaintainTip>Minimum number in the hive; the hive automatically gestates fleshbeasts until this target is reached.</FH_Gestation_QuotaMaintainTip>
+  <FH_Gestation_QuotaMaximumTip>Maximum number in the hive; the hive automatically reclaims excess fleshbeasts.</FH_Gestation_QuotaMaximumTip>
+  <FH_Gestation_QuotaHelp>Fleshbeast: types of fleshbeasts in the hive.\nCurrent: number of fleshbeasts currently in the hive.\nMaintain: minimum number in the hive; the hive automatically gestates fleshbeasts until this target is reached.\nMaximum: maximum number in the hive; the hive automatically reclaims excess fleshbeasts.</FH_Gestation_QuotaHelp>
   <FH_Gestation_SetFiniteMaximum>Set a finite maximum equal to the greater of the current and maintain counts.</FH_Gestation_SetFiniteMaximum>
   <FH_Gestation_SetInfiniteMaximum>Remove the maximum limit.</FH_Gestation_SetInfiniteMaximum>
   <FH_Gestation_NoCost>None</FH_Gestation_NoCost>
@@ -242,18 +270,21 @@
   <FH_Upgrade_PageTitle>Flesh hive upgrades</FH_Upgrade_PageTitle>
   <FH_Upgrade_NoActive>No upgrade is currently processing.</FH_Upgrade_NoActive>
   <FH_Upgrade_Active>{0}: {1} complete, {2} remaining</FH_Upgrade_Active>
-  <FH_Upgrade_Cost>Cost: {0} nutrition; processing time: {1}</FH_Upgrade_Cost>
+  <FH_Upgrade_Cost>Cost: {0} nutrition, {1} nerve flesh; processing time: {2}</FH_Upgrade_Cost>
   <FH_Upgrade_Start>Start upgrade</FH_Upgrade_Start>
   <FH_Upgrade_Locked>Locked</FH_Upgrade_Locked>
   <FH_Upgrade_Completed>Completed</FH_Upgrade_Completed>
   <FH_Upgrade_Processing>Processing</FH_Upgrade_Processing>
   <FH_Upgrade_PrerequisiteTooltip>Requires: {0}</FH_Upgrade_PrerequisiteTooltip>
   <FH_Upgrade_NutritionTooltip>Requires {0} nutrition.</FH_Upgrade_NutritionTooltip>
+  <FH_Upgrade_NerveFleshTooltip>Requires {0} nerve flesh stored in flesh vesicles.</FH_Upgrade_NerveFleshTooltip>
   <FH_Upgrade_PrimaryNestTooltip>Requires a flesh primary nest on this map.</FH_Upgrade_PrimaryNestTooltip>
   <FH_Upgrade_AlreadyProcessing>{0} is already processing.</FH_Upgrade_AlreadyProcessing>
   <FH_Upgrade_AlreadyCompleted>{0} is already completed.</FH_Upgrade_AlreadyCompleted>
   <FH_Upgrade_MissingPrerequisite>Prerequisites for {0} are not complete.</FH_Upgrade_MissingPrerequisite>
   <FH_Upgrade_InsufficientNutrition>Insufficient nutrition. Requires {0}.</FH_Upgrade_InsufficientNutrition>
+  <FH_Upgrade_InsufficientNerveFlesh>Insufficient nerve flesh in flesh vesicles. Requires {0}.</FH_Upgrade_InsufficientNerveFlesh>
+  <FH_Upgrade_RequiresResearch>Requires research: {0}.</FH_Upgrade_RequiresResearch>
   <FH_Upgrade_RequiresPrimaryNest>{0} requires a flesh primary nest on this map.</FH_Upgrade_RequiresPrimaryNest>
   <FH_Upgrade_Started>Started processing {0}.</FH_Upgrade_Started>
   <FH_Upgrade_CompletedMessage>Completed upgrade: {0}.</FH_Upgrade_CompletedMessage>
@@ -262,4 +293,8 @@
 
   <FH_AutoRepair_Label>Automatic flesh building repair</FH_AutoRepair_Label>
   <FH_AutoRepair_Description>Toggle automatic repair of flesh buildings using hive nutrition.</FH_AutoRepair_Description>
+
+  <FH_FleshFloor_AlreadyFlesh>This cell is already flesh floor.</FH_FleshFloor_AlreadyFlesh>
+  <FH_FleshFloor_UnsupportedTerrain>Flesh floor cannot be built on this terrain.</FH_FleshFloor_UnsupportedTerrain>
+  <FH_FleshFloor_MustConnect>Flesh floor must connect to existing flesh floor.</FH_FleshFloor_MustConnect>
 </LanguageData>

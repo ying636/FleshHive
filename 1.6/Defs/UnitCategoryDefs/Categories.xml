@@ -87,10 +87,13 @@
         <label>Whipspike</label>
         <description>Whipspike</description>
         <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
         <kind>FH_Whipspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
+        <researchPrerequisites>
+            <li>FH_Research_ComplexFleshHive</li>
+        </researchPrerequisites>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -100,7 +103,7 @@
         <kind>FH_Puffspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -111,7 +114,7 @@
         <kind>FH_Paraspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -122,7 +125,7 @@
         <kind>FH_Fingerspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -133,7 +136,7 @@
         <kind>FH_Gutspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <costs>
-            <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 

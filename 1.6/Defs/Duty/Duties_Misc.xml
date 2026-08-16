@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+  <DutyDef>
+    <defName>FH_GroupHuntGather</defName>
+    <thinkNode Class="FleshHive.JobGiver_GroupHuntGather" />
+  </DutyDef>
+  <DutyDef>
+    <defName>FH_GroupHuntExecute</defName>
+    <thinkNode Class="FleshHive.JobGiver_GroupHuntExecute" />
+  </DutyDef>
   <!-- 通用近战 -->
   <DutyDef>
     <defName>FH_Defend_Melee</defName>
@@ -51,11 +60,6 @@
           <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
           <fleeDistRange>6~12</fleeDistRange>
         </li>
-        <li Class="JobGiver_AIDefendPoint">
-          <targetAcquireRadius>48</targetAcquireRadius>
-          <targetKeepRadius>36</targetKeepRadius>
-          <allowTurrets>true</allowTurrets>
-        </li>
         <li Class="ThinkNode_ForbidOutsideFlagRadius">
           <maxDistToSquadFlag>18</maxDistToSquadFlag>
         </li>
@@ -76,14 +80,7 @@
           <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
           <fleeDistRange>6~12</fleeDistRange>
         </li>
-        <li Class="HiveCreatureFramework.JobGiver_GroupAttackTarget" />
-        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
-        <li Class="JobGiver_AIFightEnemies">
-          <targetAcquireRadius>48</targetAcquireRadius>
-          <targetKeepRadius>36</targetKeepRadius>
-          <allowTurrets>true</allowTurrets>
-        </li>
-        <li Class="JobGiver_AIGotoNearestHostile" />
+        <li Class="FleshHive.JobGiver_GroupRangedAttackTarget" />
       </subNodes>
     </thinkNode>
   </DutyDef>
@@ -101,8 +98,8 @@
   <DutyDef>
     <defName>FH_Skill_Acidbulb</defName>
     <thinkNode Class="JobGiver_AIAbilityFight">
-      <targetAcquireRadius>48</targetAcquireRadius>
-      <targetKeepRadius>36</targetKeepRadius>
+      <targetAcquireRadius>50</targetAcquireRadius>
+      <targetKeepRadius>50</targetKeepRadius>
       <ability>FH_Acidbulb_Launch</ability>
     </thinkNode>
   </DutyDef>
@@ -110,8 +107,8 @@
   <DutyDef>
     <defName>FH_Skill_Spitbulb</defName>
     <thinkNode Class="JobGiver_AIAbilityFight">
-      <targetAcquireRadius>48</targetAcquireRadius>
-      <targetKeepRadius>36</targetKeepRadius>
+      <targetAcquireRadius>50</targetAcquireRadius>
+      <targetKeepRadius>50</targetKeepRadius>
       <ability>FH_Spitbulb_Launch</ability>
     </thinkNode>
   </DutyDef>

@@ -11,7 +11,7 @@
   <FH_Upgrade_SelfRepair2.label>自修复血肉 II</FH_Upgrade_SelfRepair2.label>
   <FH_Upgrade_SelfRepair2.description>自动修补速度提高到每小时400点，消耗8营养。</FH_Upgrade_SelfRepair2.description>
   <FH_Upgrade_CellDivision.label>高效细胞分裂</FH_Upgrade_CellDivision.label>
-  <FH_Upgrade_CellDivision.description>血肉巢穴生产血肉兽的速度提高150%。</FH_Upgrade_CellDivision.description>
+  <FH_Upgrade_CellDivision.description>血肉巢穴生产血肉兽的速度变为150%。</FH_Upgrade_CellDivision.description>
   <FH_Upgrade_Reactivation.label>再活性化</FH_Upgrade_Reactivation.label>
   <FH_Upgrade_Reactivation.description>所有血肉兽死亡时有10%的概率额外生成一只肺血兽。</FH_Upgrade_Reactivation.description>
   <FH_Upgrade_Agility.label>敏捷化</FH_Upgrade_Agility.label>

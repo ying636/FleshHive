@@ -27,7 +27,7 @@
     <thing>Meat_Twisted</thing>
     <stackCountRange>10~10</stackCountRange>
     <spawningDay>0.05~0.05</spawningDay>
-    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
     <costs>
       <FH_Resource_Nutrition>0.6</FH_Resource_Nutrition>
     </costs>

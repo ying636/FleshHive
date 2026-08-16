@@ -2,6 +2,23 @@
 <Defs>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshFloor</defName>
+    <label>flesh floor</label>
+    <description>A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor.</description>
+    <terrain>Flesh</terrain>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <workAmount>100</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshFloor" />
+    <resourcesCosts>
+      <FH_Resource_Nutrition>1.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_NerveBundle</defName>
     <label>hive nerve bundle</label>
     <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
@@ -124,12 +141,12 @@
     <researchPrerequisites>
       <li>FH_Research_BasicFleshHive</li>
     </researchPrerequisites>
-    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <worker Class="FleshHive.HiveBuildingWorker_FleshDoor" />
     <placeWorkers>
       <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
     </placeWorkers>
     <resourcesCosts>
-      <FH_Resource_Nutrition>30</FH_Resource_Nutrition>
+      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
     </resourcesCosts>
   </FleshHive.FleshHiveBuildingDef>
 
@@ -165,7 +182,7 @@
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>120</workAmount>
     <researchPrerequisites>
-      <li>FH_Research_NutritionCycle</li>
+      <li>FH_Research_BasicFleshHive</li>
     </researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
     <placeWorkers>
@@ -179,7 +196,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshBox</defName>
     <label>flesh vesicle</label>
-    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive.</description>
+    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive.</description>
     <building>FH_FleshBox</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>120</workAmount>

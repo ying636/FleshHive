@@ -62,4 +62,10 @@
     <reportString>using TargetA to expand parasite capacity.</reportString>
   </JobDef>
 
+  <JobDef>
+    <defName>FH_Job_HuntExecution</defName>
+    <driverClass>FleshHive.JobDriver_GroupHuntExecution</driverClass>
+    <reportString>finishing off TargetA.</reportString>
+  </JobDef>
+
 </Defs>

@@ -45,8 +45,8 @@
         <warmupTime>0</warmupTime>
         <range>28.9</range>
         <burstShotCount>1</burstShotCount>
-        <soundCast>GunShotA</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
+        <soundCast>Pawn_Fleshbeast_Attack_Spike</soundCast>
+        <soundCastTail>Pawn_Fleshbeast_Fingerspike_Call</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -340,6 +340,12 @@
         <attackArmorPenetration>0</attackArmorPenetration>
         <attackAngle>-1</attackAngle>
       </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>1.5</intervalDays>
+        <radius>8.9</radius>
+        <cellsPerErosion>3</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
       <li Class="FleshHive.CompProperties_BuildingOutline">
         <graphicData>
           <texPath>Things/Building/FH_FleshDigester/FH_FleshDigester_Outline</texPath>
@@ -406,6 +412,12 @@
         <attackArmorPenetration>0</attackArmorPenetration>
         <attackAngle>-1</attackAngle>
         <upkeepNutritionCost>0.5</upkeepNutritionCost>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>1.5</intervalDays>
+        <radius>3</radius>
+        <cellsPerErosion>1</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
       </li>
       <li Class="FleshHive.CompProperties_BuildingOutline">
         <graphicData>

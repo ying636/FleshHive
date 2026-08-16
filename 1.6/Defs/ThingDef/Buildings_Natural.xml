@@ -23,6 +23,7 @@
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
+      <li>FleshHive.ITab_FleshHiveGroup</li>
       <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
     </inspectorTabs>
     <statBases>
@@ -69,7 +70,7 @@
           <li>FH_Category_FleshReplica</li>
         </UnitCategories>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHivePlan" />
+      <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
@@ -92,7 +93,7 @@
         <dailyNutritionCost>2</dailyNutritionCost>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
-        <intervalDays>1</intervalDays>
+        <intervalDays>0.5</intervalDays>
         <radius>10.5</radius>
         <cellsPerErosion>12</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
@@ -105,11 +106,13 @@
           <!-- 当前没有可用的普通巢群升级 Def。 -->
         </upgrades>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveEvolution">
+      <li Class="FleshHive.CompProperties_FleshHiveEvolution">
         <map>FH_EvolutionMap_FleshHive</map>
+        <research>FH_Research_FleshPrimaryHive</research>
+        <evolution>FH_Evolution_FleshPrimaryNest</evolution>
       </li>
       <li>
-        <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
+        <compClass>FleshHive.CompProgressHolder_FleshHive</compClass>
       </li>
       <li Class="FleshHive.CompProperties_FleshHiveContainer">
         <resource>FH_Resource_Nutrition</resource>
@@ -162,6 +165,7 @@
     <fillPercent>0.5</fillPercent>
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
+      <li>FleshHive.ITab_FleshHiveGroup</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>220</MaxHitPoints>
@@ -254,7 +258,7 @@
           </li>
         </traitOptions>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHivePlan" />
+      <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
@@ -277,7 +281,7 @@
         <dailyNutritionCost>3</dailyNutritionCost>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
-        <intervalDays>3</intervalDays>
+        <intervalDays>1.5</intervalDays>
         <radius>10.5</radius>
         <cellsPerErosion>3</cellsPerErosion>
         <initialErosionCount>10</initialErosionCount>
@@ -293,7 +297,7 @@
         </upgrades>
       </li>
       <li>
-        <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
+        <compClass>FleshHive.CompProgressHolder_FleshHive</compClass>
       </li>
       <li Class="FleshHive.CompProperties_FleshHiveContainer">
         <resource>FH_Resource_Nutrition</resource>
@@ -643,7 +647,7 @@
     <passability>PassThroughOnly</passability>
     <comps>
       <li Class="FleshHive.CompProperties_FleshSpread">
-        <intervalDays>3</intervalDays>
+        <intervalDays>1.5</intervalDays>
         <radius>3</radius>
         <cellsPerErosion>1</cellsPerErosion>
         <initialErosionCount>0</initialErosionCount>
@@ -690,6 +694,8 @@
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
       <blueprintGraphicData>
         <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
       </blueprintGraphicData>
@@ -736,6 +742,8 @@
     <building>
       <ai_chillDestination>false</ai_chillDestination>
       <isInert>true</isInert>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
       <blueprintGraphicData>
         <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
       </blueprintGraphicData>
@@ -844,6 +852,7 @@
     <neverMultiSelect>true</neverMultiSelect>
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
+      <li>FleshHive.ITab_FleshHiveGroup</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
@@ -873,9 +882,9 @@
           <li>FH_Category_FleshItems</li>
         </UnitCategories>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHivePlan" />
+      <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
       <li>
-        <compClass>HiveCreatureFramework.CompProgressHolder</compClass>
+        <compClass>FleshHive.CompProgressHolder_FleshHive</compClass>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshHopper</building>
@@ -886,7 +895,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FH_FleshBox</defName>
     <label>flesh vesicle</label>
-    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive.</description>
+    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive.</description>
     <thingClass>FleshHive.Building_FleshBox</thingClass>
     <graphicData>
       <texPath>FH_FleshBox/FH_FleshBox</texPath>
@@ -1488,7 +1497,7 @@
         <heatPushMaxTemperature>21</heatPushMaxTemperature>
       </li>
       <li Class="FleshHive.CompProperties_FleshSpread">
-        <intervalDays>1</intervalDays>
+        <intervalDays>0.5</intervalDays>
         <radius>3</radius>
         <cellsPerErosion>4</cellsPerErosion>
         <initialErosionCount>0</initialErosionCount>

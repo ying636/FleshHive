@@ -33,6 +33,11 @@
   <FH_SpikeLaunch_Paraspike.label>骨刺发射</FH_SpikeLaunch_Paraspike.label>
   <!-- EN: Launch a bone spike at a target. -->
   <FH_SpikeLaunch_Paraspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Paraspike.description>
+
+  <!-- EN: active parasitism -->
+  <FH_ActiveParasitism_Paraspike.label>主动寄生</FH_ActiveParasitism_Paraspike.label>
+  <!-- EN: Select a target creature and parasitize it. -->
+  <FH_ActiveParasitism_Paraspike.description>选择一个目标生物并寄生。</FH_ActiveParasitism_Paraspike.description>
   
   <!-- EN: spike launch -->
   <FH_SpikeLaunch_Shatterspike.label>骨刺发射</FH_SpikeLaunch_Shatterspike.label>

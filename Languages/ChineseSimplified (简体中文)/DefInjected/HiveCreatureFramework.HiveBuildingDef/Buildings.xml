@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  <!-- EN: flesh floor -->
+  <FH_Building_FleshFloor.label>血肉地板</FH_Building_FleshFloor.label>
+  <!-- EN: A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor. -->
+  <FH_Building_FleshFloor.description>一层铺展在地面上的致密活体血肉。建设时必须与已有血肉地板相连。</FH_Building_FleshFloor.description>
+
   
   <!-- EN: chitin flesh barricade -->
   <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>
@@ -29,7 +34,7 @@
   <!-- EN: flesh vesicle -->
   <FH_Building_FleshBox.label>血肉囊泡</FH_Building_FleshBox.label>
   <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive. -->
-  <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。储存原料以供血肉巢穴使用。</FH_Building_FleshBox.description>
+  <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。任何具有营养值的物品都会被自动消化并转化为巢穴营养，其他原料则会保留下来供血肉巢穴使用。</FH_Building_FleshBox.description>
   
   <!-- EN: fleshberry bush -->
   <FH_Building_FleshBush.label>肉果丛</FH_Building_FleshBush.label>

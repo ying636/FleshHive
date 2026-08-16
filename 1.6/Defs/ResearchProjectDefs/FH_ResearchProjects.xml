@@ -3,15 +3,18 @@
   <ResearchProjectDef>
     <defName>FH_Research_BasicFleshHive</defName>
     <label>basic flesh hive</label>
-    <description>Unlocks the basic flesh hive, flesh blocks, flesh doors, flesh vesicles, and cultivation of all small fleshbeasts.</description>
+    <description>Unlocks the basic flesh hive, flesh floors, flesh blocks, flesh doors, flesh vesicles, flesh hoppers, twisted meat production, and cultivation of all small fleshbeasts.</description>
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
       <li>Flesh hive</li>
+      <li>Flesh floors</li>
       <li>Flesh blocks</li>
       <li>Flesh doors</li>
       <li>Flesh vesicles</li>
+      <li>Flesh hoppers</li>
+      <li>Twisted meat</li>
       <li>All small fleshbeasts</li>
     </customUnlockTexts>
     <researchViewX>0</researchViewX>
@@ -22,20 +25,18 @@
   <ResearchProjectDef>
     <defName>FH_Research_NutritionCycle</defName>
     <label>nutrition cycle</label>
-    <description>Unlocks flesh hoppers and production of twisted meat, flesh lamps, fleshberry bushes, and flesh sacks.</description>
+    <description>Unlocks production of flesh lamps, fleshberry bushes, and flesh sacks.</description>
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
-      <li>Flesh hoppers</li>
-      <li>Twisted meat</li>
       <li>Flesh lamps</li>
       <li>Fleshberry bushes</li>
       <li>Flesh sacks</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
-    <researchViewX>1.25</researchViewX>
-    <researchViewY>0</researchViewY>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>0.00</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -52,8 +53,8 @@
       <li>Flesh barricades</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
-    <researchViewX>1.25</researchViewX>
-    <researchViewY>1.25</researchViewY>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>1.30</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -71,8 +72,8 @@
       <li>Flesh support columns</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
-    <researchViewX>1.25</researchViewX>
-    <researchViewY>2.5</researchViewY>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>4.90</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -88,15 +89,15 @@
       <li>Flesh adaptation modules</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
-    <researchViewX>1.25</researchViewX>
-    <researchViewY>3.75</researchViewY>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>3.80</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>FH_Research_ComplexFleshHive</defName>
     <label>complex flesh hive</label>
-    <description>Unlocks nerve bundles, cultivation of all medium fleshbeasts except flesh replicas, and production of bioferrite and nerve flesh.</description>
+    <description>Unlocks nerve bundles, flesh hive upgrades, cultivation of all discovered medium fleshbeast formulas except flesh replicas, and production of bioferrite and nerve flesh.</description>
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
@@ -105,10 +106,11 @@
       <li>All medium fleshbeasts except flesh replicas</li>
       <li>Bioferrite</li>
       <li>Nerve flesh</li>
+      <li>Flesh hive upgrades</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
-    <researchViewX>1.25</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>2.50</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -127,8 +129,8 @@
       <li>Fleshmass lungs</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
-    <researchViewX>2.5</researchViewX>
-    <researchViewY>0</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -141,8 +143,8 @@
     <techLevel>Industrial</techLevel>
     <customUnlockTexts><li>Flesh replica cultivation</li></customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
-    <researchViewX>2.5</researchViewX>
-    <researchViewY>1.25</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.20</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -159,8 +161,8 @@
       <li>Replace existing flesh blocks and barricades on all maps</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
-    <researchViewX>2.5</researchViewX>
-    <researchViewY>2.5</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>4.90</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -177,17 +179,17 @@
       <li>Guard tentacle centers</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
-    <researchViewX>2.5</researchViewX>
-    <researchViewY>3.75</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>3.80</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>FH_Research_FleshPrimaryHive</defName>
-    <label>flesh primary hive</label>
+    <label>advanced flesh hive</label>
     <description>Unlocks the nerve center, cultivation of all large fleshbeasts, and evolution into a flesh primary nest.</description>
-    <knowledgeCost>45</knowledgeCost>
-    <knowledgeCategory>Basic</knowledgeCategory>
+    <knowledgeCost>20</knowledgeCost>
+    <knowledgeCategory>Advanced</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
       <li>Nerve centers</li>
@@ -195,8 +197,8 @@
       <li>Flesh hive evolution into a primary nest</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
-    <researchViewX>2.5</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.50</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -205,15 +207,15 @@
     <label>complex flesh fusion</label>
     <description>Allows large fleshbeast fusion and unlocks production of parasite expansion packs.</description>
     <knowledgeCost>30</knowledgeCost>
-    <knowledgeCategory>Basic</knowledgeCategory>
+    <knowledgeCategory>Advanced</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
       <li>Large fleshbeast fusion</li>
       <li>Parasite expansion packs</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_FleshPrimaryHive</li></prerequisites>
-    <researchViewX>3.75</researchViewX>
-    <researchViewY>4.25</researchViewY>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>1.70</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 
@@ -222,12 +224,12 @@
     <label>mother-beast control</label>
     <description>Allows cultivation of mother beasts.</description>
     <knowledgeCost>45</knowledgeCost>
-    <knowledgeCategory>Basic</knowledgeCategory>
+    <knowledgeCategory>Advanced</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts><li>Mother-beast cultivation</li></customUnlockTexts>
     <prerequisites><li>FH_Research_FleshPrimaryHive</li></prerequisites>
-    <researchViewX>3.75</researchViewX>
-    <researchViewY>5.75</researchViewY>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>3.30</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>
   </ResearchProjectDef>
 

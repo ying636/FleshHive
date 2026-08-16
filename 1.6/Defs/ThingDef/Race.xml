@@ -117,13 +117,11 @@
           <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -296,13 +294,11 @@
           <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -399,14 +395,12 @@
           <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
           <li>HCF_UnitWork_Build</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -494,6 +488,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <draftable>true</draftable>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
@@ -559,9 +554,10 @@
     <label>寄血兽</label>
     <race>FH_Paraspike</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
-    <abilities>
-      <li>FH_SpikeLaunch_Paraspike</li>
-    </abilities>
+      <abilities>
+        <li>FH_SpikeLaunch_Paraspike</li>
+        <li>FH_ActiveParasitism_Paraspike</li>
+      </abilities>
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Paraspike</skillDuty>
@@ -746,6 +742,11 @@
       <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
+    <race>
+      <deathAction Class="DeathActionProperties" Inherit="false">
+        <workerClass>DeathActionWorker_Simple</workerClass>
+      </deathAction>
+    </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
@@ -1085,6 +1086,11 @@
       <ArmorRating_Heat>0.36</ArmorRating_Heat>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
+    <race>
+      <deathAction Class="DeathActionProperties" Inherit="false">
+        <workerClass>DeathActionWorker_Simple</workerClass>
+      </deathAction>
+    </race>
     <comps>
       <li Class="HiveCreatureFramework.UnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
@@ -1557,8 +1563,9 @@
     <comps>
       <li Class="HiveCreatureFramework.UnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1746,7 +1753,7 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
+        <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Acidbulb</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -1; Toxic Resistance +100%; grants acid mortar and acid spray abilities.</effect>
@@ -1921,7 +1928,7 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
+        <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Spitbulb</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +250; grants the flesh mortar ability.</effect>
@@ -2060,7 +2067,7 @@
       <renderTree>Bulbfreak</renderTree>
       <lifeStageAges>
         <li>
-          <def>EntityFullyFormed</def>
+          <def>FH_EntityFullyFormed_Milkable</def>
           <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
           <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
           <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
@@ -2070,6 +2077,12 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Large</size>
+      </li>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Meat_Twisted</milkDef>
+        <milkIntervalDays>1</milkIntervalDays>
+        <milkAmount>28</milkAmount>
+        <milkFemaleOnly>false</milkFemaleOnly>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>5</groupCost>

@@ -156,6 +156,13 @@
           </groups>
         </li>
         <li>
+          <def>FleshbeastSpike</def>
+          <coverage>0.1</coverage>
+          <groups>
+            <li>Arms</li>
+          </groups>
+        </li>
+        <li>
           <def>FleshbeastLeg</def>
           <customLabel>left tentacle</customLabel>
           <coverage>0.1</coverage>

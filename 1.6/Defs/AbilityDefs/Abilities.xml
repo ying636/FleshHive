@@ -67,6 +67,8 @@
     <iconPath>UI/Ability/FH_SpikeLaunch_Paraspike</iconPath>
     <abilityClass>FleshHive.Ability_SpikeLaunch_Paraspike</abilityClass>
     <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <verbProperties>
       <warmupTime>1</warmupTime>
       <soundCast>Ability_SpineLaunch</soundCast>
@@ -86,6 +88,33 @@
       </li>
     </comps>
   </AbilityDef>
+
+  <AbilityDef ParentName="AbilityTouchBase">
+    <defName>FH_ActiveParasitism_Paraspike</defName>
+    <label>active parasitism</label>
+    <description>Select a target creature and parasitize it.</description>
+    <iconPath>UI/Ability/FH_Parasitism_Paraspike</iconPath>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <showPsycastEffects>false</showPsycastEffects>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityTouch</verbClass>
+      <range>1.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityActiveParasitism" />
+    </comps>
+  </AbilityDef>
+
   <ThingDef ParentName="SpikeBase">
     <defName>FH_Projectile_Spike_Paraspike</defName>
     <thingClass>FleshHive.Projectile_FleshHiveBoneSpike</thingClass>
@@ -126,10 +155,10 @@
     <description>Launch acid.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>120000</cooldownTicksRange>
+    <cooldownTicksRange>1250</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
     <verbProperties>
-      <range>40</range>
+      <range>50</range>
       <defaultProjectile>FH_Bullet_Shell_AcidSpit</defaultProjectile>
       <defaultCooldownTime>5</defaultCooldownTime>
       <verbClass>Verb_AbilityShoot</verbClass>
@@ -148,7 +177,7 @@
     <description>Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>1250</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
     <verbProperties>
       <range>50</range>
@@ -244,7 +273,7 @@
     <description>Spray sticky acid over a target area. The acid sticks to targets and continues to burn them.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>60000</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <displayOrder>300</displayOrder>
     <iconPath>UI/Ability/FH_SkillIcon11</iconPath>
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
@@ -301,10 +330,10 @@
     <defName>FH_Spitbulb_Launch</defName>
     <label>flesh mortar</label>
     <description>Launch an explosive flesh shell that releases three random small fleshbeasts at the impact point.</description>
-    <cooldownTicksRange>1200</cooldownTicksRange>
+    <cooldownTicksRange>1250</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
     <verbProperties>
-      <range>40</range>
+      <range>50</range>
       <defaultProjectile>FH_Bullet_Shell_Spit</defaultProjectile>
       <defaultCooldownTime>5</defaultCooldownTime>
       <verbClass>Verb_AbilityShoot</verbClass>
@@ -323,7 +352,7 @@
     <description>Consume 25 twisted flesh to launch an explosive flesh shell. The explosion covers a 3-by-3 area and releases one random small fleshbeast at the impact point.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>1250</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
     <verbProperties>
       <range>50</range>
