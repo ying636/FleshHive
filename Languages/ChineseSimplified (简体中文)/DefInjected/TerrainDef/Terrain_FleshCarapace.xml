@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: flesh carapace tile -->
+  <FH_FleshCarapaceFloor.label>甲壳地砖</FH_FleshCarapaceFloor.label>
+  <!-- EN: A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans. -->
+  <FH_FleshCarapaceFloor.description>血肉巢穴特殊生长的甲壳地砖。虽然略微易燃，但却能快速清洁，也比血肉更加容易行动且美观。自然情况下的血肉巢穴并不会生长此类结构，仿佛是为了更好地与人类共同生活进化出的特殊器官。</FH_FleshCarapaceFloor.description>
+</LanguageData>

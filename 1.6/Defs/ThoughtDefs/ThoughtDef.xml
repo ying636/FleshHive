@@ -42,4 +42,18 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>FH_Thought_FleshNutrition</defName>
+        <durationDays>0.25</durationDays>
+        <showBubble>true</showBubble>
+        <icon>Things/Mote/ThoughtSymbol/Food</icon>
+        <stages>
+            <li>
+                <label>flesh nutrition</label>
+                <description>I drew nutrition directly from the flesh hive. It did not feel good.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
 </Defs>

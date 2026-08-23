@@ -3,6 +3,7 @@
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Fingerspike</defName>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <verbProperties>
       <range>3.9</range>
       <defaultProjectile>FH_Spike_Fingerspike</defaultProjectile>
@@ -21,6 +22,7 @@
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Toughspike</defName>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <verbProperties>
       <range>5.9</range>
       <defaultProjectile>FH_Spike_Toughspike</defaultProjectile>
@@ -40,6 +42,9 @@
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Whipspike</defName>
+    <label>whip strike</label>
+    <description>Strike a target from range with a long whip-like limb.</description>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <verbProperties>
       <range>3.9</range>
       <minRange>1.9</minRange>
@@ -67,6 +72,7 @@
     <iconPath>UI/Ability/FH_SpikeLaunch_Paraspike</iconPath>
     <abilityClass>FleshHive.Ability_SpikeLaunch_Paraspike</abilityClass>
     <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
     <verbProperties>
@@ -130,6 +136,7 @@
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Shatterspike</defName>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <verbProperties>
       <range>12.9</range>
       <burstShotCount>6</burstShotCount>
@@ -330,6 +337,8 @@
     <defName>FH_Spitbulb_Launch</defName>
     <label>flesh mortar</label>
     <description>Launch an explosive flesh shell that releases three random small fleshbeasts at the impact point.</description>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>1250</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
     <verbProperties>
@@ -425,8 +434,8 @@
 
   <AbilityDef>
     <defName>FH_Parasitism_BoneSpikeShot</defName>
-    <label>骨刺射击</label>
-    <description>发射一枚骨刺。</description>
+    <label>bone spike shot</label>
+    <description>Launch a bone spike.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>240</cooldownTicksRange>
@@ -440,13 +449,42 @@
     </verbProperties>
   </AbilityDef>
 
+  <ThingDef>
+    <defName>FH_Proj_CorrosiveFluid_Gutspike</defName>
+    <label>gutspike corrosive fluid</label>
+    <thingClass>Projectile_Liquid</thingClass>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <neverMultiSelect>true</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Projectile/Acid</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>AcidBurn</damageDef>
+      <speed>25</speed>
+      <damageAmountBase>10</damageAmountBase>
+      <arcHeightFactor>0.4</arcHeightFactor>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <shadowSize>0</shadowSize>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+    </projectile>
+  </ThingDef>
+
   <AbilityDef>
     <defName>FH_CorrosiveSpray_Gutspike</defName>
     <label>corrosive spray</label>
-    <description>Use the corrosive heart to spray acid a short distance. The heart pumps the corrosive fluid through a surgically implanted duct, allowing the ghoul to spew it from their mouth at high velocity.</description>
+    <description>Compress the gutspike's specialized stomach to spray stored corrosive acid over a short distance.</description>
     <iconPath>UI/Abilities/AcidSpray</iconPath>
     <cooldownTicksRange>15000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>true</ai_IsOffensive>
     <displayOrder>300</displayOrder>
     <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
     <warmupStartSound>AcidSpray_Warmup</warmupStartSound>
@@ -461,7 +499,7 @@
     </verbProperties>
     <comps>
       <li Class="CompProperties_AbilitySprayLiquid">
-        <projectileDef>Proj_CorrosiveFluid</projectileDef>
+        <projectileDef>FH_Proj_CorrosiveFluid_Gutspike</projectileDef>
         <numCellsToHit>9</numCellsToHit>
         <sprayEffecter>AcidSpray_Directional</sprayEffecter>
       </li>
@@ -482,8 +520,8 @@
 
   <AbilityDef>
     <defName>FH_Trispike_ReleaseSpikes</defName>
-    <label>释放血肉兽</label>
-    <description>释放2只随机的小型血肉兽。</description>
+    <label>release fleshbeasts</label>
+    <description>Release two random small fleshbeasts.</description>
     <abilityClass>FleshHive.Effect.Ability_TrispikeRelease</abilityClass>
     <aiCanUse>true</aiCanUse>
     <cooldownTicksRange>300000</cooldownTicksRange>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>FH_Fleck_TitanElectricalSpark</defName>
+    <graphicData>
+      <texPath>Things/Mote/ElectricalSpark</texPath>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(2.5,2.5)</drawSize>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <solidTime>0.08</solidTime>
+    <fadeOutTime>0.13</fadeOutTime>
+  </FleckDef>
+
+</Defs>

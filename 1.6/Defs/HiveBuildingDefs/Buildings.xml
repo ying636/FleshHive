@@ -2,6 +2,26 @@
 <Defs>
 
   <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshPower</defName>
+    <label>flesh power generator</label>
+    <description>Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive.</description>
+    <building>FH_FleshPower</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>250</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_NutritionCycle</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshFloor</defName>
     <label>flesh floor</label>
     <description>A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor.</description>
@@ -15,6 +35,23 @@
     <worker Class="FleshHive.HiveBuildingWorker_FleshFloor" />
     <resourcesCosts>
       <FH_Resource_Nutrition>1.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshCarapaceFloor</defName>
+    <label>flesh carapace tile</label>
+    <description>A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans.</description>
+    <terrain>FH_FleshCarapaceFloor</terrain>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <workAmount>100</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_FleshFurniture</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshCarapaceFloor" />
+    <resourcesCosts>
+        <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
     </resourcesCosts>
   </FleshHive.FleshHiveBuildingDef>
 

@@ -5,6 +5,7 @@
     <defName>FH_FleshPack</defName>
     <label>flesh pack</label>
     <description>A parasitic growth that expands the host's capacity to sustain flesh beast parasites.</description>
+    <researchPrerequisites><li>FH_Research_ComplexFleshFusion</li></researchPrerequisites>
     <thingClass>Apparel</thingClass>
     <graphicData>
       <texPath>Things/Apparel/FH_FleshPack</texPath>

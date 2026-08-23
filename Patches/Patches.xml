@@ -78,4 +78,13 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TerrainDef[defName="Flesh"]</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>FH_Research_BasicFleshHive</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
 </Patch>

@@ -9,9 +9,12 @@
     <items>
       <li>FH_Item_TwistedMeat</li>
       <li>FH_Item_Bioferrite</li>
+      <li>FH_Item_FleshCarapace</li>
       <li>FH_Item_NerveFlesh</li>
       <li>FH_Item_Tentacle</li>
       <li>FH_Item_FleshAdaptationModule</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">FH_Item_FleshSymbiosisSerum</li>
+      <li>FH_Item_FleshSymbiosisModule</li>
       <li>FH_Item_FleshPack</li>
       <li>FH_Item_FleshWhip</li>
       <li>FH_Item_FleshmassStomach</li>
@@ -39,11 +42,25 @@
     <label>bioferrite</label>
     <description>An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel.</description>
     <thing>Bioferrite</thing>
-    <stackCountRange>7~7</stackCountRange>
-    <spawningDay>1~1</spawningDay>
+    <stackCountRange>5~5</stackCountRange>
+    <spawningDay>1.5~1.5</spawningDay>
     <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
     <costs>
-      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshCarapace</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh carapace</label>
+    <description>A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material.</description>
+    <thing>FH_FleshCarapace</thing>
+    <stackCountRange>5~5</stackCountRange>
+    <spawningDay>0.5~0.5</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>0.5</FH_Resource_Nutrition>
     </costs>
   </HiveCreatureFramework.ItemDef>
 
@@ -86,6 +103,46 @@
     <label>flesh adaptation module</label>
     <description>A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive.</description>
     <thing>FH_FleshAdaptationModule</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>30</Bioferrite>
+          <FH_NerveFlesh>6</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Item_FleshSymbiosisSerum</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>symbiosis serum</label>
+    <description>A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive.</description>
+    <thing>FH_FleshSymbiosisSerum</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.0133333333~0.0133333333</spawningDay>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+    </costs>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>10</Bioferrite>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshSymbiosisModule</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh symbiosis module</label>
+    <description>A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating.</description>
+    <thing>FH_FleshSymbiosisModule</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.433333~0.433333</spawningDay>
     <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>

@@ -19,8 +19,8 @@
   <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>以宿主为中心释放圆形EMP脉冲，范围与EMP地雷一致。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Bastionmeld tentacle attack -->
   <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>铁骸母兽触手攻击</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -1; grants impossible regeneration; adds two parasitic weapon mounts. -->
-  <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；宿主获得再生（不可思议）；提供2个额外的寄生武器装备位。</FH_Bastionmeld.comps.ParasitismComp.effect>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; grants impossible regeneration; adds two parasitic weapon mounts. -->
+  <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；宿主获得再生（不可思议）；提供2个额外的寄生武器装备位。</FH_Bastionmeld.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bastionmeld.tools.tentacle-0.label>触手</FH_Bastionmeld.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -41,7 +41,7 @@
   <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
   <FH_Dreadmeld.comps.ParasitismComp.abilityDescription>释放阿尔法敲击兽般的恐怖咆哮，惊吓附近敌对人类与动物。</FH_Dreadmeld.comps.ParasitismComp.abilityDescription>
   <FH_Dreadmeld.comps.ParasitismComp.abilityLabel>惊惧母兽寄生武器</FH_Dreadmeld.comps.ParasitismComp.abilityLabel>
-  <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；宿主获得再生（不可思议）；采矿速度+160%；深钻井操作速度+70%；寄生武器：左骨刺、右骨刺、惊惧咆哮。</FH_Dreadmeld.comps.ParasitismComp.effect>
+  <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；宿主获得再生（不可思议）；采矿速度+160%；深钻井操作速度+70%；寄生武器：左骨刺、右骨刺、惊惧咆哮。</FH_Dreadmeld.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Dreadmeld.tools.tentacle-0.label>触手</FH_Dreadmeld.tools.tentacle-0.label>
   <!-- EN: tentacle -->

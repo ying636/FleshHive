@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Flesh Hive"
+  short_description: "Maintain and update the Flesh Hive RimWorld mod."
+  default_prompt: "Use this skill when updating the Flesh Hive RimWorld mod so changes follow its Def, C#, translation, and compatibility conventions."

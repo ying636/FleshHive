@@ -81,6 +81,14 @@
 
   <!-- EN: Parasite -->
   <HCF_FormulaCategory_Parasite>寄生体</HCF_FormulaCategory_Parasite>
+  <!-- EN: Flesh trait -->
+  <HCF_FormulaCategory_FleshTrait>血肉特性</HCF_FormulaCategory_FleshTrait>
+  <!-- EN: Only one flesh trait can be selected. -->
+  <FH_FormulaTrait_OnlyOne>只能选择一个血肉特性。</FH_FormulaTrait_OnlyOne>
+  <!-- EN: No discovered traits are available for this fleshbeast. -->
+  <FH_FormulaTrait_NoneAvailable>这只血肉兽没有可用的已发现特性。</FH_FormulaTrait_NoneAvailable>
+  <!-- EN: trait -->
+  <FH_FormulaTrait_Noun>特性</FH_FormulaTrait_Noun>
   <!-- EN: Add Parasite -->
   <HCF_AddParasite>添加寄生兽</HCF_AddParasite>
   <!-- EN: Select Parasite -->
@@ -136,6 +144,7 @@
   <FH_MarkPrey_NotFlesh>只能标记血肉生物</FH_MarkPrey_NotFlesh>
   <!-- EN: Already marked -->
   <FH_MarkPrey_AlreadyMarked>已标记</FH_MarkPrey_AlreadyMarked>
+  <!-- EN: Prioritize carrying {0} to a flesh sack -->
 
   <!-- EN: Digesting: {0} -->
   <FH_FleshSack_Digesting>消化中：{0}</FH_FleshSack_Digesting>
@@ -263,6 +272,10 @@
   <FH_HiveHungryWhisper4>血肉...........</FH_HiveHungryWhisper4>
   <!-- EN: Automatically consumes {0} hive nutrition per replacement shot. -->
   <FH_HiveNutritionRefuelable_NutritionPerFuel>每补充1发备用骨刺自动消耗{0}巢穴营养。</FH_HiveNutritionRefuelable_NutritionPerFuel>
+  <!-- EN: Daily hive nutrition upkeep: {0} -->
+  <FH_FleshPowerPlant_NutritionUpkeep>每日消耗巢群营养：{0}</FH_FleshPowerPlant_NutritionUpkeep>
+  <!-- EN: Inactive: insufficient hive nutrition. -->
+  <FH_FleshPowerPlant_Inactive>未运行：巢群营养不足。</FH_FleshPowerPlant_Inactive>
   <!-- EN: Trait -->
   <FH_Spawner_Trait>特性</FH_Spawner_Trait>
   <!-- EN: None -->
@@ -333,6 +346,8 @@
   <FH_Fusion_TemplateMissingMaterials>当前没有足够的血肉兽来应用该模板。</FH_Fusion_TemplateMissingMaterials>
   <!-- EN: Select all required fusion materials first. -->
   <FH_Fusion_NoValidFusion>请先选择全部融合素材。</FH_Fusion_NoValidFusion>
+  <!-- EN: The fleshbeast fusion component on the primary nest is unavailable. -->
+  <FH_Fusion_FuserUnavailable>主巢的血肉兽融合组件不可用。</FH_Fusion_FuserUnavailable>
   <!-- EN: Parasitic weapons -->
   <FH_TabParasiticWeapons>寄生武器</FH_TabParasiticWeapons>
   <!-- EN: Parasitic weapon slot -->
@@ -383,6 +398,11 @@
   <FH_Quest_FleshSurvivor_AttackLabel>血肉兽来袭</FH_Quest_FleshSurvivor_AttackLabel>
   <!-- EN: The frenzied fleshbeasts pursuing Hela Bates have reached the colony. -->
   <FH_Quest_FleshSurvivor_AttackText>追踪海拉·贝茨的狂暴血肉兽已经抵达殖民地。</FH_Quest_FleshSurvivor_AttackText>
+
+  <!-- EN: Hela -->
+  <FH_Hela_FirstName>海拉</FH_Hela_FirstName>
+  <!-- EN: Bates -->
+  <FH_Hela_LastName>贝茨</FH_Hela_LastName>
 
   <!-- EN: Parasite capacity: {0}/{1} -->
   <FH_Hela_ParasiteCapacityInfo>寄生空间：{0}/{1}</FH_Hela_ParasiteCapacityInfo>
@@ -561,4 +581,27 @@
   <FH_FleshFloor_UnsupportedTerrain>无法在此地形上建设血肉地板。</FH_FleshFloor_UnsupportedTerrain>
   <!-- EN: Flesh floor must connect to existing flesh floor. -->
   <FH_FleshFloor_MustConnect>血肉地板必须与已有血肉地板相连。</FH_FleshFloor_MustConnect>
+  <!-- EN: Carapace floor must be built on flesh terrain. -->
+  <FH_FleshCarapaceFloor_MustPlaceOnFlesh>甲壳地砖只能在血肉地板上建设。</FH_FleshCarapaceFloor_MustPlaceOnFlesh>
+
+  <!-- EN: Level {0}/{1} -->
+  <FH_MeldGrowth_Level>等级{0}/{1}</FH_MeldGrowth_Level>
+  <!-- EN: Growth level: {0}/{1}\nParasitism capacity: +{2}\nTwisted flesh capacity: +{3}\nBody part health: +{4}%\nRegeneration: +{5} per day\nTotal bleed factor: -{6}%\nIncoming damage factor: -{7}% -->
+  <FH_MeldGrowth_Effects>成长等级：{0}/{1}\n寄生空间：+{2}\n扭曲肉容量：+{3}\n部位生命值：+{4}%\n再生：+{5}/天\n总失血系数：-{6}%\n承伤系数：-{7}%</FH_MeldGrowth_Effects>
+  <!-- EN: Consume {0} to grow -->
+  <FH_MeldGrowth_ConsumeSeed>吞食{0}并升级</FH_MeldGrowth_ConsumeSeed>
+  <!-- EN: Cannot consume {0} -->
+  <FH_MeldGrowth_CannotConsume>无法吞食{0}</FH_MeldGrowth_CannotConsume>
+  <!-- EN: Cannot consume {0}: it does not correspond to {1} -->
+  <FH_MeldGrowth_CannotConsumeWrongSeed>无法吞食{0}：该结块不属于{1}</FH_MeldGrowth_CannotConsumeWrongSeed>
+  <!-- EN: Cannot consume {0}: growth has reached the maximum level of {1} -->
+  <FH_MeldGrowth_CannotConsumeMaxLevel>无法吞食{0}：成长已经达到最高{1}级</FH_MeldGrowth_CannotConsumeMaxLevel>
+  <!-- EN: Cannot consume {0}: the mother beast is downed -->
+  <FH_MeldGrowth_CannotConsumeDowned>无法吞食{0}：母兽已经倒地</FH_MeldGrowth_CannotConsumeDowned>
+  <!-- EN: Cannot consume {0}: reserved by someone else -->
+  <FH_MeldGrowth_CannotConsumeReserved>无法吞食{0}：已被其他单位预留</FH_MeldGrowth_CannotConsumeReserved>
+  <!-- EN: {0} could not complete the growth. -->
+  <FH_MeldGrowth_ConsumeFailed>{0}未能完成成长。</FH_MeldGrowth_ConsumeFailed>
+  <!-- EN: {0} has grown to level {1}/{2}. -->
+  <FH_MeldGrowth_Upgraded>{0}已经成长至{1}/{2}级。</FH_MeldGrowth_Upgraded>
 </LanguageData>

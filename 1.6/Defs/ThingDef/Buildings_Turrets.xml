@@ -46,7 +46,7 @@
         <range>28.9</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>Pawn_Fleshbeast_Attack_Spike</soundCast>
-        <soundCastTail>Pawn_Fleshbeast_Fingerspike_Call</soundCastTail>
+        <soundCastTail Inherit="False" />
         <muzzleFlashScale>9</muzzleFlashScale>
         <consumeFuelPerShot>1</consumeFuelPerShot>
       </li>
@@ -63,6 +63,10 @@
     <defName>FH_FleshTurret</defName>
     <label>bone spitter</label>
     <description>A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes.</description>
+    <researchPrerequisites><li>FH_Research_ImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
     <thingClass>Building_TurretGun</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshTurret/FH_FleshTurret</texPath>
@@ -109,12 +113,6 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <comps>
-      <li Class="CompProperties_Explosive">
-        <wickTicks>240</wickTicks>
-        <explosiveRadius>3.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
-      </li>
       <li Class="CompProperties_Forbiddable" />
       <li Class="FleshHive.CompProperties_HiveNutritionRefuelable">
         <fuelLabel>replacement bone spikes</fuelLabel>
@@ -144,6 +142,10 @@
     <defName>FH_FleshmassSpitter</defName>
     <label>fleshmass spitter</label>
     <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.</description>
+    <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>160</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <graphicClass>Graphic_Indexed_SquashNStretch</graphicClass>
@@ -227,6 +229,10 @@
     <defName>FH_FleshSpreader</defName>
     <label>flesh burster</label>
     <description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</description>
+    <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
     <thingClass>Building_TrapExplosive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshSpreader/FH_FleshSpreader</texPath>
@@ -291,6 +297,10 @@
     <defName>FH_FleshDigester</defName>
     <label>flesh digester</label>
     <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
+    <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>1280</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshDigester/Main</texPath>
@@ -363,6 +373,10 @@
     <defName>FH_FleshDigesterS</defName>
     <label>small flesh digester</label>
     <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition.</description>
+    <researchPrerequisites><li>FH_Research_ImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>320</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshDigester/Small</texPath>

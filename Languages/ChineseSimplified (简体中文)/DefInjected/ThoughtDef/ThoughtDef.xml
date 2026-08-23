@@ -17,5 +17,10 @@
   <FH_Thought_FleshParasitism.stages.0.label>血肉寄生</FH_Thought_FleshParasitism.stages.0.label>
   <!-- EN: 被寄生. -->
   <FH_Thought_FleshParasitism.stages.0.description>身体中寄宿着活体血肉。</FH_Thought_FleshParasitism.stages.0.description>
+
+  <!-- EN: flesh nutrition -->
+  <FH_Thought_FleshNutrition.stages.flesh_nutrition.label>血肉营养</FH_Thought_FleshNutrition.stages.flesh_nutrition.label>
+  <!-- EN: I drew nutrition directly from the flesh hive. It did not feel good. -->
+  <FH_Thought_FleshNutrition.stages.flesh_nutrition.description>我直接从血肉巢群中获取了营养，这感觉不太好。</FH_Thought_FleshNutrition.stages.flesh_nutrition.description>
   
 </LanguageData>

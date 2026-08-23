@@ -30,6 +30,7 @@
     <description>The paraspike has lost the core bone spike it needs to survive. Unless it regenerates soon, it will weaken and die.</description>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <isBad>true</isBad>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
     <comps>
       <li Class="HediffCompProperties_DisappearsAndKills">
         <disappearsAfterTicks>5000</disappearsAfterTicks>
@@ -58,7 +59,7 @@
           <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -163,7 +164,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -223,6 +224,27 @@
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_Parasitism_BoneSpikeShot</abilityDef>
       </li>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>5</damageAmount>
+            <cooldown>2</cooldown>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Paraspike/Paraspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
     </comps>
   </HediffDef>
 
@@ -242,7 +264,7 @@
           <ArmorRating_Heat>1.2</ArmorRating_Heat>
         </statFactors>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -289,7 +311,7 @@
           <WorkSpeedGlobal>1.15</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -364,7 +386,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -446,7 +468,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -494,7 +516,7 @@
           <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -558,7 +580,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
           <ToxicResistance>1</ToxicResistance>
         </statOffsets>
       </li>
@@ -588,7 +610,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -641,7 +663,7 @@
         <minSeverity>0</minSeverity>
         <hungerRateFactor>0.5</hungerRateFactor>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>
@@ -705,7 +727,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
       </li>
     </stages>

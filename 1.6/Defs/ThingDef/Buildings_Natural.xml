@@ -69,6 +69,58 @@
           <li>FH_Category_MediumFleshBeast</li>
           <li>FH_Category_FleshReplica</li>
         </UnitCategories>
+        <traitOptions>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Fingerspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Puffspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Puffspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Puffspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Gutspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Paraspike</prerequisiteFusion>
+          </li>
+        </traitOptions>
       </li>
       <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
@@ -100,6 +152,11 @@
       </li>
       <li Class="FleshHive.CompProperties_HiveInitialNutrition">
         <initialNutrition>100</initialNutrition>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshHiveUnitFuser">
+        <defaultFusion>FH_Fusion_Default</defaultFusion>
+        <category>LittleFlesh</category>
+        <largeCategory>LargeFlesh</largeCategory>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveUpgrader">
         <upgrades>
@@ -392,6 +449,10 @@
     <defName>FH_NerveBundle</defName>
     <label>hive nerve bundle</label>
     <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>400</Meat_Twisted>
+    </costList>
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_NerveBundle/FH_FleshmassNerveBundle</texPath>
@@ -471,6 +532,10 @@
     <defName>FH_NerveCenter</defName>
     <label>hive nerve center</label>
     <description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</description>
+    <researchPrerequisites><li>FH_Research_FleshPrimaryHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>1600</Meat_Twisted>
+    </costList>
     <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_NerveCenter/FH_NerveCenter</texPath>
@@ -564,6 +629,7 @@
     <defName>FH_FleshParasiteVat</defName>
     <label>flesh parasite vat</label>
     <description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</description>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
     <thingClass>FleshHive.FleshParasitePod</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat</texPath>
@@ -596,6 +662,7 @@
     </killedLeavings>
     <costList>
       <FH_NerveFlesh>1</FH_NerveFlesh>
+      <Meat_Twisted>160</Meat_Twisted>
     </costList>
     <building>
 
@@ -619,6 +686,10 @@
     <defName>FH_FleshSack</defName>
     <label>flesh sack</label>
     <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
     <thingClass>FleshHive.FleshSack</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshSack</texPath>
@@ -666,6 +737,10 @@
     <defName>FH_FleshBlock</defName>
     <label>flesh block</label>
     <description>An impassable lump of twisted flesh. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
@@ -714,6 +789,10 @@
     <defName>FH_ChitinFleshBlock</defName>
     <label>chitin flesh block</label>
     <description>An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
+    <researchPrerequisites><li>FH_Research_BonePlatingFleshBlock</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
@@ -762,6 +841,10 @@
     <defName>FH_FleshDoor</defName>
     <label>flesh door</label>
     <description>A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>16</Meat_Twisted>
+    </costList>
     <thingClass>FleshHive.Building_FleshDoor</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshDoor/FH_FleshDoor_Mover</texPath>
@@ -828,6 +911,10 @@
     <defName>FH_FleshHopper</defName>
     <label>flesh hopper</label>
     <description>An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>112</Meat_Twisted>
+    </costList>
     <thingClass>FleshHive.Building_FleshHopper</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshHopper/FH_FleshHopper</texPath>
@@ -851,7 +938,6 @@
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
     <inspectorTabs>
-      <li>FleshHive.ITab_FleshHive</li>
       <li>FleshHive.ITab_FleshHiveGroup</li>
     </inspectorTabs>
     <statBases>
@@ -896,6 +982,10 @@
     <defName>FH_FleshBox</defName>
     <label>flesh vesicle</label>
     <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>32</Meat_Twisted>
+    </costList>
     <thingClass>FleshHive.Building_FleshBox</thingClass>
     <graphicData>
       <texPath>FH_FleshBox/FH_FleshBox</texPath>
@@ -979,6 +1069,10 @@
     <defName>FH_FleshBarricade</defName>
     <label>flesh barricade</label>
     <description>A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
+    <researchPrerequisites><li>FH_Research_ImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
@@ -1028,6 +1122,10 @@
     <defName>FH_ChitinFleshBarricade</defName>
     <label>chitin flesh barricade</label>
     <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
+    <researchPrerequisites><li>FH_Research_BonePlatingFleshBlock</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
@@ -1078,6 +1176,10 @@
     <defName>FH_FleshBed</defName>
     <label>flesh bed</label>
     <description>A single bed made of flesh. Soft flesh has grown into a pocket-like structure and a pillow for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>72</Meat_Twisted>
+    </costList>
     <thingClass>Building_Bed</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshBed/FH_FleshBed</texPath>
@@ -1141,6 +1243,10 @@
     <defName>FH_FleshDoubleBed</defName>
     <label>flesh double bed</label>
     <description>A double bed made of flesh. Soft flesh has grown into a pocket-like structure and pillows for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>136</Meat_Twisted>
+    </costList>
     <thingClass>Building_Bed</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshBed/FH_FleshDoubleBed</texPath>
@@ -1204,6 +1310,10 @@
     <defName>FH_FleshColumn</defName>
     <label>flesh column</label>
     <description>A column made of flesh, used to support roofs. It does not block sight or movement.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>32</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshColumn/FH_FleshColumn</texPath>
@@ -1246,6 +1356,10 @@
     <defName>FH_FleshStool</defName>
     <label>flesh stool</label>
     <description>A simple stool made of flesh for people to sit on. It is unexpectedly comfortable. It can be used near dining tables, workbenches, or elsewhere.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>40</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshStool/FH_FleshStool</texPath>
@@ -1285,6 +1399,10 @@
     <defName>FH_FleshTableSmall</defName>
     <label>flesh table (1x2)</label>
     <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>40</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshTable/FH_FleshTable1x2</texPath>
@@ -1329,6 +1447,10 @@
     <defName>FH_FleshTableSquare</defName>
     <label>flesh table (2x2)</label>
     <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshTable/FH_FleshTable2x2_north</texPath>
@@ -1373,6 +1495,10 @@
     <defName>FH_FleshTableLong</defName>
     <label>flesh table (4x2)</label>
     <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>152</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshTable/FH_FleshTable2x4</texPath>
@@ -1417,6 +1543,10 @@
     <defName>FH_FleshTableLarge</defName>
     <label>flesh table (3x3)</label>
     <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>160</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshTable/FH_FleshTable3x3_north</texPath>
@@ -1459,9 +1589,69 @@
 
 
   <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshPower</defName>
+    <label>flesh power generator</label>
+    <description>Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive.</description>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshPower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.5,2.5)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(2,2)</size>
+    <fillPercent>0.75</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <rotatable>false</rotatable>
+    <researchPrerequisites>
+      <li>FH_Research_NutritionCycle</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshPowerPlant">
+        <basePowerConsumption>-1000</basePowerConsumption>
+        <powerOutput>1000</powerOutput>
+        <dailyNutritionCost>1.2</dailyNutritionCost>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>WoodFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(255,171,171,0)</glowColor>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshPower</building>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshLamp</defName>
     <label>flesh lamp</label>
     <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>32</Meat_Twisted>
+    </costList>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_Fleshbulb/Variants</texPath>
@@ -1489,7 +1679,7 @@
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>20</glowRadius>
-        <glowColor>(204,51,38,0)</glowColor>
+        <glowColor>(255,171,171,0)</glowColor>
       </li>
       <li Class="CompProperties_HeatPusher">
         <heatPerSecond>21</heatPerSecond>
@@ -1503,7 +1693,7 @@
         <initialErosionCount>0</initialErosionCount>
       </li>
       <li Class="FleshHive.CompProperties_HiveNutritionProducer">
-        <nutritionPerInterval>0.1</nutritionPerInterval>
+        <nutritionPerInterval>0.05</nutritionPerInterval>
         <intervalTicks>2500</intervalTicks>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
@@ -1588,6 +1778,10 @@
     <defName>FH_FleshBush</defName>
     <label>fleshberry bush</label>
     <description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>40</Meat_Twisted>
+    </costList>
     <thingClass>FleshHive.FleshBush</thingClass>
     <altitudeLayer>LowPlant</altitudeLayer>
     <fillPercent>0.2</fillPercent>

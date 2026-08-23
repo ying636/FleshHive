@@ -11,8 +11,8 @@
   <FH_Acidbulb.comps.ParasitismComp.abilityDescription>远距离发射酸蚀迫击炮弹，或向目标区域喷吐黏稠酸液。</FH_Acidbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic abilities: acid mortar and acid spray -->
   <FH_Acidbulb.comps.ParasitismComp.abilityLabel>寄生能力：酸蚀迫击炮与酸液喷吐</FH_Acidbulb.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -1; Toxic Resistance +100%; grants acid mortar and acid spray abilities. -->
-  <FH_Acidbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；毒抗+100%；提供“酸蚀迫击炮”和“酸液喷吐”主动能力。</FH_Acidbulb.comps.ParasitismComp.effect>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; Toxic Resistance +100%; grants acid mortar and acid spray abilities. -->
+  <FH_Acidbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；毒抗+100%；提供“酸蚀迫击炮”和“酸液喷吐”主动能力。</FH_Acidbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Acidbulb.tools.tentacle-0.label>触手</FH_Acidbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -36,8 +36,8 @@
   <FH_Bulbfreak.comps.ParasitismComp.abilityDescription>两条触手造成10点钝击伤害，冷却时间为2秒。主动能力消耗200扭曲肉，释放两只随机中型血肉兽。</FH_Bulbfreak.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapons: tentacles and release fleshbeasts -->
   <FH_Bulbfreak.comps.ParasitismComp.abilityLabel>寄生武器：触手与释放血肉兽</FH_Bulbfreak.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -1; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability. -->
-  <FH_Bulbfreak.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；全局工作效率+20%；扭曲肉容量+200；提供两条触手和“释放血肉兽”主动能力。</FH_Bulbfreak.comps.ParasitismComp.effect>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability. -->
+  <FH_Bulbfreak.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；全局工作效率+20%；扭曲肉容量+200；提供两条触手和“释放血肉兽”主动能力。</FH_Bulbfreak.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bulbfreak.tools.tentacle-0.label>触手</FH_Bulbfreak.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -61,8 +61,8 @@
   <FH_Fingerspike.comps.ParasitismComp.abilityDescription>宿主体表生长骨刺触手，造成刺击伤害。</FH_Fingerspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：骨刺触手 -->
   <FH_Fingerspike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺触手</FH_Fingerspike.comps.ParasitismComp.abilityLabel>
-  <!-- EN: 全局工作效率+10%，魅力-1，“血肉寄生”心情-6 -->
-  <FH_Fingerspike.comps.ParasitismComp.effect>全局工作效率+10%；魅力-1；“血肉寄生”心情-6</FH_Fingerspike.comps.ParasitismComp.effect>
+  <!-- EN: 全局工作效率+10%，魅力-5%，“血肉寄生”心情-6 -->
+  <FH_Fingerspike.comps.ParasitismComp.effect>全局工作效率+10%；魅力-5%；“血肉寄生”心情-6</FH_Fingerspike.comps.ParasitismComp.effect>
   <!-- EN: spike -->
   <FH_Fingerspike.tools.spike.label>骨刺</FH_Fingerspike.tools.spike.label>
   <!-- EN: spike -->
@@ -106,10 +106,10 @@
   <!-- EN: horned head -->
   <FH_Fleshwind.tools.horned_head.labelNoLocation>角质头部</FH_Fleshwind.tools.horned_head.labelNoLocation>
   
-  <!-- EN: 胃血兽 -->
+  <!-- EN: gutspike -->
   <FH_Gutspike.label>胃血兽</FH_Gutspike.label>
-  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
-  <FH_Gutspike.description>长着一根带尖刺触手的血肉兽，体型与犬类动物相当。尽管它的腿很短，但移动速度非常快。</FH_Gutspike.description>
+  <!-- EN: A small fleshbeast with a specialized stomach, roughly the size of a dog. Its stomach stores corrosive acid and rapidly compresses to spray the fluid at enemies. Its frail body is poorly suited for close combat, so gutspikes usually rely on numbers to launch ranged attacks. -->
+  <FH_Gutspike.description>一只拥有胃部特化的小型血肉兽，体型与犬类动物相当。特化的胃部可以用来储存酸液，并且通过快速挤压胃部来将这些腐蚀性酸液喷吐而出。其孱弱的身体并不擅长近距离战斗，通常依靠数量优势进行远距离袭击。</FH_Gutspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Gutspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Gutspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 喷射酸浆。 -->
@@ -123,10 +123,10 @@
   <!-- EN: head -->
   <FH_Gutspike.tools.head.label>头部</FH_Gutspike.tools.head.label>
   
-  <!-- EN: 寄血兽 -->
+  <!-- EN: paraspike -->
   <FH_Paraspike.label>寄血兽</FH_Paraspike.label>
-  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
-  <FH_Paraspike.description>长着一根带尖刺触手的血肉兽，体型与犬类动物相当。尽管它的腿很短，但移动速度非常快。</FH_Paraspike.description>
+  <!-- EN: A small fleshbeast specialized for parasitism, roughly the size of a dog. It can fire a parasitic stinger into a victim, causing tiny internal wounds that continue to bleed. Each paraspike has only one stinger and soon dies after firing it. Paraspikes can also actively parasitize other animals and emerge when the host dies. -->
+  <FH_Paraspike.description>一只特化了寄生能力的小型血肉兽，体型与犬类动物相当。它可以将寄生毒刺发射到受害者体内，并且持续从内部造成流血的微型伤口，但是每只寄血兽只有一枚寄生毒刺，发射之后原本的寄血兽就会很快死亡。寄血兽可以主动寄生在其他动物身上，并在宿主死亡时脱离。</FH_Paraspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Paraspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Paraspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 发射骨刺，造成刺击伤害。 -->
@@ -142,10 +142,10 @@
   <!-- EN: spike -->
   <FH_Paraspike.tools.spike.labelNoLocation>骨刺</FH_Paraspike.tools.spike.labelNoLocation>
   
-  <!-- EN: 肺血兽 -->
+  <!-- EN: puffspike -->
   <FH_Puffspike.label>肺血兽</FH_Puffspike.label>
-  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
-  <FH_Puffspike.description>长着一根带尖刺触手的血肉兽，体型与犬类动物相当。尽管它的腿很短，但移动速度非常快。</FH_Puffspike.description>
+  <!-- EN: A small fleshbeast with specialized lungs, roughly the size of a dog. Its powerful oxygenation system allows it to move at extreme speed, but its frail body is poorly suited for combat. Puffspikes usually serve as haulers, working busily around flesh hives. -->
+  <FH_Puffspike.description>一只拥有肺部特化的小型血肉兽，体型与犬类动物相当。强大的供氧系统可以使其以极快的速度移动，但是其孱弱的身体并不擅长战斗，通常作为巢穴的搬运工忙碌于血肉巢穴附近。</FH_Puffspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Puffspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Puffspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 发射骨刺，造成刺击伤害。 -->
@@ -167,8 +167,8 @@
   <FH_Shatterspike.comps.ParasitismComp.abilityDescription>远程发射骨刺碎片。</FH_Shatterspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：碎骨喷射 -->
   <FH_Shatterspike.comps.ParasitismComp.abilityLabel>寄生武器：碎骨喷射</FH_Shatterspike.comps.ParasitismComp.abilityLabel>
-  <!-- EN: “血肉寄生”心情-6；魅力-1 -->
-  <FH_Shatterspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1</FH_Shatterspike.comps.ParasitismComp.effect>
+  <!-- EN: “血肉寄生”心情-6；魅力-5% -->
+  <FH_Shatterspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%</FH_Shatterspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shatterspike.tools.left_spike.label>左骨刺</FH_Shatterspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -194,8 +194,8 @@
   <FH_Shieldspike.comps.ParasitismComp.abilityDescription>宿主获得盾爪，钝击附近敌人。</FH_Shieldspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：盾爪 -->
   <FH_Shieldspike.comps.ParasitismComp.abilityLabel>寄生武器：盾爪</FH_Shieldspike.comps.ParasitismComp.abilityLabel>
-  <!-- EN: 护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6 -->
-  <FH_Shieldspike.comps.ParasitismComp.effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6</FH_Shieldspike.comps.ParasitismComp.effect>
+  <!-- EN: 护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6 -->
+  <FH_Shieldspike.comps.ParasitismComp.effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6</FH_Shieldspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shieldspike.tools.left_spike.label>左盾爪</FH_Shieldspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -209,16 +209,16 @@
   
   <!-- EN: spitbulb -->
   <FH_Spitbulb.label>喷射瘤兽</FH_Spitbulb.label>
-  <!-- EN: A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts. -->
-  <FH_Spitbulb.description>由许多小型血肉兽组成的可怕混合体，这些血肉兽都由同一个神经系统控制。它长着两只大爪子，可以撕碎受害者。喷射瘤兽行动相对缓慢，也很容易被消灭，但会从远处向敌人喷射危险的血肉弹体。</FH_Spitbulb.description>
+  <!-- EN: A horrid amalgamation of many smaller fleshbeasts controlled by a linked nervous system. A massive muscular launching organ grows across its body, allowing it to fire twisted lumps of flesh over extreme distances. After striking a target, each lump rapidly assembles itself into living small fleshbeasts. The spitbulb moves relatively slowly and is easy to kill, and splits into a horde of smaller fleshbeasts upon death. -->
+  <FH_Spitbulb.description>由许多小型血肉兽组成的可怕混合体，这些血肉兽都由同一个神经系统控制。其身体上生长着一个巨大的肌肉喷射装置，可以在超远距离发射扭曲的血肉团块。这个团块在命中目标后会快速集合成活的小型血肉兽。它的行动相对缓慢，也很容易被消灭，死后会分裂成一群小型血肉兽。</FH_Spitbulb.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point. -->
   <FH_Spitbulb.comps.ParasitismComp.abilityDescription>消耗25扭曲肉发射爆炸性炮弹，在3×3区域造成20点伤害，并在命中位置释放一只随机小型血肉兽。</FH_Spitbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: flesh mortar -->
   <FH_Spitbulb.comps.ParasitismComp.abilityLabel>寄生武器：血肉迫击炮</FH_Spitbulb.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +250; grants the flesh mortar ability. -->
-  <FH_Spitbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；扭曲肉容量+250；提供“血肉迫击炮”主动能力。</FH_Spitbulb.comps.ParasitismComp.effect>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +250; grants the flesh mortar ability. -->
+  <FH_Spitbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；扭曲肉容量+250；提供“血肉迫击炮”主动能力。</FH_Spitbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Spitbulb.tools.tentacle-0.label>触手</FH_Spitbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -232,18 +232,18 @@
   <!-- EN: head -->
   <FH_Spitbulb.tools.head.label>头部</FH_Spitbulb.tools.head.label>
   
-  <!-- EN: aaa -->
+  <!-- EN: toughspike -->
   <FH_Toughspike.label>双爪兽</FH_Toughspike.label>
-  <!-- EN: A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly. -->
-  <FH_Toughspike.description>长着两根带尖刺触手的血肉兽，身上还覆盖着甲壳，体型与成年人相当。双爪兽能够投掷尖锐的角质骨刺，从远处击倒受害者。\n\n若不尽快屠宰，双爪兽的尸体便会化为一滩液化的烂肉。</FH_Toughspike.description>
+  <!-- EN: A man-sized fleshbeast with two spiked tentacles and an armored carapace. Toughspikes throw sharp keratin spikes to bring down victims from a distance. If not butchered quickly, a toughspike corpse will dissolve into a puddle of liquefied flesh. -->
+  <FH_Toughspike.description>长着两根带尖刺触手的血肉兽，身上还覆盖着甲壳，体型与成年人相当。双爪兽能够投掷尖锐的角质骨刺，从远处击倒受害者。若不尽快屠宰，双爪兽的尸体便会化为一滩液化的烂肉。</FH_Toughspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Toughspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Toughspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 宿主体表生长两条骨刺触手，造成刺击伤害。 -->
   <FH_Toughspike.comps.ParasitismComp.abilityDescription>宿主体表生长两条骨刺触手，造成刺击伤害。</FH_Toughspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：骨刺触手 -->
   <FH_Toughspike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺触手</FH_Toughspike.comps.ParasitismComp.abilityLabel>
-  <!-- EN: “血肉寄生”心情-6；魅力-1；全局工作效率+15%；宿主获得两条骨刺触手 -->
-  <FH_Toughspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；全局工作效率+15%；宿主获得两条骨刺触手</FH_Toughspike.comps.ParasitismComp.effect>
+  <!-- EN: “血肉寄生”心情-6；魅力-5%；全局工作效率+15%；宿主获得两条骨刺触手 -->
+  <FH_Toughspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；全局工作效率+15%；宿主获得两条骨刺触手</FH_Toughspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Toughspike.tools.left_spike.label>左骨刺</FH_Toughspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -265,8 +265,8 @@
   <FH_Trispike.comps.ParasitismComp.abilityDescription>发射骨刺，造成刺击伤害。</FH_Trispike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：骨刺射击 -->
   <FH_Trispike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺射击</FH_Trispike.comps.ParasitismComp.abilityLabel>
-  <!-- EN: “血肉寄生”心情-6；魅力-1；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天） -->
-  <FH_Trispike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；填充10扭曲肉充能后可释放2只随机小型血肉兽（冷却5天）</FH_Trispike.comps.ParasitismComp.effect>
+  <!-- EN: “血肉寄生”心情-6；魅力-5%；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天） -->
+  <FH_Trispike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；填充10扭曲肉充能后可释放2只随机小型血肉兽（冷却5天）</FH_Trispike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Trispike.tools.left_spike.label>左骨刺</FH_Trispike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -282,18 +282,18 @@
   <!-- EN: head -->
   <FH_Trispike.tools.head.label>头部</FH_Trispike.tools.head.label>
   
-  <!-- EN: 鞭爪兽 -->
+  <!-- EN: whipspike -->
   <FH_Whipspike.label>鞭爪兽</FH_Whipspike.label>
-  <!-- EN: A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast. -->
-  <FH_Whipspike.description>长着一根带尖刺触手的血肉兽，体型与犬类动物相当。尽管它的腿很短，但移动速度非常快。</FH_Whipspike.description>
+  <!-- EN: A small fleshbeast with a long whip-like offensive limb, roughly the size of a dog. It can lash out from a relatively safe distance and usually works alongside fingerspikes, overwhelming prey through numbers. -->
+  <FH_Whipspike.description>一只拥有长鞭型进攻武器的小型血肉兽，体型与犬类动物相当。将长长的鞭子甩出可以使其在较为安全的位置进行攻击，通常与独爪兽协同行动，一同以数量优势围攻猎物。</FH_Whipspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Whipspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Whipspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 宿主体表生长血肉触鞭，鞭击附近敌人造成利器伤害。 -->
   <FH_Whipspike.comps.ParasitismComp.abilityDescription>宿主体表生长血肉触鞭，鞭击附近敌人并造成利器伤害。</FH_Whipspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：血肉触手 -->
   <FH_Whipspike.comps.ParasitismComp.abilityLabel>寄生武器：血肉触鞭</FH_Whipspike.comps.ParasitismComp.abilityLabel>
-  <!-- EN: 魅力-1，“血肉寄生”心情-6 -->
-  <FH_Whipspike.comps.ParasitismComp.effect>魅力-1；“血肉寄生”心情-6</FH_Whipspike.comps.ParasitismComp.effect>
+  <!-- EN: 魅力-5%，“血肉寄生”心情-6 -->
+  <FH_Whipspike.comps.ParasitismComp.effect>魅力-5%；“血肉寄生”心情-6</FH_Whipspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Whipspike.tools.head.label>头部</FH_Whipspike.tools.head.label>
   <!-- EN: spike -->
@@ -309,8 +309,8 @@
   <FH_Bulbplump.comps.ParasitismComp.abilityDescription>两条血肉触手攻击附近敌人，造成10点钝器伤害，攻击冷却2秒。</FH_Bulbplump.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: flesh tentacles -->
   <FH_Bulbplump.comps.ParasitismComp.abilityLabel>寄生武器：血肉触手</FH_Bulbplump.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +100; hunger rate x50%. -->
-  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；扭曲肉容量+100；饥饿度×50%。</FH_Bulbplump.comps.ParasitismComp.effect>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +100; hunger rate x50%. -->
+  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；扭曲肉容量+100；饥饿度×50%。</FH_Bulbplump.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bulbplump.tools.tentacle-0.label>触手</FH_Bulbplump.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -326,8 +326,8 @@
   <FH_Synbulb.comps.ParasitismComp.abilityDescription>两条触手瞄准1秒后，向16格内的敌人发射骨刺碎片。</FH_Synbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: bone burst -->
   <FH_Synbulb.comps.ParasitismComp.abilityLabel>寄生武器：碎骨喷发</FH_Synbulb.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -1; grants the psychic harmonizer condition. -->
-  <FH_Synbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-1；获得状态“心灵同调”。</FH_Synbulb.comps.ParasitismComp.effect>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; grants the psychic harmonizer condition. -->
+  <FH_Synbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；获得状态“心灵同调”。</FH_Synbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Synbulb.tools.tentacle-0.label>触手</FH_Synbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->

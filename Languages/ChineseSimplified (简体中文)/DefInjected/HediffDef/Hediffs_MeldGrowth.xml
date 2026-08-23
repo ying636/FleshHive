@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: mother beast growth -->
+  <FH_MeldGrowth.label>母兽成长</FH_MeldGrowth.label>
+  <!-- EN: The mother beast has consumed its corresponding core and undergone permanent growth. Each growth level increases parasitism capacity, twisted flesh capacity, body part health, regeneration, bleed resistance, and damage resistance. -->
+  <FH_MeldGrowth.description>母兽吞食了与自身对应的结块，产生了永久性的成长。每级成长都会提高寄生空间、扭曲肉容量、部位生命值、再生能力、抗失血能力和伤害抗性。</FH_MeldGrowth.description>
+
+</LanguageData>

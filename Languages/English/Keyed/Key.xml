@@ -44,6 +44,10 @@
   <FH_HivePlan_StatusEntries>{0} plans, {1} active</FH_HivePlan_StatusEntries>
 
   <HCF_FormulaCategory_Parasite>Parasite</HCF_FormulaCategory_Parasite>
+  <HCF_FormulaCategory_FleshTrait>Flesh trait</HCF_FormulaCategory_FleshTrait>
+  <FH_FormulaTrait_OnlyOne>Only one flesh trait can be selected.</FH_FormulaTrait_OnlyOne>
+  <FH_FormulaTrait_NoneAvailable>No discovered traits are available for this fleshbeast.</FH_FormulaTrait_NoneAvailable>
+  <FH_FormulaTrait_Noun>trait</FH_FormulaTrait_Noun>
   <HCF_AddParasite>Add Parasite</HCF_AddParasite>
   <HCF_SelectParasite>Select Parasite</HCF_SelectParasite>
   <HCF_Parasite_NoSpace>Insufficient parasite space (remaining {0}, need {1})</HCF_Parasite_NoSpace>
@@ -138,6 +142,8 @@
   <FH_HiveHungryWhisper3>Hungry hungry hungry hungry hungry</FH_HiveHungryWhisper3>
   <FH_HiveHungryWhisper4>Flesh...........</FH_HiveHungryWhisper4>
   <FH_HiveNutritionRefuelable_NutritionPerFuel>Automatically consumes {0} hive nutrition per replacement shot.</FH_HiveNutritionRefuelable_NutritionPerFuel>
+  <FH_FleshPowerPlant_NutritionUpkeep>Daily hive nutrition upkeep: {0}</FH_FleshPowerPlant_NutritionUpkeep>
+  <FH_FleshPowerPlant_Inactive>Inactive: insufficient hive nutrition.</FH_FleshPowerPlant_Inactive>
   <FH_Spawner_Trait>Trait</FH_Spawner_Trait>
   <FH_Spawner_TraitNone>None</FH_Spawner_TraitNone>
   <FH_FleshDigester_NutritionUpkeep>Daily nutrition upkeep: {0}</FH_FleshDigester_NutritionUpkeep>
@@ -173,6 +179,7 @@
   <FH_Fusion_ApplyTemplate>Apply</FH_Fusion_ApplyTemplate>
   <FH_Fusion_TemplateMissingMaterials>The required fleshbeasts are not currently available.</FH_Fusion_TemplateMissingMaterials>
   <FH_Fusion_NoValidFusion>Select all required fusion materials first.</FH_Fusion_NoValidFusion>
+  <FH_Fusion_FuserUnavailable>The fleshbeast fusion component on the primary nest is unavailable.</FH_Fusion_FuserUnavailable>
   <FH_TabParasiticWeapons>Parasitic weapons</FH_TabParasiticWeapons>
   <FH_ParasiticWeaponSlot>Parasitic weapon slot</FH_ParasiticWeaponSlot>
   <FH_LeftParasiticWeaponSlot>Parasitic weapon: left slot</FH_LeftParasiticWeaponSlot>
@@ -199,6 +206,9 @@
   <FH_Quest_FleshSurvivor_AttackIn>Fleshbeasts will arrive in {0}.</FH_Quest_FleshSurvivor_AttackIn>
   <FH_Quest_FleshSurvivor_AttackLabel>Fleshbeasts incoming</FH_Quest_FleshSurvivor_AttackLabel>
   <FH_Quest_FleshSurvivor_AttackText>The frenzied fleshbeasts pursuing Hela Bates have reached the colony.</FH_Quest_FleshSurvivor_AttackText>
+
+  <FH_Hela_FirstName>Hela</FH_Hela_FirstName>
+  <FH_Hela_LastName>Bates</FH_Hela_LastName>
 
   <FH_Hela_ParasiteCapacityInfo>Parasite capacity: {0}/{1}</FH_Hela_ParasiteCapacityInfo>
   <FH_Hela_BodyPartHealthInfo>Occupied parasite space: {0}; body part health: {1}</FH_Hela_BodyPartHealthInfo>
@@ -297,4 +307,16 @@
   <FH_FleshFloor_AlreadyFlesh>This cell is already flesh floor.</FH_FleshFloor_AlreadyFlesh>
   <FH_FleshFloor_UnsupportedTerrain>Flesh floor cannot be built on this terrain.</FH_FleshFloor_UnsupportedTerrain>
   <FH_FleshFloor_MustConnect>Flesh floor must connect to existing flesh floor.</FH_FleshFloor_MustConnect>
+  <FH_FleshCarapaceFloor_MustPlaceOnFlesh>Carapace floor must be built on flesh terrain.</FH_FleshCarapaceFloor_MustPlaceOnFlesh>
+
+  <FH_MeldGrowth_Level>Level {0}/{1}</FH_MeldGrowth_Level>
+  <FH_MeldGrowth_Effects>Growth level: {0}/{1}\nParasitism capacity: +{2}\nTwisted flesh capacity: +{3}\nBody part health: +{4}%\nRegeneration: +{5} per day\nTotal bleed factor: -{6}%\nIncoming damage factor: -{7}%</FH_MeldGrowth_Effects>
+  <FH_MeldGrowth_ConsumeSeed>Consume {0} to grow</FH_MeldGrowth_ConsumeSeed>
+  <FH_MeldGrowth_CannotConsume>Cannot consume {0}</FH_MeldGrowth_CannotConsume>
+  <FH_MeldGrowth_CannotConsumeWrongSeed>Cannot consume {0}: it does not correspond to {1}</FH_MeldGrowth_CannotConsumeWrongSeed>
+  <FH_MeldGrowth_CannotConsumeMaxLevel>Cannot consume {0}: growth has reached the maximum level of {1}</FH_MeldGrowth_CannotConsumeMaxLevel>
+  <FH_MeldGrowth_CannotConsumeDowned>Cannot consume {0}: the mother beast is downed</FH_MeldGrowth_CannotConsumeDowned>
+  <FH_MeldGrowth_CannotConsumeReserved>Cannot consume {0}: reserved by someone else</FH_MeldGrowth_CannotConsumeReserved>
+  <FH_MeldGrowth_ConsumeFailed>{0} could not complete the growth.</FH_MeldGrowth_ConsumeFailed>
+  <FH_MeldGrowth_Upgraded>{0} has grown to level {1}/{2}.</FH_MeldGrowth_Upgraded>
 </LanguageData>

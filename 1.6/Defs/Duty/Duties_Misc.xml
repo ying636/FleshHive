@@ -76,10 +76,6 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="JobGiver_FleeForDistance">
-          <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
-          <fleeDistRange>6~12</fleeDistRange>
-        </li>
         <li Class="FleshHive.JobGiver_GroupRangedAttackTarget" />
       </subNodes>
     </thinkNode>

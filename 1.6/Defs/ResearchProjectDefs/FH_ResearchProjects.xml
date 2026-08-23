@@ -8,12 +8,6 @@
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
-      <li>Flesh hive</li>
-      <li>Flesh floors</li>
-      <li>Flesh blocks</li>
-      <li>Flesh doors</li>
-      <li>Flesh vesicles</li>
-      <li>Flesh hoppers</li>
       <li>Twisted meat</li>
       <li>All small fleshbeasts</li>
     </customUnlockTexts>
@@ -25,15 +19,10 @@
   <ResearchProjectDef>
     <defName>FH_Research_NutritionCycle</defName>
     <label>nutrition cycle</label>
-    <description>Unlocks production of flesh lamps, fleshberry bushes, and flesh sacks.</description>
+    <description>Unlocks production of flesh lamps, fleshberry bushes, flesh sacks, and flesh power generators.</description>
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
-    <customUnlockTexts>
-      <li>Flesh lamps</li>
-      <li>Fleshberry bushes</li>
-      <li>Flesh sacks</li>
-    </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>0.00</researchViewY>
@@ -47,11 +36,6 @@
     <knowledgeCost>10</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
-    <customUnlockTexts>
-      <li>Bone-spike spitters</li>
-      <li>Small guard tentacles</li>
-      <li>Flesh barricades</li>
-    </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>1.30</researchViewY>
@@ -65,12 +49,6 @@
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
-    <customUnlockTexts>
-      <li>Flesh beds</li>
-      <li>Flesh tables</li>
-      <li>Flesh stools</li>
-      <li>Flesh support columns</li>
-    </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>4.90</researchViewY>
@@ -80,14 +58,10 @@
   <ResearchProjectDef>
     <defName>FH_Research_FleshbeastCoexistence</defName>
     <label>fleshbeast coexistence</label>
-    <description>Unlocks flesh parasite vats and production of flesh adaptation modules.</description>
+    <description>Unlocks flesh parasite vats and production of flesh adaptation modules and flesh symbiosis modules.</description>
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
-    <customUnlockTexts>
-      <li>Flesh parasite vats</li>
-      <li>Flesh adaptation modules</li>
-    </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>3.80</researchViewY>
@@ -102,10 +76,8 @@
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
-      <li>Nerve bundles</li>
       <li>All medium fleshbeasts except flesh replicas</li>
       <li>Bioferrite</li>
-      <li>Nerve flesh</li>
       <li>Flesh hive upgrades</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
@@ -123,10 +95,6 @@
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
       <li>Medium fleshbeast fusion</li>
-      <li>Flesh tentacles</li>
-      <li>Flesh whips</li>
-      <li>Fleshmass stomachs</li>
-      <li>Fleshmass lungs</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
     <researchViewX>3.00</researchViewX>
@@ -156,9 +124,7 @@
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
-      <li>Chitin-plated flesh blocks</li>
-      <li>Chitin-plated flesh barricades</li>
-      <li>Replace existing flesh blocks and barricades on all maps</li>
+      <li>Harden all flesh blocks and barricades</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
     <researchViewX>3.00</researchViewX>
@@ -173,11 +139,6 @@
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
-    <customUnlockTexts>
-      <li>Fleshmass spitters</li>
-      <li>Flesh bursters</li>
-      <li>Guard tentacle centers</li>
-    </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
     <researchViewX>3.00</researchViewX>
     <researchViewY>3.80</researchViewY>
@@ -192,9 +153,8 @@
     <knowledgeCategory>Advanced</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
-      <li>Nerve centers</li>
       <li>All large fleshbeasts</li>
-      <li>Flesh hive evolution into a primary nest</li>
+      <li>Flesh primary nest evolution</li>
     </customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
     <researchViewX>3.00</researchViewX>
@@ -211,9 +171,11 @@
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
       <li>Large fleshbeast fusion</li>
-      <li>Parasite expansion packs</li>
     </customUnlockTexts>
-    <prerequisites><li>FH_Research_FleshPrimaryHive</li></prerequisites>
+    <prerequisites>
+      <li>FH_Research_FleshPrimaryHive</li>
+      <li>FH_Research_FleshFusion</li>
+    </prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>1.70</researchViewY>
     <tab>FH_ResearchTab_FleshHive</tab>

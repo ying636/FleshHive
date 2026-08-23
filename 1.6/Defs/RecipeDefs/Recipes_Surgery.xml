@@ -50,4 +50,173 @@
     <workAmount>2500</workAmount>
   </RecipeDef>
 
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>FH_InstallFleshSymbiosisModule</defName>
+    <label>install flesh symbiosis module</label>
+    <description>Install a flesh symbiosis module.</description>
+    <addsHediff>FH_FleshSymbiosis</addsHediff>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <descriptionHyperlinks>
+      <ThingDef>FH_FleshSymbiosisModule</ThingDef>
+      <HediffDef>FH_FleshSymbiosis</HediffDef>
+    </descriptionHyperlinks>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>FH_FleshSymbiosisModule</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FH_FleshSymbiosisModule</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <jobString>Installing flesh symbiosis module.</jobString>
+    <recipeUsers>
+      <li>Human</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+    </recipeUsers>
+    <skillRequirements>
+      <Medicine>5</Medicine>
+    </skillRequirements>
+    <workAmount>2500</workAmount>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase" MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_InstallTentacle</defName>
+    <label>install flesh tentacle</label>
+    <description>Install a flesh tentacle.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Tentacle</ThingDef>
+      <HediffDef>Tentacle</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing flesh tentacle.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Tentacle</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Tentacle</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Tentacle</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase" MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_InstallFleshWhip</defName>
+    <label>install flesh whip</label>
+    <description>Install a flesh whip.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FleshWhip</ThingDef>
+      <HediffDef>FleshWhip</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing flesh whip.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FleshWhip</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FleshWhip</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FleshWhip</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase" MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_InstallFleshmassStomach</defName>
+    <label>install fleshmass stomach</label>
+    <description>Install a fleshmass stomach.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FleshmassStomach</ThingDef>
+      <HediffDef>FleshmassStomach</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing fleshmass stomach.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FleshmassStomach</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FleshmassStomach</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FleshmassStomach</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase" MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_InstallFleshmassLung</defName>
+    <label>install fleshmass lung</label>
+    <description>Install a fleshmass lung.</description>
+    <descriptionHyperlinks>
+      <ThingDef>FleshmassLung</ThingDef>
+      <HediffDef>FleshmassLung</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing fleshmass lung.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FleshmassLung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FleshmassLung</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Lung</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FleshmassLung</addsHediff>
+  </RecipeDef>
+
 </Defs>

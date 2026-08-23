@@ -9,6 +9,13 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastAgility" />
+      <li Class="CompProperties_Studiable">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
     </comps>
     <race>
       <thinkTreeMain>FH_ThinkTree_FleshBeast</thinkTreeMain>
@@ -70,6 +77,7 @@
     </comps>
     <statBases>
       <MarketValue>300</MarketValue>
+      <MinimumContainmentStrength>40</MinimumContainmentStrength>
     </statBases>
     <race>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
@@ -102,7 +110,7 @@
         <iconPath>UI/Ability/FH_Fingerspike</iconPath> 
         <cost>1</cost>
         <hediff>FH_Parasitism_Fingerspike</hediff>
-        <effect>全局工作效率+10%，魅力-1，“血肉寄生”心情-6</effect>
+        <effect>全局工作效率+10%，魅力-5%，“血肉寄生”心情-6</effect>
         <abilityLabel>寄生武器：骨刺触手</abilityLabel>
         <abilityDescription>宿主体表生长骨刺触手，造成刺击伤害。</abilityDescription>
       </li>
@@ -191,13 +199,13 @@
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Puffspike</defName>
-    <label>肺血兽</label>
-    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <label>puffspike</label>
+    <description>A small fleshbeast with specialized lungs, roughly the size of a dog. Its powerful oxygenation system allows it to move at extreme speed, but its frail body is poorly suited for combat. Puffspikes usually serve as haulers, working busily around flesh hives.</description>
     <statBases>
       <MoveSpeed>7.1</MoveSpeed>
     </statBases>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -250,7 +258,7 @@
 
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Puffspike</defName>
-    <label>肺血兽</label>
+    <label>puffspike</label>
     <race>FH_Puffspike</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
 
@@ -275,8 +283,8 @@
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Whipspike</defName>
-    <label>鞭爪兽</label>
-    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <label>whipspike</label>
+    <description>A small fleshbeast with a long whip-like offensive limb, roughly the size of a dog. It can lash out from a relatively safe distance and usually works alongside fingerspikes, overwhelming prey through numbers.</description>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Whipspike/Finger1spike_east</uiIconPath>
     <race>
       <body>Fingerspike</body>
@@ -309,7 +317,7 @@
         <iconPath>UI/Ability/FH_SkillIcon2</iconPath>
         <cost>1</cost>
         <hediff>FH_Parasitism_Whipspike</hediff>
-        <effect>魅力-1，“血肉寄生”心情-6</effect>
+        <effect>魅力-5%，“血肉寄生”心情-6</effect>
         <abilityLabel>寄生武器：血肉触手</abilityLabel>
         <abilityDescription>宿主体表生长血肉触鞭，鞭击附近敌人造成利器伤害。</abilityDescription>
       </li>
@@ -345,7 +353,7 @@
 
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Whipspike</defName>
-    <label>鞭爪兽</label>
+    <label>whipspike</label>
     <race>FH_Whipspike</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
     <abilities>
@@ -377,8 +385,8 @@
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Gutspike</defName>
-    <label>胃血兽</label>
-    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <label>gutspike</label>
+    <description>A small fleshbeast with a specialized stomach, roughly the size of a dog. Its stomach stores corrosive acid and rapidly compresses to spray the fluid at enemies. Its frail body is poorly suited for close combat, so gutspikes usually rely on numbers to launch ranged attacks.</description>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Gutspike/FH_Gutspike_east</uiIconPath>
     <race>
       <body>FH_FleshBeastWithoutSpine</body>
@@ -447,7 +455,7 @@
 
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Gutspike</defName>
-    <label>胃血兽</label>
+    <label>gutspike</label>
     <race>FH_Gutspike</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
     <combatPower>25</combatPower>
@@ -479,8 +487,8 @@
 
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Paraspike</defName>
-    <label>寄血兽</label>
-    <description>A fleshy dog-sized creature with a single spiked limb. Despite their short legs, fingerspikes can move remarkably fast.</description>
+    <label>paraspike</label>
+    <description>A small fleshbeast specialized for parasitism, roughly the size of a dog. It can fire a parasitic stinger into a victim, causing tiny internal wounds that continue to bleed. Each paraspike has only one stinger and soon dies after firing it. Paraspikes can also actively parasitize other animals and emerge when the host dies.</description>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Paraspike/FH_Paraspike_east</uiIconPath>
     <race>
       <body>Fingerspike</body>
@@ -551,7 +559,7 @@
 
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Paraspike</defName>
-    <label>寄血兽</label>
+    <label>paraspike</label>
     <race>FH_Paraspike</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
       <abilities>
@@ -616,7 +624,7 @@
         <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
-        <effect>“血肉寄生”心情-6；魅力-1</effect>
+        <effect>“血肉寄生”心情-6；魅力-5%</effect>
         <abilityLabel>寄生武器：碎骨喷射</abilityLabel>
         <abilityDescription>远程发射骨刺碎片。</abilityDescription>
       </li>
@@ -733,8 +741,8 @@
 
   <ThingDef ParentName="FH_MediumFleshBeast">
     <defName>FH_Toughspike</defName>
-    <label>aaa</label>
-    <description>A fleshy man-sized creature with two spiked limbs and an armored carapace. Toughspikes throw hardened keratin spikes to take down victims from a distance.\n\nToughspike corpses will dissolve into puddles of liquefied flesh if they're not butchered quickly.</description>
+    <label>toughspike</label>
+    <description>A man-sized fleshbeast with two spiked tentacles and an armored carapace. Toughspikes throw sharp keratin spikes to bring down victims from a distance. If not butchered quickly, a toughspike corpse will dissolve into a puddle of liquefied flesh.</description>
     <statBases>
       <MoveSpeed>4.3</MoveSpeed>
       <MinimumContainmentStrength>50</MinimumContainmentStrength>
@@ -776,7 +784,7 @@
         <iconPath>UI/Ability/FH_SkillIcon5</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Toughspike</hediff>
-        <effect>“血肉寄生”心情-6；魅力-1；全局工作效率+15%；宿主获得两条骨刺触手</effect>
+        <effect>“血肉寄生”心情-6；魅力-5%；全局工作效率+15%；宿主获得两条骨刺触手</effect>
         <abilityLabel>寄生武器：骨刺触手</abilityLabel>
         <abilityDescription>宿主体表生长两条骨刺触手，造成刺击伤害。</abilityDescription>
       </li>
@@ -905,7 +913,7 @@
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -1092,7 +1100,7 @@
       </deathAction>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -1120,7 +1128,7 @@
         <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
-        <effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-1；“血肉寄生”心情-6</effect>
+        <effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6</effect>
         <abilityLabel>寄生武器：盾爪</abilityLabel>
         <abilityDescription>宿主获得盾爪，钝击附近敌人。</abilityDescription>
       </li>
@@ -1148,23 +1156,23 @@
         <label>left spike</label>
         <labelNoLocation>spike</labelNoLocation>
         <capacities>
-          <li>Stab</li>
+          <li>Blunt</li>
         </capacities>
         <power>15.7</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>LeftSpike</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
       </li>
       <li>
         <label>right spike</label>
         <labelNoLocation>spike</labelNoLocation>
         <capacities>
-          <li>Stab</li>
+          <li>Blunt</li>
         </capacities>
         <power>15.7</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>RightSpike</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
@@ -1283,7 +1291,7 @@
         <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
-        <effect>“血肉寄生”心情-6；魅力-1；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天）</effect>
+        <effect>“血肉寄生”心情-6；魅力-5%；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天）</effect>
         <abilityLabel>寄生武器：骨刺射击</abilityLabel>
         <abilityDescription>发射骨刺，造成刺击伤害。</abilityDescription>
       </li>
@@ -1417,7 +1425,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
@@ -1561,10 +1569,10 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.UnitCompProperties">
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1589,7 +1597,7 @@
         <iconPath>UI/Ability/FH_BulbfreakReleaseFleshbeasts</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Bulbfreak</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -1; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
         <abilityLabel>Parasitic weapons: tentacles and release fleshbeasts</abilityLabel>
         <abilityDescription>Two tentacles deal 10 blunt damage with a 2-second cooldown. The active ability consumes 200 twisted flesh to release two random medium fleshbeasts.</abilityDescription>
         <twistedFleshCapacity>200</twistedFleshCapacity>
@@ -1756,7 +1764,7 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Acidbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -1; Toxic Resistance +100%; grants acid mortar and acid spray abilities.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; Toxic Resistance +100%; grants acid mortar and acid spray abilities.</effect>
         <abilityLabel>Parasitic abilities: acid mortar and acid spray</abilityLabel>
         <abilityDescription>Launch an acid mortar shell at long range or spray sticky acid over a target area.</abilityDescription>
       </li>
@@ -1862,7 +1870,7 @@
   <ThingDef ParentName="FH_BaseFleshBeast">
     <defName>FH_Spitbulb</defName>
     <label>spitbulb</label>
-    <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
+    <description>A horrid amalgamation of many smaller fleshbeasts controlled by a linked nervous system. A massive muscular launching organ grows across its body, allowing it to fire twisted lumps of flesh over extreme distances. After striking a target, each lump rapidly assembles itself into living small fleshbeasts. The spitbulb moves relatively slowly and is easy to kill, and splits into a horde of smaller fleshbeasts upon death.</description>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Large</size>
@@ -1931,7 +1939,7 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Spitbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +250; grants the flesh mortar ability.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +250; grants the flesh mortar ability.</effect>
         <abilityLabel>Parasitic weapon: flesh mortar</abilityLabel>
         <abilityDescription>Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point.</abilityDescription>
         <twistedFleshCapacity>250</twistedFleshCapacity>
@@ -2100,9 +2108,6 @@
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
-        <availableRoutineWorks>
-          <li>Firefighter</li>
-        </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -2111,7 +2116,7 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Bulbplump</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -1; twisted flesh capacity +100; hunger rate x50%.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +100; hunger rate x50%.</effect>
         <abilityLabel>Parasitic weapon: flesh tentacles</abilityLabel>
         <abilityDescription>Two flesh tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown.</abilityDescription>
         <twistedFleshCapacity>100</twistedFleshCapacity>
@@ -2254,7 +2259,7 @@
         <iconPath>UI/Ability/FH_BoneBurst</iconPath>
         <cost>4</cost>
         <hediff>FH_Parasitism_Synbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -1; grants the psychic harmonizer condition.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; grants the psychic harmonizer condition.</effect>
         <abilityLabel>Parasitic weapon: bone burst</abilityLabel>
         <abilityDescription>Two tentacles aim for 1 second, then fire bone shards at enemies within 16 cells.</abilityDescription>
       </li>

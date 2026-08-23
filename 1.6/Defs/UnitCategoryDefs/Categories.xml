@@ -89,6 +89,9 @@
         <costs>
             <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
+        <requirements>
+            <FH_FleshCarapace>5</FH_FleshCarapace>
+        </requirements>
         <kind>FH_Whipspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <researchPrerequisites>
@@ -144,12 +147,13 @@
         <defName>FH_Unit_Toughspike</defName>
         <label>Toughspike</label>
         <description>Toughspike</description>
-        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Toughspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
-        <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Fingerspike</prerequisiteFusion>
+        <researchPrerequisites>
+            <li>FH_Research_ComplexFleshHive</li>
+        </researchPrerequisites>
         <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -160,7 +164,7 @@
         <kind>FH_FleshReplica</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -173,7 +177,7 @@
         <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Shieldspike_Paraspike_Paraspike</prerequisiteFusion>
         <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -186,7 +190,7 @@
         <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Trispike_Puffspike_Puffspike</prerequisiteFusion>
         <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -198,8 +202,8 @@
         <kind>FH_Shatterspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Gutspike</prerequisiteFusion>
-        <costs>
-            <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
+    <costs>
+            <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -212,7 +216,7 @@
         <spawningDay>0.25~0.25</spawningDay>
         <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Whipspike</prerequisiteFusion>
         <costs>
-            <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+            <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
     </HiveCreatureFramework.UnitDef>
 
@@ -220,11 +224,12 @@
         <defName>FH_Unit_Bulbfreak</defName>
         <label>Bulbfreak</label>
         <description>Spawn a bulbfreak.</description>
-        <worker Class="FleshHive.UnitSpawnWorker_FleshTraitUnlock" />
         <kind>FH_Bulbfreak</kind>
         <spawningDay>3.75~3.75</spawningDay>
-        <prerequisiteFusion>FH_Fusion_L01_Bulbfreak_Shatterspike_Shatterspike_Fingerspike</prerequisiteFusion>
-        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+        <researchPrerequisites>
+            <li>FH_Research_FleshPrimaryHive</li>
+        </researchPrerequisites>
+        <costs><FH_Resource_Nutrition>15</FH_Resource_Nutrition></costs>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -235,7 +240,7 @@
         <kind>FH_Acidbulb</kind>
         <spawningDay>3.75~3.75</spawningDay>
         <prerequisiteFusion>FH_Fusion_L18_Acidbulb_Shatterspike_Trispike_Whipspike</prerequisiteFusion>
-        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+        <costs><FH_Resource_Nutrition>15</FH_Resource_Nutrition></costs>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -246,7 +251,7 @@
         <kind>FH_Spitbulb</kind>
         <spawningDay>3.75~3.75</spawningDay>
         <prerequisiteFusion>FH_Fusion_L32_Spitbulb_Shatterspike_Shieldspike_Paraspike</prerequisiteFusion>
-        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+        <costs><FH_Resource_Nutrition>15</FH_Resource_Nutrition></costs>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -257,7 +262,7 @@
         <kind>FH_Bulbplump</kind>
         <spawningDay>3.75~3.75</spawningDay>
         <prerequisiteFusion>FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike</prerequisiteFusion>
-        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+        <costs><FH_Resource_Nutrition>15</FH_Resource_Nutrition></costs>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -268,7 +273,7 @@
         <kind>FH_Synbulb</kind>
         <spawningDay>3.75~3.75</spawningDay>
         <prerequisiteFusion>FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike</prerequisiteFusion>
-        <costs><FH_Resource_Nutrition>100</FH_Resource_Nutrition></costs>
+        <costs><FH_Resource_Nutrition>15</FH_Resource_Nutrition></costs>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>

@@ -63,6 +63,12 @@
   </JobDef>
 
   <JobDef>
+    <defName>FH_Job_ConsumeMeldSeed</defName>
+    <driverClass>FleshHive.JobDriver_ConsumeMeldSeed</driverClass>
+    <reportString>consuming TargetA to grow.</reportString>
+  </JobDef>
+
+  <JobDef>
     <defName>FH_Job_HuntExecution</defName>
     <driverClass>FleshHive.JobDriver_GroupHuntExecution</driverClass>
     <reportString>finishing off TargetA.</reportString>

@@ -15,4 +15,21 @@
     </stages>
   </HediffDef>
 
+  <HediffDef>
+    <defName>FH_FleshSymbiosis</defName>
+    <label>flesh symbiosis</label>
+    <description>A flesh symbiosis module links its host to the flesh hive, allowing the host to draw nutrition directly from the hive when severely hungry.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_FleshSymbiosis" />
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
 </Defs>

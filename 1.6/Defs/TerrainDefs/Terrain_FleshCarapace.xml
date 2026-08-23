@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>FH_FleshCarapaceFloor</defName>
+    <label>flesh carapace tile</label>
+    <description>A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans.</description>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>Walkable</li>
+    </affordances>
+    <canEverTerraform>false</canEverTerraform>
+    <constructEffect>ConstructDirt</constructEffect>
+    <designationCategory />
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <fertility>0</fertility>
+    <layerable>true</layerable>
+    <pathCost>0</pathCost>
+    <renderPrecedence>341</renderPrecedence>
+    <researchPrerequisites>
+      <li>FH_Research_FleshFurniture</li>
+    </researchPrerequisites>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>0.2</Cleanliness>
+      <CleaningTimeFactor>0.75</CleaningTimeFactor>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <tags>
+      <li>Floor</li>
+    </tags>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <texturePath>Terrain/Surfaces/FH_FleshCarapaceFloor</texturePath>
+  </TerrainDef>
+
+</Defs>

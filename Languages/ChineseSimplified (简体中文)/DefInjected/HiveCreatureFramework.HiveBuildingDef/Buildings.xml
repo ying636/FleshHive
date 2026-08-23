@@ -5,6 +5,11 @@
   <!-- EN: A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor. -->
   <FH_Building_FleshFloor.description>一层铺展在地面上的致密活体血肉。建设时必须与已有血肉地板相连。</FH_Building_FleshFloor.description>
 
+  <!-- EN: flesh carapace tile -->
+  <FH_Building_FleshCarapaceFloor.label>甲壳地砖</FH_Building_FleshCarapaceFloor.label>
+  <!-- EN: A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans. -->
+  <FH_Building_FleshCarapaceFloor.description>血肉巢穴特殊生长的甲壳地砖。虽然略微易燃，但却能快速清洁，也比血肉更加容易行动且美观。自然情况下的血肉巢穴并不会生长此类结构，仿佛是为了更好地与人类共同生活进化出的特殊器官。</FH_Building_FleshCarapaceFloor.description>
+
   
   <!-- EN: chitin flesh barricade -->
   <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>
@@ -52,7 +57,7 @@
   <FH_Building_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。这些被活化的板块也会像血肉树一样吞噬尸体和肉类，补充巢穴营养。</FH_Building_FleshDigester.description>
   
   <!-- EN: small flesh digester -->
-  <FH_Building_FleshDigesterS.label>小型警卫触手中枢</FH_Building_FleshDigesterS.label>
+  <FH_Building_FleshDigesterS.label>警卫触手</FH_Building_FleshDigesterS.label>
   <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
   <FH_Building_FleshDigesterS.description>负责警卫血肉巢穴的小型神经中枢器官。它会活化附近的血肉，使其抽打入侵者、阻碍移动并造成伤害。它也能吞噬附近的尸体和生肉，为巢穴补充营养。</FH_Building_FleshDigesterS.description>
   
@@ -75,6 +80,11 @@
   <FH_Building_FleshLamp.label>血肉灯</FH_Building_FleshLamp.label>
   <!-- EN: A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. -->
   <FH_Building_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_Building_FleshLamp.description>
+
+  <!-- EN: flesh power generator -->
+  <FH_Building_FleshPower.label>血肉发电机</FH_Building_FleshPower.label>
+  <!-- EN: Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive. -->
+  <FH_Building_FleshPower.description>通过消耗巢群的营养发电，会自动从巢群中汲取营养。</FH_Building_FleshPower.description>
   
   <!-- EN: fleshmass spitter -->
   <FH_Building_FleshmassSpitter.label>血肉喷吐器</FH_Building_FleshmassSpitter.label>

@@ -19,10 +19,15 @@
   <FH_Parasitism_AcidSpray.label>酸液喷吐</FH_Parasitism_AcidSpray.label>
   <!-- EN: Spray sticky acid over a target area. The acid sticks to targets and continues to burn them. -->
   <FH_Parasitism_AcidSpray.description>向目标区域喷吐黏稠酸液。酸液会附着在目标上并持续灼蚀。</FH_Parasitism_AcidSpray.description>
-  <!-- EN: 骨刺射击 -->
+  <!-- EN: bone spike shot -->
   <FH_Parasitism_BoneSpikeShot.label>骨刺射击</FH_Parasitism_BoneSpikeShot.label>
-  <!-- EN: 发射一枚骨刺。 -->
+  <!-- EN: Launch a bone spike. -->
   <FH_Parasitism_BoneSpikeShot.description>发射一枚骨刺。</FH_Parasitism_BoneSpikeShot.description>
+
+  <!-- EN: corrosive spray -->
+  <FH_CorrosiveSpray_Gutspike.label>腐蚀酸液喷吐</FH_CorrosiveSpray_Gutspike.label>
+  <!-- EN: Compress the gutspike's specialized stomach to spray stored corrosive acid over a short distance. -->
+  <FH_CorrosiveSpray_Gutspike.description>快速挤压特化胃部，将储存的腐蚀性酸液喷向近距离目标。</FH_CorrosiveSpray_Gutspike.description>
   
   <!-- EN: flesh mortar -->
   <FH_Parasitism_FleshMortar.label>血肉迫击炮</FH_Parasitism_FleshMortar.label>
@@ -44,19 +49,19 @@
   <!-- EN: Launch a bone spike at a target. -->
   <FH_SpikeLaunch_Shatterspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Shatterspike.description>
   
-  <!-- EN: spike launch -->
-  <FH_SpikeLaunch_Whipspike.label>骨刺发射</FH_SpikeLaunch_Whipspike.label>
-  <!-- EN: Launch a bone spike at a target. -->
-  <FH_SpikeLaunch_Whipspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Whipspike.description>
+  <!-- EN: whip strike -->
+  <FH_SpikeLaunch_Whipspike.label>触鞭抽击</FH_SpikeLaunch_Whipspike.label>
+  <!-- EN: Strike a target from range with a long whip-like limb. -->
+  <FH_SpikeLaunch_Whipspike.description>甩出长长的血肉触鞭，从较为安全的距离攻击目标。</FH_SpikeLaunch_Whipspike.description>
   
   <!-- EN: flesh mortar -->
   <FH_Spitbulb_Launch.label>血肉迫击炮</FH_Spitbulb_Launch.label>
   <!-- EN: Launch an explosive flesh shell that releases three random small fleshbeasts at the impact point. -->
   <FH_Spitbulb_Launch.description>发射一枚爆炸性血肉炮弹，并在命中位置释放三只随机小型血肉兽。</FH_Spitbulb_Launch.description>
   
-  <!-- EN: 释放血肉兽 -->
+  <!-- EN: release fleshbeasts -->
   <FH_Trispike_ReleaseSpikes.label>释放血肉兽</FH_Trispike_ReleaseSpikes.label>
-  <!-- EN: 释放2只随机的小型血肉兽。 -->
+  <!-- EN: Release two random small fleshbeasts. -->
   <FH_Trispike_ReleaseSpikes.description>释放2只随机的小型血肉兽。</FH_Trispike_ReleaseSpikes.description>
   
   <!-- EN: flesh jump -->

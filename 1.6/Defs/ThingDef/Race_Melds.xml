@@ -3,6 +3,7 @@
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
     <statBases>
       <MarketValue>1800</MarketValue>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
     </statBases>
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
@@ -34,6 +35,11 @@
       <ToxicResistance>0.8</ToxicResistance>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_NexusmeldSeed</seed>
+      </li>
+    </modExtensions>
     <race>
       <body>Bulbfreak</body>
       <baseBodySize>3.8</baseBodySize>
@@ -57,7 +63,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.NodeUnitCompProperties">
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -197,6 +203,11 @@
       <ComfyTemperatureMax>60</ComfyTemperatureMax>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_FuriousmeldSeed</seed>
+      </li>
+    </modExtensions>
     <race>
       <body>Bulbfreak</body>
       <baseBodySize>5.0</baseBodySize>
@@ -220,7 +231,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.NodeUnitCompProperties">
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -265,7 +276,9 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Giant</size>
       </li>
-      <li Class="FleshHive.CompProperties_ScarletField" />
+      <li Class="FleshHive.CompProperties_ScarletField">
+        <areaShieldRadius>6.75</areaShieldRadius>
+      </li>
       <li Class="FleshHive.CompProperties_TwistedFlesh">
         <capacity>400</capacity>
       </li>
@@ -371,6 +384,11 @@
       <PsychicSensitivity>0.5</PsychicSensitivity>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_BastionmeldSeed</seed>
+      </li>
+    </modExtensions>
     <inspectorTabs>
       <li>HiveCreatureFramework.ITab_UnitTurret</li>
     </inspectorTabs>
@@ -397,7 +415,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.NodeUnitCompProperties">
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -585,7 +603,7 @@
         <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
         <cost>6</cost>
         <hediff>FH_Parasitism_Bastionmeld</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -1; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
         <abilityLabel>Bastionmeld tentacle attack</abilityLabel>
         <abilityDescription>Release an EMP pulse centered on the host, matching an IED EMP trap's radius.</abilityDescription>
       </li>
@@ -699,6 +717,11 @@
       <FH_Stat_ParasitismCapacity>-1</FH_Stat_ParasitismCapacity>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_FissionmeldSeed</seed>
+      </li>
+    </modExtensions>
     <race>
       <body>Bulbfreak</body>
       <baseBodySize>5.0</baseBodySize>
@@ -729,7 +752,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.NodeUnitCompProperties">
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -893,7 +916,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.NodeUnitCompProperties">
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -1038,6 +1061,11 @@
       <ToxicResistance>0.8</ToxicResistance>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld_MenuIcon</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_DreadmeldSeed</seed>
+      </li>
+    </modExtensions>
     <race>
       <body>Bulbfreak</body>
       <baseBodySize>3.8</baseBodySize>
@@ -1061,7 +1089,7 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.NodeUnitCompProperties">
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>

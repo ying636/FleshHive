@@ -2,54 +2,30 @@
 <LanguageData>
   <FH_Research_BasicFleshHive.label>基础血肉巢穴</FH_Research_BasicFleshHive.label>
   <FH_Research_BasicFleshHive.description>解锁血肉巢穴、血肉地板、血肉块、血肉门、血肉囊泡、血肉产出口、扭曲肉生产，以及小型血肉兽培育。</FH_Research_BasicFleshHive.description>
-  <FH_Research_BasicFleshHive.customUnlockTexts.0>血肉巢穴</FH_Research_BasicFleshHive.customUnlockTexts.0>
-  <FH_Research_BasicFleshHive.customUnlockTexts.1>血肉地板</FH_Research_BasicFleshHive.customUnlockTexts.1>
-  <FH_Research_BasicFleshHive.customUnlockTexts.2>血肉块</FH_Research_BasicFleshHive.customUnlockTexts.2>
-  <FH_Research_BasicFleshHive.customUnlockTexts.3>血肉门</FH_Research_BasicFleshHive.customUnlockTexts.3>
-  <FH_Research_BasicFleshHive.customUnlockTexts.4>血肉囊泡</FH_Research_BasicFleshHive.customUnlockTexts.4>
-  <FH_Research_BasicFleshHive.customUnlockTexts.5>血肉产出口</FH_Research_BasicFleshHive.customUnlockTexts.5>
-  <FH_Research_BasicFleshHive.customUnlockTexts.6>扭曲肉</FH_Research_BasicFleshHive.customUnlockTexts.6>
-  <FH_Research_BasicFleshHive.customUnlockTexts.7>小型血肉兽</FH_Research_BasicFleshHive.customUnlockTexts.7>
+  <FH_Research_BasicFleshHive.customUnlockTexts.0>扭曲肉</FH_Research_BasicFleshHive.customUnlockTexts.0>
+  <FH_Research_BasicFleshHive.customUnlockTexts.1>小型血肉兽</FH_Research_BasicFleshHive.customUnlockTexts.1>
 
   <FH_Research_NutritionCycle.label>营养循环</FH_Research_NutritionCycle.label>
-  <FH_Research_NutritionCycle.description>解锁血肉灯、肉果丛和血肉囊的生产。</FH_Research_NutritionCycle.description>
-  <FH_Research_NutritionCycle.customUnlockTexts.0>血肉灯</FH_Research_NutritionCycle.customUnlockTexts.0>
-  <FH_Research_NutritionCycle.customUnlockTexts.1>肉果丛</FH_Research_NutritionCycle.customUnlockTexts.1>
-  <FH_Research_NutritionCycle.customUnlockTexts.2>血肉囊</FH_Research_NutritionCycle.customUnlockTexts.2>
+  <FH_Research_NutritionCycle.description>解锁血肉灯、肉果丛、血肉囊和血肉发电机的生产。</FH_Research_NutritionCycle.description>
 
   <FH_Research_ImmuneSystem.label>免疫系统</FH_Research_ImmuneSystem.label>
   <FH_Research_ImmuneSystem.description>解锁骨刺喷吐器、小型警卫触手和血肉掩体。</FH_Research_ImmuneSystem.description>
-  <FH_Research_ImmuneSystem.customUnlockTexts.0>骨刺喷吐器</FH_Research_ImmuneSystem.customUnlockTexts.0>
-  <FH_Research_ImmuneSystem.customUnlockTexts.1>小型警卫触手</FH_Research_ImmuneSystem.customUnlockTexts.1>
-  <FH_Research_ImmuneSystem.customUnlockTexts.2>血肉掩体</FH_Research_ImmuneSystem.customUnlockTexts.2>
 
   <FH_Research_FleshFurniture.label>血肉家具</FH_Research_FleshFurniture.label>
   <FH_Research_FleshFurniture.description>解锁血肉床、血肉桌子、血肉凳子和血肉支撑柱。</FH_Research_FleshFurniture.description>
-  <FH_Research_FleshFurniture.customUnlockTexts.0>血肉床</FH_Research_FleshFurniture.customUnlockTexts.0>
-  <FH_Research_FleshFurniture.customUnlockTexts.1>血肉桌子</FH_Research_FleshFurniture.customUnlockTexts.1>
-  <FH_Research_FleshFurniture.customUnlockTexts.2>血肉凳子</FH_Research_FleshFurniture.customUnlockTexts.2>
-  <FH_Research_FleshFurniture.customUnlockTexts.3>血肉支撑柱</FH_Research_FleshFurniture.customUnlockTexts.3>
 
   <FH_Research_FleshbeastCoexistence.label>血肉兽共存</FH_Research_FleshbeastCoexistence.label>
-  <FH_Research_FleshbeastCoexistence.description>解锁血肉寄生仓，并允许生产血肉适应模块。</FH_Research_FleshbeastCoexistence.description>
-  <FH_Research_FleshbeastCoexistence.customUnlockTexts.0>血肉寄生仓</FH_Research_FleshbeastCoexistence.customUnlockTexts.0>
-  <FH_Research_FleshbeastCoexistence.customUnlockTexts.1>血肉适应模块</FH_Research_FleshbeastCoexistence.customUnlockTexts.1>
+  <FH_Research_FleshbeastCoexistence.description>解锁血肉寄生仓，并允许生产血肉适应模块和血肉共生模块。</FH_Research_FleshbeastCoexistence.description>
 
   <FH_Research_ComplexFleshHive.label>复杂血肉巢穴</FH_Research_ComplexFleshHive.label>
   <FH_Research_ComplexFleshHive.description>解锁巢群神经结节、血肉巢群升级、中型血肉兽培育、活铁和神经块生产。培育单位仍需先发现对应融合配方。</FH_Research_ComplexFleshHive.description>
-  <FH_Research_ComplexFleshHive.customUnlockTexts.0>巢群神经结节</FH_Research_ComplexFleshHive.customUnlockTexts.0>
-  <FH_Research_ComplexFleshHive.customUnlockTexts.1>中型血肉兽</FH_Research_ComplexFleshHive.customUnlockTexts.1>
-  <FH_Research_ComplexFleshHive.customUnlockTexts.2>活铁</FH_Research_ComplexFleshHive.customUnlockTexts.2>
-  <FH_Research_ComplexFleshHive.customUnlockTexts.3>神经块</FH_Research_ComplexFleshHive.customUnlockTexts.3>
-  <FH_Research_ComplexFleshHive.customUnlockTexts.4>血肉巢群升级</FH_Research_ComplexFleshHive.customUnlockTexts.4>
+  <FH_Research_ComplexFleshHive.customUnlockTexts.0>中型血肉兽</FH_Research_ComplexFleshHive.customUnlockTexts.0>
+  <FH_Research_ComplexFleshHive.customUnlockTexts.1>活铁</FH_Research_ComplexFleshHive.customUnlockTexts.1>
+  <FH_Research_ComplexFleshHive.customUnlockTexts.2>血肉巢群升级</FH_Research_ComplexFleshHive.customUnlockTexts.2>
 
   <FH_Research_FleshFusion.label>血肉融合</FH_Research_FleshFusion.label>
   <FH_Research_FleshFusion.description>允许中型血肉兽融合，并解锁血肉触手、血肉触鞭、血肉胃和血肉肺的生产。</FH_Research_FleshFusion.description>
   <FH_Research_FleshFusion.customUnlockTexts.0>中型血肉兽融合</FH_Research_FleshFusion.customUnlockTexts.0>
-  <FH_Research_FleshFusion.customUnlockTexts.1>血肉触手</FH_Research_FleshFusion.customUnlockTexts.1>
-  <FH_Research_FleshFusion.customUnlockTexts.2>血肉触鞭</FH_Research_FleshFusion.customUnlockTexts.2>
-  <FH_Research_FleshFusion.customUnlockTexts.3>血肉胃</FH_Research_FleshFusion.customUnlockTexts.3>
-  <FH_Research_FleshFusion.customUnlockTexts.4>血肉肺</FH_Research_FleshFusion.customUnlockTexts.4>
 
   <FH_Research_FleshReplica.label>血肉拟像</FH_Research_FleshReplica.label>
   <FH_Research_FleshReplica.description>允许培育血肉拟像。</FH_Research_FleshReplica.description>
@@ -57,26 +33,19 @@
 
   <FH_Research_BonePlatingFleshBlock.label>甲壳血肉块</FH_Research_BonePlatingFleshBlock.label>
   <FH_Research_BonePlatingFleshBlock.description>研究后，将地图中的血肉块和血肉掩体替换为甲壳版本，并解锁甲壳血肉块和甲壳血肉掩体。</FH_Research_BonePlatingFleshBlock.description>
-  <FH_Research_BonePlatingFleshBlock.customUnlockTexts.0>甲壳血肉块</FH_Research_BonePlatingFleshBlock.customUnlockTexts.0>
-  <FH_Research_BonePlatingFleshBlock.customUnlockTexts.1>甲壳血肉掩体</FH_Research_BonePlatingFleshBlock.customUnlockTexts.1>
-  <FH_Research_BonePlatingFleshBlock.customUnlockTexts.2>替换地图中的血肉块和血肉掩体</FH_Research_BonePlatingFleshBlock.customUnlockTexts.2>
+  <FH_Research_BonePlatingFleshBlock.customUnlockTexts.0>硬化所有血肉块和掩体</FH_Research_BonePlatingFleshBlock.customUnlockTexts.0>
 
   <FH_Research_ComplexImmuneSystem.label>复杂免疫系统</FH_Research_ComplexImmuneSystem.label>
   <FH_Research_ComplexImmuneSystem.description>解锁血肉喷吐器、血肉爆炸器和警卫触手中枢。</FH_Research_ComplexImmuneSystem.description>
-  <FH_Research_ComplexImmuneSystem.customUnlockTexts.0>血肉喷吐器</FH_Research_ComplexImmuneSystem.customUnlockTexts.0>
-  <FH_Research_ComplexImmuneSystem.customUnlockTexts.1>血肉爆炸器</FH_Research_ComplexImmuneSystem.customUnlockTexts.1>
-  <FH_Research_ComplexImmuneSystem.customUnlockTexts.2>警卫触手中枢</FH_Research_ComplexImmuneSystem.customUnlockTexts.2>
 
   <FH_Research_FleshPrimaryHive.label>高级血肉巢穴</FH_Research_FleshPrimaryHive.label>
   <FH_Research_FleshPrimaryHive.description>解锁巢群神经中枢、大型血肉兽培育，以及血肉巢穴进化为血肉主巢。</FH_Research_FleshPrimaryHive.description>
-  <FH_Research_FleshPrimaryHive.customUnlockTexts.0>巢群神经中枢</FH_Research_FleshPrimaryHive.customUnlockTexts.0>
-  <FH_Research_FleshPrimaryHive.customUnlockTexts.1>大型血肉兽</FH_Research_FleshPrimaryHive.customUnlockTexts.1>
-  <FH_Research_FleshPrimaryHive.customUnlockTexts.2>进化为血肉主巢穴</FH_Research_FleshPrimaryHive.customUnlockTexts.2>
+  <FH_Research_FleshPrimaryHive.customUnlockTexts.0>大型血肉兽</FH_Research_FleshPrimaryHive.customUnlockTexts.0>
+  <FH_Research_FleshPrimaryHive.customUnlockTexts.1>血肉主巢进化</FH_Research_FleshPrimaryHive.customUnlockTexts.1>
 
   <FH_Research_ComplexFleshFusion.label>复杂血肉融合</FH_Research_ComplexFleshFusion.label>
   <FH_Research_ComplexFleshFusion.description>允许大型血肉兽融合，并解锁寄生扩容背包的生产。</FH_Research_ComplexFleshFusion.description>
   <FH_Research_ComplexFleshFusion.customUnlockTexts.0>大型血肉兽融合</FH_Research_ComplexFleshFusion.customUnlockTexts.0>
-  <FH_Research_ComplexFleshFusion.customUnlockTexts.1>寄生扩容背包</FH_Research_ComplexFleshFusion.customUnlockTexts.1>
 
   <FH_Research_MotherBeastControl.label>血肉母兽控制</FH_Research_MotherBeastControl.label>
   <FH_Research_MotherBeastControl.description>允许培育血肉母兽。</FH_Research_MotherBeastControl.description>

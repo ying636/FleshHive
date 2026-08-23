@@ -55,7 +55,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
         <label>nexusmeld parasitism</label>
       </li>
@@ -128,7 +128,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
           <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
           <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
           <ArmorRating_Heat>0.5</ArmorRating_Heat>
@@ -203,7 +203,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
         <label>bastionmeld parasitism</label>
       </li>
@@ -276,7 +276,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
         <statFactors>
           <MiningSpeed>2.6</MiningSpeed>
@@ -350,7 +350,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-1</SocialImpact>
+          <SocialImpact>-0.05</SocialImpact>
         </statOffsets>
         <label>fissionmeld parasitism</label>
       </li>
