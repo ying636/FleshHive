@@ -18,8 +18,7 @@ public class Window_SelectParasite : Window
         this.focusWhenOpened = false;
         this.preventCameraMotion = false;
 
-        hostBodySize = selectedUnit?.kind?.race?.race?.baseBodySize ?? 1f;
-        capacity = Mathf.Min((int)(hostBodySize + 1), 14);
+        capacity = Mathf.Min(Mathf.FloorToInt(selectedUnit?.kind?.race?.GetStatValueAbstract(FleshHiveDefOf.FH_Stat_ParasitismCapacity) ?? 1f), 14);
         usedSpace = 0;
         foreach (FormulaMaterial m in category.ChosenMaterials)
         {
@@ -167,7 +166,6 @@ public class Window_SelectParasite : Window
     private readonly FormulaMaterialCategory_Parasite category;
     private readonly UnitDef selectedUnit;
     private readonly List<FormulaMaterial_Parasite> choices;
-    private readonly float hostBodySize;
     private readonly int capacity;
     private readonly int usedSpace;
     private Vector2 scrollPos;

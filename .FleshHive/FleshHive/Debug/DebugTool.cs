@@ -35,6 +35,21 @@ public static class DebugActions_Parasitism
         Messages.Message("FH_DebugActivity".Translate(mapComp.ActivityPercent.ToStringPercent("0")), MessageTypeDefOf.NeutralEvent, false);
     }
 
+    [DebugAction("FleshHive", "Trigger flesh hive riot", false, false, false, false, false, 0, false,
+        allowedGameStates = AllowedGameStates.PlayingOnMap)]
+    public static void TriggerFleshHiveRiot()
+    {
+        MapComponent_FleshHive mapComp = Find.CurrentMap?.GetComponent<MapComponent_FleshHive>();
+        if (mapComp == null)
+        {
+            Messages.Message("FH_DebugNoHiveComponent".Translate(), MessageTypeDefOf.RejectInput, false);
+            return;
+        }
+
+        mapComp.DebugStartRiot();
+        Messages.Message("FH_DebugRiotTriggered".Translate(), MessageTypeDefOf.ThreatBig, false);
+    }
+
     [DebugAction("FleshHive", "Add parasite", false, false, false, false, false, 0, false,
         allowedGameStates = AllowedGameStates.PlayingOnMap,
         actionType = DebugActionType.ToolMapForPawns)]

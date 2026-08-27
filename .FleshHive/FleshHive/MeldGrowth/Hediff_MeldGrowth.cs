@@ -5,7 +5,7 @@ namespace FleshHive;
 
 public class Hediff_MeldGrowth : HediffWithComps
 {
-    public static int MaximumLevel => 4;
+    public static int MaximumLevel => 5;
 
     public int Level => Mathf.Clamp(Mathf.RoundToInt(Severity), 1, MaximumLevel);
 

@@ -30,9 +30,7 @@ public class CompFleshBeastCache : ThingComp
         base.PostDeSpawn(map, mode);
         if (this.parent is Pawn pawn)
         {
-            MapComponent_FleshHive? comp = map?.GetComponent<MapComponent_FleshHive>();
-            comp?.RemoveFleshBeastUpgradeHediffs(pawn);
-            comp?.UnregisterFleshBeast(pawn);
+            map?.GetComponent<MapComponent_FleshHive>()?.UnregisterFleshBeast(pawn);
         }
     }
 

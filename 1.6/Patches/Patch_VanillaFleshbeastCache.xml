@@ -17,4 +17,11 @@
       </li>
     </value>
   </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Dreadmeld"]/killedLeavings</xpath>
+    <value>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
+    </value>
+  </Operation>
 </Patch>

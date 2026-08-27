@@ -14,14 +14,17 @@ public class JobGiver_GroupHuntGather : ThinkNode_JobGiver
             return JobMaker.MakeJob(JobDefOf.Wait_Wander);
         }
 
-        if (pawn.TryGetComp<HiveCreatureFramework.UnitComp>()?.Props.overrideDuty_Attack
-            == FleshHiveDefOf.FH_Attack_Ranged)
+        DutyDef? attackDuty = pawn.TryGetComp<HiveCreatureFramework.UnitComp>()?.Props.overrideDuty_Attack;
+        if (JobGiver_GroupRangedAttackTarget.IsRangedAttackDuty(attackDuty))
         {
-            Ability? ability = JobGiver_GroupRangedAttackTarget.FindRangedAbility(pawn, prey);
+            ModExtension_RangedDuty? rangedSettings = attackDuty?.GetModExtension<ModExtension_RangedDuty>();
+            Ability? ability =
+                JobGiver_GroupRangedAttackTarget.FindRangedAbility(pawn, prey, rangedSettings != null);
             bool foundPosition = ability != null
                 ? JobGiver_GroupRangedAttackTarget.TryFindCastPosition(pawn, prey, ability.verb,
-                    out IntVec3 shootingPosition)
-                : JobGiver_GroupRangedAttackTarget.TryFindSupportPosition(pawn, prey, out shootingPosition);
+                    out IntVec3 shootingPosition, rangedSettings)
+                : JobGiver_GroupRangedAttackTarget.TryFindSupportPosition(pawn, prey, out shootingPosition,
+                    rangedSettings);
             if (!foundPosition)
             {
                 return JobMaker.MakeJob(JobDefOf.Wait_Wander);

@@ -20,6 +20,8 @@
   <FH_Upgrade_BoneSpikePenetration.description>所有血肉兽的投掷骨刺技能护甲穿透变为90%。</FH_Upgrade_BoneSpikePenetration.description>
   <FH_Upgrade_GiantFleshExpansion.label>巨型血肉扩展</FH_Upgrade_GiantFleshExpansion.label>
   <FH_Upgrade_GiantFleshExpansion.description>大型、巨型血肉兽的寄生空间增加2。</FH_Upgrade_GiantFleshExpansion.description>
+  <FH_Upgrade_Robust.label>健壮化</FH_Upgrade_Robust.label>
+  <FH_Upgrade_Robust.description>大型血肉兽的健康值比例变为原来的6倍，从30%提高到180%。</FH_Upgrade_Robust.description>
   <FH_Upgrade_NestMasterCarapace.label>巢主甲壳</FH_Upgrade_NestMasterCarapace.label>
   <FH_Upgrade_NestMasterCarapace.description>巨型血肉兽的钝器护甲提高45%，利器护甲提高106%，热能护甲提高54%。</FH_Upgrade_NestMasterCarapace.description>
   <FH_Upgrade_NestTaming1.label>巢穴驯化 I</FH_Upgrade_NestTaming1.label>

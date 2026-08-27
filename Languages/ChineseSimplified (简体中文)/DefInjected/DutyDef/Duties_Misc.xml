@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: long-range ranged -->
+  <FH_Attack_RangedDistant.label>远距离远程</FH_Attack_RangedDistant.label>
+  <!-- EN: Hold a distant firing position and keep shooting. -->
+  <FH_Attack_RangedDistant.description>保持远距离射击位置并持续开火。</FH_Attack_RangedDistant.description>
+</LanguageData>

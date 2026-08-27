@@ -8,21 +8,22 @@ public class ParasitismCapacityStat : StatWorker
 {
     public override float GetBaseValueFor(StatRequest request)
     {
-        if (request.Thing is Pawn pawn)
+        Pawn pawn = request.Thing as Pawn ?? request.Pawn;
+        if (pawn != null)
         {
             if (Hediff_Hela.GetCached(pawn) is Hediff_Hela hela)
             {
                 return hela.ParasiteCapacity;
             }
-            return pawn.BodySize + 1;
+
+            bool isFleshbeast = pawn.RaceProps.FleshType == FleshTypeDefOf.Fleshbeast;
+            return pawn.BodySize + (isFleshbeast ? 0f : 1f);
         }
-        if (request.Pawn != null)
+
+        if (request.Def is ThingDef thingDef && thingDef.race != null)
         {
-            if (Hediff_Hela.GetCached(request.Pawn) is Hediff_Hela hela)
-            {
-                return hela.ParasiteCapacity;
-            }
-            return request.Pawn.BodySize + 1;
+            bool isFleshbeast = thingDef.race.FleshType == FleshTypeDefOf.Fleshbeast;
+            return thingDef.race.baseBodySize + (isFleshbeast ? 0f : 1f);
         }
 
         return 1;
@@ -35,8 +36,10 @@ public class ParasitismCapacityStat : StatWorker
         if (Hediff_Hela.GetCached(pawn) is Hediff_Hela hela)
         {
             val = Mathf.Min(val, hela.MaximumParasiteCapacity);
+            val = Mathf.FloorToInt(val);
             return;
         }
         val = Mathf.Min(val, 14);
+        val = Mathf.FloorToInt(val);
     }
 }

@@ -441,7 +441,7 @@
     <label>bulbfreak fusion</label>
     <description>Fuse a shatterspike, a shatterspike, and a fingerspike into a bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -471,7 +471,7 @@
     <label>bone spur bulbfreak fusion</label>
     <description>Fuse a shatterspike, a trispike, and a gutspike into a bone spur bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -504,7 +504,7 @@
     <label>tough bulbfreak fusion</label>
     <description>Fuse a shatterspike, a fleshwind, and a paraspike into a tough bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -537,7 +537,7 @@
     <label>sharp bulbfreak fusion</label>
     <description>Fuse a shieldspike, a trispike, and a puffspike into a sharp bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -570,7 +570,7 @@
     <label>split bulbfreak fusion</label>
     <description>Fuse a shieldspike, a fleshwind, and a whipspike into a split bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -603,7 +603,7 @@
     <label>domesticated bulbfreak fusion</label>
     <description>Fuse a trispike, a trispike, and a fingerspike into a domesticated bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -636,7 +636,7 @@
     <label>runaway bulbfreak fusion</label>
     <description>Fuse a shatterspike, a toughspike, and a whipspike into a runaway bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -669,7 +669,7 @@
     <label>rapid growth bulbfreak fusion</label>
     <description>Fuse a shieldspike, a toughspike, and a paraspike into a rapid growth bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -702,7 +702,7 @@
     <label>cancerous bulbfreak fusion</label>
     <description>Fuse a trispike, a toughspike, and a gutspike into a cancerous bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -735,7 +735,7 @@
     <label>expanded bulbfreak fusion</label>
     <description>Fuse a toughspike, a fleshwind, and a fingerspike into an expanded bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -768,7 +768,7 @@
     <label>robust bulbfreak fusion</label>
     <description>Fuse a shatterspike, a shieldspike, and a fingerspike into a robust bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -801,7 +801,7 @@
     <label>swift bulbfreak fusion</label>
     <description>Fuse a puffspike, a shieldspike, and a puffspike into a swift bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -834,7 +834,7 @@
     <label>bulbfreak fusion</label>
     <description>Fuse a puffspike, a fleshwind, and a whipspike into a bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -864,7 +864,7 @@
     <label>acidic bulbfreak fusion</label>
     <description>Fuse a trispike, a fleshwind, and a paraspike into an acidic bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -897,7 +897,7 @@
     <label>degraded bulbfreak fusion</label>
     <description>Fuse a toughspike, a toughspike, and a gutspike into a degraded bulbfreak.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -930,7 +930,7 @@
     <label>swift acidbulb fusion</label>
     <description>Fuse a shatterspike, a shatterspike, and a paraspike into a swift acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -963,7 +963,7 @@
     <label>split acidbulb fusion</label>
     <description>Fuse a shatterspike, a shieldspike, and a gutspike into a split acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -996,7 +996,7 @@
     <label>acidbulb fusion</label>
     <description>Fuse a shatterspike, a trispike, and a whipspike into an acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1026,7 +1026,7 @@
     <label>acidic acidbulb fusion</label>
     <description>Fuse a shieldspike, a shieldspike, and a fingerspike into an acidic acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1059,7 +1059,7 @@
     <label>expanded acidbulb fusion</label>
     <description>Fuse a shieldspike, a trispike, and a fingerspike into an expanded acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1092,7 +1092,7 @@
     <label>acidbulb fusion</label>
     <description>Fuse a shieldspike, a toughspike, and a puffspike into an acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1122,7 +1122,7 @@
     <label>fragile acidbulb fusion</label>
     <description>Fuse a trispike, a trispike, and a paraspike into a fragile acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1155,7 +1155,7 @@
     <label>cancerous acidbulb fusion</label>
     <description>Fuse a shatterspike, a fleshwind, and a gutspike into a cancerous acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1188,7 +1188,7 @@
     <label>domesticated acidbulb fusion</label>
     <description>Fuse a shieldspike, a fleshwind, and a paraspike into a domesticated acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1221,7 +1221,7 @@
     <label>rapid growth acidbulb fusion</label>
     <description>Fuse a toughspike, a toughspike, and a fingerspike into a rapid growth acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1254,7 +1254,7 @@
     <label>bone spur acidbulb fusion</label>
     <description>Fuse a toughspike, a fleshwind, and a gutspike into a bone spur acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1287,7 +1287,7 @@
     <label>tough acidbulb fusion</label>
     <description>Fuse a puffspike, a toughspike, and a whipspike into a tough acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1320,7 +1320,7 @@
     <label>runaway acidbulb fusion</label>
     <description>Fuse a puffspike, a shieldspike, and a paraspike into a runaway acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1353,7 +1353,7 @@
     <label>sharp acidbulb fusion</label>
     <description>Fuse a trispike, a toughspike, and a puffspike into a sharp acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1386,7 +1386,7 @@
     <label>robust acidbulb fusion</label>
     <description>Fuse a trispike, a fleshwind, and a fingerspike into a robust acidbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1419,7 +1419,7 @@
     <label>tough spitbulb fusion</label>
     <description>Fuse a shatterspike, a shatterspike, and a puffspike into a tough spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1452,7 +1452,7 @@
     <label>spitbulb fusion</label>
     <description>Fuse a shatterspike, a shieldspike, and a paraspike into a spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1482,7 +1482,7 @@
     <label>rapid growth spitbulb fusion</label>
     <description>Fuse a shatterspike, a toughspike, and a gutspike into a rapid growth spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1515,7 +1515,7 @@
     <label>bone spur spitbulb fusion</label>
     <description>Fuse a shieldspike, a shieldspike, and a whipspike into a bone spur spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1548,7 +1548,7 @@
     <label>sharp spitbulb fusion</label>
     <description>Fuse a shieldspike, a toughspike, and a fingerspike into a sharp spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1581,7 +1581,7 @@
     <label>spitbulb fusion</label>
     <description>Fuse a trispike, a trispike, and a gutspike into a spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1611,7 +1611,7 @@
     <label>domesticated spitbulb fusion</label>
     <description>Fuse a trispike, a toughspike, and a paraspike into a domesticated spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1644,7 +1644,7 @@
     <label>split spitbulb fusion</label>
     <description>Fuse a toughspike, a toughspike, and a puffspike into a split spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1677,7 +1677,7 @@
     <label>acidic spitbulb fusion</label>
     <description>Fuse a shatterspike, a fleshwind, and a fingerspike into an acidic spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1710,7 +1710,7 @@
     <label>runaway spitbulb fusion</label>
     <description>Fuse a shieldspike, a fleshwind, and a gutspike into a runaway spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1743,7 +1743,7 @@
     <label>robust spitbulb fusion</label>
     <description>Fuse a puffspike, a fleshwind, and a paraspike into a robust spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1776,7 +1776,7 @@
     <label>expanded spitbulb fusion</label>
     <description>Fuse a trispike, a fleshwind, and a whipspike into an expanded spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1809,7 +1809,7 @@
     <label>swift spitbulb fusion</label>
     <description>Fuse a puffspike, a trispike, and a fingerspike into a swift spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1842,7 +1842,7 @@
     <label>cancerous spitbulb fusion</label>
     <description>Fuse a puffspike, a toughspike, and a gutspike into a cancerous spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1875,7 +1875,7 @@
     <label>degraded spitbulb fusion</label>
     <description>Fuse a puffspike, a shieldspike, and a puffspike into a degraded spitbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1908,7 +1908,7 @@
     <label>expanded bulbplump fusion</label>
     <description>Fuse a shatterspike, a shatterspike, and a whipspike into an expanded bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1941,7 +1941,7 @@
     <label>domesticated bulbplump fusion</label>
     <description>Fuse a shatterspike, a shieldspike, and a puffspike into a domesticated bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -1974,7 +1974,7 @@
     <label>rapid growth bulbplump fusion</label>
     <description>Fuse a shatterspike, a trispike, and a fingerspike into a rapid growth bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2007,7 +2007,7 @@
     <label>bulbplump fusion</label>
     <description>Fuse a shieldspike, a shieldspike, and a gutspike into a bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2037,7 +2037,7 @@
     <label>cancerous bulbplump fusion</label>
     <description>Fuse a shieldspike, a trispike, and a paraspike into a cancerous bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2070,7 +2070,7 @@
     <label>robust bulbplump fusion</label>
     <description>Fuse a trispike, a trispike, and a whipspike into a robust bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2103,7 +2103,7 @@
     <label>degraded bulbplump fusion</label>
     <description>Fuse a shatterspike, a toughspike, and a fingerspike into a degraded bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2136,7 +2136,7 @@
     <label>tough bulbplump fusion</label>
     <description>Fuse a shieldspike, a toughspike, and a whipspike into a tough bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2169,7 +2169,7 @@
     <label>bulbplump fusion</label>
     <description>Fuse a trispike, a toughspike, and a fingerspike into a bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2199,7 +2199,7 @@
     <label>bone spur bulbplump fusion</label>
     <description>Fuse a toughspike, a toughspike, and a paraspike into a bone spur bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2232,7 +2232,7 @@
     <label>split bulbplump fusion</label>
     <description>Fuse a shatterspike, a fleshwind, and a puffspike into a split bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2265,7 +2265,7 @@
     <label>swift bulbplump fusion</label>
     <description>Fuse a shieldspike, a fleshwind, and a fingerspike into a swift bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2298,7 +2298,7 @@
     <label>runaway bulbplump fusion</label>
     <description>Fuse a puffspike, a fleshwind, and a gutspike into a runaway bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2331,7 +2331,7 @@
     <label>sharp bulbplump fusion</label>
     <description>Fuse a puffspike, a trispike, and a paraspike into a sharp bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2364,7 +2364,7 @@
     <label>acidic bulbplump fusion</label>
     <description>Fuse a puffspike, a shieldspike, and a whipspike into an acidic bulbplump.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2397,7 +2397,7 @@
     <label>synbulb fusion</label>
     <description>Fuse a shatterspike, a shatterspike, and a gutspike into a synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2427,7 +2427,7 @@
     <label>cancerous synbulb fusion</label>
     <description>Fuse a shatterspike, a shieldspike, and a whipspike into a cancerous synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2460,7 +2460,7 @@
     <label>acidic synbulb fusion</label>
     <description>Fuse a shatterspike, a trispike, and a puffspike into an acidic synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2493,7 +2493,7 @@
     <label>rapid growth synbulb fusion</label>
     <description>Fuse a shieldspike, a shieldspike, and a paraspike into a rapid growth synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2526,7 +2526,7 @@
     <label>runaway synbulb fusion</label>
     <description>Fuse a shieldspike, a trispike, and a whipspike into a runaway synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2559,7 +2559,7 @@
     <label>split synbulb fusion</label>
     <description>Fuse a trispike, a trispike, and a puffspike into a split synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2592,7 +2592,7 @@
     <label>robust synbulb fusion</label>
     <description>Fuse a shatterspike, a toughspike, and a paraspike into a robust synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2625,7 +2625,7 @@
     <label>swift synbulb fusion</label>
     <description>Fuse a shieldspike, a toughspike, and a gutspike into a swift synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2658,7 +2658,7 @@
     <label>tough synbulb fusion</label>
     <description>Fuse a trispike, a toughspike, and a whipspike into a tough synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2691,7 +2691,7 @@
     <label>sharp synbulb fusion</label>
     <description>Fuse a toughspike, a toughspike, and a whipspike into a sharp synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2724,7 +2724,7 @@
     <label>domesticated synbulb fusion</label>
     <description>Fuse a shatterspike, a fleshwind, and a whipspike into a domesticated synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2757,7 +2757,7 @@
     <label>bone spur synbulb fusion</label>
     <description>Fuse a puffspike, a fleshwind, and a fingerspike into a bone spur synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2790,7 +2790,7 @@
     <label>expanded synbulb fusion</label>
     <description>Fuse a puffspike, a trispike, and a whipspike into an expanded synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2823,7 +2823,7 @@
     <label>synbulb fusion</label>
     <description>Fuse a puffspike, a toughspike, and a paraspike into a synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">
@@ -2853,7 +2853,7 @@
     <label>fragile synbulb fusion</label>
     <description>Fuse a puffspike, a shieldspike, and a fingerspike into a fragile synbulb.</description>
     <category>LargeFlesh</category>
-    <progressTick>60000</progressTick>
+    <progressTick>30000</progressTick>
     <hiden>true</hiden>
     <materials>
       <li Class="HiveCreatureFramework.FusionMaterial_Def">

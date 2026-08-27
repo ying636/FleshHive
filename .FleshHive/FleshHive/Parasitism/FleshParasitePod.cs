@@ -9,7 +9,7 @@ using Verse.Sound;
 
 namespace FleshHive;
 
-public class FleshParasitePod : Building, IThingHolder, IRenameable
+public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPawn, IRenameable
 {
     public FleshParasitePod()
     {
@@ -28,6 +28,12 @@ public class FleshParasitePod : Building, IThingHolder, IRenameable
     public string InspectLabel => RenamableLabel;
 
     public override string Label => RenamableLabel;
+
+    public float HeldPawnDrawPos_Y => DrawPos.y + 0.03658537f;
+
+    public float HeldPawnBodyAngle => base.Rotation.AsAngle;
+
+    public PawnPosture HeldPawnPosture => PawnPosture.LayingOnGroundFaceUp;
 
     public ParasitismComp CachedComp
     {
@@ -159,6 +165,22 @@ public class FleshParasitePod : Building, IThingHolder, IRenameable
         return sb.ToString().TrimEnd();
     }
 
+    public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
+    {
+        base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+        if (!target.Any)
+        {
+            return;
+        }
+
+        Pawn pawn = target[0];
+        pawn.Drawer.renderer.DynamicDrawPhaseAt(
+            phase,
+            DrawPos + Altitudes.AltIncVect * PawnDrawAltitudeOffset,
+            null,
+            neverAimWeapon: true);
+    }
+
     public void Draw(Rect inRect)
     {
         Text.Anchor = TextAnchor.MiddleCenter;
@@ -244,7 +266,7 @@ public class FleshParasitePod : Building, IThingHolder, IRenameable
             int capacity = 0;
             if (this.system == null)
             {
-                capacity = (int)(this.targetUI ?? this.target[0]).GetStatValue(FleshHiveDefOf.FH_Stat_ParasitismCapacity);
+                capacity = Mathf.FloorToInt((this.targetUI ?? this.target[0]).GetStatValue(FleshHiveDefOf.FH_Stat_ParasitismCapacity));
             }
             else
             {
@@ -629,6 +651,8 @@ public class FleshParasitePod : Building, IThingHolder, IRenameable
     public ParasitismComp cachedComp;
 
     public const float ParasitismNutritionCost = 1f;
+
+    private const float PawnDrawAltitudeOffset = 0.5f;
 
     private string? customName;
     

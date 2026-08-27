@@ -48,9 +48,10 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         }
         draggedUnit = null;
 
-        DrawSummary(mapComp, inRect);
+        float summaryHeight = GetSummaryHeight(mapComp, inRect.width);
+        DrawSummary(mapComp, inRect, summaryHeight);
 
-        Rect outRect = new Rect(inRect.x, inRect.y + SummaryHeight, inRect.width - 10f, inRect.height - SummaryHeight);
+        Rect outRect = new Rect(inRect.x, inRect.y + summaryHeight, inRect.width - 10f, inRect.height - summaryHeight);
         Rect viewRect = new Rect(0f, 0f, outRect.width - 16f, contentHeight);
         Widgets.BeginScrollView(outRect, ref scrollPosition, viewRect);
 
@@ -68,12 +69,20 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         DrawDraggedUnit();
     }
 
-    private void DrawSummary(MapComponent_FleshHive mapComp, Rect inRect)
+    private float GetSummaryHeight(MapComponent_FleshHive mapComp, float width)
+    {
+        float scaleWidth = width * 0.56f;
+        float scaleBlocksHeight = GetScaleBlocksHeight(scaleWidth, mapComp.HiveGroupCostLimit);
+        return Mathf.Max(SummaryBaseHeight, 10f + 24f + 8f + scaleBlocksHeight + 12f);
+    }
+
+    private void DrawSummary(MapComponent_FleshHive mapComp, Rect inRect, float summaryHeight)
     {
         Rect scaleRect = new Rect(inRect.x + 10f, inRect.y + 10f, inRect.width * 0.56f, 24f);
         Widgets.Label(scaleRect, "FH_FleshManagement_HiveScale".Translate(mapComp.HiveScale));
         TooltipHandler.TipRegion(scaleRect, BuildHiveScaleTooltip(mapComp));
-        Rect scaleBlocksRect = new Rect(scaleRect.x, scaleRect.yMax + 8f, scaleRect.width, 20f);
+        float scaleBlocksHeight = GetScaleBlocksHeight(scaleRect.width, mapComp.HiveGroupCostLimit);
+        Rect scaleBlocksRect = new Rect(scaleRect.x, scaleRect.yMax + 8f, scaleRect.width, scaleBlocksHeight);
         DrawScaleBlocks(scaleBlocksRect, mapComp.CurrentHiveGroupCost, mapComp.HiveGroupCostLimit);
         TooltipHandler.TipRegion(scaleBlocksRect, "FH_FleshManagement_HiveCapacityTooltip".Translate(mapComp.CurrentHiveGroupCost, mapComp.HiveGroupCostLimit));
 
@@ -86,7 +95,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         Rect fleshCountRect = new Rect(nutritionRect.x + 8f, nutritionRect.yMax + 8f, nutritionRect.width - 16f, 24f);
         Widgets.Label(fleshCountRect, "FH_FleshManagement_FleshCount".Translate(mapComp.MapFleshHive.fleshTerrainCount));
 
-        DrawLineHorizontal(inRect.x + 10f, inRect.y + SummaryHeight - 12f, inRect.width - 20f);
+        DrawLineHorizontal(inRect.x + 10f, inRect.y + summaryHeight - 12f, inRect.width - 20f);
     }
 
     private void DrawScaleBlocks(Rect rect, int scale)
@@ -98,17 +107,36 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     {
         int blockCount = Mathf.Max(0, limit);
         int filledCount = Mathf.Clamp(used, 0, blockCount);
-        float x = rect.x;
+        int columns = GetScaleBlockColumns(rect.width);
         for (int i = 0; i < blockCount; i++)
         {
-            Rect blockRect = new Rect(x, rect.y, 12f, 12f);
+            int row = i / columns;
+            int column = i % columns;
+            Rect blockRect = new Rect(
+                rect.x + column * ScaleBlockStride,
+                rect.y + row * ScaleBlockStride,
+                ScaleBlockSize,
+                ScaleBlockSize);
             Widgets.DrawBoxSolid(blockRect, i < filledCount ? PopulationFilledColor : PopulationEmptyColor);
-            x += 15f;
-            if (x + 12f > rect.xMax)
-            {
-                break;
-            }
         }
+    }
+
+    private float GetScaleBlocksHeight(float width, int limit)
+    {
+        int blockCount = Mathf.Max(0, limit);
+        if (blockCount == 0)
+        {
+            return 0f;
+        }
+
+        int columns = GetScaleBlockColumns(width);
+        int rows = Mathf.CeilToInt(blockCount / (float)columns);
+        return rows * ScaleBlockStride;
+    }
+
+    private int GetScaleBlockColumns(float width)
+    {
+        return Mathf.Max(1, Mathf.FloorToInt((width + ScaleBlockGap) / ScaleBlockStride));
     }
 
     private void DrawInfoBox(Rect rect, TaggedString label, float value, float limit)
@@ -660,10 +688,13 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     private Texture2D? maintenanceSettingsIconTex;
     private Texture2D? miscSettingsIconTex;
 
-    private const float SummaryHeight = 125f;
+    private const float SummaryBaseHeight = 125f;
     private const float RowHeight = 166f;
     private const float RowGap = 8f;
     private const float UnitIconSize = 58f;
+    private const float ScaleBlockSize = 12f;
+    private const float ScaleBlockGap = 3f;
+    private const float ScaleBlockStride = ScaleBlockSize + ScaleBlockGap;
     private const float GroupControlSize = 26f;
     private const float GroupControlGap = 4f;
     private const int GroupControlCount = 6;

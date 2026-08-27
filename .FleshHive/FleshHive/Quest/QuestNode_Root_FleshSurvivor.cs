@@ -71,6 +71,7 @@ public class QuestNode_Root_FleshSurvivor : QuestNode
             maximumAgeTraits: 2,
             minimumAgeTraits: 2,
             forceNoGear: true);
+        request.ForcedMutant = FleshHiveDefOf.FH_HelaSubhuman;
         Pawn pawn = PawnGenerator.GeneratePawn(request);
 
         string firstName = "FH_Hela_FirstName".Translate();
@@ -120,7 +121,6 @@ public class QuestNode_Root_FleshSurvivor : QuestNode
         AddInjury(pawn, scratch, BodyPartDefOf.Shoulder, true, 2f);
         AddInjury(pawn, scratch, BodyPartDefOf.Leg, true, 2f);
 
-        pawn.health.AddHediff(FleshHiveDefOf.FH_Hela);
         ParasitismSystem system = (ParasitismSystem)pawn.health.AddHediff(FleshHiveDefOf.FH_ParasitismSystem);
         Pawn parasite = PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Whipspike, Faction.OfPlayer);
         if (!system.Parasite(parasite) && !parasite.Destroyed)

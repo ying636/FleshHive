@@ -58,6 +58,17 @@
   </HediffDef>
 
   <HediffDef>
+    <defName>FH_Hediff_Upgrade_Robust</defName>
+    <label>robustification</label>
+    <description>This large fleshbeast has six times its normal health scale.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+  </HediffDef>
+
+  <HediffDef>
     <defName>FH_Hediff_Upgrade_NestMasterCarapace</defName>
     <label>nest master carapace</label>
     <description>This giant fleshbeast gains +45% blunt armor, +106% sharp armor, and +54% heat armor.</description>

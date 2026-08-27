@@ -74,7 +74,7 @@
           </points>
         </beamLineFleckChanceCurve>
         <damageAmount>20</damageAmount>
-        <armorPenetration>0.5</armorPenetration>
+        <armorPenetration>1.25</armorPenetration>
         <buildingDamageMultiplier>3</buildingDamageMultiplier>
         <laserDurationTicks>600</laserDurationTicks>
         <damageIntervalTicks>15</damageIntervalTicks>

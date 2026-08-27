@@ -4,9 +4,13 @@ using Verse;
 
 namespace FleshHive;
 
-public class UnitGroup_TemporaryFleshHive : UnitGroup
+public class UnitGroup_TemporaryFleshHive : UnitGroup_FleshHive
 {
     public override bool CanDrawTarget => false;
+    public override void Make()
+    {
+        this.SetMode(HCFDefOf.HCF_GroupWorkMode_Attack);
+    }
 
     public override void AcceptUnit(Pawn unit)
     {
@@ -26,8 +30,8 @@ public class UnitGroup_TemporaryFleshHive : UnitGroup
         }
     }
 
-    public override IEnumerable<GroupWorkMode> GetModes()
+    public override IEnumerable<GroupWorkModeDef> GetModeDefs()
     {
-        yield return GroupWorkMode.Attack;
+        yield return HCFDefOf.HCF_GroupWorkMode_Attack;
     }
 }

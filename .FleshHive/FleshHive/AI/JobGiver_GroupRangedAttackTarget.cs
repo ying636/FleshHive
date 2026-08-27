@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using UnityEngine;
@@ -10,10 +12,12 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
 {
     protected override Job? TryGiveJob(Pawn pawn)
     {
+        ModExtension_RangedDuty? rangedSettings = pawn.mindState.duty?.def
+            ?.GetModExtension<ModExtension_RangedDuty>();
         Pawn? target = pawn.mindState.duty?.focus.Pawn;
         if (!IsValidFocusedTarget(pawn, target))
         {
-            target = FindHostileRangedTarget(pawn, CanFallbackToMelee(pawn));
+            target = FindHostileRangedTarget(pawn, allowMeleeFallback, rangedSettings != null);
         }
 
         if (target == null || !target.Spawned || target.Dead || target.Map != pawn.Map)
@@ -21,23 +25,33 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             return MakeWaitJob();
         }
 
-        Ability? ability = FindRangedAbility(pawn, target);
+        Ability? ability = FindRangedAbility(pawn, target, rangedSettings != null);
         if (ability == null)
         {
-            if (CanFallbackToMelee(pawn))
+            if (allowMeleeFallback)
             {
                 return MakeMeleeAttackJob(target);
             }
 
-            return TryFindSupportPosition(pawn, target, out IntVec3 supportPosition)
+            return TryFindSupportPosition(pawn, target, out IntVec3 supportPosition, rangedSettings)
                 && supportPosition != pawn.Position
                 ? MakeGotoJob(supportPosition)
                 : MakeWaitJob();
         }
 
-        if (!TryFindCastPosition(pawn, target, ability.verb, out IntVec3 castPosition))
+        if (rangedSettings != null
+            && IsAtPreferredDistance(pawn, target, ability.verb, rangedSettings)
+            && ability.verb.CanHitTarget(target))
         {
-            return TryFindApproachPosition(pawn, target, ability.verb, out IntVec3 approachPosition)
+            return ability.AICanTargetNow(target)
+                ? ability.GetJob(target, target)
+                : MakeWaitJob();
+        }
+
+        if (!TryFindCastPosition(pawn, target, ability.verb, out IntVec3 castPosition, rangedSettings))
+        {
+            return TryFindApproachPosition(pawn, target, ability.verb, out IntVec3 approachPosition,
+                    rangedSettings)
                 && approachPosition != pawn.Position
                 ? MakeGotoJob(approachPosition)
                 : MakeWaitJob();
@@ -53,7 +67,8 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             : MakeWaitJob();
     }
 
-    private static Pawn? FindHostileRangedTarget(Pawn pawn, bool allowMeleeFallback)
+    private static Pawn? FindHostileRangedTarget(Pawn pawn, bool allowMeleeFallback,
+        bool includeTemporarilyUnavailable)
     {
         IAttackTarget? target = AttackTargetFinder.BestAttackTarget(
             pawn,
@@ -61,7 +76,8 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             candidate => candidate is Pawn targetPawn
                 && IsValidFocusedTarget(pawn, targetPawn)
                 && targetPawn.HostileTo(pawn)
-                && (allowMeleeFallback || FindRangedAbility(pawn, targetPawn) != null),
+                && (allowMeleeFallback
+                    || FindRangedAbility(pawn, targetPawn, includeTemporarilyUnavailable) != null),
             0f,
             RangedSearchRadius,
             pawn.Position,
@@ -69,22 +85,13 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
         return target?.Thing as Pawn;
     }
 
-    private static bool CanFallbackToMelee(Pawn pawn)
-    {
-        return pawn.kindDef == FleshHiveDefOf.FH_Puffspike
-            || pawn.kindDef == FleshHiveDefOf.FH_Paraspike
-            || pawn.kindDef == FleshHiveDefOf.FH_Fingerspike
-            || pawn.kindDef == FleshHiveDefOf.FH_Toughspike
-            || pawn.kindDef == FleshHiveDefOf.FH_Trispike
-            || pawn.kindDef == FleshHiveDefOf.FH_Shieldspike;
-    }
-
-    private static bool TryFindApproachPosition(Pawn pawn, Pawn target, Verb verb, out IntVec3 approachPosition)
+    private static bool TryFindApproachPosition(Pawn pawn, Pawn target, Verb verb, out IntVec3 approachPosition,
+        ModExtension_RangedDuty? rangedSettings)
     {
         approachPosition = IntVec3.Invalid;
-        float minimumRange = Mathf.Max(verb.verbProps.minRange,
-            Mathf.Min(verb.EffectiveRange * PreferredRangeFactor, MaximumPreferredRange));
-        int maximumRange = Mathf.CeilToInt(verb.EffectiveRange);
+        float minimumRange = GetMinimumPreferredRange(verb, rangedSettings);
+        float maximumPreferredRange = GetMaximumPreferredRange(verb, rangedSettings);
+        int maximumRange = Mathf.CeilToInt(maximumPreferredRange);
         int bestDistance = int.MaxValue;
 
         foreach (IntVec3 cell in GenRadial.RadialCellsAround(target.Position, maximumRange, true))
@@ -93,7 +100,7 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             if (!cell.InBounds(pawn.Map)
                 || !cell.Standable(pawn.Map)
                 || distance < minimumRange
-                || distance > verb.EffectiveRange
+                || distance > maximumPreferredRange
                 || !pawn.CanReach(cell, PathEndMode.OnCell, Danger.Deadly))
             {
                 continue;
@@ -122,22 +129,30 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             && target.Map == pawn.Map;
     }
 
-    public static Ability? FindRangedAbility(Pawn pawn, Pawn target)
+    public static Ability? FindRangedAbility(Pawn pawn, Pawn target, bool includeTemporarilyUnavailable = false)
     {
-        return pawn.abilities?.AllAbilitiesForReading.FirstOrDefault(ability =>
+        List<Ability>? abilities = pawn.abilities?.AllAbilitiesForReading.Where(ability =>
             ability.def.aiCanUse
             && ability.def.ai_IsOffensive
             && ability.def.targetRequired
             && ability.verb != null
             && !ability.verb.verbProps.IsMeleeAttack
-            && ability.def.verbProperties.targetParams.CanTarget(target)
-            && ability.AICanTargetNow(target));
+            && ability.def.verbProperties.targetParams.CanTarget(target)).ToList();
+        Ability? availableAbility = abilities?.FirstOrDefault(ability => ability.AICanTargetNow(target));
+        return availableAbility ?? (includeTemporarilyUnavailable ? abilities?.FirstOrDefault() : null);
     }
 
-    public static bool TryFindCastPosition(Pawn pawn, Pawn target, Verb verb, out IntVec3 castPosition)
+    public static bool IsRangedAttackDuty(DutyDef? duty)
     {
-        float minimumRange = Mathf.Max(verb.verbProps.minRange,
-            Mathf.Min(verb.EffectiveRange * PreferredRangeFactor, MaximumPreferredRange));
+        return duty == FleshHiveDefOf.FH_Attack_Ranged
+            || duty == FleshHiveDefOf.FH_Attack_RangedDistant;
+    }
+
+    public static bool TryFindCastPosition(Pawn pawn, Pawn target, Verb verb, out IntVec3 castPosition,
+        ModExtension_RangedDuty? rangedSettings = null)
+    {
+        float minimumRange = GetMinimumPreferredRange(verb, rangedSettings);
+        float maximumRange = GetMaximumPreferredRange(verb, rangedSettings);
         return CastPositionFinder.TryFindCastPosition(new CastPositionRequest
         {
             caster = pawn,
@@ -147,14 +162,18 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             wantCoverFromTarget = verb.EffectiveRange > 5f,
             preferredCastPosition = pawn.Position,
             validator = cell => cell.DistanceTo(target.Position) >= minimumRange
+                && cell.DistanceTo(target.Position) <= maximumRange
         }, out castPosition);
     }
 
-    public static bool TryFindSupportPosition(Pawn pawn, Pawn target, out IntVec3 supportPosition)
+    public static bool TryFindSupportPosition(Pawn pawn, Pawn target, out IntVec3 supportPosition,
+        ModExtension_RangedDuty? rangedSettings = null)
     {
         supportPosition = IntVec3.Invalid;
         int bestDistance = int.MaxValue;
-        foreach (IntVec3 cell in GenRadial.RadialCellsAround(target.Position, SupportMinRange, SupportMaxRange))
+        float minimumRange = rangedSettings?.minimumRange ?? SupportMinRange;
+        float maximumRange = rangedSettings?.maximumRange ?? SupportMaxRange;
+        foreach (IntVec3 cell in GenRadial.RadialCellsAround(target.Position, minimumRange, maximumRange))
         {
             if (!cell.InBounds(pawn.Map) || !cell.Standable(pawn.Map)
                 || !pawn.CanReach(cell, PathEndMode.OnCell, Danger.Deadly))
@@ -173,6 +192,31 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
         }
 
         return supportPosition.IsValid;
+    }
+
+    private static float GetMinimumPreferredRange(Verb verb, ModExtension_RangedDuty? rangedSettings)
+    {
+        if (rangedSettings != null)
+        {
+            return rangedSettings.minimumRange;
+        }
+
+        return Mathf.Max(verb.verbProps.minRange,
+            Mathf.Min(verb.EffectiveRange * PreferredRangeFactor, MaximumPreferredRange));
+    }
+
+    private static float GetMaximumPreferredRange(Verb verb, ModExtension_RangedDuty? rangedSettings)
+    {
+        return rangedSettings?.maximumRange ?? verb.EffectiveRange;
+    }
+
+    private static bool IsAtPreferredDistance(Pawn pawn, Pawn target, Verb verb,
+        ModExtension_RangedDuty rangedSettings)
+    {
+        float distance = pawn.Position.DistanceTo(target.Position);
+        return distance >= rangedSettings.minimumRange
+            && distance <= rangedSettings.maximumRange
+            && distance <= verb.EffectiveRange;
     }
 
     private static Job MakeGotoJob(IntVec3 destination)
@@ -200,6 +244,8 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
         job.expireRequiresEnemiesNearby = true;
         return job;
     }
+
+    public bool allowMeleeFallback;
 
     private const int GotoExpiryTicks = 180;
 

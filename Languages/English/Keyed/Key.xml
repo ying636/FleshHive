@@ -128,6 +128,8 @@
   <FH_FleshManagement_RecallTemporaryPartial>Recalled {0} stray fleshbeast(s); {1} remain. Cannot continue: {2}</FH_FleshManagement_RecallTemporaryPartial>
   <FH_Suppressible_Inspect>Hive activity: {0}</FH_Suppressible_Inspect>
   <FH_DebugActivity>Flesh hive activity: {0}</FH_DebugActivity>
+  <FH_DebugNoHiveComponent>No flesh hive component is available on the current map.</FH_DebugNoHiveComponent>
+  <FH_DebugRiotTriggered>Flesh hive riot triggered.</FH_DebugRiotTriggered>
   <FH_FleshHiveRiot_Label>Flesh hive riot</FH_FleshHiveRiot_Label>
   <FH_FleshHiveRiot_Text>The flesh hive can no longer be controlled. {0} fleshbeasts have broken loose and turned hostile.</FH_FleshHiveRiot_Text>
   <FH_InfectHarbingerTree>Infect harbinger tree</FH_InfectHarbingerTree>
@@ -319,4 +321,8 @@
   <FH_MeldGrowth_CannotConsumeReserved>Cannot consume {0}: reserved by someone else</FH_MeldGrowth_CannotConsumeReserved>
   <FH_MeldGrowth_ConsumeFailed>{0} could not complete the growth.</FH_MeldGrowth_ConsumeFailed>
   <FH_MeldGrowth_Upgraded>{0} has grown to level {1}/{2}.</FH_MeldGrowth_Upgraded>
+  <FH_Gestation_ReservedGroup>Assigned node: {0}</FH_Gestation_ReservedGroup>
+  <FH_Gestation_ReservedGroupNone>Automatic assignment</FH_Gestation_ReservedGroupNone>
+  <FH_Gestation_ReservedGroupTip>Prefer assigning the produced fleshbeast to this group. If it cannot accept the unit, HCF will use its normal assignment rules.</FH_Gestation_ReservedGroupTip>
+  <FH_Gestation_ReservedGroupUnavailable>No available groups on this map.</FH_Gestation_ReservedGroupUnavailable>
 </LanguageData>

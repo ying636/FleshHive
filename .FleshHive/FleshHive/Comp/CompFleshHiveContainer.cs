@@ -16,7 +16,6 @@ public class CompFleshHiveContainer : CompHiveContainer
     public override void AddUnit(Pawn unit)
     {
         base.AddUnit(unit);
-        parent.Map?.GetComponent<MapComponent_FleshHive>()?.SyncFleshBeastUpgradeHediffs(unit);
     }
 
     public override void Heal(Pawn unit, float point)

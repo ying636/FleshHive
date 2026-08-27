@@ -244,6 +244,8 @@
   <FH_Suppressible_Inspect>巢穴活跃度：{0}</FH_Suppressible_Inspect>
   <!-- EN: Flesh hive activity: {0} -->
   <FH_DebugActivity>血肉巢穴活跃度：{0}</FH_DebugActivity>
+  <FH_DebugNoHiveComponent>当前地图没有可用的血肉巢穴组件。</FH_DebugNoHiveComponent>
+  <FH_DebugRiotTriggered>已立即触发血肉巢穴失控。</FH_DebugRiotTriggered>
   <!-- EN: Flesh hive riot -->
   <FH_FleshHiveRiot_Label>血肉巢穴暴动</FH_FleshHiveRiot_Label>
   <!-- EN: The flesh hive can no longer be controlled. {0} fleshbeasts have broken loose and turned hostile. -->
@@ -604,4 +606,12 @@
   <FH_MeldGrowth_ConsumeFailed>{0}未能完成成长。</FH_MeldGrowth_ConsumeFailed>
   <!-- EN: {0} has grown to level {1}/{2}. -->
   <FH_MeldGrowth_Upgraded>{0}已经成长至{1}/{2}级。</FH_MeldGrowth_Upgraded>
+  <!-- EN: Reserve group: {0} -->
+  <FH_Gestation_ReservedGroup>归属节点：{0}</FH_Gestation_ReservedGroup>
+  <!-- EN: Automatic assignment -->
+  <FH_Gestation_ReservedGroupNone>自动分配</FH_Gestation_ReservedGroupNone>
+  <!-- EN: Prefer assigning the produced fleshbeast to this group. If it cannot accept the unit, HCF will use its normal assignment rules. -->
+  <FH_Gestation_ReservedGroupTip>优先将生产出的血肉兽分配到此巢群；如果该巢群无法接收单位，则使用HCF的常规分配规则。</FH_Gestation_ReservedGroupTip>
+  <!-- EN: No available groups on this map. -->
+  <FH_Gestation_ReservedGroupUnavailable>当前地图没有可用巢群。</FH_Gestation_ReservedGroupUnavailable>
 </LanguageData>

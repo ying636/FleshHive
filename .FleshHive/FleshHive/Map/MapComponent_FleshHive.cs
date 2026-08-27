@@ -77,6 +77,18 @@ public class MapComponent_FleshHive : MapComponent
         }
     }
 
+    public HashSet<Building> CachedFleshBuildings
+    {
+        get
+        {
+            if (cachedFleshBuildings == null)
+            {
+                cachedFleshBuildings = new HashSet<Building>();
+            }
+            return cachedFleshBuildings;
+        }
+    }
+
     public int HiveScale => MapFleshHive.hiveScale + ExtraHiveScale;
     public int HiveGroupCostLimit => HiveScale / HiveScalePerGroupCost + ExtraHiveGroupCostLimit;
     public bool HasFleshHive => cachedFleshHives?.Count > 0;
@@ -152,11 +164,12 @@ public class MapComponent_FleshHive : MapComponent
 
     public List<CompHiveSpawner_FleshTrait> GetFleshbeastSpawners()
     {
-        return map.listerThings.AllThings
+        return map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshHive)
+            .Concat(map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshPrimaryNest))
+            .Where(thing => thing.Faction == Faction.OfPlayer)
             .OfType<ThingWithComps>()
-            .Where(thing => thing.Faction == Faction.OfPlayer && thing is not Building_FleshHopper)
             .Select(thing => thing.TryGetComp<CompHiveSpawner_FleshTrait>())
-            .Where(spawner => spawner != null && GetAvailableUnits(spawner).Any())
+            .Where(spawner => spawner != null)
             .ToList();
     }
 
@@ -273,10 +286,9 @@ public class MapComponent_FleshHive : MapComponent
         }
 
         CachedFleshBeasts.Add(pawn);
-        SyncFleshBeastUpgradeHediffs(pawn);
     }
 
-    public void SyncFleshBeastUpgradeHediffs(Pawn pawn)
+    public void GrantFleshBeastUpgradeHediffs(Pawn pawn)
     {
         if (pawn == null || pawn.Destroyed || pawn.Dead || pawn.health?.hediffSet == null)
         {
@@ -285,7 +297,6 @@ public class MapComponent_FleshHive : MapComponent
 
         if (pawn.Faction != Faction.OfPlayer || pawn.TryGetComp<UnitComp>() == null)
         {
-            RemoveFleshBeastUpgradeHediffs(pawn);
             return;
         }
 
@@ -315,22 +326,9 @@ public class MapComponent_FleshHive : MapComponent
             HasUpgradeEffect(FleshHiveUpgradeEffect.NestHealing));
         SetFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_FleshbeastTaming,
             tamingLevel > 0, tamingLevel);
-    }
-
-    public void RemoveFleshBeastUpgradeHediffs(Pawn pawn)
-    {
-        if (pawn?.health?.hediffSet == null)
-        {
-            return;
-        }
-
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_Reactivation);
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_Agility);
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_BoneSpikePenetration);
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_ParasiticSpace);
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_NestMasterCarapace);
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_FastHealing);
-        RemoveFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_FleshbeastTaming);
+        SetFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_Robust,
+            HasUpgradeEffect(FleshHiveUpgradeEffect.Robust)
+            && FleshBeastKindUtility.IsLarge(pawn.kindDef));
     }
 
     public void RegisterFleshHive(Building_RenameableFleshHive hive)
@@ -488,7 +486,7 @@ public class MapComponent_FleshHive : MapComponent
         MapFleshHive.activeUpgrade = null;
         MapFleshHive.activeUpgradeProgress = 0f;
         MapFleshHive.activeUpgradeTotalTime = 0f;
-        SyncAllFleshBeastUpgradeHediffs();
+        GrantAllFleshBeastUpgradeHediffs();
         Messages.Message("FH_Upgrade_DebugUnlocked".Translate(), MessageTypeDefOf.PositiveEvent, false);
     }
 
@@ -570,6 +568,11 @@ public class MapComponent_FleshHive : MapComponent
         Activity = ActivityLimit;
     }
 
+    public void DebugStartRiot()
+    {
+        StartRiot();
+    }
+
     public void RegisterFleshHopper(Building_FleshHopper hopper)
     {
         if (hopper == null)
@@ -588,6 +591,21 @@ public class MapComponent_FleshHive : MapComponent
         }
 
         MapFleshHive.CachedFleshBoxes.Add(box);
+    }
+
+    public void RegisterFleshBuilding(Building building)
+    {
+        if (building == null)
+        {
+            return;
+        }
+
+        CachedFleshBuildings.Add(building);
+    }
+
+    public void UnregisterFleshBuilding(Building building)
+    {
+        cachedFleshBuildings?.Remove(building);
     }
 
     public void RegisterHiveCapacityProvider(CompHiveGroupCapacityProvider provider)
@@ -775,6 +793,25 @@ public class MapComponent_FleshHive : MapComponent
         }
     }
 
+    public override void MapRemoved()
+    {
+        base.MapRemoved();
+        if (group != null)
+        {
+            UnitGroup removedGroup = group;
+            group = null;
+            foreach (Pawn unit in removedGroup.units.ToList())
+            {
+                removedGroup.RemoveUnit(unit);
+            }
+
+            removedGroup.lord = null;
+            removedGroup.Destroy();
+        }
+
+        mapFleshHives.Remove(map);
+    }
+
     public override void MapGenerated()
     {
         base.MapGenerated();
@@ -788,7 +825,7 @@ public class MapComponent_FleshHive : MapComponent
         Faction faction =  Faction.OfPlayer;
         group.map = this.map;
         group.lord = LordMaker.MakeNewLord(faction, new LordJob_HiveGroup(group),this.map);  
-        group.SetMode(GroupWorkMode.Attack);
+        group.SetMode(HCFDefOf.HCF_GroupWorkMode_Attack);
         this.group = group;
         ThingDef? fleshHiveDef = DefDatabase<ThingDef>.GetNamedSilentFail("FH_FleshHive");
         CompPropertiesHiveGroup? groupProperties = fleshHiveDef?.GetCompProperties<CompPropertiesHiveGroup>();
@@ -844,28 +881,25 @@ public class MapComponent_FleshHive : MapComponent
     public override void MapComponentTick()
     {
         base.MapComponentTick();
-        TickUpgrade();
+        int ticksGame = Find.TickManager.TicksGame;
+        TickUpgrade(ticksGame);
         UpdateHiveResourcers();
         TickFleshBushSpawner();
-        if (Find.TickManager.TicksGame % ActivityTickInterval == 0)
+        if (ticksGame % ActivityTickInterval == 0)
         {
             TickActivity(ActivityTickInterval);
         }
-        if (Find.TickManager.TicksGame % SelfRepairTickInterval == 0)
+        if (ticksGame % SelfRepairTickInterval == 0)
         {
             TickSelfRepairFleshBuildings();
         }
-        if (Find.TickManager.TicksGame % ResourceTransportInterval == 0)
+        if (ticksGame % ResourceTransportInterval == 0)
         {
             DispatchHiveResourcers();
         }
-        if (Find.TickManager.TicksGame % UnitQuotaTickInterval == 0)
+        if (ticksGame % UnitQuotaTickInterval == 0)
         {
             TickUnitQuotas();
-        }
-        if (Find.TickManager.TicksGame % FleshBeastUpgradeHediffSyncInterval == 0)
-        {
-            SyncAllFleshBeastUpgradeHediffs();
         }
     }
 
@@ -893,9 +927,9 @@ public class MapComponent_FleshHive : MapComponent
         return Mathf.Max(0, fleshTerrainCount / FleshTerrainPerHiveScale);
     }
 
-    private void TickUpgrade()
+    private void TickUpgrade(int ticksGame)
     {
-        if (MapFleshHive.activeUpgrade == null || Find.TickManager.TicksGame % UpgradeTickInterval != 0)
+        if (MapFleshHive.activeUpgrade == null || ticksGame % UpgradeTickInterval != 0)
         {
             return;
         }
@@ -911,12 +945,12 @@ public class MapComponent_FleshHive : MapComponent
         MapFleshHive.activeUpgrade = null;
         MapFleshHive.activeUpgradeProgress = 0f;
         MapFleshHive.activeUpgradeTotalTime = 0f;
-        SyncAllFleshBeastUpgradeHediffs();
+        GrantAllFleshBeastUpgradeHediffs();
         Messages.Message("FH_Upgrade_CompletedMessage".Translate(completedUpgrade.label),
             MessageTypeDefOf.PositiveEvent, false);
     }
 
-    private void SyncAllFleshBeastUpgradeHediffs()
+    private void GrantAllFleshBeastUpgradeHediffs()
     {
         HashSet<Pawn> pawns = map.mapPawns.AllPawnsSpawned
             .Where(pawn => pawn != null && pawn.TryGetComp<UnitComp>() != null)
@@ -936,7 +970,7 @@ public class MapComponent_FleshHive : MapComponent
 
         foreach (Pawn pawn in pawns)
         {
-            SyncFleshBeastUpgradeHediffs(pawn);
+            GrantFleshBeastUpgradeHediffs(pawn);
         }
     }
 
@@ -953,10 +987,6 @@ public class MapComponent_FleshHive : MapComponent
             .ToList();
         if (!enabled)
         {
-            foreach (Hediff hediff in matchingHediffs)
-            {
-                pawn.health.RemoveHediff(hediff);
-            }
             return;
         }
 
@@ -973,26 +1003,6 @@ public class MapComponent_FleshHive : MapComponent
             pawn.health.Notify_HediffChanged(activeHediff);
         }
 
-        for (int i = 1; i < matchingHediffs.Count; i++)
-        {
-            pawn.health.RemoveHediff(matchingHediffs[i]);
-        }
-    }
-
-    private void RemoveFleshBeastUpgradeHediff(Pawn pawn, HediffDef hediffDef)
-    {
-        if (hediffDef == null)
-        {
-            Log.ErrorOnce("[FleshHive] A fleshbeast upgrade HediffDef is missing.", 728451936);
-            return;
-        }
-
-        foreach (Hediff hediff in pawn.health.hediffSet.hediffs
-                     .Where(hediff => hediff.def == hediffDef)
-                     .ToList())
-        {
-            pawn.health.RemoveHediff(hediff);
-        }
     }
 
     private bool HasModBoneSpikeSkill(Pawn pawn)
@@ -1144,15 +1154,15 @@ public class MapComponent_FleshHive : MapComponent
     private void QueueMissingMaintainedUnits()
     {
         int tasksAdded = 0;
+        List<CompHiveSpawner_FleshTrait> spawners = GetFleshbeastSpawners();
         foreach (KeyValuePair<UnitDef, int> pair in unitMaintainTargets.InRandomOrder())
         {
             UnitDef unit = pair.Key;
             int missingCount = pair.Value - GetCurrentUnitCount(unit) - GetQueuedUnitCount(unit);
             while (missingCount > 0 && tasksAdded < MaxAutomaticUnitTasksPerInterval)
             {
-                List<CompHiveSpawner_FleshTrait> candidates = GetFleshbeastSpawners()
-                    .Where(spawner => GetAvailableUnits(spawner).Contains(unit) && unit.CanProduce(spawner).Accepted)
-                    .ToList();
+                IEnumerable<CompHiveSpawner_FleshTrait> candidates = spawners
+                    .Where(spawner => GetAvailableUnits(spawner).Contains(unit) && unit.CanProduce(spawner).Accepted);
                 if (!candidates.TryRandomElement(out CompHiveSpawner_FleshTrait spawner))
                 {
                     break;
@@ -1195,14 +1205,7 @@ public class MapComponent_FleshHive : MapComponent
     {
         float oldActivity = Activity;
         float change = GetActivityGrowthPerDay() * intervalTicks / GenDate.TicksPerDay;
-        if (change > 0f)
-        {
-            Activity += change;
-        }
-        else if (change < 0f)
-        {
-            Activity += change;
-        }
+        Activity += change;
 
         if (Activity >= ActivityLimit)
         {
@@ -1261,10 +1264,9 @@ public class MapComponent_FleshHive : MapComponent
             remainingRepair *= 2;
         }
 
-        foreach (Thing thing in map.listerThings.AllThings.ToList())
+        foreach (Building thing in CachedFleshBuildings)
         {
-            if (remainingRepair <= 0 || thing is not Building || thing.Destroyed
-                || thing.HitPoints >= thing.MaxHitPoints || !IsFleshBuilding(thing))
+            if (remainingRepair <= 0 || thing.Destroyed || thing.HitPoints >= thing.MaxHitPoints)
             {
                 continue;
             }
@@ -1468,16 +1470,17 @@ public class MapComponent_FleshHive : MapComponent
 
     private void TickFleshBushSpawner()
     {
-        if (!FleshTerrainUtility.HasLargeFleshEcosystem(map) || map.Area <= 0)
+        int mapArea = map.Area;
+        if (!FleshTerrainUtility.HasLargeFleshEcosystem(map) || mapArea <= 0)
         {
             return;
         }
 
-        int cellsPerTick = Mathf.CeilToInt(map.Area * WildPlantSpawnerMapFractionCheckPerTick);
+        int cellsPerTick = Mathf.CeilToInt(mapArea * WildPlantSpawnerMapFractionCheckPerTick);
         int tickInterval = Mathf.CeilToInt(WildPlantSpawnerTickInterval);
         for (int i = 0; i < cellsPerTick; i++)
         {
-            if (fleshBushCycleIndex >= map.Area)
+            if (fleshBushCycleIndex >= mapArea)
             {
                 fleshBushCycleIndex = 0;
             }
@@ -1776,6 +1779,7 @@ public class MapComponent_FleshHive : MapComponent
     private HashSet<Pawn> cachedFleshBeasts;
     private HashSet<Pawn> cachedNeedsTwistedFlesh;
     private HashSet<Building_RenameableFleshHive> cachedFleshHives;
+    private HashSet<Building> cachedFleshBuildings;
     private List<HiveResourcer> hiveResourcers;
     private List<CompHiveGroupCapacityProvider> hiveCapacityProviders;
     private List<CompHiveScaleProvider> hiveScaleProviders;
@@ -1787,7 +1791,6 @@ public class MapComponent_FleshHive : MapComponent
     private const int ResourceTransportInterval = 250;
     private const int ActivityTickInterval = 2500;
     private const int UnitQuotaTickInterval = 2500;
-    private const int FleshBeastUpgradeHediffSyncInterval = 2500;
     private const int MaxAutomaticUnitTasksPerInterval = 50;
     public const int FleshTerrainPerHiveScale = 50;
     public const float NutritionLimitPerHiveScale = 50f;

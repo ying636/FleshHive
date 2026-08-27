@@ -55,7 +55,7 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
         }
 
         LordJob lordJob = spawnedAttackers.Contains(mother)
-            ? new LordJob_GiantFleshbeastAssault(mother)
+            ? new LordJob_DefendPoint(mother.Position, 28f, 12f)
             : new LordJob_FleshbeastAssault();
         LordMaker.MakeNewLord(Faction.OfEntities, lordJob, map, spawnedAttackers);
     }

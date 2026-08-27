@@ -32,9 +32,16 @@ public class CompHiveNutritionRefuelable : CompRefuelable
 
     public override string CompInspectStringExtra()
     {
-        string text = base.CompInspectStringExtra();
+        string text = HiveProps.fuelFilter.AnyAllowedDef != null
+            ? base.CompInspectStringExtra()
+            : $"{HiveProps.FuelLabel}: {Fuel.ToStringDecimalIfSmall()} / {HiveProps.fuelCapacity.ToStringDecimalIfSmall()}";
         string nutritionText = "FH_HiveNutritionRefuelable_NutritionPerFuel".Translate(HiveProps.nutritionPerFuel.ToString("0.##"));
         return text.NullOrEmpty() ? nutritionText : text + "\n" + nutritionText;
+    }
+
+    public override IEnumerable<StatDrawEntry> SpecialDisplayStats()
+    {
+        yield break;
     }
 
     public override IEnumerable<Gizmo> CompGetGizmosExtra()

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!-- EN: Animal fishing -->
+    <FH_UnitWork_FingerspikeAnimalFishing.label>动物捕鱼</FH_UnitWork_FingerspikeAnimalFishing.label>
+    <!-- EN: Fish using Odyssey's animal fishing behavior -->
+    <FH_UnitWork_FingerspikeAnimalFishing.description>使用奥德赛的动物捕鱼机制捕鱼</FH_UnitWork_FingerspikeAnimalFishing.description>
+
+</LanguageData>

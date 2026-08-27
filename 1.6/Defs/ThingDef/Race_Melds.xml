@@ -9,7 +9,7 @@
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
         <defaultUnitLimit>30</defaultUnitLimit>
-        <groupType>FleshHive.UnitGroup_FleshNode</groupType>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
         <specialWorks>
           <li>HCF_UnitWork_Hunt</li>
@@ -64,6 +64,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -79,13 +80,11 @@
           <FH_Resource_Nutrition>36</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -114,10 +113,11 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_ScarletField</iconPath>
-        <cost>6</cost>
+        <cost>5</cost>
         <hediff>FH_Parasitism_Nexusmeld</hediff>
         <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
     <tools>
       <li>
@@ -182,7 +182,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
+          <drawSize>4.55</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -232,6 +232,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -247,13 +248,11 @@
           <FH_Resource_Nutrition>48</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -284,10 +283,11 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_RampageCharge</iconPath>
-        <cost>6</cost>
+        <cost>5</cost>
         <hediff>FH_Parasitism_Furiousmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
       </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
     <tools>
       <li>
@@ -361,7 +361,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
+          <drawSize>4.55</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -416,13 +416,14 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -431,13 +432,11 @@
           <FH_Resource_Nutrition>42</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -601,12 +600,13 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
-        <cost>6</cost>
+        <cost>5</cost>
         <hediff>FH_Parasitism_Bastionmeld</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -5%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
         <abilityLabel>Bastionmeld tentacle attack</abilityLabel>
         <abilityDescription>Release an EMP pulse centered on the host, matching an IED EMP trap's radius.</abilityDescription>
       </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
     <tools>
       <li>
@@ -693,7 +693,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>5</drawSize>
+          <drawSize>6.5</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -753,6 +753,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -768,13 +769,11 @@
           <FH_Resource_Nutrition>30</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -802,10 +801,11 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_FleshRebirth</iconPath>
-        <cost>6</cost>
+        <cost>5</cost>
         <hediff>FH_Parasitism_Fissionmeld</hediff>
         <twistedFleshCapacity>800</twistedFleshCapacity>
       </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
     <tools>
       <li>
@@ -875,7 +875,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
+          <drawSize>4.55</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -917,6 +917,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -932,13 +933,11 @@
           <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1045,7 +1044,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>5</drawSize>
+          <drawSize>6.5</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -1090,6 +1089,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -1105,13 +1105,11 @@
           <FH_Resource_Nutrition>54</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1139,9 +1137,10 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_DreadmeldTerrorRoar</iconPath>
-        <cost>6</cost>
+        <cost>5</cost>
         <hediff>FH_Parasitism_Dreadmeld</hediff>
       </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
     <tools>
       <li>
@@ -1205,7 +1204,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
+          <drawSize>4.55</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>
@@ -1219,7 +1218,7 @@
         <bodyGraphicData>
           <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_HarnessedFleshtitan</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>5</drawSize>
+          <drawSize>6.5</drawSize>
         </bodyGraphicData>
       </li>
     </lifeStages>

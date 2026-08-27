@@ -21,6 +21,7 @@ public static class FleshHiveDefOf
     public static HediffDef FH_Trait_BoneSpurGrowth;
     public static HediffDef FH_Hela;
     public static HediffDef FH_HelaShardComa;
+    public static MutantDef FH_HelaSubhuman;
     public static HediffDef FH_MeldGrowth;
     public static HediffDef FH_Hediff_Upgrade_Reactivation;
     public static HediffDef FH_Hediff_Upgrade_Agility;
@@ -29,6 +30,7 @@ public static class FleshHiveDefOf
     public static HediffDef FH_Hediff_Upgrade_NestMasterCarapace;
     public static HediffDef FH_Hediff_Upgrade_FastHealing;
     public static HediffDef FH_Hediff_Upgrade_FleshbeastTaming;
+    public static HediffDef FH_Hediff_Upgrade_Robust;
 
     public static AbilityDef FH_FleshSpread;
     public static AbilityDef FH_SpikeLaunch_Fingerspike;
@@ -99,6 +101,7 @@ public static class FleshHiveDefOf
     public static DutyDef FH_GroupHuntGather;
     public static DutyDef FH_GroupHuntExecute;
     public static DutyDef FH_Attack_Ranged;
+    public static DutyDef FH_Attack_RangedDistant;
     public static DutyDef FH_Defend_Ranged;
 
     public static EffecterDef FH_Effect_TitanDevastatingStrikeLightning;
@@ -124,6 +127,7 @@ public static class FleshHiveDefOf
     public static FleshHiveUpgradeDef FH_Upgrade_FleshbeastTaming2;
     public static FleshHiveUpgradeDef FH_Upgrade_FleshShaping1;
     public static FleshHiveUpgradeDef FH_Upgrade_FleshShaping2;
+    public static FleshHiveUpgradeDef FH_Upgrade_Robust;
 
     public static HiveBuildingDef FH_Building_FleshBlock;
     public static HiveBuildingDef FH_Building_ChitinFleshBlock;

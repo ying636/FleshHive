@@ -21,5 +21,10 @@ public static class Patch_BodyPartDef_GetMaxHealth_Hela
         {
             __result = Mathf.CeilToInt(__result * (1f + growth.Level * 0.25f));
         }
+
+        if (pawn.health?.hediffSet?.HasHediff(FleshHiveDefOf.FH_Hediff_Upgrade_Robust) == true)
+        {
+            __result = Mathf.CeilToInt(__result * 6f);
+        }
     }
 }

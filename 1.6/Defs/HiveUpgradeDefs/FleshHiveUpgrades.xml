@@ -109,6 +109,17 @@
     <processingTicks>240000</processingTicks>
   </FleshHive.FleshHiveUpgradeDef>
   <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_Robust</defName>
+    <label>robustification</label>
+    <description>Large fleshbeasts have 6 times their normal health scale, increasing it from 30% to 180%.</description>
+    <effect>Robust</effect>
+    <effectValue>5</effectValue>
+    <requiresPrimaryNest>true</requiresPrimaryNest>
+    <nutritionCost>200</nutritionCost>
+    <nerveFleshCost>6</nerveFleshCost>
+    <processingTicks>480000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_NestMasterCarapace</defName>
     <label>nest master carapace</label>
     <description>Giant fleshbeasts gain +45% blunt armor, +106% sharp armor, and +54% heat armor.</description>

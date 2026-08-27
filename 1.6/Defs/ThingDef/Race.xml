@@ -25,8 +25,8 @@
       <needsRest>false</needsRest>
     </race>
     <inspectorTabs Inherit="false">
-      <li>HiveCreatureFramework.ITab_Unit</li>
       <li>ITab_Pawn_Health</li>
+      <li>HiveCreatureFramework.ITab_Unit</li>
       <li>ITab_Pawn_Needs</li>
       <li>ITab_Pawn_Character</li>
       <li>ITab_Pawn_Social</li>
@@ -117,7 +117,7 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -127,9 +127,11 @@
         <works>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
+          <li MayRequire="Ludeon.RimWorld.Odyssey">FH_UnitWork_FingerspikeAnimalFishing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>BasicWorker</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -294,7 +296,7 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -410,6 +412,7 @@
         <availableRoutineWorks>
           <li>Firefighter</li>
           <li>Hauling</li>
+          <li>PlantCutting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -499,7 +502,7 @@
         <draftable>true</draftable>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -596,10 +599,10 @@
     <description>A man-sized fleshbeast covered in brittle but razor-sharp bone spikes. It launches volleys of bone fragments from range, tearing targets apart with dense barrages.</description>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
-        <groupCost>3</groupCost>
+        <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -607,13 +610,11 @@
           <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -621,7 +622,7 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
+        <iconPath>UI/Ability/FH_BoneBurst</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
         <effect>“血肉寄生”心情-6；魅力-5%</effect>
@@ -757,9 +758,10 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -767,15 +769,19 @@
           <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
+          <li>Mining</li>
         </availableRoutineWorks>
+        <skill>
+          <disabledRoutineWorkGivers>
+            <li>Drill</li>
+          </disabledRoutineWorkGivers>
+        </skill>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -906,6 +912,7 @@
     <thingClass>FleshHive.FleshReplicaUnit</thingClass>
     <description>A humanoid fleshbeast covered in a small amount of carapace and roughly the size of an adult human. Flesh replicas can use human weapons, most of which are scavenged from the victims of fleshbeasts. After a flesh replica parasitizes a host, its original body remains independent and mimics the host's appearance. A flesh replica with a host can perform complex work just like a human.</description>
     <statBases>
+      <MarketValue>350</MarketValue>
       <MoveSpeed>4.3</MoveSpeed>
       <MinimumContainmentStrength>50</MinimumContainmentStrength>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -914,6 +921,7 @@
     </statBases>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -925,12 +933,10 @@
           <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -1101,6 +1107,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -1111,13 +1118,11 @@
           <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
@@ -1262,10 +1267,10 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
-        <groupCost>3</groupCost>
+        <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1273,15 +1278,19 @@
           <FH_Resource_Nutrition>12</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
           <li>Hauling</li>
+          <li>Mining</li>
         </availableRoutineWorks>
+        <skill>
+          <disabledRoutineWorkGivers>
+            <li>Drill</li>
+          </disabledRoutineWorkGivers>
+        </skill>
         <tags>
           <li>Flesh</li>
         </tags>
@@ -1428,8 +1437,8 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1437,13 +1446,11 @@
           <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1537,7 +1544,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>700</MarketValue>
+      <MarketValue>800</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1570,6 +1577,7 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -1581,13 +1589,11 @@
           <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1595,7 +1601,7 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_BulbfreakReleaseFleshbeasts</iconPath>
-        <cost>4</cost>
+        <cost>3</cost>
         <hediff>FH_Parasitism_Bulbfreak</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
         <abilityLabel>Parasitic weapons: tentacles and release fleshbeasts</abilityLabel>
@@ -1704,7 +1710,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>700</MarketValue>
+      <MarketValue>800</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1737,9 +1743,10 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1748,13 +1755,11 @@
           <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1762,7 +1767,7 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
-        <cost>4</cost>
+        <cost>3</cost>
         <hediff>FH_Parasitism_Acidbulb</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -5%; Toxic Resistance +100%; grants acid mortar and acid spray abilities.</effect>
         <abilityLabel>Parasitic abilities: acid mortar and acid spray</abilityLabel>
@@ -1878,7 +1883,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>700</MarketValue>
+      <MarketValue>800</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1911,10 +1916,10 @@
     </race>
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Ranged</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1923,13 +1928,11 @@
           <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -1937,7 +1940,7 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
-        <cost>4</cost>
+        <cost>3</cost>
         <hediff>FH_Parasitism_Spitbulb</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +250; grants the flesh mortar ability.</effect>
         <abilityLabel>Parasitic weapon: flesh mortar</abilityLabel>
@@ -2050,7 +2053,7 @@
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Bulbplump/FH_Bulbplump</uiIconPath>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>700</MarketValue>
+      <MarketValue>800</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -2093,7 +2096,7 @@
         <milkFemaleOnly>false</milkFemaleOnly>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -2114,7 +2117,7 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
-        <cost>4</cost>
+        <cost>3</cost>
         <hediff>FH_Parasitism_Bulbplump</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +100; hunger rate x50%.</effect>
         <abilityLabel>Parasitic weapon: flesh tentacles</abilityLabel>
@@ -2194,7 +2197,7 @@
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Synbulb/FH_Synbulb</uiIconPath>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>700</MarketValue>
+      <MarketValue>800</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -2231,7 +2234,7 @@
         <size>Large</size>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
@@ -2243,13 +2246,11 @@
           <FH_Resource_Nutrition>24</FH_Resource_Nutrition>
         </recycledResources>
         <works>
-          <li>HCF_UnitWork_Hunt</li>
           <li>HCF_UnitWork_DoWorkGiver</li>
           <li>HCF_UnitWork_Rescuing</li>
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
-          <li>Hunting</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -2257,7 +2258,7 @@
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>UI/Ability/FH_BoneBurst</iconPath>
-        <cost>4</cost>
+        <cost>3</cost>
         <hediff>FH_Parasitism_Synbulb</hediff>
         <effect>Flesh parasitism mood -6; Social Impact -5%; grants the psychic harmonizer condition.</effect>
         <abilityLabel>Parasitic weapon: bone burst</abilityLabel>
@@ -2323,5 +2324,3 @@
 
 
 </Defs>
-
-

@@ -15,7 +15,7 @@ public class CompStudiable_FleshHive : CompStudiable
             }
 
             MapComponent_FleshHive? mapComp = parent.Map?.GetComponent<MapComponent_FleshHive>();
-            return mapComp?.HiveScale / 24f ?? 0f;
+            return mapComp?.HiveScale / 24f * 1.5f ?? 0f;
         }
     }
 }

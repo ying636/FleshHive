@@ -262,7 +262,7 @@ public static class FleshParasiteRaidGenerator
         {
             return 1;
         }
-        float capacity = hostKind.RaceProps.baseBodySize + 1f;
+        float capacity = hostKind.race.GetStatValueAbstract(FleshHiveDefOf.FH_Stat_ParasitismCapacity);
         return Mathf.Min(Mathf.FloorToInt(capacity), 14);
     }
 

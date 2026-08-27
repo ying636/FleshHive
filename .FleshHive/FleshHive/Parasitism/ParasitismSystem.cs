@@ -31,7 +31,7 @@ public class ParasitismSystem : HediffWithComps
             {
                 if (this.pawn != null)
                 {
-                    this.cacheLimit = (int)this.pawn.GetStatValue(FleshHiveDefOf.FH_Stat_ParasitismCapacity);
+                    this.cacheLimit = Mathf.FloorToInt(this.pawn.GetStatValue(FleshHiveDefOf.FH_Stat_ParasitismCapacity));
                 }
                 else
                 {

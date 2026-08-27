@@ -20,6 +20,9 @@
   <!-- EN: This large or giant fleshbeast has 2 additional parasitic spaces. -->
   <FH_Hediff_Upgrade_ParasiticSpace.description>这只大型或巨型血肉兽的寄生空间增加2。</FH_Hediff_Upgrade_ParasiticSpace.description>
 
+  <FH_Hediff_Upgrade_Robust.label>健壮化</FH_Hediff_Upgrade_Robust.label>
+  <FH_Hediff_Upgrade_Robust.description>这只大型血肉兽的健康值比例变为原来的6倍。</FH_Hediff_Upgrade_Robust.description>
+
   <!-- EN: nest master carapace -->
   <FH_Hediff_Upgrade_NestMasterCarapace.label>巢主甲壳</FH_Hediff_Upgrade_NestMasterCarapace.label>
   <!-- EN: This giant fleshbeast gains +45% blunt armor, +106% sharp armor, and +54% heat armor. -->

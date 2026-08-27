@@ -7,7 +7,7 @@
     <description>The mother beast has consumed its corresponding core and undergone permanent growth. Each growth level increases parasitism capacity, twisted flesh capacity, body part health, regeneration, bleed resistance, and damage resistance.</description>
     <hediffClass>FleshHive.Hediff_MeldGrowth</hediffClass>
     <initialSeverity>1</initialSeverity>
-    <maxSeverity>4</maxSeverity>
+    <maxSeverity>5</maxSeverity>
     <isBad>false</isBad>
     <duplicationAllowed>false</duplicationAllowed>
     <defaultLabelColor>(0.85, 0.25, 0.30)</defaultLabelColor>
@@ -54,6 +54,17 @@
         </statOffsets>
         <statFactors>
           <IncomingDamageFactor>0.4</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <totalBleedFactor>0.1</totalBleedFactor>
+        <regeneration>250</regeneration>
+        <statOffsets>
+          <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.25</IncomingDamageFactor>
         </statFactors>
       </li>
     </stages>

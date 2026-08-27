@@ -78,6 +78,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         selectedSpawner = spawner;
         selectedUnit = null;
         selectedFormula = null;
+        selectedReservedGroup = null;
         focusSelectedSpawner = true;
         SetRepeatCount(1);
     }
@@ -95,13 +96,18 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
             if (selectedUnit != selectedFormula.unit || !GetAvailableFormulas(selectedSpawner).Contains(selectedFormula))
             {
                 ClearSelection();
+                return;
             }
+        }
+        else if (selectedUnit != null && !GetAvailableUnits(selectedSpawner).Contains(selectedUnit))
+        {
+            ClearSelection();
             return;
         }
 
-        if (selectedUnit != null && !GetAvailableUnits(selectedSpawner).Contains(selectedUnit))
+        if (selectedReservedGroup != null && !GetAvailableReservedGroups(selectedSpawner).Contains(selectedReservedGroup))
         {
-            ClearSelection();
+            selectedReservedGroup = null;
         }
     }
 
@@ -161,10 +167,8 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         Widgets.Label(new Rect(detailsRect.x, detailsRect.y + 102f, detailsRect.width * 0.25f, 24f),
             "FH_Gestation_GroupCost".Translate(groupCost));
 
-        Widgets.Label(new Rect(detailsRect.x + detailsRect.width * 0.25f, detailsRect.y + 102f, detailsRect.width * 0.45f, 24f),
-            "FH_Gestation_Node".Translate(spawner.parent.LabelCap));
         float marketValue = unit.kind.race.GetStatValueAbstract(StatDefOf.MarketValue);
-        Widgets.Label(new Rect(detailsRect.x + detailsRect.width * 0.7f, detailsRect.y + 102f, detailsRect.width * 0.3f, 24f),
+        Widgets.Label(new Rect(detailsRect.x + detailsRect.width * 0.25f, detailsRect.y + 102f, detailsRect.width * 0.75f, 24f),
             "FH_Gestation_Value".Translate(marketValue.ToStringMoney()));
 
         DrawQuantityControls(actionRect, spawner, unit, formula);
@@ -214,6 +218,8 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
             SetRepeatCount(repeatCount + 10);
         }
 
+        DrawReservedGroupSelector(new Rect(rect.x, rect.y + 64f, rect.width, 32f), spawner);
+
         AcceptanceReport report = formula == null ? unit.CanProduce(spawner) : CanProduceFormula(spawner, formula);
         bool active = report.Accepted && repeatCount >= MinRepeatCount;
         Rect buttonRect = new Rect(rect.x, rect.yMax - 34f, rect.width, 34f);
@@ -236,13 +242,53 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
 
             if (formula == null)
             {
-                AddGestationTasks(spawner, unit, repeatCount);
+                AddGestationTasks(spawner, unit, repeatCount, selectedReservedGroup);
             }
             else
             {
-                AddFormulaTasks(spawner, formula, repeatCount);
+                AddFormulaTasks(spawner, formula, repeatCount, selectedReservedGroup);
             }
         }
+    }
+
+    private void DrawReservedGroupSelector(Rect rect, CompHiveSpawner_FleshTrait spawner)
+    {
+        string groupLabel = selectedReservedGroup?.RenamableLabel ?? "FH_Gestation_ReservedGroupNone".Translate().ToString();
+        if (Widgets.ButtonText(rect, "FH_Gestation_ReservedGroup".Translate(groupLabel), false, true, Color.white))
+        {
+            ShowReservedGroupMenu(spawner);
+        }
+        TooltipHandler.TipRegion(rect, "FH_Gestation_ReservedGroupTip".Translate());
+    }
+
+    private void ShowReservedGroupMenu(CompHiveSpawner_FleshTrait spawner)
+    {
+        List<FloatMenuOption> options = new List<FloatMenuOption>
+        {
+            new FloatMenuOption("FH_Gestation_ReservedGroupNone".Translate(), () => selectedReservedGroup = null)
+        };
+
+        foreach (UnitGroup group in GetAvailableReservedGroups(spawner))
+        {
+            UnitGroup selectedGroup = group;
+            options.Add(new FloatMenuOption(selectedGroup.RenamableLabel, () => selectedReservedGroup = selectedGroup));
+        }
+
+        if (options.Count == 1)
+        {
+            options.Add(new FloatMenuOption("FH_Gestation_ReservedGroupUnavailable".Translate(), null));
+        }
+
+        Find.WindowStack.Add(new FloatMenu(options));
+    }
+
+    private List<UnitGroup> GetAvailableReservedGroups(CompHiveSpawner_FleshTrait spawner)
+    {
+        Map map = spawner?.parent?.Map;
+        return GameComponent_UnitGroup.Instance?.groups?
+            .Where(group => group != null && group.Show && HCFGameUtility.GroupOnMap(group, map))
+            .OrderBy(group => group.RenamableLabel)
+            .ToList() ?? new List<UnitGroup>();
     }
 
     private void DrawNoSpawners(Rect rect)
@@ -436,7 +482,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         TooltipHandler.TipRegion(maximumHeaderRect, "FH_Gestation_QuotaMaximumTip".Translate());
 
         List<UnitDef> units = mapComp.GetAvailableFleshbeastUnits();
-        Rect outRect = new Rect(innerRect.x, innerRect.y + QuotaHeaderHeight + 4f, innerRect.width, innerRect.height - QuotaHeaderHeight - QuotaHelpHeight - 8f);
+        Rect outRect = new Rect(innerRect.x, innerRect.y + QuotaHeaderHeight + 4f, innerRect.width, innerRect.height - QuotaHeaderHeight - 8f);
         float viewHeight = Mathf.Max(outRect.height + 1f, units.Count * QuotaRowHeight);
         Rect viewRect = new Rect(0f, 0f, outRect.width - ScrollbarWidth, viewHeight);
         Widgets.BeginScrollView(outRect, ref quotaScrollPosition, viewRect);
@@ -447,12 +493,6 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         }
 
         Widgets.EndScrollView();
-        Rect helpRect = new Rect(innerRect.x, innerRect.yMax - QuotaHelpHeight, innerRect.width, QuotaHelpHeight);
-        GUI.color = Color.grey;
-        Text.Font = GameFont.Tiny;
-        Widgets.Label(helpRect, "FH_Gestation_QuotaHelp".Translate());
-        Text.Font = GameFont.Small;
-        GUI.color = Color.white;
     }
 
     private void DrawQuotaRow(Rect rect, MapComponent_FleshHive mapComp, UnitDef unit)
@@ -569,6 +609,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         selectedSpawner = spawner;
         selectedUnit = unit;
         selectedFormula = null;
+        selectedReservedGroup = null;
         SetRepeatCount(1);
     }
 
@@ -577,6 +618,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         selectedSpawner = spawner;
         selectedUnit = formula.unit;
         selectedFormula = formula;
+        selectedReservedGroup = null;
         SetRepeatCount(1);
     }
 
@@ -585,6 +627,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         selectedSpawner = null;
         selectedUnit = null;
         selectedFormula = null;
+        selectedReservedGroup = null;
         SetRepeatCount(1);
     }
 
@@ -594,13 +637,13 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         repeatBuffer = repeatCount.ToString();
     }
 
-    private void AddGestationTasks(CompHiveSpawner_FleshTrait spawner, UnitDef unit, int requestedCount)
+    private void AddGestationTasks(CompHiveSpawner_FleshTrait spawner, UnitDef unit, int requestedCount, UnitGroup reservedGroup)
     {
         int addedCount = 0;
         AcceptanceReport lastReport = true;
         while (addedCount < requestedCount)
         {
-            lastReport = spawner.TryStartUnitProduction(unit);
+            lastReport = spawner.TryStartUnitProduction(unit, null, true, reservedGroup);
             if (!lastReport.Accepted)
             {
                 break;
@@ -618,13 +661,13 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         }
     }
 
-    private void AddFormulaTasks(CompHiveSpawner_FleshTrait spawner, Formula formula, int requestedCount)
+    private void AddFormulaTasks(CompHiveSpawner_FleshTrait spawner, Formula formula, int requestedCount, UnitGroup reservedGroup)
     {
         int addedCount = 0;
         AcceptanceReport lastReport = true;
         while (addedCount < requestedCount)
         {
-            lastReport = TryStartFormulaProduction(spawner, formula);
+            lastReport = TryStartFormulaProduction(spawner, formula, reservedGroup);
             if (!lastReport.Accepted)
             {
                 break;
@@ -642,7 +685,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         }
     }
 
-    private AcceptanceReport TryStartFormulaProduction(CompHiveSpawner_FleshTrait spawner, Formula formula)
+    private AcceptanceReport TryStartFormulaProduction(CompHiveSpawner_FleshTrait spawner, Formula formula, UnitGroup reservedGroup)
     {
         AcceptanceReport report = CanProduceFormula(spawner, formula);
         if (!report.Accepted)
@@ -657,10 +700,11 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         }
         formulaSpawner.Resource.ConsumeRequiredItems(formula.cacheRequirements);
 
-        FormulaProgress progress = new FormulaProgress
+        FormulaProgress_FleshTrait progress = new FormulaProgress_FleshTrait
         {
             time = formula.unit.spawningDay.RandomInRange * GenDate.TicksPerDay,
-            formula = formula
+            formula = formula,
+            ReservedGroup = reservedGroup
         };
         progress.totalTime = progress.time;
         formulaSpawner.ProgressHolder.progresses.Add(progress);
@@ -823,6 +867,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
     private CompHiveSpawner_FleshTrait? selectedSpawner;
     private UnitDef? selectedUnit;
     private Formula? selectedFormula;
+    private UnitGroup? selectedReservedGroup;
     private bool focusSelectedSpawner;
     private int repeatCount = 1;
     private string repeatBuffer = "1";
@@ -839,7 +884,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
     private const float QuotaPanelWidthMax = 330f;
     private const float PanelGap = 10f;
     private const float FormulaToolbarHeight = 40f;
-    private const float SelectedUnitHeight = 145f;
+    private const float SelectedUnitHeight = 180f;
     private const float ActionPanelWidth = 245f;
     private const float SpawnerDetailsWidthFactor = 0.38f;
     private const float SpawnerDetailsWidthMin = 280f;
@@ -853,7 +898,6 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
     private const float ScrollbarWidth = 16f;
     private const float QuotaHeaderHeight = 36f;
     private const float QuotaRowHeight = 36f;
-    private const float QuotaHelpHeight = 72f;
     private const float CurrentColumnWidth = 45f;
     private const float MaintainColumnWidth = 67f;
     private const float MaximumColumnWidth = 82f;

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.UnitWorkDef MayRequire="Ludeon.RimWorld.Odyssey">
+        <defName>FH_UnitWork_FingerspikeAnimalFishing</defName>
+        <label>Animal fishing</label>
+        <description>Fish using Odyssey's animal fishing behavior</description>
+        <thinkTree>FH_ThinkTree_UnitWork_FingerspikeAnimalFishing</thinkTree>
+    </HiveCreatureFramework.UnitWorkDef>
+
+    <ThinkTreeDef MayRequire="Ludeon.RimWorld.Odyssey">
+        <defName>FH_ThinkTree_UnitWork_FingerspikeAnimalFishing</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="FleshHive.JobGiver_FingerspikeAnimalFishing" />
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+</Defs>

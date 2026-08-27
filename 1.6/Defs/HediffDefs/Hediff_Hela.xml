@@ -11,7 +11,7 @@
     <comps>
       <li Class="FleshHive.HediffCompProperties_HelaNode">
         <groupCount>1</groupCount>
-        <groupType>FleshHive.UnitGroup_FleshNode</groupType>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <tags>
           <li>Flesh</li>
         </tags>

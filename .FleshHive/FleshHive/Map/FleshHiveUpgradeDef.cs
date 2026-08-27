@@ -18,7 +18,8 @@ public enum FleshHiveUpgradeEffect
     NestTaming,
     NestHealing,
     FleshbeastTaming,
-    FleshShaping
+    FleshShaping,
+    Robust
 }
 
 public class FleshHiveUpgradeDef : Def

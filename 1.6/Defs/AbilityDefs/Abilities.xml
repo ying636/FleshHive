@@ -138,7 +138,7 @@
     <defName>FH_SpikeLaunch_Shatterspike</defName>
     <ai_IsOffensive>true</ai_IsOffensive>
     <verbProperties>
-      <range>12.9</range>
+      <range>18.9</range>
       <burstShotCount>6</burstShotCount>
       <defaultProjectile>FH_Spike_Shatterspike</defaultProjectile>
       <defaultCooldownTime>0.5</defaultCooldownTime>
@@ -165,7 +165,7 @@
     <cooldownTicksRange>1250</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
     <verbProperties>
-      <range>50</range>
+      <range>25</range>
       <defaultProjectile>FH_Bullet_Shell_AcidSpit</defaultProjectile>
       <defaultCooldownTime>5</defaultCooldownTime>
       <verbClass>Verb_AbilityShoot</verbClass>

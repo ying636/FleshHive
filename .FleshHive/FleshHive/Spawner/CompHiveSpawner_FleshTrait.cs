@@ -66,7 +66,7 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
         return TryStartUnitProduction(unit, null, sendMessage).Accepted;
     }
 
-    public AcceptanceReport TryStartUnitProduction(UnitDef unit, HediffDef traitDef = null, bool sendMessage = true)
+    public AcceptanceReport TryStartUnitProduction(UnitDef unit, HediffDef traitDef = null, bool sendMessage = true, UnitGroup reservedGroup = null)
     {
         if (unit == null)
         {
@@ -81,7 +81,7 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
 
         ConsumeUnitCost(unit);
         float productionSpeedFactor = MapComponent_FleshHive.GetCellDivisionSpeedFactor(parent.Map);
-        UnitSpawnData_FleshTrait progress = new UnitSpawnData_FleshTrait(unit, traitDef, productionSpeedFactor);
+        UnitSpawnData_FleshTrait progress = new UnitSpawnData_FleshTrait(unit, traitDef, productionSpeedFactor, reservedGroup);
         ProgressHolder.progresses.Add(progress);
         if (sendMessage)
         {
@@ -442,6 +442,8 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
 {
     public UnitDef Def => def;
 
+    public UnitGroup ReservedGroup => reservedGroup;
+
     public UnitSpawnData_FleshTrait()
     {
     }
@@ -451,9 +453,10 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
         this.traitDef = traitDef;
     }
 
-    public UnitSpawnData_FleshTrait(UnitDef def, HediffDef traitDef, float productionSpeedFactor) : base(def)
+    public UnitSpawnData_FleshTrait(UnitDef def, HediffDef traitDef, float productionSpeedFactor, UnitGroup reservedGroup = null) : base(def)
     {
         this.traitDef = traitDef;
+        this.reservedGroup = reservedGroup;
         if (productionSpeedFactor > 0f && productionSpeedFactor != 1f)
         {
             time = Mathf.Max(1, Mathf.RoundToInt(time / productionSpeedFactor));
@@ -463,14 +466,34 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
 
     public override List<Pawn> SpawnUnit(CompProgressHolder comp)
     {
-        List<Pawn> pawns = base.SpawnUnit(comp);
+        PawnKindDef kind = def?.kind ?? pawn;
+        if (kind == null)
+        {
+            return new List<Pawn>();
+        }
+
+        Pawn generatedPawn = PawnGenerator.GeneratePawn(kind, comp.parent.Faction);
+        List<Pawn> pawns = new List<Pawn>
+        {
+            HCFGameUtility.SpawnUnit(comp.parent, generatedPawn, reservedGroup)
+        };
         foreach (Pawn pawn in pawns)
         {
+            if (FleshBeastKindUtility.IsGiant(pawn.kindDef)
+                && comp.parent.TryGetComp<CompHiveContainer>() is { } container
+                && container.units.Contains(pawn))
+            {
+                if (!container.units.TryDrop(pawn, comp.parent.Position, comp.parent.Map, ThingPlaceMode.Near, out _))
+                {
+                    Log.Error($"[FleshHive] Failed to release cultivated mother fleshbeast {pawn.def.defName} from {comp.parent.def.defName}.");
+                }
+            }
+
             if (traitDef != null)
             {
                 HealthUtility.AdjustSeverity(pawn, traitDef, 1f);
             }
-            comp.parent.Map?.GetComponent<MapComponent_FleshHive>()?.SyncFleshBeastUpgradeHediffs(pawn);
+            comp.parent.Map?.GetComponent<MapComponent_FleshHive>()?.GrantFleshBeastUpgradeHediffs(pawn);
         }
         return pawns;
     }
@@ -479,9 +502,11 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
     {
         base.ExposeData();
         Scribe_Defs.Look(ref traitDef, "traitDef");
+        Scribe_References.Look(ref reservedGroup, "reservedGroup");
     }
 
     private HediffDef traitDef;
+    private UnitGroup reservedGroup;
 }
 
 public class FleshTraitSpawnOption

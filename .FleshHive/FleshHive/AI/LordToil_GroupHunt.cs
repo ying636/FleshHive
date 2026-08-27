@@ -117,13 +117,17 @@ public class LordToil_GroupHunt : LordToil
 
     private bool IsHunterReady(Pawn pawn, Pawn prey)
     {
-        if (pawn.TryGetComp<UnitComp>()?.Props.overrideDuty_Attack == FleshHiveDefOf.FH_Attack_Ranged)
+        DutyDef? attackDuty = pawn.TryGetComp<UnitComp>()?.Props.overrideDuty_Attack;
+        if (JobGiver_GroupRangedAttackTarget.IsRangedAttackDuty(attackDuty))
         {
-            Ability? ability = JobGiver_GroupRangedAttackTarget.FindRangedAbility(pawn, prey);
+            ModExtension_RangedDuty? rangedSettings = attackDuty?.GetModExtension<ModExtension_RangedDuty>();
+            Ability? ability =
+                JobGiver_GroupRangedAttackTarget.FindRangedAbility(pawn, prey, rangedSettings != null);
             return (ability != null
                     ? JobGiver_GroupRangedAttackTarget.TryFindCastPosition(pawn, prey, ability.verb,
-                        out IntVec3 shootingPosition)
-                    : JobGiver_GroupRangedAttackTarget.TryFindSupportPosition(pawn, prey, out shootingPosition))
+                        out IntVec3 shootingPosition, rangedSettings)
+                    : JobGiver_GroupRangedAttackTarget.TryFindSupportPosition(pawn, prey, out shootingPosition,
+                        rangedSettings))
                 && shootingPosition == pawn.Position;
         }
 
@@ -153,7 +157,7 @@ public class LordToil_GroupHunt : LordToil
             return prey;
         }
 
-        if (group is not IFleshHiveHuntingGroup { AllowHuntUndesignatedAnimals: true })
+        if (group is not UnitGroup_FleshHive { AllowHuntUndesignatedAnimals: true })
         {
             return null;
         }
@@ -288,7 +292,7 @@ public class LordToil_GroupHunt : LordToil
 
     private int GetMinimumHealthyHunters()
     {
-        return group is IFleshHiveHuntingGroup huntingGroup
+        return group is UnitGroup_FleshHive huntingGroup
             ? Mathf.Max(1, huntingGroup.MinimumHealthyHunters)
             : 1;
     }

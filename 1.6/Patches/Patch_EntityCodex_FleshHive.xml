@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Fingerspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Puffspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Whipspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Gutspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Paraspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Shatterspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Toughspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_FleshReplica</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Shieldspike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Trispike</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Fleshwind</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Bulbfreak</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Acidbulb</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Spitbulb</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Bulbplump</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Synbulb</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Dreadmeld"]/linkedThings</xpath><value><li>FH_Nexusmeld</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Dreadmeld"]/linkedThings</xpath><value><li>FH_Furiousmeld</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Dreadmeld"]/linkedThings</xpath><value><li>FH_Bastionmeld</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Dreadmeld"]/linkedThings</xpath><value><li>FH_Fissionmeld</li></value></Operation>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Dreadmeld"]/linkedThings</xpath><value><li>FH_Dreadmeld</li></value></Operation>
+</Patch>

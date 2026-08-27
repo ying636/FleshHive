@@ -55,8 +55,7 @@ public class FormulaMaterial_Parasite : FormulaMaterial
 
     public override bool CanAddMore(UnitDef selectedUnit, List<FormulaMaterial> alreadyChosen, out string reason)
     {
-        float hostBodySize = selectedUnit?.kind?.race?.race?.baseBodySize ?? 1f;
-        int capacity = Mathf.Min((int)(hostBodySize + 1), 14);
+        int capacity = Mathf.Min(Mathf.FloorToInt(selectedUnit?.kind?.race?.GetStatValueAbstract(FleshHiveDefOf.FH_Stat_ParasitismCapacity) ?? 1f), 14);
         int used = 0;
         foreach (var m in alreadyChosen)
         {

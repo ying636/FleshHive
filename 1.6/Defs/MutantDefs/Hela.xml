@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MutantDef>
+    <defName>FH_HelaSubhuman</defName>
+    <label>Hela</label>
+    <description>Hela's body has become a living command node for fleshbeasts. She can control a large fleshbeast group and automatically sustain its members with twisted flesh. Occupied parasite space reinforces every part of her body.</description>
+    <hediff>FH_Hela</hediff>
+    <thinkTree>Humanlike</thinkTree>
+    <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+    <consideredSubhuman>true</consideredSubhuman>
+    <workDisables>None</workDisables>
+    <canCarryPawns>true</canCarryPawns>
+    <canTend>true</canTend>
+    <disablesIdeo>false</disablesIdeo>
+    <disableApparel>false</disableApparel>
+    <preventsMentalBreaks>false</preventsMentalBreaks>
+    <canOpenDoors>true</canOpenDoors>
+    <canTravelInCaravan>true</canTravelInCaravan>
+    <canOwnCaravan>true</canOwnCaravan>
+    <respectsAllowedArea>true</respectsAllowedArea>
+    <canGainXP>true</canGainXP>
+    <disableEatingAtTable>false</disableEatingAtTable>
+    <disableOwnership>false</disableOwnership>
+    <disablePolicies>false</disablePolicies>
+    <disableTitles>false</disableTitles>
+    <disableFlying>false</disableFlying>
+    <canBleed>true</canBleed>
+    <entitledToMedicalCare>true</entitledToMedicalCare>
+    <isImmuneToInfections>false</isImmuneToInfections>
+    <canUseDrugs>true</canUseDrugs>
+    <preventIllnesses>false</preventIllnesses>
+    <removeChronicIllnesses>false</removeChronicIllnesses>
+    <removePermanentInjuries>false</removePermanentInjuries>
+    <removeAddictions>false</removeAddictions>
+    <removeAllInjuries>false</removeAllInjuries>
+    <restoreLegs>false</restoreLegs>
+    <partsCleanAndDroppable>true</partsCleanAndDroppable>
+    <breathesAir>true</breathesAir>
+    <canBeDrafted>true</canBeDrafted>
+    <disableHostilityResponse>false</disableHostilityResponse>
+    <disableNeeds>false</disableNeeds>
+    <incapableOfSocialInteractions>false</incapableOfSocialInteractions>
+    <canBeCapturedToHoldingPlatform>false</canBeCapturedToHoldingPlatform>
+    <producesBioferrite>false</producesBioferrite>
+    <overrideLabel>false</overrideLabel>
+    <overrideInspectString>false</overrideInspectString>
+  </MutantDef>
+
+</Defs>

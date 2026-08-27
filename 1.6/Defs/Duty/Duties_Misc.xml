@@ -81,6 +81,37 @@
     </thinkNode>
   </DutyDef>
 
+  <!-- 远距离持续射击 -->
+  <DutyDef>
+    <defName>FH_Attack_RangedDistant</defName>
+    <label>long-range ranged</label>
+    <description>Hold a distant firing position and keep shooting.</description>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_RangedDuty">
+        <minimumRange>15</minimumRange>
+        <maximumRange>18.9</maximumRange>
+      </li>
+    </modExtensions>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="FleshHive.JobGiver_GroupRangedAttackTarget" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_Attack_RangedFallbackMelee</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="FleshHive.JobGiver_GroupRangedAttackTarget">
+          <allowMeleeFallback>true</allowMeleeFallback>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
   <!-- 独立技能 -->
   <DutyDef>
     <defName>FH_Skill_Fingerspike</defName>

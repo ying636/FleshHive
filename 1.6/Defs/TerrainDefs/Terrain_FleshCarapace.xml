@@ -27,6 +27,7 @@
       <Cleanliness>0.2</Cleanliness>
       <CleaningTimeFactor>0.75</CleaningTimeFactor>
       <Flammability>0.2</Flammability>
+      <MarketValue>5</MarketValue>
     </statBases>
     <tags>
       <li>Floor</li>
