@@ -16,17 +16,26 @@
   <!-- EN: nexusmeld seed -->
   <FH_Bullet_Shell_Spit.label>统合母兽种子</FH_Bullet_Shell_Spit.label>
   
+  <!-- EN: gutspike corrosive fluid -->
+  <FH_Proj_CorrosiveFluid_Gutspike.label>腐蚀性胃液</FH_Proj_CorrosiveFluid_Gutspike.label>
+  
   <!-- EN: acid -->
   <FH_Projectile_Parasitism_AcidSpray.label>酸液</FH_Projectile_Parasitism_AcidSpray.label>
+  
+  <!-- EN: spike -->
+  <FH_Projectile_Spike_Paraspike.label>骨刺</FH_Projectile_Spike_Paraspike.label>
+  
+  <!-- EN: spike -->
+  <FH_Spike_Fingerspike.label>骨刺</FH_Spike_Fingerspike.label>
   
   <!-- EN: spike -->
   <FH_Spike_Parasitism_BoneSpike.label>骨刺</FH_Spike_Parasitism_BoneSpike.label>
   
   <!-- EN: spike -->
-  <FH_Spike_Paraspike.label>骨刺</FH_Spike_Paraspike.label>
+  <FH_Spike_Shatterspike.label>骨刺</FH_Spike_Shatterspike.label>
   
   <!-- EN: spike -->
-  <FH_Spike_Shatterspike.label>骨刺</FH_Spike_Shatterspike.label>
+  <FH_Spike_Toughspike.label>骨刺</FH_Spike_Toughspike.label>
   
   <!-- EN: spike -->
   <FH_Spike_Whipspike.label>骨刺</FH_Spike_Whipspike.label>

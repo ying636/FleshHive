@@ -45,6 +45,7 @@
   <FH_FleshSpread_Parasitism.label>血肉蔓延</FH_FleshSpread_Parasitism.label>
   <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
   <FH_FleshSpread_Parasitism.description>消耗宿主的扭曲肉，在一片区域内蔓延扭曲血肉。</FH_FleshSpread_Parasitism.description>
+  
   <!-- EN: rampage charge -->
   <FH_RampageCharge.label>狂暴冲锋</FH_RampageCharge.label>
   <!-- EN: The furiousmeld charges forward, dealing damage to everything in its path. Buildings are destroyed until a cumulative limit is reached. -->
@@ -54,6 +55,7 @@
   <FH_ScarletField.label>猩红立场</FH_ScarletField.label>
   <!-- EN: Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh. -->
   <FH_ScarletField.description>投射出生物防护力场，让友方子弹能够射出而无法射入。每拦截一次射击消耗1扭曲肉，每拦截一次近战攻击消耗20扭曲肉。</FH_ScarletField.description>
+  
   <!-- EN: titan charge -->
   <FH_TitanCharge.label>泰坦冲锋</FH_TitanCharge.label>
   <!-- EN: The fleshtitan surges forward, destroying buildings in its path and dealing blunt damage to anything it collides with. -->

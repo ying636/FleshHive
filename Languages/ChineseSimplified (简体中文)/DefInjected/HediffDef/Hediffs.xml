@@ -9,17 +9,22 @@
   <!-- EN: acidbulb parasitism -->
   <FH_Parasitism_Acidbulb.label>腐蚀瘤兽寄生</FH_Parasitism_Acidbulb.label>
   <!-- EN: The host becomes immune to toxic buildup and gains acid mortar and acid spray abilities. -->
-  <FH_Parasitism_Acidbulb.description>宿主免疫毒素积累，并获得“酸蚀迫击炮”和“酸液喷吐”能力。</FH_Parasitism_Acidbulb.description>
+  <FH_Parasitism_Acidbulb.description>该生物被腐蚀瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n免疫毒素积累，并获得“酸蚀迫击炮”和“酸液喷吐”能力。</FH_Parasitism_Acidbulb.description>
   
   <!-- EN: bulbfreak parasitism -->
   <FH_Parasitism_Bulbfreak.label>恶臭瘤兽寄生</FH_Parasitism_Bulbfreak.label>
   <!-- EN: The host grows two blunt tentacles and can consume twisted flesh to release two random medium fleshbeasts. -->
-  <FH_Parasitism_Bulbfreak.description>宿主生长两条钝击触手，并可消耗扭曲肉释放两只随机中型血肉兽。</FH_Parasitism_Bulbfreak.description>
+  <FH_Parasitism_Bulbfreak.description>该生物被恶臭瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n生长两条钝击触手，并可消耗扭曲肉释放两只随机中型血肉兽。</FH_Parasitism_Bulbfreak.description>
+  
+  <!-- EN: bulbplump parasitism -->
+  <FH_Parasitism_Bulbplump.label>增生瘤兽寄生</FH_Parasitism_Bulbplump.label>
+  <!-- EN: The host's hunger rate is reduced, and two explosive-sac-fed flesh tentacles grow from its body. The host can consume twisted flesh to perform a flesh jump. -->
+  <FH_Parasitism_Bulbplump.description>该生物被增生瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n饥饿速度降低，并生长两条由爆炸囊供能的血肉触手。可以消耗扭曲肉进行血肉跳跃。</FH_Parasitism_Bulbplump.description>
   
   <!-- EN: fingerspike parasitism -->
   <FH_Parasitism_Fingerspike.label>独爪兽寄生</FH_Parasitism_Fingerspike.label>
   <!-- EN: 被独爪兽寄生后，宿主体表生长骨刺触手。 -->
-  <FH_Parasitism_Fingerspike.description>被独爪兽寄生后，宿主体表生长骨刺触手。</FH_Parasitism_Fingerspike.description>
+  <FH_Parasitism_Fingerspike.description>该生物被独爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n体表生长骨刺触手，造成刺击伤害。</FH_Parasitism_Fingerspike.description>
   
   <!-- EN: flesh replica synchronization -->
   <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>
@@ -29,47 +34,52 @@
   <!-- EN: 胃血兽寄生 -->
   <FH_Parasitism_Gutspike.label>胃血兽寄生</FH_Parasitism_Gutspike.label>
   <!-- EN: 几乎不会食物中毒，并对肠道蠕虫具备免疫与清除能力。 -->
-  <FH_Parasitism_Gutspike.description>几乎不会食物中毒，并对肠道蠕虫具备免疫与清除能力。</FH_Parasitism_Gutspike.description>
+  <FH_Parasitism_Gutspike.description>该生物被胃血兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n几乎不会食物中毒，并对肠道蠕虫具备免疫与清除能力。</FH_Parasitism_Gutspike.description>
   
   <!-- EN: 寄血兽寄生 -->
   <FH_Parasitism_Paraspike.label>寄血兽寄生</FH_Parasitism_Paraspike.label>
   <!-- EN: 降低失血速率并免疫感染。被寄血兽寄生的生物，其后代也会继承这种寄生。 -->
-  <FH_Parasitism_Paraspike.description>降低失血速率并免疫感染。被寄血兽寄生的生物，其后代也会继承这种寄生。</FH_Parasitism_Paraspike.description>
+  <FH_Parasitism_Paraspike.description>该生物被寄血兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n降低失血速率并免疫感染，其后代也会继承这种寄生。</FH_Parasitism_Paraspike.description>
   
   <!-- EN: 肺血兽寄生 -->
   <FH_Parasitism_Puffspike.label>肺血兽寄生</FH_Parasitism_Puffspike.label>
   <!-- EN: 完全免疫哮喘与肺瘟，并治愈宿主肺中的这些疾病。移动速度提升且更耐受毒性环境。 -->
-  <FH_Parasitism_Puffspike.description>完全免疫哮喘与肺瘟，并治愈宿主肺中的这些疾病。移动速度提升且更耐受毒性环境。</FH_Parasitism_Puffspike.description>
+  <FH_Parasitism_Puffspike.description>该生物被肺血兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n完全免疫哮喘与肺瘟，并治愈肺中的这些疾病。移动速度提升且更耐受毒性环境。</FH_Parasitism_Puffspike.description>
   
   <!-- EN: 碎爪兽寄生 -->
   <FH_Parasitism_Shatterspike.label>碎爪兽寄生</FH_Parasitism_Shatterspike.label>
   <!-- EN: 宿主体表生长碎骨喷发触手，能够远程发射骨刺碎片。 -->
-  <FH_Parasitism_Shatterspike.description>宿主体表生长碎骨喷发触手，能够远程发射骨刺碎片。</FH_Parasitism_Shatterspike.description>
+  <FH_Parasitism_Shatterspike.description>该生物被碎爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n体表生长碎骨喷发触手，能够远程发射骨刺碎片。</FH_Parasitism_Shatterspike.description>
   
   <!-- EN: 盾爪兽寄生 -->
   <FH_Parasitism_Shieldspike.label>盾爪兽寄生</FH_Parasitism_Shieldspike.label>
   <!-- EN: 宿主获得更强的护甲与一只盾爪。 -->
-  <FH_Parasitism_Shieldspike.description>宿主获得更强的护甲与一只盾爪。</FH_Parasitism_Shieldspike.description>
+  <FH_Parasitism_Shieldspike.description>该生物被盾爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n获得更强的护甲与一只盾爪。</FH_Parasitism_Shieldspike.description>
   
   <!-- EN: spitbulb parasitism -->
   <FH_Parasitism_Spitbulb.label>喷射瘤兽寄生</FH_Parasitism_Spitbulb.label>
   <!-- EN: The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point. -->
-  <FH_Parasitism_Spitbulb.description>宿主获得一门消耗扭曲肉的血肉迫击炮，并在命中位置释放一只小型血肉兽。</FH_Parasitism_Spitbulb.description>
+  <FH_Parasitism_Spitbulb.description>该生物被喷射瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n获得一门消耗扭曲肉的血肉迫击炮，并在命中位置释放一只小型血肉兽。</FH_Parasitism_Spitbulb.description>
+  
+  <!-- EN: synbulb parasitism -->
+  <FH_Parasitism_Synbulb.label>共鸣瘤兽寄生</FH_Parasitism_Synbulb.label>
+  <!-- EN: The host enters psychic harmonization and grows two bone-burst tentacles capable of firing bone shards at range. -->
+  <FH_Parasitism_Synbulb.description>该生物被共鸣瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n进入心灵同调状态，并生长两条能够远程发射骨刺碎片的碎骨喷发触手。</FH_Parasitism_Synbulb.description>
   
   <!-- EN: 双爪兽寄生 -->
   <FH_Parasitism_Toughspike.label>双爪兽寄生</FH_Parasitism_Toughspike.label>
   <!-- EN: 宿主体表生长两条骨刺触手，提高全局工作效率。 -->
-  <FH_Parasitism_Toughspike.description>宿主体表生长两条骨刺触手，提高全局工作效率。</FH_Parasitism_Toughspike.description>
+  <FH_Parasitism_Toughspike.description>该生物被双爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n体表生长两条骨刺触手，提高全局工作效率。</FH_Parasitism_Toughspike.description>
   
   <!-- EN: 三爪兽寄生 -->
   <FH_Parasitism_Trispike.label>三爪兽寄生</FH_Parasitism_Trispike.label>
   <!-- EN: 宿主可以释放2只随机的小型血肉兽。 -->
-  <FH_Parasitism_Trispike.description>宿主可以释放2只随机的小型血肉兽。</FH_Parasitism_Trispike.description>
+  <FH_Parasitism_Trispike.description>该生物被三爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n可以释放2只随机的小型血肉兽。</FH_Parasitism_Trispike.description>
   
   <!-- EN: 鞭爪兽寄生 -->
   <FH_Parasitism_Whipspike.label>鞭爪兽寄生</FH_Parasitism_Whipspike.label>
   <!-- EN: 宿主体表生长血肉触鞭，能够鞭击附近敌人。 -->
-  <FH_Parasitism_Whipspike.description>宿主体表生长血肉触鞭，能够鞭击附近敌人。</FH_Parasitism_Whipspike.description>
+  <FH_Parasitism_Whipspike.description>该生物被鞭爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n体表生长血肉触鞭，能够鞭击附近敌人。</FH_Parasitism_Whipspike.description>
   
   <!-- EN: paraspike's spike -->
   <FH_Spike_Paraspike.label>寄血兽骨刺</FH_Spike_Paraspike.label>
@@ -82,15 +92,5 @@
   <FH_SynbulbRampage.description>共鸣瘤兽死亡时释放的信息素使血肉兽陷入暴走。</FH_SynbulbRampage.description>
   <!-- EN: rampage -->
   <FH_SynbulbRampage.stages.rampage.label>暴走</FH_SynbulbRampage.stages.rampage.label>
-
-  <!-- EN: synbulb parasitism -->
-  <FH_Parasitism_Synbulb.label>共鸣瘤兽寄生</FH_Parasitism_Synbulb.label>
-  <!-- EN: The host enters psychic harmonization and grows two bone-burst tentacles capable of firing bone shards at range. -->
-  <FH_Parasitism_Synbulb.description>宿主进入心灵同调状态，并生长两条能够远程发射骨刺碎片的碎骨喷发触手。</FH_Parasitism_Synbulb.description>
-
-  <!-- EN: bulbplump parasitism -->
-  <FH_Parasitism_Bulbplump.label>增生瘤兽寄生</FH_Parasitism_Bulbplump.label>
-  <!-- EN: The host's hunger rate is reduced, and two explosive-sac-fed flesh tentacles grow from its body. The host can consume twisted flesh to perform a flesh jump. -->
-  <FH_Parasitism_Bulbplump.description>宿主的饥饿速度降低，并生长两条由爆炸囊供能的血肉触手。宿主可以消耗扭曲肉进行血肉跳跃。</FH_Parasitism_Bulbplump.description>
-
+  
 </LanguageData>

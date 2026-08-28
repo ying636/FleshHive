@@ -3,7 +3,7 @@
   
   <!-- EN: carry prey to flesh sack -->
   <FH_WorkGiver_FillFleshSack.label>将猎物搬运至血肉囊</FH_WorkGiver_FillFleshSack.label>
-  <!-- EN: carrying to a flesh sack -->
+  <!-- EN: carrying -->
   <FH_WorkGiver_FillFleshSack.gerund>搬运到血肉囊</FH_WorkGiver_FillFleshSack.gerund>
   <!-- EN: carry -->
   <FH_WorkGiver_FillFleshSack.verb>搬运</FH_WorkGiver_FillFleshSack.verb>

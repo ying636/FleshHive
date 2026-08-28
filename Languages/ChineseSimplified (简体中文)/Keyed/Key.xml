@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  <!-- EN: Allow hunting undesignated creatures -->
   <FH_GroupHunt_AllowUndesignatedAnimals>允许狩猎非标记生物</FH_GroupHunt_AllowUndesignatedAnimals>
+  <!-- EN: When enabled, a group in hunt mode automatically targets wild animals if no target has an original hunt designation. When disabled, the group only hunts designated targets. -->
   <FH_GroupHunt_AllowUndesignatedAnimalsTip>启用后，处于狩猎模式的群组在没有原版狩猎标记目标时，会自动锁定地图上的野生动物。关闭时只狩猎带有原版狩猎标记的目标。</FH_GroupHunt_AllowUndesignatedAnimalsTip>
+  <!-- EN: Minimum healthy hunters -->
   <FH_GroupHunt_MinimumHealthyHunters>最低健康狩猎单位数</FH_GroupHunt_MinimumHealthyHunters>
+  <!-- EN: The group only attempts to hunt when at least this many members are fully recovered and healthy. It also waits for this number after each hunt. -->
   <FH_GroupHunt_MinimumHealthyHuntersTip>只有当群组中完全恢复的健康单位达到此数量时，才会尝试开始狩猎。每轮狩猎结束后也会等待达到此数量。</FH_GroupHunt_MinimumHealthyHuntersTip>
 
   <!-- EN: Cancel insert -->
@@ -144,7 +148,6 @@
   <FH_MarkPrey_NotFlesh>只能标记血肉生物</FH_MarkPrey_NotFlesh>
   <!-- EN: Already marked -->
   <FH_MarkPrey_AlreadyMarked>已标记</FH_MarkPrey_AlreadyMarked>
-  <!-- EN: Prioritize carrying {0} to a flesh sack -->
 
   <!-- EN: Digesting: {0} -->
   <FH_FleshSack_Digesting>消化中：{0}</FH_FleshSack_Digesting>
@@ -194,7 +197,7 @@
   <FH_FleshManagement_HiveScaleTooltipTotal>总计：{0}</FH_FleshManagement_HiveScaleTooltipTotal>
   <!-- EN: Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale. -->
   <FH_FleshManagement_HiveScaleTooltipRule>每50格血肉地形提供1巢穴规模。血肉巢穴、血肉主巢、巢群神经结节和巢群神经中枢会额外提供规模。</FH_FleshManagement_HiveScaleTooltipRule>
-  <!-- EN: Fleshbeast scale -->
+  <!-- EN: Beast scale -->
   <FH_FleshManagement_FleshbeastScale>血肉兽规模</FH_FleshManagement_FleshbeastScale>
   <!-- EN: Fleshbeast scale: {0} / {1} -->
   <FH_FleshManagement_HiveCapacityTooltip>血肉兽规模：{0} / {1}</FH_FleshManagement_HiveCapacityTooltip>
@@ -208,7 +211,7 @@
   <FH_FleshManagement_AutoSuppressTooltip>自动压制：开启后，活跃度高于压制阈值时，殖民者会自动压制巢穴活跃度。</FH_FleshManagement_AutoSuppressTooltip>
   <!-- EN: Suppression threshold: {0} -->
   <FH_FleshManagement_ActivityThreshold>压制阈值：{0}</FH_FleshManagement_ActivityThreshold>
-  <!-- EN: Colonists start suppressing activity when it reaches this threshold. -->
+  <!-- EN: Colonists start suppressing activity when it reaches {0}. -->
   <FH_FleshManagement_ActivityThresholdTooltip>达到{0}活跃度后，殖民者会开始自动压制。</FH_FleshManagement_ActivityThresholdTooltip>
   <!-- EN: Flesh terrain: {0} -->
   <FH_FleshManagement_FleshCount>血肉数量：{0}</FH_FleshManagement_FleshCount>
@@ -244,7 +247,9 @@
   <FH_Suppressible_Inspect>巢穴活跃度：{0}</FH_Suppressible_Inspect>
   <!-- EN: Flesh hive activity: {0} -->
   <FH_DebugActivity>血肉巢穴活跃度：{0}</FH_DebugActivity>
+  <!-- EN: No flesh hive component is available on the current map. -->
   <FH_DebugNoHiveComponent>当前地图没有可用的血肉巢穴组件。</FH_DebugNoHiveComponent>
+  <!-- EN: Flesh hive riot triggered. -->
   <FH_DebugRiotTriggered>已立即触发血肉巢穴失控。</FH_DebugRiotTriggered>
   <!-- EN: Flesh hive riot -->
   <FH_FleshHiveRiot_Label>血肉巢穴暴动</FH_FleshHiveRiot_Label>
@@ -453,14 +458,23 @@
   <FH_ItemProduction_PartialQueue>已添加{0}/{1}个生产任务。{2}</FH_ItemProduction_PartialQueue>
   <!-- EN: Could not open the flesh hopper production page. Check the error log for details. -->
   <FH_ItemProduction_OpenPageFailed>无法打开血肉产出口生产页面，请检查错误日志。</FH_ItemProduction_OpenPageFailed>
+  <!-- EN: Could not open the hive group production page. Check the error log for details. -->
   <FH_HiveGroup_OpenPageFailed>无法打开巢群生产页面，请检查错误日志。</FH_HiveGroup_OpenPageFailed>
+  <!-- EN: Hive group -->
   <FH_ITab_HiveGroup>巢群</FH_ITab_HiveGroup>
+  <!-- EN: Evolution -->
   <FH_FleshHive_EvolutionButton>进化</FH_FleshHive_EvolutionButton>
+  <!-- EN: Consume the required resources and immediately begin evolving this flesh hive into a flesh primary nest. -->
   <FH_FleshHive_EvolutionButtonDesc>消耗所需资源，直接开始将血肉巢穴进化为血肉主巢。</FH_FleshHive_EvolutionButtonDesc>
+  <!-- EN: The flesh hive evolution configuration is invalid. Check the error log for details. -->
   <FH_FleshHive_EvolutionUnavailable>血肉巢穴的进化配置无效，请检查错误日志。</FH_FleshHive_EvolutionUnavailable>
+  <!-- EN: This flesh hive is already evolving. -->
   <FH_FleshHive_EvolutionInProgress>这个血肉巢穴已经在进化。</FH_FleshHive_EvolutionInProgress>
+  <!-- EN: The flesh hive resource state has changed, so evolution cannot begin. -->
   <FH_FleshHive_EvolutionResourceChanged>血肉巢穴的资源状态已经改变，无法开始进化。</FH_FleshHive_EvolutionResourceChanged>
+  <!-- EN: Cannot evolve: {0} -->
   <FH_FleshHive_EvolutionBlockedReason>无法进化：{0}</FH_FleshHive_EvolutionBlockedReason>
+  <!-- EN: Evolution is currently unavailable, but no specific reason was provided. -->
   <FH_FleshHive_EvolutionUnknownReason>当前无法进化，但没有提供具体原因。</FH_FleshHive_EvolutionUnknownReason>
 
   <!-- EN: Cost: {0} -->
@@ -503,7 +517,7 @@
   <FH_Gestation_QuotaMaintainTip>巢群中的最小数量，巢穴会自动孕育血肉兽以达到维持数量</FH_Gestation_QuotaMaintainTip>
   <!-- EN: Maximum number in the hive; the hive automatically reclaims excess fleshbeasts. -->
   <FH_Gestation_QuotaMaximumTip>巢群中的最大数量，巢穴会自动回收任何多余的血肉兽</FH_Gestation_QuotaMaximumTip>
-  <!-- EN: Fleshbeast: types of fleshbeasts in the hive. Current: number of fleshbeasts currently in the hive. Maintain: minimum number in the hive; the hive automatically gestates fleshbeasts until this target is reached. Maximum: maximum number in the hive; the hive automatically reclaims excess fleshbeasts. -->
+  <!-- EN: Fleshbeast: types of fleshbeasts in the hive.\nCurrent: number of fleshbeasts currently in the hive.\nMaintain: minimum number in the hive; the hive automatically gestates fleshbeasts until this target is reached.\nMaximum: maximum number in the hive; the hive automatically reclaims excess fleshbeasts. -->
   <FH_Gestation_QuotaHelp>血肉兽：巢群中的血肉兽种类。\n当前：巢群中目前的血肉兽数量。\n维持：巢群中的最小数量，巢穴会自动孕育血肉兽以达到维持数量。\n最大：巢群中的最大数量，巢穴会自动回收任何多余的血肉兽。</FH_Gestation_QuotaHelp>
   <!-- EN: Set a finite maximum equal to the greater of the current and maintain counts. -->
   <FH_Gestation_SetFiniteMaximum>设置有限最大值，初始值取当前数量与维持值中的较大者。</FH_Gestation_SetFiniteMaximum>
@@ -571,10 +585,14 @@
   <FH_Upgrade_Started>开始处理升级：{0}。</FH_Upgrade_Started>
   <!-- EN: Completed upgrade: {0}. -->
   <FH_Upgrade_CompletedMessage>升级完成：{0}。</FH_Upgrade_CompletedMessage>
+  <!-- EN: Unlock all upgrades -->
   <FH_Upgrade_DebugUnlock>一键解锁全部升级</FH_Upgrade_DebugUnlock>
+  <!-- EN: All flesh hive upgrades unlocked. -->
   <FH_Upgrade_DebugUnlocked>已解锁全部血肉巢群升级。</FH_Upgrade_DebugUnlocked>
 
+  <!-- EN: Automatic flesh building repair -->
   <FH_AutoRepair_Label>自动修补血肉建筑</FH_AutoRepair_Label>
+  <!-- EN: Toggle automatic repair of flesh buildings using hive nutrition. -->
   <FH_AutoRepair_Description>切换是否消耗巢穴营养自动修补血肉建筑。</FH_AutoRepair_Description>
 
   <!-- EN: This cell is already flesh floor. -->
@@ -606,7 +624,7 @@
   <FH_MeldGrowth_ConsumeFailed>{0}未能完成成长。</FH_MeldGrowth_ConsumeFailed>
   <!-- EN: {0} has grown to level {1}/{2}. -->
   <FH_MeldGrowth_Upgraded>{0}已经成长至{1}/{2}级。</FH_MeldGrowth_Upgraded>
-  <!-- EN: Reserve group: {0} -->
+  <!-- EN: Assigned node: {0} -->
   <FH_Gestation_ReservedGroup>归属节点：{0}</FH_Gestation_ReservedGroup>
   <!-- EN: Automatic assignment -->
   <FH_Gestation_ReservedGroupNone>自动分配</FH_Gestation_ReservedGroupNone>

@@ -5,26 +5,16 @@
   <FH_Item_Bioferrite.label>活铁</FH_Item_Bioferrite.label>
   <!-- EN: An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel. -->
   <FH_Item_Bioferrite.description>一种奇异的金属状纤维物质，兼具有机物与金属的特性。活铁通常由故障的纳米机械加工生物质材料得来，而这些纳米机械全都产生了与癌症相似的系统混乱状况。\n\n这种材料以其与几种灵流的良好相性而闻名。若在特定环境下施加压力，活铁会变得极度易燃，使其成为不错的燃料。</FH_Item_Bioferrite.description>
-
-  <!-- EN: flesh carapace -->
-  <FH_Item_FleshCarapace.label>血肉甲壳</FH_Item_FleshCarapace.label>
-  <!-- EN: A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material. -->
-  <FH_Item_FleshCarapace.description>在血肉兽身上常见的甲壳，内部含有难以提取的微量活铁，坚硬且轻便。可以作为建筑材料。</FH_Item_FleshCarapace.description>
   
   <!-- EN: flesh adaptation module -->
   <FH_Item_FleshAdaptationModule.label>血肉适应模块</FH_Item_FleshAdaptationModule.label>
   <!-- EN: A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive. -->
   <FH_Item_FleshAdaptationModule.description>血肉巢穴生产的一个肉瘤型的模块，会影响植入者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪，从而能够更好地与血肉巢穴共同生活。</FH_Item_FleshAdaptationModule.description>
-
-  <!-- EN: flesh symbiosis module -->
-  <FH_Item_FleshSymbiosisModule.label>血肉共生模块</FH_Item_FleshSymbiosisModule.label>
-  <!-- EN: A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating. -->
-  <FH_Item_FleshSymbiosisModule.description>血肉巢穴生产的一个肉瘤型的模块，使植入者可以直接从巢穴获取营养，从而能够更好地与血肉巢穴共同生活。但是营养直接输入身体而非进食会使植入者感到烦躁。</FH_Item_FleshSymbiosisModule.description>
-
-  <!-- EN: symbiosis serum -->
-  <FH_Item_FleshSymbiosisSerum.label>共生血清</FH_Item_FleshSymbiosisSerum.label>
-  <!-- EN: A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive. -->
-  <FH_Item_FleshSymbiosisSerum.description>装有不透明肉色流体的注射针剂，能够让使用者与血肉结构心灵共通。注射进肌肉后，血清会影响使用者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪，从而能够更好地与血肉巢穴共同生活。</FH_Item_FleshSymbiosisSerum.description>
+  
+  <!-- EN: flesh carapace -->
+  <FH_Item_FleshCarapace.label>血肉甲壳</FH_Item_FleshCarapace.label>
+  <!-- EN: A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material. -->
+  <FH_Item_FleshCarapace.description>在血肉兽身上常见的甲壳，内部含有难以提取的微量活铁，坚硬且轻便。可以作为建筑材料。</FH_Item_FleshCarapace.description>
   
   <!-- EN: fleshmass lung -->
   <FH_Item_FleshmassLung.label>血肉肺</FH_Item_FleshmassLung.label>
@@ -40,6 +30,16 @@
   <FH_Item_FleshPack.label>寄生背包</FH_Item_FleshPack.label>
   <!-- EN: A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's parasitism capacity. -->
   <FH_Item_FleshPack.description>配有适合血肉兽生长环境的背包，血肉兽可以以更小的体积压缩在里边。它可以增强佩戴者的寄生空间上限。</FH_Item_FleshPack.description>
+  
+  <!-- EN: flesh symbiosis module -->
+  <FH_Item_FleshSymbiosisModule.label>血肉共生模块</FH_Item_FleshSymbiosisModule.label>
+  <!-- EN: A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating. -->
+  <FH_Item_FleshSymbiosisModule.description>血肉巢穴生产的一个肉瘤型的模块，使植入者可以直接从巢穴获取营养，从而能够更好地与血肉巢穴共同生活。但是营养直接输入身体而非进食会使植入者感到烦躁。</FH_Item_FleshSymbiosisModule.description>
+  
+  <!-- EN: symbiosis serum -->
+  <FH_Item_FleshSymbiosisSerum.label>共生血清</FH_Item_FleshSymbiosisSerum.label>
+  <!-- EN: A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive. -->
+  <FH_Item_FleshSymbiosisSerum.description>装有不透明肉色流体的注射针剂，能够让使用者与血肉结构心灵共通。注射进肌肉后，血清会影响使用者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪，从而能够更好地与血肉巢穴共同生活。</FH_Item_FleshSymbiosisSerum.description>
   
   <!-- EN: flesh whip -->
   <FH_Item_FleshWhip.label>血肉触鞭</FH_Item_FleshWhip.label>

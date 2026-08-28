@@ -1,10 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: Acidbulb -->
+  <FH_Unit_Acidbulb.label>腐蚀瘤兽</FH_Unit_Acidbulb.label>
+  <!-- EN: Spawn an acidbulb. -->
+  <FH_Unit_Acidbulb.description>培育一只腐蚀瘤兽。</FH_Unit_Acidbulb.description>
+  
   <!-- EN: Bastionmeld -->
   <FH_Unit_Bastionmeld.label>铁骸母兽</FH_Unit_Bastionmeld.label>
   <!-- EN: Bastionmeld -->
   <FH_Unit_Bastionmeld.description>在血肉主巢中培养一只铁骸母兽。</FH_Unit_Bastionmeld.description>
+  
+  <!-- EN: Bulbfreak -->
+  <FH_Unit_Bulbfreak.label>恶臭瘤兽</FH_Unit_Bulbfreak.label>
+  <!-- EN: Spawn a bulbfreak. -->
+  <FH_Unit_Bulbfreak.description>培育一只恶臭瘤兽。</FH_Unit_Bulbfreak.description>
+  
+  <!-- EN: Bulbplump -->
+  <FH_Unit_Bulbplump.label>增生瘤兽</FH_Unit_Bulbplump.label>
+  <!-- EN: Spawn a bulbplump. -->
+  <FH_Unit_Bulbplump.description>培育一只增生瘤兽。</FH_Unit_Bulbplump.description>
   
   <!-- EN: Dreadmeld -->
   <FH_Unit_Dreadmeld.label>惊惧母兽</FH_Unit_Dreadmeld.label>
@@ -66,6 +81,16 @@
   <!-- EN: Shieldspike -->
   <FH_Unit_Shieldspike.description>生产一只盾爪兽。</FH_Unit_Shieldspike.description>
   
+  <!-- EN: Spitbulb -->
+  <FH_Unit_Spitbulb.label>喷射瘤兽</FH_Unit_Spitbulb.label>
+  <!-- EN: Spawn a spitbulb. -->
+  <FH_Unit_Spitbulb.description>培育一只喷射瘤兽。</FH_Unit_Spitbulb.description>
+  
+  <!-- EN: Synbulb -->
+  <FH_Unit_Synbulb.label>共鸣瘤兽</FH_Unit_Synbulb.label>
+  <!-- EN: Spawn a synbulb. -->
+  <FH_Unit_Synbulb.description>培育一只共鸣瘤兽。</FH_Unit_Synbulb.description>
+  
   <!-- EN: Toughspike -->
   <FH_Unit_Toughspike.label>双爪兽</FH_Unit_Toughspike.label>
   <!-- EN: Toughspike -->
@@ -80,16 +105,5 @@
   <FH_Unit_Whipspike.label>鞭爪兽</FH_Unit_Whipspike.label>
   <!-- EN: Whipspike -->
   <FH_Unit_Whipspike.description>生产一只鞭爪兽。</FH_Unit_Whipspike.description>
-
-  <FH_Unit_Bulbfreak.label>恶臭瘤兽</FH_Unit_Bulbfreak.label>
-  <FH_Unit_Bulbfreak.description>培育一只恶臭瘤兽。</FH_Unit_Bulbfreak.description>
-  <FH_Unit_Acidbulb.label>腐蚀瘤兽</FH_Unit_Acidbulb.label>
-  <FH_Unit_Acidbulb.description>培育一只腐蚀瘤兽。</FH_Unit_Acidbulb.description>
-  <FH_Unit_Spitbulb.label>喷射瘤兽</FH_Unit_Spitbulb.label>
-  <FH_Unit_Spitbulb.description>培育一只喷射瘤兽。</FH_Unit_Spitbulb.description>
-  <FH_Unit_Bulbplump.label>增生瘤兽</FH_Unit_Bulbplump.label>
-  <FH_Unit_Bulbplump.description>培育一只增生瘤兽。</FH_Unit_Bulbplump.description>
-  <FH_Unit_Synbulb.label>共鸣瘤兽</FH_Unit_Synbulb.label>
-  <FH_Unit_Synbulb.description>培育一只共鸣瘤兽。</FH_Unit_Synbulb.description>
-
+  
 </LanguageData>

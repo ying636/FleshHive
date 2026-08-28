@@ -42,7 +42,7 @@
   <HediffDef>
     <defName>FH_Hediff_Upgrade_ParasiticSpace</defName>
     <label>giant flesh expansion</label>
-    <description>This large or giant fleshbeast has 2 additional parasitic spaces.</description>
+      <description>This fleshbeast has 2 additional parasitic spaces.</description>
     <hediffClass>Hediff</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
@@ -60,7 +60,7 @@
   <HediffDef>
     <defName>FH_Hediff_Upgrade_Robust</defName>
     <label>robustification</label>
-    <description>This large fleshbeast has six times its normal health scale.</description>
+      <description>This fleshbeast is exceptionally robust, with a thicker and more resilient body.</description>
     <hediffClass>Hediff</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

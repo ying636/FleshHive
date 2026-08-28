@@ -6,28 +6,49 @@
   <!-- EN: Launch acid. -->
   <FH_Acidbulb_Launch.description>发射一枚酸液炮弹。</FH_Acidbulb_Launch.description>
   
+  <!-- EN: active parasitism -->
+  <FH_ActiveParasitism_Paraspike.label>主动寄生</FH_ActiveParasitism_Paraspike.label>
+  <!-- EN: Select a target creature and parasitize it. -->
+  <FH_ActiveParasitism_Paraspike.description>选择一个目标生物并寄生。</FH_ActiveParasitism_Paraspike.description>
+  
   <!-- EN: release fleshbeasts -->
   <FH_BulbfreakReleaseFleshbeasts.label>释放血肉兽</FH_BulbfreakReleaseFleshbeasts.label>
   <!-- EN: Consume 200 twisted flesh to release two random medium fleshbeasts. -->
   <FH_BulbfreakReleaseFleshbeasts.description>消耗200扭曲肉，释放两只随机中型血肉兽。</FH_BulbfreakReleaseFleshbeasts.description>
   
-  <!-- EN: acid mortar -->
-  <FH_Parasitism_AcidMortar.label>酸蚀迫击炮</FH_Parasitism_AcidMortar.label>
-  <!-- EN: Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns. -->
-  <FH_Parasitism_AcidMortar.description>发射一枚覆盖3×3区域的酸蚀炮弹。被击中的目标会持续受到酸蚀伤害。</FH_Parasitism_AcidMortar.description>
-  <!-- EN: acid spray -->
-  <FH_Parasitism_AcidSpray.label>酸液喷吐</FH_Parasitism_AcidSpray.label>
-  <!-- EN: Spray sticky acid over a target area. The acid sticks to targets and continues to burn them. -->
-  <FH_Parasitism_AcidSpray.description>向目标区域喷吐黏稠酸液。酸液会附着在目标上并持续灼蚀。</FH_Parasitism_AcidSpray.description>
-  <!-- EN: bone spike shot -->
-  <FH_Parasitism_BoneSpikeShot.label>骨刺射击</FH_Parasitism_BoneSpikeShot.label>
-  <!-- EN: Launch a bone spike. -->
-  <FH_Parasitism_BoneSpikeShot.description>发射一枚骨刺。</FH_Parasitism_BoneSpikeShot.description>
-
   <!-- EN: corrosive spray -->
   <FH_CorrosiveSpray_Gutspike.label>腐蚀酸液喷吐</FH_CorrosiveSpray_Gutspike.label>
   <!-- EN: Compress the gutspike's specialized stomach to spray stored corrosive acid over a short distance. -->
   <FH_CorrosiveSpray_Gutspike.description>快速挤压特化胃部，将储存的腐蚀性酸液喷向近距离目标。</FH_CorrosiveSpray_Gutspike.description>
+  
+  <!-- EN: flesh jump -->
+  <FH_FleshJump.label>血肉跳跃</FH_FleshJump.label>
+  <!-- EN: Directionally detonate some of the explosive sacs inside the body. With the protection of cushioning tissue, the blast can propel the fleshbeast across a long distance with ease. -->
+  <FH_FleshJump.description>将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下，可以借此轻松跨越很长的距离。</FH_FleshJump.description>
+  <!-- EN: jump -->
+  <FH_FleshJump.verbProperties.label>跳跃</FH_FleshJump.verbProperties.label>
+  
+  <!-- EN: acid mortar -->
+  <FH_Parasitism_AcidMortar.label>酸蚀迫击炮</FH_Parasitism_AcidMortar.label>
+  <!-- EN: Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns. -->
+  <FH_Parasitism_AcidMortar.description>发射一枚覆盖3×3区域的酸蚀炮弹。被击中的目标会持续受到酸蚀伤害。</FH_Parasitism_AcidMortar.description>
+  
+  <!-- EN: acid spray -->
+  <FH_Parasitism_AcidSpray.label>酸液喷吐</FH_Parasitism_AcidSpray.label>
+  <!-- EN: Spray sticky acid over a target area. The acid sticks to targets and continues to burn them. -->
+  <FH_Parasitism_AcidSpray.description>向目标区域喷吐黏稠酸液。酸液会附着在目标上并持续灼蚀。</FH_Parasitism_AcidSpray.description>
+  
+  <!-- EN: bone spike shot -->
+  <FH_Parasitism_BoneSpikeShot.label>骨刺射击</FH_Parasitism_BoneSpikeShot.label>
+  <!-- EN: Launch a bone spike. -->
+  <FH_Parasitism_BoneSpikeShot.description>发射一枚骨刺。</FH_Parasitism_BoneSpikeShot.description>
+  
+  <!-- EN: flesh jump -->
+  <FH_Parasitism_FleshJump.label>血肉跳跃</FH_Parasitism_FleshJump.label>
+  <!-- EN: Consume 25 twisted flesh to directionally detonate explosive sacs and leap a long distance. -->
+  <FH_Parasitism_FleshJump.description>消耗25扭曲肉，将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下借此轻松跨越很长的距离。</FH_Parasitism_FleshJump.description>
+  <!-- EN: jump -->
+  <FH_Parasitism_FleshJump.verbProperties.label>跳跃</FH_Parasitism_FleshJump.verbProperties.label>
   
   <!-- EN: flesh mortar -->
   <FH_Parasitism_FleshMortar.label>血肉迫击炮</FH_Parasitism_FleshMortar.label>
@@ -35,19 +56,24 @@
   <FH_Parasitism_FleshMortar.description>消耗25扭曲肉发射一枚爆炸性血肉炮弹。爆炸覆盖3×3区域，并在命中位置释放一只随机小型血肉兽。</FH_Parasitism_FleshMortar.description>
   
   <!-- EN: spike launch -->
+  <FH_SpikeLaunch_Fingerspike.label>骨刺发射</FH_SpikeLaunch_Fingerspike.label>
+  <!-- EN: Launch a bone spike at a target. -->
+  <FH_SpikeLaunch_Fingerspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Fingerspike.description>
+  
+  <!-- EN: spike launch -->
   <FH_SpikeLaunch_Paraspike.label>骨刺发射</FH_SpikeLaunch_Paraspike.label>
   <!-- EN: Launch a bone spike at a target. -->
   <FH_SpikeLaunch_Paraspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Paraspike.description>
-
-  <!-- EN: active parasitism -->
-  <FH_ActiveParasitism_Paraspike.label>主动寄生</FH_ActiveParasitism_Paraspike.label>
-  <!-- EN: Select a target creature and parasitize it. -->
-  <FH_ActiveParasitism_Paraspike.description>选择一个目标生物并寄生。</FH_ActiveParasitism_Paraspike.description>
   
   <!-- EN: spike launch -->
   <FH_SpikeLaunch_Shatterspike.label>骨刺发射</FH_SpikeLaunch_Shatterspike.label>
   <!-- EN: Launch a bone spike at a target. -->
   <FH_SpikeLaunch_Shatterspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Shatterspike.description>
+  
+  <!-- EN: spike launch -->
+  <FH_SpikeLaunch_Toughspike.label>骨刺发射</FH_SpikeLaunch_Toughspike.label>
+  <!-- EN: Launch a bone spike at a target. -->
+  <FH_SpikeLaunch_Toughspike.description>向目标发射一枚骨刺。</FH_SpikeLaunch_Toughspike.description>
   
   <!-- EN: whip strike -->
   <FH_SpikeLaunch_Whipspike.label>触鞭抽击</FH_SpikeLaunch_Whipspike.label>
@@ -64,14 +90,4 @@
   <!-- EN: Release two random small fleshbeasts. -->
   <FH_Trispike_ReleaseSpikes.description>释放2只随机的小型血肉兽。</FH_Trispike_ReleaseSpikes.description>
   
-  <!-- EN: flesh jump -->
-  <FH_FleshJump.label>血肉跳跃</FH_FleshJump.label>
-  <!-- EN: Directionally detonate some of the explosive sacs inside the body. With the protection of cushioning tissue, the blast can propel the fleshbeast across a long distance with ease. -->
-  <FH_FleshJump.description>将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下，可以借此轻松跨越很长的距离。</FH_FleshJump.description>
-
-  <!-- EN: flesh jump -->
-  <FH_Parasitism_FleshJump.label>血肉跳跃</FH_Parasitism_FleshJump.label>
-  <!-- EN: Consume 25 twisted flesh to directionally detonate explosive sacs and leap a long distance. -->
-  <FH_Parasitism_FleshJump.description>消耗25扭曲肉，将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下借此轻松跨越很长的距离。</FH_Parasitism_FleshJump.description>
-
 </LanguageData>

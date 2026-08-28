@@ -1,40 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <!-- EN: reactivation -->
-  <FH_Hediff_Upgrade_Reactivation.label>再活性化</FH_Hediff_Upgrade_Reactivation.label>
-  <!-- EN: This fleshbeast has a 10% chance to produce an additional puffspike when it dies. -->
-  <FH_Hediff_Upgrade_Reactivation.description>这只血肉兽死亡时有10%的概率额外生成一只肺血兽。</FH_Hediff_Upgrade_Reactivation.description>
-
+  
   <!-- EN: agility -->
   <FH_Hediff_Upgrade_Agility.label>敏捷化</FH_Hediff_Upgrade_Agility.label>
   <!-- EN: This small fleshbeast has a 20% chance to dodge any incoming damage. -->
   <FH_Hediff_Upgrade_Agility.description>这只小型血肉兽受到任何伤害时，有20%的概率躲避此次伤害。</FH_Hediff_Upgrade_Agility.description>
-
+  
   <!-- EN: monomolecular bone spikes -->
   <FH_Hediff_Upgrade_BoneSpikePenetration.label>单分子骨刺</FH_Hediff_Upgrade_BoneSpikePenetration.label>
   <!-- EN: This fleshbeast's bone-spike throwing skills have 90% armor penetration. -->
   <FH_Hediff_Upgrade_BoneSpikePenetration.description>这只血肉兽的投掷骨刺技能拥有90%的护甲穿透。</FH_Hediff_Upgrade_BoneSpikePenetration.description>
-
-  <!-- EN: giant flesh expansion -->
-  <FH_Hediff_Upgrade_ParasiticSpace.label>巨型血肉扩展</FH_Hediff_Upgrade_ParasiticSpace.label>
-  <!-- EN: This large or giant fleshbeast has 2 additional parasitic spaces. -->
-  <FH_Hediff_Upgrade_ParasiticSpace.description>这只大型或巨型血肉兽的寄生空间增加2。</FH_Hediff_Upgrade_ParasiticSpace.description>
-
-  <FH_Hediff_Upgrade_Robust.label>健壮化</FH_Hediff_Upgrade_Robust.label>
-  <FH_Hediff_Upgrade_Robust.description>这只大型血肉兽的健康值比例变为原来的6倍。</FH_Hediff_Upgrade_Robust.description>
-
-  <!-- EN: nest master carapace -->
-  <FH_Hediff_Upgrade_NestMasterCarapace.label>巢主甲壳</FH_Hediff_Upgrade_NestMasterCarapace.label>
-  <!-- EN: This giant fleshbeast gains +45% blunt armor, +106% sharp armor, and +54% heat armor. -->
-  <FH_Hediff_Upgrade_NestMasterCarapace.description>这只巨型血肉兽的钝器护甲提高45%，利器护甲提高106%，热能护甲提高54%。</FH_Hediff_Upgrade_NestMasterCarapace.description>
-
+  
   <!-- EN: rapid healing -->
   <FH_Hediff_Upgrade_FastHealing.label>高速愈合</FH_Hediff_Upgrade_FastHealing.label>
   <!-- EN: This fleshbeast recovers wounds 50% faster while inside a flesh hive. -->
   <FH_Hediff_Upgrade_FastHealing.description>这只血肉兽在巢穴中的伤口恢复速度提高50%。</FH_Hediff_Upgrade_FastHealing.description>
-
+  
   <!-- EN: fleshbeast taming -->
   <FH_Hediff_Upgrade_FleshbeastTaming.label>血肉驯化</FH_Hediff_Upgrade_FleshbeastTaming.label>
   <!-- EN: This fleshbeast loses control more slowly. -->
   <FH_Hediff_Upgrade_FleshbeastTaming.description>这只血肉兽的控制度降低速度更慢。</FH_Hediff_Upgrade_FleshbeastTaming.description>
+  <!-- EN: I -->
+  <FH_Hediff_Upgrade_FleshbeastTaming.stages.I.label>I</FH_Hediff_Upgrade_FleshbeastTaming.stages.I.label>
+  <!-- EN: II -->
+  <FH_Hediff_Upgrade_FleshbeastTaming.stages.II.label>II</FH_Hediff_Upgrade_FleshbeastTaming.stages.II.label>
+  
+  <!-- EN: nest master carapace -->
+  <FH_Hediff_Upgrade_NestMasterCarapace.label>巢主甲壳</FH_Hediff_Upgrade_NestMasterCarapace.label>
+  <!-- EN: This giant fleshbeast gains +45% blunt armor, +106% sharp armor, and +54% heat armor. -->
+  <FH_Hediff_Upgrade_NestMasterCarapace.description>这只巨型血肉兽的钝器护甲提高45%，利器护甲提高106%，热能护甲提高54%。</FH_Hediff_Upgrade_NestMasterCarapace.description>
+  
+  <!-- EN: giant flesh expansion -->
+  <FH_Hediff_Upgrade_ParasiticSpace.label>巨型血肉扩展</FH_Hediff_Upgrade_ParasiticSpace.label>
+  <!-- EN: This large or giant fleshbeast has 2 additional parasitic spaces. -->
+  <FH_Hediff_Upgrade_ParasiticSpace.description>这只血肉兽的寄生空间增加2</FH_Hediff_Upgrade_ParasiticSpace.description>
+  
+  <!-- EN: reactivation -->
+  <FH_Hediff_Upgrade_Reactivation.label>再活性化</FH_Hediff_Upgrade_Reactivation.label>
+  <!-- EN: This fleshbeast has a 10% chance to produce an additional puffspike when it dies. -->
+  <FH_Hediff_Upgrade_Reactivation.description>这只血肉兽死亡时有10%的概率额外生成一只肺血兽。</FH_Hediff_Upgrade_Reactivation.description>
+  
+  <!-- EN: robustification -->
+  <FH_Hediff_Upgrade_Robust.label>健壮化</FH_Hediff_Upgrade_Robust.label>
+  <!-- EN: This large fleshbeast has six times its normal health scale. -->
+  <FH_Hediff_Upgrade_Robust.description>这只血肉兽长得额外健全，拥有更加厚实抗打的躯体</FH_Hediff_Upgrade_Robust.description>
+  
 </LanguageData>

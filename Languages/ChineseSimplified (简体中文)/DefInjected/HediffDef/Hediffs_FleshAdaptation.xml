@@ -5,7 +5,7 @@
   <FH_FleshAdaptation.label>血肉适应</FH_FleshAdaptation.label>
   <!-- EN: A tumor-like module produced by the flesh hive. It affects the implant user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive. -->
   <FH_FleshAdaptation.description>血肉巢穴生产的一个肉瘤型的模块，会影响植入者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪。从而能够更好的与血肉巢穴共同生活。</FH_FleshAdaptation.description>
-
+  
   <!-- EN: flesh symbiosis -->
   <FH_FleshSymbiosis.label>血肉共生</FH_FleshSymbiosis.label>
   <!-- EN: A flesh symbiosis module links its host to the flesh hive, allowing the host to draw nutrition directly from the hive when severely hungry. -->

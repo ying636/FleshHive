@@ -3,58 +3,65 @@
   
   <!-- EN: bastionmeld seed -->
   <FH_BastionmeldSeed.label>铁骸母兽结块</FH_BastionmeldSeed.label>
-  <!-- EN: The fleshy core of a bastionmeld. It is a tumor-like lump made entirely of flesh, covered with pieces of metallic carapace. It beats endlessly like a heart. A bastionmeld seed can be used to cultivate your own giant fleshbeast. -->
+  <!-- EN: The fleshy core of a bastionmeld. It is a tumor-like lump made entirely of flesh, covered with pieces of metallic carapace. It beats endlessly like a heart. A bastionmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a bastionmeld to strengthen itself. -->
   <FH_BastionmeldSeed.description>铁骸母兽内部的血肉核心，整体是由血肉构成的瘤块，上面覆盖着一些金属甲壳。像心脏一样不停跳动着。铁骸母兽结块能够用于培育你自己的巨型血肉兽，也能被铁骸母兽吞食来强化自身。</FH_BastionmeldSeed.description>
   
   <!-- EN: dreadmeld seed -->
   <FH_DreadmeldSeed.label>惊惧母兽结块</FH_DreadmeldSeed.label>
-  <!-- EN: The fleshy core of a dreadmeld. It is a tumor-like lump made entirely of flesh, beating endlessly like a heart. A dreadmeld seed can be used to cultivate your own flesh hive or giant fleshbeast. -->
+  <!-- EN: The fleshy core of a dreadmeld. It is a tumor-like lump made entirely of flesh, beating endlessly like a heart. A dreadmeld seed can be used to cultivate your own flesh hive or giant fleshbeast, or consumed by a dreadmeld to strengthen itself. -->
   <FH_DreadmeldSeed.description>惊惧母兽内部的血肉核心，整体是由血肉构成的瘤块。像心脏一样不停跳动着。惊惧母兽结块能够用于培育你自己的血肉巢穴或者巨型血肉兽，也能被惊惧母兽吞食来强化自身。</FH_DreadmeldSeed.description>
   
   <!-- EN: fissionmeld seed -->
   <FH_FissionmeldSeed.label>裂殖母兽结块</FH_FissionmeldSeed.label>
-  <!-- EN: The fleshy core of a fissionmeld. It is a tumor-like lump made entirely of flesh, with many bony spikes growing from it. It beats endlessly like a heart. A fissionmeld seed can be used to cultivate your own giant fleshbeast. -->
+  <!-- EN: The fleshy core of a fissionmeld. It is a tumor-like lump made entirely of flesh, with many bony spikes growing from it. It beats endlessly like a heart. A fissionmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a fissionmeld to strengthen itself. -->
   <FH_FissionmeldSeed.description>裂殖母兽内部的血肉核心，整体是由血肉构成的瘤块，上面生长着许多骨质尖刺。像心脏一样不停跳动着。裂殖母兽结块能够用于培育你自己的巨型血肉兽，也能被裂殖母兽吞食来强化自身。</FH_FissionmeldSeed.description>
   
   <!-- EN: flesh adaptation module -->
   <FH_FleshAdaptationModule.label>血肉适应模块</FH_FleshAdaptationModule.label>
   <!-- EN: A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive. -->
   <FH_FleshAdaptationModule.description>血肉巢穴生产的一个肉瘤型的模块，会影响植入者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪，从而能够更好地与血肉巢穴共同生活。</FH_FleshAdaptationModule.description>
-
-  <!-- EN: flesh symbiosis module -->
-  <FH_FleshSymbiosisModule.label>血肉共生模块</FH_FleshSymbiosisModule.label>
-  <!-- EN: A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating. -->
-  <FH_FleshSymbiosisModule.description>血肉巢穴生产的一个肉瘤型的模块，使植入者可以直接从巢穴获取营养，从而能够更好地与血肉巢穴共同生活。但是营养直接输入身体而非进食会使植入者感到烦躁。</FH_FleshSymbiosisModule.description>
-
-  <!-- EN: symbiosis serum -->
-  <FH_FleshSymbiosisSerum.label>共生血清</FH_FleshSymbiosisSerum.label>
-  <!-- EN: A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive. -->
-  <FH_FleshSymbiosisSerum.description>装有不透明肉色流体的注射针剂，能够让使用者与血肉结构心灵共通。注射进肌肉后，血清会影响使用者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪，从而能够更好地与血肉巢穴共同生活。</FH_FleshSymbiosisSerum.description>
   
   <!-- EN: fleshberry -->
   <FH_FleshBerry.label>肉果</FH_FleshBerry.label>
   <!-- EN: A red, fleshy fruit grown from a twisted flesh bush. It can be eaten raw, but its dense metallic taste lingers unpleasantly. The fruit is probably still alive; it does not rot. -->
   <FH_FleshBerry.description>一种从扭曲肉果丛上长出的红色肉质果实。可以生吃，但浓重的金属味会久久残留，令人不适。这种果实大概还是活的，它们并不会腐烂。</FH_FleshBerry.description>
   
+  <!-- EN: flesh carapace -->
+  <FH_FleshCarapace.label>血肉甲壳</FH_FleshCarapace.label>
+  <!-- EN: A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material. -->
+  <FH_FleshCarapace.description>在血肉兽身上常见的甲壳，内部含有难以提取的微量活铁，坚硬且轻便。可以作为建筑材料。</FH_FleshCarapace.description>
+  <!-- EN: carapace -->
+  <FH_FleshCarapace.stuffProps.stuffAdjective>血肉甲壳</FH_FleshCarapace.stuffProps.stuffAdjective>
+  
+  <!-- EN: flesh symbiosis module -->
+  <FH_FleshSymbiosisModule.label>血肉共生模块</FH_FleshSymbiosisModule.label>
+  <!-- EN: A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating. -->
+  <FH_FleshSymbiosisModule.description>血肉巢穴生产的一个肉瘤型的模块，使植入者可以直接从巢穴获取营养，从而能够更好地与血肉巢穴共同生活。但是营养直接输入身体而非进食会使植入者感到烦躁。</FH_FleshSymbiosisModule.description>
+  
+  <!-- EN: symbiosis serum -->
+  <FH_FleshSymbiosisSerum.label>共生血清</FH_FleshSymbiosisSerum.label>
+  <!-- EN: A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive. -->
+  <FH_FleshSymbiosisSerum.description>装有不透明肉色流体的注射针剂，能够让使用者与血肉结构心灵共通。注射进肌肉后，血清会影响使用者的心智精神，使其不再对血肉生物或制品乃至扭曲肉产生厌恶情绪，从而能够更好地与血肉巢穴共同生活。</FH_FleshSymbiosisSerum.description>
+  <!-- EN: Use {0_label} -->
+  <FH_FleshSymbiosisSerum.comps.CompUsable.useLabel>使用{0_label}</FH_FleshSymbiosisSerum.comps.CompUsable.useLabel>
+  <!-- EN: Ingest {0} -->
+  <FH_FleshSymbiosisSerum.ingestible.ingestCommandString>食用{0}</FH_FleshSymbiosisSerum.ingestible.ingestCommandString>
+  <!-- EN: Ingesting {0}. -->
+  <FH_FleshSymbiosisSerum.ingestible.ingestReportString>正在食用{0}。</FH_FleshSymbiosisSerum.ingestible.ingestReportString>
+  
   <!-- EN: furiousmeld seed -->
   <FH_FuriousmeldSeed.label>暴怒母兽结块</FH_FuriousmeldSeed.label>
-  <!-- EN: The fleshy core of a furiousmeld. It is a tumor-like lump made entirely of flesh, covered with a layer of red carapace. It beats endlessly like a heart. A furiousmeld seed can be used to cultivate your own giant fleshbeast. -->
+  <!-- EN: The fleshy core of a furiousmeld. It is a tumor-like lump made entirely of flesh, covered with a layer of red carapace. It beats endlessly like a heart. A furiousmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a furiousmeld to strengthen itself. -->
   <FH_FuriousmeldSeed.description>暴怒母兽内部的血肉核心，整体是由血肉构成的瘤块，上面生长着一层红色的甲壳。像心脏一样不停跳动着。暴怒母兽结块能够用于培育你自己的巨型血肉兽，也能被暴怒母兽吞食来强化自身。</FH_FuriousmeldSeed.description>
   
   <!-- EN: nerve flesh -->
   <FH_NerveFlesh.label>神经块</FH_NerveFlesh.label>
   <!-- EN: An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction. -->
   <FH_NerveFlesh.description>血肉神经的必须部分。许多复杂的血肉结构需要神经块才能够完成制作。</FH_NerveFlesh.description>
-
-  <!-- EN: flesh carapace -->
-  <FH_FleshCarapace.label>血肉甲壳</FH_FleshCarapace.label>
-  <!-- EN: A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material. -->
-  <FH_FleshCarapace.description>在血肉兽身上常见的甲壳，内部含有难以提取的微量活铁，坚硬且轻便。可以作为建筑材料。</FH_FleshCarapace.description>
-  <FH_FleshCarapace.stuffProps.stuffAdjective>血肉甲壳</FH_FleshCarapace.stuffProps.stuffAdjective>
   
   <!-- EN: nexusmeld seed -->
   <FH_NexusmeldSeed.label>统合母兽结块</FH_NexusmeldSeed.label>
-  <!-- EN: The fleshy core of a nexusmeld. It is a tumor-like lump made entirely of flesh, with green patterns of nerve tissue growing across it. It beats endlessly like a heart. A nexusmeld seed can be used to cultivate your own giant fleshbeast. -->
+  <!-- EN: The fleshy core of a nexusmeld. It is a tumor-like lump made entirely of flesh, with green patterns of nerve tissue growing across it. It beats endlessly like a heart. A nexusmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a nexusmeld to strengthen itself. -->
   <FH_NexusmeldSeed.description>统合母兽内部的血肉核心，整体是由血肉构成的瘤块，上面生长着神经组织的绿色纹路。像心脏一样不停跳动着。统合母兽结块能够用于培育你自己的巨型血肉兽，也能被统合母兽吞食来强化自身。</FH_NexusmeldSeed.description>
   
   <!-- EN: fleshmass lung -->

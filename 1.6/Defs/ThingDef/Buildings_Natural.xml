@@ -124,7 +124,7 @@
         </traitOptions>
       </li>
       <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
-      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
@@ -207,7 +207,7 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</texPath>
       <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
-      <drawSize>3.5</drawSize>
+      <drawSize>3.85</drawSize>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
@@ -319,7 +319,7 @@
         </traitOptions>
       </li>
       <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
-      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
@@ -495,7 +495,7 @@
     </building>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
-      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
@@ -580,7 +580,7 @@
     </building>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
-      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
         <groupCount>1</groupCount>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
         <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>

@@ -47,7 +47,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Nexusmeld</defName>
     <label>nexusmeld parasitism</label>
-    <description>The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts.</description>
+    <description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.2, 0.6)</defaultLabelColor>
@@ -119,7 +119,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Furiousmeld</defName>
     <label>furiousmeld parasitism</label>
-    <description>The furiousmeld latches onto the host, providing twisted flesh capacity, armor, and regeneration.</description>
+    <description>This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, armor, and regeneration.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
@@ -194,7 +194,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Bastionmeld</defName>
     <label>bastionmeld parasitism</label>
-    <description>The bastionmeld latches onto the host, grafting two parasitic weapon mounts onto the body and allowing the host to release an EMP pulse.</description>
+    <description>This creature is parasitized by a bastionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nTwo parasitic weapon mounts are grafted onto the body, allowing the host to release an EMP pulse.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.45, 0.55, 0.65)</defaultLabelColor>
@@ -267,7 +267,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Dreadmeld</defName>
     <label>dreadmeld parasitism</label>
-    <description>The dreadmeld latches onto the host, grafting bone spikes, granting incredible regeneration, improving mining work, and allowing the host to unleash a terror roar.</description>
+    <description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBone spikes are grafted onto the body, granting incredible regeneration, improved mining work, and a terror roar.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.45, 0.2, 0.15)</defaultLabelColor>
@@ -341,7 +341,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Fissionmeld</defName>
     <label>fissionmeld parasitism</label>
-    <description>The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, sustaining flesh undying while enough twisted flesh is stored, and allowing the host to purge harmful conditions.</description>
+    <description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBone spikes are grafted onto the body, twisted flesh capacity and regeneration are increased, flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.75, 0.25, 0.2)</defaultLabelColor>

@@ -10,6 +10,16 @@ public class GameComponent_FleshSurvivor : GameComponent
     {
     }
 
+    public void DisableQuest()
+    {
+        questOffered = true;
+    }
+
+    public void DebugLogQuestOffered()
+    {
+        Log.Message("[FleshHive] Flesh survivor questOffered: " + questOffered);
+    }
+
     public override void GameComponentTick()
     {
         if (questOffered || Find.TickManager.TicksGame < TriggerTick || Find.TickManager.TicksGame % CheckInterval != 0)

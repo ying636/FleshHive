@@ -2,7 +2,6 @@
 <Defs>
   <ResearchTabDef>
     <defName>FH_ResearchTab_FleshHive</defName>
-    <label>血肉巢穴</label>
+    <label>Flesh Hive</label>
   </ResearchTabDef>
 </Defs>
-

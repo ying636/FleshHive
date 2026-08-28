@@ -22,6 +22,7 @@ public class CompFleshtitanReversion : ThingComp
         base.PostExposeData();
         Scribe_Values.Look(ref revertAtTick, "revertAtTick", -1);
         Scribe_Values.Look(ref sourceHeartThreatPoints, "sourceHeartThreatPoints", 0f);
+        Scribe_Values.Look(ref sourceHeartBiosignature, "sourceHeartBiosignature", -1);
         Scribe_References.Look(ref escortLord, "escortLord");
         Scribe_References.Look(ref responseLord, "responseLord");
         Scribe_Values.Look(ref assaultPending, "assaultPending", defaultValue: false);
@@ -68,9 +69,10 @@ public class CompFleshtitanReversion : ThingComp
         return "FH_FleshtitanReversionCountdown".Translate(remainingTicks.ToStringTicksToPeriod());
     }
 
-    public void InitializeFromHeart(float heartThreatPoints, Lord? titanEscortLord)
+    public void InitializeFromHeart(float heartThreatPoints, Lord? titanEscortLord, int heartBiosignature = -1)
     {
         sourceHeartThreatPoints = heartThreatPoints;
+        sourceHeartBiosignature = heartBiosignature;
         escortLord = titanEscortLord;
         assaultPending = titanEscortLord != null;
         responseReadyAtTick = -1;
@@ -293,6 +295,14 @@ public class CompFleshtitanReversion : ThingComp
         IntVec3 position = parent.Position;
         ThingDef heartDef = IsWildTitan ? Props.heartDef : Props.controlledHeartDef;
         Thing heart = ThingMaker.MakeThing(heartDef);
+        if (sourceHeartBiosignature >= 0 && heart is ThingWithComps heartWithComps)
+        {
+            CompBiosignatureOwner? biosignatureOwner = heartWithComps.GetComp<CompBiosignatureOwner>();
+            if (biosignatureOwner != null)
+            {
+                biosignatureOwner.biosignature = sourceHeartBiosignature;
+            }
+        }
         if (heart is Building_FleshmassHeart fleshmassHeart)
         {
             fleshmassHeart.GetComp<CompFleshmassHeart>().threatPoints = sourceHeartThreatPoints;
@@ -358,6 +368,8 @@ public class CompFleshtitanReversion : ThingComp
     private const float HeartDefenseWanderRadius = 12f;
 
     private float sourceHeartThreatPoints;
+
+    private int sourceHeartBiosignature = -1;
 
     private Lord? escortLord;
 

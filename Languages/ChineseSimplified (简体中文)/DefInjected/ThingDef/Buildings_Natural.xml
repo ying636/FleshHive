@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  
   <!-- EN: chitin flesh barricade -->
   <FH_ChitinFleshBarricade.label>甲壳血肉掩体</FH_ChitinFleshBarricade.label>
   <!-- EN: A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do. -->
@@ -37,7 +38,7 @@
   
   <!-- EN: flesh vesicle -->
   <FH_FleshBox.label>血肉囊泡</FH_FleshBox.label>
-  <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive. -->
+  <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive. -->
   <FH_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。任何具有营养值的物品都会被自动消化并转化为巢穴营养，其他原料则会保留下来供血肉巢穴使用。</FH_FleshBox.description>
   
   <!-- EN: fleshberry bush -->
@@ -74,16 +75,16 @@
   <FH_FleshLamp.label>血肉灯</FH_FleshLamp.label>
   <!-- EN: A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. -->
   <FH_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_FleshLamp.description>
-
-  <!-- EN: flesh power generator -->
-  <FH_FleshPower.label>血肉发电机</FH_FleshPower.label>
-  <!-- EN: Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive. -->
-  <FH_FleshPower.description>通过消耗巢群的营养发电，会自动从巢群中汲取营养。</FH_FleshPower.description>
   
   <!-- EN: flesh parasite vat -->
   <FH_FleshParasiteVat.label>血肉寄生仓</FH_FleshParasiteVat.label>
   <!-- EN: A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily. -->
   <FH_FleshParasiteVat.description>一个由尖锐的骨刺触手和血肉结块构成的血肉装置。该设备会将血肉兽的细胞逐渐吞噬，并逐步将这些细胞植入到宿主的身体中。这让血肉兽能在宿主体内独立存活，强化宿主，并主动攻击宿主的敌人。血肉兽的生存营养也要由宿主提供，所以宿主会更容易感到饥饿。</FH_FleshParasiteVat.description>
+  
+  <!-- EN: flesh power generator -->
+  <FH_FleshPower.label>血肉发电机</FH_FleshPower.label>
+  <!-- EN: Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive. -->
+  <FH_FleshPower.description>通过消耗巢群的营养发电，会自动从巢群中汲取营养。</FH_FleshPower.description>
   
   <!-- EN: flesh primary nest -->
   <FH_FleshPrimaryNest.label>血肉主巢</FH_FleshPrimaryNest.label>
@@ -105,7 +106,7 @@
   <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
   <FH_FleshTableLarge.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableLarge.description>
   
-  <!-- EN: flesh table (4x2) -->
+  <!-- EN: flesh table (2x4) -->
   <FH_FleshTableLong.label>血肉桌子（4x2）</FH_FleshTableLong.label>
   <!-- EN: A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it. -->
   <FH_FleshTableLong.description>由血肉构成的一个平坦的肉块。当放置有朝向桌子的椅子时，人们会在上面吃饭。</FH_FleshTableLong.description>

@@ -7,6 +7,20 @@ namespace FleshHive;
 
 public static class DebugActions_Parasitism
 {
+    [DebugAction("FleshHive", "Log flesh survivor questOffered", false, false, false, false, false, 0, false,
+        allowedGameStates = AllowedGameStates.Playing)]
+    public static void LogFleshSurvivorQuestOffered()
+    {
+        GameComponent_FleshSurvivor? component = Current.Game?.GetComponent<GameComponent_FleshSurvivor>();
+        if (component == null)
+        {
+            Log.Error("[FleshHive] Could not find GameComponent_FleshSurvivor.");
+            return;
+        }
+
+        component.DebugLogQuestOffered();
+    }
+
     [DebugAction("FleshHive", "Add flesh hive activity 10%", false, false, false, false, false, 0, false,
         allowedGameStates = AllowedGameStates.PlayingOnMap)]
     public static void AddFleshHiveActivity10()

@@ -129,6 +129,9 @@
         <fuelIconPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</fuelIconPath>
         <nutritionPerFuel>0.1</nutritionPerFuel>
       </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>0.5</dailyNutritionCost>
+      </li>
       <li Class="CompProperties_Stunnable">
         <affectedDamageDefs>
           <li>Stun</li>

@@ -6,12 +6,12 @@
   
   <!-- EN: flesh digester -->
   <FH_FleshDigester.label>警卫触手中枢</FH_FleshDigester.label>
-  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
+  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition. -->
   <FH_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。这些被活化的板块也会像血肉树一样吞噬尸体和肉类，补充巢穴营养。</FH_FleshDigester.description>
   
   <!-- EN: small flesh digester -->
   <FH_FleshDigesterS.label>警卫触手</FH_FleshDigesterS.label>
-  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
+  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition. -->
   <FH_FleshDigesterS.description>负责警卫血肉巢穴的小型神经中枢器官。它会活化附近的血肉，使其抽打入侵者、阻碍移动并造成伤害。它也能吞噬附近的尸体和生肉，为巢穴补充营养。</FH_FleshDigesterS.description>
   
   <!-- EN: fleshmass spitter -->

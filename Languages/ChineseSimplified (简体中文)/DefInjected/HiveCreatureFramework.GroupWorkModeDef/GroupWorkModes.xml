@@ -1,5 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  
+  <!-- EN: hunt -->
   <FH_GroupWorkMode_Hunt.label>狩猎</FH_GroupWorkMode_Hunt.label>
+  <!-- EN: Lock onto prey, gather all available group members, then begin a coordinated hunt. -->
   <FH_GroupWorkMode_Hunt.description>锁定猎物，等待所有可行动成员集合完毕后共同发起狩猎。</FH_GroupWorkMode_Hunt.description>
+  
 </LanguageData>

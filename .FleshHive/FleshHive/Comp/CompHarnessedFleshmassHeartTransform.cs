@@ -91,6 +91,7 @@ public class CompHarnessedFleshmassHeartTransform : ThingComp
         IntVec3 position = parent.Position;
         Faction faction = parent.Faction ?? Faction.OfPlayer;
         Pawn titan = PawnGenerator.GeneratePawn(Props.titanKind, faction);
+        int biosignature = parent.GetComp<CompBiosignatureOwner>()?.biosignature ?? -1;
 
         if (consumeNutrition)
         {
@@ -109,6 +110,10 @@ public class CompHarnessedFleshmassHeartTransform : ThingComp
         }
 
         GenSpawn.Spawn(titan, position, map);
+        titan.TryGetComp<CompFleshtitanReversion>()?.InitializeFromHeart(
+            0f,
+            null,
+            biosignature);
         Messages.Message(
             "FH_HarnessedFleshmassHeart_Transformed".Translate(titan.Named("TITAN")),
             titan,

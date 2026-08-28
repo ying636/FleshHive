@@ -7,6 +7,9 @@
   <!-- EN: bulbfreak -->
   <FH_Bulbfreak.label>恶臭瘤兽</FH_Bulbfreak.label>
   
+  <!-- EN: bulbplump -->
+  <FH_Bulbplump.label>增生瘤兽</FH_Bulbplump.label>
+  
   <!-- EN: fingerspike -->
   <FH_Fingerspike.label>独爪兽</FH_Fingerspike.label>
   
@@ -16,13 +19,13 @@
   <!-- EN: fleshwind -->
   <FH_Fleshwind.label>翼爪兽</FH_Fleshwind.label>
   
-  <!-- EN: 胃血兽 -->
+  <!-- EN: gutspike -->
   <FH_Gutspike.label>胃血兽</FH_Gutspike.label>
   
-  <!-- EN: 寄血兽 -->
+  <!-- EN: paraspike -->
   <FH_Paraspike.label>寄血兽</FH_Paraspike.label>
   
-  <!-- EN: 肺血兽 -->
+  <!-- EN: puffspike -->
   <FH_Puffspike.label>肺血兽</FH_Puffspike.label>
   
   <!-- EN: shatterspike -->
@@ -34,19 +37,16 @@
   <!-- EN: spitbulb -->
   <FH_Spitbulb.label>喷射瘤兽</FH_Spitbulb.label>
   
+  <!-- EN: synbulb -->
+  <FH_Synbulb.label>共鸣瘤兽</FH_Synbulb.label>
+  
   <!-- EN: toughspike -->
   <FH_Toughspike.label>双爪兽</FH_Toughspike.label>
   
   <!-- EN: trispike -->
   <FH_Trispike.label>三爪兽</FH_Trispike.label>
   
-  <!-- EN: 鞭爪兽 -->
+  <!-- EN: whipspike -->
   <FH_Whipspike.label>鞭爪兽</FH_Whipspike.label>
   
-  <!-- EN: bulbplump -->
-  <FH_Bulbplump.label>增生瘤兽</FH_Bulbplump.label>
-
-  <!-- EN: synbulb -->
-  <FH_Synbulb.label>共鸣瘤兽</FH_Synbulb.label>
-
 </LanguageData>

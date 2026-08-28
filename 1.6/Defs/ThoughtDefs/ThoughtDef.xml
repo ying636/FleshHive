@@ -3,11 +3,11 @@
     <ThoughtDef>
         <defName>FH_Thought_FleshParasitism</defName>
         <thoughtClass>FleshHive.Thought_Memory_FleshAdapted</thoughtClass>
-        <label>血肉寄生</label>
+        <label>flesh parasitism</label>
         <stages>
             <li>
-                <label>血肉寄生</label>
-                <description>被寄生.</description>
+                <label>flesh parasitism</label>
+                <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-6</baseMoodEffect>
             </li>
         </stages>

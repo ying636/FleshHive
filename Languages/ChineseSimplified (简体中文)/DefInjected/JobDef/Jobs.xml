@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: consuming TargetA to grow. -->
+  <FH_Job_ConsumeMeldSeed.reportString>正在吞食TargetA并成长。</FH_Job_ConsumeMeldSeed.reportString>
+  
   <!-- EN: enter parasite pod. -->
   <FH_Job_EnterParasitePod.reportString>正在进入血肉寄生仓。</FH_Job_EnterParasitePod.reportString>
   
@@ -9,6 +12,9 @@
   
   <!-- EN: fill trispike charge. -->
   <FH_Job_FillTrispikeCharge.reportString>正在为三爪兽填充扭曲肉。</FH_Job_FillTrispikeCharge.reportString>
+  
+  <!-- EN: finishing off TargetA. -->
+  <FH_Job_HuntExecution.reportString>正在处决TargetA。</FH_Job_HuntExecution.reportString>
   
   <!-- EN: infecting TargetA. -->
   <FH_Job_InfectHarbingerTree.reportString>正在感染TargetA。</FH_Job_InfectHarbingerTree.reportString>
@@ -30,11 +36,5 @@
   
   <!-- EN: using TargetA to expand parasite capacity. -->
   <FH_Job_UseShardOnHela.reportString>正在使用TargetA扩展寄生空间。</FH_Job_UseShardOnHela.reportString>
-
-  <!-- EN: consuming TargetA to grow. -->
-  <FH_Job_ConsumeMeldSeed.reportString>正在吞食TargetA并成长。</FH_Job_ConsumeMeldSeed.reportString>
-
-  <!-- EN: finishing off TargetA. -->
-  <FH_Job_HuntExecution.reportString>正在处决TargetA。</FH_Job_HuntExecution.reportString>
   
 </LanguageData>

@@ -117,6 +117,7 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
         Lord? responseLord = map.lordManager.lords.FirstOrDefault(lord =>
             !lordsBeforeResponse.Contains(lord) && lord.LordJob is LordJob_FleshbeastAssault);
         Pawn titan = PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Fleshtitan, Faction.OfEntities);
+        int biosignature = parent.GetComp<CompBiosignatureOwner>()?.biosignature ?? -1;
 
         bool allowDestroyNonDestroyable = Thing.allowDestroyNonDestroyable;
         Thing.allowDestroyNonDestroyable = true;
@@ -154,7 +155,8 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
 
         titan.TryGetComp<CompFleshtitanReversion>()?.InitializeFromHeart(
             sourceThreatPoints,
-            assemblyLord);
+            assemblyLord,
+            biosignature);
         EffecterDefOf.MeatExplosionExtraLarge.Spawn(position, map).Cleanup();
     }
 

@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <!-- EN: flesh floor -->
-  <FH_Building_FleshFloor.label>血肉地板</FH_Building_FleshFloor.label>
-  <!-- EN: A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor. -->
-  <FH_Building_FleshFloor.description>一层铺展在地面上的致密活体血肉。建设时必须与已有血肉地板相连。</FH_Building_FleshFloor.description>
-
-  <!-- EN: flesh carapace tile -->
-  <FH_Building_FleshCarapaceFloor.label>甲壳地砖</FH_Building_FleshCarapaceFloor.label>
-  <!-- EN: A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans. -->
-  <FH_Building_FleshCarapaceFloor.description>血肉巢穴特殊生长的甲壳地砖。虽然略微易燃，但却能快速清洁，也比血肉更加容易行动且美观。自然情况下的血肉巢穴并不会生长此类结构，仿佛是为了更好地与人类共同生活进化出的特殊器官。</FH_Building_FleshCarapaceFloor.description>
-
   
   <!-- EN: chitin flesh barricade -->
   <FH_Building_ChitinFleshBarricade.label>甲壳血肉掩体</FH_Building_ChitinFleshBarricade.label>
@@ -38,13 +28,18 @@
   
   <!-- EN: flesh vesicle -->
   <FH_Building_FleshBox.label>血肉囊泡</FH_Building_FleshBox.label>
-  <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Store materials here for use by the flesh hive. -->
+  <!-- EN: A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive. -->
   <FH_Building_FleshBox.description>一个用于储存的血肉器官。存放在里面的物品永远不会老化，也不会影响周围环境的美观度。任何具有营养值的物品都会被自动消化并转化为巢穴营养，其他原料则会保留下来供血肉巢穴使用。</FH_Building_FleshBox.description>
   
   <!-- EN: fleshberry bush -->
   <FH_Building_FleshBush.label>肉果丛</FH_Building_FleshBush.label>
   <!-- EN: A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested. -->
   <FH_Building_FleshBush.description>一种长有少量棘刺的特殊肉团，仿佛某种灌木的扭曲复制品。其上会长出可以生吃的美味红色肉果，采集时也会收获大量扭曲肉。</FH_Building_FleshBush.description>
+  
+  <!-- EN: flesh carapace tile -->
+  <FH_Building_FleshCarapaceFloor.label>甲壳地砖</FH_Building_FleshCarapaceFloor.label>
+  <!-- EN: A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans. -->
+  <FH_Building_FleshCarapaceFloor.description>血肉巢穴特殊生长的甲壳地砖。虽然略微易燃，但却能快速清洁，也比血肉更加容易行动且美观。自然情况下的血肉巢穴并不会生长此类结构，仿佛是为了更好地与人类共同生活进化出的特殊器官。</FH_Building_FleshCarapaceFloor.description>
   
   <!-- EN: flesh column -->
   <FH_Building_FleshColumn.label>血肉支撑柱</FH_Building_FleshColumn.label>
@@ -53,12 +48,12 @@
   
   <!-- EN: flesh digester -->
   <FH_Building_FleshDigester.label>警卫触手中枢</FH_Building_FleshDigester.label>
-  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
+  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition. -->
   <FH_Building_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。这些被活化的板块也会像血肉树一样吞噬尸体和肉类，补充巢穴营养。</FH_Building_FleshDigester.description>
   
   <!-- EN: small flesh digester -->
   <FH_Building_FleshDigesterS.label>警卫触手</FH_Building_FleshDigesterS.label>
-  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby corpses and raw meat to replenish hive nutrition. -->
+  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition. -->
   <FH_Building_FleshDigesterS.description>负责警卫血肉巢穴的小型神经中枢器官。它会活化附近的血肉，使其抽打入侵者、阻碍移动并造成伤害。它也能吞噬附近的尸体和生肉，为巢穴补充营养。</FH_Building_FleshDigesterS.description>
   
   <!-- EN: flesh door -->
@@ -71,6 +66,11 @@
   <!-- EN: A double bed made of flesh. Soft flesh has grown into a pocket-like structure and pillows for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly. -->
   <FH_Building_FleshDoubleBed.description>一张血肉构成的双人床，柔软的血肉上长出了一个口袋结构和枕头用于休息，意外的舒适，在上面休息的人能够更快的恢复伤势。</FH_Building_FleshDoubleBed.description>
   
+  <!-- EN: flesh floor -->
+  <FH_Building_FleshFloor.label>血肉地板</FH_Building_FleshFloor.label>
+  <!-- EN: A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor. -->
+  <FH_Building_FleshFloor.description>一层铺展在地面上的致密活体血肉。建设时必须与已有血肉地板相连。</FH_Building_FleshFloor.description>
+  
   <!-- EN: flesh hopper -->
   <FH_Building_FleshHopper.label>血肉产出口</FH_Building_FleshHopper.label>
   <!-- EN: An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies. -->
@@ -80,11 +80,6 @@
   <FH_Building_FleshLamp.label>血肉灯</FH_Building_FleshLamp.label>
   <!-- EN: A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. -->
   <FH_Building_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_Building_FleshLamp.description>
-
-  <!-- EN: flesh power generator -->
-  <FH_Building_FleshPower.label>血肉发电机</FH_Building_FleshPower.label>
-  <!-- EN: Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive. -->
-  <FH_Building_FleshPower.description>通过消耗巢群的营养发电，会自动从巢群中汲取营养。</FH_Building_FleshPower.description>
   
   <!-- EN: fleshmass spitter -->
   <FH_Building_FleshmassSpitter.label>血肉喷吐器</FH_Building_FleshmassSpitter.label>
@@ -95,6 +90,11 @@
   <FH_Building_FleshParasiteVat.label>血肉寄生仓</FH_Building_FleshParasiteVat.label>
   <!-- EN: A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily. -->
   <FH_Building_FleshParasiteVat.description>一个由尖锐的骨刺触手和血肉结块构成的血肉装置。该设备会将血肉兽的细胞逐渐吞噬，并逐步将这些细胞植入到宿主的身体中。这让血肉兽能在宿主体内独立存活，强化宿主，并主动攻击宿主的敌人。血肉兽的生存营养也要由宿主提供，所以宿主会更容易感到饥饿。</FH_Building_FleshParasiteVat.description>
+  
+  <!-- EN: flesh power generator -->
+  <FH_Building_FleshPower.label>血肉发电机</FH_Building_FleshPower.label>
+  <!-- EN: Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive. -->
+  <FH_Building_FleshPower.description>通过消耗巢群的营养发电，会自动从巢群中汲取营养。</FH_Building_FleshPower.description>
   
   <!-- EN: flesh sack -->
   <FH_Building_FleshSack.label>血肉囊</FH_Building_FleshSack.label>

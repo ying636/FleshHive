@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ScenPartDef>
+    <defName>FH_StartingFleshSurvivors</defName>
+    <label>starting flesh survivors</label>
+    <category>Fixed</category>
+    <scenPartClass>FleshHive.ScenPart_StartingFleshSurvivors</scenPartClass>
+    <selectionWeight>0</selectionWeight>
+    <maxUses>1</maxUses>
+  </ScenPartDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>FH_FleshCatastropheSurvivors</defName>
+    <label>Flesh Catastrophe Survivors</label>
+    <description>The once-impenetrable anomalous research facility was consumed by a spreading wave of flesh. You survived only because you were outside when it happened. While searching the remains of the guard detail, you found another survivor. She claims to be a senior researcher from the laboratory, and more terrifyingly, she seems able to command the fleshbeasts at will. You gather essential supplies from the edge of the facility and leave the flesh hell behind.</description>
+    <scenario>
+      <summary>Start with one colonist, one special character, and several fleshbeast servants.</summary>
+      <playerFaction>
+        <factionDef>ResearchExpedition</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>The surviving researcher appears to be hiding something. She carries a fleshbeast core and claims that its power can be used to establish a controlled fleshbeast hive. It is an absurd idea, but in the sparsely inhabited wilderness of the rim, it may be the only way forward.
+
+Hela begins with three fingerspikes and two puffspikes in her group.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Mutants">
+          <def>ConfigurePawnsMutants</def>
+          <pawnChoiceCount>8</pawnChoiceCount>
+          <customSummary>Start with one colonist, one special character, and several fleshbeast servants.</customSummary>
+          <mutantCounts>
+            <li>
+              <mutant />
+              <count>1</count>
+            </li>
+            <li>
+              <mutant>FH_HelaSubhuman</mutant>
+              <count>1</count>
+              <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+            </li>
+          </mutantCounts>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+          <visible>false</visible>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>Batteries</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>FH_Research_BasicFleshHive</project>
+        </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>FH_Research_FleshFurniture</project>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>1000</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MealSurvivalPack</thingDef><count>30</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineIndustrial</thingDef><count>20</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>FH_DreadmeldSeed</thingDef><count>1</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Shard</thingDef><count>2</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Meat_Twisted</thingDef><count>300</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>ComponentIndustrial</thingDef><count>10</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>WoodLog</thingDef><count>200</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Steel</thingDef><count>200</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Gun_PumpShotgun</thingDef></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Gun_Autopistol</thingDef></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>ShipChunk</thingDef><allowRoofed>false</allowRoofed><count>3</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>MealSurvivalPack</thingDef><count>10</count></li>
+        <li Class="ScenPart_MonolithGeneration"><def>ScenPart_MonolithGeneration</def><method>NearColonists</method></li>
+        <li Class="ScenPart_AutoActivateMonolith"><def>AutoActivateMonolith</def><delayTicks>480000</delayTicks></li>
+        <li Class="FleshHive.ScenPart_StartingFleshSurvivors"><def>FH_StartingFleshSurvivors</def><visible>false</visible></li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

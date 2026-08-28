@@ -11,21 +11,21 @@
   <!-- EN: Manage fleshbeast gestation tasks and population targets. -->
   <FH_CategoryOption_FleshbeastGestation.description>管理血肉兽孕育任务和数量配额。</FH_CategoryOption_FleshbeastGestation.description>
   
-  <!-- EN: Flesh beast management -->
-  <FH_CategoryOption_FleshManagement.label>血肉兽管理</FH_CategoryOption_FleshManagement.label>
-  <!-- EN: Manage flesh hive population, nutrition, activity, and fleshbeasts. -->
-  <FH_CategoryOption_FleshManagement.description>总览并管理血肉巢穴的人口、营养度、活跃度和血肉兽。</FH_CategoryOption_FleshManagement.description>
-
   <!-- EN: Flesh hive upgrades -->
   <FH_CategoryOption_FleshHiveUpgrades.label>血肉巢群升级</FH_CategoryOption_FleshHiveUpgrades.label>
   <!-- EN: Process permanent upgrades that affect the whole flesh hive map. -->
   <FH_CategoryOption_FleshHiveUpgrades.description>处理作用于本地图全局的永久性血肉巢群升级。</FH_CategoryOption_FleshHiveUpgrades.description>
-
+  
+  <!-- EN: Flesh beast management -->
+  <FH_CategoryOption_FleshManagement.label>血肉兽管理</FH_CategoryOption_FleshManagement.label>
+  <!-- EN: Manage flesh hive population, nutrition, activity, and fleshbeasts. -->
+  <FH_CategoryOption_FleshManagement.description>总览并管理血肉巢穴的人口、营养度、活跃度和血肉兽。</FH_CategoryOption_FleshManagement.description>
+  
   <!-- EN: Hive plans -->
   <FH_CategoryOption_HivePlan.label>巢穴计划</FH_CategoryOption_HivePlan.label>
   <!-- EN: Quickly select a flesh hive or the flesh primary nest and arrange its production plans. -->
   <FH_CategoryOption_HivePlan.description>快速选择血肉巢穴或血肉主巢，并安排对应的生产计划。</FH_CategoryOption_HivePlan.description>
-
+  
   <!-- EN: Produce items -->
   <FH_CategoryOption_ItemProduction.label>生产物品</FH_CategoryOption_ItemProduction.label>
   <!-- EN: Manage item production tasks for flesh hoppers. -->

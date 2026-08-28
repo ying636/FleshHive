@@ -110,9 +110,9 @@
         <iconPath>UI/Ability/FH_Fingerspike</iconPath> 
         <cost>1</cost>
         <hediff>FH_Parasitism_Fingerspike</hediff>
-        <effect>全局工作效率+10%，魅力-5%，“血肉寄生”心情-6</effect>
-        <abilityLabel>寄生武器：骨刺触手</abilityLabel>
-        <abilityDescription>宿主体表生长骨刺触手，造成刺击伤害。</abilityDescription>
+        <effect>Global Work Speed +10%; Social Impact -5%; Flesh parasitism mood -6</effect>
+        <abilityLabel>Parasitic weapon: bone-spike tentacle</abilityLabel>
+        <abilityDescription>The host grows a bony tentacle that deals stabbing damage.</abilityDescription>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
@@ -233,9 +233,9 @@
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Puffspike</hediff>
-        <effect>完全免疫哮喘和肺瘟，并会治愈宿主肺中的这些疾病；移动速度+10%；有毒环境抗性+30%；疼痛+6%</effect>
-        <abilityLabel>寄生武器：骨刺射击</abilityLabel>
-        <abilityDescription>发射骨刺，造成刺击伤害。</abilityDescription>
+        <effect>Immune to asthma and lung rot and cures them in the host's lungs; Move Speed +10%; Toxic Resistance +30%; Pain +6%</effect>
+        <abilityLabel>Parasitic weapon: bone-spike shot</abilityLabel>
+        <abilityDescription>Launches a bone spike that deals stabbing damage.</abilityDescription>
       </li>
     </comps>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Puffspike/FH_Puffspike_east</uiIconPath>
@@ -319,9 +319,9 @@
         <iconPath>UI/Ability/FH_SkillIcon2</iconPath>
         <cost>1</cost>
         <hediff>FH_Parasitism_Whipspike</hediff>
-        <effect>魅力-5%，“血肉寄生”心情-6</effect>
-        <abilityLabel>寄生武器：血肉触手</abilityLabel>
-        <abilityDescription>宿主体表生长血肉触鞭，鞭击附近敌人造成利器伤害。</abilityDescription>
+        <effect>Social Impact -5%; Flesh parasitism mood -6</effect>
+        <abilityLabel>Parasitic weapon: flesh whip</abilityLabel>
+        <abilityDescription>The host grows a fleshy whip tentacle that strikes nearby enemies for cutting damage.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -423,9 +423,9 @@
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Gutspike</hediff>
-        <effect>食物中毒系数×0%；抗感染：肠道蠕虫；疼痛+8%</effect>
-        <abilityLabel>寄生武器：酸浆喷射</abilityLabel>
-        <abilityDescription>喷射酸浆。</abilityDescription>
+        <effect>Food poisoning chance x0%; Immunity: gut worms; Pain +8%</effect>
+        <abilityLabel>Parasitic weapon: corrosive spit</abilityLabel>
+        <abilityDescription>Spits corrosive fluid.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -526,9 +526,9 @@
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Paraspike</hediff>
-        <effect>失血速率×75%；抗感染：感染；疼痛+6%；后代继承寄血兽寄生效果</effect>
-        <abilityLabel>寄生武器：骨刺射击</abilityLabel>
-        <abilityDescription>发射骨刺，造成刺击伤害。</abilityDescription>
+        <effect>Bleeding rate x75%; Immunity: wound infection; Pain +6%; offspring inherit paraspike parasitism</effect>
+        <abilityLabel>Parasitic weapon: bone-spike shot</abilityLabel>
+        <abilityDescription>Launches a bone spike that deals stabbing damage.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -625,9 +625,9 @@
         <iconPath>UI/Ability/FH_BoneBurst</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
-        <effect>“血肉寄生”心情-6；魅力-5%</effect>
-        <abilityLabel>寄生武器：碎骨喷射</abilityLabel>
-        <abilityDescription>远程发射骨刺碎片。</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -5%</effect>
+        <abilityLabel>Parasitic weapon: bone burst</abilityLabel>
+        <abilityDescription>Fires bone shards at range.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -790,9 +790,9 @@
         <iconPath>UI/Ability/FH_SkillIcon5</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Toughspike</hediff>
-        <effect>“血肉寄生”心情-6；魅力-5%；全局工作效率+15%；宿主获得两条骨刺触手</effect>
-        <abilityLabel>寄生武器：骨刺触手</abilityLabel>
-        <abilityDescription>宿主体表生长两条骨刺触手，造成刺击伤害。</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +15%; host grows two bony tentacles</effect>
+        <abilityLabel>Parasitic weapon: bone-spike tentacles</abilityLabel>
+        <abilityDescription>The host grows two bony tentacles that deal stabbing damage.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -1133,9 +1133,9 @@
         <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
-        <effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6</effect>
-        <abilityLabel>寄生武器：盾爪</abilityLabel>
-        <abilityDescription>宿主获得盾爪，钝击附近敌人。</abilityDescription>
+        <effect>Sharp Armor +25%; Blunt Armor +10%; Heat Armor +20%; Social Impact -5%; Flesh parasitism mood -6</effect>
+        <abilityLabel>Parasitic weapon: shield claw</abilityLabel>
+        <abilityDescription>The host gains a shield claw that bludgeons nearby enemies.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -1300,9 +1300,9 @@
         <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
-        <effect>“血肉寄生”心情-6；魅力-5%；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天）</effect>
-        <abilityLabel>寄生武器：骨刺射击</abilityLabel>
-        <abilityDescription>发射骨刺，造成刺击伤害。</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; charge with 10 twisted flesh to release 2 random small fleshbeasts (5-day cooldown)</effect>
+        <abilityLabel>Parasitic weapon: bone-spike shot</abilityLabel>
+        <abilityDescription>Launches a bone spike that deals stabbing damage.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
