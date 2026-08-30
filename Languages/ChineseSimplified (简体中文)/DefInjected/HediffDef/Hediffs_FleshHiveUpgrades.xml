@@ -8,8 +8,8 @@
   
   <!-- EN: monomolecular bone spikes -->
   <FH_Hediff_Upgrade_BoneSpikePenetration.label>单分子骨刺</FH_Hediff_Upgrade_BoneSpikePenetration.label>
-  <!-- EN: This fleshbeast's bone-spike throwing skills have 90% armor penetration. -->
-  <FH_Hediff_Upgrade_BoneSpikePenetration.description>这只血肉兽的投掷骨刺技能拥有90%的护甲穿透。</FH_Hediff_Upgrade_BoneSpikePenetration.description>
+  <!-- EN: This fleshbeast has +80% melee armor penetration. -->
+  <FH_Hediff_Upgrade_BoneSpikePenetration.description>这只血肉兽拥有+80%的近战护甲穿透。</FH_Hediff_Upgrade_BoneSpikePenetration.description>
   
   <!-- EN: rapid healing -->
   <FH_Hediff_Upgrade_FastHealing.label>高速愈合</FH_Hediff_Upgrade_FastHealing.label>

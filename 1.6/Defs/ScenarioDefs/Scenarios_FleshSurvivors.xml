@@ -11,7 +11,7 @@
 
   <ScenarioDef ParentName="ScenarioBase">
     <defName>FH_FleshCatastropheSurvivors</defName>
-    <label>Flesh Catastrophe Survivors</label>
+    <label>Flesh Catastrophe</label>
     <description>The once-impenetrable anomalous research facility was consumed by a spreading wave of flesh. You survived only because you were outside when it happened. While searching the remains of the guard detail, you found another survivor. She claims to be a senior researcher from the laboratory, and more terrifyingly, she seems able to command the fleshbeasts at will. You gather essential supplies from the edge of the facility and leave the flesh hell behind.</description>
     <scenario>
       <summary>Start with one colonist, one special character, and several fleshbeast servants.</summary>
@@ -21,24 +21,18 @@
       <parts>
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <text>The surviving researcher appears to be hiding something. She carries a fleshbeast core and claims that its power can be used to establish a controlled fleshbeast hive. It is an absurd idea, but in the sparsely inhabited wilderness of the rim, it may be the only way forward.
+          <text>The surviving researcher appears to be hiding something. She carries a fleshbeast core and claims that its power can be used to establish a controlled fleshbeast hive. It is an absurd idea, but in the sparsely inhabited wilderness of the rim, it may be the only way forward.</text>
 
-Hela begins with three fingerspikes and two puffspikes in her group.</text>
           <closeSound>GameStartSting</closeSound>
         </li>
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Mutants">
           <def>ConfigurePawnsMutants</def>
-          <pawnChoiceCount>8</pawnChoiceCount>
+          <pawnChoiceCount>1</pawnChoiceCount>
           <customSummary>Start with one colonist, one special character, and several fleshbeast servants.</customSummary>
           <mutantCounts>
             <li>
               <mutant />
               <count>1</count>
-            </li>
-            <li>
-              <mutant>FH_HelaSubhuman</mutant>
-              <count>1</count>
-              <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
             </li>
           </mutantCounts>
         </li>

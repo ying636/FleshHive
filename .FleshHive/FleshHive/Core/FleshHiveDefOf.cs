@@ -38,6 +38,9 @@ public static class FleshHiveDefOf
     public static AbilityDef FH_SpikeLaunch_Whipspike;
     public static AbilityDef FH_SpikeLaunch_Paraspike;
     public static AbilityDef FH_SpikeLaunch_Shatterspike;
+    public static AbilityDef FH_SpikeLaunch_Synbulb;
+
+    public static JobDef FH_FishAnimal;
 
     public static HairDef FH_Hair_Victoria;
 
@@ -78,6 +81,7 @@ public static class FleshHiveDefOf
     public static ThingDef FH_FleshSymbiosisModule;
     public static ThingDef FH_FleshSymbiosisSerum;
     public static ThingDef FH_DreadmeldSeed;
+    public static ThingDef FH_SynbulbSmoke;
     public static ThingDef FH_FleshHive;
     public static ThingDef FH_FleshPrimaryNest;
     public static ThingDef FH_FleshDigester;

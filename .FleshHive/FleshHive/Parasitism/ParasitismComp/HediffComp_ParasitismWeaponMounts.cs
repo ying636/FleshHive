@@ -6,6 +6,8 @@ public class HediffComp_ParasitismWeaponMounts : HediffComp_Parasitism
 {
     public new HediffCompProperties_ParasitismWeaponMounts Props => (HediffCompProperties_ParasitismWeaponMounts)this.props;
 
+    public override bool ShowAttackGizmo => false;
+
     public override int TentacleCount => Props.tentacles?.Count ?? 0;
 
     public bool HasEmptyMount => WeaponMounts.Any(mount => !mount.HasMountedWeapon);

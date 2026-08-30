@@ -8,11 +8,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Acidbulb.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Acidbulb.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: Launch an acid mortar shell at long range or spray sticky acid over a target area. -->
-  <FH_Acidbulb.comps.ParasitismComp.abilityDescription>远距离发射酸蚀迫击炮弹，或向目标区域喷吐黏稠酸液。</FH_Acidbulb.comps.ParasitismComp.abilityDescription>
+  <FH_Acidbulb.comps.ParasitismComp.abilityDescription>宿主体表生长两条触手，每条造成10点钝器伤害，攻击冷却2秒；还可远距离发射酸蚀迫击炮弹，或向目标区域喷吐黏稠酸液。</FH_Acidbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic abilities: acid mortar and acid spray -->
-  <FH_Acidbulb.comps.ParasitismComp.abilityLabel>寄生能力：酸蚀迫击炮与酸液喷吐</FH_Acidbulb.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; Toxic Resistance +100%; grants acid mortar and acid spray abilities. -->
-  <FH_Acidbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；毒抗+100%；提供“酸蚀迫击炮”和“酸液喷吐”主动能力。</FH_Acidbulb.comps.ParasitismComp.effect>
+  <FH_Acidbulb.comps.ParasitismComp.abilityLabel>触手</FH_Acidbulb.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -10%; Toxic Resistance +100%; grants acid mortar and acid spray abilities. -->
+  <FH_Acidbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；毒抗+100%；扭曲肉容量+200；提供两条触手、“酸蚀迫击炮”和“酸液喷吐”主动能力。</FH_Acidbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Acidbulb.tools.tentacle-0.label>触手</FH_Acidbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -33,11 +33,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Bulbfreak.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Bulbfreak.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: Two tentacles deal 10 blunt damage with a 2-second cooldown. The active ability consumes 200 twisted flesh to release two random medium fleshbeasts. -->
-  <FH_Bulbfreak.comps.ParasitismComp.abilityDescription>两条触手造成10点钝击伤害，冷却时间为2秒。主动能力消耗200扭曲肉，释放两只随机中型血肉兽。</FH_Bulbfreak.comps.ParasitismComp.abilityDescription>
+  <FH_Bulbfreak.comps.ParasitismComp.abilityDescription>两条触手造成10点钝器伤害，攻击冷却2秒。主动能力消耗200扭曲肉，释放两只随机中型血肉兽。</FH_Bulbfreak.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapons: tentacles and release fleshbeasts -->
-  <FH_Bulbfreak.comps.ParasitismComp.abilityLabel>寄生武器：触手与释放血肉兽</FH_Bulbfreak.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability. -->
-  <FH_Bulbfreak.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；全局工作效率+20%；扭曲肉容量+200；提供两条触手和“释放血肉兽”主动能力。</FH_Bulbfreak.comps.ParasitismComp.effect>
+  <FH_Bulbfreak.comps.ParasitismComp.abilityLabel>触手</FH_Bulbfreak.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -10%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability. -->
+  <FH_Bulbfreak.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；全局工作效率+20%；扭曲肉容量+200；提供两条触手和“释放血肉兽”主动能力。</FH_Bulbfreak.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bulbfreak.tools.tentacle-0.label>触手</FH_Bulbfreak.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -58,11 +58,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Bulbplump.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Bulbplump.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: Two flesh tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown. -->
-  <FH_Bulbplump.comps.ParasitismComp.abilityDescription>两条血肉触手攻击附近敌人，造成10点钝器伤害，攻击冷却2秒。</FH_Bulbplump.comps.ParasitismComp.abilityDescription>
+  <FH_Bulbplump.comps.ParasitismComp.abilityDescription>两条触手攻击附近敌人，造成10点钝器伤害，攻击冷却2秒。</FH_Bulbplump.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: flesh tentacles -->
-  <FH_Bulbplump.comps.ParasitismComp.abilityLabel>寄生武器：血肉触手</FH_Bulbplump.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +100; hunger rate x50%. -->
-  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；扭曲肉容量+100；饥饿度×50%。</FH_Bulbplump.comps.ParasitismComp.effect>
+  <FH_Bulbplump.comps.ParasitismComp.abilityLabel>触手</FH_Bulbplump.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; hunger rate x50%. -->
+  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；饥饿度×50%；提供两条触手。</FH_Bulbplump.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bulbplump.tools.tentacle-0.label>触手</FH_Bulbplump.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -77,11 +77,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Fingerspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Fingerspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 宿主体表生长骨刺触手，造成刺击伤害。 -->
-  <FH_Fingerspike.comps.ParasitismComp.abilityDescription>宿主体表生长骨刺触手，造成刺击伤害。</FH_Fingerspike.comps.ParasitismComp.abilityDescription>
+  <FH_Fingerspike.comps.ParasitismComp.abilityDescription>宿主体表生长一条骨刺触手，造成5点锐器伤害，攻击冷却2秒。</FH_Fingerspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：骨刺触手 -->
-  <FH_Fingerspike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺触手</FH_Fingerspike.comps.ParasitismComp.abilityLabel>
+  <FH_Fingerspike.comps.ParasitismComp.abilityLabel>骨刺触手</FH_Fingerspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 全局工作效率+10%，魅力-5%，“血肉寄生”心情-6 -->
-  <FH_Fingerspike.comps.ParasitismComp.effect>全局工作效率+10%；魅力-5%；“血肉寄生”心情-6</FH_Fingerspike.comps.ParasitismComp.effect>
+  <FH_Fingerspike.comps.ParasitismComp.effect>全局工作效率+10%；魅力-5%；“血肉寄生”心情-6；宿主生长一条骨刺触手</FH_Fingerspike.comps.ParasitismComp.effect>
   <!-- EN: spike -->
   <FH_Fingerspike.tools.spike.label>骨刺</FH_Fingerspike.tools.spike.label>
   <!-- EN: spike -->
@@ -148,12 +148,12 @@
   <FH_Paraspike.description>一只特化了寄生能力的小型血肉兽，体型与犬类动物相当。它可以将寄生毒刺发射到受害者体内，并且持续从内部造成流血的微型伤口，但是每只寄血兽只有一枚寄生毒刺，发射之后原本的寄血兽就会很快死亡。寄血兽可以主动寄生在其他动物身上，并在宿主死亡时脱离。</FH_Paraspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Paraspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Paraspike.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: 发射骨刺，造成刺击伤害。 -->
-  <FH_Paraspike.comps.ParasitismComp.abilityDescription>发射骨刺，造成刺击伤害。</FH_Paraspike.comps.ParasitismComp.abilityDescription>
-  <!-- EN: 寄生武器：骨刺射击 -->
-  <FH_Paraspike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺射击</FH_Paraspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: The host grows a bone tentacle that deals stabbing damage. -->
+  <FH_Paraspike.comps.ParasitismComp.abilityDescription>宿主生长一条螺旋触手，造成5点锐器伤害，攻击冷却3秒，护甲穿透40%。</FH_Paraspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic weapon: bone tentacle -->
+  <FH_Paraspike.comps.ParasitismComp.abilityLabel>螺旋触手</FH_Paraspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 失血速率×75%；抗感染：感染；疼痛+6%；后代继承寄血兽寄生效果 -->
-  <FH_Paraspike.comps.ParasitismComp.effect>失血速率×75%；抗感染：感染；疼痛+6%；后代继承寄血兽寄生效果</FH_Paraspike.comps.ParasitismComp.effect>
+  <FH_Paraspike.comps.ParasitismComp.effect>失血速率×75%；魅力-5%；抗感染：感染；疼痛+6%；宿主生长一条螺旋触手；后代继承寄血兽寄生效果</FH_Paraspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Paraspike.tools.head.label>头部</FH_Paraspike.tools.head.label>
   <!-- EN: spike -->
@@ -167,12 +167,12 @@
   <FH_Puffspike.description>一只拥有肺部特化的小型血肉兽，体型与犬类动物相当。强大的供氧系统可以使其以极快的速度移动，但是其孱弱的身体并不擅长战斗，通常作为巢穴的搬运工忙碌于血肉巢穴附近。</FH_Puffspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Puffspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Puffspike.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: 发射骨刺，造成刺击伤害。 -->
-  <FH_Puffspike.comps.ParasitismComp.abilityDescription>发射骨刺，造成刺击伤害。</FH_Puffspike.comps.ParasitismComp.abilityDescription>
-  <!-- EN: 寄生武器：骨刺射击 -->
-  <FH_Puffspike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺射击</FH_Puffspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: The host gains immunity to asthma and lung rot and becomes more tolerant of toxic environments. -->
+  <FH_Puffspike.comps.ParasitismComp.abilityDescription>宿主获得哮喘与肺瘟免疫，并更耐受毒性环境。</FH_Puffspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic adaptation: pulmonary immunity -->
+  <FH_Puffspike.comps.ParasitismComp.abilityLabel>寄生适应：肺部免疫</FH_Puffspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 完全免疫哮喘和肺瘟，并会治愈宿主肺中的这些疾病；移动速度+10%；有毒环境抗性+30%；疼痛+6% -->
-  <FH_Puffspike.comps.ParasitismComp.effect>完全免疫哮喘和肺瘟，并会治愈宿主肺中的这些疾病；移动速度+10%；有毒环境抗性+30%；疼痛+6%</FH_Puffspike.comps.ParasitismComp.effect>
+  <FH_Puffspike.comps.ParasitismComp.effect>完全免疫哮喘和肺瘟，并会治愈宿主肺中的这些疾病；移动速度+10%；有毒环境抗性+30%；疼痛+6%；扭曲肉容量+50</FH_Puffspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Puffspike.tools.head.label>头部</FH_Puffspike.tools.head.label>
   
@@ -183,11 +183,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Shatterspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 远程发射骨刺碎片。 -->
-  <FH_Shatterspike.comps.ParasitismComp.abilityDescription>远程发射骨刺碎片。</FH_Shatterspike.comps.ParasitismComp.abilityDescription>
+  <FH_Shatterspike.comps.ParasitismComp.abilityDescription>宿主体表生长一条碎爪触手，远程发射骨刺碎片，造成18点锐器伤害，护甲穿透100%，瞄准1秒，攻击冷却1.5秒，射程16格，弹速55，抑制能力3。</FH_Shatterspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：碎骨喷射 -->
-  <FH_Shatterspike.comps.ParasitismComp.abilityLabel>寄生武器：碎骨喷射</FH_Shatterspike.comps.ParasitismComp.abilityLabel>
+  <FH_Shatterspike.comps.ParasitismComp.abilityLabel>碎爪触手</FH_Shatterspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: “血肉寄生”心情-6；魅力-5% -->
-  <FH_Shatterspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%</FH_Shatterspike.comps.ParasitismComp.effect>
+  <FH_Shatterspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；宿主生长一条碎爪触手</FH_Shatterspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shatterspike.tools.left_spike.label>左骨刺</FH_Shatterspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -210,11 +210,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Shieldspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 宿主获得盾爪，钝击附近敌人。 -->
-  <FH_Shieldspike.comps.ParasitismComp.abilityDescription>宿主获得盾爪，钝击附近敌人。</FH_Shieldspike.comps.ParasitismComp.abilityDescription>
+  <FH_Shieldspike.comps.ParasitismComp.abilityDescription>宿主体表生长一条盾爪触手，造成16点钝器伤害，攻击冷却3秒。</FH_Shieldspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：盾爪 -->
-  <FH_Shieldspike.comps.ParasitismComp.abilityLabel>寄生武器：盾爪</FH_Shieldspike.comps.ParasitismComp.abilityLabel>
+  <FH_Shieldspike.comps.ParasitismComp.abilityLabel>盾爪触手</FH_Shieldspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6 -->
-  <FH_Shieldspike.comps.ParasitismComp.effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6</FH_Shieldspike.comps.ParasitismComp.effect>
+  <FH_Shieldspike.comps.ParasitismComp.effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6；宿主生长一条盾爪触手</FH_Shieldspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shieldspike.tools.left_spike.label>左盾爪</FH_Shieldspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -233,11 +233,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point. -->
-  <FH_Spitbulb.comps.ParasitismComp.abilityDescription>消耗25扭曲肉发射爆炸性炮弹，在3×3区域造成20点伤害，并在命中位置释放一只随机小型血肉兽。</FH_Spitbulb.comps.ParasitismComp.abilityDescription>
+  <FH_Spitbulb.comps.ParasitismComp.abilityDescription>宿主体表生长两条触手，每条造成10点钝器伤害，攻击冷却2秒。消耗25扭曲肉发射爆炸性炮弹，在3×3区域造成20点伤害，并在命中位置释放一只随机小型血肉兽。</FH_Spitbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: flesh mortar -->
-  <FH_Spitbulb.comps.ParasitismComp.abilityLabel>寄生武器：血肉迫击炮</FH_Spitbulb.comps.ParasitismComp.abilityLabel>
+  <FH_Spitbulb.comps.ParasitismComp.abilityLabel>触手</FH_Spitbulb.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +250; grants the flesh mortar ability. -->
-  <FH_Spitbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；扭曲肉容量+250；提供“血肉迫击炮”主动能力。</FH_Spitbulb.comps.ParasitismComp.effect>
+  <FH_Spitbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+200；提供两条触手和“血肉迫击炮”主动能力。</FH_Spitbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Spitbulb.tools.tentacle-0.label>触手</FH_Spitbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -258,11 +258,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Synbulb.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Synbulb.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: Two tentacles aim for 1 second, then fire bone shards at enemies within 16 cells. -->
-  <FH_Synbulb.comps.ParasitismComp.abilityDescription>两条触手瞄准1秒后，向16格内的敌人发射骨刺碎片。</FH_Synbulb.comps.ParasitismComp.abilityDescription>
+  <FH_Synbulb.comps.ParasitismComp.abilityDescription>两条碎爪触手瞄准1秒后，向16格内的敌人发射骨刺碎片，造成18点锐器伤害，护甲穿透100%，攻击冷却1.5秒，弹速55，抑制能力3。</FH_Synbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: bone burst -->
-  <FH_Synbulb.comps.ParasitismComp.abilityLabel>寄生武器：碎骨喷发</FH_Synbulb.comps.ParasitismComp.abilityLabel>
+  <FH_Synbulb.comps.ParasitismComp.abilityLabel>碎爪触手</FH_Synbulb.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh parasitism mood -6; Social Impact -5%; grants the psychic harmonizer condition. -->
-  <FH_Synbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；获得状态“心灵同调”。</FH_Synbulb.comps.ParasitismComp.effect>
+  <FH_Synbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+100；提供两条碎爪触手；获得状态“心灵同调”。</FH_Synbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Synbulb.tools.tentacle-0.label>触手</FH_Synbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -277,11 +277,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Toughspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Toughspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 宿主体表生长两条骨刺触手，造成刺击伤害。 -->
-  <FH_Toughspike.comps.ParasitismComp.abilityDescription>宿主体表生长两条骨刺触手，造成刺击伤害。</FH_Toughspike.comps.ParasitismComp.abilityDescription>
+  <FH_Toughspike.comps.ParasitismComp.abilityDescription>宿主体表生长两条甲壳触手，造成10点锐器伤害，攻击冷却2秒。</FH_Toughspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：骨刺触手 -->
-  <FH_Toughspike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺触手</FH_Toughspike.comps.ParasitismComp.abilityLabel>
+  <FH_Toughspike.comps.ParasitismComp.abilityLabel>甲壳触手</FH_Toughspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: “血肉寄生”心情-6；魅力-5%；全局工作效率+15%；宿主获得两条骨刺触手 -->
-  <FH_Toughspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；全局工作效率+15%；宿主获得两条骨刺触手</FH_Toughspike.comps.ParasitismComp.effect>
+  <FH_Toughspike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；全局工作效率+15%；宿主生长两条甲壳触手</FH_Toughspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Toughspike.tools.left_spike.label>左骨刺</FH_Toughspike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -299,12 +299,12 @@
   <FH_Trispike.description>可怕的混合体血肉兽，由多只小型血肉兽组成，体型与成年人相当。这种生物的每条肢体都能独立生存。死亡时，三爪兽可能会分裂成多只独爪兽，每只独爪兽都能够单独行动并发起攻击。</FH_Trispike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Trispike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Trispike.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: 发射骨刺，造成刺击伤害。 -->
-  <FH_Trispike.comps.ParasitismComp.abilityDescription>发射骨刺，造成刺击伤害。</FH_Trispike.comps.ParasitismComp.abilityDescription>
-  <!-- EN: 寄生武器：骨刺射击 -->
-  <FH_Trispike.comps.ParasitismComp.abilityLabel>寄生武器：骨刺射击</FH_Trispike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Charge with twisted flesh to release two random small fleshbeasts. -->
+  <FH_Trispike.comps.ParasitismComp.abilityDescription>宿主体表生长两条骨刺触手，造成5点锐器伤害，攻击冷却2秒。消耗扭曲肉充能后释放两只随机小型血肉兽。</FH_Trispike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic ability: release fleshbeasts -->
+  <FH_Trispike.comps.ParasitismComp.abilityLabel>骨刺触手</FH_Trispike.comps.ParasitismComp.abilityLabel>
   <!-- EN: “血肉寄生”心情-6；魅力-5%；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天） -->
-  <FH_Trispike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-5%；填充10扭曲肉充能后可释放2只随机小型血肉兽（冷却5天）</FH_Trispike.comps.ParasitismComp.effect>
+  <FH_Trispike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+100；宿主生长两条骨刺触手；填充10扭曲肉充能后可释放2只随机小型血肉兽（冷却5天）</FH_Trispike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Trispike.tools.left_spike.label>左骨刺</FH_Trispike.tools.left_spike.label>
   <!-- EN: spike -->
@@ -327,11 +327,11 @@
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Whipspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Whipspike.comps.CompInspectStringEmergence.inspectString>
   <!-- EN: 宿主体表生长血肉触鞭，鞭击附近敌人造成利器伤害。 -->
-  <FH_Whipspike.comps.ParasitismComp.abilityDescription>宿主体表生长血肉触鞭，鞭击附近敌人并造成利器伤害。</FH_Whipspike.comps.ParasitismComp.abilityDescription>
+  <FH_Whipspike.comps.ParasitismComp.abilityDescription>宿主体表生长一条鞭爪触手，造成12点锐器伤害，攻击冷却5秒，护甲穿透60%。</FH_Whipspike.comps.ParasitismComp.abilityDescription>
   <!-- EN: 寄生武器：血肉触手 -->
-  <FH_Whipspike.comps.ParasitismComp.abilityLabel>寄生武器：血肉触鞭</FH_Whipspike.comps.ParasitismComp.abilityLabel>
+  <FH_Whipspike.comps.ParasitismComp.abilityLabel>鞭爪触手</FH_Whipspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 魅力-5%，“血肉寄生”心情-6 -->
-  <FH_Whipspike.comps.ParasitismComp.effect>魅力-5%；“血肉寄生”心情-6</FH_Whipspike.comps.ParasitismComp.effect>
+  <FH_Whipspike.comps.ParasitismComp.effect>魅力-5%；“血肉寄生”心情-6；宿主生长一条鞭爪触手</FH_Whipspike.comps.ParasitismComp.effect>
   <!-- EN: head -->
   <FH_Whipspike.tools.head.label>头部</FH_Whipspike.tools.head.label>
   <!-- EN: spike -->

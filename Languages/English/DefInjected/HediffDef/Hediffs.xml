@@ -5,31 +5,31 @@
   <FH_LostSpike_Paraspike.description>The paraspike has lost the core spike it needs to sustain itself. If it cannot recover, it will wither and die.</FH_LostSpike_Paraspike.description>
   
   <FH_Parasitism_Fingerspike.label>fingerspike parasitism</FH_Parasitism_Fingerspike.label>
-  <FH_Parasitism_Fingerspike.description>This creature is parasitized by a fingerspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host grows a bony tentacle that deals stabbing damage.</FH_Parasitism_Fingerspike.description>
+  <FH_Parasitism_Fingerspike.description>This creature is parasitized by a fingerspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Bone-spike tentacle</FH_Parasitism_Fingerspike.description>
   
   <FH_Parasitism_Gutspike.label>gutspike parasitism</FH_Parasitism_Gutspike.label>
   <FH_Parasitism_Gutspike.description>This creature is parasitized by a gutspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is almost immune to food poisoning, and gains immunity to gut worms while purging existing infestations.</FH_Parasitism_Gutspike.description>
   
   <FH_Parasitism_Paraspike.label>paraspike parasitism</FH_Parasitism_Paraspike.label>
-  <FH_Parasitism_Paraspike.description>This creature is parasitized by a paraspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBleeding is reduced and wound infections are prevented. Offspring inherit this parasitism.</FH_Parasitism_Paraspike.description>
+  <FH_Parasitism_Paraspike.description>This creature is parasitized by a paraspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBleeding is reduced and wound infections are prevented. Offspring inherit this parasitism.\n\n-Spiral tentacle</FH_Parasitism_Paraspike.description>
   
   <FH_Parasitism_Puffspike.label>puffspike parasitism</FH_Parasitism_Puffspike.label>
   <FH_Parasitism_Puffspike.description>This creature is parasitized by a puffspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is immune to asthma and lung rot, which are cured from its lungs. It moves faster and tolerates toxic environments better.</FH_Parasitism_Puffspike.description>
   
   <FH_Parasitism_Shatterspike.label>shatterspike parasitism</FH_Parasitism_Shatterspike.label>
-  <FH_Parasitism_Shatterspike.description>This creature is parasitized by a shatterspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host grows a bone-burst tentacle capable of firing bone shards at range.</FH_Parasitism_Shatterspike.description>
+  <FH_Parasitism_Shatterspike.description>This creature is parasitized by a shatterspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Shatter-claw tentacle</FH_Parasitism_Shatterspike.description>
   
   <FH_Parasitism_Shieldspike.label>shieldspike parasitism</FH_Parasitism_Shieldspike.label>
-  <FH_Parasitism_Shieldspike.description>This creature is parasitized by a shieldspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains stronger armor and a shield claw.</FH_Parasitism_Shieldspike.description>
+  <FH_Parasitism_Shieldspike.description>This creature is parasitized by a shieldspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains stronger armor.\n\n-Shield-claw tentacle</FH_Parasitism_Shieldspike.description>
   
   <FH_Parasitism_Toughspike.label>toughspike parasitism</FH_Parasitism_Toughspike.label>
-  <FH_Parasitism_Toughspike.description>This creature is parasitized by a toughspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host grows two bony tentacles and gains improved global work speed.</FH_Parasitism_Toughspike.description>
+  <FH_Parasitism_Toughspike.description>This creature is parasitized by a toughspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains improved global work speed.\n\n-Carapace tentacle</FH_Parasitism_Toughspike.description>
   
   <FH_Parasitism_Trispike.label>trispike parasitism</FH_Parasitism_Trispike.label>
-  <FH_Parasitism_Trispike.description>This creature is parasitized by a trispike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can release two random small fleshbeasts.</FH_Parasitism_Trispike.description>
+  <FH_Parasitism_Trispike.description>This creature is parasitized by a trispike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can release two random small fleshbeasts.\n\n-Bone-spike tentacle</FH_Parasitism_Trispike.description>
   
   <FH_Parasitism_Whipspike.label>whipspike parasitism</FH_Parasitism_Whipspike.label>
-  <FH_Parasitism_Whipspike.description>This creature is parasitized by a whipspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host grows a fleshy whip tentacle capable of striking nearby enemies.</FH_Parasitism_Whipspike.description>
+  <FH_Parasitism_Whipspike.description>This creature is parasitized by a whipspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Whip-claw tentacle</FH_Parasitism_Whipspike.description>
   
   <FH_Spike_Paraspike.label>paraspike's spike</FH_Spike_Paraspike.label>
   <FH_Spike_Paraspike.description>The paraspike's vital parasitic spike. It embeds in the host and continuously regulates flesh and blood.</FH_Spike_Paraspike.description>

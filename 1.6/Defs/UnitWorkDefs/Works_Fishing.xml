@@ -17,4 +17,12 @@
         </thinkRoot>
     </ThinkTreeDef>
 
+    <JobDef MayRequire="Ludeon.RimWorld.Odyssey">
+        <defName>FH_FishAnimal</defName>
+        <driverClass>FleshHive.JobDriver_FingerspikeAnimalFishing</driverClass>
+        <reportString>fishing.</reportString>
+        <suspendable>false</suspendable>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+    </JobDef>
+
 </Defs>

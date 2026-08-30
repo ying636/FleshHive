@@ -8,7 +8,7 @@ namespace FleshHive;
 public static class FleshSurvivorHelaGenerator
 {
     public static Pawn Generate(Map map, PawnGenerationContext context = PawnGenerationContext.NonPlayer,
-        Faction? faction = null)
+        Faction? faction = null, bool includeDreadmeldSeed = true)
     {
         PawnGenerationRequest request = new PawnGenerationRequest(
             PawnKindDefOf.Colonist,
@@ -31,12 +31,13 @@ public static class FleshSurvivorHelaGenerator
         request.ForcedMutant = FleshHiveDefOf.FH_HelaSubhuman;
         Pawn pawn = PawnGenerator.GeneratePawn(request);
 
-        Configure(pawn);
+        Configure(pawn, includeDreadmeldSeed);
         return pawn;
     }
 
-    public static void Configure(Pawn pawn)
+    public static void Configure(Pawn pawn, bool includeDreadmeldSeed = true)
     {
+        pawn.gender = Gender.Female;
 
         string firstName = "FH_Hela_FirstName".Translate();
         string lastName = "FH_Hela_LastName".Translate();
@@ -76,8 +77,11 @@ public static class FleshSurvivorHelaGenerator
         meals.stackCount = 3;
         pawn.inventory.innerContainer.TryAdd(meals);
 
-        Thing dreadmeldSeed = ThingMaker.MakeThing(FleshHiveDefOf.FH_DreadmeldSeed);
-        pawn.inventory.innerContainer.TryAdd(dreadmeldSeed);
+        if (includeDreadmeldSeed)
+        {
+            Thing dreadmeldSeed = ThingMaker.MakeThing(FleshHiveDefOf.FH_DreadmeldSeed);
+            pawn.inventory.innerContainer.TryAdd(dreadmeldSeed);
+        }
 
         AddInjury(pawn, HediffDefOf.Cut, BodyPartDefOf.Head, false, 4f);
         HediffDef scratch = DefDatabase<HediffDef>.GetNamed("Scratch");

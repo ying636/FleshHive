@@ -444,6 +444,7 @@
     <description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</description>
     <building>FH_FleshBush</building>
     <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Floors</drawStyleCategory>
     <workAmount>100</workAmount>
     <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshPlantBlueprint" />

@@ -3,6 +3,6 @@ using Verse;
 
 namespace FleshHive;
 
-public class Projectile_FleshHiveBoneSpike : Bullet
+public class Gas_SynbulbSmoke : Gas
 {
 }

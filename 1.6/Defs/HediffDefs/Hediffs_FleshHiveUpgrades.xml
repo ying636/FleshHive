@@ -31,12 +31,19 @@
   <HediffDef>
     <defName>FH_Hediff_Upgrade_BoneSpikePenetration</defName>
     <label>monomolecular bone spikes</label>
-    <description>This fleshbeast's bone-spike throwing skills have 90% armor penetration.</description>
+    <description>This fleshbeast has +80% melee armor penetration.</description>
     <hediffClass>Hediff</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>
     <everCurableByItem>false</everCurableByItem>
     <makesAlert>false</makesAlert>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeArmorPenetration>1.8</MeleeArmorPenetration>
+        </statFactors>
+      </li>
+    </stages>
   </HediffDef>
 
   <HediffDef>

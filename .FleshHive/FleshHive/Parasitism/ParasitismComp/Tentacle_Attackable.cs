@@ -14,6 +14,8 @@ public class Tentacle_Attackable : Tentacle
         this.prop = Prop;
     }
 
+    public override bool CanAutoAttack => true;
+
     public override void Tick()
     {
         base.Tick();
@@ -23,16 +25,13 @@ public class Tentacle_Attackable : Tentacle
         }
     }
 
-    public override void RareTick(bool allow)
+    public override void RareTick()
     {
-        if (this.cooldown > 0)
+        if (this.cooldown > 0 || !AutoAttackEnabled)
         {
             return;
         }
-        if (allow)
-        {
-            FindAttackTargetAndAttack();
-        }
+        FindAttackTargetAndAttack();
     }
 
     public virtual void FindAttackTargetAndAttack()

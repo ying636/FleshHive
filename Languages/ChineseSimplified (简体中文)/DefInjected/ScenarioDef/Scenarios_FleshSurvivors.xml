@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  <FH_FleshCatastropheSurvivors.label>血肉灾变幸存者</FH_FleshCatastropheSurvivors.label>
+  <FH_FleshCatastropheSurvivors.label>血肉灾变</FH_FleshCatastropheSurvivors.label>
   <FH_FleshCatastropheSurvivors.description>曾经坚不可摧的异象实验基地已被蔓延的血肉浪潮吞噬，而你侥幸在外躲过一劫。当你在守备部队的尸骸中搜寻时，发现了另一名幸存者。她自称是实验室的高级研究员，更令人畏惧的是，她似乎可以自如地操控那些狰狞的血肉兽。你们收集了基地外围的必要物资，离开了这座血肉地狱。</FH_FleshCatastropheSurvivors.description>
   <FH_FleshCatastropheSurvivors.scenario.description>曾经坚不可摧的异象实验基地已被蔓延的血肉浪潮吞噬，而你侥幸在外躲过一劫。当你在守备部队的尸骸中搜寻时，发现了另一名幸存者。她自称是实验室的高级研究员，更令人畏惧的是，她似乎可以自如地操控那些狰狞的血肉兽。你们收集了基地外围的必要物资，离开了这座血肉地狱。</FH_FleshCatastropheSurvivors.scenario.description>
-  <FH_FleshCatastropheSurvivors.scenario.name>血肉灾变幸存者</FH_FleshCatastropheSurvivors.scenario.name>
-  <FH_FleshCatastropheSurvivors.scenario.parts.GameStartDialog.text>幸存的研究员似乎隐瞒了一些信息。她携带着某种血肉兽核心，并声称可以利用这股力量建立一个受控的血肉兽巢群。多么荒诞的设想，但是在这个人烟稀少的边缘世界荒野，似乎也只能如此了。\n\n海拉开局就在她的群组下携带3只独爪兽和2只肺血兽。</FH_FleshCatastropheSurvivors.scenario.parts.GameStartDialog.text>
+  <FH_FleshCatastropheSurvivors.scenario.name>血肉灾变</FH_FleshCatastropheSurvivors.scenario.name>
+  <FH_FleshCatastropheSurvivors.scenario.parts.GameStartDialog.text>幸存的研究员似乎隐瞒了一些信息。她携带着某种血肉兽核心，并声称可以利用这股力量建立一个受控的血肉兽巢群。多么荒诞的设想，但是在这个人烟稀少的边缘世界荒野，似乎也只能如此了。</FH_FleshCatastropheSurvivors.scenario.parts.GameStartDialog.text>
   <FH_FleshCatastropheSurvivors.scenario.parts.ConfigurePawnsMutants.customSummary>以一名殖民者与一名特殊角色以及几个血肉兽仆从开局</FH_FleshCatastropheSurvivors.scenario.parts.ConfigurePawnsMutants.customSummary>
   <FH_FleshCatastropheSurvivors.scenario.summary>以一名殖民者与一名特殊角色以及几个血肉兽仆从开局</FH_FleshCatastropheSurvivors.scenario.summary>
 </LanguageData>

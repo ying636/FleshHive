@@ -97,6 +97,17 @@ public class HediffComp_ScarletField : HCFHediffComp
             {
                 continue;
             }
+            bool hostile = true;
+            if (proj.Launcher != null && pawn.Faction != null)
+            {
+                hostile = proj.Launcher.Spawned
+                    ? proj.Launcher.HostileTo(pawn.Faction)
+                    : proj.Launcher.Faction?.HostileTo(pawn.Faction) ?? true;
+            }
+            if (!hostile)
+            {
+                continue;
+            }
             Vector3 projPos = proj.ExactPosition;
             float dx = projPos.x - shieldCenter.x;
             float dz = projPos.z - shieldCenter.z;

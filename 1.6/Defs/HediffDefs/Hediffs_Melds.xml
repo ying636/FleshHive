@@ -47,7 +47,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Nexusmeld</defName>
     <label>nexusmeld parasitism</label>
-    <description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.</description>
+    <description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.\n\n-Motherbeast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.2, 0.6)</defaultLabelColor>
@@ -55,7 +55,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-0.05</SocialImpact>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <label>nexusmeld parasitism</label>
       </li>
@@ -68,6 +68,8 @@
             <damageDef>Stab</damageDef>
             <damageAmount>14</damageAmount>
             <cooldown>2</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Whipspike</iconPath>
             <renderNode>
               <debugLabel>Left Spike</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -85,6 +87,8 @@
             <damageDef>Stab</damageDef>
             <damageAmount>14</damageAmount>
             <cooldown>2</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Whipspike</iconPath>
             <renderNode>
               <debugLabel>Right Spike</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -99,15 +103,8 @@
           </li>
         </tentacles>
       </li>
-      <li Class="HediffCompProperties_ThoughtSetter">
-        <thought>FH_Thought_FleshParasitism</thought>
-        <moodOffset>-6</moodOffset>
-      </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_FleshSpread_Parasitism</abilityDef>
-      </li>
-      <li Class="FleshHive.HediffCompProperties_TwistedFleshProducer">
-        <twistedFleshPerDay>200</twistedFleshPerDay>
       </li>
       <li Class="FleshHive.HediffCompProperties_UnificationAura" />
       <li Class="FleshHive.HediffCompProperties_Regeneration">
@@ -119,7 +116,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Furiousmeld</defName>
     <label>furiousmeld parasitism</label>
-    <description>This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, armor, and regeneration.</description>
+    <description>This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, stronger armor, and regeneration.\n\n-Shield-claw tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
@@ -128,7 +125,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-0.05</SocialImpact>
+          <SocialImpact>-0.1</SocialImpact>
           <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
           <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
           <ArmorRating_Heat>0.5</ArmorRating_Heat>
@@ -144,6 +141,7 @@
             <damageDef>Blunt</damageDef>
             <damageAmount>16</damageAmount>
             <cooldown>3</cooldown>
+            <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
             <renderNode>
               <debugLabel>Shield Claw</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -161,6 +159,7 @@
             <damageDef>Blunt</damageDef>
             <damageAmount>16</damageAmount>
             <cooldown>3</cooldown>
+            <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
             <renderNode>
               <debugLabel>Shield Claw</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -174,10 +173,6 @@
             </renderNode>
           </li>
         </tentacles>
-      </li>
-      <li Class="HediffCompProperties_ThoughtSetter">
-        <thought>FH_Thought_FleshParasitism</thought>
-        <moodOffset>-6</moodOffset>
       </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_ScarletField</abilityDef>
@@ -203,7 +198,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-0.05</SocialImpact>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <label>bastionmeld parasitism</label>
       </li>
@@ -251,10 +246,6 @@
           </li>
         </tentacles>
       </li>
-      <li Class="HediffCompProperties_ThoughtSetter">
-        <thought>FH_Thought_FleshParasitism</thought>
-        <moodOffset>-6</moodOffset>
-      </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_BastionmeldFleshPulse_Parasitism</abilityDef>
       </li>
@@ -267,7 +258,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Dreadmeld</defName>
     <label>dreadmeld parasitism</label>
-    <description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBone spikes are grafted onto the body, granting incredible regeneration, improved mining work, and a terror roar.</description>
+    <description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains incredible regeneration, improved mining work, and a terror roar.\n\n-Motherbeast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.45, 0.2, 0.15)</defaultLabelColor>
@@ -276,7 +267,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-0.05</SocialImpact>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <statFactors>
           <MiningSpeed>2.6</MiningSpeed>
@@ -293,6 +284,8 @@
             <damageDef>Stab</damageDef>
             <damageAmount>14</damageAmount>
             <cooldown>2</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Whipspike</iconPath>
             <renderNode>
               <debugLabel>Left Bone Spike</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -310,6 +303,8 @@
             <damageDef>Stab</damageDef>
             <damageAmount>14</damageAmount>
             <cooldown>2</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Whipspike</iconPath>
             <renderNode>
               <debugLabel>Right Bone Spike</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -324,12 +319,11 @@
           </li>
         </tentacles>
       </li>
-      <li Class="HediffCompProperties_ThoughtSetter">
-        <thought>FH_Thought_FleshParasitism</thought>
-        <moodOffset>-6</moodOffset>
-      </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_DreadmeldTerrorRoar</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_TwistedFleshProducer">
+        <twistedFleshPerDay>200</twistedFleshPerDay>
       </li>
       <li Class="FleshHive.HediffCompProperties_Regeneration">
         <regenHediff>Regeneration</regenHediff>
@@ -341,7 +335,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Fissionmeld</defName>
     <label>fissionmeld parasitism</label>
-    <description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBone spikes are grafted onto the body, twisted flesh capacity and regeneration are increased, flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.</description>
+    <description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's twisted flesh capacity and regeneration are increased; flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.\n\n-Motherbeast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.75, 0.25, 0.2)</defaultLabelColor>
@@ -350,7 +344,7 @@
       <li>
         <minSeverity>0</minSeverity>
         <statOffsets>
-          <SocialImpact>-0.05</SocialImpact>
+          <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
         <label>fissionmeld parasitism</label>
       </li>
@@ -363,6 +357,8 @@
             <damageDef>Stab</damageDef>
             <damageAmount>14</damageAmount>
             <cooldown>2</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Whipspike</iconPath>
             <renderNode>
               <debugLabel>Left Bone Spike</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -380,6 +376,8 @@
             <damageDef>Stab</damageDef>
             <damageAmount>14</damageAmount>
             <cooldown>2</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Whipspike</iconPath>
             <renderNode>
               <debugLabel>Right Bone Spike</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -393,10 +391,6 @@
             </renderNode>
           </li>
         </tentacles>
-      </li>
-      <li Class="HediffCompProperties_ThoughtSetter">
-        <thought>FH_Thought_FleshParasitism</thought>
-        <moodOffset>-6</moodOffset>
       </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_FleshRebirth</abilityDef>

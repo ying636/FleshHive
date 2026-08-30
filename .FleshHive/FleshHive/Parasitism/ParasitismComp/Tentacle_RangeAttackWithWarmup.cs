@@ -20,6 +20,12 @@ public class Tentacle_RangeAttackWithWarmup : Tentacle_RangeAttack
             return;
         }
 
+        if (!AutoAttackEnabled)
+        {
+            CancelWarmup();
+            return;
+        }
+
         Pawn pawn = this.Comp.Pawn;
         if (warmupTarget == null || warmupTarget.Destroyed || !warmupTarget.Spawned || warmupTarget.MapHeld != pawn.MapHeld)
         {
@@ -38,11 +44,11 @@ public class Tentacle_RangeAttackWithWarmup : Tentacle_RangeAttack
         }
     }
 
-    public override void RareTick(bool allow)
+    public override void RareTick()
     {
         if (warmupTarget == null)
         {
-            base.RareTick(allow);
+            base.RareTick();
         }
     }
 
@@ -64,6 +70,11 @@ public class Tentacle_RangeAttackWithWarmup : Tentacle_RangeAttack
         base.ExposeData();
         Scribe_Values.Look(ref warmupTicks, "warmupTicks");
         Scribe_References.Look(ref warmupTarget, "warmupTarget");
+    }
+
+    protected override void NotifyAutoAttackDisabled()
+    {
+        CancelWarmup();
     }
 
     private void CancelWarmup()

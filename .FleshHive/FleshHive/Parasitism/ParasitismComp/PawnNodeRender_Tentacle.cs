@@ -41,6 +41,11 @@ public class PawnNodeRenderWorker_Tentacle : PawnRenderNodeWorker
         if (node is PawnNodeRender_Tentacle n)
         {
             result = n.tentacle.drawPosOffset;
+            if (n.tentacle is Tentacle_WeaponMount { MountedWeapon: not null } weaponMount
+                && result.sqrMagnitude > 0f)
+            {
+                result += result.normalized * weaponMount.Prop.weaponDrawOffset;
+            }
             if (parms.facing == Rot4.North)
             {
                 result.x *= -1f;
@@ -62,6 +67,10 @@ public class PawnNodeRenderWorker_Tentacle : PawnRenderNodeWorker
                 ? n.tentacle.targetAngle
                 : n.tentacle.angle); 
             float angle = baseAngle + n.tentacle.extraAngle;
+            if (n.tentacle.isRight && n.tentacle is Tentacle_WeaponMount { MountedWeapon: not null })
+            {
+                angle += 180f;
+            }
             if (parms.facing == Rot4.North)
             {
                 angle *= -1f;

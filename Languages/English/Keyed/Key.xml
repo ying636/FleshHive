@@ -71,6 +71,8 @@
   <ToggleTentacleAttackMode>Toggle {0}'s tentacle attack mode</ToggleTentacleAttackMode>
   <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>
   <TentacleAttackModeOff>Tentacle Attack: Off</TentacleAttackModeOff>
+  <FH_ParasiticTentacle>Parasitic tentacle</FH_ParasiticTentacle>
+  <FH_ParasiticTentacleNumbered>{0} - tentacle {1}</FH_ParasiticTentacleNumbered>
 
   <FH_MarkPrey>Mark Prey</FH_MarkPrey>
   <FH_MarkPreyDesc>Mark downed creatures to be carried to a flesh sack for digestion.</FH_MarkPreyDesc>

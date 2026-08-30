@@ -20,6 +20,8 @@ public class HediffComp_Parasitism : HediffComp
     public HediffCompProperties_Parasitism Props => (HediffCompProperties_Parasitism)this.props;
     public ParasitismHediff Hediff => (ParasitismHediff)this.parent;
     public virtual int TentacleCount => this.tentacles.Count;
+    public virtual bool ShowAttackGizmo => true;
+    public IEnumerable<Tentacle> AttackTentacles => ActiveTentacles.Where(tentacle => tentacle.CanAutoAttack);
     protected virtual IEnumerable<Tentacle> ActiveTentacles => this.tentacles;
 
     public override void CompPostMake()
@@ -82,7 +84,7 @@ public class HediffComp_Parasitism : HediffComp
             tentacle.Tick();
             if (rare)
             { 
-                tentacle.RareTick(Hediff.allow);
+                tentacle.RareTick();
             }
         }
     }

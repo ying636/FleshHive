@@ -115,7 +115,9 @@
         <iconPath>UI/Ability/FH_ScarletField</iconPath>
         <cost>5</cost>
         <hediff>FH_Parasitism_Nexusmeld</hediff>
-        <twistedFleshCapacity>200</twistedFleshCapacity>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <abilityLabel>Motherbeast tentacle</abilityLabel>
+        <abilityDescription>The host grows two motherbeast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
@@ -286,6 +288,8 @@
         <cost>5</cost>
         <hediff>FH_Parasitism_Furiousmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
+        <abilityLabel>Shield-claw tentacle</abilityLabel>
+        <abilityDescription>The host grows two shieldspike tentacles that deal 16 blunt damage every 3 seconds.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
@@ -602,9 +606,10 @@
         <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
         <cost>5</cost>
         <hediff>FH_Parasitism_Bastionmeld</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
-        <abilityLabel>Bastionmeld tentacle attack</abilityLabel>
-        <abilityDescription>Release an EMP pulse centered on the host, matching an IED EMP trap's radius.</abilityDescription>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
+        <abilityLabel>Bastionmeld weapon mounts and EMP pulse</abilityLabel>
+        <abilityDescription>The host controls two parasitic weapon mounts and can release an EMP pulse centered on itself, matching an IED EMP trap's radius.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
@@ -804,6 +809,8 @@
         <cost>5</cost>
         <hediff>FH_Parasitism_Fissionmeld</hediff>
         <twistedFleshCapacity>800</twistedFleshCapacity>
+        <abilityLabel>Motherbeast tentacle</abilityLabel>
+        <abilityDescription>The host grows two motherbeast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration and can use flesh rebirth.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
@@ -1139,6 +1146,9 @@
         <iconPath>UI/Ability/FH_DreadmeldTerrorRoar</iconPath>
         <cost>5</cost>
         <hediff>FH_Parasitism_Dreadmeld</hediff>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <abilityLabel>Motherbeast tentacle</abilityLabel>
+        <abilityDescription>The host grows two motherbeast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration and can unleash a terror roar.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>

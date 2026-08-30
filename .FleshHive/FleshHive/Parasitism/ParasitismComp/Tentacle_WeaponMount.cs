@@ -1,7 +1,10 @@
+using System;
 using HarmonyLib;
 using RimWorld;
+using System.Reflection;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace FleshHive;
 
@@ -13,13 +16,12 @@ public class TentacleProperties_WeaponMount : TentacleProperties
     }
 
     public float angleOffset = -90f;
+    public float weaponDrawOffset = 0.55f;
     public string slotLabel;
 }
 
 public class Tentacle_WeaponMount : Tentacle
 {
-    public new TentacleProperties_WeaponMount Prop => (TentacleProperties_WeaponMount)base.Prop;
-
     public Tentacle_WeaponMount()
     {
     }
@@ -29,7 +31,11 @@ public class Tentacle_WeaponMount : Tentacle
         this.prop = prop;
     }
 
+    public new TentacleProperties_WeaponMount Prop => (TentacleProperties_WeaponMount)base.Prop;
+    public override bool CanAutoAttack => true;
     public bool HasMountedWeapon => mountedWeapon != null;
+    public ThingWithComps MountedWeapon => mountedWeapon;
+    public TaggedString SlotLabel => Prop.slotLabel.NullOrEmpty() ? "FH_ParasiticWeaponSlot".Translate() : Prop.slotLabel.Translate();
 
     public override void Tick()
     {
@@ -49,12 +55,17 @@ public class Tentacle_WeaponMount : Tentacle
         {
             verb.VerbTick();
         }
+        if (!AutoAttackEnabled)
+        {
+            ResetCurrentTarget();
+            return;
+        }
         TickCurrentTarget(equippable.PrimaryVerb);
     }
 
-    public override void RareTick(bool allow)
+    public override void RareTick()
     {
-        if (allow && mountedWeapon != null)
+        if (AutoAttackEnabled && mountedWeapon != null)
         {
             FindAttackTargetAndAttack();
         }
@@ -98,12 +109,16 @@ public class Tentacle_WeaponMount : Tentacle
 
     public static bool CanMountWeapon(Thing weapon)
     {
-        return weapon is ThingWithComps { def.IsRangedWeapon: true } thing && thing.TryGetComp<CompEquippable>() != null;
+        return weapon is ThingWithComps thing
+               && thing.def.IsWeapon
+               && (thing.def.IsRangedWeapon || thing.def.IsMeleeWeapon)
+               && thing.TryGetComp<CompEquippable>() != null;
     }
 
-    public ThingWithComps MountedWeapon => mountedWeapon;
-
-    public TaggedString SlotLabel => Prop.slotLabel.NullOrEmpty() ? "FH_ParasiticWeaponSlot".Translate() : Prop.slotLabel.Translate();
+    protected override void NotifyAutoAttackDisabled()
+    {
+        ResetCurrentTarget();
+    }
 
     private void FindAttackTargetAndAttack()
     {
@@ -114,7 +129,7 @@ public class Tentacle_WeaponMount : Tentacle
             return;
         }
 
-        Pawn target = FindTarget(pawn, verb);
+        Thing target = FindTarget(pawn, verb);
         if (target == null)
         {
             ResetCurrentTarget();
@@ -126,7 +141,40 @@ public class Tentacle_WeaponMount : Tentacle
         UpdateTargetAngle(pawn, currentTarget);
     }
 
-    private Pawn FindTarget(Pawn pawn, Verb verb)
+    private Thing FindTarget(Pawn pawn, Verb verb)
+    {
+        return verb.verbProps.IsMeleeAttack ? FindMeleeTarget(pawn, verb) : FindRangedTarget(pawn, verb);
+    }
+
+    private Thing FindMeleeTarget(Pawn pawn, Verb verb)
+    {
+        Thing bestTarget = null;
+        float bestDistance = float.MaxValue;
+        foreach (Thing target in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, verb.EffectiveRange, true))
+        {
+            if (target is not IAttackTarget attackTarget
+                || !target.Spawned
+                || target.Map != pawn.Map
+                || !target.HostileTo(pawn)
+                || attackTarget.ThreatDisabled(pawn)
+                || !AttackTargetFinder.IsAutoTargetable(attackTarget)
+                || !verb.ValidateTarget(target, false)
+                || !verb.CanHitTarget(target))
+            {
+                continue;
+            }
+
+            float distance = target.Position.DistanceToSquared(pawn.Position);
+            if (distance < bestDistance)
+            {
+                bestDistance = distance;
+                bestTarget = target;
+            }
+        }
+        return bestTarget;
+    }
+
+    private Pawn FindRangedTarget(Pawn pawn, Verb verb)
     {
         Map map = pawn.Map;
         float range = verb.EffectiveRange;
@@ -192,11 +240,25 @@ public class Tentacle_WeaponMount : Tentacle
             warmupTicksLeft--;
             if (warmupTicksLeft <= 0)
             {
-                TryStartCastWithoutPawnStance(verb, currentTarget);
+                if (verb.verbProps.IsMeleeAttack)
+                {
+                    TryPerformMeleeAttack(verb, currentTarget);
+                }
+                else
+                {
+                    TryStartCastWithoutPawnStance(verb, currentTarget);
+                }
             }
             return;
         }
-        TryStartCastWithoutPawnStance(verb, currentTarget);
+        if (verb.verbProps.IsMeleeAttack)
+        {
+            TryPerformMeleeAttack(verb, currentTarget);
+        }
+        else
+        {
+            TryStartCastWithoutPawnStance(verb, currentTarget);
+        }
     }
 
     private bool TryStartCastWithoutPawnStance(Verb verb, LocalTargetInfo target)
@@ -209,11 +271,33 @@ public class Tentacle_WeaponMount : Tentacle
 
         surpriseAttackField.SetValue(verb, false);
         canHitNonTargetPawnsNowField.SetValue(verb, true);
-        verb.preventFriendlyFire = true;
+        verb.preventFriendlyFire = false;
         nonInterruptingSelfCastField.SetValue(verb, true);
         currentTargetField.SetValue(verb, target);
         currentDestinationField.SetValue(verb, LocalTargetInfo.Invalid);
         verb.WarmupComplete();
+        return true;
+    }
+
+    private bool TryPerformMeleeAttack(Verb verb, LocalTargetInfo target)
+    {
+        if (verb is not Verb_MeleeAttack meleeVerb
+            || verb.Caster is not Pawn pawn
+            || !target.IsValid
+            || !verb.CanHitTarget(target))
+        {
+            ResetCurrentTarget();
+            return false;
+        }
+
+        ApplyMeleeDamageDelegate(meleeVerb, target);
+        pawn.Notify_UsedVerb(pawn, verb);
+        pawn.health?.Notify_UsedVerb(verb, target);
+        verb.EquipmentSource?.Notify_UsedWeapon(pawn);
+        pawn.Drawer.Notify_MeleeAttackOn(target.Thing);
+        verb.castCompleteCallback?.Invoke();
+        cooldown = verb.verbProps.AdjustedCooldownTicks(verb, pawn);
+        ResetCurrentTarget();
         return true;
     }
 
@@ -282,4 +366,8 @@ public class Tentacle_WeaponMount : Tentacle
     private static readonly System.Reflection.FieldInfo surpriseAttackField = AccessTools.Field(typeof(Verb), "surpriseAttack");
     private static readonly System.Reflection.FieldInfo canHitNonTargetPawnsNowField = AccessTools.Field(typeof(Verb), "canHitNonTargetPawnsNow");
     private static readonly System.Reflection.FieldInfo nonInterruptingSelfCastField = AccessTools.Field(typeof(Verb), "nonInterruptingSelfCast");
+    private static readonly Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult> ApplyMeleeDamageDelegate =
+        (Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult>)typeof(Verb_MeleeAttack)
+            .GetMethod("ApplyMeleeDamageToTarget", BindingFlags.Instance | BindingFlags.NonPublic)
+            .CreateDelegate(typeof(Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult>));
 }

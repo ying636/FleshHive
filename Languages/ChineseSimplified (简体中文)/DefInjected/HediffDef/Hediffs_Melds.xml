@@ -33,7 +33,7 @@
   <!-- EN: dreadmeld parasitism -->
   <FH_Parasitism_Dreadmeld.label>惊惧母兽寄生</FH_Parasitism_Dreadmeld.label>
   <!-- EN: The dreadmeld latches onto the host, grafting bone spikes, granting incredible regeneration, improving mining work, and allowing the host to unleash a terror roar. -->
-  <FH_Parasitism_Dreadmeld.description>该生物被惊惧母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n嫁接骨刺，赋予不可思议的再生能力，强化采矿工作，并允许释放惊惧咆哮。</FH_Parasitism_Dreadmeld.description>
+  <FH_Parasitism_Dreadmeld.description>该生物被惊惧母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n赋予不可思议的再生能力，强化采矿工作，并允许释放惊惧咆哮。\n\n-母兽触手</FH_Parasitism_Dreadmeld.description>
   <!-- EN: Left Bone Spike -->
   <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <!-- EN: Right Bone Spike -->
@@ -44,7 +44,7 @@
   <!-- EN: fissionmeld parasitism -->
   <FH_Parasitism_Fissionmeld.label>裂殖母兽寄生</FH_Parasitism_Fissionmeld.label>
   <!-- EN: The fissionmeld latches onto the host, grafting bone spikes, increasing twisted flesh capacity, granting regeneration, sustaining flesh undying while enough twisted flesh is stored, and allowing the host to purge harmful conditions. -->
-  <FH_Parasitism_Fissionmeld.description>该生物被裂殖母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n嫁接骨刺，提升扭曲肉容量并提供再生；扭曲肉充足时维持血肉不死，并允许清除负面状态和伤口。</FH_Parasitism_Fissionmeld.description>
+  <FH_Parasitism_Fissionmeld.description>该生物被裂殖母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n提升扭曲肉容量并提供再生；扭曲肉充足时维持血肉不死，并允许清除负面状态和伤口。\n\n-母兽触手</FH_Parasitism_Fissionmeld.description>
   <!-- EN: Left Bone Spike -->
   <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <!-- EN: Right Bone Spike -->
@@ -55,18 +55,18 @@
   <!-- EN: furiousmeld parasitism -->
   <FH_Parasitism_Furiousmeld.label>暴怒母兽寄生</FH_Parasitism_Furiousmeld.label>
   <!-- EN: The furiousmeld latches onto the host, providing twisted flesh capacity, armor, and regeneration. -->
-  <FH_Parasitism_Furiousmeld.description>该生物被暴怒母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n提供扭曲肉容量、护甲和再生能力。</FH_Parasitism_Furiousmeld.description>
+  <FH_Parasitism_Furiousmeld.description>该生物被暴怒母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n提供扭曲肉容量、护甲和再生能力。\n\n-盾爪触手</FH_Parasitism_Furiousmeld.description>
   <!-- EN: Shield Claw -->
-  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>盾爪</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>盾爪触手</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>
   <!-- EN: Shield Claw -->
-  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>盾爪</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>盾爪触手</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
   <!-- EN: furiousmeld parasitism -->
   <FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>暴怒母兽寄生</FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>
   
   <!-- EN: nexusmeld parasitism -->
   <FH_Parasitism_Nexusmeld.label>统合母兽寄生</FH_Parasitism_Nexusmeld.label>
   <!-- EN: The nexusmeld latches onto the host, providing twisted flesh capacity, regeneration, and strengthening all friendly flesh beasts. -->
-  <FH_Parasitism_Nexusmeld.description>该生物被统合母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n提供扭曲肉容量和再生能力，并强化所有友方血肉兽。</FH_Parasitism_Nexusmeld.description>
+  <FH_Parasitism_Nexusmeld.description>该生物被统合母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n提供扭曲肉容量和再生能力，并强化所有友方血肉兽。\n\n-母兽触手</FH_Parasitism_Nexusmeld.description>
   <!-- EN: Left Spike -->
   <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <!-- EN: Right Spike -->

@@ -8,7 +8,7 @@
     <hediff>FH_Hela</hediff>
     <thinkTree>Humanlike</thinkTree>
     <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-    <consideredSubhuman>true</consideredSubhuman>
+    <consideredSubhuman>false</consideredSubhuman>
     <workDisables>None</workDisables>
     <canCarryPawns>true</canCarryPawns>
     <canTend>true</canTend>

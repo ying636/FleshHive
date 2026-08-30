@@ -137,6 +137,8 @@
   <TentacleAttackModeOn>触手攻击：开启</TentacleAttackModeOn>
   <!-- EN: Tentacle Attack: Off -->
   <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
+  <FH_ParasiticTentacle>寄生触手</FH_ParasiticTentacle>
+  <FH_ParasiticTentacleNumbered>{0} - 触手{1}</FH_ParasiticTentacleNumbered>
 
   <!-- EN: Mark Prey -->
   <FH_MarkPrey>标记猎物</FH_MarkPrey>

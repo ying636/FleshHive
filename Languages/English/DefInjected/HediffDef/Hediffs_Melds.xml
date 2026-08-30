@@ -6,7 +6,7 @@
   <FH_Berserk.stages.berserk.label>berserk</FH_Berserk.stages.berserk.label>
   
   <FH_Parasitism_Furiousmeld.label>furiousmeld parasitism</FH_Parasitism_Furiousmeld.label>
-  <FH_Parasitism_Furiousmeld.description>This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, armor, and regeneration.</FH_Parasitism_Furiousmeld.description>
+  <FH_Parasitism_Furiousmeld.description>This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, stronger armor, and regeneration.\n\n-Shield-claw tentacle</FH_Parasitism_Furiousmeld.description>
   <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>Shield Claw</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>
   <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>Shield Claw</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
   <FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>furiousmeld parasitism</FH_Parasitism_Furiousmeld.stages.furiousmeld_parasitism.label>
@@ -20,7 +20,7 @@
   <FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>bastionmeld parasitism</FH_Parasitism_Bastionmeld.stages.bastionmeld_parasitism.label>
 
   <FH_Parasitism_Fissionmeld.label>fissionmeld parasitism</FH_Parasitism_Fissionmeld.label>
-  <FH_Parasitism_Fissionmeld.description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBone spikes are grafted onto the body, twisted flesh capacity and regeneration are increased, flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.</FH_Parasitism_Fissionmeld.description>
+  <FH_Parasitism_Fissionmeld.description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's twisted flesh capacity and regeneration are increased; flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.\n\n-Motherbeast tentacle</FH_Parasitism_Fissionmeld.description>
   <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>Left Bone Spike</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>Right Bone Spike</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
   <FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>fissionmeld parasitism</FH_Parasitism_Fissionmeld.stages.fissionmeld_parasitism.label>
@@ -29,13 +29,13 @@
   <FH_FleshUndying.description>Stored twisted flesh keeps the host from dying while the parasite rebuilds ruined tissue.</FH_FleshUndying.description>
 
   <FH_Parasitism_Dreadmeld.label>dreadmeld parasitism</FH_Parasitism_Dreadmeld.label>
-  <FH_Parasitism_Dreadmeld.description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBone spikes are grafted onto the body, granting incredible regeneration, improved mining work, and a terror roar.</FH_Parasitism_Dreadmeld.description>
+  <FH_Parasitism_Dreadmeld.description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains incredible regeneration, improved mining work, and a terror roar.\n\n-Motherbeast tentacle</FH_Parasitism_Dreadmeld.description>
   <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>Left Bone Spike</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>Right Bone Spike</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
   <FH_Parasitism_Dreadmeld.stages.dreadmeld_parasitism.label>dreadmeld parasitism</FH_Parasitism_Dreadmeld.stages.dreadmeld_parasitism.label>
   
   <FH_Parasitism_Nexusmeld.label>nexusmeld parasitism</FH_Parasitism_Nexusmeld.label>
-  <FH_Parasitism_Nexusmeld.description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.</FH_Parasitism_Nexusmeld.description>
+  <FH_Parasitism_Nexusmeld.description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and strengthens all friendly fleshbeasts.\n\n-Motherbeast tentacle</FH_Parasitism_Nexusmeld.description>
   <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>Left Spike</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
   <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>Right Spike</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
   <FH_Parasitism_Nexusmeld.stages.nexusmeld_parasitism.label>nexusmeld parasitism</FH_Parasitism_Nexusmeld.stages.nexusmeld_parasitism.label>

@@ -8,7 +8,7 @@
             <li>
                 <label>flesh parasitism</label>
                 <description>Living flesh resides within the body.</description>
-                <baseMoodEffect>-6</baseMoodEffect>
+                <baseMoodEffect>0</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>

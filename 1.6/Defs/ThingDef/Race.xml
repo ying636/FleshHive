@@ -110,9 +110,9 @@
         <iconPath>UI/Ability/FH_Fingerspike</iconPath> 
         <cost>1</cost>
         <hediff>FH_Parasitism_Fingerspike</hediff>
-        <effect>Global Work Speed +10%; Social Impact -5%; Flesh parasitism mood -6</effect>
-        <abilityLabel>Parasitic weapon: bone-spike tentacle</abilityLabel>
-        <abilityDescription>The host grows a bony tentacle that deals stabbing damage.</abilityDescription>
+        <effect>Global Work Speed +10%; Social Impact -5%; Flesh parasitism mood -6; host grows one bone-spike tentacle</effect>
+        <abilityLabel>Bone-spike tentacle</abilityLabel>
+        <abilityDescription>The host grows one bone-spike tentacle that deals 5 sharp damage every 2 seconds.</abilityDescription>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
@@ -233,9 +233,10 @@
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Puffspike</hediff>
-        <effect>Immune to asthma and lung rot and cures them in the host's lungs; Move Speed +10%; Toxic Resistance +30%; Pain +6%</effect>
-        <abilityLabel>Parasitic weapon: bone-spike shot</abilityLabel>
-        <abilityDescription>Launches a bone spike that deals stabbing damage.</abilityDescription>
+        <effect>Immune to asthma and lung rot and cures them in the host's lungs; Move Speed +10%; Toxic Resistance +30%; Pain +6%; twisted flesh capacity +50</effect>
+        <abilityLabel>Parasitic adaptation: pulmonary immunity</abilityLabel>
+        <abilityDescription>The host gains immunity to asthma and lung rot and becomes more tolerant of toxic environments.</abilityDescription>
+        <twistedFleshCapacity>50</twistedFleshCapacity>
       </li>
     </comps>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Puffspike/FH_Puffspike_east</uiIconPath>
@@ -316,12 +317,12 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon2</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_Toughspike</iconPath>
         <cost>1</cost>
         <hediff>FH_Parasitism_Whipspike</hediff>
-        <effect>Social Impact -5%; Flesh parasitism mood -6</effect>
-        <abilityLabel>Parasitic weapon: flesh whip</abilityLabel>
-        <abilityDescription>The host grows a fleshy whip tentacle that strikes nearby enemies for cutting damage.</abilityDescription>
+        <effect>Social Impact -5%; Flesh parasitism mood -6; host grows one whip tentacle</effect>
+        <abilityLabel>Whip-claw tentacle</abilityLabel>
+        <abilityDescription>The host grows one whip tentacle that deals 12 sharp damage every 5 seconds with 60% armor penetration.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -526,9 +527,9 @@
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Paraspike</hediff>
-        <effect>Bleeding rate x75%; Immunity: wound infection; Pain +6%; offspring inherit paraspike parasitism</effect>
-        <abilityLabel>Parasitic weapon: bone-spike shot</abilityLabel>
-        <abilityDescription>Launches a bone spike that deals stabbing damage.</abilityDescription>
+        <effect>Bleeding rate x75%; Immunity: wound infection; Social Impact -5%; Pain +6%; host grows one spiral tentacle; offspring inherit paraspike parasitism</effect>
+        <abilityLabel>Spiral tentacle</abilityLabel>
+        <abilityDescription>The host grows one spiral tentacle that deals 5 sharp damage every 3 seconds with 40% armor penetration.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -625,9 +626,9 @@
         <iconPath>UI/Ability/FH_BoneBurst</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%</effect>
-        <abilityLabel>Parasitic weapon: bone burst</abilityLabel>
-        <abilityDescription>Fires bone shards at range.</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -5%; host grows one shatterspike tentacle</effect>
+        <abilityLabel>Shatter-claw tentacle</abilityLabel>
+        <abilityDescription>The host grows one shatter-claw tentacle that fires bone shards for 18 sharp damage with 100% armor penetration, 1-second aiming, a 1.5-second cooldown, 16-cell range, 55 projectile speed, and 3 stopping power.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -787,12 +788,12 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_SkillIcon5</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_Toughspike</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Toughspike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +15%; host grows two bony tentacles</effect>
-        <abilityLabel>Parasitic weapon: bone-spike tentacles</abilityLabel>
-        <abilityDescription>The host grows two bony tentacles that deal stabbing damage.</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; Global Work Speed +15%; host grows two carapace tentacles</effect>
+        <abilityLabel>Carapace tentacle</abilityLabel>
+        <abilityDescription>The host grows two carapace tentacles that deal 10 sharp damage every 2 seconds.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -1133,9 +1134,9 @@
         <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
         <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
-        <effect>Sharp Armor +25%; Blunt Armor +10%; Heat Armor +20%; Social Impact -5%; Flesh parasitism mood -6</effect>
-        <abilityLabel>Parasitic weapon: shield claw</abilityLabel>
-        <abilityDescription>The host gains a shield claw that bludgeons nearby enemies.</abilityDescription>
+        <effect>Sharp Armor +25%; Blunt Armor +10%; Heat Armor +20%; Social Impact -5%; Flesh parasitism mood -6; host grows one shieldspike tentacle</effect>
+        <abilityLabel>Shield-claw tentacle</abilityLabel>
+        <abilityDescription>The host grows one shieldspike tentacle that deals 16 blunt damage every 3 seconds.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -1300,9 +1301,10 @@
         <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; charge with 10 twisted flesh to release 2 random small fleshbeasts (5-day cooldown)</effect>
-        <abilityLabel>Parasitic weapon: bone-spike shot</abilityLabel>
-        <abilityDescription>Launches a bone spike that deals stabbing damage.</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; host grows two bone-spike tentacles; charge with 10 twisted flesh to release 2 random small fleshbeasts (5-day cooldown)</effect>
+        <abilityLabel>Bone-spike tentacle</abilityLabel>
+        <abilityDescription>The host grows two bone-spike tentacles that deal 5 sharp damage every 2 seconds. Charge with twisted flesh to release two random small fleshbeasts.</abilityDescription>
+        <twistedFleshCapacity>100</twistedFleshCapacity>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
@@ -1570,7 +1572,7 @@
         <li>
           <def>EntityFullyFormed</def>
           <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
-          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+      <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
           <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
         </li>
       </lifeStageAges>
@@ -1603,9 +1605,9 @@
         <iconPath>UI/Ability/FH_BulbfreakReleaseFleshbeasts</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Bulbfreak</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
-        <abilityLabel>Parasitic weapons: tentacles and release fleshbeasts</abilityLabel>
-        <abilityDescription>Two tentacles deal 10 blunt damage with a 2-second cooldown. The active ability consumes 200 twisted flesh to release two random medium fleshbeasts.</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
+        <abilityLabel>Tentacle</abilityLabel>
+        <abilityDescription>Two tentacles deal 10 blunt damage every 2 seconds. The active ability consumes 200 twisted flesh to release two random medium fleshbeasts.</abilityDescription>
         <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
     </comps>
@@ -1769,9 +1771,10 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Acidbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; Toxic Resistance +100%; grants acid mortar and acid spray abilities.</effect>
-        <abilityLabel>Parasitic abilities: acid mortar and acid spray</abilityLabel>
-        <abilityDescription>Launch an acid mortar shell at long range or spray sticky acid over a target area.</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; Toxic Resistance +100%; twisted flesh capacity +200; grants two tentacles, acid mortar, and acid spray abilities.</effect>
+        <abilityLabel>Tentacle</abilityLabel>
+        <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds. It can launch an acid mortar shell at long range or spray sticky acid over a target area.</abilityDescription>
+        <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -1942,10 +1945,10 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Spitbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +250; grants the flesh mortar ability.</effect>
-        <abilityLabel>Parasitic weapon: flesh mortar</abilityLabel>
-        <abilityDescription>Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point.</abilityDescription>
-        <twistedFleshCapacity>250</twistedFleshCapacity>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +200; grants two tentacles and the flesh mortar ability.</effect>
+        <abilityLabel>Tentacle</abilityLabel>
+        <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds. Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point.</abilityDescription>
+        <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -2089,6 +2092,9 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Large</size>
       </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>400</capacity>
+      </li>
       <li Class="CompProperties_Milkable">
         <milkDef>Meat_Twisted</milkDef>
         <milkIntervalDays>1</milkIntervalDays>
@@ -2119,10 +2125,10 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Bulbplump</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +100; hunger rate x50%.</effect>
-        <abilityLabel>Parasitic weapon: flesh tentacles</abilityLabel>
-        <abilityDescription>Two flesh tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown.</abilityDescription>
-        <twistedFleshCapacity>100</twistedFleshCapacity>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +400; hunger rate x50%; grants two tentacles.</effect>
+        <abilityLabel>Tentacle</abilityLabel>
+        <abilityDescription>Two tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown.</abilityDescription>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -2207,9 +2213,8 @@
       <baseHealthScale>0.3</baseHealthScale>
       <lifeExpectancy>15</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
-      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideAreaHediff">
-        <hediff>FH_SynbulbRampage</hediff>
-        <radius>12</radius>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideSmoke">
+        <smokeRadius>4.9</smokeRadius>
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
         <dividePawnCount>4</dividePawnCount>
         <dividePawnKindOptions>
@@ -2232,6 +2237,9 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Large</size>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>0</capacity>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
@@ -2260,9 +2268,10 @@
         <iconPath>UI/Ability/FH_BoneBurst</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Synbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; grants the psychic harmonizer condition.</effect>
-        <abilityLabel>Parasitic weapon: bone burst</abilityLabel>
-        <abilityDescription>Two tentacles aim for 1 second, then fire bone shards at enemies within 16 cells.</abilityDescription>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; grants two shatterspike tentacles and the psychic harmonizer condition.</effect>
+        <abilityLabel>Shatter-claw tentacle</abilityLabel>
+        <abilityDescription>Two shatter-claw tentacles aim for 1 second, then fire bone shards for 18 sharp damage with 100% armor penetration at enemies within 16 cells; each shot has a 1.5-second cooldown, 55 projectile speed, and 3 stopping power.</abilityDescription>
+        <twistedFleshCapacity>100</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -2309,6 +2318,14 @@
     <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
     <race>FH_Synbulb</race>
     <combatPower>360</combatPower>
+    <abilities>
+      <li>FH_SpikeLaunch_Synbulb</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Synbulb</skillDuty>
+      </li>
+    </modExtensions>
     <lifeStages>
       <li>
         <bodyGraphicData>

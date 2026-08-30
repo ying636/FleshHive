@@ -1,4 +1,3 @@
-using UnityEngine;
 using Verse;
 using Verse.AI.Group;
 
@@ -41,16 +40,6 @@ public class ParasitismHediff : HediffWithComps
         }
     }
 
-    public void Draw(Rect box)
-    {
-        if (Widgets.ButtonImage(box, this.Comp.Icon))
-        {
-            this.allow = !this.allow;
-        }
-        Widgets.DrawTextureFitted(new Rect(box.xMax - 12f, box.yMax - 12f, 12f, 12f), this.allow ?
-            Widgets.CheckboxOnTex : Widgets.CheckboxOffTex, 1);
-    }
-
     public override void PreRemoved()
     {
         base.PreRemoved();
@@ -77,7 +66,6 @@ public class ParasitismHediff : HediffWithComps
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look(ref this.allow, "allow", true);
         Scribe_Values.Look(ref this.spaceCost, "spaceCost");
         Scribe_Values.Look(ref this.parentChildParasite, "parentChildParasite", false);
         if (Scribe.mode == LoadSaveMode.Saving)
@@ -100,7 +88,6 @@ public class ParasitismHediff : HediffWithComps
     ParasitismComp comp;
     public Pawn flesh;
     public Lord lord;
-    public bool allow = true;
     public bool parentChildParasite;
     private bool fleshIsReference;
     public int spaceCost = 1;

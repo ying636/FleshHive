@@ -80,7 +80,7 @@ public class ITab_FleshHive : ITab
 
 public class Window_FleshHive : Window_Hive
 {
-    public Window_FleshHive(Thing hive) : base(hive)
+    public Window_FleshHive(Thing hive) : base(hive, null)
     {
     }
 

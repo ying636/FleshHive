@@ -52,7 +52,10 @@ public class FloatMenuOptionProvider_MountParasiticWeapon : FloatMenuOptionProvi
             clickedThing.SetForbidden(false);
             Job job = JobMaker.MakeJob(FleshHiveDefOf.FH_Job_MountParasiticWeapon, clickedThing);
             pawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
-            FleckMaker.Static(clickedThing.DrawPos, clickedThing.MapHeld, FleckDefOf.FeedbackEquip);
+            if (FleckDefOf.FeedbackEquip != null && clickedThing.MapHeld != null)
+            {
+                FleckMaker.Static(clickedThing.DrawPos, clickedThing.MapHeld, FleckDefOf.FeedbackEquip);
+            }
         }, MenuOptionPriority.High), pawn, clickedThing);
     }
 }

@@ -89,9 +89,9 @@
   <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_BoneSpikePenetration</defName>
     <label>monomolecular bone spikes</label>
-    <description>Bone spike skills used by player fleshbeasts have 90% armor penetration.</description>
+    <description>Player fleshbeasts gain +80% melee armor penetration.</description>
     <effect>BoneSpikePenetration</effect>
-    <effectValue>0.9</effectValue>
+    <effectValue>0.8</effectValue>
     <requiresPrimaryNest>true</requiresPrimaryNest>
     <nutritionCost>150</nutritionCost>
     <nerveFleshCost>5</nerveFleshCost>

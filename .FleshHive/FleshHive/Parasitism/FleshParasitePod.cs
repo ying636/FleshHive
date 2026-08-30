@@ -551,8 +551,12 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                     pawn.TryGetComp<ParasitismComp>() is {} comp
                     && pawn.CanReserveAndReach(this,PathEndMode.Touch,Danger.Deadly))
                 {
-                    options.Add(new FloatMenuOption(pawn.Label,() => 
-                            this.fleshUI = pawn,pawn.def.uiIcon,Color.white,MenuOptionPriority.Default
+                    options.Add(new FloatMenuOption(pawn.Label,() =>
+                        {
+                            this.fleshUI = pawn;
+                            this.cachedComp = null;
+                        },
+                            pawn.def.uiIcon,Color.white,MenuOptionPriority.Default
                         ,null,null,28f,r =>
                         {
                             Widgets.InfoCardButton(

@@ -32,13 +32,6 @@ public class ParasitismCapacityStat : StatWorker
     public override void FinalizeValue(StatRequest req, ref float val, bool applyPostProcess)
     {
         base.FinalizeValue(req, ref val, applyPostProcess);
-        Pawn pawn = req.Pawn ?? req.Thing as Pawn;
-        if (Hediff_Hela.GetCached(pawn) is Hediff_Hela hela)
-        {
-            val = Mathf.Min(val, hela.MaximumParasiteCapacity);
-            val = Mathf.FloorToInt(val);
-            return;
-        }
         val = Mathf.Min(val, 14);
         val = Mathf.FloorToInt(val);
     }

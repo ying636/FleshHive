@@ -65,11 +65,11 @@
 
   <AbilityDef>
     <defName>FH_BastionmeldFleshPulse_Parasitism</defName>
-    <label>electromagnetic pulse</label>
-    <description>Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields.</description>
+    <label>flesh pulse</label>
+    <description>Emit a flesh pulse centered on the caster.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>240000</cooldownTicksRange>
+    <cooldownTicksRange>60000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -146,10 +146,10 @@
   <AbilityDef>
     <defName>FH_FleshSpread_Parasitism</defName>
     <label>flesh spread</label>
-    <description>Spread twisted flesh across an area, consuming twisted flesh from the host.</description>
+    <description>Spread twisted flesh across an area.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>60000</cooldownTicksRange>
+    <cooldownTicksRange>300000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_FleshSpread</iconPath>
     <targetRequired>true</targetRequired>
     <verbProperties>
@@ -162,9 +162,6 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
-        <twistedFleshCost>100</twistedFleshCost>
-      </li>
       <li Class="FleshHive.CompProperties_AbilityFleshSpread">
         <explosionRadius>5</explosionRadius>
         <baseDamage>5</baseDamage>
@@ -256,7 +253,7 @@
   <AbilityDef>
     <defName>FH_FleshRebirth</defName>
     <label>flesh rebirth</label>
-    <description>Consume twisted flesh to purge harmful conditions and rebuild damaged flesh.</description>
+    <description>Consume 200 twisted flesh to purge harmful conditions and rebuild damaged flesh.</description>
     <abilityClass>FleshHive.Ability_FleshRebirth</abilityClass>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -284,9 +281,9 @@
   <AbilityDef>
     <defName>FH_DreadmeldTerrorRoar</defName>
     <label>terror roar</label>
-    <description>Release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror.</description>
+    <description>Consume 100 twisted flesh to release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror.</description>
     <iconPath>UI/Ability/FH_DreadmeldTerrorRoar</iconPath>
-    <cooldownTicksRange>7500</cooldownTicksRange>
+    <cooldownTicksRange>60000</cooldownTicksRange>
     <stunTargetWhileCasting>true</stunTargetWhileCasting>
     <targetRequired>false</targetRequired>
     <aiCanUse>true</aiCanUse>
@@ -315,6 +312,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>100</twistedFleshCost>
+      </li>
       <li Class="CompProperties_AbilityGiveMentalState">
         <compClass>CompAbilityEffect_GiveMentalState</compClass>
         <stateDef>Terror</stateDef>

@@ -1064,6 +1064,7 @@
           <thingDefs>
             <li>Bioferrite</li>
             <li>FH_NerveFlesh</li>
+            <li>FH_FleshCarapace</li>
             <li>Shard</li>
             <li>FH_DreadmeldSeed</li>
             <li>FH_NexusmeldSeed</li>
@@ -1821,6 +1822,7 @@
     </costList>
     <thingClass>FleshHive.FleshBush</thingClass>
     <altitudeLayer>LowPlant</altitudeLayer>
+    <rotatable>false</rotatable>
     <fillPercent>0.2</fillPercent>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>

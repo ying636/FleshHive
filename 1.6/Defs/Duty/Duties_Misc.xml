@@ -185,6 +185,15 @@
   </DutyDef>
 
   <DutyDef>
+    <defName>FH_Skill_Synbulb</defName>
+    <thinkNode Class="JobGiver_AIAbilityFight">
+      <targetAcquireRadius>48</targetAcquireRadius>
+      <targetKeepRadius>36</targetKeepRadius>
+      <ability>FH_SpikeLaunch_Synbulb</ability>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
     <defName>FH_Skill_Toughspike</defName>
     <thinkNode Class="JobGiver_AIAbilityFight">
       <targetAcquireRadius>12</targetAcquireRadius>

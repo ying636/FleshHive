@@ -97,6 +97,14 @@ public class ITab_ParasiticWeapons : ITab
         GUI.color = Color.white;
 
         buttonX -= ButtonSize;
+        Rect attackRect = new Rect(buttonX, rowRect.y + 4f, ButtonSize, ButtonSize);
+        TooltipHandler.TipRegion(attackRect, "ToggleTentacleAttackMode".Translate(mount.SlotLabel));
+        if (Widgets.ButtonImage(attackRect, mount.AutoAttackEnabled ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex))
+        {
+            mount.AutoAttackEnabled = !mount.AutoAttackEnabled;
+        }
+
+        buttonX -= ButtonSize + ButtonGap;
         Rect dropRect = new Rect(buttonX, rowRect.y + 4f, ButtonSize, ButtonSize);
         TooltipHandler.TipRegion(dropRect, "FH_UnmountParasiticWeaponDesc".Translate(mount.SlotLabel, weapon.LabelShort));
         if (Widgets.ButtonImage(dropRect, TexButton.Drop))

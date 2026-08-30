@@ -14,6 +14,8 @@ public class TentacleProperties
     public float armorPenetration;
     public float cooldown = 2f;
     public PawnRenderNodeProperties renderNode;
+    [NoTranslate]
+    public string iconPath;
 }
 
 public class Tentacle : IExposable
@@ -28,6 +30,43 @@ public class Tentacle : IExposable
     }
 
     public TentacleProperties Prop => this.prop;
+    public virtual bool CanAutoAttack => false;
+    public Texture2D Icon
+    {
+        get
+        {
+            if (!iconResolved)
+            {
+                iconResolved = true;
+                if (!Prop.iconPath.NullOrEmpty())
+                {
+                    icon = ContentFinder<Texture2D>.Get(Prop.iconPath, false);
+                }
+                if (icon == null)
+                {
+                    Log.Error($"[FleshHive] Missing tentacle gizmo icon: {Prop.iconPath ?? "null"}");
+                    icon = BaseContent.BadTex;
+                }
+            }
+            return icon;
+        }
+    }
+    public bool AutoAttackEnabled
+    {
+        get => autoAttackEnabled;
+        set
+        {
+            if (autoAttackEnabled == value)
+            {
+                return;
+            }
+            autoAttackEnabled = value;
+            if (!autoAttackEnabled)
+            {
+                NotifyAutoAttackDisabled();
+            }
+        }
+    }
 
     public virtual void Tick()
     {
@@ -56,7 +95,7 @@ public class Tentacle : IExposable
         }
     }
 
-    public virtual void RareTick(bool allow)
+    public virtual void RareTick()
     {
     }
 
@@ -69,6 +108,11 @@ public class Tentacle : IExposable
         Scribe_Values.Look(ref this.rotateTime, "rotateTime");
         Scribe_Values.Look(ref this.targetAngle, "targetAngle");
         Scribe_Values.Look(ref this.extraAngle, "extraAngle");
+        Scribe_Values.Look(ref autoAttackEnabled, "autoAttackEnabled", true);
+    }
+
+    protected virtual void NotifyAutoAttackDisabled()
+    {
     }
 
     public int idleTime;
@@ -81,4 +125,7 @@ public class Tentacle : IExposable
     public float targetAngle = -1f;
     public HediffComp_Parasitism Comp;
     public TentacleProperties prop;
+    private Texture2D icon;
+    private bool iconResolved;
+    private bool autoAttackEnabled = true;
 }

@@ -1,3 +1,5 @@
+using System;
+using System.Reflection;
 using HiveCreatureFramework;
 using RimWorld;
 using UnityEngine;
@@ -34,6 +36,36 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
     {
         base.InterruptCurrentAttack();
         this.DestroyAimingChargeMote();
+    }
+
+    protected override void TryStartAttack(LocalTargetInfo target)
+    {
+        if (this.AttackVerb?.verbProps.IsMeleeAttack != true)
+        {
+            base.TryStartAttack(target);
+            return;
+        }
+
+        Verb verb = this.AttackVerb;
+        if (verb is not Verb_MeleeAttack meleeVerb
+            || verb.Caster is not Pawn pawn
+            || !target.IsValid
+            || !verb.CanHitTarget(target))
+        {
+            this.ResetCurrentTarget();
+            return;
+        }
+
+        ApplyMeleeDamageDelegate(meleeVerb, target);
+        pawn.Notify_UsedVerb(pawn, verb);
+        pawn.health?.Notify_UsedVerb(verb, target);
+        verb.EquipmentSource?.Notify_UsedWeapon(pawn);
+        pawn.Drawer.Notify_MeleeAttackOn(target.Thing);
+        this.lastAttackTargetTick = Find.TickManager.TicksGame;
+        this.lastAttackedTarget = target;
+        verb.castCompleteCallback?.Invoke();
+        this.burstCooldownTicksLeft = Mathf.Max(1, verb.verbProps.AdjustedCooldown(verb, pawn).SecondsToTicks());
+        this.ResetCurrentTarget();
     }
 
     private void UpdateAimingChargeMote()
@@ -119,4 +151,8 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
     }
 
     private Mote aimingChargeMote;
+    private static readonly Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult> ApplyMeleeDamageDelegate =
+        (Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult>)typeof(Verb_MeleeAttack)
+            .GetMethod("ApplyMeleeDamageToTarget", BindingFlags.Instance | BindingFlags.NonPublic)
+            .CreateDelegate(typeof(Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult>));
 }

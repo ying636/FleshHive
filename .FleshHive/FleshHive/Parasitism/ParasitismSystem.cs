@@ -107,7 +107,7 @@ public class ParasitismSystem : HediffWithComps
         }
     }
 
-    public float HungerRate => this.Count * 0.2f;
+    public float HungerRate => this.ParasitismHediffs.Count * 0.2f;
 
     public int Count
     {
@@ -151,7 +151,12 @@ public class ParasitismSystem : HediffWithComps
         {
             yield return new Gizmo_TwistedFleshForParasitism(this);
         }
-        yield return new ParasitismAbilityGizmo(this);
+        if (ParasitismHediffs.Any(hediff =>
+            hediff.TryGetComp<HediffComp_Parasitism>() is { ShowAttackGizmo: true } comp &&
+            comp.AttackTentacles.Any()))
+        {
+            yield return new ParasitismAbilityGizmo(this);
+        }
         if (DebugSettings.ShowDevGizmos)
         {
             if (MaxTwistedFlesh > 0)
@@ -237,6 +242,7 @@ public class ParasitismSystem : HediffWithComps
             }
             SetDirty();
             this.ParasitismHediffs.Add(hd);
+            UpdateParasitismMood();
             AssignAngle();
             return true;
         }
@@ -255,17 +261,15 @@ public class ParasitismSystem : HediffWithComps
             }
         }
         hd.flesh = null;
-        if (hd.parentChildParasite)
+        if (flesh?.Map is Map map)
         {
-            flesh?.Map?.GetComponent<MapComponent_FleshHive>()?.RegisterFleshBeast(flesh);
-            if (flesh?.Map is Map map)
-            {
-                HCFGameUtility.AssignGroup(flesh, map, true);
-            }
+            map.GetComponent<MapComponent_FleshHive>()?.RegisterFleshBeast(flesh);
+            HCFGameUtility.AssignGroup(flesh, map, true);
         }
         this.pawn.health.RemoveHediff(hd);
         SetDirty();
         this.ParasitismHediffs.Remove(hd);
+        UpdateParasitismMood();
         AssignAngle();
     }
 
@@ -398,6 +402,7 @@ public class ParasitismSystem : HediffWithComps
         }
         SetDirty();
         this.ParasitismHediffs.Add(hd);
+        UpdateParasitismMood();
         AssignAngle();
     }
 
@@ -409,6 +414,34 @@ public class ParasitismSystem : HediffWithComps
         }
     }
 
+    private void UpdateParasitismMood()
+    {
+        if (pawn?.needs?.mood?.thoughts == null)
+        {
+            return;
+        }
+
+        Thought_Memory memory = pawn.needs.mood.thoughts.memories
+            .GetFirstMemoryOfDef(FleshHiveDefOf.FH_Thought_FleshParasitism);
+        if (ParasitismHediffs.Count == 0)
+        {
+            if (memory != null)
+            {
+                pawn.needs.mood.thoughts.memories.RemoveMemory(memory);
+            }
+            return;
+        }
+
+        if (memory == null)
+        {
+            memory = (Thought_Memory)ThoughtMaker.MakeThought(FleshHiveDefOf.FH_Thought_FleshParasitism);
+            memory.permanent = true;
+            pawn.needs.mood.thoughts.memories.TryGainMemory(memory);
+        }
+
+        memory.moodOffset = -5 * ParasitismHediffs.Count;
+    }
+
     public override void ExposeData()
     {
         base.ExposeData();
@@ -417,6 +450,7 @@ public class ParasitismSystem : HediffWithComps
         Scribe_Values.Look(ref allowAutoRefillTwistedFlesh, "allowAutoRefillTwistedFlesh", true);
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
+            UpdateParasitismMood();
             AssignAngle();
             if (this.pawn != null && this.pawn.Spawned && MaxTwistedFlesh > 0)
             {
@@ -429,6 +463,7 @@ public class ParasitismSystem : HediffWithComps
     public override void PostAdd(DamageInfo? dinfo)
     {
         base.PostAdd(dinfo);
+        UpdateParasitismMood();
         if (this.pawn != null && this.pawn.Spawned && MaxTwistedFlesh > 0)
         {
             MapComponent_FleshHive comp = this.pawn.Map?.GetComponent<MapComponent_FleshHive>();

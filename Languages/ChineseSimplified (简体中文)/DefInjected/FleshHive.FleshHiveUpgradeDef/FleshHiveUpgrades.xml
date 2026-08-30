@@ -8,8 +8,8 @@
   
   <!-- EN: monomolecular bone spikes -->
   <FH_Upgrade_BoneSpikePenetration.label>单分子骨刺</FH_Upgrade_BoneSpikePenetration.label>
-  <!-- EN: Bone spike skills used by player fleshbeasts have 90% armor penetration. -->
-  <FH_Upgrade_BoneSpikePenetration.description>所有血肉兽的投掷骨刺技能护甲穿透变为90%。</FH_Upgrade_BoneSpikePenetration.description>
+  <!-- EN: Player fleshbeasts gain +80% melee armor penetration. -->
+  <FH_Upgrade_BoneSpikePenetration.description>所有血肉兽获得+80%的近战护甲穿透。</FH_Upgrade_BoneSpikePenetration.description>
   
   <!-- EN: efficient cell division -->
   <FH_Upgrade_CellDivision.label>高效细胞分裂</FH_Upgrade_CellDivision.label>

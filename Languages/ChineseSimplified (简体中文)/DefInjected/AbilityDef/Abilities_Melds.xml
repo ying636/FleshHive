@@ -6,10 +6,10 @@
   <!-- EN: Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields. -->
   <FH_BastionmeldFleshPulse.description>以自身为中心释放EMP脉冲，干扰附近的机械族、炮塔和子弹护盾。</FH_BastionmeldFleshPulse.description>
   
-  <!-- EN: electromagnetic pulse -->
-  <FH_BastionmeldFleshPulse_Parasitism.label>电磁脉冲</FH_BastionmeldFleshPulse_Parasitism.label>
-  <!-- EN: Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields. -->
-  <FH_BastionmeldFleshPulse_Parasitism.description>以自身为中心释放EMP脉冲，干扰附近的机械族、炮塔和子弹护盾。</FH_BastionmeldFleshPulse_Parasitism.description>
+  <!-- EN: flesh pulse -->
+  <FH_BastionmeldFleshPulse_Parasitism.label>血肉脉冲</FH_BastionmeldFleshPulse_Parasitism.label>
+  <!-- EN: Emit a flesh pulse centered on the caster. -->
+  <FH_BastionmeldFleshPulse_Parasitism.description>以自身为中心释放血肉脉冲。</FH_BastionmeldFleshPulse_Parasitism.description>
   
   <!-- EN: summon flesh deadguard -->
   <FH_BastionmeldSummonDeadguard.label>召唤血肉死卫</FH_BastionmeldSummonDeadguard.label>
@@ -18,8 +18,8 @@
   
   <!-- EN: terror roar -->
   <FH_DreadmeldTerrorRoar.label>惊惧咆哮</FH_DreadmeldTerrorRoar.label>
-  <!-- EN: Release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror. -->
-  <FH_DreadmeldTerrorRoar.description>发出令人胆裂的咆哮，有一定几率使附近敌人与动物惊逃四散。</FH_DreadmeldTerrorRoar.description>
+  <!-- EN: Consume 100 twisted flesh to release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror. -->
+  <FH_DreadmeldTerrorRoar.description>消耗100扭曲肉，发出令人胆裂的咆哮，有一定几率使附近敌人与动物惊逃四散。</FH_DreadmeldTerrorRoar.description>
   
   <!-- EN: flesh fission -->
   <FH_FissionmeldFission.label>血肉裂殖</FH_FissionmeldFission.label>
@@ -33,8 +33,8 @@
   
   <!-- EN: flesh rebirth -->
   <FH_FleshRebirth.label>血肉重生</FH_FleshRebirth.label>
-  <!-- EN: Consume twisted flesh to purge harmful conditions and rebuild damaged flesh. -->
-  <FH_FleshRebirth.description>消耗200扭曲肉，清除宿主身上的负面状态和伤口。</FH_FleshRebirth.description>
+  <!-- EN: Consume 200 twisted flesh to purge harmful conditions and rebuild damaged flesh. -->
+  <FH_FleshRebirth.description>消耗200扭曲肉，清除宿主身上的负面状态并重建受损血肉。</FH_FleshRebirth.description>
   
   <!-- EN: flesh spread -->
   <FH_FleshSpread.label>血肉蔓延</FH_FleshSpread.label>
@@ -43,8 +43,8 @@
   
   <!-- EN: flesh spread -->
   <FH_FleshSpread_Parasitism.label>血肉蔓延</FH_FleshSpread_Parasitism.label>
-  <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
-  <FH_FleshSpread_Parasitism.description>消耗宿主的扭曲肉，在一片区域内蔓延扭曲血肉。</FH_FleshSpread_Parasitism.description>
+  <!-- EN: Spread twisted flesh across an area. -->
+  <FH_FleshSpread_Parasitism.description>在一片区域内蔓延扭曲血肉。</FH_FleshSpread_Parasitism.description>
   
   <!-- EN: rampage charge -->
   <FH_RampageCharge.label>狂暴冲锋</FH_RampageCharge.label>

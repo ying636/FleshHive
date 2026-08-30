@@ -52,16 +52,6 @@ public static class Patch_InheritParaspikeParasitism
             return;
         }
 
-        foreach (ParasitismHediff parasitismHediff in system.ParasitismHediffs)
-        {
-            if (parasitismHediff.flesh == parasite)
-            {
-                parasitismHediff.allow = true;
-                return;
-            }
-        }
-
-        Log.Error($"[FleshHive] Inherited paraspike was attached to newborn {child}, but its parasitism hediff could not be found.");
     }
 
     private static bool HasParaspikeParasite(Pawn? parent)
