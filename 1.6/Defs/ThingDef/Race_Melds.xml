@@ -374,7 +374,7 @@
   <ThingDef ParentName="FH_NodeFleshBeast">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
-    <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld usually constructs defensive fortifications and wears enemies down through sustained long-range combat.</description>
+    <description>A colossal amalgamation of dozens of smaller fleshbeasts, coordinated by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld continually assembles armed fleshbeasts and defeats its enemies through long-range fire.</description>
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
       <MinimumContainmentStrength>110</MinimumContainmentStrength>
@@ -501,7 +501,7 @@
           <li>
             <label>Flesh weapon mount</label>
             <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
-            <turretDef>Gun_ChargeBlasterHeavyTurret</turretDef>
+            <turretDef>Gun_ChargeBlasterHeavy</turretDef>
             <angleOffset>-90</angleOffset>
             <mainWeapon>false</mainWeapon>
             <canBeUnmounted>true</canBeUnmounted>
@@ -534,7 +534,7 @@
           <li>
             <label>Flesh weapon mount</label>
             <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
-            <turretDef>FH_Gun_BastionmeldInfernoCannon</turretDef>
+            <turretDef>Gun_ThumpCannon</turretDef>
             <angleOffset>-90</angleOffset>
             <mainWeapon>false</mainWeapon>
             <canBeUnmounted>true</canBeUnmounted>

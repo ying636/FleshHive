@@ -645,6 +645,17 @@
       <baseHealthScale>0.3</baseHealthScale>
       <lifeExpectancy>10</lifeExpectancy>
       <renderTree>FH_Shatterspike</renderTree>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
+        <dividePawnCount>1</dividePawnCount>
+        <dividePawnKindOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Puffspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+        </dividePawnKindOptions>
+      </deathAction>
       <lifeStageAges>
         <li>
           <def>EntityFullyFormed</def>
@@ -1415,16 +1426,8 @@
       <flightStartChanceOnJobStart>0.25</flightStartChanceOnJobStart>
       <flightSpeedFactor>2.5</flightSpeedFactor>
       <canFlyIntoMap>true</canFlyIntoMap>
-      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
-        <divideBloodFilthCountRange>1~2</divideBloodFilthCountRange>
-        <dividePawnCount>2</dividePawnCount>
-        <dividePawnKindOptions>
-          <li>FH_Fingerspike</li>
-          <li>FH_Puffspike</li>
-          <li>FH_Whipspike</li>
-          <li>FH_Gutspike</li>
-          <li>FH_Paraspike</li>
-        </dividePawnKindOptions>
+      <deathAction Class="DeathActionProperties" Inherit="false">
+        <workerClass>DeathActionWorker_Simple</workerClass>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -1559,7 +1562,7 @@
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
+        <dividePawnCount>6</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Toughspike</li>
           <li>FH_Trispike</li>
@@ -1771,10 +1774,9 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Acidbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; Toxic Resistance +100%; twisted flesh capacity +200; grants two tentacles, acid mortar, and acid spray abilities.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; Toxic Resistance +100%; grants two tentacles, acid mortar, and acid spray abilities.</effect>
         <abilityLabel>Tentacle</abilityLabel>
         <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds. It can launch an acid mortar shell at long range or spray sticky acid over a target area.</abilityDescription>
-        <twistedFleshCapacity>200</twistedFleshCapacity>
       </li>
     </comps>
     <tools>
@@ -1945,10 +1947,9 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Spitbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +200; grants two tentacles and the flesh mortar ability.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; grants two tentacles and the flesh mortar ability.</effect>
         <abilityLabel>Tentacle</abilityLabel>
-        <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds. Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point.</abilityDescription>
-        <twistedFleshCapacity>200</twistedFleshCapacity>
+        <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds. The flesh mortar launches an explosive shell that deals 30 damage over a 5-by-5 area and releases one random small fleshbeast at the impact point.</abilityDescription>
       </li>
     </comps>
     <tools>
@@ -2092,9 +2093,6 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Large</size>
       </li>
-      <li Class="FleshHive.CompProperties_TwistedFlesh">
-        <capacity>400</capacity>
-      </li>
       <li Class="CompProperties_Milkable">
         <milkDef>Meat_Twisted</milkDef>
         <milkIntervalDays>1</milkIntervalDays>
@@ -2125,10 +2123,9 @@
         <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
         <cost>3</cost>
         <hediff>FH_Parasitism_Bulbplump</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +400; hunger rate x50%; grants two tentacles.</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; hunger rate x50%; grants two tentacles.</effect>
         <abilityLabel>Tentacle</abilityLabel>
         <abilityDescription>Two tentacles strike nearby enemies for 10 blunt damage with a 2-second cooldown.</abilityDescription>
-        <twistedFleshCapacity>400</twistedFleshCapacity>
       </li>
     </comps>
     <tools>

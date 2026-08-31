@@ -89,9 +89,13 @@
         <costs>
             <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
         </costs>
-        <requirements>
-            <FH_FleshCarapace>5</FH_FleshCarapace>
-        </requirements>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <FH_FleshCarapace>5</FH_FleshCarapace>
+                </requirements>
+            </li>
+        </specialResources>
         <kind>FH_Whipspike</kind>
         <spawningDay>0.25~0.25</spawningDay>
         <researchPrerequisites>
@@ -169,10 +173,17 @@
         <label>Flesh replica</label>
         <description>Spawn a flesh replica.</description>
         <kind>FH_FleshReplica</kind>
-        <spawningDay>0.25~0.25</spawningDay>
+        <spawningDay>1~1</spawningDay>
         <costs>
             <FH_Resource_Nutrition>6</FH_Resource_Nutrition>
         </costs>
+        <specialResources>
+            <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+                <requirements>
+                    <Bioferrite>15</Bioferrite>
+                </requirements>
+            </li>
+        </specialResources>
     </HiveCreatureFramework.UnitDef>
 
     <HiveCreatureFramework.UnitDef>
@@ -268,7 +279,7 @@
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <FH_FleshCarapace>20</FH_FleshCarapace>
+                    <FH_FleshCarapace>30</FH_FleshCarapace>
                 </requirements>
             </li>
         </specialResources>
@@ -286,7 +297,7 @@
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <FH_FleshCarapace>20</FH_FleshCarapace>
+                    <FH_FleshCarapace>30</FH_FleshCarapace>
                 </requirements>
             </li>
         </specialResources>
@@ -304,7 +315,7 @@
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <FH_FleshCarapace>20</FH_FleshCarapace>
+                    <FH_FleshCarapace>30</FH_FleshCarapace>
                 </requirements>
             </li>
         </specialResources>
@@ -322,7 +333,7 @@
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <FH_FleshCarapace>20</FH_FleshCarapace>
+                    <FH_FleshCarapace>30</FH_FleshCarapace>
                 </requirements>
             </li>
         </specialResources>
@@ -340,7 +351,7 @@
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <FH_FleshCarapace>20</FH_FleshCarapace>
+                    <FH_FleshCarapace>30</FH_FleshCarapace>
                 </requirements>
             </li>
         </specialResources>
@@ -351,12 +362,13 @@
         <label>Dreadmeld</label>
         <description>Dreadmeld</description>
         <kind>FH_Dreadmeld</kind>
-        <spawningDay>3.75~3.75</spawningDay>
+        <spawningDay>5~5</spawningDay>
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <Shard>6</Shard>
-                    <Bioferrite>24</Bioferrite>
+                    <Shard>5</Shard>
+                    <Bioferrite>150</Bioferrite>
+                    <FH_FleshCarapace>150</FH_FleshCarapace>
                     <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
                 </requirements>
             </li>
@@ -371,12 +383,13 @@
         <label>Furiousmeld</label>
         <description>Furiousmeld</description>
         <kind>FH_Furiousmeld</kind>
-        <spawningDay>3.75~3.75</spawningDay>
+        <spawningDay>5~5</spawningDay>
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <Shard>6</Shard>
-                    <Bioferrite>24</Bioferrite>
+                    <Shard>5</Shard>
+                    <Bioferrite>150</Bioferrite>
+                    <FH_FleshCarapace>150</FH_FleshCarapace>
                     <FH_FuriousmeldSeed>1</FH_FuriousmeldSeed>
                 </requirements>
             </li>
@@ -391,12 +404,13 @@
         <label>Bastionmeld</label>
         <description>Bastionmeld</description>
         <kind>FH_Bastionmeld</kind>
-        <spawningDay>3.75~3.75</spawningDay>
+        <spawningDay>5~5</spawningDay>
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <Shard>6</Shard>
-                    <Bioferrite>24</Bioferrite>
+                    <Shard>5</Shard>
+                    <Bioferrite>150</Bioferrite>
+                    <FH_FleshCarapace>150</FH_FleshCarapace>
                     <FH_BastionmeldSeed>1</FH_BastionmeldSeed>
                 </requirements>
             </li>
@@ -411,12 +425,13 @@
         <label>Nexusmeld</label>
         <description>Nexusmeld</description>
         <kind>FH_Nexusmeld</kind>
-        <spawningDay>3.75~3.75</spawningDay>
+        <spawningDay>5~5</spawningDay>
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <Shard>6</Shard>
-                    <Bioferrite>24</Bioferrite>
+                    <Shard>5</Shard>
+                    <Bioferrite>150</Bioferrite>
+                    <FH_FleshCarapace>150</FH_FleshCarapace>
                     <FH_NexusmeldSeed>1</FH_NexusmeldSeed>
                 </requirements>
             </li>
@@ -431,12 +446,13 @@
         <label>Fissionmeld</label>
         <description>Fissionmeld</description>
         <kind>FH_Fissionmeld</kind>
-        <spawningDay>3.75~3.75</spawningDay>
+        <spawningDay>5~5</spawningDay>
         <specialResources>
             <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
                 <requirements>
-                    <Shard>6</Shard>
-                    <Bioferrite>24</Bioferrite>
+                    <Shard>5</Shard>
+                    <Bioferrite>150</Bioferrite>
+                    <FH_FleshCarapace>150</FH_FleshCarapace>
                     <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
                 </requirements>
             </li>

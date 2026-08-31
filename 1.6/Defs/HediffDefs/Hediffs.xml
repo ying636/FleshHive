@@ -603,7 +603,7 @@
     <defName>FH_Parasitism_Spitbulb</defName>
     <label>spitbulb parasitism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point.\n\n-Tentacle</description>
+    <description>This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains a flesh mortar that releases a small fleshbeast at the impact point.\n\n-Tentacle</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -671,7 +671,7 @@
     <defName>FH_Parasitism_Bulbplump</defName>
     <label>bulbplump parasitism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced and it can consume twisted flesh to perform a flesh jump.\n\n-Tentacle</description>
+    <description>This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced and it gains the flesh jump ability.\n\n-Tentacle</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -726,9 +726,6 @@
       </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_Parasitism_FleshJump</abilityDef>
-      </li>
-      <li Class="FleshHive.HediffCompProperties_TwistedFleshProducer">
-        <twistedFleshPerDay>50</twistedFleshPerDay>
       </li>
     </comps>
   </HediffDef>

@@ -61,7 +61,7 @@ public class DeathActionWorker_UnitDivideSmoke : DeathActionWorker_UnitDivide
         foreach (Pawn pawn in map.mapPawns.AllPawnsSpawned)
         {
             if (pawn.Dead
-                || pawn.TryGetComp<CompFleshBeastCache>() == null
+                || pawn.RaceProps?.FleshType != FleshTypeDefOf.Fleshbeast
                 || !pawn.Position.InHorDistOf(position, Props.smokeRadius))
             {
                 continue;

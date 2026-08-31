@@ -12,7 +12,7 @@
   <!-- EN: Parasitic abilities: acid mortar and acid spray -->
   <FH_Acidbulb.comps.ParasitismComp.abilityLabel>触手</FH_Acidbulb.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh parasitism mood -6; Social Impact -10%; Toxic Resistance +100%; grants acid mortar and acid spray abilities. -->
-  <FH_Acidbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；毒抗+100%；扭曲肉容量+200；提供两条触手、“酸蚀迫击炮”和“酸液喷吐”主动能力。</FH_Acidbulb.comps.ParasitismComp.effect>
+  <FH_Acidbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；毒抗+100%；提供两条触手、“酸蚀迫击炮”和“酸液喷吐”主动能力。</FH_Acidbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Acidbulb.tools.tentacle-0.label>触手</FH_Acidbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -62,7 +62,7 @@
   <!-- EN: Parasitic weapon: flesh tentacles -->
   <FH_Bulbplump.comps.ParasitismComp.abilityLabel>触手</FH_Bulbplump.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; hunger rate x50%. -->
-  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；饥饿度×50%；提供两条触手。</FH_Bulbplump.comps.ParasitismComp.effect>
+  <FH_Bulbplump.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；饥饿度×50%；提供两条触手。</FH_Bulbplump.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bulbplump.tools.tentacle-0.label>触手</FH_Bulbplump.tools.tentacle-0.label>
   <!-- EN: tentacle -->
@@ -232,12 +232,12 @@
   <FH_Spitbulb.description>由许多小型血肉兽组成的可怕混合体，这些血肉兽都由同一个神经系统控制。其身体上生长着一个巨大的肌肉喷射装置，可以在超远距离发射扭曲的血肉团块。这个团块在命中目标后会快速集合成活的小型血肉兽。它的行动相对缓慢，也很容易被消灭，死后会分裂成一群小型血肉兽。</FH_Spitbulb.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Spitbulb.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: Consume 25 twisted flesh to launch an explosive shell that deals 20 damage over a 3-by-3 area and releases one random small fleshbeast at the impact point. -->
-  <FH_Spitbulb.comps.ParasitismComp.abilityDescription>宿主体表生长两条触手，每条造成10点钝器伤害，攻击冷却2秒。消耗25扭曲肉发射爆炸性炮弹，在3×3区域造成20点伤害，并在命中位置释放一只随机小型血肉兽。</FH_Spitbulb.comps.ParasitismComp.abilityDescription>
+  <!-- EN: The host grows two tentacles that deal 10 blunt damage every 2 seconds. The flesh mortar launches an explosive shell that deals 30 damage over a 5-by-5 area and releases one random small fleshbeast at the impact point. -->
+  <FH_Spitbulb.comps.ParasitismComp.abilityDescription>宿主体表生长两条触手，每条造成10点钝器伤害，攻击冷却2秒。血肉迫击炮发射爆炸性炮弹，在5×5区域造成30点伤害，并在命中位置释放一只随机小型血肉兽。</FH_Spitbulb.comps.ParasitismComp.abilityDescription>
   <!-- EN: Parasitic weapon: flesh mortar -->
   <FH_Spitbulb.comps.ParasitismComp.abilityLabel>触手</FH_Spitbulb.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh parasitism mood -6; Social Impact -5%; twisted flesh capacity +250; grants the flesh mortar ability. -->
-  <FH_Spitbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+200；提供两条触手和“血肉迫击炮”主动能力。</FH_Spitbulb.comps.ParasitismComp.effect>
+  <FH_Spitbulb.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；提供两条触手和“血肉迫击炮”主动能力。</FH_Spitbulb.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Spitbulb.tools.tentacle-0.label>触手</FH_Spitbulb.tools.tentacle-0.label>
   <!-- EN: tentacle -->

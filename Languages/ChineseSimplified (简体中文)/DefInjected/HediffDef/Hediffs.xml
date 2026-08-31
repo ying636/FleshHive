@@ -19,7 +19,7 @@
   <!-- EN: bulbplump parasitism -->
   <FH_Parasitism_Bulbplump.label>增生瘤兽寄生</FH_Parasitism_Bulbplump.label>
   <!-- EN: The host's hunger rate is reduced, and two explosive-sac-fed flesh tentacles grow from its body. The host can consume twisted flesh to perform a flesh jump. -->
-  <FH_Parasitism_Bulbplump.description>该生物被增生瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n饥饿速度降低，并可以消耗扭曲肉进行血肉跳跃。\n\n-触手</FH_Parasitism_Bulbplump.description>
+  <FH_Parasitism_Bulbplump.description>该生物被增生瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n饥饿速度降低，并获得血肉跳跃能力。\n\n-触手</FH_Parasitism_Bulbplump.description>
   
   <!-- EN: fingerspike parasitism -->
   <FH_Parasitism_Fingerspike.label>独爪兽寄生</FH_Parasitism_Fingerspike.label>
@@ -59,7 +59,7 @@
   <!-- EN: spitbulb parasitism -->
   <FH_Parasitism_Spitbulb.label>喷射瘤兽寄生</FH_Parasitism_Spitbulb.label>
   <!-- EN: The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point. -->
-  <FH_Parasitism_Spitbulb.description>该生物被喷射瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n获得一门消耗扭曲肉的血肉迫击炮，并在命中位置释放一只小型血肉兽。\n\n-触手</FH_Parasitism_Spitbulb.description>
+  <FH_Parasitism_Spitbulb.description>该生物被喷射瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n获得一门血肉迫击炮，并在命中位置释放一只小型血肉兽。\n\n-触手</FH_Parasitism_Spitbulb.description>
   
   <!-- EN: synbulb parasitism -->
   <FH_Parasitism_Synbulb.label>共鸣瘤兽寄生</FH_Parasitism_Synbulb.label>

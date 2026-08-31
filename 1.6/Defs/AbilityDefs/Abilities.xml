@@ -197,7 +197,7 @@
   <AbilityDef>
     <defName>FH_Parasitism_AcidMortar</defName>
     <label>acid mortar</label>
-    <description>Consume 50 twisted flesh to launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns.</description>
+    <description>Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>1250</cooldownTicksRange>
@@ -214,11 +214,6 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
-    <comps>
-      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
-        <twistedFleshCost>50</twistedFleshCost>
-      </li>
-    </comps>
   </AbilityDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -357,7 +352,7 @@
   <AbilityDef>
     <defName>FH_Spitbulb_Launch</defName>
     <label>flesh mortar</label>
-    <description>Consume 50 twisted flesh to launch an explosive flesh shell that releases three random small fleshbeasts at the impact point.</description>
+    <description>Launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>1250</cooldownTicksRange>
@@ -374,17 +369,12 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
-    <comps>
-      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
-        <twistedFleshCost>50</twistedFleshCost>
-      </li>
-    </comps>
   </AbilityDef>
 
   <AbilityDef>
     <defName>FH_Parasitism_FleshMortar</defName>
     <label>flesh mortar</label>
-    <description>Consume 100 twisted flesh to launch an explosive flesh shell. The explosion covers a 3-by-3 area and releases one random small fleshbeast at the impact point.</description>
+    <description>Launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases one random small fleshbeast at the impact point.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>1250</cooldownTicksRange>
@@ -401,11 +391,6 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
-    <comps>
-      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
-        <twistedFleshCost>100</twistedFleshCost>
-      </li>
-    </comps>
   </AbilityDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -422,10 +407,10 @@
       <shadowSize>1</shadowSize>
       <damageDef>Bomb</damageDef>
       <spinRate>20</spinRate>
-      <damageAmountBase>20</damageAmountBase>
+      <damageAmountBase>30</damageAmountBase>
       <speed>41</speed>
       <arcHeightFactor>1</arcHeightFactor>
-      <explosionRadius>1.95</explosionRadius>
+      <explosionRadius>2.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundExplode>SpitterSpitLands</soundExplode>
       <filthCount>1</filthCount>
@@ -447,10 +432,10 @@
       <shadowSize>1</shadowSize>
       <damageDef>Bomb</damageDef>
       <spinRate>20</spinRate>
-      <damageAmountBase>10</damageAmountBase>
+      <damageAmountBase>30</damageAmountBase>
       <speed>41</speed>
       <arcHeightFactor>1</arcHeightFactor>
-      <explosionRadius>1.95</explosionRadius>
+      <explosionRadius>2.9</explosionRadius>
       <flyOverhead>true</flyOverhead>
       <soundExplode>SpitterSpitLands</soundExplode>
       <filthCount>1</filthCount>
@@ -605,7 +590,7 @@
   <AbilityDef>
     <defName>FH_Parasitism_FleshJump</defName>
     <label>flesh jump</label>
-    <description>Consume 25 twisted flesh to directionally detonate explosive sacs and leap a long distance.</description>
+    <description>Directionally detonate explosive sacs and leap a long distance.</description>
     <aiCanUse>true</aiCanUse>
     <cooldownTicksRange>2500</cooldownTicksRange>
     <hostile>false</hostile>
@@ -628,9 +613,6 @@
       </targetParams>
     </verbProperties>
     <comps>
-      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
-        <twistedFleshCost>25</twistedFleshCost>
-      </li>
       <li Class="FleshHive.CompProperties_AbilityFleshJumpExplosion">
         <baseDamage>5</baseDamage>
         <explosionRadius>4.5</explosionRadius>
