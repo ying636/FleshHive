@@ -1633,7 +1633,7 @@
     <graphicData>
       <texPath>Things/Building/FH_FleshPower</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2.5,2.5)</drawSize>
+      <drawSize>(2.25,2.25)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>

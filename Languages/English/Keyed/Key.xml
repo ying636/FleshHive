@@ -172,6 +172,7 @@
   <FH_Fusion_ResultHint>Perform this fusion once to learn the result.</FH_Fusion_ResultHint>
   <FH_Fusion_Result>Result: {0}</FH_Fusion_Result>
   <FH_Fusion_MaterialRequirement>Materials: {0} x{1}</FH_Fusion_MaterialRequirement>
+  <FH_Fusion_LargeMaterialRequirement>Materials: {0} x2, {1} x1</FH_Fusion_LargeMaterialRequirement>
   <FH_Fusion_Time>Fusion time: {0} days</FH_Fusion_Time>
   <FH_Fusion_Value>Value: {0}</FH_Fusion_Value>
   <FH_Fusion_Description>Select the fleshbeasts to consume in the fusion. Different materials produce fleshbeasts with different traits, and the result is only revealed after the fusion is complete.\nCompleted combinations are recorded automatically as discovered templates for later reuse.</FH_Fusion_Description>

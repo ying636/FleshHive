@@ -64,6 +64,8 @@ public static class FleshHiveDefOf
     public static PawnKindDef FH_Fleshtitan;
     public static PawnKindDef FH_Dreadmeld;
 
+    public static ThingDef FH_Gun_BastionmeldTrackingLaser;
+
     public static ThingDef FH_FleshParasiteVat;
     public static ThingDef FH_FleshSack;
     public static ThingDef FH_FleshBlock;

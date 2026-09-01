@@ -42,26 +42,26 @@
         <beamGroundFleckDef>HCF_Fleck_BeamBurn_White</beamGroundFleckDef>
         <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
         <beamLineFleckDef>HCF_Fleck_BeamSpark_White</beamLineFleckDef>
-        <beamStartOffset>0.5</beamStartOffset>
+        <beamStartOffset>0.3</beamStartOffset>
         <startDrawData>
           <dataNorth>
-            <offset>(0.95, 0, -0.3)</offset>
+            <offset>(0.62, 0, 0.31)</offset>
           </dataNorth>
           <dataEast>
-            <offset>(0.3, 0, -0.95)</offset>
+            <offset>(0.2, 0, -0.12)</offset>
           </dataEast>
           <dataSouth>
-            <offset>(-0.95, 0, 0.3)</offset>
+            <offset>(-0.62, 0, 0.7)</offset>
           </dataSouth>
           <dataWest>
             <rotationOffset>180</rotationOffset>
-            <offset>(-0.3, 0, 0.95)</offset>
+            <offset>(-0.2, 0, 1.12)</offset>
           </dataWest>
         </startDrawData>
         <beamEndEffecterDef>HCF_GraserBeam_End_White</beamEndEffecterDef>
         <persistentTargetMote>FH_Missile_Target</persistentTargetMote>
         <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
-        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMote>FH_Mote_Bastionmeld_Charge</aimingChargeMote>
         <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
         <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
         <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>

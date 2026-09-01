@@ -11,7 +11,9 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
 {
     public override void MakeGun()
     {
-        if (this.Thing.Faction?.IsPlayer == true)
+        if (this.Thing.Faction == null
+            || (this.Thing.Faction.IsPlayer == true
+                && this.Props.turretDef != FleshHiveDefOf.FH_Gun_BastionmeldTrackingLaser))
         {
             return;
         }
@@ -88,6 +90,10 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
                 attackVerb.verbProps.aimingChargeMote,
                 1f,
                 makeOffscreen: true);
+            if (this.aimingChargeMote is Mote_BastionmeldCharge chargeMote)
+            {
+                chargeMote.UpdatePositionAndRotationAction = this.UpdateAimingChargeMoteDrawPosition;
+            }
         }
 
         if (this.aimingChargeMote == null)
@@ -100,14 +106,37 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
         direction.Normalize();
 
         this.aimingChargeMote.paused = this.Thing is Pawn pawn && pawn.stances.stunner.Stunned;
-        this.aimingChargeMote.exactRotation = direction.AngleFlat();
-        this.aimingChargeMote.exactPosition = this.GetAimingChargePosition(attackVerb, direction);
+        if (this.aimingChargeMote is not Mote_BastionmeldCharge)
+        {
+            this.aimingChargeMote.exactRotation = direction.AngleFlat();
+            this.aimingChargeMote.exactPosition = this.GetAimingChargePosition(attackVerb, direction);
+        }
         this.aimingChargeMote.Maintain();
+    }
+
+    private void UpdateAimingChargeMoteDrawPosition(Mote_BastionmeldCharge mote)
+    {
+        Verb attackVerb = this.AttackVerb;
+        if (attackVerb == null || !this.currentTarget.IsValid || !this.Thing.Spawned)
+        {
+            return;
+        }
+
+        Vector3 direction = this.currentTarget.CenterVector3 - this.Thing.DrawPos;
+        direction.y = 0f;
+        if (direction.sqrMagnitude <= 0.001f)
+        {
+            return;
+        }
+
+        direction.Normalize();
+        mote.exactRotation = direction.AngleFlat();
+        mote.exactPosition = this.GetAimingChargePosition(attackVerb, direction);
     }
 
     private Vector3 GetAimingChargePosition(Verb attackVerb, Vector3 direction)
     {
-        Vector3 position = this.Thing.Position.ToVector3Shifted();
+        Vector3 position = this.Thing.DrawPos;
         if (attackVerb.verbProps is not VerbProperties_TrackingLaser trackingLaserProps
             || trackingLaserProps.startDrawData == null)
         {
@@ -117,7 +146,7 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
         Rot4 drawRotation = this.GetTrackingLaserDrawRotation(trackingLaserProps);
         return position
                + trackingLaserProps.startDrawData.OffsetForRot(drawRotation)
-               + direction * attackVerb.verbProps.beamStartOffset;
+               + direction * (attackVerb.verbProps.beamStartOffset + AimingChargeOutwardOffset);
     }
 
     private Rot4 GetTrackingLaserDrawRotation(VerbProperties_TrackingLaser trackingLaserProps)
@@ -155,4 +184,5 @@ public class UnitTurret_PlayerEmptyWeaponMount : UnitTurret_WeaponMount
         (Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult>)typeof(Verb_MeleeAttack)
             .GetMethod("ApplyMeleeDamageToTarget", BindingFlags.Instance | BindingFlags.NonPublic)
             .CreateDelegate(typeof(Func<Verb_MeleeAttack, LocalTargetInfo, DamageWorker.DamageResult>));
+    private const float AimingChargeOutwardOffset = 0.15f;
 }

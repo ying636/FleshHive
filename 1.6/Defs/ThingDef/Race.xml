@@ -1442,8 +1442,8 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1456,6 +1456,7 @@
         </works>
         <availableRoutineWorks>
           <li>Firefighter</li>
+          <li>Hauling</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>

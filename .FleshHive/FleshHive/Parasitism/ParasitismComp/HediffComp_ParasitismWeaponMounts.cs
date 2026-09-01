@@ -1,3 +1,4 @@
+using UnityEngine;
 using Verse;
 
 namespace FleshHive;
@@ -9,6 +10,21 @@ public class HediffComp_ParasitismWeaponMounts : HediffComp_Parasitism
     public override bool ShowAttackGizmo => false;
 
     public override int TentacleCount => Props.tentacles?.Count ?? 0;
+
+    public override void GetAngle(ref int index, int count)
+    {
+        List<Tentacle_WeaponMount> mounts = WeaponMounts.ToList();
+        for (int i = 0; i < mounts.Count; i++)
+        {
+            Tentacle_WeaponMount mount = mounts[i];
+            bool right = i == 1;
+            float x = (right ? 1f : -1f) * FixedSideOffset;
+            mount.drawPosOffset = new Vector3(x, 0f, 0f);
+            mount.angle = right ? 90f : -90f;
+            mount.isRight = right;
+            index++;
+        }
+    }
 
     public bool HasEmptyMount => WeaponMounts.Any(mount => !mount.HasMountedWeapon);
 
@@ -103,4 +119,6 @@ public class HediffComp_ParasitismWeaponMounts : HediffComp_Parasitism
     }
 
     protected override IEnumerable<Tentacle> ActiveTentacles => WeaponMounts;
+
+    private const float FixedSideOffset = 0.42f;
 }

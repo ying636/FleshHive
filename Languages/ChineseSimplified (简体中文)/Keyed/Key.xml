@@ -333,6 +333,8 @@
   <FH_Fusion_Result>融合结果：{0}</FH_Fusion_Result>
   <!-- EN: Materials: {0} x{1} -->
   <FH_Fusion_MaterialRequirement>所需素材：{0} x{1}</FH_Fusion_MaterialRequirement>
+  <!-- EN: Materials: {0} x2, {1} x1 -->
+  <FH_Fusion_LargeMaterialRequirement>所需素材：{0} x2，{1} x1</FH_Fusion_LargeMaterialRequirement>
   <!-- EN: Fusion time: {0} days -->
   <FH_Fusion_Time>融合时间：{0}天</FH_Fusion_Time>
   <!-- EN: Value: {0} -->

@@ -778,6 +778,13 @@ public class MapComponent_FleshHive : MapComponent
     public override void FinalizeInit()
     {
         base.FinalizeInit();
+        if (nutritionClampPending)
+        {
+            nutritionClampPending = false;
+            RecalculateHiveScale();
+            ClampNutritionToHiveScaleLimit();
+        }
+
         RebuildFleshHiveCache();
         if (group is not UnitGroup_TemporaryFleshHive)
         {
@@ -857,7 +864,7 @@ public class MapComponent_FleshHive : MapComponent
             {
                 mapFleshHives[map] = mapFleshHive;
             } 
-            RecalculateHiveScale();
+            nutritionClampPending = true;
             hiveResourcers ??= new List<HiveResourcer>();
             hiveResourcers.RemoveAll(resourcer => resourcer == null);
             NormalizeUnitTargets();
@@ -919,6 +926,11 @@ public class MapComponent_FleshHive : MapComponent
 
     private void ClampNutritionToHiveScaleLimit()
     {
+        if (nutritionClampPending)
+        {
+            return;
+        }
+
         MapFleshHive.nutrition = Mathf.Min(MapFleshHive.nutrition, NutritionLimit);
     } 
 
@@ -1788,6 +1800,7 @@ public class MapComponent_FleshHive : MapComponent
     private Dictionary<UnitDef, int> unitMaximumTargets = new Dictionary<UnitDef, int>();
     private int fleshBushCycleIndex;
     private int planCheckIntervalTicks;
+    private bool nutritionClampPending;
     private const int ResourceTransportInterval = 250;
     private const int ActivityTickInterval = 2500;
     private const int UnitQuotaTickInterval = 2500;

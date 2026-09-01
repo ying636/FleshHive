@@ -2,6 +2,38 @@
 <Defs>
 
   <ThingDef ParentName="MoteBase">
+    <defName>FH_Mote_Bastionmeld_Charge</defName>
+    <label>Mote</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <category>Mote</category>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Mote/HellsphereCannon_ChargeGlow</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteHellfireCannon_Charge</shaderType>
+      <shaderParameters>
+        <_RandomTex>/Things/Mote/RandomFlicker</_RandomTex>
+        <_FlickerFrequency>0.25</_FlickerFrequency>
+        <_FlickerAmount>0.6</_FlickerAmount>
+        <_InnerCircleIntensity>0.1</_InnerCircleIntensity>
+        <_InnerCircleSize>0.4</_InnerCircleSize>
+        <_InnerCircleShimmerAmount>0.14</_InnerCircleShimmerAmount>
+      </shaderParameters>
+    </graphicData>
+    <isSaveable>false</isSaveable>
+    <mote>
+      <fadeInTime>0.15</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>true</needsMaintenance>
+    </mote>
+    <rotatable>false</rotatable>
+    <thingClass>FleshHive.Mote_BastionmeldCharge</thingClass>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
     <defName>FH_Mote_BeamIncinerator_RedLine</defName>
     <label>Mote</label>
     <altitudeLayer>MoteOverhead</altitudeLayer>

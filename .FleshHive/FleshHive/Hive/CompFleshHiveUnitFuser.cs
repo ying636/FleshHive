@@ -23,7 +23,15 @@ public class CompFleshHiveUnitFuser : CompUnitFuser, IHivePage
 
     public new bool CanShow => FleshHiveDefOf.FH_Research_FleshFusion.IsFinished;
 
-    public Texture2D DreadmeldSilhouetteTex => dreadmeldSilhouetteTex ??= ContentFinder<Texture2D>.Get("UI/CodexEntries/Dreadmeld_Silhouette");
+    public Texture2D GetFusionSilhouetteTex(bool large)
+    {
+        if (large)
+        {
+            return largeFusionSilhouetteTex ??= ContentFinder<Texture2D>.Get("UI/FH_Acidbulb_Silhouette");
+        }
+
+        return mediumFusionSilhouetteTex ??= ContentFinder<Texture2D>.Get("UI/CodexEntries/Fleshbeasts_Silhouette");
+    }
 
     public bool LargeFusionMode => largeFusionMode;
 
@@ -201,6 +209,12 @@ public class CompFleshHiveUnitFuser : CompUnitFuser, IHivePage
         }
     }
 
+    public override void DrawFrame(Rect rect)
+    {
+        Widgets.DrawBoxSolid(rect, FusionFrameBackgroundColor);
+        Widgets.DrawBox(rect, 2, Window_Hive.BorderTex);
+    }
+
     public override void UpdateFusion()
     {
         cachedFusion = null;
@@ -348,7 +362,7 @@ public class CompFleshHiveUnitFuser : CompUnitFuser, IHivePage
         }
         else
         {
-            DrawMotherCodexPreview(iconRect);
+            DrawMotherCodexPreview(iconRect, largeFusionMode);
         }
 
         DrawCenteredLabel(new Rect(rect.x - 18f, rect.yMax + 4f, rect.width + 36f, labelHeight), label);
@@ -365,10 +379,10 @@ public class CompFleshHiveUnitFuser : CompUnitFuser, IHivePage
         Text.Font = GameFont.Small;
     }
 
-    private void DrawMotherCodexPreview(Rect rect)
+    private void DrawMotherCodexPreview(Rect rect, bool large)
     {
         Widgets.DrawBoxSolid(rect, UnknownResultBackgroundColor);
-        Widgets.DrawTextureFitted(rect.ContractedBy(2f), DreadmeldSilhouetteTex, 1f);
+        Widgets.DrawTextureFitted(rect.ContractedBy(2f), GetFusionSilhouetteTex(large), 1f);
     }
 
     private void DrawCenteredLabel(Rect rect, string label)
@@ -427,8 +441,10 @@ public class CompFleshHiveUnitFuser : CompUnitFuser, IHivePage
     private bool largeFusionMode;
     private bool know;
     private FusionDef? cachedFusion;
-    private Texture2D? dreadmeldSilhouetteTex;
+    private Texture2D? largeFusionSilhouetteTex;
+    private Texture2D? mediumFusionSilhouetteTex;
     private static readonly Color UnknownResultColor = new Color(0.12f, 0.12f, 0.12f, 0.82f);
     private static readonly Color UnknownResultBackgroundColor = new Color(0.02f, 0.035f, 0.035f);
+    private static readonly Color FusionFrameBackgroundColor = new Color(0.02f, 0.035f, 0.035f);
     private static readonly Color OperatorColor = new Color(0.55f, 0.55f, 0.55f);
 }

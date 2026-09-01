@@ -104,9 +104,13 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
             : "FH_Fusion_Unknown".Translate().ToString();
         Widgets.Label(new Rect(rect.x, rect.y, rect.width, 22f), "FH_Fusion_Result".Translate(resultLabel));
 
-        string materialType = (fuser.LargeFusionMode ? "FH_Fusion_SlotMedium" : "FH_Fusion_SlotSmall").Translate();
-        Widgets.Label(new Rect(rect.x, rect.y + 23f, rect.width, 22f),
-            "FH_Fusion_MaterialRequirement".Translate(materialType, fuser.MaterialCount));
+        string materialRequirement = fuser.LargeFusionMode
+            ? "FH_Fusion_LargeMaterialRequirement".Translate(
+                "FH_Fusion_SlotMedium".Translate(),
+                "FH_Fusion_SlotSmall".Translate())
+            : "FH_Fusion_MaterialRequirement".Translate(
+                "FH_Fusion_SlotSmall".Translate(), fuser.MaterialCount);
+        Widgets.Label(new Rect(rect.x, rect.y + 23f, rect.width, 22f), materialRequirement);
 
         string time = fuser.CurrentFusion == null
             ? "--"
@@ -301,7 +305,7 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
         else
         {
             Widgets.DrawBoxSolid(rect.ContractedBy(4f), UnknownResultBackgroundColor);
-            Widgets.DrawTextureFitted(rect.ContractedBy(7f), fuser.DreadmeldSilhouetteTex, 1f);
+            Widgets.DrawTextureFitted(rect.ContractedBy(7f), fuser.GetFusionSilhouetteTex(fusion.materials.Count >= 3), 1f);
         }
     }
 
@@ -317,7 +321,7 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
         else
         {
             Widgets.DrawBoxSolid(rect.ContractedBy(4f), UnknownResultBackgroundColor);
-            Widgets.DrawTextureFitted(rect.ContractedBy(7f), fuser.DreadmeldSilhouetteTex, 1f);
+            Widgets.DrawTextureFitted(rect.ContractedBy(7f), fuser.GetFusionSilhouetteTex(fuser.LargeFusionMode), 1f);
         }
     }
 
