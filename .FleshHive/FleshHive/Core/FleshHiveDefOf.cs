@@ -15,6 +15,7 @@ public static class FleshHiveDefOf
     public static HediffDef FH_FleshAdaptation;
     public static HediffDef FH_FleshSymbiosis;
     public static HediffDef FH_Parasitism_Paraspike;
+    public static HediffDef FH_Parasitism_Fleshwind;
     public static HediffDef FH_Unification;
     public static HediffDef FH_Berserk;
     public static HediffDef FH_FleshUndying;

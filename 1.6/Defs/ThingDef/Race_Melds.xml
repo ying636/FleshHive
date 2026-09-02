@@ -63,6 +63,13 @@
       </lifeStageAges>
     </race>
     <comps>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2.6315789</bioferriteDensity>
+      </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
@@ -196,7 +203,7 @@
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses, clearing a path for lesser fleshbeasts to overwhelm the enemy.</description>
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
-      <MinimumContainmentStrength>120</MinimumContainmentStrength>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
       <ArmorRating_Heat>1.00</ArmorRating_Heat>
@@ -233,6 +240,13 @@
       </lifeStageAges>
     </race>
     <comps>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
@@ -377,7 +391,7 @@
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, coordinated by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld continually assembles armed fleshbeasts and defeats its enemies through long-range fire.</description>
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
-      <MinimumContainmentStrength>110</MinimumContainmentStrength>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
       <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
       <ArmorRating_Heat>0.50</ArmorRating_Heat>
@@ -419,6 +433,13 @@
       </lifeStageAges>
     </race>
     <comps>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
@@ -710,7 +731,7 @@
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate.</description>
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
-      <MinimumContainmentStrength>90</MinimumContainmentStrength>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
       <ArmorRating_Sharp>0</ArmorRating_Sharp>
       <ArmorRating_Blunt>0</ArmorRating_Blunt>
       <ArmorRating_Heat>0</ArmorRating_Heat>
@@ -757,6 +778,13 @@
       </lifeStageAges>
     </race>
     <comps>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
@@ -1067,7 +1095,7 @@
     <description>A gargantuan amalgamation of dozens of smaller fleshbeasts linked together by a loosely shared central nervous system. It uses its massive claws to dig tunnels through solid rock. Fleshbeast dreadmelds are rarely seen above ground, instead sheltering in caverns built from living flesh. They share a psychic connection with the flesh used to create their burrow.</description>
     <statBases>
       <MoveSpeed>2.8</MoveSpeed>
-      <MinimumContainmentStrength>110</MinimumContainmentStrength>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
       <ToxicResistance>0.8</ToxicResistance>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld_MenuIcon</uiIconPath>
@@ -1099,6 +1127,13 @@
       </lifeStageAges>
     </race>
     <comps>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2.6315789</bioferriteDensity>
+      </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
         <groupCost>5</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>

@@ -25,6 +25,11 @@
   <FH_Parasitism_Fingerspike.label>独爪兽寄生</FH_Parasitism_Fingerspike.label>
   <!-- EN: 被独爪兽寄生后，宿主体表生长骨刺触手。 -->
   <FH_Parasitism_Fingerspike.description>该生物被独爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n-骨刺触手</FH_Parasitism_Fingerspike.description>
+
+  <!-- EN: fleshwind parasitism -->
+  <FH_Parasitism_Fleshwind.label>翼爪兽寄生</FH_Parasitism_Fleshwind.label>
+  <!-- EN: The host ignores terrain movement penalties and has 120% Move Speed. -->
+  <FH_Parasitism_Fleshwind.description>该生物被翼爪兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n无视地形移动阻拦，移动速度×120%。</FH_Parasitism_Fleshwind.description>
   
   <!-- EN: flesh replica synchronization -->
   <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>

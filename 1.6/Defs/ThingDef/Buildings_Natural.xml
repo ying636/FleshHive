@@ -244,6 +244,12 @@
     </killedLeavings>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>FleshHive.CompStudiable_FleshHive</compClass>
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+      </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
         <transferOnEvolution>false</transferOnEvolution>

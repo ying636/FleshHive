@@ -57,6 +57,8 @@
         <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MealSurvivalPack</thingDef><count>30</count></li>
         <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineIndustrial</thingDef><count>20</count></li>
         <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>FH_DreadmeldSeed</thingDef><count>1</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>FH_FleshCarapace</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>HarbingerSeed</thingDef><count>1</count></li>
         <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Shard</thingDef><count>2</count></li>
         <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Meat_Twisted</thingDef><count>300</count></li>
         <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>ComponentIndustrial</thingDef><count>10</count></li>

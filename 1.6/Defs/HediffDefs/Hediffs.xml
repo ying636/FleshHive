@@ -192,6 +192,24 @@
   </HediffDef>
 
   <HediffDef>
+    <defName>FH_Parasitism_Fleshwind</defName>
+    <label>fleshwind parasitism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a fleshwind. The fleshbeast grants it additional abilities, but also imposes significant costs.
+
+The host ignores terrain movement penalties and has 120% Move Speed.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
     <defName>FH_Parasitism_Paraspike</defName>
     <label>paraspike parasitism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>

@@ -9,7 +9,7 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastAgility" />
-      <li Class="CompProperties_Studiable">
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
         <frequencyTicks>120000</frequencyTicks>
         <knowledgeCategory>Basic</knowledgeCategory>
         <anomalyKnowledge>1</anomalyKnowledge>
@@ -40,6 +40,13 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Small</size>
+      </li>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
       </li>
     </comps>
     <statBases>
@@ -74,6 +81,13 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Medium</size>
       </li>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
     </comps>
     <statBases>
       <MarketValue>300</MarketValue>
@@ -92,6 +106,21 @@
         </dividePawnKindOptions>
       </deathAction>
     </race>
+  </ThingDef>
+
+  <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LargeFleshBeast" Abstract="True">
+    <comps>
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
+    </comps>
+    <statBases>
+      <MinimumContainmentStrength>75</MinimumContainmentStrength>
+    </statBases>
   </ThingDef>
 
   <!-- 单爪兽-->
@@ -420,7 +449,7 @@
         </tags>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <iconPath>UI/Ability/FH_BoneBurst</iconPath>
+        <iconPath>UI/Ability/FH_Parasitism_Puffspike</iconPath>
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Gutspike</hediff>
@@ -1312,7 +1341,7 @@
         <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; host grows two bone-spike tentacles; charge with 10 twisted flesh to release 2 random small fleshbeasts (5-day cooldown)</effect>
+        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; host grows two bone-spike tentacles; charge with 10 twisted flesh to release 2 random small fleshbeasts (1-day cooldown)</effect>
         <abilityLabel>Bone-spike tentacle</abilityLabel>
         <abilityDescription>The host grows two bone-spike tentacles that deal 5 sharp damage every 2 seconds. Charge with twisted flesh to release two random small fleshbeasts.</abilityDescription>
         <twistedFleshCapacity>100</twistedFleshCapacity>
@@ -1464,6 +1493,14 @@
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <iconPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_east</iconPath>
+        <cost>2</cost>
+        <hediff>FH_Parasitism_Fleshwind</hediff>
+        <effect>Terrain movement impedance x0; Move Speed x120%</effect>
+        <abilityLabel>Parasitic adaptation: fleshwind mobility</abilityLabel>
+        <abilityDescription>The host ignores terrain movement penalties and has 120% Move Speed.</abilityDescription>
+      </li>
     </comps>
     <tools>
       <li>
@@ -1539,7 +1576,7 @@
 
   <!-- 大型血肉兽 -->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_LargeFleshBeast">
     <defName>FH_Bulbfreak</defName>
     <label>bulbfreak</label>
     <description>A horrid oozing amalgamation of many smaller fleshbeasts, all controlled by a linked nervous system. It has two large claws which it uses to tear through its victims. Bulbfreaks are often smelled before they are seen, giving off an overwhelming odor of rancid meat. They are relatively slow and easy to kill, but once they die, they explode into a horde of smaller fleshbeasts.</description>
@@ -1705,7 +1742,7 @@
 
   <!-- 腐蚀瘤兽 -->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_LargeFleshBeast">
     <defName>FH_Acidbulb</defName>
     <label>acidbulb</label>
     <description>A giant bulbous fleshbeast swollen with corrosive fluids. It tears at nearby enemies with multiple tentacles and spits corrosive acid at distant targets.</description>
@@ -1878,7 +1915,7 @@
 
   <!-- 喷射瘤兽 -->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_LargeFleshBeast">
     <defName>FH_Spitbulb</defName>
     <label>spitbulb</label>
     <description>A horrid amalgamation of many smaller fleshbeasts controlled by a linked nervous system. A massive muscular launching organ grows across its body, allowing it to fire twisted lumps of flesh over extreme distances. After striking a target, each lump rapidly assembles itself into living small fleshbeasts. The spitbulb moves relatively slowly and is easy to kill, and splits into a horde of smaller fleshbeasts upon death.</description>
@@ -2051,7 +2088,7 @@
 
   <!-- 增生瘤兽 -->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_LargeFleshBeast">
     <defName>FH_Bulbplump</defName>
     <label>bulbplump</label>
     <description>A terrifying amalgamation of many smaller fleshbeasts controlled by a single nervous system. Its body is covered in explosive sacs that store energy. In combat, it detonates these sacs to propel itself rapidly toward enemies. Fresh flesh continually grows across its body and can be harvested as a resource. It is relatively slow and easy to kill, but on death it erupts violently and splits into a horde of smaller fleshbeasts.</description>
@@ -2194,7 +2231,7 @@
 
   <!-- 共鸣瘤兽 -->
 
-  <ThingDef ParentName="FH_BaseFleshBeast">
+  <ThingDef ParentName="FH_LargeFleshBeast">
     <defName>FH_Synbulb</defName>
     <label>synbulb</label>
     <description>A terrifying amalgamation of many smaller fleshbeasts controlled by a single nervous system. Numerous pheromone-storage organs grow within its body. These pheromones stimulate nearby fleshbeasts into an active state and enhance their combat capabilities. It is relatively slow and easy to kill. On death, it erupts violently, scattering pheromones into the air to strengthen nearby entities, and splits into a horde of smaller fleshbeasts.</description>

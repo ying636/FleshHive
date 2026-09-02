@@ -6,6 +6,9 @@
   
   <FH_Parasitism_Fingerspike.label>fingerspike parasitism</FH_Parasitism_Fingerspike.label>
   <FH_Parasitism_Fingerspike.description>This creature is parasitized by a fingerspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Bone-spike tentacle</FH_Parasitism_Fingerspike.description>
+
+  <FH_Parasitism_Fleshwind.label>fleshwind parasitism</FH_Parasitism_Fleshwind.label>
+  <FH_Parasitism_Fleshwind.description>This creature is parasitized by a fleshwind. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host ignores terrain movement penalties and has 120% Move Speed.</FH_Parasitism_Fleshwind.description>
   
   <FH_Parasitism_Gutspike.label>gutspike parasitism</FH_Parasitism_Gutspike.label>
   <FH_Parasitism_Gutspike.description>This creature is parasitized by a gutspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is almost immune to food poisoning, and gains immunity to gut worms while purging existing infestations.</FH_Parasitism_Gutspike.description>

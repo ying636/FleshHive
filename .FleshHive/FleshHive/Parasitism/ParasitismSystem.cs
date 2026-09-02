@@ -83,6 +83,18 @@ public class ParasitismSystem : HediffWithComps
         }
     }
 
+    public bool HasFleshwind
+    {
+        get
+        {
+            if (!cacheHasFleshwind.HasValue)
+            {
+                cacheHasFleshwind = ParasitismHediffs.Any(hediff => hediff.def == FleshHiveDefOf.FH_Parasitism_Fleshwind);
+            }
+            return cacheHasFleshwind.Value;
+        }
+    }
+
     public bool CanConsumeTwistedFlesh(int amount)
     {
         return CurrentTwistedFlesh >= amount;
@@ -358,6 +370,7 @@ public class ParasitismSystem : HediffWithComps
         this.cacheLimit = -1;
         this.cacheCount = -1;
         this.cacheMaxTwistedFlesh = -1;
+        this.cacheHasFleshwind = null;
         this.hds = null;
     }
 
@@ -513,6 +526,7 @@ public class ParasitismSystem : HediffWithComps
     private int cacheCount = -1;
     int cacheLimit = -1;
     private int cacheMaxTwistedFlesh = -1;
+    private bool? cacheHasFleshwind;
     private int currentTwistedFlesh;
     private float twistedFleshTargetValue = 1f;
     private bool allowAutoRefillTwistedFlesh = true;

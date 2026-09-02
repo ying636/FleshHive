@@ -112,6 +112,12 @@
   <FH_Fleshwind.description>一种长有巨大骨刺飞翼、头部覆盖锋利角质甲片的血肉兽，体型接近成年人。它松散而不断变形的身体结构使其能够飞越空中，迅速跨过防御工事。翼爪兽体内常寄宿着更小的血肉兽；宿主死亡后，这些寄生体会撕开躯体脱离，独立行动并发起攻击。</FH_Fleshwind.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Fleshwind.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: Terrain movement impedance x0; Move Speed x120% -->
+  <FH_Fleshwind.comps.ParasitismComp.effect>地形移动阻拦系数×0；移动速度×120%</FH_Fleshwind.comps.ParasitismComp.effect>
+  <!-- EN: The host ignores terrain movement penalties and has 120% Move Speed. -->
+  <FH_Fleshwind.comps.ParasitismComp.abilityDescription>宿主无视地形移动阻拦，移动速度×120%。</FH_Fleshwind.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic adaptation: fleshwind mobility -->
+  <FH_Fleshwind.comps.ParasitismComp.abilityLabel>寄生适应：翼爪兽机动性</FH_Fleshwind.comps.ParasitismComp.abilityLabel>
   <!-- EN: left wing spike -->
   <FH_Fleshwind.tools.left_wing_spike.label>左翼骨刺</FH_Fleshwind.tools.left_wing_spike.label>
   <!-- EN: wing spike -->
@@ -304,7 +310,7 @@
   <!-- EN: Parasitic ability: release fleshbeasts -->
   <FH_Trispike.comps.ParasitismComp.abilityLabel>骨刺触手</FH_Trispike.comps.ParasitismComp.abilityLabel>
   <!-- EN: “血肉寄生”心情-6；魅力-5%；可填充10扭曲肉充能后释放2只随机小型血肉兽（冷却5天） -->
-  <FH_Trispike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+100；宿主生长两条骨刺触手；填充10扭曲肉充能后可释放2只随机小型血肉兽（冷却5天）</FH_Trispike.comps.ParasitismComp.effect>
+  <FH_Trispike.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+100；宿主生长两条骨刺触手；填充10扭曲肉充能后可释放2只随机小型血肉兽（冷却1天）</FH_Trispike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Trispike.tools.left_spike.label>左骨刺</FH_Trispike.tools.left_spike.label>
   <!-- EN: spike -->
