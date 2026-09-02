@@ -22,6 +22,7 @@ public class FleshReplicaUnit : Unit
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);
+        EnsureHostGraphicsInitialized();
         if (scavengedWeaponRolled)
         {
             return;
@@ -37,13 +38,18 @@ public class FleshReplicaUnit : Unit
     public void DebugEnsureHostRendererInitialized()
     {
         Drawer?.renderer?.renderTree?.SetDirty();
-        Drawer?.renderer?.EnsureGraphicsInitialized();
+        if (UnityData.IsInMainThread)
+        {
+            Drawer?.renderer?.EnsureGraphicsInitialized();
+        }
     }
 
     public void SyncTo(Pawn newHost, ParasitismHediff hediff)
     {
         host = newHost;
         sourceHediff = hediff;
+        hostGraphicsInitialized = false;
+        EnsureHostGraphicsInitialized();
         NotifyRenderTreeChanged();
     }
 
@@ -79,6 +85,7 @@ public class FleshReplicaUnit : Unit
         if (phase == DrawPhase.EnsureInitialized)
         {
             EnsureHostRenderState();
+            EnsureHostGraphicsInitialized();
         }
 
         RenderingHost = true;
@@ -129,7 +136,10 @@ public class FleshReplicaUnit : Unit
     private void NotifyRenderTreeChanged()
     {
         Drawer?.renderer?.renderTree?.SetDirty();
-        Drawer?.renderer?.EnsureGraphicsInitialized();
+        if (Spawned && UnityData.IsInMainThread)
+        {
+            Drawer?.renderer?.EnsureGraphicsInitialized();
+        }
     }
 
     private void EnsureHostRenderState()
@@ -142,11 +152,22 @@ public class FleshReplicaUnit : Unit
 
         hostApparelCount = apparelCount;
         Drawer?.renderer?.renderTree?.SetDirty();
-        Drawer?.renderer?.EnsureGraphicsInitialized();
+    }
+
+    private void EnsureHostGraphicsInitialized()
+    {
+        if (hostGraphicsInitialized || host == null || !host.Spawned || !UnityData.IsInMainThread)
+        {
+            return;
+        }
+
+        host.Drawer.renderer.EnsureGraphicsInitialized();
+        hostGraphicsInitialized = true;
     }
 
     private Pawn? host;
     private ParasitismHediff? sourceHediff;
     private int hostApparelCount = -1;
+    private bool hostGraphicsInitialized;
     private bool scavengedWeaponRolled;
 }

@@ -519,7 +519,10 @@ public class ParasitismSystem : HediffWithComps
         }
 
         this.pawn.Drawer.renderer.renderTree.SetDirty();
-        this.pawn.Drawer.renderer.EnsureGraphicsInitialized();
+        if (this.pawn.Spawned && UnityData.IsInMainThread)
+        {
+            this.pawn.Drawer.renderer.EnsureGraphicsInitialized();
+        }
     }
 
     public HashSet<ParasitismHediff> hds = null;

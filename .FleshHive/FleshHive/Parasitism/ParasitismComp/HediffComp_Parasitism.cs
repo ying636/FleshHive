@@ -64,20 +64,49 @@ public class HediffComp_Parasitism : HediffComp
     public override void CompPostPostRemoved()
     {
         base.CompPostPostRemoved();
+        if (this.Pawn == null)
+        {
+            return;
+        }
+
         this.Pawn.Drawer.renderer.renderTree.SetDirty();
-        this.Pawn.Drawer.renderer.EnsureGraphicsInitialized();
+        if (this.Pawn.Spawned && UnityData.IsInMainThread)
+        {
+            this.Pawn.Drawer.renderer.EnsureGraphicsInitialized();
+        }
+        renderInitializationPending = false;
     }
 
     public override void CompPostPostAdd(DamageInfo? dinfo)
     {
         base.CompPostPostAdd(dinfo);
+        if (this.Pawn == null)
+        {
+            return;
+        }
+
         this.Pawn.Drawer.renderer.renderTree.SetDirty();
-        this.Pawn.Drawer.renderer.EnsureGraphicsInitialized();
+        if (this.Pawn.Spawned && UnityData.IsInMainThread)
+        {
+            this.Pawn.Drawer.renderer.EnsureGraphicsInitialized();
+            renderInitializationPending = false;
+        }
+        else
+        {
+            renderInitializationPending = true;
+        }
     }
 
     public override void CompPostTick(ref float severityAdjustment)
     {
         base.CompPostTick(ref severityAdjustment);
+        if (renderInitializationPending && this.Pawn.Spawned && UnityData.IsInMainThread)
+        {
+            this.Pawn.Drawer.renderer.renderTree.SetDirty();
+            this.Pawn.Drawer.renderer.EnsureGraphicsInitialized();
+            renderInitializationPending = false;
+        }
+
         bool rare = this.Pawn.IsHashIntervalTick(25); 
         foreach (var tentacle in this.tentacles)
         { 
@@ -168,6 +197,8 @@ public class HediffComp_Parasitism : HediffComp
 
     public bool makeTentacles;
     protected List<Tentacle> tentacles = new List<Tentacle>();
+
+    private bool renderInitializationPending;
 
     private void DropMountedWeaponIfNeeded(Tentacle tentacle)
     {
