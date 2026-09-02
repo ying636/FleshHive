@@ -29,9 +29,14 @@ public static class FleshHiveFleshbeastSpawnUtility
         }
     }
 
-    public static Pawn GeneratePawn(PawnKindDef kind, Faction faction)
+    public static Pawn GeneratePawn(PawnKindDef kind, Faction faction, bool applyDefaultParasites = true)
     {
-        return PawnGenerator.GeneratePawn(GenerateRequest(kind, faction));
+        Pawn pawn = PawnGenerator.GeneratePawn(GenerateRequest(kind, faction));
+        if (applyDefaultParasites)
+        {
+            FleshParasiteUtility.TryApplyDefaultParasites(pawn);
+        }
+        return pawn;
     }
 
     public static Pawn GenerateRandomPawn(FleshBeastSize size, Faction faction)
@@ -39,12 +44,12 @@ public static class FleshHiveFleshbeastSpawnUtility
         return GeneratePawn(FleshBeastKindUtility.RandomKind(size), faction);
     }
 
-    public static List<Pawn> GenerateRandomByPoints(IEnumerable<PawnKindDef> options, IntRange pointsRange, Faction faction)
+    public static List<Pawn> GenerateRandomByPoints(IEnumerable<PawnKindDef> options, IntRange pointsRange, Faction faction, bool applyDefaultParasites = true)
     {
-        return GenerateRandomByPoints(options, pointsRange.RandomInRange, faction);
+        return GenerateRandomByPoints(options, pointsRange.RandomInRange, faction, applyDefaultParasites);
     }
 
-    public static List<Pawn> GenerateRandomByPoints(IEnumerable<PawnKindDef> options, int targetPoints, Faction faction)
+    public static List<Pawn> GenerateRandomByPoints(IEnumerable<PawnKindDef> options, int targetPoints, Faction faction, bool applyDefaultParasites = true)
     {
         List<Pawn> pawns = new List<Pawn>();
         List<PawnKindDef> spawnOptions = ValidOptions(options);
@@ -65,7 +70,7 @@ public static class FleshHiveFleshbeastSpawnUtility
             }
 
             accumulatedPoints += (int)kind.combatPower;
-            pawns.Add(GeneratePawn(kind, faction));
+            pawns.Add(GeneratePawn(kind, faction, applyDefaultParasites));
         }
 
         return pawns;

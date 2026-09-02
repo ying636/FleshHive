@@ -3,6 +3,10 @@
   
   <!-- EN: bastionmeld -->
   <FH_Bastionmeld.label>铁骸母兽</FH_Bastionmeld.label>
+  <!-- EN: flesh deadguard -->
+  <FH_FleshDeadguard.label>血肉死卫</FH_FleshDeadguard.label>
+  <!-- EN: A temporary fleshbeast guard summoned by a fleshbeast meld. -->
+  <FH_FleshDeadguard.description>由血肉母兽召唤的临时血肉兽守卫。</FH_FleshDeadguard.description>
   <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld usually constructs defensive fortifications and wears enemies down through sustained long-range combat. -->
   <FH_Bastionmeld.description>由数几十只小型血肉兽组成的庞然大物，通过松散相连的中枢神经系统协调统一。身躯上镶嵌着各种机械族的残骸。通过某种超自然能量控制着这些原本属于机械族的武装。铁骸母兽很少出现在袭击中，通常只能通过仪式召唤。铁骸母兽在战斗中通常会不断组装持枪血肉兽，以远距离战斗战胜敌人。</FH_Bastionmeld.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->

@@ -88,10 +88,12 @@ public class CompAbilityEffect_BastionmeldSummonDeadguard : CompAbilityEffect
 
     private static Pawn GeneratePawn(PawnKindDef kind, Faction faction)
     {
-        return PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, faction, PawnGenerationContext.NonPlayer, null, false, false, false, true,
+        Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, faction, PawnGenerationContext.NonPlayer, null, false, false, false, true,
             false, 1f, false, true, false, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, 0f,
             0f, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult,
             null, null, null, false, false, false, -1, 0, false));
+        FleshParasiteUtility.TryApplyDefaultParasites(pawn);
+        return pawn;
     }
 
     private static void TryAssignEnemyLord(Pawn pawn, Map map)

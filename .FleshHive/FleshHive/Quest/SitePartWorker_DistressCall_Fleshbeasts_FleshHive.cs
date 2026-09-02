@@ -35,7 +35,8 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
             return;
         }
 
-        Pawn mother = PawnGenerator.GeneratePawn(MotherKinds.RandomElement(), Faction.OfEntities);
+        Pawn mother = PawnGenerator.GeneratePawn(GetMotherKind(), Faction.OfEntities);
+        FleshParasiteUtility.TryApplyDefaultParasites(mother);
         List<Pawn> attackers = new List<Pawn>(escorts.Count + 1)
         {
             mother
@@ -87,12 +88,18 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
     private const int SpawnRadius = 20;
     private const float MinimumEscortPoints = 1000f;
 
-    private static readonly List<PawnKindDef> MotherKinds = new List<PawnKindDef>
+    private static PawnKindDef GetMotherKind()
     {
-        FleshHiveDefOf.FH_Nexusmeld,
-        FleshHiveDefOf.FH_Furiousmeld,
-        FleshHiveDefOf.FH_Bastionmeld,
-        FleshHiveDefOf.FH_Fissionmeld,
-        FleshHiveDefOf.FH_Dreadmeld
-    };
+        motherKinds ??= new List<PawnKindDef>
+        {
+            DefDatabase<PawnKindDef>.GetNamed("FH_Nexusmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Furiousmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Bastionmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Fissionmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Dreadmeld")
+        };
+        return motherKinds.RandomElement();
+    }
+
+    private static List<PawnKindDef> motherKinds;
 }

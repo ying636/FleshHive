@@ -123,8 +123,9 @@ public class PsychicRitualToil_SummonGiantFleshbeast : PsychicRitualToil
         }
 
         float escortPoints = Mathf.Max(0f, ritualDef.escortPointsFromQualityCurve.Evaluate(psychicRitual.PowerPercent));
-        List<Pawn> fleshbeasts = FleshHiveFleshbeastSpawnUtility.GenerateRandomByPoints(FleshHiveFleshbeastSpawnUtility.StandardSpawnKinds, (int)escortPoints, Faction.OfEntities);
-        fleshbeasts.Insert(0, PawnGenerator.GeneratePawn(ritualDef.summonKind, Faction.OfEntities));
+        List<Pawn> fleshbeasts = FleshHiveFleshbeastSpawnUtility.GenerateRandomByPoints(FleshHiveFleshbeastSpawnUtility.StandardSpawnKinds, (int)escortPoints, Faction.OfEntities, applyDefaultParasites: false);
+        Pawn summonedGiant = PawnGenerator.GeneratePawn(ritualDef.summonKind, Faction.OfEntities);
+        fleshbeasts.Insert(0, summonedGiant);
 
         ThingDef spawnerDef = ritualDef.summonKind == FleshHiveDefOf.FH_Furiousmeld
             ? FleshHiveDefOf.FH_FuriousmeldPitBurrowSpawner

@@ -70,11 +70,11 @@ public class QuestNode_Root_FleshSurvivor : QuestNode
         int count = Rand.RangeInclusive(4, 6);
         List<Pawn> pursuers = new List<Pawn>(count)
         {
-            PawnGenerator.GeneratePawn(mediumKinds.RandomElement(), Faction.OfEntities)
+            FleshHiveFleshbeastSpawnUtility.GeneratePawn(mediumKinds.RandomElement(), Faction.OfEntities)
         };
         for (int i = 1; i < count; i++)
         {
-            pursuers.Add(PawnGenerator.GeneratePawn(smallKinds.RandomElement(), Faction.OfEntities));
+            pursuers.Add(FleshHiveFleshbeastSpawnUtility.GeneratePawn(smallKinds.RandomElement(), Faction.OfEntities));
         }
         return pursuers;
     }

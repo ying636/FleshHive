@@ -63,10 +63,6 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2.6315789</bioferriteDensity>
       </li>
@@ -240,10 +236,6 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -433,10 +425,6 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -672,10 +660,73 @@
     </tools>
   </ThingDef>
   <!-- 血肉死卫 -->
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_FleshDeadguard</defName>
+    <label>flesh deadguard</label>
+    <description>A temporary fleshbeast guard summoned by a fleshbeast meld.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</uiIconPath>
+    <race>
+      <body>Fingerspike</body>
+      <renderTree>Fingerspike</renderTree>
+    </race>
+    <comps>
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+          <li>BasicWorker</li>
+          <li>Hauling</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_FleshDeadguard</defName>
     <label>flesh deadguard</label>
-    <race>FH_Fingerspike</race>
+    <race>FH_FleshDeadguard</race>
     <combatPower>30</combatPower>
     <lifeStages>
       <li>
@@ -778,10 +829,6 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -1127,10 +1174,6 @@
       </lifeStageAges>
     </race>
     <comps>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>1</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2.6315789</bioferriteDensity>
       </li>

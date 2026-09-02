@@ -17,7 +17,7 @@ public class FormulaProgress_FleshTrait : FormulaProgress
 
         Pawn unit = HCFGameUtility.SpawnUnit(
             comp.parent,
-            PawnGenerator.GeneratePawn(formula.unit.kind, comp.parent.Faction),
+            FleshHiveFleshbeastSpawnUtility.GeneratePawn(formula.unit.kind, comp.parent.Faction),
             ReservedGroup);
         if (FleshBeastKindUtility.IsGiant(unit.kindDef)
             && comp.parent.TryGetComp<CompHiveContainer>() is { } container

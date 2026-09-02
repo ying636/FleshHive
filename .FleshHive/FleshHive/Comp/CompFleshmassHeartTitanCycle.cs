@@ -116,7 +116,7 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
         FleshbeastUtility.DoFleshbeastResponse(this, position);
         Lord? responseLord = map.lordManager.lords.FirstOrDefault(lord =>
             !lordsBeforeResponse.Contains(lord) && lord.LordJob is LordJob_FleshbeastAssault);
-        Pawn titan = PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Fleshtitan, Faction.OfEntities);
+        Pawn titan = FleshHiveFleshbeastSpawnUtility.GeneratePawn(FleshHiveDefOf.FH_Fleshtitan, Faction.OfEntities);
         int biosignature = parent.GetComp<CompBiosignatureOwner>()?.biosignature ?? -1;
 
         bool allowDestroyNonDestroyable = Thing.allowDestroyNonDestroyable;

@@ -41,10 +41,6 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Small</size>
       </li>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -81,10 +77,6 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Medium</size>
       </li>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -110,10 +102,6 @@
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LargeFleshBeast" Abstract="True">
     <comps>
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -660,6 +648,7 @@
         <abilityDescription>The host grows one shatter-claw tentacle that fires bone shards for 18 sharp damage with 100% armor penetration, 1-second aiming, a 1.5-second cooldown, 16-cell range, 55 projectile speed, and 3 stopping power.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
       </li>
     </comps>
     <statBases>
@@ -836,6 +825,7 @@
         <abilityDescription>The host grows two carapace tentacles that deal 10 sharp damage every 2 seconds.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
       </li>
     </comps>
     <uiIconPath>Things/Pawn/Fleshbeast/Toughspike/Toughspike_MenuIcon</uiIconPath>
@@ -1010,6 +1000,7 @@
         <synchronizeHost>true</synchronizeHost>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
       </li>
     </comps>
     <inspectorTabs>
@@ -1179,6 +1170,7 @@
         <abilityDescription>The host grows one shieldspike tentacle that deals 16 blunt damage every 3 seconds.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
       </li>
     </comps>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Shieldspike/FH_Shieldspike_east</uiIconPath>
@@ -1347,6 +1339,7 @@
         <twistedFleshCapacity>100</twistedFleshCapacity>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
       </li>
     </comps>
     <tools>
@@ -1492,6 +1485,7 @@
         </tags>
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Medium</size>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
         <iconPath>Things/Pawn/Fleshbeast/FH_Fleshwind/FH_Fleshwind_east</iconPath>

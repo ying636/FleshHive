@@ -472,7 +472,7 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
             return new List<Pawn>();
         }
 
-        Pawn generatedPawn = PawnGenerator.GeneratePawn(kind, comp.parent.Faction);
+        Pawn generatedPawn = FleshHiveFleshbeastSpawnUtility.GeneratePawn(kind, comp.parent.Faction);
         List<Pawn> pawns = new List<Pawn>
         {
             HCFGameUtility.SpawnUnit(comp.parent, generatedPawn, reservedGroup)

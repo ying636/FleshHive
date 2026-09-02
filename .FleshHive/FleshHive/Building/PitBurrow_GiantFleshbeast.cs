@@ -15,6 +15,14 @@ public class PitBurrow_GiantFleshbeast : PitBurrow
         assaultColony = false;
         base.SpawnSetup(map, respawningAfterLoad);
 
+        if (!respawningAfterLoad && pawns != null)
+        {
+            foreach (Pawn pawn in pawns)
+            {
+                FleshParasiteUtility.TryApplyDefaultParasites(pawn);
+            }
+        }
+
         if (!respawningAfterLoad && leader != null && pawns != null)
         {
             LordMaker.MakeNewLord(

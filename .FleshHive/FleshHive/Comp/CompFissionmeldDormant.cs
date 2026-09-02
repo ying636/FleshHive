@@ -94,6 +94,7 @@ public class CompFissionmeldDormant : ThingComp
         IntVec3 position = this.parent.PositionHeld;
         Faction faction = this.parent.Faction;
         Pawn pawn = PawnGenerator.GeneratePawn(GenerateRequest(Props.resurrectKind, faction));
+        FleshParasiteUtility.TryApplyDefaultParasites(pawn);
         this.parent.Destroy(DestroyMode.Vanish);
         GenSpawn.Spawn(pawn, position, map, WipeMode.VanishOrMoveAside);
         HCFGameUtility.AssignGroup(pawn, map, true);

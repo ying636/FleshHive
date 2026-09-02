@@ -39,11 +39,9 @@ public class GenStep_Dreadmeld_FleshHive : GenStep_Dreadmeld
             }
         }
 
-        GenSpawn.Spawn(
-            PawnGenerator.GeneratePawn(new PawnGenerationRequest(MotherKinds.RandomElement(), Faction.OfEntities)),
-            result,
-            map,
-            Rot4.Random);
+        Pawn mother = PawnGenerator.GeneratePawn(new PawnGenerationRequest(GetMotherKind(), Faction.OfEntities));
+        FleshParasiteUtility.TryApplyDefaultParasites(mother);
+        GenSpawn.Spawn(mother, result, map, Rot4.Random);
 
         string signalTag = "dreadmeldApproached-" + Find.UniqueIDsManager.GetNextSignalTagID();
         CellRect rect = CellRect.FromCellList(fleshmassCells).ExpandedBy(2).ClipInsideMap(map);
@@ -60,12 +58,18 @@ public class GenStep_Dreadmeld_FleshHive : GenStep_Dreadmeld
         GenSpawn.Spawn(signalActionLetter, rect.CenterCell, map);
     }
 
-    private static readonly List<PawnKindDef> MotherKinds = new List<PawnKindDef>
+    private static PawnKindDef GetMotherKind()
     {
-        FleshHiveDefOf.FH_Nexusmeld,
-        FleshHiveDefOf.FH_Furiousmeld,
-        FleshHiveDefOf.FH_Bastionmeld,
-        FleshHiveDefOf.FH_Fissionmeld,
-        FleshHiveDefOf.FH_Dreadmeld
-    };
+        motherKinds ??= new List<PawnKindDef>
+        {
+            DefDatabase<PawnKindDef>.GetNamed("FH_Nexusmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Furiousmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Bastionmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Fissionmeld"),
+            DefDatabase<PawnKindDef>.GetNamed("FH_Dreadmeld")
+        };
+        return motherKinds.RandomElement();
+    }
+
+    private static List<PawnKindDef> motherKinds;
 }
