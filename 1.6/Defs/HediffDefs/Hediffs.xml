@@ -373,7 +373,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
     <defName>FH_Parasitism_FleshReplica</defName>
     <label>flesh replica synchronization</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>A synchronization link between a flesh replica and its host, allowing the replica to mimic the host's appearance and equipment.</description>
+    <description>A synchronization link between a flesh replica and its host, allowing it to mimic the host's appearance and abilities.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -563,7 +563,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
     <defName>FH_Parasitism_Acidbulb</defName>
     <label>acidbulb parasitism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>This creature is parasitized by an acidbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host becomes immune to toxic buildup and gains acid mortar and acid spray abilities.\n\n-Tentacle</description>
+    <description>This creature is parasitized by an acidbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host becomes immune to toxic buildup, gains 200 twisted flesh capacity, and gains acid mortar and acid spray abilities.\n\n-Tentacle</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -621,7 +621,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
     <defName>FH_Parasitism_Spitbulb</defName>
     <label>spitbulb parasitism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains a flesh mortar that releases a small fleshbeast at the impact point.\n\n-Tentacle</description>
+    <description>This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains 200 twisted flesh capacity and a flesh mortar that releases a small fleshbeast at the impact point.\n\n-Tentacle</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -689,7 +689,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
     <defName>FH_Parasitism_Bulbplump</defName>
     <label>bulbplump parasitism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced and it gains the flesh jump ability.\n\n-Tentacle</description>
+    <description>This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced, gains 400 twisted flesh capacity, recovers 50 twisted flesh per day, and gains the flesh jump ability.\n\n-Tentacle</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -744,6 +744,9 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
       </li>
       <li Class="HediffCompProperties_GiveAbility">
         <abilityDef>FH_Parasitism_FleshJump</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_TwistedFleshProducer">
+        <twistedFleshPerDay>50</twistedFleshPerDay>
       </li>
     </comps>
   </HediffDef>
@@ -809,8 +812,22 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
         </tentacles>
       </li>
       <li Class="FleshHive.HediffCompProperties_GrantLinkedHediff">
-        <hediff MayRequire="Ludeon.RimWorld.Royalty">PsychicHarmonizer</hediff>
+        <hediff MayRequire="Ludeon.RimWorld.Royalty">FH_PsychicHarmonizer</hediff>
         <bodyPart>Brain</bodyPart>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_PsychicHarmonizer</defName>
+    <label>flesh psychic harmonization</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>A flesh-induced psychic harmonization effect that projects the host's mood to nearby pawns.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_PsychicHarmonizer" MayRequire="Ludeon.RimWorld.Royalty">
+        <range>30</range>
+        <thought>PsychicHarmonization</thought>
       </li>
     </comps>
   </HediffDef>

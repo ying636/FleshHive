@@ -20,6 +20,28 @@ public class GameComponent_FleshSurvivor : GameComponent
         Log.Message("[FleshHive] Flesh survivor questOffered: " + questOffered);
     }
 
+    public override void LoadedGame()
+    {
+        base.LoadedGame();
+        ThoughtDef legacyThought = FleshHiveDefOf.FH_Thought_FleshParasitism;
+        foreach (Pawn pawn in PawnsFinder.AllMapsWorldAndTemporary_Alive)
+        {
+            List<Thought_Memory> memories = pawn.needs?.mood?.thoughts?.memories?.Memories;
+            if (memories == null)
+            {
+                continue;
+            }
+
+            for (int i = memories.Count - 1; i >= 0; i--)
+            {
+                if (memories[i].def == legacyThought)
+                {
+                    memories.RemoveAt(i);
+                }
+            }
+        }
+    }
+
     public override void GameComponentTick()
     {
         if (questOffered || Find.TickManager.TicksGame < TriggerTick || Find.TickManager.TicksGame % CheckInterval != 0)

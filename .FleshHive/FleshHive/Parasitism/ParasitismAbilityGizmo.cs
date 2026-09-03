@@ -71,13 +71,9 @@ public class ParasitismAbilityGizmo(ParasitismSystem system) : Gizmo
 
     private string GetTentacleLabel(Tentacle tentacle)
     {
-        string label = tentacle.Comp?.Hediff.Comp?.Props.abilityLabel ?? tentacle.Comp?.Hediff.LabelCap ?? "FH_ParasiticTentacle".Translate();
-        List<Tentacle> siblingTentacles = tentacle.Comp?.AttackTentacles.ToList();
-        if (siblingTentacles == null || siblingTentacles.Count <= 1)
-        {
-            return label;
-        }
-        return "FH_ParasiticTentacleNumbered".Translate(label, siblingTentacles.IndexOf(tentacle) + 1);
+        return tentacle.Comp?.Hediff.Comp?.Props.abilityLabel
+            ?? tentacle.Comp?.Hediff.LabelCap
+            ?? "FH_ParasiticTentacle".Translate();
     }
 
     public ParasitismSystem system = system;

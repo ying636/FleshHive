@@ -21,6 +21,7 @@ public class HediffComp_Parasitism : HediffComp
     public ParasitismHediff Hediff => (ParasitismHediff)this.parent;
     public virtual int TentacleCount => this.tentacles.Count;
     public virtual bool ShowAttackGizmo => true;
+    public IEnumerable<Tentacle> Tentacles => this.tentacles;
     public IEnumerable<Tentacle> AttackTentacles => ActiveTentacles.Where(tentacle => tentacle.CanAutoAttack);
     protected virtual IEnumerable<Tentacle> ActiveTentacles => this.tentacles;
 

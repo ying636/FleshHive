@@ -20,9 +20,9 @@
   <!-- EN: Flesh weapon mount -->
   <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.3.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.3.label>
   <!-- EN: Release an EMP pulse centered on the host, matching an IED EMP trap's radius. -->
-  <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>宿主控制两个寄生武器装备位，并以自身为中心释放圆形EMP脉冲，范围与EMP地雷一致。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
+  <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两个武器插槽，可安装武器，并使用所安装的武器进行攻击。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Bastionmeld weapon mounts and EMP pulse -->
-  <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>铁骸母兽武器装备位与EMP脉冲</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
+  <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>武器插槽</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh parasitism mood -6; Social Impact -5%; grants impossible regeneration; adds two parasitic weapon mounts. -->
   <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主获得再生（不可思议）；提供2个额外的寄生武器装备位。</FH_Bastionmeld.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
@@ -37,7 +37,7 @@
   <FH_Furiousmeld.comps.ParasitismComp.abilityLabel>盾爪触手</FH_Furiousmeld.comps.ParasitismComp.abilityLabel>
   <FH_Furiousmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条盾爪触手，每条造成16点钝器伤害，攻击冷却3秒。</FH_Furiousmeld.comps.ParasitismComp.abilityDescription>
   <FH_Fissionmeld.comps.ParasitismComp.abilityLabel>母兽触手</FH_Fissionmeld.comps.ParasitismComp.abilityLabel>
-  <FH_Fissionmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条母兽触手，每条造成14点锐器伤害，攻击冷却2秒，护甲穿透40%，并可使用血肉重生。</FH_Fissionmeld.comps.ParasitismComp.abilityDescription>
+  <FH_Fissionmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条母兽触手，每条造成14点锐器伤害，攻击冷却2秒，护甲穿透40%。</FH_Fissionmeld.comps.ParasitismComp.abilityDescription>
   <!-- UNUSED -->
   <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>焚灭脉冲炮</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>
   <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>
@@ -49,7 +49,7 @@
   <FH_Dreadmeld.description>由数十只小型血肉兽聚合而成的庞然巨物，以松散共享的中枢神经系统连接在一起。它会用巨大的爪肢在坚岩中挖掘隧道。惊惧母兽很少出现在地表，通常栖身于活体血肉构成的洞窟中，并与构成巢穴的血肉保持心灵连接。</FH_Dreadmeld.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>从{SOURCEPAWN_labelShort}中出现。</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
-  <FH_Dreadmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条母兽触手，每条造成14点锐器伤害，攻击冷却2秒，护甲穿透40%，并可释放惊惧咆哮。</FH_Dreadmeld.comps.ParasitismComp.abilityDescription>
+  <FH_Dreadmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条母兽触手，每条造成14点锐器伤害，攻击冷却2秒，护甲穿透40%。</FH_Dreadmeld.comps.ParasitismComp.abilityDescription>
   <FH_Dreadmeld.comps.ParasitismComp.abilityLabel>母兽触手</FH_Dreadmeld.comps.ParasitismComp.abilityLabel>
   <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主获得再生（不可思议）；采矿速度+160%；深钻井操作速度+70%；提供两条母兽触手和“惊惧咆哮”主动能力。</FH_Dreadmeld.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->

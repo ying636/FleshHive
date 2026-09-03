@@ -23,6 +23,8 @@ public class Hediff_Hela : HediffWithComps
 
     public float BodyPartHealthFactor => 1f + ActiveParasiteCapacity * BodyPartHealthFactorPerCapacity;
 
+    public override float PainFactor => 1f / BodyPartHealthFactor;
+
     public bool CanIncreaseParasiteCapacity => parasiteCapacity < MaxParasiteCapacity;
 
     public override string TipStringExtra
@@ -36,7 +38,10 @@ public class Hediff_Hela : HediffWithComps
                 builder.AppendLine(baseTip.TrimEnd());
             }
             builder.AppendLine("FH_Hela_ParasiteCapacityInfo".Translate(ParasiteCapacity, MaxParasiteCapacity));
-            builder.AppendLine("FH_Hela_BodyPartHealthInfo".Translate(ActiveParasiteCapacity, BodyPartHealthFactor.ToStringPercent()));
+            builder.AppendLine("FH_Hela_BodyPartHealthInfo".Translate(
+                ActiveParasiteCapacity,
+                BodyPartHealthFactor.ToStringPercent(),
+                PainFactor.ToStringPercent()));
             return builder.ToString().TrimEnd();
         }
     }

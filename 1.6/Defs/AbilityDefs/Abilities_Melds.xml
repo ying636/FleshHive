@@ -40,15 +40,15 @@
   <AbilityDef>
     <defName>FH_BastionmeldFleshPulse</defName>
     <label>flesh pulse</label>
-    <description>Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields.</description>
+    <description>Release a flesh pulse centered on the caster, disabling electronics and affected mechanoids.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>240000</cooldownTicksRange>
+    <cooldownTicksRange>60000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>4</warmupTime>
+      <warmupTime>2</warmupTime>
       <targetable>false</targetable>
       <ai_IsWeapon>false</ai_IsWeapon>
       <targetParams>
@@ -57,6 +57,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>50</twistedFleshCost>
+      </li>
       <li Class="FleshHive.CompProperties_AbilityBastionmeldFleshPulse">
         <radius>10.9</radius>
       </li>
@@ -66,7 +69,7 @@
   <AbilityDef>
     <defName>FH_BastionmeldFleshPulse_Parasitism</defName>
     <label>flesh pulse</label>
-    <description>Emit a flesh pulse centered on the caster.</description>
+    <description>Release a flesh pulse centered on the caster, disabling electronics and affected mechanoids.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
     <cooldownTicksRange>60000</cooldownTicksRange>
@@ -74,7 +77,7 @@
     <targetRequired>false</targetRequired>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <warmupTime>4</warmupTime>
+      <warmupTime>2</warmupTime>
       <targetable>false</targetable>
       <ai_IsWeapon>false</ai_IsWeapon>
       <targetParams>
@@ -83,6 +86,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>50</twistedFleshCost>
+      </li>
       <li Class="FleshHive.CompProperties_AbilityBastionmeldFleshPulse">
         <radius>10.9</radius>
       </li>

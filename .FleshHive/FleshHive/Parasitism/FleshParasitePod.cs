@@ -198,9 +198,9 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             Widgets.Label(systemRect, text);
             systemRect.x += systemRect.width + 5f;
             Rect spaceRect = systemRect;
-            spaceRect.y += 7f;
-            spaceRect.width = 15f;
-            spaceRect.height = 15f;
+            spaceRect.y += 9f;
+            spaceRect.width = 12f;
+            spaceRect.height = 12f;
             var count = system.Count;
             for (int i = 0; i < this.system.Limit; i++)
             {
@@ -214,7 +214,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                     Widgets.DrawBoxSolid(spaceRect, Color.gray); 
                 }
 
-                spaceRect.x += 17f;
+                spaceRect.x += 14f;
                 count--;
             }
 
@@ -412,12 +412,17 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             if (comp != null)
             {
                 Rect costRect = new Rect(iconRect.x, iconRect.yMax + 2f, iconRect.width, 12f);
-                Rect p = new Rect(costRect.x, costRect.y, 10f, 10f);
-                for (int i = 0; i < comp.Props.cost; i++)
+                int cost = comp.Props.cost;
+                float blockGap = 2f;
+                float blockSize = 8f;
+                float blocksWidth = cost > 0 ? cost * blockSize + (cost - 1) * blockGap : 0f;
+                Rect p = new Rect(costRect.x + (costRect.width - blocksWidth) / 2f,
+                    costRect.y + (costRect.height - blockSize) / 2f, blockSize, blockSize);
+                for (int i = 0; i < cost; i++)
                 {
                     Widgets.DrawBoxSolid(p, Color.red);
                     Widgets.DrawBox(p, 1, BaseContent.BlackTex);
-                    p.x += p.width + 2f;
+                    p.x += blockSize + blockGap;
                 }
                 TooltipHandler.TipRegion(iconRect, hd.flesh.LabelCap);
             }
@@ -442,32 +447,12 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         Text.Font = GameFont.Small;
         Widgets.Label(new Rect(rect.x, rect.y, rect.width, 24f), "ParasitismAbility".Translate());
         Rect rowRect = new Rect(rect.x, rect.y + 28f, rect.width, rect.height - 28f);
-        float size = 40f;
-        float gap = 6f;
-        float x = rowRect.x;
-        float y = rowRect.y;
+        List<ParasitismDisplayEntry> entries = new List<ParasitismDisplayEntry>();
         foreach (var hd in this.system.ParasitismHediffs)
         {
-            if (hd?.flesh == null) continue;
-            var comp = hd.flesh.TryGetComp<ParasitismComp>();
-            Rect box = new Rect(x, y, size, size);
-            Widgets.DrawBoxSolid(box, Color.black);
-            Widgets.DrawBox(box,1,BaseContent.GreyTex);
-            if (comp != null)
-            {
-                Widgets.DrawTextureFitted(box.ContractedBy(4f),comp.Icon,1f);
-                if (!comp.Props.abilityLabel.NullOrEmpty() || !comp.Props.abilityDescription.NullOrEmpty())
-                {
-                    TooltipHandler.TipRegion(box, comp.Props.abilityLabel + "\n" + comp.Props.abilityDescription);
-                }
-            }
-            x += size + gap;
-            if (x + size > rowRect.xMax)
-            {
-                x = rowRect.x;
-                y += size + gap;
-            }
+            AddRuntimeParasitismEntries(entries, hd);
         }
+        DrawParasitismEntries(rowRect, entries);
         Text.Font = GameFont.Small;
     }
 
@@ -505,26 +490,197 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         var text = "ParasitismCapacityCost".Translate();
         Widgets.Label(rect,text);
         rect.x += text.GetWidthCached();
-        rect.width = 15f;
-        rect.height = 15f;
-        rect.y += 7.5f;
+        rect.width = 12f;
+        rect.height = 12f;
+        rect.y += 9f;
         for (int i = 0; i < comp.Props.cost; i++)
         {
             Widgets.DrawBoxSolid(rect,Color.red);
             Widgets.DrawBox(rect,1,BaseContent.BlackTex);
-            rect.x += rect.width + 5f; 
+            rect.x += rect.width + 4f;
         }
 
-        list.Label(comp.Props.effect);
         list.Label("ParasitismAbility".Translate());
-        var iconRect =list.GetRect(30f);
-        iconRect.width = 30f;
-        iconRect.x += 5f;
-        iconRect.y += 5f;
-        Widgets.DrawTextureFitted(iconRect,comp.Icon,1.5f);
-        TooltipHandler.TipRegion(iconRect,comp.Props.abilityLabel + "\n" +comp.Props.abilityDescription); 
+        Rect abilityRect = list.GetRect(72f);
+        List<ParasitismDisplayEntry> entries = new List<ParasitismDisplayEntry>();
+        AddDefParasitismEntries(entries, comp.Props.hediff, comp);
+        DrawParasitismEntries(abilityRect, entries);
         list.End();
         Text.Font = GameFont.Small;
+    }
+
+    private void AddRuntimeParasitismEntries(List<ParasitismDisplayEntry> entries, ParasitismHediff hediff)
+    {
+        if (hediff?.comps == null)
+        {
+            return;
+        }
+
+        foreach (HediffComp hediffComp in hediff.comps)
+        {
+            if (hediffComp is HediffComp_Parasitism parasitismComp)
+            {
+                AddTentacleEntries(entries, parasitismComp.Tentacles, parasitismComp.Hediff?.Comp);
+            }
+            else if (hediffComp is HediffComp_GiveAbility abilityComp)
+            {
+                AddAbilityEntries(entries, abilityComp);
+            }
+        }
+    }
+
+    private void AddDefParasitismEntries(List<ParasitismDisplayEntry> entries, HediffDef hediffDef, ParasitismComp sourceComp)
+    {
+        if (hediffDef?.comps == null)
+        {
+            return;
+        }
+
+        foreach (HediffCompProperties hediffComp in hediffDef.comps)
+        {
+            if (hediffComp is HediffCompProperties_Parasitism parasitismProps)
+            {
+                AddTentacleEntries(entries, parasitismProps.tentacles, sourceComp);
+            }
+            else if (hediffComp is HediffCompProperties_GiveAbility abilityProps)
+            {
+                if (abilityProps.abilityDef != null)
+                {
+                    entries.Add(CreateAbilityEntry(abilityProps.abilityDef));
+                }
+                if (!abilityProps.abilityDefs.NullOrEmpty())
+                {
+                    foreach (AbilityDef abilityDef in abilityProps.abilityDefs)
+                    {
+                        if (abilityDef != null)
+                        {
+                            entries.Add(CreateAbilityEntry(abilityDef));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void AddTentacleEntries(List<ParasitismDisplayEntry> entries, IEnumerable<Tentacle> tentacles,
+        ParasitismComp sourceComp)
+    {
+        List<Tentacle> tentacleList = tentacles?.ToList() ?? new List<Tentacle>();
+        string label = sourceComp?.Props.abilityLabel;
+        if (label.NullOrEmpty())
+        {
+            label = "FH_ParasiticTentacle".Translate();
+        }
+        string description = sourceComp?.Props.abilityDescription;
+        for (int i = 0; i < tentacleList.Count; i++)
+        {
+            Tentacle tentacle = tentacleList[i];
+            Texture2D icon = BaseContent.BadTex;
+            if (tentacle?.Prop != null && !tentacle.Prop.iconPath.NullOrEmpty())
+            {
+                icon = tentacle.Icon ?? icon;
+            }
+            entries.Add(new ParasitismDisplayEntry(icon, label, description));
+        }
+    }
+
+    private void AddTentacleEntries(List<ParasitismDisplayEntry> entries, IEnumerable<TentacleProperties> tentacleProperties,
+        ParasitismComp sourceComp)
+    {
+        List<TentacleProperties> properties = tentacleProperties?.ToList() ?? new List<TentacleProperties>();
+        string label = sourceComp?.Props.abilityLabel;
+        if (label.NullOrEmpty())
+        {
+            label = "FH_ParasiticTentacle".Translate();
+        }
+        string description = sourceComp?.Props.abilityDescription;
+        for (int i = 0; i < properties.Count; i++)
+        {
+            TentacleProperties property = properties[i];
+            Texture2D icon = BaseContent.BadTex;
+            if (property != null && !property.iconPath.NullOrEmpty())
+            {
+                icon = ContentFinder<Texture2D>.Get(property.iconPath, false) ?? icon;
+            }
+            entries.Add(new ParasitismDisplayEntry(icon, label, description));
+        }
+    }
+
+    private void AddAbilityEntries(List<ParasitismDisplayEntry> entries, HediffComp_GiveAbility abilityComp)
+    {
+        HediffCompProperties_GiveAbility props = abilityComp?.props as HediffCompProperties_GiveAbility;
+        if (props == null)
+        {
+            return;
+        }
+        if (props.abilityDef != null)
+        {
+            entries.Add(CreateAbilityEntry(props.abilityDef));
+        }
+        if (!props.abilityDefs.NullOrEmpty())
+        {
+            foreach (AbilityDef abilityDef in props.abilityDefs)
+            {
+                if (abilityDef != null)
+                {
+                    entries.Add(CreateAbilityEntry(abilityDef));
+                }
+            }
+        }
+    }
+
+    private ParasitismDisplayEntry CreateAbilityEntry(AbilityDef abilityDef)
+    {
+        Texture2D icon = abilityDef.uiIcon;
+        if ((icon == null || icon == BaseContent.BadTex) && !abilityDef.iconPath.NullOrEmpty())
+        {
+            icon = ContentFinder<Texture2D>.Get(abilityDef.iconPath, false) ?? BaseContent.BadTex;
+        }
+        return new ParasitismDisplayEntry(icon, abilityDef.LabelCap, abilityDef.description);
+    }
+
+    private void DrawParasitismEntries(Rect rect, List<ParasitismDisplayEntry> entries)
+    {
+        if (entries.NullOrEmpty())
+        {
+            return;
+        }
+
+        const float itemSize = 56f;
+        const float iconSize = 48f;
+        const float gap = 8f;
+        int columns = Mathf.Max(1, Mathf.FloorToInt((rect.width + gap) / (itemSize + gap)));
+        GameFont font = Text.Font;
+        Text.Font = GameFont.Tiny;
+        for (int i = 0; i < entries.Count; i++)
+        {
+            int column = i % columns;
+            int row = i / columns;
+            Rect itemRect = new Rect(rect.x + column * (itemSize + gap), rect.y + row * (itemSize + gap),
+                itemSize, itemSize);
+            Rect iconRect = new Rect(itemRect.x + (itemSize - iconSize) / 2f,
+                itemRect.y + (itemSize - iconSize) / 2f, iconSize, iconSize);
+            Widgets.DrawBoxSolid(iconRect, Color.black);
+            Widgets.DrawBox(iconRect, 1, BaseContent.GreyTex);
+            Widgets.DrawTextureFitted(iconRect.ContractedBy(3f), entries[i].Icon, 1f);
+            TooltipHandler.TipRegion(itemRect, entries[i].Label + "\n" + entries[i].Description);
+        }
+        Text.Font = font;
+        Text.Anchor = TextAnchor.UpperLeft;
+    }
+
+    private readonly struct ParasitismDisplayEntry
+    {
+        public ParasitismDisplayEntry(Texture2D icon, string label, string description)
+        {
+            Icon = icon ?? BaseContent.BadTex;
+            Label = label ?? string.Empty;
+            Description = description ?? string.Empty;
+        }
+
+        public readonly Texture2D Icon;
+        public readonly string Label;
+        public readonly string Description;
     }
 
     private void DrawFlesh(Rect targetRect)
@@ -572,8 +728,14 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                 Find.WindowStack.Add(new FloatMenu(options));
             }
         }
-        Widgets.Label(new Rect(targetRect.x,targetRect.y + targetRect.height + 5f,targetRect.width,20f),
-            this.fleshUI == null ? "FleshParasitePod_Flesh".Translate().ToString() : this.fleshUI.Label);
+        TextAnchor anchor = Text.Anchor;
+        bool wordWrap = Text.WordWrap;
+        Text.Anchor = TextAnchor.UpperCenter;
+        Text.WordWrap = true;
+        Widgets.Label(new Rect(targetRect.x, targetRect.y + targetRect.height + 5f, targetRect.width, 38f),
+            this.fleshUI == null ? "FleshParasitePod_Flesh".Translate().ToString() : this.fleshUI.LabelCap);
+        Text.WordWrap = wordWrap;
+        Text.Anchor = anchor;
     }
 
     private void DrawTarget(Rect t1Rect, Rect targetRect)
@@ -604,8 +766,14 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                 Find.WindowStack.Add(new FloatMenu(options));
             }
         }
-        Widgets.Label(new Rect(targetRect.x,targetRect.y + targetRect.height + 5f,targetRect.width,20f),
-            this.targetUI == null ? "FleshParasitePod_Target".Translate().ToString() : this.targetUI.Label);
+        TextAnchor anchor = Text.Anchor;
+        bool wordWrap = Text.WordWrap;
+        Text.Anchor = TextAnchor.UpperCenter;
+        Text.WordWrap = true;
+        Widgets.Label(new Rect(targetRect.x, targetRect.y + targetRect.height + 5f, targetRect.width, 38f),
+            this.targetUI == null ? "FleshParasitePod_Target".Translate().ToString() : this.targetUI.LabelCap);
+        Text.WordWrap = wordWrap;
+        Text.Anchor = anchor;
     }
 
     public void SelectTarget(Pawn pawn)

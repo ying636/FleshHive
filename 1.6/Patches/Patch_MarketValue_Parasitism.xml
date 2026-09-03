@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/StatDef[defName="MarketValue"]/parts</xpath>
+    <order>Prepend</order>
+    <value>
+      <li Class="FleshHive.StatPart_MarketValue_Parasitism" />
+    </value>
+  </Operation>
+</Patch>

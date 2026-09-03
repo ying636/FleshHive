@@ -14,7 +14,16 @@ public class Window_Parasitism : Window
 
     public override void DoWindowContents(Rect inRect)
     {
-        pod.Draw(inRect);
+        GameFont font = Text.Font;
+        Text.Font = GameFont.Small;
+        try
+        {
+            pod.Draw(inRect);
+        }
+        finally
+        {
+            Text.Font = font;
+        }
     }
 
 

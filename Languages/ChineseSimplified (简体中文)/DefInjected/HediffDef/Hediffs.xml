@@ -9,7 +9,7 @@
   <!-- EN: acidbulb parasitism -->
   <FH_Parasitism_Acidbulb.label>腐蚀瘤兽寄生</FH_Parasitism_Acidbulb.label>
   <!-- EN: The host becomes immune to toxic buildup and gains acid mortar and acid spray abilities. -->
-  <FH_Parasitism_Acidbulb.description>该生物被腐蚀瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n免疫毒素积累，并获得“酸蚀迫击炮”和“酸液喷吐”能力。\n\n-触手</FH_Parasitism_Acidbulb.description>
+  <FH_Parasitism_Acidbulb.description>该生物被腐蚀瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n免疫毒素积累，扭曲肉容量+200，并获得“酸蚀迫击炮”和“酸液喷吐”能力。\n\n-触手</FH_Parasitism_Acidbulb.description>
   
   <!-- EN: bulbfreak parasitism -->
   <FH_Parasitism_Bulbfreak.label>恶臭瘤兽寄生</FH_Parasitism_Bulbfreak.label>
@@ -19,7 +19,7 @@
   <!-- EN: bulbplump parasitism -->
   <FH_Parasitism_Bulbplump.label>增生瘤兽寄生</FH_Parasitism_Bulbplump.label>
   <!-- EN: The host's hunger rate is reduced, and two explosive-sac-fed flesh tentacles grow from its body. The host can consume twisted flesh to perform a flesh jump. -->
-  <FH_Parasitism_Bulbplump.description>该生物被增生瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n饥饿速度降低，并获得血肉跳跃能力。\n\n-触手</FH_Parasitism_Bulbplump.description>
+  <FH_Parasitism_Bulbplump.description>该生物被增生瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n饥饿速度降低，扭曲肉容量+400，每天恢复50扭曲肉，并获得血肉跳跃能力。\n\n-触手</FH_Parasitism_Bulbplump.description>
   
   <!-- EN: fingerspike parasitism -->
   <FH_Parasitism_Fingerspike.label>独爪兽寄生</FH_Parasitism_Fingerspike.label>
@@ -34,7 +34,7 @@
   <!-- EN: flesh replica synchronization -->
   <FH_Parasitism_FleshReplica.label>血肉拟像同步</FH_Parasitism_FleshReplica.label>
   <!-- EN: A synchronization link between a flesh replica and its host, allowing the replica to mimic the host's appearance and equipment. -->
-  <FH_Parasitism_FleshReplica.description>血肉拟像与宿主之间的同步连接，使拟像能够模仿宿主的外貌与装备。</FH_Parasitism_FleshReplica.description>
+  <FH_Parasitism_FleshReplica.description>血肉拟像与宿主之间的同步连接，能够模仿宿主的外貌与能力。</FH_Parasitism_FleshReplica.description>
   
   <!-- EN: 胃血兽寄生 -->
   <FH_Parasitism_Gutspike.label>胃血兽寄生</FH_Parasitism_Gutspike.label>
@@ -64,12 +64,17 @@
   <!-- EN: spitbulb parasitism -->
   <FH_Parasitism_Spitbulb.label>喷射瘤兽寄生</FH_Parasitism_Spitbulb.label>
   <!-- EN: The host gains a flesh mortar that consumes twisted flesh and releases a small fleshbeast at the impact point. -->
-  <FH_Parasitism_Spitbulb.description>该生物被喷射瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n获得一门血肉迫击炮，并在命中位置释放一只小型血肉兽。\n\n-触手</FH_Parasitism_Spitbulb.description>
+  <FH_Parasitism_Spitbulb.description>该生物被喷射瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n扭曲肉容量+200，获得一门血肉迫击炮，并在命中位置释放一只小型血肉兽。\n\n-触手</FH_Parasitism_Spitbulb.description>
   
   <!-- EN: synbulb parasitism -->
   <FH_Parasitism_Synbulb.label>共鸣瘤兽寄生</FH_Parasitism_Synbulb.label>
   <!-- EN: The host enters psychic harmonization and grows two bone-burst tentacles capable of firing bone shards at range. -->
   <FH_Parasitism_Synbulb.description>该生物被共鸣瘤兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n进入心灵同调状态。\n\n-碎爪触手</FH_Parasitism_Synbulb.description>
+
+  <!-- EN: flesh psychic harmonization -->
+  <FH_PsychicHarmonizer.label>血肉心灵同调</FH_PsychicHarmonizer.label>
+  <!-- EN: A flesh-induced psychic harmonization effect that projects the host's mood to nearby pawns. -->
+  <FH_PsychicHarmonizer.description>由血肉寄生引发的心灵同调效果，将宿主的心情投射给附近的殖民者。</FH_PsychicHarmonizer.description>
   
   <!-- EN: 双爪兽寄生 -->
   <FH_Parasitism_Toughspike.label>双爪兽寄生</FH_Parasitism_Toughspike.label>

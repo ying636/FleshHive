@@ -337,7 +337,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshDigester</defName>
     <label>flesh digester</label>
-    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition.</description>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
     <building>FH_FleshDigester</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>520</workAmount>
@@ -359,7 +359,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshDigesterS</defName>
     <label>small flesh digester</label>
-    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition.</description>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
     <building>FH_FleshDigesterS</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>130</workAmount>

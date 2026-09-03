@@ -13,8 +13,8 @@
 
   <!-- EN: release fleshbeasts -->
   <FH_BulbfreakReleaseFleshbeasts.label>释放血肉兽</FH_BulbfreakReleaseFleshbeasts.label>
-  <!-- EN: Consume 400 twisted flesh to release two random medium fleshbeasts. -->
-  <FH_BulbfreakReleaseFleshbeasts.description>消耗400扭曲肉，释放两只随机中型血肉兽。</FH_BulbfreakReleaseFleshbeasts.description>
+  <!-- EN: Consume 300 twisted flesh to release two random medium fleshbeasts. -->
+  <FH_BulbfreakReleaseFleshbeasts.description>消耗300扭曲肉，释放两只随机中型血肉兽。</FH_BulbfreakReleaseFleshbeasts.description>
 
   <!-- EN: corrosive spray -->
   <FH_CorrosiveSpray_Gutspike.label>腐蚀酸液喷吐</FH_CorrosiveSpray_Gutspike.label>
@@ -30,7 +30,7 @@
 
   <!-- EN: acid mortar -->
   <FH_Parasitism_AcidMortar.label>酸液迫击炮</FH_Parasitism_AcidMortar.label>
-  <!-- EN: Consume 50 twisted flesh to launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns. -->
+  <!-- EN: Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns. -->
   <FH_Parasitism_AcidMortar.description>发射一枚覆盖3×3区域的酸液炮弹。被击中的目标会持续受到酸蚀伤害。</FH_Parasitism_AcidMortar.description>
 
   <!-- EN: acid spray -->
@@ -40,15 +40,15 @@
 
   <!-- EN: flesh jump -->
   <FH_Parasitism_FleshJump.label>血肉跳跃</FH_Parasitism_FleshJump.label>
-  <!-- EN: Consume 25 twisted flesh to directionally detonate explosive sacs and leap a long distance. -->
-  <FH_Parasitism_FleshJump.description>将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下借此轻松跨越很长的距离。</FH_Parasitism_FleshJump.description>
+  <!-- EN: Consume 50 twisted flesh to directionally detonate explosive sacs and leap a long distance. -->
+  <FH_Parasitism_FleshJump.description>消耗50扭曲肉，将体内的部分爆炸囊定向引爆，在缓冲组织的帮助下借此轻松跨越很长的距离。</FH_Parasitism_FleshJump.description>
   <!-- EN: jump -->
   <FH_Parasitism_FleshJump.verbProperties.label>跳跃</FH_Parasitism_FleshJump.verbProperties.label>
 
   <!-- EN: flesh mortar -->
   <FH_Parasitism_FleshMortar.label>血肉迫击炮</FH_Parasitism_FleshMortar.label>
-  <!-- EN: Launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases one random small fleshbeast at the impact point. -->
-  <FH_Parasitism_FleshMortar.description>发射一枚爆炸性血肉炮弹，在5×5区域造成30点伤害，并在命中位置释放一只随机小型血肉兽。</FH_Parasitism_FleshMortar.description>
+  <!-- EN: Consume 150 twisted flesh to launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point. -->
+  <FH_Parasitism_FleshMortar.description>消耗150扭曲肉，发射一枚爆炸性血肉炮弹，在5×5区域造成30点伤害，并在命中位置释放三只随机小型血肉兽。</FH_Parasitism_FleshMortar.description>
 
   <!-- EN: spike launch -->
   <FH_SpikeLaunch_Fingerspike.label>骨刺发射</FH_SpikeLaunch_Fingerspike.label>
@@ -82,8 +82,8 @@
 
   <!-- EN: flesh mortar -->
   <FH_Spitbulb_Launch.label>血肉迫击炮</FH_Spitbulb_Launch.label>
-  <!-- EN: Launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point. -->
-  <FH_Spitbulb_Launch.description>发射一枚爆炸性血肉炮弹，在5×5区域造成30点伤害，并在命中位置释放三只随机小型血肉兽。</FH_Spitbulb_Launch.description>
+  <!-- EN: Consume 150 twisted flesh to launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point. -->
+  <FH_Spitbulb_Launch.description>消耗150扭曲肉，发射一枚爆炸性血肉炮弹，在5×5区域造成30点伤害，并在命中位置释放三只随机小型血肉兽。</FH_Spitbulb_Launch.description>
 
   <!-- EN: release fleshbeasts -->
   <FH_Trispike_ReleaseSpikes.label>释放血肉兽</FH_Trispike_ReleaseSpikes.label>

@@ -178,7 +178,7 @@
     <description>Launch acid.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>15000</cooldownTicksRange>
+    <cooldownTicksRange>1250</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
     <verbProperties>
       <range>25</range>
@@ -200,7 +200,7 @@
     <description>Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>1250</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_AcidMortar</iconPath>
     <verbProperties>
       <range>50</range>
@@ -352,13 +352,13 @@
   <AbilityDef>
     <defName>FH_Spitbulb_Launch</defName>
     <label>flesh mortar</label>
-    <description>Launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point.</description>
+    <description>Consume 150 twisted flesh to launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
     <cooldownTicksRange>1250</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
     <verbProperties>
-      <range>50</range>
+      <range>75</range>
       <defaultProjectile>FH_Bullet_Shell_Spit</defaultProjectile>
       <defaultCooldownTime>5</defaultCooldownTime>
       <verbClass>Verb_AbilityShoot</verbClass>
@@ -369,18 +369,23 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>150</twistedFleshCost>
+      </li>
+    </comps>
   </AbilityDef>
 
   <AbilityDef>
     <defName>FH_Parasitism_FleshMortar</defName>
     <label>flesh mortar</label>
-    <description>Launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases one random small fleshbeast at the impact point.</description>
+    <description>Consume 150 twisted flesh to launch an explosive flesh shell that deals 30 damage over a 5-by-5 area and releases three random small fleshbeasts at the impact point.</description>
     <aiCanUse>true</aiCanUse>
     <ai_IsOffensive>true</ai_IsOffensive>
-    <cooldownTicksRange>1250</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Parasitism_FleshMortar</iconPath>
     <verbProperties>
-      <range>50</range>
+      <range>75</range>
       <defaultProjectile>FH_Bullet_Shell_ParasitismSpit</defaultProjectile>
       <defaultCooldownTime>5</defaultCooldownTime>
       <verbClass>Verb_AbilityShoot</verbClass>
@@ -391,6 +396,11 @@
         <canTargetLocations>true</canTargetLocations>
       </targetParams>
     </verbProperties>
+    <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>150</twistedFleshCost>
+      </li>
+    </comps>
   </AbilityDef>
 
   <ThingDef ParentName="BaseBullet">
@@ -543,9 +553,9 @@
   <AbilityDef>
     <defName>FH_BulbfreakReleaseFleshbeasts</defName>
     <label>release fleshbeasts</label>
-    <description>Consume 400 twisted flesh to release two random medium fleshbeasts.</description>
+    <description>Consume 300 twisted flesh to release two random medium fleshbeasts.</description>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>240000</cooldownTicksRange>
+    <cooldownTicksRange>120000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_BulbfreakReleaseFleshbeasts</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -560,7 +570,7 @@
     </verbProperties>
     <comps>
       <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
-        <twistedFleshCost>400</twistedFleshCost>
+        <twistedFleshCost>300</twistedFleshCost>
       </li>
       <li Class="FleshHive.CompProperties_AbilityBulbfreakReleaseFleshbeasts">
         <spawnCount>2</spawnCount>
@@ -590,9 +600,9 @@
   <AbilityDef>
     <defName>FH_Parasitism_FleshJump</defName>
     <label>flesh jump</label>
-    <description>Directionally detonate explosive sacs and leap a long distance.</description>
+    <description>Consume 50 twisted flesh to directionally detonate explosive sacs and leap a long distance.</description>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>2500</cooldownTicksRange>
+    <cooldownTicksRange>1250</cooldownTicksRange>
     <hostile>false</hostile>
     <iconPath>UI/Ability/FH_ParasitismFleshJump</iconPath>
     <jobDef>CastJump</jobDef>
@@ -601,7 +611,7 @@
       <label>jump</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-      <warmupTime>4</warmupTime>
+      <warmupTime>1</warmupTime>
       <range>18</range>
       <requireLineOfSight>true</requireLineOfSight>
       <soundCast>Longjump_Jump</soundCast>
@@ -613,6 +623,9 @@
       </targetParams>
     </verbProperties>
     <comps>
+      <li Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost">
+        <twistedFleshCost>50</twistedFleshCost>
+      </li>
       <li Class="FleshHive.CompProperties_AbilityFleshJumpExplosion">
         <baseDamage>5</baseDamage>
         <explosionRadius>4.5</explosionRadius>
@@ -625,7 +638,7 @@
     <label>flesh jump</label>
     <description>Directionally detonate some of the explosive sacs inside the body. With the protection of cushioning tissue, the blast can propel the fleshbeast across a long distance with ease.</description>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>2500</cooldownTicksRange>
+    <cooldownTicksRange>1250</cooldownTicksRange>
     <hostile>false</hostile>
     <iconPath>UI/Ability/FH_FleshJump</iconPath>
     <jobDef>CastJump</jobDef>
@@ -634,7 +647,7 @@
       <label>jump</label>
       <violent>false</violent>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-      <warmupTime>4</warmupTime>
+      <warmupTime>1</warmupTime>
       <range>18</range>
       <requireLineOfSight>true</requireLineOfSight>
       <soundCast>Longjump_Jump</soundCast>

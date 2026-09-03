@@ -12,7 +12,7 @@ public class DeathActionProperties_UnitDivideExplosion : DeathActionProperties_U
         workerClass = typeof(DeathActionWorker_UnitDivideExplosion);
     }
 
-    public int baseDamage = 5;
+    public int baseDamage = 50;
 
     public float explosionRadius = 4.5f;
 }

@@ -208,7 +208,8 @@
         <tentacles>
           <li Class="FleshHive.TentacleProperties_WeaponMount">
             <tentacleClass>FleshHive.Tentacle_WeaponMount</tentacleClass>
-            <slotLabel>FH_LeftParasiticWeaponSlot</slotLabel>
+            <iconPath>UI/Ability/FH_BastionmeldWeaponMount</iconPath>
+            <slotLabel>FH_ParasiticWeaponSlot</slotLabel>
             <renderNode>
               <nodeClass>FleshHive.PawnNodeRender_Tentacle</nodeClass>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
@@ -227,7 +228,8 @@
           </li>
           <li Class="FleshHive.TentacleProperties_WeaponMount">
             <tentacleClass>FleshHive.Tentacle_WeaponMount</tentacleClass>
-            <slotLabel>FH_RightParasiticWeaponSlot</slotLabel>
+            <iconPath>UI/Ability/FH_BastionmeldWeaponMount</iconPath>
+            <slotLabel>FH_ParasiticWeaponSlot</slotLabel>
             <renderNode>
               <nodeClass>FleshHive.PawnNodeRender_Tentacle</nodeClass>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>

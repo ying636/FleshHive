@@ -138,7 +138,6 @@
   <!-- EN: Tentacle Attack: Off -->
   <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
   <FH_ParasiticTentacle>寄生触手</FH_ParasiticTentacle>
-  <FH_ParasiticTentacleNumbered>{0} - 触手{1}</FH_ParasiticTentacleNumbered>
 
   <!-- EN: Mark Prey -->
   <FH_MarkPrey>标记猎物</FH_MarkPrey>
@@ -362,7 +361,7 @@
   <!-- EN: Parasitic weapons -->
   <FH_TabParasiticWeapons>寄生武器</FH_TabParasiticWeapons>
   <!-- EN: Parasitic weapon slot -->
-  <FH_ParasiticWeaponSlot>寄生武器槽</FH_ParasiticWeaponSlot>
+  <FH_ParasiticWeaponSlot>武器插槽</FH_ParasiticWeaponSlot>
   <!-- EN: Parasitic weapon: left slot -->
   <FH_LeftParasiticWeaponSlot>寄生武器：左装备栏</FH_LeftParasiticWeaponSlot>
   <!-- EN: Parasitic weapon: right slot -->
@@ -417,8 +416,8 @@
 
   <!-- EN: Parasite capacity: {0}/{1} -->
   <FH_Hela_ParasiteCapacityInfo>寄生空间：{0}/{1}</FH_Hela_ParasiteCapacityInfo>
-  <!-- EN: Occupied parasite space: {0}; body part health: {1} -->
-  <FH_Hela_BodyPartHealthInfo>已激活寄生空间：{0}；部位生命值：{1}</FH_Hela_BodyPartHealthInfo>
+  <!-- EN: Occupied parasite space: {0}; body part health: {1}; pain factor: {2} -->
+  <FH_Hela_BodyPartHealthInfo>已激活寄生空间：{0}；部位生命值：{1}；疼痛倍率：{2}</FH_Hela_BodyPartHealthInfo>
   <!-- EN: Use {0} to expand parasite capacity -->
   <FH_Hela_UseShard>使用{0}扩展寄生空间</FH_Hela_UseShard>
   <!-- EN: Cannot use {0} -->

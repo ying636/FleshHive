@@ -4,12 +4,12 @@
   <!-- EN: flesh pulse -->
   <FH_BastionmeldFleshPulse.label>血肉脉冲</FH_BastionmeldFleshPulse.label>
   <!-- EN: Emit an EMP pulse centered on the caster, disrupting mechanoids, turrets, and bullet shields. -->
-  <FH_BastionmeldFleshPulse.description>以自身为中心释放EMP脉冲，干扰附近的机械族、炮塔和子弹护盾。</FH_BastionmeldFleshPulse.description>
+  <FH_BastionmeldFleshPulse.description>以自身为中心释放血肉脉冲，瘫痪电器。以及波及到的机械族。</FH_BastionmeldFleshPulse.description>
   
   <!-- EN: flesh pulse -->
   <FH_BastionmeldFleshPulse_Parasitism.label>血肉脉冲</FH_BastionmeldFleshPulse_Parasitism.label>
   <!-- EN: Emit a flesh pulse centered on the caster. -->
-  <FH_BastionmeldFleshPulse_Parasitism.description>以自身为中心释放血肉脉冲。</FH_BastionmeldFleshPulse_Parasitism.description>
+  <FH_BastionmeldFleshPulse_Parasitism.description>以自身为中心释放血肉脉冲，瘫痪电器。以及波及到的机械族。</FH_BastionmeldFleshPulse_Parasitism.description>
   
   <!-- EN: summon flesh deadguard -->
   <FH_BastionmeldSummonDeadguard.label>召唤血肉死卫</FH_BastionmeldSummonDeadguard.label>

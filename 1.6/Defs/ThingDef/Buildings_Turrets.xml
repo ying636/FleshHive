@@ -306,7 +306,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshDigester</defName>
     <label>flesh digester</label>
-    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition.</description>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
     <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
     <costList>
       <Meat_Twisted>1280</Meat_Twisted>
@@ -383,7 +383,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshDigesterS</defName>
     <label>small flesh digester</label>
-    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. It can also consume nearby raw meat to replenish hive nutrition.</description>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
     <researchPrerequisites><li>FH_Research_ImmuneSystem</li></researchPrerequisites>
     <costList>
       <Meat_Twisted>320</Meat_Twisted>

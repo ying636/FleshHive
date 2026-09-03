@@ -72,7 +72,6 @@
   <TentacleAttackModeOn>Tentacle Attack: On</TentacleAttackModeOn>
   <TentacleAttackModeOff>Tentacle Attack: Off</TentacleAttackModeOff>
   <FH_ParasiticTentacle>Parasitic tentacle</FH_ParasiticTentacle>
-  <FH_ParasiticTentacleNumbered>{0} - tentacle {1}</FH_ParasiticTentacleNumbered>
 
   <FH_MarkPrey>Mark Prey</FH_MarkPrey>
   <FH_MarkPreyDesc>Mark downed creatures to be carried to a flesh sack for digestion.</FH_MarkPreyDesc>
@@ -186,7 +185,7 @@
   <FH_Fusion_NoValidFusion>Select all required fusion materials first.</FH_Fusion_NoValidFusion>
   <FH_Fusion_FuserUnavailable>The fleshbeast fusion component on the primary nest is unavailable.</FH_Fusion_FuserUnavailable>
   <FH_TabParasiticWeapons>Parasitic weapons</FH_TabParasiticWeapons>
-  <FH_ParasiticWeaponSlot>Parasitic weapon slot</FH_ParasiticWeaponSlot>
+  <FH_ParasiticWeaponSlot>Weapon slot</FH_ParasiticWeaponSlot>
   <FH_LeftParasiticWeaponSlot>Parasitic weapon: left slot</FH_LeftParasiticWeaponSlot>
   <FH_RightParasiticWeaponSlot>Parasitic weapon: right slot</FH_RightParasiticWeaponSlot>
   <FH_ParasiticWeaponSlotEmpty>Empty</FH_ParasiticWeaponSlotEmpty>
@@ -216,7 +215,7 @@
   <FH_Hela_LastName>Bates</FH_Hela_LastName>
 
   <FH_Hela_ParasiteCapacityInfo>Parasite capacity: {0}/{1}</FH_Hela_ParasiteCapacityInfo>
-  <FH_Hela_BodyPartHealthInfo>Occupied parasite space: {0}; body part health: {1}</FH_Hela_BodyPartHealthInfo>
+  <FH_Hela_BodyPartHealthInfo>Occupied parasite space: {0}; body part health: {1}; pain factor: {2}</FH_Hela_BodyPartHealthInfo>
   <FH_Hela_UseShard>Use {0} to expand parasite capacity</FH_Hela_UseShard>
   <FH_Hela_CannotUseShard>Cannot use {0}</FH_Hela_CannotUseShard>
   <FH_Hela_CannotUseShardMax>Cannot use {0}: parasite capacity has reached its maximum of {1}</FH_Hela_CannotUseShardMax>
