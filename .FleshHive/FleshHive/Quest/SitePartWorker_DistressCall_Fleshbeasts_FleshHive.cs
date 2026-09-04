@@ -35,7 +35,8 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
             return;
         }
 
-        Pawn mother = PawnGenerator.GeneratePawn(GetMotherKind(), Faction.OfEntities);
+        PawnKindDef motherKind = GetMotherKindForSite(map);
+        Pawn mother = PawnGenerator.GeneratePawn(motherKind, Faction.OfEntities);
         FleshParasiteUtility.TryApplyDefaultParasites(mother);
         List<Pawn> attackers = new List<Pawn>(escorts.Count + 1)
         {
@@ -99,6 +100,12 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
             DefDatabase<PawnKindDef>.GetNamed("FH_Dreadmeld")
         };
         return motherKinds.RandomElement();
+    }
+
+    private PawnKindDef GetMotherKindForSite(Map map)
+    {
+        Site site = map.Parent as Site;
+        return (site as FleshHiveSite)?.motherKind ?? GetMotherKind();
     }
 
     private static List<PawnKindDef> motherKinds;

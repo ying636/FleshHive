@@ -89,6 +89,10 @@ public static class FleshParasiteUtility
         {
             return;
         }
+        if (pawn.Faction?.IsPlayer == true)
+        {
+            return;
+        }
         if (pawn.RaceProps?.FleshType != FleshTypeDefOf.Fleshbeast)
         {
             return;

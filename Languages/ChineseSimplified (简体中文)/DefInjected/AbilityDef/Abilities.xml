@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <!-- EN: acid launch -->
-  <FH_Acidbulb_Launch.label>酸液投射</FH_Acidbulb_Launch.label>
+  <!-- EN: acid mortar -->
+  <FH_Acidbulb_Launch.label>酸蚀迫击炮</FH_Acidbulb_Launch.label>
   <!-- EN: Launch acid. -->
   <FH_Acidbulb_Launch.description>发射一枚酸液炮弹。</FH_Acidbulb_Launch.description>
+
+  <!-- EN: acid launch -->
+  <FH_Parasitism_AcidLaunch.label>酸液投射</FH_Parasitism_AcidLaunch.label>
+  <!-- EN: Launch acid. -->
+  <FH_Parasitism_AcidLaunch.description>发射一枚酸液炮弹。</FH_Parasitism_AcidLaunch.description>
 
   <!-- EN: active parasitism -->
   <FH_ActiveParasitism_Paraspike.label>主动寄生</FH_ActiveParasitism_Paraspike.label>
@@ -29,7 +34,7 @@
   <FH_FleshJump.verbProperties.label>跳跃</FH_FleshJump.verbProperties.label>
 
   <!-- EN: acid mortar -->
-  <FH_Parasitism_AcidMortar.label>酸液迫击炮</FH_Parasitism_AcidMortar.label>
+  <FH_Parasitism_AcidMortar.label>酸蚀迫击炮</FH_Parasitism_AcidMortar.label>
   <!-- EN: Launch an acid shell that explodes over a 3-by-3 area. Struck targets continue to suffer acid burns. -->
   <FH_Parasitism_AcidMortar.description>发射一枚覆盖3×3区域的酸液炮弹。被击中的目标会持续受到酸蚀伤害。</FH_Parasitism_AcidMortar.description>
 

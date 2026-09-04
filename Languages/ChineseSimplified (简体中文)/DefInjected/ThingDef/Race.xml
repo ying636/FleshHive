@@ -137,10 +137,10 @@
   <FH_Gutspike.description>一只拥有胃部特化的小型血肉兽，体型与犬类动物相当。特化的胃部可以用来储存酸液，并且通过快速挤压胃部来将这些腐蚀性酸液喷吐而出。其孱弱的身体并不擅长近距离战斗，通常依靠数量优势进行远距离袭击。</FH_Gutspike.description>
   <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
   <FH_Gutspike.comps.CompInspectStringEmergence.inspectString>由{SOURCEPAWN_labelShort}突变而来。</FH_Gutspike.comps.CompInspectStringEmergence.inspectString>
-  <!-- EN: 喷射酸浆。 -->
-  <FH_Gutspike.comps.ParasitismComp.abilityDescription>喷射酸浆。</FH_Gutspike.comps.ParasitismComp.abilityDescription>
-  <!-- EN: 寄生武器：酸浆喷射 -->
-  <FH_Gutspike.comps.ParasitismComp.abilityLabel>寄生武器：酸浆喷射</FH_Gutspike.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Spits corrosive fluid. -->
+  <FH_Gutspike.comps.ParasitismComp.abilityDescription>喷射腐蚀性酸液。</FH_Gutspike.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Parasitic weapon: acid launch -->
+  <FH_Gutspike.comps.ParasitismComp.abilityLabel>寄生武器：酸液投射</FH_Gutspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 食物中毒系数×0%；抗感染：肠道蠕虫；疼痛+8% -->
   <FH_Gutspike.comps.ParasitismComp.effect>食物中毒系数×0%；抗感染：肠道蠕虫；疼痛+8%</FH_Gutspike.comps.ParasitismComp.effect>
   <!-- EN: teeth -->
@@ -220,7 +220,7 @@
   <!-- EN: 寄生武器：盾爪 -->
   <FH_Shieldspike.comps.ParasitismComp.abilityLabel>盾爪触手</FH_Shieldspike.comps.ParasitismComp.abilityLabel>
   <!-- EN: 护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6 -->
-  <FH_Shieldspike.comps.ParasitismComp.effect>护甲-利器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6；宿主生长一条盾爪触手</FH_Shieldspike.comps.ParasitismComp.effect>
+  <FH_Shieldspike.comps.ParasitismComp.effect>护甲-锐器+25%；护甲-钝器+10%；护甲-热能+20%；魅力-5%；“血肉寄生”心情-6；宿主生长一条盾爪触手</FH_Shieldspike.comps.ParasitismComp.effect>
   <!-- EN: left spike -->
   <FH_Shieldspike.tools.left_spike.label>左盾爪</FH_Shieldspike.tools.left_spike.label>
   <!-- EN: spike -->

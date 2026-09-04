@@ -29,6 +29,10 @@
   <FleshParasitePod_NutritionCost>寄生消耗：{0}营养</FleshParasitePod_NutritionCost>
   <!-- EN: A parasitism task already exists -->
   <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
+  <FleshParasitePod_SelectedParasitismTask>已选定执行{0}寄生{1}任务</FleshParasitePod_SelectedParasitismTask>
+  <FleshParasitePod_ExecutingParasitismTask>正在执行{0}寄生{1}任务</FleshParasitePod_ExecutingParasitismTask>
+  <FleshParasitePod_SelectedRemoveTask>已选定执行从{0}中移除{1}任务</FleshParasitePod_SelectedRemoveTask>
+  <FleshParasitePod_ExecutingRemoveTask>正在执行从{0}中移除{1}任务</FleshParasitePod_ExecutingRemoveTask>
   <!-- EN: Insert fleshbeast -->
   <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
   <!-- EN: Contains: {0}, {1} -->
@@ -41,6 +45,8 @@
   <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
   <!-- EN: Implant a fleshbeast into a host with the aid of a flesh parasite vat. The fleshbeast consumes the host's nutrition to survive. Different fleshbeasts grant different abilities, making the host more powerful. -->
   <FleshParasitePod_Title>将一只血肉兽在血肉寄生仓的辅助下寄生在宿主的身体中。血肉兽将会消耗寄生目标的营养存活。不同的血肉兽会提供不同的能力，使宿主变得更加强大。</FleshParasitePod_Title>
+  <!-- EN: Carry to flesh parasite vat: {0} -->
+  <FH_Parasitism_CarryAnimalToPod>搬入血肉寄生仓：{0}</FH_Parasitism_CarryAnimalToPod>
   <!-- EN: Parasitic abilities -->
   <ParasitismAbility>寄生能力</ParasitismAbility>
   <!-- EN: Parasite capacity: {0}/{1} -->

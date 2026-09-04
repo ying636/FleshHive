@@ -1,3 +1,4 @@
+using RimWorld;
 using Verse;
 
 namespace FleshHive;
@@ -26,8 +27,14 @@ public class Tentacle_RangeAttackWithWarmup : Tentacle_RangeAttack
             return;
         }
 
-        Pawn pawn = this.Comp.Pawn;
-        if (warmupTarget == null || warmupTarget.Destroyed || !warmupTarget.Spawned || warmupTarget.MapHeld != pawn.MapHeld)
+        Pawn pawn = this.Comp?.Pawn;
+        if (pawn == null)
+        {
+            CancelWarmup();
+            return;
+        }
+
+        if (warmupTarget == null || warmupTarget.Destroyed || !warmupTarget.Spawned || warmupTarget.MapHeld != pawn.MapHeld || !warmupTarget.HostileTo(pawn))
         {
             CancelWarmup();
             return;

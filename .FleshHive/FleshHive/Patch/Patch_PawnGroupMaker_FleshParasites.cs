@@ -19,6 +19,12 @@ public static class Patch_PawnGenerator_GeneratePawn_FleshParasites
 {
     public static void Postfix(PawnGenerationRequest request, Pawn __result)
     {
+        if (__result is FleshReplicaUnit replica
+            && request.ForceGenerateNewPawn
+            && request.FixedBiologicalAge == 0f)
+        {
+            replica.MarkAsSplitSpawn();
+        }
         if (!FleshParasiteUtility.IsApplying)
         {
             FleshParasiteRaidGenerator.TryApplyParasites(request, __result);

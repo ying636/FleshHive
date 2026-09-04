@@ -83,7 +83,7 @@ public class CompMeldSplit : ThingComp
             return;
         }
         int count = this.Props.firstHitSpawnCountRange.RandomInRange;
-        FleshHiveFleshbeastSpawnUtility.SpawnRandomByCount(options, count, this.parent.Faction, this.parent.PositionHeld, map, this.Props.firstHitSpawnRadius);
+        FleshHiveFleshbeastSpawnUtility.SpawnRandomByCount(options, count, this.parent.Faction, this.parent.PositionHeld, map, this.Props.firstHitSpawnRadius, sourcePawn: (Pawn)this.parent);
     }
 
     private void SpawnThreshold()
@@ -98,7 +98,7 @@ public class CompMeldSplit : ThingComp
             return;
         }
         List<PawnKindDef> options = GetSpawnOptions();
-        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(options, this.Props.thresholdSpawnPointsRange, this.parent.Faction, this.parent.PositionHeld, map, this.Props.firstHitSpawnRadius);
+        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(options, this.Props.thresholdSpawnPointsRange, this.parent.Faction, this.parent.PositionHeld, map, this.Props.firstHitSpawnRadius, sourcePawn: (Pawn)this.parent);
     }
 
     public override void PostExposeData()

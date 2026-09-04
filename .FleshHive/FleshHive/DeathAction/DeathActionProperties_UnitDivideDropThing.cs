@@ -1,4 +1,5 @@
 using HiveCreatureFramework;
+using RimWorld;
 using Verse;
 using Verse.AI.Group;
 
@@ -14,6 +15,10 @@ public class DeathActionProperties_UnitDivideDropThing : DeathActionProperties_U
     public int dropCount = 1;
 
     public ThingDef dropThing;
+
+    public int enemyDropCount;
+
+    public ThingDef enemyDropThing;
 }
 
 public class DeathActionWorker_UnitDivideDropThing : DeathActionWorker_UnitDivide
@@ -28,13 +33,29 @@ public class DeathActionWorker_UnitDivideDropThing : DeathActionWorker_UnitDivid
 
     private void SpawnDrop(Corpse corpse)
     {
-        if (Props.dropThing == null || Props.dropCount <= 0 || corpse.MapHeld == null)
+        if (corpse?.MapHeld == null)
         {
             return;
         }
 
-        Thing thing = ThingMaker.MakeThing(Props.dropThing);
-        thing.stackCount = Props.dropCount;
+        SpawnThing(corpse, Props.dropThing, Props.dropCount);
+        Pawn pawn = corpse.InnerPawn;
+        if (pawn?.Faction != null
+            && pawn.Faction.HostileTo(Faction.OfPlayer))
+        {
+            SpawnThing(corpse, Props.enemyDropThing, Props.enemyDropCount);
+        }
+    }
+
+    private void SpawnThing(Corpse corpse, ThingDef thingDef, int count)
+    {
+        if (thingDef == null || count <= 0)
+        {
+            return;
+        }
+
+        Thing thing = ThingMaker.MakeThing(thingDef);
+        thing.stackCount = count;
         GenPlace.TryPlaceThing(thing, corpse.PositionHeld, corpse.MapHeld, ThingPlaceMode.Near);
     }
 }

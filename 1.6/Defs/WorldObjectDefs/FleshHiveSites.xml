@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldObjectDef ParentName="Site">
+    <defName>FH_WorldObject_FleshHiveSite</defName>
+    <worldObjectClass>FleshHive.FleshHiveSite</worldObjectClass>
+  </WorldObjectDef>
+</Defs>

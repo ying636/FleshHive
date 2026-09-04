@@ -552,7 +552,7 @@
     <graphicData>
       <texPath>Things/Building/FH_NerveCenter/FH_NerveCenter</texPath>
       <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(2.6,2.6)</drawSize>
       <shaderType>BuildingSquashNStretch</shaderType>
       <maxSnS>(.9, .95)</maxSnS>
       <offsetSnS>(.5, -.45)</offsetSnS>
@@ -1739,6 +1739,7 @@
       <li Class="FleshHive.CompProperties_HiveNutritionProducer">
         <nutritionPerInterval>0.05</nutritionPerInterval>
         <intervalTicks>2500</intervalTicks>
+        <activityPerHour>0.005</activityPerHour>
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(1,1)</size>
@@ -1927,10 +1928,16 @@
     <altitudeLayer>Building</altitudeLayer>
     <drawerType>RealtimeOnly</drawerType>
     <rotatable>false</rotatable>
-    <fillPercent>1</fillPercent>
+    <fillPercent>0.75</fillPercent>
     <tickerType>Normal</tickerType>
-    <passability>Impassable</passability>
+    <passability>PassThroughOnly</passability>
     <blockWind>true</blockWind>
+    <killedLeavings>
+      <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
+    </killedLeavings>
+    <building>
+      <claimable>false</claimable>
+    </building>
     <statBases>
       <MaxHitPoints>4000</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -1949,7 +1956,7 @@
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
         <spawnIntervalTicks>24000</spawnIntervalTicks>
-        <resurrectTicks>60000</resurrectTicks>
+        <resurrectTicks>1800</resurrectTicks>
       </li>
     </comps>
   </ThingDef>

@@ -53,6 +53,8 @@ public class CompProperties_HiveNutritionProducer : CompProperties
     public float nutritionPerInterval = 0.1f;
 
     public int intervalTicks = 2500;
+
+    public float activityPerHour;
 }
 
 public class CompHiveNutritionProducer : ThingComp
@@ -104,7 +106,19 @@ public class CompHiveNutritionProducer : ThingComp
 
     private void ProduceNutrition()
     {
-        MapComponent_FleshHive.AddNutrition(parent.Map, Props.nutritionPerInterval);
+        float producedNutrition = MapComponent_FleshHive.AddNutrition(parent.Map, Props.nutritionPerInterval);
+        if (producedNutrition <= 0f || Props.activityPerHour <= 0f || parent.Map == null)
+        {
+            return;
+        }
+
+        MapComponent_FleshHive mapComp = parent.Map.GetComponent<MapComponent_FleshHive>();
+        if (mapComp == null)
+        {
+            return;
+        }
+
+        mapComp.Activity += Props.activityPerHour * Props.intervalTicks / GenDate.TicksPerHour;
     }
 
     private int ticksSinceProduce;

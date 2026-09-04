@@ -23,8 +23,9 @@ public class FleshReplicaUnit : Unit
     {
         base.SpawnSetup(map, respawningAfterLoad);
         EnsureHostGraphicsInitialized();
-        if (scavengedWeaponRolled)
+        if (scavengedWeaponRolled || spawnedFromSplit)
         {
+            scavengedWeaponRolled = true;
             return;
         }
 
@@ -51,6 +52,11 @@ public class FleshReplicaUnit : Unit
         hostGraphicsInitialized = false;
         EnsureHostGraphicsInitialized();
         NotifyRenderTreeChanged();
+    }
+
+    public void MarkAsSplitSpawn()
+    {
+        spawnedFromSplit = true;
     }
 
     public void ClearSync()
@@ -170,4 +176,5 @@ public class FleshReplicaUnit : Unit
     private int hostApparelCount = -1;
     private bool hostGraphicsInitialized;
     private bool scavengedWeaponRolled;
+    private bool spawnedFromSplit;
 }

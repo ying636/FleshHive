@@ -9,6 +9,10 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastAgility" />
+      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
+        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
+        <getsColdContainmentBonus>true</getsColdContainmentBonus>
+      </li>
       <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
         <frequencyTicks>120000</frequencyTicks>
         <knowledgeCategory>Basic</knowledgeCategory>
@@ -43,6 +47,26 @@
       </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
+      </li>
+      <li Class="CompProperties_AttachPoints" MayRequire="Ludeon.RimWorld.Anomaly">
+        <points>
+          <li>
+            <offset>(-.21, 0, .21)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.21, 0, .21)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.21, 0, -.21)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.21, 0, -.21)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
       </li>
     </comps>
     <statBases>
@@ -80,6 +104,26 @@
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
+      <li Class="CompProperties_AttachPoints" MayRequire="Ludeon.RimWorld.Anomaly">
+        <points>
+          <li>
+            <offset>(-.35, 0, .35)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.35, 0, .35)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.35, 0, -.35)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.35, 0, -.35)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
+      </li>
     </comps>
     <statBases>
       <MarketValue>300</MarketValue>
@@ -104,6 +148,26 @@
     <comps>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
+      </li>
+      <li Class="CompProperties_AttachPoints" MayRequire="Ludeon.RimWorld.Anomaly">
+        <points>
+          <li>
+            <offset>(-.71, 0, .71)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.71, 0, .71)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.71, 0, -.71)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.71, 0, -.71)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
       </li>
     </comps>
     <statBases>
@@ -438,7 +502,7 @@
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Gutspike</hediff>
         <effect>Food poisoning chance x0%; Immunity: gut worms; Pain +8%</effect>
-        <abilityLabel>Parasitic weapon: corrosive spit</abilityLabel>
+        <abilityLabel>Parasitic weapon: acid launch</abilityLabel>
         <abilityDescription>Spits corrosive fluid.</abilityDescription>
       </li>
     </comps>

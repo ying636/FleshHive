@@ -7,7 +7,7 @@
     <description>Release 4 flesh deadguards armed with scavenged mechanoid firearms.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>30000</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_BastionmeldSummonDeadguard</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -43,7 +43,7 @@
     <description>Release a flesh pulse centered on the caster, disabling electronics and affected mechanoids.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>60000</cooldownTicksRange>
+    <cooldownTicksRange>15000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_BastionmeldFleshPulse</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -101,7 +101,7 @@
     <description>All friendly flesh beasts on the map enter a frenzied berserk state for 6 hours, gaining increased move speed and melee damage.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>300000</cooldownTicksRange>
+    <cooldownTicksRange>60000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_FleshBerserk</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>
@@ -125,7 +125,7 @@
     <description>Spread twisted flesh across an area, consuming twisted flesh from the host.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>360</cooldownTicksRange>
+    <cooldownTicksRange>300000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_FleshSpread</iconPath>
     <targetRequired>true</targetRequired>
     <verbProperties>
@@ -204,7 +204,7 @@
     <description>The furiousmeld charges forward, dealing damage to everything in its path. Buildings are destroyed until a cumulative limit is reached.</description>
     <iconPath>UI/Ability/FH_RampageCharge</iconPath>
     <targetRequired>true</targetRequired>
-    <cooldownTicksRange>72000</cooldownTicksRange>
+    <cooldownTicksRange>5000</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <verbProperties>
       <requireLineOfSight>false</requireLineOfSight>
@@ -233,7 +233,7 @@
     <description>The fissionmeld consumes twisted flesh and immediately buds a parasitic fleshbeast from its own body.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>30000</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_FissionmeldFission</iconPath>
     <targetRequired>false</targetRequired>
     <verbProperties>

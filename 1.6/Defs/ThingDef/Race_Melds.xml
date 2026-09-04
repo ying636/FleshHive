@@ -5,6 +5,9 @@
       <MarketValue>1800</MarketValue>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
     </statBases>
+    <race>
+      <intelligence>Animal</intelligence>
+    </race>
     <comps>
       <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
         <groupCount>1</groupCount>
@@ -18,10 +21,40 @@
           <li>Flesh</li>
         </tags>
       </li>
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <anomalyKnowledge>4</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
+      <li Class="CompProperties_AttachPoints" MayRequire="Ludeon.RimWorld.Anomaly">
+        <points>
+          <li>
+            <offset>(-.71, 0, .71)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.71, 0, .71)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.71, 0, -.71)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.71, 0, -.71)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
+      </li>
     </comps>
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
     </inspectorTabs>
+    <recipes>
+      <li>Anesthetize</li>
+    </recipes>
   </ThingDef>
 
   <!-- 统合母兽 -->
@@ -52,6 +85,8 @@
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_NexusmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>6</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -224,6 +259,8 @@
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_FuriousmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>6</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -412,6 +449,8 @@
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_BastionmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>6</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -666,7 +705,19 @@
       <body>Fingerspike</body>
       <renderTree>Fingerspike</renderTree>
     </race>
-    <comps>
+    <comps Inherit="False">
+      <li Class="HiveCreatureFramework.ControlCompProperties" />
+      <li Class="FleshHive.CompProperties_FleshBeastAgility" />
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
@@ -725,6 +776,11 @@
     <label>flesh deadguard</label>
     <race>FH_FleshDeadguard</race>
     <combatPower>30</combatPower>
+    <startingHediffs>
+      <li>
+        <def>FH_FleshDeadguardLifespan</def>
+      </li>
+    </startingHediffs>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -815,6 +871,8 @@
         </spawnOptions>
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>6</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -826,6 +884,7 @@
       </lifeStageAges>
     </race>
     <comps>
+      <li Class="FleshHive.CompProperties_FissionmeldState" />
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -1159,6 +1218,8 @@
         <dividePawnCount>3</dividePawnCount>
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_DreadmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>6</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>

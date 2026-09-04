@@ -27,17 +27,47 @@ public class CompProperties_FissionmeldDormant : CompProperties
     public int resurrectTicks = 60000;
 }
 
-public class CompFissionmeldDormant : ThingComp
+public class CompFissionmeldDormant : ThingComp, IThingHolder
 {
+    public CompFissionmeldDormant()
+    {
+        corpseContainer = new ThingOwner<Corpse>(this, oneStackOnly: true, contentsLookMode: LookMode.Deep, removeContentsIfDestroyed: false);
+    }
+
     private CompProperties_FissionmeldDormant Props => (CompProperties_FissionmeldDormant)this.props;
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
         base.PostSpawnSetup(respawningAfterLoad);
+        if (corpseContainer == null)
+        {
+            corpseContainer = new ThingOwner<Corpse>(this, oneStackOnly: true, contentsLookMode: LookMode.Deep, removeContentsIfDestroyed: false);
+        }
         if (!respawningAfterLoad)
         {
             ticksToResurrect = Props.resurrectTicks;
             ticksToNextSpawn = Props.spawnIntervalTicks;
+        }
+    }
+
+    public void StoreCorpse(Corpse corpse)
+    {
+        if (corpse == null || corpse.Destroyed || corpse.InnerPawn == null)
+        {
+            Log.Error("[FleshHive] Cannot store an invalid fissionmeld corpse.");
+            return;
+        }
+
+        Pawn pawn = corpse.InnerPawn;
+        CompFissionmeldState state = pawn.TryGetComp<CompFissionmeldState>();
+        if (state != null && state.DormantHitPoints < 0)
+        {
+            state.DormantHitPoints = parent.MaxHitPoints;
+        }
+
+        if (!corpseContainer.TryAddOrTransfer(corpse))
+        {
+            Log.Error("[FleshHive] Failed to transfer the fissionmeld corpse into its dormant building.");
         }
     }
 
@@ -74,36 +104,70 @@ public class CompFissionmeldDormant : ThingComp
     public override void PostExposeData()
     {
         base.PostExposeData();
+        Scribe_Deep.Look(ref corpseContainer, "corpseContainer", this);
         Scribe_Values.Look(ref ticksToResurrect, "ticksToResurrect", 60000);
         Scribe_Values.Look(ref ticksToNextSpawn, "ticksToNextSpawn", 24000);
     }
 
+    public ThingOwner GetDirectlyHeldThings()
+    {
+        return corpseContainer;
+    }
+
+    public void GetChildHolders(List<IThingHolder> outChildren)
+    {
+        ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, corpseContainer);
+    }
+
     private void SpawnFleshbeasts()
     {
-        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(Props.spawnOptions, Props.spawnPointsRange, this.parent.Faction, this.parent.PositionHeld, this.parent.MapHeld, Props.spawnRadius);
+        Faction faction = this.parent.Faction ?? Faction.OfEntities;
+        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(Props.spawnOptions, Props.spawnPointsRange, faction, this.parent.PositionHeld, this.parent.MapHeld, Props.spawnRadius, sourcePawn: null);
     }
 
     private void ResurrectFissionmeld()
     {
         Map map = this.parent.MapHeld;
-        if (map == null || Props.resurrectKind == null)
+        if (map == null || !corpseContainer.Any)
         {
             return;
         }
 
         IntVec3 position = this.parent.PositionHeld;
-        Faction faction = this.parent.Faction;
-        Pawn pawn = PawnGenerator.GeneratePawn(GenerateRequest(Props.resurrectKind, faction));
-        FleshParasiteUtility.TryApplyDefaultParasites(pawn);
-        this.parent.Destroy(DestroyMode.Vanish);
-        GenSpawn.Spawn(pawn, position, map, WipeMode.VanishOrMoveAside);
-        HCFGameUtility.AssignGroup(pawn, map, true);
-        TryAssignEnemyLord(pawn, map);
-    }
+        Corpse corpse = corpseContainer[0];
+        Pawn pawn = corpse.InnerPawn;
+        if (pawn == null)
+        {
+            Log.Error("[FleshHive] Dormant fissionmeld has no inner pawn to resurrect.");
+            return;
+        }
 
-    private static PawnGenerationRequest GenerateRequest(PawnKindDef kind, Faction faction)
-    {
-        return new PawnGenerationRequest(kind, faction, PawnGenerationContext.NonPlayer, null, false, false, false, true, false, 1f, false, true, false, true, true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, 0f, 0f, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult, null, null, null, false, false, false, -1, 0, false);
+        CompFissionmeldState state = pawn.TryGetComp<CompFissionmeldState>();
+        if (state != null)
+        {
+            state.DormantHitPoints = parent.HitPoints;
+        }
+
+        corpseContainer.TryDropAll(position, map, ThingPlaceMode.Near);
+        if (!corpse.Spawned)
+        {
+            Log.Error("[FleshHive] Failed to place the stored fissionmeld corpse before resurrection.");
+            return;
+        }
+        bool resurrected = ResurrectionUtility.TryResurrect(pawn);
+        if (!resurrected)
+        {
+            Log.Error("[FleshHive] Failed to resurrect the stored fissionmeld pawn.");
+            return;
+        }
+
+        this.parent.Destroy(DestroyMode.Vanish);
+        if (pawn.Spawned)
+        {
+            HCFGameUtility.AssignGroup(pawn, map, true);
+            map.GetComponent<MapComponent_FleshHive>()?.GrantFleshBeastUpgradeHediffs(pawn);
+            TryAssignEnemyLord(pawn, map);
+        }
     }
 
     private static void TryAssignEnemyLord(Pawn pawn, Map map)
@@ -119,4 +183,6 @@ public class CompFissionmeldDormant : ThingComp
     private int ticksToResurrect;
 
     private int ticksToNextSpawn;
+
+    private ThingOwner<Corpse> corpseContainer;
 }

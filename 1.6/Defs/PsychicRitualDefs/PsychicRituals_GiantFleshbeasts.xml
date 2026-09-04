@@ -19,7 +19,7 @@
       </filter>
       <count>1</count>
     </requiredOffering>
-    <cooldownHours>120</cooldownHours>
+    <cooldownHours>240</cooldownHours>
     <chanterRole>ChanterAdvanced</chanterRole>
     <summonKind>FH_Nexusmeld</summonKind>
     <escortPointsFromQualityCurve>
@@ -51,7 +51,7 @@
       </filter>
       <count>1</count>
     </requiredOffering>
-    <cooldownHours>120</cooldownHours>
+    <cooldownHours>240</cooldownHours>
     <chanterRole>ChanterAdvanced</chanterRole>
     <summonKind>FH_Dreadmeld</summonKind>
     <escortPointsFromQualityCurve>
@@ -83,7 +83,7 @@
       </filter>
       <count>1</count>
     </requiredOffering>
-    <cooldownHours>120</cooldownHours>
+    <cooldownHours>240</cooldownHours>
     <chanterRole>ChanterAdvanced</chanterRole>
     <summonKind>FH_Furiousmeld</summonKind>
     <escortPointsFromQualityCurve>
@@ -115,7 +115,7 @@
       </filter>
       <count>1</count>
     </requiredOffering>
-    <cooldownHours>120</cooldownHours>
+    <cooldownHours>240</cooldownHours>
     <chanterRole>ChanterAdvanced</chanterRole>
     <summonKind>FH_Bastionmeld</summonKind>
     <escortPointsFromQualityCurve>
@@ -147,7 +147,7 @@
       </filter>
       <count>1</count>
     </requiredOffering>
-    <cooldownHours>120</cooldownHours>
+    <cooldownHours>240</cooldownHours>
     <chanterRole>ChanterAdvanced</chanterRole>
     <summonKind>FH_Fissionmeld</summonKind>
     <escortPointsFromQualityCurve>

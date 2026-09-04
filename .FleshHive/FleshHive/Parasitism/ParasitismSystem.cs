@@ -44,8 +44,19 @@ public class ParasitismSystem : HediffWithComps
 
     public int CurrentTwistedFlesh
     {
-        get => currentTwistedFlesh;
-        private set => currentTwistedFlesh = value;
+        get => SharedTwistedFleshComp != null
+            ? Mathf.FloorToInt(SharedTwistedFleshComp.CurrentTwistedFlesh)
+            : currentTwistedFlesh;
+        private set
+        {
+            CompTwistedFlesh comp = SharedTwistedFleshComp;
+            if (comp != null)
+            {
+                comp.SetAmount(FleshHiveDefOf.FH_Resource_TwistedFlesh, value);
+                return;
+            }
+            currentTwistedFlesh = value;
+        }
     }
 
     public float TwistedFleshTargetValue
@@ -66,22 +77,37 @@ public class ParasitismSystem : HediffWithComps
         {
             if (cacheMaxTwistedFlesh == -1)
             {
-                cacheMaxTwistedFlesh = 0;
-                if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_Hela) is Hediff_Hela hela)
-                {
-                    cacheMaxTwistedFlesh += hela.TwistedFleshCapacity;
-                }
-                foreach (var hd in ParasitismHediffs)
-                {
-                    if (hd.flesh?.TryGetComp<ParasitismComp>() is ParasitismComp comp)
-                    {
-                        cacheMaxTwistedFlesh += comp.Props.twistedFleshCapacity;
-                    }
-                }
+                cacheMaxTwistedFlesh = (SharedTwistedFleshComp?.BaseMaxTwistedFlesh ?? 0)
+                                       + AdditionalTwistedFleshCapacity;
             }
             return cacheMaxTwistedFlesh;
         }
     }
+
+    public int AdditionalTwistedFleshCapacity
+    {
+        get
+        {
+            if (cacheAdditionalTwistedFleshCapacity == -1)
+            {
+                cacheAdditionalTwistedFleshCapacity = 0;
+                if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_Hela) is Hediff_Hela hela)
+                {
+                    cacheAdditionalTwistedFleshCapacity += hela.TwistedFleshCapacity;
+                }
+                foreach (ParasitismHediff hd in ParasitismHediffs)
+                {
+                    if (hd.flesh?.TryGetComp<ParasitismComp>() is ParasitismComp comp)
+                    {
+                        cacheAdditionalTwistedFleshCapacity += comp.Props.twistedFleshCapacity;
+                    }
+                }
+            }
+            return cacheAdditionalTwistedFleshCapacity;
+        }
+    }
+
+    private CompTwistedFlesh SharedTwistedFleshComp => pawn?.TryGetComp<CompTwistedFlesh>();
 
     public bool HasFleshwind
     {
@@ -159,7 +185,7 @@ public class ParasitismSystem : HediffWithComps
     public override IEnumerable<Gizmo> GetGizmos()
     {
         yield return new ParasitismCapacityGizmo(this);
-        if (MaxTwistedFlesh > 0)
+        if (SharedTwistedFleshComp == null && MaxTwistedFlesh > 0)
         {
             yield return new Gizmo_TwistedFleshForParasitism(this);
         }
@@ -368,8 +394,10 @@ public class ParasitismSystem : HediffWithComps
         this.cacheLimit = -1;
         this.cacheCount = -1;
         this.cacheMaxTwistedFlesh = -1;
+        this.cacheAdditionalTwistedFleshCapacity = -1;
         this.cacheHasFleshwind = null;
         this.hds = null;
+        ClampSharedTwistedFlesh();
     }
 
     public void DebugParasite(PawnKindDef kindDef)
@@ -492,10 +520,20 @@ public class ParasitismSystem : HediffWithComps
         }
     }
 
+    private void ClampSharedTwistedFlesh()
+    {
+        CompTwistedFlesh comp = SharedTwistedFleshComp;
+        if (comp != null && comp.CurrentTwistedFlesh > comp.MaxTwistedFlesh)
+        {
+            comp.SetAmount(FleshHiveDefOf.FH_Resource_TwistedFlesh, comp.MaxTwistedFlesh);
+        }
+    }
+
     public HashSet<ParasitismHediff> hds = null;
     private int cacheCount = -1;
     int cacheLimit = -1;
     private int cacheMaxTwistedFlesh = -1;
+    private int cacheAdditionalTwistedFleshCapacity = -1;
     private bool? cacheHasFleshwind;
     private int currentTwistedFlesh;
     private float twistedFleshTargetValue = 1f;

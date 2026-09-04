@@ -15,12 +15,17 @@
   <FleshParasitePod_InsufficientNutrition>Cannot parasite: requires {0} nutrition</FleshParasitePod_InsufficientNutrition>
   <FleshParasitePod_NutritionCost>Parasitism cost: {0} nutrition</FleshParasitePod_NutritionCost>
   <FleshParasitePod_CurQuest>A parasitism task already exists</FleshParasitePod_CurQuest>
+  <FleshParasitePod_SelectedParasitismTask>Selected to parasite {0} with {1}</FleshParasitePod_SelectedParasitismTask>
+  <FleshParasitePod_ExecutingParasitismTask>Currently parasitizing {0} with {1}</FleshParasitePod_ExecutingParasitismTask>
+  <FleshParasitePod_SelectedRemoveTask>Selected to remove {1} from {0}</FleshParasitePod_SelectedRemoveTask>
+  <FleshParasitePod_ExecutingRemoveTask>Currently removing {1} from {0}</FleshParasitePod_ExecutingRemoveTask>
   <FleshParasitePod_Flesh>Insert fleshbeast</FleshParasitePod_Flesh>
   <FleshParasitePod_Inner>Contains: {0}, {1}</FleshParasitePod_Inner>
   <FleshParasitePod_Progress>Progress: {0}</FleshParasitePod_Progress>
   <FleshParasitePod_Starting>Performing parasitism task</FleshParasitePod_Starting>
   <FleshParasitePod_Target>Insert host</FleshParasitePod_Target>
   <FleshParasitePod_Title>Implant a fleshbeast into a host with the aid of a flesh parasite vat. The fleshbeast consumes the host's nutrition to survive. Different fleshbeasts grant different abilities, making the host more powerful.</FleshParasitePod_Title>
+  <FH_Parasitism_CarryAnimalToPod>Carry to flesh parasite vat: {0}</FH_Parasitism_CarryAnimalToPod>
   <ParasitismAbility>Parasitic abilities</ParasitismAbility>
   <ParasitismCapacity>Parasite capacity: {0}/{1}</ParasitismCapacity>
   <ParasitismCapacityCost>Capacity cost:</ParasitismCapacityCost>

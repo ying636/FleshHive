@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  <!-- EN: flesh deadguard lifespan -->
+  <FH_FleshDeadguardLifespan.label>血肉死卫</FH_FleshDeadguardLifespan.label>
+  <!-- EN: The summoned flesh deadguard dies when its temporary lifespan expires. -->
+  <FH_FleshDeadguardLifespan.description>血肉死卫无法稳定存在，在一段时间后会自然死亡</FH_FleshDeadguardLifespan.description>
   
   <!-- EN: lost spike -->
   <FH_LostSpike_Paraspike.label>失去骨刺</FH_LostSpike_Paraspike.label>

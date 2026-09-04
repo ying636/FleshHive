@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- EN: Distress signal -->
+  <FH_Quest_DistressCall_MotherBeast.questNameRules.rulesStrings>
+    <li>questName->求救信号</li>
+  </FH_Quest_DistressCall_MotherBeast.questNameRules.rulesStrings>
+  <!-- EN: You've intercepted a distress signal from a nearby camp of [faction_name].\n\nThe frantic voice begged for immediate assistance defending against a threat, and offered everything at their camp, including recently discovered shards of archotechnology, to whoever is willing to come help.\n\nAs the speaker tried to explain the nature of the threat, the signal went dead. -->
+  <FH_Quest_DistressCall_MotherBeast.questDescriptionRules.rulesStrings>
+    <li>questDescription->你截获了附近一个[faction_name]营地发出的求救信号。\n\n绝望的声音请求立刻前往援助，抵御某种威胁，并承诺将营地里的一切都交给愿意前来帮助的人，其中包括最近发现的暗黑超凡碎片。\n\n当发信人试图解释威胁的性质时，信号中断了。</li>
+  </FH_Quest_DistressCall_MotherBeast.questDescriptionRules.rulesStrings>
+</LanguageData>

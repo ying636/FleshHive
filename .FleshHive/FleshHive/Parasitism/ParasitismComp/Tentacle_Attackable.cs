@@ -27,7 +27,7 @@ public class Tentacle_Attackable : Tentacle
 
     public override void RareTick()
     {
-        if (this.cooldown > 0 || !AutoAttackEnabled)
+        if (this.cooldown > 0 || !AutoAttackEnabled || this.Comp?.Pawn == null)
         {
             return;
         }
@@ -36,7 +36,7 @@ public class Tentacle_Attackable : Tentacle
 
     public virtual void FindAttackTargetAndAttack()
     {
-        if (this.Comp.Pawn is { Spawned: true } pawn)
+        if (this.Comp?.Pawn is { Spawned: true } pawn)
         {
             for (int i = 0; i < GenAdj.AdjacentCellsAndInside.Length; i++)
             {

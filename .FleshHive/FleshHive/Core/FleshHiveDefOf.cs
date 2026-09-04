@@ -161,6 +161,8 @@ public static class FleshHiveDefOf
     public static ResearchTabDef FH_ResearchTab_FleshHive; 
 
     public static QuestScriptDef FH_Quest_FleshSurvivor;
+    public static QuestScriptDef FH_Quest_DistressCall_MotherBeast;
+    public static WorldObjectDef FH_WorldObject_FleshHiveSite;
 
     public static ThoughtDef FH_Thought_FleshParasitism;
     public static ThoughtDef FH_Thought_FleshNutrition;

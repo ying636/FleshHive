@@ -17,7 +17,8 @@ public class JobDriver_PutPawnInParasitePod : JobDriver
 
     protected override IEnumerable<Toil> MakeNewToils()
     {
-        this.FailOn(() => this.job.targetB.Thing is not FleshParasitePod pod || pod.curQuest == null);
+        this.FailOn(() => this.job.targetB.Thing is not FleshParasitePod pod
+            || (pod.curQuest == null && pod.targetUI == null));
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
         yield return Toils_Haul.StartCarryThing(TargetIndex.A);
         yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.InteractionCell);
@@ -30,18 +31,19 @@ public class JobDriver_PutPawnInParasitePod : JobDriver
             {
                 return;
             }
-            if (pod.curQuest != null)
-            { 
-                if (pod.curQuest.target == carried)
-                {
-                    pod.target.TryAddOrTransfer(carried, true);
-                }
-                else if (pod.curQuest.flesh == carried)
-                {
-                    pod.flesh.TryAddOrTransfer(carried, true);
-                }
-                pod.curQuest.TryStart(pod);
-            } 
+            if (pod.targetUI == carried || pod.curQuest?.target == carried)
+            {
+                pod.target.TryAddOrTransfer(carried, true);
+            }
+            else if (pod.curQuest?.flesh == carried)
+            {
+                pod.flesh.TryAddOrTransfer(carried, true);
+            }
+            if (pod.curQuest is ParasiteQuest quest && pod.curQuest is not ParasiteQuest_Remove
+                && !pod.start && pod.target.Any && pod.flesh.Any)
+            {
+                quest.TryStart(pod);
+            }
         };
         putInPod.defaultCompleteMode = ToilCompleteMode.Instant;
         yield return putInPod;
@@ -80,7 +82,11 @@ public class JobDriver_EnterParasitePod : JobDriver
             {
                 pod.flesh.TryAdd(this.pawn, true);
             } 
-            pod.curQuest.TryStart(pod);
+            if (pod.curQuest is ParasiteQuest quest && pod.curQuest is not ParasiteQuest_Remove
+                && !pod.start && pod.target.Any && pod.flesh.Any)
+            {
+                quest.TryStart(pod);
+            }
         };
         enterPod.defaultCompleteMode = ToilCompleteMode.Instant;
         yield return enterPod;

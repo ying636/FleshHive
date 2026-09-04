@@ -56,6 +56,20 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         this.start = true;
     }
 
+    public bool TryQueueTargetPawn(Pawn pawn)
+    {
+        if (pawn == null || !pawn.Spawned || pawn.Dead || !pawn.Downed
+            || !pawn.RaceProps.Animal || this.curQuest != null || this.start || this.targetUI != null
+            || this.target.Any || this.flesh.Any)
+        {
+            return false;
+        }
+
+        this.targetUI = pawn;
+        this.system = pawn.health?.hediffSet?.GetFirstHediff<ParasitismSystem>();
+        return true;
+    }
+
     protected override void TickInterval(int delta)
     {
         base.TickInterval(delta);
@@ -183,6 +197,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
 
     public void Draw(Rect inRect)
     {
+        SyncUiState();
         Text.Anchor = TextAnchor.MiddleCenter;
         Rect titleRect = new Rect(inRect.x, inRect.y, inRect.width,40f);
         Widgets.Label(titleRect,"FleshParasitePod_Title".Translate()); 
@@ -256,11 +271,15 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         Rect startRect = new Rect(inRect.xMax - 10f - buttonW, buttonsY, buttonW, buttonH);
         Rect cancelRect = new Rect(startRect.x - buttonGap - buttonW, startRect.y, buttonW, buttonH);
         var comp = this.fleshUI?.TryGetComp<ParasitismComp>();
-        bool canStartBase = this.curQuest == null && !this.start
+        bool canQueueBase = this.curQuest == null && !this.start
                                                   && this.targetUI != null && comp != null;
+        bool canStartBase = this.curQuest is not ParasiteQuest_Remove && !this.start
+                                                  && this.target.Any && this.flesh.Any
+                                                  && this.targetUI != null && comp != null;
+        bool canRemoveBase = this.curQuest is ParasiteQuest_Remove && !this.start && this.target.Any;
         bool spaceOk = false;
         string reason = null;
-        if (canStartBase)
+        if (canQueueBase || canStartBase)
         {
             int need = comp.Props.cost;
             int capacity = 0;
@@ -282,20 +301,38 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                 reason = "FleshParasitePod_InsufficientNutrition".Translate(ParasitismNutritionCost);
             }
         }
+        bool canQueue = canQueueBase && spaceOk && HasEnoughNutrition();
         bool canStart = canStartBase && spaceOk && HasEnoughNutrition();
+        bool canRemove = canRemoveBase && HasEnoughNutrition();
+        if (canRemoveBase && !HasEnoughNutrition())
+        {
+            reason = "FleshParasitePod_InsufficientNutrition".Translate(ParasitismNutritionCost);
+        }
         if (Widgets.ButtonText(cancelRect, "FleshParasitePod_CancelInsert".Translate()))
         {
             CancelInsert();
         }
-        if (ButtonTextPressedWhenDisabled(startRect, "FleshParasitePod_Start".Translate(), true, true, canStart))
+        string taskStatus = GetTaskStatus();
+        if (!taskStatus.NullOrEmpty())
         {
-            this.curQuest = new ParasiteQuest(this.targetUI, this.fleshUI);
+            Text.Anchor = TextAnchor.MiddleRight;
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(new Rect(inRect.x, buttonsY, cancelRect.x - inRect.x - buttonGap, buttonH), taskStatus);
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.UpperLeft;
+        }
+        if (ButtonTextPressedWhenDisabled(startRect, "FleshParasitePod_Start".Translate(), true, true, canQueue || canStart || canRemove))
+        {
+            if (this.curQuest == null && canQueue)
+            {
+                this.curQuest = new ParasiteQuest(this.targetUI, this.fleshUI);
+            }
+            if (this.curQuest != null && (canStart || canRemove))
+            {
+                this.curQuest.TryStart(this);
+            }
         }
 
-        if (this.curQuest != null)
-        {
-            reason = "FleshParasitePod_CurQuest".Translate();  
-        }
         if (this.start)
         {
             reason = "FleshParasitePod_Starting".Translate();  
@@ -389,6 +426,59 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         }
     }
 
+    private void SyncUiState()
+    {
+        if (this.targetUI == null && this.target.Any)
+        {
+            this.targetUI = this.target[0];
+        }
+        if (this.fleshUI == null && this.flesh.Any)
+        {
+            this.fleshUI = this.flesh[0];
+        }
+        if (this.targetUI != null)
+        {
+            this.system = this.targetUI.health?.hediffSet?.GetFirstHediff<ParasitismSystem>();
+        }
+        if (this.fleshUI != null && this.cachedComp == null)
+        {
+            this.cachedComp = this.fleshUI.TryGetComp<ParasitismComp>();
+        }
+    }
+
+    private string GetTaskStatus()
+    {
+        if (this.curQuest is ParasiteQuest_Remove removeQuest)
+        {
+            Pawn targetPawn = removeQuest.target ?? this.targetUI ?? (this.target.Any ? this.target[0] : null);
+            Pawn fleshPawn = removeQuest.hd?.flesh;
+            if (targetPawn == null || fleshPawn == null)
+            {
+                return "FleshParasitePod_CurQuest".Translate();
+            }
+            string key = this.start
+                ? "FleshParasitePod_ExecutingRemoveTask"
+                : "FleshParasitePod_SelectedRemoveTask";
+            return key.Translate(targetPawn.LabelCap, fleshPawn.LabelCap);
+        }
+
+        if (this.curQuest is ParasiteQuest parasiteQuest)
+        {
+            Pawn targetPawn = parasiteQuest.target ?? this.targetUI ?? (this.target.Any ? this.target[0] : null);
+            Pawn fleshPawn = parasiteQuest.flesh ?? this.fleshUI ?? (this.flesh.Any ? this.flesh[0] : null);
+            if (targetPawn == null || fleshPawn == null)
+            {
+                return "FleshParasitePod_CurQuest".Translate();
+            }
+            string key = this.start
+                ? "FleshParasitePod_ExecutingParasitismTask"
+                : "FleshParasitePod_SelectedParasitismTask";
+            return key.Translate(targetPawn.LabelCap, fleshPawn.LabelCap);
+        }
+
+        return null;
+    }
+
     private void DrawParasitizedFleshBeasts(Rect rect)
     {
         Text.Anchor = TextAnchor.UpperLeft;
@@ -460,7 +550,15 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     {
         if (this.curQuest == null)
         {
-            this.curQuest = new ParasiteQuest_Remove(this.targetUI,hediff);
+            Pawn targetPawn = this.targetUI ?? (this.target.Any ? this.target[0] : null);
+            if (targetPawn == null)
+            {
+                Messages.Message("FleshParasitePod_CurQuest".Translate(), MessageTypeDefOf.RejectInput, false);
+                return;
+            }
+            this.targetUI = targetPawn;
+            this.curQuest = new ParasiteQuest_Remove(targetPawn,hediff);
+            this.curQuest.TryStart(this);
         }
         else
         {
@@ -711,6 +809,10 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                         {
                             this.fleshUI = pawn;
                             this.cachedComp = null;
+                            if (this.curQuest is ParasiteQuest quest && this.curQuest is not ParasiteQuest_Remove)
+                            {
+                                quest.flesh = pawn;
+                            }
                         },
                             pawn.def.uiIcon,Color.white,MenuOptionPriority.Default
                         ,null,null,28f,r =>
@@ -863,7 +965,7 @@ public class ParasiteQuest : IExposable
         Scribe_References.Look(ref flesh, "flesh");
     }
 
-    private bool TryConsumeNutrition(FleshParasitePod pod)
+    protected bool TryConsumeNutrition(FleshParasitePod pod)
     {
         MapFleshHive fleshHive = MapComponent_FleshHive.GetMapFleshHive(pod.Map);
         if (fleshHive == null || fleshHive.nutrition < FleshParasitePod.ParasitismNutritionCost)
@@ -892,7 +994,7 @@ public class ParasiteQuest_Remove : ParasiteQuest
     }
     public override void TryStart(FleshParasitePod pod)
     { 
-        if (pod.target.Any)
+        if (pod.target.Any && TryConsumeNutrition(pod))
         {
             pod.Start();
         }

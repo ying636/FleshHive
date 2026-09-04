@@ -32,7 +32,7 @@ public static class FleshHiveFleshbeastSpawnUtility
     public static Pawn GeneratePawn(PawnKindDef kind, Faction faction, bool applyDefaultParasites = true)
     {
         Pawn pawn = PawnGenerator.GeneratePawn(GenerateRequest(kind, faction));
-        if (applyDefaultParasites)
+        if (applyDefaultParasites && faction?.IsPlayer != true)
         {
             FleshParasiteUtility.TryApplyDefaultParasites(pawn);
         }
@@ -87,7 +87,7 @@ public static class FleshHiveFleshbeastSpawnUtility
         return spawnOptions.TryRandomElement(out kind);
     }
 
-    public static void SpawnRandomByCount(IEnumerable<PawnKindDef> options, int count, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true)
+    public static void SpawnRandomByCount(IEnumerable<PawnKindDef> options, int count, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null)
     {
         List<PawnKindDef> spawnOptions = ValidOptions(options);
         if (spawnOptions.Count == 0 || map == null || count <= 0)
@@ -99,7 +99,7 @@ public static class FleshHiveFleshbeastSpawnUtility
         {
             PawnKindDef kind = spawnOptions.RandomElement();
             Pawn pawn = GeneratePawn(kind, faction);
-            SpawnPawnAsFlyer(pawn, position, map, spawnRadius);
+            SpawnPawnAsFlyer(pawn, position, map, spawnRadius, sourcePawn);
         }
 
         if (makeFilth)
@@ -127,12 +127,12 @@ public static class FleshHiveFleshbeastSpawnUtility
         }
     }
 
-    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, IntRange pointsRange, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true)
+    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, IntRange pointsRange, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null)
     {
-        SpawnRandomByPoints(options, pointsRange.RandomInRange, faction, position, map, spawnRadius, makeFilth);
+        SpawnRandomByPoints(options, pointsRange.RandomInRange, faction, position, map, spawnRadius, makeFilth, sourcePawn);
     }
 
-    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, int targetPoints, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true)
+    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, int targetPoints, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null)
     {
         if (map == null)
         {
@@ -141,7 +141,7 @@ public static class FleshHiveFleshbeastSpawnUtility
 
         foreach (Pawn pawn in GenerateRandomByPoints(options, targetPoints, faction))
         {
-            SpawnPawnAsFlyer(pawn, position, map, spawnRadius);
+            SpawnPawnAsFlyer(pawn, position, map, spawnRadius, sourcePawn);
         }
 
         if (makeFilth)
@@ -152,13 +152,21 @@ public static class FleshHiveFleshbeastSpawnUtility
 
     public static void SpawnPawnAsFlyer(Pawn pawn, IntVec3 position, Map map, int spawnRadius, Pawn? sourcePawn = null, bool tryAssignEnemyLord = false)
     {
-        GenSpawn.Spawn(pawn, position, map, WipeMode.VanishOrMoveAside);
-        if (sourcePawn != null && pawn.TryGetComp<CompInspectStringEmergence>() is { } emergence)
+        if (sourcePawn != null)
         {
-            emergence.sourcePawn = sourcePawn;
+            if (pawn.TryGetComp<CompInspectStringEmergence>() is { } emergence)
+            {
+                emergence.sourcePawn = sourcePawn;
+            }
+            if (pawn is FleshReplicaUnit replica)
+            {
+                replica.MarkAsSplitSpawn();
+            }
         }
+        GenSpawn.Spawn(pawn, position, map, WipeMode.VanishOrMoveAside);
         HCFGameUtility.AssignGroup(pawn, map, true);
         FleshbeastUtility.SpawnPawnAsFlyer(pawn, map, position, spawnRadius, true);
+        map.GetComponent<MapComponent_FleshHive>()?.GrantFleshBeastUpgradeHediffs(pawn);
         if (tryAssignEnemyLord)
         {
             TryAssignEnemyLord(pawn, map);

@@ -31,6 +31,20 @@ public class CompTwistedFlesh : CompPawnResourceContainer
     {
         get
         {
+            int maxTwistedFlesh = this.BaseMaxTwistedFlesh;
+            ParasitismSystem system = (this.parent as Pawn)?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
+            if (system != null)
+            {
+                maxTwistedFlesh += system.AdditionalTwistedFleshCapacity;
+            }
+            return maxTwistedFlesh;
+        }
+    }
+
+    public int BaseMaxTwistedFlesh
+    {
+        get
+        {
             int growthCapacity = 0;
             if (this.parent is Pawn pawn
                 && pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_MeldGrowth)
