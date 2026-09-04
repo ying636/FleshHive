@@ -73,6 +73,11 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     protected override void TickInterval(int delta)
     {
         base.TickInterval(delta);
+        if (this.startRequested && this.curQuest is ParasiteQuest_Remove && this.target.Any)
+        {
+            this.startRequested = false;
+            this.start = true;
+        }
         if (start)
         {
             this.progress += delta;
@@ -276,7 +281,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         bool canStartBase = this.curQuest is not ParasiteQuest_Remove && !this.start
                                                   && this.target.Any && this.flesh.Any
                                                   && this.targetUI != null && comp != null;
-        bool canRemoveBase = this.curQuest is ParasiteQuest_Remove && !this.start && this.target.Any;
+        bool canRemoveBase = this.curQuest is ParasiteQuest_Remove && !this.start && !this.startRequested;
         bool spaceOk = false;
         string reason = null;
         if (canQueueBase || canStartBase)
@@ -409,6 +414,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     {
         this.curQuest = null;
         this.start = false;
+        this.startRequested = false;
         this.progress = 0;
         this.targetUI = null;
         this.fleshUI = null;
@@ -456,7 +462,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             {
                 return "FleshParasitePod_CurQuest".Translate();
             }
-            string key = this.start
+            string key = this.IsTaskExecuting
                 ? "FleshParasitePod_ExecutingRemoveTask"
                 : "FleshParasitePod_SelectedRemoveTask";
             return key.Translate(targetPawn.LabelCap, fleshPawn.LabelCap);
@@ -470,7 +476,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             {
                 return "FleshParasitePod_CurQuest".Translate();
             }
-            string key = this.start
+            string key = this.IsTaskExecuting
                 ? "FleshParasitePod_ExecutingParasitismTask"
                 : "FleshParasitePod_SelectedParasitismTask";
             return key.Translate(targetPawn.LabelCap, fleshPawn.LabelCap);
@@ -887,6 +893,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     {
         base.ExposeData();
         Scribe_Values.Look(ref start,"start");
+        Scribe_Values.Look(ref startRequested,"startRequested");
         Scribe_Values.Look(ref progress,"progress");
         Scribe_Values.Look(ref customName, "customName");
         Scribe_Deep.Look(ref curQuest, "curQuest");
@@ -913,6 +920,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     
     public int progress;
     public bool start;
+    public bool startRequested;
     public ThingOwner<Pawn> flesh;
     public ThingOwner<Pawn> target;
     public ParasiteQuest curQuest = null;
@@ -928,6 +936,8 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     private const float PawnDrawAltitudeOffset = 0.5f;
 
     private string? customName;
+
+    private bool IsTaskExecuting => this.start || this.startRequested;
     
 }
 
@@ -993,9 +1003,16 @@ public class ParasiteQuest_Remove : ParasiteQuest
     }
     public override void TryStart(FleshParasitePod pod)
     { 
-        if (pod.target.Any && TryConsumeNutrition(pod))
+        if (!pod.start && !pod.startRequested && TryConsumeNutrition(pod))
         {
-            pod.Start();
+            if (pod.target.Any)
+            {
+                pod.Start();
+            }
+            else
+            {
+                pod.startRequested = true;
+            }
         }
     }
 

@@ -79,7 +79,7 @@ public class HiveTabOption_Parasitism : HiveTabOption_FleshHive
             rect.width - iconRect.width - 20f, 26f);
         Widgets.Label(labelRect, vat.LabelCap);
 
-        string status = vat.start
+        string status = vat.start || vat.startRequested
             ? "FH_Parasitism_VatWorking".Translate((vat.progress / (float)vat.TickToParasite).ToStringPercent())
             : vat.curQuest != null
                 ? "FH_Parasitism_VatQueued".Translate()
