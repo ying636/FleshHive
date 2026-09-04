@@ -558,7 +558,6 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             }
             this.targetUI = targetPawn;
             this.curQuest = new ParasiteQuest_Remove(targetPawn,hediff);
-            this.curQuest.TryStart(this);
         }
         else
         {
