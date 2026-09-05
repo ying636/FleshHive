@@ -9,10 +9,6 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastAgility" />
-      <li Class="CompProperties_HoldingPlatformTarget" MayRequire="Ludeon.RimWorld.Anomaly">
-        <baseEscapeIntervalMtbDays>60</baseEscapeIntervalMtbDays>
-        <getsColdContainmentBonus>true</getsColdContainmentBonus>
-      </li>
       <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
         <frequencyTicks>120000</frequencyTicks>
         <knowledgeCategory>Basic</knowledgeCategory>
@@ -289,6 +285,7 @@
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1064,6 +1061,7 @@
     </inspectorTabs>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_FleshReplica/FH_FleshReplica_south</uiIconPath>
     <race>
+      <deathAction Class="DeathActionProperties" Inherit="false" />
       <intelligence>ToolUser</intelligence>
       <renderTree>FH_FleshReplica</renderTree>
       <body>Human</body>
@@ -1198,7 +1196,7 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1519,7 +1517,7 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1673,7 +1671,7 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -2196,7 +2194,7 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
+        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>

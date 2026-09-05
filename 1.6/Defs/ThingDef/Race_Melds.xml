@@ -86,7 +86,7 @@
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_NexusmeldSeed</dropThing>
         <enemyDropThing>Shard</enemyDropThing>
-        <enemyDropCount>6</enemyDropCount>
+        <enemyDropCount>3</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -150,7 +150,7 @@
         <capacity>300</capacity>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <cost>5</cost>
+        <cost>6</cost>
         <hediff>FH_Parasitism_Nexusmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
         <abilityLabel>Motherbeast tentacle</abilityLabel>
@@ -260,7 +260,7 @@
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_FuriousmeldSeed</dropThing>
         <enemyDropThing>Shard</enemyDropThing>
-        <enemyDropCount>6</enemyDropCount>
+        <enemyDropCount>3</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -326,7 +326,7 @@
         <capacity>400</capacity>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <cost>5</cost>
+        <cost>6</cost>
         <hediff>FH_Parasitism_Furiousmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
         <abilityLabel>Shield-claw tentacle</abilityLabel>
@@ -450,7 +450,7 @@
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_BastionmeldSeed</dropThing>
         <enemyDropThing>Shard</enemyDropThing>
-        <enemyDropCount>6</enemyDropCount>
+        <enemyDropCount>3</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -649,7 +649,7 @@
         <capacity>400</capacity>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <cost>5</cost>
+        <cost>6</cost>
         <hediff>FH_Parasitism_Bastionmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
         <effect>Flesh parasitism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
@@ -832,6 +832,7 @@
   <ThingDef ParentName="FH_NodeFleshBeast">
     <defName>FH_Fissionmeld</defName>
     <label>fissionmeld</label>
+    <thingClass>FleshHive.FissionmeldUnit</thingClass>
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate.</description>
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
@@ -872,7 +873,7 @@
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
         <enemyDropThing>Shard</enemyDropThing>
-        <enemyDropCount>6</enemyDropCount>
+        <enemyDropCount>3</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -936,7 +937,7 @@
         <capacity>800</capacity>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <cost>5</cost>
+        <cost>6</cost>
         <hediff>FH_Parasitism_Fissionmeld</hediff>
         <twistedFleshCapacity>800</twistedFleshCapacity>
         <abilityLabel>Motherbeast tentacle</abilityLabel>
@@ -1219,7 +1220,7 @@
         <dividePawnSize>Large</dividePawnSize>
         <dropThing>FH_DreadmeldSeed</dropThing>
         <enemyDropThing>Shard</enemyDropThing>
-        <enemyDropCount>6</enemyDropCount>
+        <enemyDropCount>3</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -1282,7 +1283,7 @@
         <capacity>300</capacity>
       </li>
       <li Class="FleshHive.ParasitismCompProperties">
-        <cost>5</cost>
+        <cost>6</cost>
         <hediff>FH_Parasitism_Dreadmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
         <abilityLabel>Motherbeast tentacle</abilityLabel>

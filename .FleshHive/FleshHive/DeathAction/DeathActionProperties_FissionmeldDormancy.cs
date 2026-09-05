@@ -75,7 +75,12 @@ public class DeathActionWorker_FissionmeldDormancy : DeathActionWorker
             {
                 dormant.HitPoints = System.Math.Min(state.DormantHitPoints, dormant.MaxHitPoints);
             }
+            comp.StoreGroups(state?.PreservedGroups);
             comp.StoreCorpse(corpse);
+            if (corpse.Spawned)
+            {
+                corpse.Destroy(DestroyMode.Vanish);
+            }
         }
         else
         {

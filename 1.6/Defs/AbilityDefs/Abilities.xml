@@ -102,7 +102,7 @@
     <defName>FH_ActiveParasitism_Paraspike</defName>
     <label>active parasitism</label>
     <description>Select a target creature and parasitize it.</description>
-    <iconPath>UI/Ability/FH_Parasitism_Paraspike</iconPath>
+    <iconPath>UI/Ability/FH_ActiveParasitism_Paraspike</iconPath>
     <hostile>false</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <showPsycastEffects>false</showPsycastEffects>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <HediffDef>
     <defName>FH_FleshDeadguardLifespan</defName>
@@ -262,7 +262,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
             <damageAmount>5</damageAmount>
             <cooldown>3</cooldown>
             <armorPenetration>0.4</armorPenetration>
-            <iconPath>UI/Ability/FH_Parasitism_Paraspike</iconPath>
+            <iconPath>UI/Ability/FH_Parasitism_SpiralTentacle</iconPath>
             <renderNode>
               <debugLabel>Tentacle</debugLabel>
               <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>

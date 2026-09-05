@@ -1934,6 +1934,7 @@
     <blockWind>true</blockWind>
     <killedLeavings>
       <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
+      <Shard>3</Shard>
     </killedLeavings>
     <building>
       <claimable>false</claimable>
@@ -1955,7 +1956,7 @@
         </spawnOptions>
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
-        <spawnIntervalTicks>24000</spawnIntervalTicks>
+        <spawnIntervalTicks>600</spawnIntervalTicks>
         <resurrectTicks>1800</resurrectTicks>
       </li>
     </comps>

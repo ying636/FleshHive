@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EntityCodexEntryDef>
+    <defName>FH_EntityCodex_Fleshtitan</defName>
+    <label>fleshtitan</label>
+    <category>Advanced</category>
+    <useDescriptionFrom>FH_Fleshtitan</useDescriptionFrom>
+    <uiIconPath>UI/CodexEntries/FH_Fleshtitan</uiIconPath>
+    <linkedThings>
+      <li>FH_Fleshtitan</li>
+    </linkedThings>
+  </EntityCodexEntryDef>
+</Defs>

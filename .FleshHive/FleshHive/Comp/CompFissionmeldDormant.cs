@@ -65,9 +65,56 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
             state.DormantHitPoints = parent.MaxHitPoints;
         }
 
+        if (corpse.Spawned)
+        {
+            corpse.DeSpawn(DestroyMode.Vanish);
+        }
+
         if (!corpseContainer.TryAddOrTransfer(corpse))
         {
             Log.Error("[FleshHive] Failed to transfer the fissionmeld corpse into its dormant building.");
+        }
+    }
+
+    public void StoreGroups(IEnumerable<UnitGroup> groups)
+    {
+        preservedGroups.Clear();
+        if (groups == null)
+        {
+            return;
+        }
+
+        foreach (UnitGroup group in groups)
+        {
+            if (group == null || preservedGroups.Contains(group))
+            {
+                continue;
+            }
+
+            group.hive = parent;
+            if (group.lord?.lordManager != null)
+            {
+                group.lord.lordManager.RemoveLord(group.lord);
+            }
+            group.lord = null;
+            preservedGroups.Add(group);
+        }
+    }
+
+    public override void PostDestroy(DestroyMode mode, Map previousMap)
+    {
+        base.PostDestroy(mode, previousMap);
+        if (mode != DestroyMode.Vanish)
+        {
+            foreach (UnitGroup group in preservedGroups.ToList())
+            {
+                group?.Destroy();
+            }
+            preservedGroups.Clear();
+        }
+        if (mode != DestroyMode.Vanish && previousMap != null)
+        {
+            FleshHiveFleshbeastSpawnUtility.MakeSplitFilth(parent.Position, previousMap);
         }
     }
 
@@ -105,8 +152,13 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
     {
         base.PostExposeData();
         Scribe_Deep.Look(ref corpseContainer, "corpseContainer", this);
+        Scribe_Collections.Look(ref preservedGroups, "preservedGroups", LookMode.Reference);
         Scribe_Values.Look(ref ticksToResurrect, "ticksToResurrect", 60000);
         Scribe_Values.Look(ref ticksToNextSpawn, "ticksToNextSpawn", 24000);
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            preservedGroups ??= new List<UnitGroup>();
+        }
     }
 
     public ThingOwner GetDirectlyHeldThings()
@@ -161,6 +213,7 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
             return;
         }
 
+        RestoreGroups(pawn, map);
         this.parent.Destroy(DestroyMode.Vanish);
         if (pawn.Spawned)
         {
@@ -168,6 +221,38 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
             map.GetComponent<MapComponent_FleshHive>()?.GrantFleshBeastUpgradeHediffs(pawn);
             TryAssignEnemyLord(pawn, map);
         }
+    }
+
+    private void RestoreGroups(Pawn pawn, Map map)
+    {
+        CompHiveGroup groupComp = pawn.TryGetComp<CompHiveGroup>();
+        if (groupComp == null)
+        {
+            Log.Error("[FleshHive] Resurrected fissionmeld has no HCF group component.");
+            return;
+        }
+
+        foreach (UnitGroup group in preservedGroups.ToList())
+        {
+            if (group == null)
+            {
+                continue;
+            }
+
+            group.hive = pawn;
+            groupComp.groups.Add(group);
+            if (group.lord == null)
+            {
+                group.lord = LordMaker.MakeNewLord(pawn.Faction ?? Faction.OfEntities,
+                    new LordJob_HiveGroup(group), map);
+            }
+            group.Spawn(map);
+            if (!group.units.Contains(pawn))
+            {
+                group.AcceptUnit(pawn);
+            }
+        }
+        preservedGroups.Clear();
     }
 
     private static void TryAssignEnemyLord(Pawn pawn, Map map)
@@ -185,4 +270,6 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
     private int ticksToNextSpawn;
 
     private ThingOwner<Corpse> corpseContainer;
+
+    private List<UnitGroup> preservedGroups = new List<UnitGroup>();
 }

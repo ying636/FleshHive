@@ -40,13 +40,17 @@ public class Tentacle_RangeAttack : Tentacle_Attackable
 
     public override void FindAttackTargetAndAttack()
     {
+        if (this.Comp?.Pawn is not { Spawned: true } pawn || pawn.Map == null)
+        {
+            return;
+        }
+
         float range = this.Prop.range;
-        Pawn pawn = this.Comp.parent.pawn;
-        Map map = this.Comp.parent.pawn.Map;
+        Map map = pawn.Map;
         List<Pawn> targets = new List<Pawn>();
         if (range <= 16)
         {
-            foreach (var intVec3 in GenRadial.RadialCellsAround(this.Comp.parent.pawn.Position, range, false))
+            foreach (var intVec3 in GenRadial.RadialCellsAround(pawn.Position, range, false))
             {
                 if (!intVec3.InBounds(map))
                 {
