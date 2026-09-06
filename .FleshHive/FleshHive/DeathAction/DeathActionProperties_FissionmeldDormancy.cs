@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HiveCreatureFramework;
 using RimWorld;
 using Verse;
 using Verse.AI.Group;
@@ -20,9 +21,6 @@ public class DeathActionProperties_FissionmeldDormancy : DeathActionProperties
 
     public int spawnRadius = 5;
 
-    public ThingDef enemyDropThing;
-
-    public int enemyDropCount;
 }
 
 public class DeathActionWorker_FissionmeldDormancy : DeathActionWorker
@@ -39,25 +37,11 @@ public class DeathActionWorker_FissionmeldDormancy : DeathActionWorker
         Map map = corpse.MapHeld;
         IntVec3 position = corpse.PositionHeld;
         Faction faction = corpse.InnerPawn?.Faction;
-        SpawnEnemyDrop(corpse, faction);
-        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(Props.spawnOptions, Props.spawnPointsRange, faction, position, map, Props.spawnRadius);
-        SpawnDormantFissionmeld(corpse, position, map, faction);
+        SpawnDormantFissionmeld(corpse, position, map, faction, prevLord);
+        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(Props.spawnOptions, Props.spawnPointsRange, faction, position, map, Props.spawnRadius, tryAssignEnemyLord: true);
     }
 
-    private void SpawnEnemyDrop(Corpse corpse, Faction faction)
-    {
-        if (faction == null || !faction.HostileTo(Faction.OfPlayer)
-            || Props.enemyDropThing == null || Props.enemyDropCount <= 0)
-        {
-            return;
-        }
-
-        Thing thing = ThingMaker.MakeThing(Props.enemyDropThing);
-        thing.stackCount = Props.enemyDropCount;
-        GenPlace.TryPlaceThing(thing, corpse.PositionHeld, corpse.MapHeld, ThingPlaceMode.Near);
-    }
-
-    private void SpawnDormantFissionmeld(Corpse corpse, IntVec3 position, Map map, Faction faction)
+    private void SpawnDormantFissionmeld(Corpse corpse, IntVec3 position, Map map, Faction faction, Lord prevLord)
     {
         if (Props.dormantThing == null)
         {
@@ -71,12 +55,34 @@ public class DeathActionWorker_FissionmeldDormancy : DeathActionWorker
         if (comp != null)
         {
             CompFissionmeldState state = corpse.InnerPawn?.TryGetComp<CompFissionmeldState>();
+            CompHiveGroup groupComp = corpse.InnerPawn?.TryGetComp<CompHiveGroup>();
+            if (state != null && groupComp != null && state.PreservedGroups.Count == 0)
+            {
+                state.PreservedGroups.AddRange(groupComp.groups);
+            }
             if (state != null && state.DormantHitPoints > 0)
             {
                 dormant.HitPoints = System.Math.Min(state.DormantHitPoints, dormant.MaxHitPoints);
             }
             comp.StoreGroups(state?.PreservedGroups);
             comp.StoreCorpse(corpse);
+            if (prevLord != null && dormant is Building building)
+            {
+                prevLord.AddBuilding(building);
+            }
+            if (dormant is Building dormantBuilding && state?.PreservedGroups != null)
+            {
+                foreach (UnitGroup group in state.PreservedGroups)
+                {
+                    if (group == null)
+                    {
+                        continue;
+                    }
+
+                    group.SetMode(HCFDefOf.HCF_GroupWorkMode_Defend, false);
+                    group.SetTarget(new TargetInfo(dormantBuilding), false);
+                }
+            }
             if (corpse.Spawned)
             {
                 corpse.Destroy(DestroyMode.Vanish);

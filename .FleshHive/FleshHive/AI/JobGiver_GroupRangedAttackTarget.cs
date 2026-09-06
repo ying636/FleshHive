@@ -25,7 +25,8 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
             return MakeWaitJob();
         }
 
-        Ability? ability = FindRangedAbility(pawn, target, rangedSettings != null);
+        Ability? ability = FindRangedAbility(pawn, target,
+            includeTemporarilyUnavailable: rangedSettings != null && !allowMeleeFallback);
         if (ability == null)
         {
             if (allowMeleeFallback)
@@ -45,7 +46,9 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
         {
             return ability.AICanTargetNow(target)
                 ? ability.GetJob(target, target)
-                : MakeWaitJob();
+                : allowMeleeFallback
+                    ? MakeMeleeAttackJob(target)
+                    : MakeWaitJob();
         }
 
         if (!TryFindCastPosition(pawn, target, ability.verb, out IntVec3 castPosition, rangedSettings))
@@ -54,7 +57,9 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
                     rangedSettings)
                 && approachPosition != pawn.Position
                 ? MakeGotoJob(approachPosition)
-                : MakeWaitJob();
+                : allowMeleeFallback
+                    ? MakeMeleeAttackJob(target)
+                    : MakeWaitJob();
         }
 
         if (castPosition != pawn.Position)
@@ -64,7 +69,9 @@ public class JobGiver_GroupRangedAttackTarget : ThinkNode_JobGiver
 
         return ability.AICanTargetNow(target) && ability.verb.CanHitTarget(target)
             ? ability.GetJob(target, target)
-            : MakeWaitJob();
+            : allowMeleeFallback
+                ? MakeMeleeAttackJob(target)
+                : MakeWaitJob();
     }
 
     private static Pawn? FindHostileRangedTarget(Pawn pawn, bool allowMeleeFallback,

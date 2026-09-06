@@ -178,6 +178,10 @@ public class CompScarletField : ThingComp
         {
             return;
         }
+        if (active && !value && PawnOwner is Pawn pawn && pawn.Spawned)
+        {
+            EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, 1f);
+        }
         active = value;
         if (active)
         {

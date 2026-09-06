@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
     <statBases>
@@ -9,7 +9,7 @@
       <intelligence>Animal</intelligence>
     </race>
     <comps>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveGroup">
+      <li Class="FleshHive.CompPropertiesHiveGroup_MotherBeast">
         <groupCount>1</groupCount>
         <defaultUnitLimit>30</defaultUnitLimit>
         <groupType>FleshHive.UnitGroup_FleshHive</groupType>
@@ -102,7 +102,7 @@
         <bioferriteDensity>2.6315789</bioferriteDensity>
       </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>6</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -135,7 +135,6 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>
@@ -276,7 +275,7 @@
         <bioferriteDensity>2</bioferriteDensity>
       </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>6</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -309,7 +308,6 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>
@@ -466,7 +464,7 @@
         <bioferriteDensity>2</bioferriteDensity>
       </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>6</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -499,7 +497,6 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>
@@ -775,6 +772,7 @@
     <defName>FH_FleshDeadguard</defName>
     <label>flesh deadguard</label>
     <race>FH_FleshDeadguard</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
     <combatPower>30</combatPower>
     <startingHediffs>
       <li>
@@ -832,7 +830,6 @@
   <ThingDef ParentName="FH_NodeFleshBeast">
     <defName>FH_Fissionmeld</defName>
     <label>fissionmeld</label>
-    <thingClass>FleshHive.FissionmeldUnit</thingClass>
     <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate.</description>
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
@@ -868,12 +865,9 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
-        <enemyDropThing>Shard</enemyDropThing>
-        <enemyDropCount>3</enemyDropCount>
       </deathAction>
       <lifeStageAges>
         <li>
@@ -890,7 +884,7 @@
         <bioferriteDensity>2</bioferriteDensity>
       </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>6</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -923,7 +917,6 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>
@@ -1033,8 +1026,9 @@
       <MinimumContainmentStrength>200</MinimumContainmentStrength>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
       <ToxicResistance>1.0</ToxicResistance>
+      <Flammability>0</Flammability>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan_east</uiIconPath>
     <race>
@@ -1092,7 +1086,6 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>
@@ -1111,7 +1104,7 @@
         <controlledTitanRace>FH_HarnessedFleshtitan</controlledTitanRace>
         <heartDef>FleshmassHeart</heartDef>
         <controlledHeartDef>FH_HarnessedFleshmassHeart</controlledHeartDef>
-        <revertAfterTicks>30000</revertAfterTicks>
+        <revertAfterTicks>216000</revertAfterTicks>
       </li>
     </comps>
     <tools>
@@ -1236,7 +1229,7 @@
         <bioferriteDensity>2.6315789</bioferriteDensity>
       </li>
       <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
-        <groupCost>5</groupCost>
+        <groupCost>6</groupCost>
         <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
         <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
         <maintenancePerInterval>0.5</maintenancePerInterval>
@@ -1269,7 +1262,6 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
         <firstHitSpawnRadius>5</firstHitSpawnRadius>

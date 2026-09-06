@@ -30,6 +30,7 @@ public class Hediff_TitanDevastatingStrike : Hediff
             IntVec3 position = thing.PositionHeld;
             if (map != null && position.IsValid)
             {
+                EffecterDefOf.VoidStructureActivated.Spawn(position, map);
                 FleckMaker.Static(position.ToVector3Shifted(), map, PsychicDistortionFleck,
                     ImpactDistortionScale);
             }
@@ -56,7 +57,7 @@ public class Hediff_TitanDevastatingStrike : Hediff
         lightningEffecter = null;
     }
 
-    private const float ImpactDistortionScale = 1.2f;
+    private const float ImpactDistortionScale = 0.35f;
 
     private static readonly FleckDef PsychicDistortionFleck =
         DefDatabase<FleckDef>.GetNamed("PsychicDistortionRingContractingQuick");

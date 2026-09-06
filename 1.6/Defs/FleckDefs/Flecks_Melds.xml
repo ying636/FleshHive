@@ -6,7 +6,7 @@
     <graphicData>
       <texPath>Things/Mote/ElectricalSpark</texPath>
       <shaderType>MoteGlow</shaderType>
-      <drawSize>(2.5,2.5)</drawSize>
+      <drawSize>(3.5,3.5)</drawSize>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <fadeInTime>0.04</fadeInTime>

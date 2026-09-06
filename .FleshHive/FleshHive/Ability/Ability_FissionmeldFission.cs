@@ -100,6 +100,7 @@ public class CompAbilityEffect_FissionmeldFission : CompAbilityEffect
 
     private static bool IsValidParasiteKind(PawnKindDef kind)
     {
-        return kind?.race?.GetCompProperties<ParasitismCompProperties>() != null;
+        return kind?.defName != "FH_FleshReplica"
+               && kind?.race?.GetCompProperties<ParasitismCompProperties>() != null;
     }
 }

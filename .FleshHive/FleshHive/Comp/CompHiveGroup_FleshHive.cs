@@ -23,6 +23,8 @@ public class CompHiveGroup_FleshHive : CompHiveGroup
             UnitGroup? group = groups.FirstOrDefault(group => group != null && group.Show);
             if (group != null)
             {
+                GameComponent_UnitGroup.Instance.selectedGroups.Clear();
+                GameComponent_UnitGroup.Instance.selectedGroups.Add(group);
                 GameComponent_UnitGroup.Instance.selectedGroup = group;
             }
         }

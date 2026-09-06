@@ -129,12 +129,19 @@ public class HediffComp_ScarletField : HCFHediffComp
         {
             return;
         }
+        Pawn pawn = this.Pawn;
+        if (active && !value && pawn != null)
+        {
+            if (pawn.Spawned)
+            {
+                EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, 1f);
+            }
+        }
         active = value;
         if (active)
         {
             tickCounter = 0;
         }
-        Pawn pawn = this.Pawn;
         if (pawn != null && pawn.Spawned)
         {
             pawn.Drawer?.renderer?.SetAllGraphicsDirty();

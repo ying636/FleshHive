@@ -101,6 +101,24 @@
   </DutyDef>
 
   <DutyDef>
+    <defName>FH_Attack_RangedWhipspike</defName>
+    <label>whipspike ranged</label>
+    <description>Attack from short range and reposition after firing.</description>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_RangedDuty">
+        <minimumRange>2</minimumRange>
+        <maximumRange>3.8</maximumRange>
+      </li>
+    </modExtensions>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="FleshHive.JobGiver_GroupRangedAttackTarget" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
     <defName>FH_Attack_RangedFallbackMelee</defName>
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">

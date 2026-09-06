@@ -127,12 +127,12 @@ public static class FleshHiveFleshbeastSpawnUtility
         }
     }
 
-    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, IntRange pointsRange, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null)
+    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, IntRange pointsRange, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null, bool tryAssignEnemyLord = false)
     {
-        SpawnRandomByPoints(options, pointsRange.RandomInRange, faction, position, map, spawnRadius, makeFilth, sourcePawn);
+        SpawnRandomByPoints(options, pointsRange.RandomInRange, faction, position, map, spawnRadius, makeFilth, sourcePawn, tryAssignEnemyLord);
     }
 
-    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, int targetPoints, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null)
+    public static void SpawnRandomByPoints(IEnumerable<PawnKindDef> options, int targetPoints, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null, bool tryAssignEnemyLord = false)
     {
         if (map == null)
         {
@@ -141,7 +141,7 @@ public static class FleshHiveFleshbeastSpawnUtility
 
         foreach (Pawn pawn in GenerateRandomByPoints(options, targetPoints, faction))
         {
-            SpawnPawnAsFlyer(pawn, position, map, spawnRadius, sourcePawn);
+            SpawnPawnAsFlyer(pawn, position, map, spawnRadius, sourcePawn, tryAssignEnemyLord);
         }
 
         if (makeFilth)
@@ -205,8 +205,18 @@ public static class FleshHiveFleshbeastSpawnUtility
         {
             return;
         }
-        Lord lord = map.lordManager.lords.FirstOrDefault(l => l.faction == pawn.Faction && l.CanAddPawn(pawn));
-        lord?.AddPawn(pawn);
+        if (pawn.GetLord() != null)
+        {
+            return;
+        }
+
+        Lord lord = map.lordManager.lords.FirstOrDefault(l => l.faction == pawn.Faction
+            && l.CanAddPawn(pawn)
+            && !l.ownedPawns.Contains(pawn));
+        if (lord != null)
+        {
+            lord.AddPawn(pawn);
+        }
     }
 
     private const int MaxSpawnIterations = 50;

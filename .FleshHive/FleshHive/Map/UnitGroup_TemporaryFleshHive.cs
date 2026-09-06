@@ -6,6 +6,15 @@ namespace FleshHive;
 
 public class UnitGroup_TemporaryFleshHive : UnitGroup_FleshHive
 {
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            SetMode(HCFDefOf.HCF_GroupWorkMode_Attack);
+        }
+    }
+
     public override bool CanDrawTarget => false;
     public override void Make()
     {

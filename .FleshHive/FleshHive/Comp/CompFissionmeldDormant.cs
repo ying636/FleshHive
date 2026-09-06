@@ -92,11 +92,6 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
             }
 
             group.hive = parent;
-            if (group.lord?.lordManager != null)
-            {
-                group.lord.lordManager.RemoveLord(group.lord);
-            }
-            group.lord = null;
             preservedGroups.Add(group);
         }
     }
@@ -174,7 +169,7 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
     private void SpawnFleshbeasts()
     {
         Faction faction = this.parent.Faction ?? Faction.OfEntities;
-        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(Props.spawnOptions, Props.spawnPointsRange, faction, this.parent.PositionHeld, this.parent.MapHeld, Props.spawnRadius, sourcePawn: null);
+        FleshHiveFleshbeastSpawnUtility.SpawnRandomByPoints(Props.spawnOptions, Props.spawnPointsRange, faction, this.parent.PositionHeld, this.parent.MapHeld, Props.spawnRadius, sourcePawn: null, tryAssignEnemyLord: true);
     }
 
     private void ResurrectFissionmeld()
@@ -219,7 +214,6 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
         {
             HCFGameUtility.AssignGroup(pawn, map, true);
             map.GetComponent<MapComponent_FleshHive>()?.GrantFleshBeastUpgradeHediffs(pawn);
-            TryAssignEnemyLord(pawn, map);
         }
     }
 
@@ -251,18 +245,13 @@ public class CompFissionmeldDormant : ThingComp, IThingHolder
             {
                 group.AcceptUnit(pawn);
             }
+            if (pawn.Faction != null && pawn.Faction.HostileTo(Faction.OfPlayer))
+            {
+                group.SetMode(HCFDefOf.HCF_GroupWorkMode_Follow, false);
+                group.SetTarget(new TargetInfo(pawn), false);
+            }
         }
         preservedGroups.Clear();
-    }
-
-    private static void TryAssignEnemyLord(Pawn pawn, Map map)
-    {
-        if (pawn.Faction == null || pawn.Faction.IsPlayer || !pawn.Faction.HostileTo(Faction.OfPlayer))
-        {
-            return;
-        }
-        Lord lord = map.lordManager.lords.FirstOrDefault(l => l.faction == pawn.Faction && l.CanAddPawn(pawn));
-        lord?.AddPawn(pawn);
     }
 
     private int ticksToResurrect;

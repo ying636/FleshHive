@@ -863,7 +863,7 @@ public class MapComponent_FleshHive : MapComponent
             if (mapFleshHive != null)
             {
                 mapFleshHives[map] = mapFleshHive;
-            } 
+            }
             nutritionClampPending = true;
             hiveResourcers ??= new List<HiveResourcer>();
             hiveResourcers.RemoveAll(resourcer => resourcer == null);

@@ -1952,12 +1952,11 @@
           <li>FH_Gutspike</li>
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
-          <li>FH_FleshReplica</li>
         </spawnOptions>
         <spawnPointsRange>100~300</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
         <spawnIntervalTicks>600</spawnIntervalTicks>
-        <resurrectTicks>1800</resurrectTicks>
+        <resurrectTicks>3600</resurrectTicks>
       </li>
     </comps>
   </ThingDef>

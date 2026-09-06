@@ -346,7 +346,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>FH_Projectile_Rampage</defName>
     <label>rampage</label>
-    <thingClass>FleshHive.Projectile_RampageCharge</thingClass>
+    <thingClass>HiveCreatureFramework.Projectile_Charge</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld_east</texPath>
@@ -419,7 +419,7 @@
     <label>titan ground slam</label>
     <description>The fleshtitan leaps high and slams into the ground, dealing blunt damage to all nearby creatures, throwing them into the air, and stunning them for a long time.</description>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>180000</cooldownTicksRange>
+    <cooldownTicksRange>300000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_TitanGroundSlam</iconPath>
     <targetRequired>false</targetRequired>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -568,7 +568,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>FH_Projectile_TitanCharge</defName>
     <label>titan charge</label>
-    <thingClass>FleshHive.Projectile_RampageCharge</thingClass>
+    <thingClass>HiveCreatureFramework.Projectile_Charge</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan_east</texPath>

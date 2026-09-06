@@ -24,21 +24,12 @@ public static class Patch_QuestPart_DistressCallAmbush_FleshHive
             return;
         }
 
-        foreach (Lord lord in ___site.Map.lordManager.lords.ToList())
+        Pawn mother = ___site.Map.mapPawns.AllPawnsSpawned.FirstOrDefault(IsMotherBeast);
+        CompHiveGroup_MotherBeast groupComp = mother?.TryGetComp<CompHiveGroup_MotherBeast>();
+        if (groupComp != null)
         {
-            if (lord.LordJob is not LordJob_DefendPoint)
-            {
-                continue;
-            }
-
-            Pawn leader = lord.ownedPawns.FirstOrDefault(IsMotherBeast);
-            if (leader == null)
-            {
-                continue;
-            }
-
-            lord.SetJob(new LordJob_GiantFleshbeastAssault(leader));
-            lord.GotoToil(lord.Graph.StartingToil);
+            SitePartWorker_DistressCall_Fleshbeasts_FleshHive.CaptureFleshbeastsForAmbush(mother, ___site.Map);
+            groupComp.SetAttackMode();
         }
     }
 

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using HiveCreatureFramework;
 using RimWorld;
@@ -354,28 +355,54 @@ public class ParasitismSystem : HediffWithComps
             return;
         }
         Pawn flesh = hd.flesh;
+        Lord originalLord = hd.lord;
+        hd.lord = null;
         hd.flesh = null;
         (flesh as FleshReplicaUnit)?.ClearSync();
         if (flesh != null && !flesh.Spawned)
         {
             GenSpawn.Spawn(flesh, position, map, WipeMode.VanishOrMoveAside);
-            if (hd.lord != null && flesh.Faction != null && !flesh.Faction.IsPlayer && flesh.Faction.HostileTo(Faction.OfPlayer) && hd.lord.CanAddPawn(flesh))
-            {
-                hd.lord.AddPawn(flesh);
-            }
             FleshbeastUtility.SpawnPawnAsFlyer(flesh, map, position, 5, true);
-            if (!hd.parentChildParasite)
-            {
-                HCFGameUtility.AssignGroup(flesh, map, true);
-            }
+            AssignReleasedParasite(flesh, originalLord, map);
         }
         if (flesh != null && hd.parentChildParasite)
         {
             map.GetComponent<MapComponent_FleshHive>()?.RegisterFleshBeast(flesh);
-            HCFGameUtility.AssignGroup(flesh, map, true);
+            if (this.pawn.Faction?.IsPlayer == true || HCFGameUtility.GetUnitComp(this.pawn)?.group != null)
+            {
+                HCFGameUtility.AssignGroup(flesh, map, true);
+            }
         }
         this.pawn.health.RemoveHediff(hd);
         this.ParasitismHediffs.Remove(hd);
+    }
+
+    private void AssignReleasedParasite(Pawn flesh, Lord originalLord, Map map)
+    {
+        if (this.pawn.Faction?.IsPlayer == true || HCFGameUtility.GetUnitComp(this.pawn)?.group != null)
+        {
+            flesh.GetLord()?.RemovePawn(flesh);
+            HCFGameUtility.AssignGroup(flesh, map, true);
+            return;
+        }
+
+        Lord lord = originalLord;
+        if (lord == null || !map.lordManager.lords.Contains(lord) || !lord.CanAddPawn(flesh))
+        {
+            lord = map.lordManager.lords.FirstOrDefault(candidate =>
+                candidate.faction == flesh.Faction && candidate.CanAddPawn(flesh));
+        }
+
+        if (lord != null && map.lordManager.lords.Contains(lord) && lord.CanAddPawn(flesh))
+        {
+            lord.AddPawns(new List<Pawn> { flesh }, updateDuties: false);
+            return;
+        }
+
+        if (this.pawn.Faction != null && flesh.Faction != this.pawn.Faction)
+        {
+            flesh.SetFaction(this.pawn.Faction);
+        }
     }
 
     public void EnsureSynchronizedReplicaSpawned(Pawn flesh)

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using HiveCreatureFramework;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -60,6 +61,7 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
             ? new LordJob_DefendPoint(mother.Position, 28f, 12f)
             : new LordJob_FleshbeastAssault();
         LordMaker.MakeNewLord(Faction.OfEntities, lordJob, map, spawnedAttackers);
+        CaptureFleshbeastsForAmbush(mother, map);
     }
 
     private List<Pawn> SpawnAttackers(IEnumerable<Pawn> attackers, Map map)
@@ -84,6 +86,29 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
         }
 
         return spawnedAttackers;
+    }
+
+    public static void CaptureFleshbeastsForAmbush(Pawn mother, Map map)
+    {
+        CompHiveGroup_MotherBeast groupComp = mother.TryGetComp<CompHiveGroup_MotherBeast>();
+        if (groupComp == null)
+        {
+            return;
+        }
+
+        foreach (Pawn fleshbeast in map.mapPawns.AllPawnsSpawned.ToList())
+        {
+            if (fleshbeast == mother
+                || fleshbeast.Faction != mother.Faction
+                || !FleshBeastKindUtility.SizeOf(fleshbeast.kindDef).HasValue)
+            {
+                continue;
+            }
+
+            UnitGroup targetGroup = groupComp.groups.FirstOrDefault(group =>
+                group != null && group.CanAccept(fleshbeast).Accepted);
+            targetGroup?.AcceptUnit(fleshbeast);
+        }
     }
 
     private const int SpawnRadius = 20;
