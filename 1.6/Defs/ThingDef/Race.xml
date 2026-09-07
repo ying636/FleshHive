@@ -193,7 +193,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -285,7 +284,6 @@
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -373,7 +371,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedWhipspike</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -440,6 +437,11 @@
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Whipspike</skillDuty>
+        <combatMode>Ranged</combatMode>
+        <moveAfterAttack>true</moveAfterAttack>
+        <minimumRange>2</minimumRange>
+        <maximumRange>3.8</maximumRange>
+        <targetAcquireRadius>24</targetAcquireRadius>
       </li>
     </modExtensions>
     <combatPower>25</combatPower>
@@ -473,7 +475,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -577,7 +578,6 @@
         <draftable>true</draftable>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -676,7 +676,6 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -803,6 +802,10 @@
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Shatterspike</skillDuty>
+        <combatMode>Ranged</combatMode>
+        <minimumRange>15</minimumRange>
+        <maximumRange>18.9</maximumRange>
+        <targetAcquireRadius>48</targetAcquireRadius>
       </li>
     </modExtensions>
     <combatPower>90</combatPower>
@@ -846,7 +849,6 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1009,7 +1011,6 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1196,7 +1197,6 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1356,7 +1356,6 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1517,7 +1516,6 @@
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1671,7 +1669,6 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1779,6 +1776,11 @@
     <abilities>
       <li>FH_BulbfreakReleaseFleshbeasts</li>
     </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Bulbfreak</skillDuty>
+      </li>
+    </modExtensions>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -1839,7 +1841,6 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1950,6 +1951,10 @@
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Acidbulb</skillDuty>
+        <combatMode>Ranged</combatMode>
+        <minimumRange>15</minimumRange>
+        <maximumRange>18.9</maximumRange>
+        <targetAcquireRadius>50</targetAcquireRadius>
       </li>
     </modExtensions>
     <lifeStages>
@@ -2012,7 +2017,6 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -2194,7 +2198,6 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -2333,7 +2336,6 @@
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>

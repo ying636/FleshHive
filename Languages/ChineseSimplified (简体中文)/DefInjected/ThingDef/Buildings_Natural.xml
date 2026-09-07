@@ -74,7 +74,7 @@
   <!-- EN: flesh lamp -->
   <FH_FleshLamp.label>血肉灯</FH_FleshLamp.label>
   <!-- EN: A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. -->
-  <FH_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。</FH_FleshLamp.description>
+  <FH_FleshLamp.description>球状的肉块。这些血肉兽器官为周围的血肉块提炼并储存营养。这种化学过程会使其发出柔和的生物萤光。会略微增加巢穴的活跃度增长。</FH_FleshLamp.description>
   
   <!-- EN: flesh parasite vat -->
   <FH_FleshParasiteVat.label>血肉寄生仓</FH_FleshParasiteVat.label>

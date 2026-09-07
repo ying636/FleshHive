@@ -35,6 +35,7 @@ public class CompHiveGroup_MotherBeast : CompHiveGroup_NodeUnit
             }
 
             group.SetMode(HCFDefOf.HCF_GroupWorkMode_Attack, false);
+            group.SetTarget(null, false);
         }
     }
 

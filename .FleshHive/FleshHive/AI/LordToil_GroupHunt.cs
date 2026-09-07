@@ -117,20 +117,6 @@ public class LordToil_GroupHunt : LordToil
 
     private bool IsHunterReady(Pawn pawn, Pawn prey)
     {
-        DutyDef? attackDuty = pawn.TryGetComp<UnitComp>()?.Props.overrideDuty_Attack;
-        if (JobGiver_GroupRangedAttackTarget.IsRangedAttackDuty(attackDuty))
-        {
-            ModExtension_RangedDuty? rangedSettings = attackDuty?.GetModExtension<ModExtension_RangedDuty>();
-            Ability? ability =
-                JobGiver_GroupRangedAttackTarget.FindRangedAbility(pawn, prey, rangedSettings != null);
-            return (ability != null
-                    ? JobGiver_GroupRangedAttackTarget.TryFindCastPosition(pawn, prey, ability.verb,
-                        out IntVec3 shootingPosition, rangedSettings)
-                    : JobGiver_GroupRangedAttackTarget.TryFindSupportPosition(pawn, prey, out shootingPosition,
-                        rangedSettings))
-                && shootingPosition == pawn.Position;
-        }
-
         return pawn.Position.InHorDistOf(prey.Position, GatherRadius);
     }
 

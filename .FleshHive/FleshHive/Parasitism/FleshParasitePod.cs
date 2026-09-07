@@ -59,7 +59,8 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     public bool TryQueueTargetPawn(Pawn pawn)
     {
         if (pawn == null || !pawn.Spawned || pawn.Dead || !pawn.Downed
-            || !pawn.RaceProps.Animal || this.curQuest != null || this.start || this.targetUI != null
+            || (!pawn.RaceProps.Animal && pawn.RaceProps.FleshType != FleshTypeDefOf.Fleshbeast)
+            || this.curQuest != null || this.start || this.targetUI != null
             || this.target.Any || this.flesh.Any)
         {
             return false;

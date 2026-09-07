@@ -40,7 +40,6 @@ public static class FleshHiveDefOf
     public static AbilityDef FH_SpikeLaunch_Paraspike;
     public static AbilityDef FH_SpikeLaunch_Shatterspike;
     public static AbilityDef FH_SpikeLaunch_Synbulb;
-
     public static JobDef FH_FishAnimal;
 
     public static HairDef FH_Hair_Victoria;
@@ -107,8 +106,7 @@ public static class FleshHiveDefOf
     public static DutyDef FH_FleshtitanSapper;
     public static DutyDef FH_GroupHuntGather;
     public static DutyDef FH_GroupHuntExecute;
-    public static DutyDef FH_Attack_Ranged;
-    public static DutyDef FH_Attack_RangedDistant;
+
     public static DutyDef FH_Defend_Ranged;
 
     public static EffecterDef FH_Effect_TitanDevastatingStrikeLightning;

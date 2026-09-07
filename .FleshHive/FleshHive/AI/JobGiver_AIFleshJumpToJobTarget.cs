@@ -15,12 +15,12 @@ public class JobGiver_AIFleshJumpToJobTarget : ThinkNode_JobGiver
         }
 
         Job? currentJob = pawn.CurJob;
-        if (currentJob == null || currentJob.def == ability.jobDef)
+        if (currentJob != null && currentJob.def == ability.jobDef)
         {
             return null!;
         }
 
-        LocalTargetInfo target = currentJob.GetTarget(targetIndex);
+        LocalTargetInfo target = currentJob?.GetTarget(targetIndex) ?? pawn.mindState.duty?.focus ?? LocalTargetInfo.Invalid;
         if (!target.IsValid)
         {
             return null!;

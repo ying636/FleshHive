@@ -1,4 +1,5 @@
 using HiveCreatureFramework;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -18,9 +19,9 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
         set => minimumHealthyHunters = Mathf.Max(1, value);
     }
 
-    public override bool Controllable => base.Controllable && !FleshHiveHungerUtility.IsHungry(hive);
+    public override bool Controllable => base.Controllable && !IsPlayerHiveHungry;
 
-    public override bool CanReturnHive => base.CanReturnHive && !FleshHiveHungerUtility.IsHungry(hive);
+    public override bool CanReturnHive => base.CanReturnHive && !IsPlayerHiveHungry;
 
     public override void AcceptUnit(Pawn unit)
     {
@@ -40,7 +41,7 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
 
     public override AcceptReason CanAccept(Pawn unit)
     {
-        if (FleshHiveHungerUtility.IsHungry(hive))
+        if (IsPlayerHiveHungry)
         {
             return AcceptReason.False("FH_GroupReject_Hungry".Translate());
         }
@@ -61,6 +62,8 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
         Find.WindowStack.TryRemove(typeof(Window_GroupWorkSetting));
         Find.WindowStack.Add(new Window_GroupWorkSetting(this, new Vector2(260f, 440f)));
     }
+
+    private bool IsPlayerHiveHungry => hive?.Faction == Faction.OfPlayer && FleshHiveHungerUtility.IsHungry(hive);
 
     public override void DrawWorkSettings(Rect inRect, ref Vector2 scrollPosition, ref float contentHeight)
     {

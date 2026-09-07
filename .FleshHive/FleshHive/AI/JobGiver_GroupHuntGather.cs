@@ -14,36 +14,6 @@ public class JobGiver_GroupHuntGather : ThinkNode_JobGiver
             return JobMaker.MakeJob(JobDefOf.Wait_Wander);
         }
 
-        DutyDef? attackDuty = pawn.TryGetComp<HiveCreatureFramework.UnitComp>()?.Props.overrideDuty_Attack;
-        if (JobGiver_GroupRangedAttackTarget.IsRangedAttackDuty(attackDuty))
-        {
-            ModExtension_RangedDuty? rangedSettings = attackDuty?.GetModExtension<ModExtension_RangedDuty>();
-            Ability? ability =
-                JobGiver_GroupRangedAttackTarget.FindRangedAbility(pawn, prey, rangedSettings != null);
-            bool foundPosition = ability != null
-                ? JobGiver_GroupRangedAttackTarget.TryFindCastPosition(pawn, prey, ability.verb,
-                    out IntVec3 shootingPosition, rangedSettings)
-                : JobGiver_GroupRangedAttackTarget.TryFindSupportPosition(pawn, prey, out shootingPosition,
-                    rangedSettings);
-            if (!foundPosition)
-            {
-                return JobMaker.MakeJob(JobDefOf.Wait_Wander);
-            }
-
-            if (shootingPosition == pawn.Position)
-            {
-                Job waitCombat = JobMaker.MakeJob(JobDefOf.Wait_Combat);
-                waitCombat.expiryInterval = WaitTicks;
-                return waitCombat;
-            }
-
-            Job rangedJob = JobMaker.MakeJob(JobDefOf.Goto, shootingPosition);
-            rangedJob.expiryInterval = GotoExpiryTicks;
-            rangedJob.locomotionUrgency = LocomotionUrgency.Jog;
-            rangedJob.checkOverrideOnExpire = true;
-            return rangedJob;
-        }
-
         if (pawn.Position.InHorDistOf(prey.Position, LordToil_GroupHunt.GatherRadius))
         {
             Job wait = JobMaker.MakeJob(JobDefOf.Wait_Wander);

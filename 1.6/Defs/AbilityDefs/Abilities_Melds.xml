@@ -392,7 +392,7 @@
     <description>The next melee attack that hits will shatter everything.</description>
     <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>720000</cooldownTicksRange>
+    <cooldownTicksRange>30000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_DevastatingStrike</iconPath>
     <targetRequired>false</targetRequired>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -419,7 +419,7 @@
     <label>titan ground slam</label>
     <description>The fleshtitan leaps high and slams into the ground, dealing blunt damage to all nearby creatures, throwing them into the air, and stunning them for a long time.</description>
     <aiCanUse>true</aiCanUse>
-    <cooldownTicksRange>300000</cooldownTicksRange>
+    <cooldownTicksRange>12500</cooldownTicksRange>
     <iconPath>UI/Ability/FH_TitanGroundSlam</iconPath>
     <targetRequired>false</targetRequired>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -539,7 +539,7 @@
     <description>The fleshtitan surges forward, destroying buildings in its path and dealing blunt damage to anything it collides with.</description>
     <iconPath>UI/Ability/FH_TitanCharge</iconPath>
     <targetRequired>true</targetRequired>
-    <cooldownTicksRange>120000</cooldownTicksRange>
+    <cooldownTicksRange>2500</cooldownTicksRange>
     <aiCanUse>true</aiCanUse>
     <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>

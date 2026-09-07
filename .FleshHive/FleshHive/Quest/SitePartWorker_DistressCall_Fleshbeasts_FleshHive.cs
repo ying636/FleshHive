@@ -4,7 +4,6 @@ using HiveCreatureFramework;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
-using Verse.AI.Group;
 
 namespace FleshHive;
 
@@ -39,28 +38,20 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
         PawnKindDef motherKind = GetMotherKindForSite(map);
         Pawn mother = PawnGenerator.GeneratePawn(motherKind, Faction.OfEntities);
         FleshParasiteUtility.TryApplyDefaultParasites(mother);
-        List<Pawn> attackers = new List<Pawn>(escorts.Count + 1)
-        {
-            mother
-        };
-        attackers.AddRange(escorts);
+        List<Pawn> attackers = new List<Pawn>(escorts);
 
         List<Pawn> spawnedAttackers = SpawnAttackers(attackers, map);
-        if (!spawnedAttackers.Contains(mother))
+        if (!TrySpawnMother(mother, map))
         {
             Log.Error("[FleshHive] 求救信号的随机母兽未能生成到地图，随行血肉兽将使用普通袭击逻辑。");
         }
 
-        if (spawnedAttackers.Count == 0)
+        if (spawnedAttackers.Count == 0 && !mother.Spawned)
         {
             Log.Error("[FleshHive] 求救信号的母兽与随行血肉兽均未能生成到地图。");
             return;
         }
 
-        LordJob lordJob = spawnedAttackers.Contains(mother)
-            ? new LordJob_DefendPoint(mother.Position, 28f, 12f)
-            : new LordJob_FleshbeastAssault();
-        LordMaker.MakeNewLord(Faction.OfEntities, lordJob, map, spawnedAttackers);
         CaptureFleshbeastsForAmbush(mother, map);
     }
 
@@ -88,6 +79,23 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
         return spawnedAttackers;
     }
 
+    private static bool TrySpawnMother(Pawn mother, Map map)
+    {
+        if (!RCellFinder.TryFindRandomCellNearWith(
+                map.Center,
+                cell => cell.Standable(map) && cell.GetEdifice(map) == null,
+                map,
+                out IntVec3 spawnCell,
+                SpawnRadius))
+        {
+            mother.Destroy();
+            return false;
+        }
+
+        GenSpawn.Spawn(mother, spawnCell, map);
+        return true;
+    }
+
     public static void CaptureFleshbeastsForAmbush(Pawn mother, Map map)
     {
         CompHiveGroup_MotherBeast groupComp = mother.TryGetComp<CompHiveGroup_MotherBeast>();
@@ -107,7 +115,12 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
 
             UnitGroup targetGroup = groupComp.groups.FirstOrDefault(group =>
                 group != null && group.CanAccept(fleshbeast).Accepted);
-            targetGroup?.AcceptUnit(fleshbeast);
+            if (targetGroup == null)
+            {
+                continue;
+            }
+
+            targetGroup.AcceptUnit(fleshbeast);
         }
     }
 

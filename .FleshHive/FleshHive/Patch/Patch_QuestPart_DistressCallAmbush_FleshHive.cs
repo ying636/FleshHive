@@ -4,7 +4,6 @@ using RimWorld;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using Verse;
-using Verse.AI.Group;
 
 namespace FleshHive;
 

@@ -24,7 +24,12 @@ public sealed class FloatMenuOptionProvider_CarryAnimalToParasitePod : FloatMenu
 
     public override IEnumerable<FloatMenuOption> GetOptionsFor(Thing clickedThing, FloatMenuContext context)
     {
-        if (clickedThing is not Pawn animal || animal.Dead || !animal.Downed || !animal.RaceProps.Animal)
+        if (clickedThing is not Pawn animal || animal.Dead || !animal.Downed)
+        {
+            yield break;
+        }
+
+        if (!animal.RaceProps.Animal && animal.RaceProps.FleshType != FleshTypeDefOf.Fleshbeast)
         {
             yield break;
         }
@@ -38,7 +43,8 @@ public sealed class FloatMenuOptionProvider_CarryAnimalToParasitePod : FloatMenu
         List<FleshParasitePod> pods = carrier.Map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshParasiteVat)
             .OfType<FleshParasitePod>()
             .Where(pod => pod.Spawned && pod.Faction == Faction.OfPlayer && pod.curQuest == null && !pod.start
-                && pod.targetUI == null && !pod.target.Any && !pod.flesh.Any
+                && pod.targetUI == null
+                && !pod.target.Any && !pod.flesh.Any
                 && carrier.CanReserveAndReach(pod, PathEndMode.Touch, Danger.Deadly))
             .OrderBy(pod => pod.Position.DistanceToSquared(animal.Position))
             .ToList();

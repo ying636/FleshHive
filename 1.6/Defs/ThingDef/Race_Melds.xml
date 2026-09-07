@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
     <statBases>
@@ -109,7 +109,6 @@
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -282,7 +281,6 @@
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -471,7 +469,6 @@
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedDistant</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -718,7 +715,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_RangedFallbackMelee</overrideDuty_Attack>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -808,6 +804,10 @@
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Bastionmeld</skillDuty>
+        <combatMode>Ranged</combatMode>
+        <minimumRange>15</minimumRange>
+        <maximumRange>18.9</maximumRange>
+        <targetAcquireRadius>48</targetAcquireRadius>
       </li>
     </modExtensions>
     <startingHediffs>
@@ -891,7 +891,6 @@
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1060,7 +1059,6 @@
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1104,7 +1102,7 @@
         <controlledTitanRace>FH_HarnessedFleshtitan</controlledTitanRace>
         <heartDef>FleshmassHeart</heartDef>
         <controlledHeartDef>FH_HarnessedFleshmassHeart</controlledHeartDef>
-        <revertAfterTicks>216000</revertAfterTicks>
+        <revertAfterTicks>30000</revertAfterTicks>
       </li>
     </comps>
     <tools>
@@ -1236,7 +1234,6 @@
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
-        <overrideDuty_Attack>FH_Attack_Melee</overrideDuty_Attack>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>

@@ -1689,7 +1689,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshLamp</defName>
     <label>flesh lamp</label>
-    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow.</description>
+    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. They slightly increase the growth of hive activity.</description>
     <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
     <costList>
       <Meat_Twisted>32</Meat_Twisted>
@@ -1953,7 +1953,7 @@
           <li>FH_Paraspike</li>
           <li>FH_Puffspike</li>
         </spawnOptions>
-        <spawnPointsRange>100~300</spawnPointsRange>
+        <spawnPointsRange>50~150</spawnPointsRange>
         <spawnRadius>5</spawnRadius>
         <spawnIntervalTicks>600</spawnIntervalTicks>
         <resurrectTicks>3600</resurrectTicks>

@@ -404,7 +404,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshLamp</defName>
     <label>flesh lamp</label>
-    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow.</description>
+    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. They slightly increase the growth of hive activity.</description>
     <building>FH_FleshLamp</building>
     <category>FH_BuildingCategory_Flesh</category>
     <specialDisplayRadius>3</specialDisplayRadius>

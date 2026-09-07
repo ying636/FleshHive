@@ -23,7 +23,7 @@ public static class FleshTerrainUtility
         }
 
         TerrainDef terrain = cell.GetTerrain(map);
-        return terrain.natural && !IsFleshTerrain(terrain);
+        return !IsFleshTerrain(terrain) && (terrain.natural || terrain.defName == "Space");
     }
 
     public static bool HasLargeFleshEcosystem(Map map)
