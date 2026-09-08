@@ -808,6 +808,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             foreach (var pawn in this.Map.mapPawns.AllPawnsSpawned)
             {
                 if (pawn.Faction?.IsPlayer == true &&
+                    pawn is not FleshReplicaUnit { HasSync: true } &&
                     pawn.TryGetComp<ParasitismComp>() is {} comp
                     && pawn.CanReserveAndReach(this,PathEndMode.Touch,Danger.Deadly))
                 {

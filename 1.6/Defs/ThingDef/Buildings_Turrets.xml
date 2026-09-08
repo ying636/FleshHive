@@ -112,7 +112,7 @@
     </building>
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>
-      <li>PlaceWorker_ShowTurretRadius</li>
+      <li>FleshHive.PlaceWorker_FleshTurretRadius</li>
     </placeWorkers>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />

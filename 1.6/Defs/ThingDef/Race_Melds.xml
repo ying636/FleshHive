@@ -108,7 +108,6 @@
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -280,7 +279,6 @@
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -468,7 +466,6 @@
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -714,7 +711,6 @@
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -890,7 +886,6 @@
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1058,7 +1053,6 @@
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1233,7 +1227,6 @@
         <maintenancePerInterval>0.5</maintenancePerInterval>
         <maintenancePerResource>0.1</maintenancePerResource>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>

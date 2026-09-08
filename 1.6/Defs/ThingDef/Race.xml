@@ -192,7 +192,6 @@
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -370,7 +369,6 @@
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -439,6 +437,7 @@
         <skillDuty>FH_Skill_Whipspike</skillDuty>
         <combatMode>Ranged</combatMode>
         <moveAfterAttack>true</moveAfterAttack>
+        <seekCover>false</seekCover>
         <minimumRange>2</minimumRange>
         <maximumRange>3.8</maximumRange>
         <targetAcquireRadius>24</targetAcquireRadius>
@@ -474,7 +473,6 @@
     <comps>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -577,7 +575,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <draftable>true</draftable>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -675,7 +672,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -848,7 +844,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1010,7 +1005,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1196,7 +1190,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1355,7 +1348,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1515,7 +1507,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>2</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
         </rewild>
@@ -1668,7 +1659,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -1840,7 +1830,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -2016,7 +2005,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Ranged</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -2197,7 +2185,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -2335,7 +2322,6 @@
       <li Class="FleshHive.FleshHiveUnitCompProperties">
         <groupCost>3</groupCost>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
-        <overrideDuty_Defend>FH_Defend_Melee</overrideDuty_Defend>
         <draftable>true</draftable>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>

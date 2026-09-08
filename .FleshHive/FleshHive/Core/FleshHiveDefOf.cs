@@ -10,6 +10,7 @@ namespace FleshHive;
 public static class FleshHiveDefOf
 {
     public static HediffDef FH_Spike_Paraspike;
+    public static HediffDef FH_BoneSpear;
     public static HediffDef FH_LostSpike_Paraspike;
     public static HediffDef FH_ParasitismSystem;
     public static HediffDef FH_FleshAdaptation;

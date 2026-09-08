@@ -2,6 +2,9 @@
 <Defs>
     <ThoughtDef>
         <defName>FH_Thought_FleshParasitism</defName>
+        <nullifyingHediffs>
+            <li>FH_FleshAdaptation</li>
+        </nullifyingHediffs>
         <workerClass>FleshHive.ThoughtWorker_FleshParasitism</workerClass>
         <label>flesh parasitism</label>
         <stages>
@@ -80,6 +83,9 @@
 
     <ThoughtDef>
         <defName>FH_AteRawFleshberry</defName>
+        <nullifyingHediffs>
+            <li>FH_FleshAdaptation</li>
+        </nullifyingHediffs>
         <thoughtClass>FleshHive.Thought_FoodEaten_FleshAdapted</thoughtClass>
         <durationDays>1</durationDays>
         <showBubble>true</showBubble>
@@ -95,6 +101,9 @@
 
     <ThoughtDef>
         <defName>FH_AteCookedFleshberry</defName>
+        <nullifyingHediffs>
+            <li>FH_FleshAdaptation</li>
+        </nullifyingHediffs>
         <thoughtClass>FleshHive.Thought_FoodEaten_FleshAdapted</thoughtClass>
         <durationDays>1</durationDays>
         <showBubble>true</showBubble>
@@ -110,6 +119,9 @@
 
     <ThoughtDef>
         <defName>FH_Thought_FleshNutrition</defName>
+        <nullifyingHediffs>
+            <li>FH_FleshAdaptation</li>
+        </nullifyingHediffs>
         <durationDays>0.25</durationDays>
         <showBubble>true</showBubble>
         <icon>Things/Mote/ThoughtSymbol/Food</icon>

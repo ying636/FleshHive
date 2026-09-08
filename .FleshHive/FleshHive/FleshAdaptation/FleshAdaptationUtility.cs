@@ -1,4 +1,3 @@
-using RimWorld;
 using Verse;
 
 namespace FleshHive;
@@ -12,7 +11,8 @@ public static class FleshAdaptationUtility
 
     public static bool IsFleshBeautyThing(Thing thing)
     {
-        return thing?.def?.tradeTags?.Contains(FleshHiveTags.FleshBuilding) == true;
+        return thing?.def?.tradeTags?.Contains(FleshHiveTags.FleshAdaptationBeauty) == true
+            || thing?.Stuff?.tradeTags?.Contains(FleshHiveTags.FleshAdaptationBeauty) == true;
     }
 
 }

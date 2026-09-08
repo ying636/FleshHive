@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>FH_BoneSpear</defName>
+    <label>bone spear</label>
+    <hediffClass>FleshHive.Hediff_FH_Spike_Paraspike</hediffClass>
+    <description>bone spear</description>
+    <isBad>true</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500~5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+    <stages>
+      <li><minSeverity>0</minSeverity></li>
+    </stages>
+  </HediffDef>
+</Defs>

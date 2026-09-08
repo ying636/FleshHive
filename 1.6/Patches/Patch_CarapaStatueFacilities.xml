@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[comps/li[@Class="FleshHive.CompProperties_Suppressible"] and not(comps/li[@Class="CompProperties_AffectedByFacilities"])]/comps</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[comps/li[@Class="FleshHive.CompProperties_Suppressible"] and not(comps/li[@Class="CompProperties_AffectedByFacilities"])]/comps</xpath>
+      <value>
+        <li Class="CompProperties_AffectedByFacilities"><linkableFacilities /></li>
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[comps/li[@Class="FleshHive.CompProperties_Suppressible"]]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value><li>FH_CarapaStatue</li></value>
+  </Operation>
+</Patch>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_CarapaStatue</defName>
+    <label>flesh carapace statue</label>
+    <description>flesh carapace statue</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_CarapaStatue</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_CarapaStatue/CarapaStatueA</uiIconPath>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <selectable>true</selectable>
+    <altitudeLayer>Building</altitudeLayer>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <Beauty>1</Beauty>
+      <WorkToBuild>3000</WorkToBuild>
+    </statBases>
+    <costList><Bioferrite>20</Bioferrite><FH_FleshCarapace>30</FH_FleshCarapace></costList>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+      <li>FH_FleshAdaptationBeauty</li>
+      <li>FH_SuppressionStatue</li>
+    </tradeTags>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>10</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+        <requiresLOS>false</requiresLOS>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_CarapaStatue</building>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Bullet_BoneSpear</defName>
+    <label>bone spear</label>
+    <thingClass>FleshHive.Bullet_BoneSpear</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+      <speed>88</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_BoneSpearSpitter</defName>
+    <label>bone spear spitter</label>
+    <description>bone spear spitter</description>
+    <graphicData>
+      <texPath>Things/Building/FH_BoneSpearSpitter/Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.28</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <Mass>40</Mass>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>FH_Bullet_BoneSpear</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>8.9</minRange>
+        <range>32.9</range>
+        <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+        <burstShotCount>2</burstShotCount>
+        <soundCast>SpitterSpit</soundCast>
+        <soundCastTail Inherit="False" />
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponClasses><li>Ranged</li></weaponClasses>
+    <weaponTags><li>TurretGun</li></weaponTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_BoneSpearSpitter</defName>
+    <label>bone spear spitter</label>
+    <description>bone spear spitter</description>
+    <thingClass>FleshHive.Building_BoneSpearSpitter</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_BoneSpearSpitter/Base</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_BoneSpearSpitter/MenuIcon</uiIconPath>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>50</pathCost>
+    <passability>PassThroughOnly</passability>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <hasTooltip>true</hasTooltip>
+    <altitudeLayer>Building</altitudeLayer>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <soundImpactDefault>Fleshmass_Damaged</soundImpactDefault>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
+    <costList><FH_FleshCarapace>90</FH_FleshCarapace><Bioferrite>40</Bioferrite></costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>1000</MarketValue>
+      <WorkToBuild>15000</WorkToBuild>
+      <Mass>100</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tradeTags><li>FH_FleshBuilding</li><li>FH_FleshAdaptationBeauty</li></tradeTags>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <playTargetAcquiredSound>false</playTargetAcquiredSound>
+      <turretGunDef>FH_Gun_BoneSpearSpitter</turretGunDef>
+      <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
+      <turretTopDrawSize>2.7</turretTopDrawSize>
+      <turretTopOffset>(0,0.05)</turretTopOffset>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>FleshHive.PlaceWorker_FleshTurretRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep"><dailyNutritionCost>1</dailyNutritionCost></li>
+      <li Class="CompProperties_Stunnable">
+        <affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs>
+      </li>
+      <li Class="CompProperties_Explosive">
+        <wickTicks>240</wickTicks>
+        <explosiveRadius>5.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_BoneSpearSpitter</building>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

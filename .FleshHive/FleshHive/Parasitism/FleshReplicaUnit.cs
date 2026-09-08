@@ -7,13 +7,11 @@ namespace FleshHive;
 
 public class FleshReplicaUnit : Unit
 {
-    public static readonly Color FleshColor = new Color(0.8549f, 0.2941f, 0.3686f, 1f);
-
-    public static bool RenderingHost;
-
     public Pawn? Host => host;
 
     public ParasitismHediff? SourceHediff => sourceHediff;
+
+    public bool HasSync => host != null || sourceHediff != null;
 
     public PawnRenderTree? DebugHostRenderTree => Drawer?.renderer?.renderTree;
 
@@ -47,6 +45,13 @@ public class FleshReplicaUnit : Unit
 
     public void SyncTo(Pawn newHost, ParasitismHediff hediff)
     {
+        if (hediff.pawn != newHost || hediff.flesh != this
+            || (HasSync && (host != newHost || sourceHediff != hediff)))
+        {
+            Log.Error($"[FleshHive] Refused conflicting replica synchronization: replica={this}, currentHost={host}, newHost={newHost}, currentHediff={sourceHediff}, newHediff={hediff}.");
+            return;
+        }
+
         host = newHost;
         sourceHediff = hediff;
         hostGraphicsInitialized = false;
@@ -59,10 +64,17 @@ public class FleshReplicaUnit : Unit
         spawnedFromSplit = true;
     }
 
-    public void ClearSync()
+    public void ClearSync(ParasitismHediff? expectedSource = null)
     {
+        if (expectedSource != null && sourceHediff != expectedSource)
+        {
+            return;
+        }
+
         host = null;
         sourceHediff = null;
+        hostGraphicsInitialized = false;
+        hostApparelCount = -1;
         NotifyRenderTreeChanged();
     }
 
@@ -72,6 +84,15 @@ public class FleshReplicaUnit : Unit
         Scribe_References.Look(ref host, "host");
         Scribe_References.Look(ref sourceHediff, "sourceHediff");
         Scribe_Values.Look(ref scavengedWeaponRolled, "scavengedWeaponRolled", false);
+    }
+
+    public override void Kill(DamageInfo? dinfo, Hediff? exactCulprit = null)
+    {
+        base.Kill(dinfo, exactCulprit);
+        if (Dead && HasSync)
+        {
+            RemoveSourceHediff();
+        }
     }
 
     public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
@@ -94,21 +115,14 @@ public class FleshReplicaUnit : Unit
             EnsureHostGraphicsInitialized();
         }
 
-        RenderingHost = true;
-        try
-        {
-            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
-        }
-        finally
-        {
-            RenderingHost = false;
-        }
+        base.DynamicDrawPhaseAt(phase, drawLoc, flip);
     }
 
     private void RemoveSourceHediff()
     {
         Pawn? hediffPawn = sourceHediff?.pawn;
-        if (hediffPawn == null || sourceHediff == null || hediffPawn.health?.hediffSet?.hediffs?.Contains(sourceHediff) != true)
+        if (hediffPawn == null || sourceHediff == null || sourceHediff.flesh != this
+            || hediffPawn.health?.hediffSet?.hediffs?.Contains(sourceHediff) != true)
         {
             ClearSync();
             return;
@@ -170,6 +184,8 @@ public class FleshReplicaUnit : Unit
         host.Drawer.renderer.EnsureGraphicsInitialized();
         hostGraphicsInitialized = true;
     }
+
+    public static readonly Color FleshColor = new Color(0.8549f, 0.2941f, 0.3686f, 1f);
 
     private Pawn? host;
     private ParasitismHediff? sourceHediff;

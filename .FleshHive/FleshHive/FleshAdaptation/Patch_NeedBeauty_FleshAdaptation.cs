@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -10,9 +9,9 @@ namespace FleshHive;
 [HarmonyPatch(typeof(Need_Beauty), nameof(Need_Beauty.CurrentInstantBeauty))]
 public static class Patch_NeedBeauty_FleshAdaptation
 {
-    static bool Prefix(Need_Beauty __instance, ref float __result)
+    static bool Prefix(Pawn ___pawn, ref float __result)
     {
-        Pawn pawn = PawnField.GetValue(__instance) as Pawn;
+        Pawn pawn = ___pawn;
         if (!FleshAdaptationUtility.HasAdaptation(pawn))
         {
             return true;
@@ -105,13 +104,16 @@ public static class Patch_NeedBeauty_FleshAdaptation
         {
             beauty -= 1f;
         }
-        if (outdoors && terrainDef.StatBaseDefined(StatDefOf.BeautyOutdoors))
+        float terrainBeauty = outdoors && terrainDef.StatBaseDefined(StatDefOf.BeautyOutdoors)
+            ? terrainDef.GetStatValueAbstract(StatDefOf.BeautyOutdoors)
+            : terrainDef.GetStatValueAbstract(StatDefOf.Beauty);
+        if (terrainDef.tags?.Contains(FleshHiveTags.FleshAdaptationBeauty) == true
+            && terrainBeauty <= 0f)
         {
-            return beauty + terrainDef.GetStatValueAbstract(StatDefOf.BeautyOutdoors);
+            terrainBeauty = Mathf.Max(1f, Mathf.Abs(terrainBeauty));
         }
-        return beauty + terrainDef.GetStatValueAbstract(StatDefOf.Beauty);
+        return beauty + terrainBeauty;
     }
 
-    static readonly FieldInfo PawnField = AccessTools.Field(typeof(Need), "pawn");
     static readonly HashSet<Thing> countedThings = new HashSet<Thing>();
 }

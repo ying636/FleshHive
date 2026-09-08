@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_CarapaStatue</defName>
+    <label>flesh carapace statue</label>
+    <description>flesh carapace statue</description>
+    <building>FH_CarapaStatue</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>300</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers><li Class="FleshHive.PlaceWorker_RequireFleshTerrain" /></placeWorkers>
+    <requirments><Bioferrite>20</Bioferrite><FH_FleshCarapace>30</FH_FleshCarapace></requirments>
+  </FleshHive.FleshHiveBuildingDef>
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_BoneSpearSpitter</defName>
+    <label>bone spear spitter</label>
+    <description>bone spear spitter</description>
+    <building>FH_BoneSpearSpitter</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>1500</workAmount>
+    <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers><li Class="FleshHive.PlaceWorker_RequireFleshTerrain" /></placeWorkers>
+    <requirments><FH_FleshCarapace>90</FH_FleshCarapace><Bioferrite>40</Bioferrite></requirments>
+    <resourcesCosts><FH_Resource_Nutrition>20</FH_Resource_Nutrition></resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThoughtDef[defName="AteTwistedMeat"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThoughtDef[defName="AteTwistedMeat"]/nullifyingHediffs</xpath>
+      <value>
+        <li>FH_FleshAdaptation</li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

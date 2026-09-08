@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FH_CarapaStatue.label>血肉甲壳雕像</FH_CarapaStatue.label>
+  <FH_CarapaStatue.description>血肉甲壳雕像</FH_CarapaStatue.description>
+  <FH_BoneSpearSpitter.label>骨矛喷吐器</FH_BoneSpearSpitter.label>
+  <FH_BoneSpearSpitter.description>骨矛喷吐器</FH_BoneSpearSpitter.description>
+  <FH_Gun_BoneSpearSpitter.label>骨矛喷吐器</FH_Gun_BoneSpearSpitter.label>
+  <FH_Gun_BoneSpearSpitter.description>骨矛喷吐器</FH_Gun_BoneSpearSpitter.description>
+  <FH_Bullet_BoneSpear.label>骨矛</FH_Bullet_BoneSpear.label>
+</LanguageData>

@@ -69,6 +69,12 @@ public class CompAbilityEffect_ActiveParasitism : CompAbilityEffect
     private bool CanParasite(Pawn host, out string reason)
     {
         Pawn caster = this.parent.pawn;
+        if (caster is FleshReplicaUnit { HasSync: true })
+        {
+            reason = "FH_ActiveParasitism_Failed".Translate();
+            return false;
+        }
+
         if (host == null
             || host == caster
             || !host.Spawned

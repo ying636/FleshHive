@@ -102,9 +102,17 @@ public class HiveTabOption_HivePlan : HiveTabOption_FleshHive
 
         Rect iconRect = new Rect(headerRect.x + 8f, headerRect.y + 8f, 48f, 48f);
         Widgets.ThingIcon(iconRect, plan.parent);
+        Rect clipboardRect = new Rect(headerRect.xMax - CopyPasteUI.CopyPasteColumnWidth - 8f,
+            headerRect.y + 8f, CopyPasteUI.CopyPasteColumnWidth, 24f);
+        CopyPasteUI.DoCopyPasteButtons(clipboardRect,
+            () => copiedEntries = CloneEntries(plan.entries),
+            copiedEntries.NullOrEmpty() ? null : () =>
+            {
+                plan.entries.AddRange(CloneEntries(copiedEntries));
+            });
         Text.Font = GameFont.Medium;
         Widgets.Label(new Rect(iconRect.xMax + 10f, headerRect.y + 8f,
-            headerRect.width - iconRect.width - 20f, 28f), plan.parent.LabelCap);
+            clipboardRect.x - iconRect.xMax - 18f, 28f), plan.parent.LabelCap);
         Text.Font = GameFont.Small;
         Widgets.Label(new Rect(iconRect.xMax + 10f, headerRect.y + 35f,
             headerRect.width - iconRect.width - 20f, 22f), GetPlanStatus(plan));
@@ -137,6 +145,21 @@ public class HiveTabOption_HivePlan : HiveTabOption_FleshHive
         Widgets.Label(rect, "FH_HivePlan_NoHives".Translate());
         GUI.color = Color.white;
         Text.Anchor = TextAnchor.UpperLeft;
+    }
+
+    private static List<HivePlanEntry> CloneEntries(List<HivePlanEntry> entries)
+    {
+        return entries.Select(entry => new HivePlanEntry
+        {
+            targetType = entry.targetType,
+            mode = entry.mode,
+            repeatCount = entry.repeatCount,
+            targetCount = entry.targetCount,
+            suspended = entry.suspended,
+            unitDef = entry.unitDef,
+            itemDef = entry.itemDef,
+            formulaId = entry.formulaId
+        }).ToList();
     }
 
     private List<CompHivePlan> GetPlans(Map map)
@@ -200,6 +223,7 @@ public class HiveTabOption_HivePlan : HiveTabOption_FleshHive
     private Vector2 selectorScrollPosition;
     private Vector2 planScrollPosition;
     private CompHivePlan? selectedPlan;
+    private List<HivePlanEntry> copiedEntries = new List<HivePlanEntry>();
     private float planContentHeight = 1f;
 
     private const string FleshHiveDefName = "FH_FleshHive";

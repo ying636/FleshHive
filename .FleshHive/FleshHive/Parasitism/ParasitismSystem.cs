@@ -236,7 +236,7 @@ public class ParasitismSystem : HediffWithComps
 
     public bool Parasite(Pawn flesh, bool parentChildParasite = false)
     {
-        if (flesh == null)
+        if (flesh == null || flesh is FleshReplicaUnit { HasSync: true })
         {
             return false;
         }
@@ -292,7 +292,7 @@ public class ParasitismSystem : HediffWithComps
         Pawn flesh = hd.flesh;
         if (flesh != null)
         {
-            (flesh as FleshReplicaUnit)?.ClearSync();
+            (flesh as FleshReplicaUnit)?.ClearSync(hd);
             if (!flesh.Spawned)
             {
                 GenSpawn.Spawn(flesh, pod.Position, pod.Map);
@@ -358,7 +358,7 @@ public class ParasitismSystem : HediffWithComps
         Lord originalLord = hd.lord;
         hd.lord = null;
         hd.flesh = null;
-        (flesh as FleshReplicaUnit)?.ClearSync();
+        (flesh as FleshReplicaUnit)?.ClearSync(hd);
         if (flesh != null && !flesh.Spawned)
         {
             GenSpawn.Spawn(flesh, position, map, WipeMode.VanishOrMoveAside);

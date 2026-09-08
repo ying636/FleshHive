@@ -3,6 +3,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_NerveFlesh</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>nerve flesh</label>
     <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
     <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
@@ -26,6 +29,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_FleshCarapace</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>flesh carapace</label>
     <description>A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material.</description>
     <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
@@ -80,6 +86,9 @@
 
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>FH_FleshBerry</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>fleshberry</label>
     <description>A red, fleshy fruit grown from a twisted flesh bush. It can be eaten raw, but its dense metallic taste lingers unpleasantly. The fruit is probably still alive; it does not rot.</description>
     <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
@@ -118,6 +127,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_DreadmeldSeed</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>dreadmeld seed</label>
     <description>The fleshy core of a dreadmeld. It is a tumor-like lump made entirely of flesh, beating endlessly like a heart. A dreadmeld seed can be used to cultivate your own flesh hive or giant fleshbeast, or consumed by a dreadmeld to strengthen itself.</description>
     <graphicData>
@@ -145,6 +157,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_NexusmeldSeed</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>nexusmeld seed</label>
     <description>The fleshy core of a nexusmeld. It is a tumor-like lump made entirely of flesh, with green patterns of nerve tissue growing across it. It beats endlessly like a heart. A nexusmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a nexusmeld to strengthen itself.</description>
     <graphicData>
@@ -172,6 +187,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_FuriousmeldSeed</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>furiousmeld seed</label>
     <description>The fleshy core of a furiousmeld. It is a tumor-like lump made entirely of flesh, covered with a layer of red carapace. It beats endlessly like a heart. A furiousmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a furiousmeld to strengthen itself.</description>
     <graphicData>
@@ -199,6 +217,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_FissionmeldSeed</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>fissionmeld seed</label>
     <description>The fleshy core of a fissionmeld. It is a tumor-like lump made entirely of flesh, with many bony spikes growing from it. It beats endlessly like a heart. A fissionmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a fissionmeld to strengthen itself.</description>
     <graphicData>
@@ -226,6 +247,9 @@
 
   <ThingDef ParentName="ResourceBase">
     <defName>FH_BastionmeldSeed</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>bastionmeld seed</label>
     <description>The fleshy core of a bastionmeld. It is a tumor-like lump made entirely of flesh, covered with pieces of metallic carapace. It beats endlessly like a heart. A bastionmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a bastionmeld to strengthen itself.</description>
     <graphicData>
@@ -253,6 +277,9 @@
 
   <ThingDef ParentName="BodyPartBase">
     <defName>Tentacle</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>flesh tentacle</label>
     <description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</description>
     <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
@@ -272,6 +299,9 @@
 
   <ThingDef ParentName="BodyPartBase">
     <defName>FH_FleshAdaptationModule</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>flesh adaptation module</label>
     <description>A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive.</description>
     <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
@@ -292,6 +322,9 @@
 
   <ThingDef ParentName="SerumBase" MayRequire="Ludeon.RimWorld.Anomaly">
     <defName>FH_FleshSymbiosisSerum</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>symbiosis serum</label>
     <description>A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive.</description>
     <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
@@ -314,6 +347,9 @@
 
   <ThingDef ParentName="BodyPartBase">
     <defName>FH_FleshSymbiosisModule</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>flesh symbiosis module</label>
     <description>A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating.</description>
     <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
@@ -334,6 +370,9 @@
 
   <ThingDef ParentName="BodyPartBase">
     <defName>FleshWhip</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>flesh whip</label>
     <description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</description>
     <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
@@ -353,6 +392,9 @@
 
   <ThingDef ParentName="BodyPartBase">
     <defName>FleshmassStomach</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>fleshmass stomach</label>
     <description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
     <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
@@ -372,6 +414,9 @@
 
   <ThingDef ParentName="BodyPartBase">
     <defName>FleshmassLung</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
     <label>fleshmass lung</label>
     <description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
     <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>

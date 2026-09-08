@@ -1,3 +1,4 @@
+using RimWorld;
 using Verse;
 using Verse.AI.Group;
 
@@ -27,6 +28,30 @@ public class ParasitismHediff : HediffWithComps
         }
     }
 
+    public override HediffStage CurStage
+    {
+        get
+        {
+            HediffStage stage = base.CurStage;
+            if (stage == null || pawn?.health?.hediffSet?.HasHediff(FleshHiveDefOf.FH_FleshAdaptation) != true
+                || stage.statOffsets?.Any(offset => offset.stat == StatDefOf.SocialImpact && offset.value < 0f) != true)
+            {
+                return stage;
+            }
+
+            if (adaptedSourceStage != stage)
+            {
+                adaptedStage = Gen.MemberwiseClone(stage);
+                adaptedStage.statOffsets = stage.statOffsets
+                    .Where(offset => offset.stat != StatDefOf.SocialImpact || offset.value >= 0f)
+                    .ToList();
+                adaptedSourceStage = stage;
+            }
+
+            return adaptedStage;
+        }
+    }
+
     public override string LabelInBrackets
     {
         get
@@ -52,6 +77,7 @@ public class ParasitismHediff : HediffWithComps
     public override void PostRemoved()
     {
         base.PostRemoved();
+        (flesh as FleshReplicaUnit)?.ClearSync(this);
         if (this.pawn?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) is ParasitismSystem system)
         {
             system.SetDirty();
@@ -91,4 +117,6 @@ public class ParasitismHediff : HediffWithComps
     public bool parentChildParasite;
     private bool fleshIsReference;
     public int spaceCost = 1;
+    private HediffStage? adaptedSourceStage;
+    private HediffStage? adaptedStage;
 }
