@@ -44,6 +44,7 @@
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Whipspike</defName>
+    <cooldownTicksRange>30</cooldownTicksRange>
     <iconPath>UI/Ability/FH_SpikeLaunch_Paraspike</iconPath>
     <label>whip strike</label>
     <description>Strike a target from range with a long whip-like limb.</description>
@@ -51,6 +52,7 @@
     <verbProperties>
       <range>3.9</range>
       <minRange>1.9</minRange>
+      <verbClass>FleshHive.Verb_AbilityShootMoveAfterAttack</verbClass>
       <defaultProjectile>FH_Spike_Whipspike</defaultProjectile>
       <defaultCooldownTime>0.5</defaultCooldownTime>
     </verbProperties>
@@ -139,11 +141,13 @@
 
   <AbilityDef ParentName="SpikeLaunchBase">
     <defName>FH_SpikeLaunch_Shatterspike</defName>
+    <cooldownTicksRange>30</cooldownTicksRange>
     <iconPath>UI/Ability/FH_SpikeLaunch_Paraspike</iconPath>
     <ai_IsOffensive>true</ai_IsOffensive>
     <verbProperties>
       <range>18.9</range>
       <burstShotCount>6</burstShotCount>
+      <verbClass>FleshHive.Verb_AbilityShootMoveAfterAttack</verbClass>
       <defaultProjectile>FH_Spike_Shatterspike</defaultProjectile>
       <defaultCooldownTime>0.5</defaultCooldownTime>
     </verbProperties>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[comps/li[@Class="FleshHive.CompProperties_Suppressible"]]/statBases</xpath>
+    <value><FH_Stat_SuppressionEffect>1</FH_Stat_SuppressionEffect></value>
+  </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[comps/li[@Class="FleshHive.CompProperties_Suppressible"] and not(comps/li[@Class="CompProperties_AffectedByFacilities"])]/comps</xpath>
     <match Class="PatchOperationAdd">

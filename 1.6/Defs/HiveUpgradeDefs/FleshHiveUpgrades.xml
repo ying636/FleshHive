@@ -111,9 +111,9 @@
   <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_Robust</defName>
     <label>robustification</label>
-    <description>Large fleshbeasts have 6 times their normal health scale, increasing it from 30% to 180%.</description>
+    <description>Large fleshbeasts have twice their normal body part health, increasing it from 100% to 200%. Pain is multiplied by 0%.</description>
     <effect>Robust</effect>
-    <effectValue>5</effectValue>
+    <effectValue>1</effectValue>
     <requiresPrimaryNest>true</requiresPrimaryNest>
     <nutritionCost>200</nutritionCost>
     <nerveFleshCost>6</nerveFleshCost>
@@ -186,9 +186,9 @@
   <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_FleshShaping1</defName>
     <label>flesh shaping I</label>
-    <description>Flesh production outlets work 25% faster.</description>
+    <description>Flesh production outlets work 50% faster.</description>
     <effect>FleshShaping</effect>
-    <effectValue>0.25</effectValue>
+    <effectValue>0.5</effectValue>
     <nutritionCost>50</nutritionCost>
     <nerveFleshCost>2</nerveFleshCost>
     <processingTicks>180000</processingTicks>
@@ -196,9 +196,9 @@
   <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_FleshShaping2</defName>
     <label>flesh shaping II</label>
-    <description>Flesh production outlets work another 25% faster.</description>
+    <description>Flesh production outlets work another 50% faster.</description>
     <effect>FleshShaping</effect>
-    <effectValue>0.25</effectValue>
+    <effectValue>0.5</effectValue>
     <requiresPrimaryNest>true</requiresPrimaryNest>
     <prerequisites><li>FH_Upgrade_FleshShaping1</li></prerequisites>
     <nutritionCost>150</nutritionCost>

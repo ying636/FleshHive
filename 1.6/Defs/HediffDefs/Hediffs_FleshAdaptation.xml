@@ -8,6 +8,9 @@
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_FleshAdaptation" />
+    </comps>
     <stages>
       <li>
         <minSeverity>0</minSeverity>

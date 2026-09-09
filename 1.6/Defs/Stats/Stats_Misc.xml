@@ -13,4 +13,15 @@
     <maxValue>99999.0</maxValue>
   </StatDef> 
 
+  <StatDef>
+    <defName>FH_Stat_SuppressionEffect</defName>
+    <label>hive suppression speed factor</label>
+    <description>Multiplies the amount of hive activity reduced by suppression work at this building.</description>
+    <category>Building</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <showIfUndefined>false</showIfUndefined>
+    <toStringStyle>PercentZero</toStringStyle>
+  </StatDef>
+
 </Defs>

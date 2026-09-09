@@ -43,13 +43,13 @@
   
   <!-- EN: flesh shaping I -->
   <FH_Upgrade_FleshShaping1.label>血肉塑形 I</FH_Upgrade_FleshShaping1.label>
-  <!-- EN: Flesh production outlets work 25% faster. -->
-  <FH_Upgrade_FleshShaping1.description>血肉产出口生产速度提高25%。</FH_Upgrade_FleshShaping1.description>
+  <!-- EN: Flesh production outlets work 50% faster. -->
+  <FH_Upgrade_FleshShaping1.description>血肉产出口生产速度提高50%。</FH_Upgrade_FleshShaping1.description>
   
   <!-- EN: flesh shaping II -->
   <FH_Upgrade_FleshShaping2.label>血肉塑形 II</FH_Upgrade_FleshShaping2.label>
-  <!-- EN: Flesh production outlets work another 25% faster. -->
-  <FH_Upgrade_FleshShaping2.description>血肉产出口生产速度再提高25%。</FH_Upgrade_FleshShaping2.description>
+  <!-- EN: Flesh production outlets work another 50% faster. -->
+  <FH_Upgrade_FleshShaping2.description>血肉产出口生产速度再提高50%。</FH_Upgrade_FleshShaping2.description>
   
   <!-- EN: giant flesh expansion -->
   <FH_Upgrade_GiantFleshExpansion.label>巨型血肉扩展</FH_Upgrade_GiantFleshExpansion.label>
@@ -83,8 +83,8 @@
   
   <!-- EN: robustification -->
   <FH_Upgrade_Robust.label>健壮化</FH_Upgrade_Robust.label>
-  <!-- EN: Large fleshbeasts have 6 times their normal health scale, increasing it from 30% to 180%. -->
-  <FH_Upgrade_Robust.description>大型血肉兽的健康值比例变为原来的6倍，从30%提高到180%。</FH_Upgrade_Robust.description>
+  <!-- EN: Large fleshbeasts have twice their normal body part health, increasing it from 100% to 200%. Pain is multiplied by 0%. -->
+  <FH_Upgrade_Robust.description>大型血肉兽的肢体系数变为原来的2倍，从100%提高到200%。疼痛×0%。</FH_Upgrade_Robust.description>
   
   <!-- EN: self-repairing flesh I -->
   <FH_Upgrade_SelfRepair1.label>自修复血肉 I</FH_Upgrade_SelfRepair1.label>

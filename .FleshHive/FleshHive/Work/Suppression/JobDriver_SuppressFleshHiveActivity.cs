@@ -60,7 +60,7 @@ public class JobDriver_SuppressFleshHiveActivity : JobDriver
             }
 
             float suppression = suppressionRate / SuppressionTicksPerUnit * SuppressionWorkTicks * SuppressionCompletionMultiplier;
-            mapComp.SuppressActivity(suppression * suppressible.SuppressionFactor);
+            mapComp.SuppressActivity(suppression * SuppressTarget.GetStatValue(FleshHiveDefOf.FH_Stat_SuppressionEffect));
         });
         toil.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
         toil.WithProgressBarToilDelay(TargetIndex.A);
@@ -75,4 +75,3 @@ public class JobDriver_SuppressFleshHiveActivity : JobDriver
     private const float SuppressionTicksPerUnit = 2500f;
     private const float SuppressionCompletionMultiplier = 10f;
 }
-

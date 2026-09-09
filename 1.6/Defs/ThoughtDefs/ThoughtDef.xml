@@ -6,6 +6,7 @@
             <li>FH_FleshAdaptation</li>
         </nullifyingHediffs>
         <workerClass>FleshHive.ThoughtWorker_FleshParasitism</workerClass>
+        <thoughtClass>FleshHive.Thought_FleshParasitism</thoughtClass>
         <label>flesh parasitism</label>
         <stages>
             <li>

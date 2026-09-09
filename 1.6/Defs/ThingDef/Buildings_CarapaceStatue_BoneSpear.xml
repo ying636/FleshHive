@@ -31,12 +31,14 @@
     <tradeTags>
       <li>FH_FleshBuilding</li>
       <li>FH_FleshAdaptationBeauty</li>
-      <li>FH_SuppressionStatue</li>
     </tradeTags>
     <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="CompProperties_Facility">
+        <statOffsets>
+          <FH_Stat_SuppressionEffect>0.05</FH_Stat_SuppressionEffect>
+        </statOffsets>
         <maxSimultaneous>10</maxSimultaneous>
         <maxDistance>8</maxDistance>
         <requiresLOS>false</requiresLOS>

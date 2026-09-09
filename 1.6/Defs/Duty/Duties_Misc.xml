@@ -92,8 +92,17 @@
 
   <DutyDef>
     <defName>FH_Skill_Bulbfreak</defName>
-    <thinkNode Class="JobGiver_AICastAbilityOnSelf">
-      <ability>FH_BulbfreakReleaseFleshbeasts</ability>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="JobGiver_AICastAbilityOnSelf">
+          <ability>FH_BulbfreakReleaseFleshbeasts</ability>
+        </li>
+        <li Class="HiveCreatureFramework.ThinkNode_GroupAcquireAttackTarget">
+          <targetAcquireRadius>36</targetAcquireRadius>
+          <targetKeepRadius>36</targetKeepRadius>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_UnitCombat" />
+      </subNodes>
     </thinkNode>
   </DutyDef>
 

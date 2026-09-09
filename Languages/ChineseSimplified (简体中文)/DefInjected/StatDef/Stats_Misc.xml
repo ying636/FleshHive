@@ -6,4 +6,6 @@
   <!-- EN: ParasitismCapacity -->
   <FH_Stat_ParasitismCapacity.description>宿主能够容纳血肉兽寄生体的总空间。</FH_Stat_ParasitismCapacity.description>
   
+  <FH_Stat_SuppressionEffect.label>巢穴压制速度系数</FH_Stat_SuppressionEffect.label>
+  <FH_Stat_SuppressionEffect.description>在此建筑进行压制工作时，降低巢穴活跃度的效果倍率。</FH_Stat_SuppressionEffect.description>
 </LanguageData>

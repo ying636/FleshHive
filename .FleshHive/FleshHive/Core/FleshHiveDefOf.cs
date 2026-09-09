@@ -167,6 +167,7 @@ public static class FleshHiveDefOf
     public static ThoughtDef FH_Thought_FleshNutrition;
 
     public static StatDef FH_Stat_ParasitismCapacity;
+    public static StatDef FH_Stat_SuppressionEffect;
     public static JobDef FH_Job_PutPawnInParasitePod;
     public static JobDef FH_Job_EnterParasitePod;
     public static JobDef FH_Job_FillTrispikeCharge;

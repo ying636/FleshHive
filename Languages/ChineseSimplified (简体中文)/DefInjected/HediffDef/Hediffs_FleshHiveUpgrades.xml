@@ -42,7 +42,7 @@
   
   <!-- EN: robustification -->
   <FH_Hediff_Upgrade_Robust.label>健壮化</FH_Hediff_Upgrade_Robust.label>
-  <!-- EN: This large fleshbeast has six times its normal health scale. -->
-  <FH_Hediff_Upgrade_Robust.description>这只血肉兽长得额外健全，拥有更加厚实抗打的躯体</FH_Hediff_Upgrade_Robust.description>
+  <!-- EN: This fleshbeast has twice its normal body part health. Pain is multiplied by 0%. -->
+  <FH_Hediff_Upgrade_Robust.description>这只血肉兽的肢体系数变为原来的2倍，疼痛×0%。</FH_Hediff_Upgrade_Robust.description>
   
 </LanguageData>

@@ -12,25 +12,10 @@ public class CompProperties_Suppressible : CompProperties
     }
 
     public float suppressIfAbove = 0.05f;
-    public float suppressionFactor = 1f;
 }
 
 public class CompSuppressible : ThingComp
 {
-    public float SuppressionFactor
-    {
-        get
-        {
-            CompAffectedByFacilities facilities = parent.TryGetComp<CompAffectedByFacilities>();
-            int count = facilities?.LinkedFacilitiesListForReading.Count(facility =>
-                facility.def.tradeTags?.Contains(FleshHiveTags.SuppressionStatue) == true
-                && facilities.IsFacilityActive(facility)) ?? 0;
-            return Props.suppressionFactor * (1f + Math.Min(10, count) * 0.05f);
-        }
-    }
-
-    private CompProperties_Suppressible Props => (CompProperties_Suppressible)props;
-
     public bool CanSuppress(Pawn pawn, bool forced = false)
     {
         if (parent?.Spawned != true || parent.Faction != Faction.OfPlayer)
