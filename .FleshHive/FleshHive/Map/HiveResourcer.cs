@@ -1,5 +1,6 @@
 using System.Linq;
 using HiveCreatureFramework;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -27,7 +28,21 @@ public class HiveResourcer : IExposable
         this.carriedAmount = carriedCount;
     }
 
-    public bool CanDraw => sourceHive?.Spawned == true && targetBlueprint?.Spawned == true && carriedAmount > 0f;
+    public HiveResourcer(Thing sourceHive, Building_BoneSpearSpitter targetTurret, ThingDef carriedThingDef, int carriedCount)
+    {
+        this.sourceHive = sourceHive;
+        this.targetTurret = targetTurret;
+        this.carriedThingDef = carriedThingDef;
+        carriedAmount = carriedCount;
+        transportFuel = true;
+        transportMap = sourceHive.Map;
+        sourceCell = sourceHive.Position;
+        targetCell = targetTurret.Position;
+    }
+
+    public Thing Target => (Thing)targetBlueprint ?? targetTurret;
+
+    public bool CanDraw => sourceHive?.Spawned == true && Target?.Spawned == true && carriedAmount > 0f;
 
     public bool Tick()
     {
@@ -36,7 +51,14 @@ public class HiveResourcer : IExposable
             return true;
         }
 
-        if (targetBlueprint?.Spawned != true)
+        if (transportFuel && (targetTurret?.Spawned != true || sourceHive?.Spawned != true ||
+            targetTurret.Map != transportMap || sourceHive.Map != transportMap ||
+            targetTurret.Faction != Faction.OfPlayer || sourceHive.Faction != Faction.OfPlayer))
+        {
+            return RefundFuel();
+        }
+
+        if (Target?.Spawned != true)
         {
             Refund();
             return true;
@@ -55,6 +77,10 @@ public class HiveResourcer : IExposable
         }
 
         Deliver();
+        if (transportFuel && carriedAmount > 0f)
+        {
+            return RefundFuel();
+        }
         return true;
     }
 
@@ -84,6 +110,11 @@ public class HiveResourcer : IExposable
     {
         Scribe_References.Look(ref sourceHive, "sourceHive");
         Scribe_References.Look(ref targetBlueprint, "targetBlueprint");
+        Scribe_References.Look(ref targetTurret, "targetTurret");
+        Scribe_References.Look(ref transportMap, "transportMap");
+        Scribe_Values.Look(ref transportFuel, "transportFuel", false);
+        Scribe_Values.Look(ref sourceCell, "sourceCell", IntVec3.Invalid);
+        Scribe_Values.Look(ref targetCell, "targetCell", IntVec3.Invalid);
         Scribe_Defs.Look(ref carriedResourceDef, "carriedResourceDef");
         Scribe_Defs.Look(ref carriedThingDef, "carriedThingDef");
         Scribe_Values.Look(ref carriedAmount, "carriedAmount", 0f);
@@ -92,6 +123,22 @@ public class HiveResourcer : IExposable
 
     private void Deliver()
     {
+        if (transportFuel)
+        {
+            CompRefuelable fuel = targetTurret?.GetComp<CompRefuelable>();
+            if (fuel != null && carriedThingDef == ThingDefOf.Bioferrite)
+            {
+                int accepted = Mathf.Min(Mathf.RoundToInt(carriedAmount),
+                    Mathf.FloorToInt((fuel.TargetFuelLevel - fuel.Fuel) / fuel.Props.FuelMultiplierCurrentDifficulty));
+                if (accepted > 0)
+                {
+                    fuel.Refuel(accepted);
+                    carriedAmount -= accepted;
+                }
+            }
+            return;
+        }
+
         if (targetBlueprint == null || carriedAmount <= 0f)
         {
             carriedAmount = 0f;
@@ -145,7 +192,7 @@ public class HiveResourcer : IExposable
     private Vector3 GetDrawPos(float altitude)
     {
         Vector3 start = sourceHive.DrawPos;
-        Vector3 end = targetBlueprint.DrawPos;
+        Vector3 end = Target.DrawPos;
         Vector3 drawPos = Vector3.Lerp(start, end, progress);
         drawPos.y = altitude;
         return drawPos;
@@ -153,7 +200,7 @@ public class HiveResourcer : IExposable
 
     private float GetProgressPerTick()
     {
-        float distance = Mathf.Max(0.1f, sourceHive.Position.DistanceTo(targetBlueprint.Position));
+        float distance = Mathf.Max(0.1f, sourceHive.Position.DistanceTo(Target.Position));
         return TravelSpeedPerTick / distance;
     }
 
@@ -259,12 +306,54 @@ public class HiveResourcer : IExposable
         }
     }
 
+    private bool RefundFuel()
+    {
+        if (transportMap == null || carriedThingDef == null || !sourceCell.IsValid || !sourceCell.InBounds(transportMap))
+        {
+            Log.ErrorOnce("[FleshHive] Cannot return transported bone spear fuel: missing map, source cell, or item definition.", 192486031);
+            return false;
+        }
+
+        IntVec3 dropCell = sourceCell;
+        if (targetCell.IsValid && targetCell.InBounds(transportMap))
+        {
+            dropCell = new IntVec3(Mathf.RoundToInt(Mathf.Lerp(sourceCell.x, targetCell.x, progress)), 0,
+                Mathf.RoundToInt(Mathf.Lerp(sourceCell.z, targetCell.z, progress)));
+        }
+
+        while (carriedAmount >= 1f)
+        {
+            int count = Mathf.Min(Mathf.RoundToInt(carriedAmount), carriedThingDef.stackLimit);
+            Thing returnedThing = ThingMaker.MakeThing(carriedThingDef);
+            returnedThing.stackCount = count;
+            bool placed = GenPlace.TryPlaceThing(returnedThing, dropCell, transportMap, ThingPlaceMode.Near);
+            if (placed || returnedThing.Destroyed || returnedThing.Spawned)
+            {
+                carriedAmount -= count;
+                continue;
+            }
+
+            carriedAmount -= count - returnedThing.stackCount;
+            returnedThing.Destroy();
+            Log.ErrorOnce("[FleshHive] Cannot place returned bone spear fuel. The remaining material is retained in the transport queue.", 192486032);
+            return false;
+        }
+
+        return true;
+    }
+
     public Thing sourceHive;
     public Blueprint_FleshBuild targetBlueprint;
+    public Building_BoneSpearSpitter targetTurret;
     public HiveResourceDef carriedResourceDef;
     public ThingDef carriedThingDef;
     public float carriedAmount;
     public float progress;
+
+    private bool transportFuel;
+    private Map transportMap;
+    private IntVec3 sourceCell = IntVec3.Invalid;
+    private IntVec3 targetCell = IntVec3.Invalid;
 
     private const float BaseScale = 0.65f;
     private const float ResourceScale = 0.42f;

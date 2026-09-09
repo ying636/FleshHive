@@ -3,7 +3,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_CarapaStatue</defName>
     <label>flesh carapace statue</label>
-    <description>flesh carapace statue</description>
+    <description>A twisted carapace organ grown by the hive, with a shape that inspires unease. It emits a gentle hum. Through this organ, the hive safely vents the pheromones continuously produced within it, allowing the hive mind to better direct its fleshbeasts.</description>
     <building>FH_CarapaStatue</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>300</workAmount>
@@ -15,7 +15,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_BoneSpearSpitter</defName>
     <label>bone spear spitter</label>
-    <description>bone spear spitter</description>
+    <description>A heavy hive defense organ. By detonating explosive sacs, it rapidly propels bioferrite bone spears that can severely damage heavily armored targets at considerable range and inflict ongoing damage. After repeated use, its firing orifice must be repaired with fresh bioferrite. It cannot fire at nearby targets and may explode when damaged if its explosive sacs are ruptured.</description>
     <building>FH_BoneSpearSpitter</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>1500</workAmount>

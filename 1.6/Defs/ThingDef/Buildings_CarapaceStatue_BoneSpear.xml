@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FH_CarapaStatue</defName>
     <label>flesh carapace statue</label>
-    <description>flesh carapace statue</description>
+    <description>A twisted carapace organ grown by the hive, with a shape that inspires unease. It emits a gentle hum. Through this organ, the hive safely vents the pheromones continuously produced within it, allowing the hive mind to better direct its fleshbeasts.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_CarapaStatue</texPath>
@@ -69,7 +69,7 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>FH_Gun_BoneSpearSpitter</defName>
     <label>bone spear spitter</label>
-    <description>bone spear spitter</description>
+    <description>A heavy hive defense organ. By detonating explosive sacs, it rapidly propels bioferrite bone spears that can severely damage heavily armored targets at considerable range and inflict ongoing damage. After repeated use, its firing orifice must be repaired with fresh bioferrite. It cannot fire at nearby targets and may explode when damaged if its explosive sacs are ruptured.</description>
     <graphicData>
       <texPath>Things/Building/FH_BoneSpearSpitter/Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -91,6 +91,7 @@
         <range>32.9</range>
         <ticksBetweenBurstShots>17</ticksBetweenBurstShots>
         <burstShotCount>2</burstShotCount>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
         <soundCast>SpitterSpit</soundCast>
         <soundCastTail Inherit="False" />
         <muzzleFlashScale>0</muzzleFlashScale>
@@ -103,7 +104,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>FH_BoneSpearSpitter</defName>
     <label>bone spear spitter</label>
-    <description>bone spear spitter</description>
+    <description>A heavy hive defense organ. By detonating explosive sacs, it rapidly propels bioferrite bone spears that can severely damage heavily armored targets at considerable range and inflict ongoing damage. After repeated use, its firing orifice must be repaired with fresh bioferrite. It cannot fire at nearby targets and may explode when damaged if its explosive sacs are ruptured.</description>
     <thingClass>FleshHive.Building_BoneSpearSpitter</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_BoneSpearSpitter/Base</texPath>
@@ -153,6 +154,21 @@
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Bone spear shots remaining</fuelLabel>
+        <fuelGizmoLabel>Bone spear reserves</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs><li>Bioferrite</li></thingDefs>
+        </fuelFilter>
+        <fuelCapacity>40</fuelCapacity>
+        <fuelMultiplier>1</fuelMultiplier>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+      </li>
       <li Class="FleshHive.CompProperties_HiveNutritionUpkeep"><dailyNutritionCost>1</dailyNutritionCost></li>
       <li Class="CompProperties_Stunnable">
         <affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs>

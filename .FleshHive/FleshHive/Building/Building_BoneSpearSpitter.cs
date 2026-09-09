@@ -6,6 +6,11 @@ namespace FleshHive;
 
 public class Building_BoneSpearSpitter : Building_TurretGun
 {
+    public override string GetInspectString()
+    {
+        return base.GetInspectString() + "\n" + "FH_BoneSpearSpitter_RefuelCost".Translate();
+    }
+
     public override LocalTargetInfo TryFindNewTarget()
     {
         bool hadTarget = CurrentTarget.IsValid;

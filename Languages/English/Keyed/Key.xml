@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+  <FH_BoneSpearSpitter_RefuelCost>Replenishing each spare bone spear consumes 1 bioferrite</FH_BoneSpearSpitter_RefuelCost>
   <FH_GroupHunt_AllowUndesignatedAnimals>Allow hunting undesignated creatures</FH_GroupHunt_AllowUndesignatedAnimals>
   <FH_GroupHunt_AllowUndesignatedAnimalsTip>When enabled, a group in hunt mode automatically targets wild animals if no target has an original hunt designation. When disabled, the group only hunts designated targets.</FH_GroupHunt_AllowUndesignatedAnimalsTip>
   <FH_GroupHunt_MinimumHealthyHunters>Minimum healthy hunters</FH_GroupHunt_MinimumHealthyHunters>
@@ -286,7 +287,7 @@
   <FH_Gestation_CustomFormulaUnavailable>This custom formula is not available at this producer.</FH_Gestation_CustomFormulaUnavailable>
   <FH_Gestation_CustomFormulaInsufficientResources>There are not enough resources to produce this custom formula.</FH_Gestation_CustomFormulaInsufficientResources>
   <FH_HiveOwnedFleshbeasts>Owned fleshbeasts: {0}</FH_HiveOwnedFleshbeasts>
-  <FH_Upgrade_PageTitle>Flesh hive upgrades</FH_Upgrade_PageTitle>
+  <FH_Upgrade_PageTitle>Hive upgrades</FH_Upgrade_PageTitle>
   <FH_Upgrade_NoActive>No upgrade is currently processing.</FH_Upgrade_NoActive>
   <FH_Upgrade_Active>{0}: {1} complete, {2} remaining</FH_Upgrade_Active>
   <FH_Upgrade_Cost>Cost: {0} nutrition, {1} nerve flesh; processing time: {2}</FH_Upgrade_Cost>

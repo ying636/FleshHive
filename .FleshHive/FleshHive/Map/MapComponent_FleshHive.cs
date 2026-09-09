@@ -904,6 +904,10 @@ public class MapComponent_FleshHive : MapComponent
         {
             DispatchHiveResourcers();
         }
+        if (ticksGame % BoneSpearRefuelCheckInterval == 0)
+        {
+            DispatchBoneSpearFuel();
+        }
         if (ticksGame % UnitQuotaTickInterval == 0)
         {
             TickUnitQuotas();
@@ -1480,6 +1484,45 @@ public class MapComponent_FleshHive : MapComponent
         }
     }
 
+    private void DispatchBoneSpearFuel()
+    {
+        CleanupInvalidFleshBoxes();
+        foreach (Building_BoneSpearSpitter turret in map.listerThings.ThingsInGroup(ThingRequestGroup.Refuelable).OfType<Building_BoneSpearSpitter>())
+        {
+            CompRefuelable fuel = turret.GetComp<CompRefuelable>();
+            if (!turret.Spawned || turret.Faction != Faction.OfPlayer || fuel == null || !fuel.ShouldAutoRefuelNow ||
+                HiveResourcers.Any(resourcer => resourcer?.targetTurret == turret))
+            {
+                continue;
+            }
+
+            int needed = fuel.GetFuelCountToFullyRefuel();
+            if (needed <= 0 || mapFleshHive == null)
+            {
+                continue;
+            }
+
+            foreach (Building_FleshBox box in mapFleshHive.CachedFleshBoxes
+                         .Where(box => box != null && box.Spawned && box.Map == map && box.Faction == Faction.OfPlayer)
+                         .OrderBy(box => box.Position.DistanceToSquared(turret.Position)))
+            {
+                Thing sourceThing = box.Position.GetThingList(map).FirstOrDefault(thing =>
+                    thing.def == ThingDefOf.Bioferrite && thing.stackCount > 0 &&
+                    !map.reservationManager.IsReservedByAnyoneOf(thing, Faction.OfPlayer));
+                if (sourceThing == null)
+                {
+                    continue;
+                }
+
+                int count = Mathf.Min(needed, Mathf.Min((int)ResourceCarryCapacity, sourceThing.stackCount));
+                Thing carriedThing = sourceThing.SplitOff(count);
+                HiveResourcers.Add(new HiveResourcer(box, turret, carriedThing.def, carriedThing.stackCount));
+                carriedThing.Destroy();
+                break;
+            }
+        }
+    }
+
     private void TickFleshBushSpawner()
     {
         int mapArea = map.Area;
@@ -1802,6 +1845,7 @@ public class MapComponent_FleshHive : MapComponent
     private int planCheckIntervalTicks;
     private bool nutritionClampPending;
     private const int ResourceTransportInterval = 250;
+    private const int BoneSpearRefuelCheckInterval = GenDate.TicksPerHour * 3;
     private const int ActivityTickInterval = 2500;
     private const int UnitQuotaTickInterval = 2500;
     private const int MaxAutomaticUnitTasksPerInterval = 50;

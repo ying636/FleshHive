@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <FH_Building_CarapaStatue.label>血肉甲壳雕像</FH_Building_CarapaStatue.label>
-  <FH_Building_CarapaStatue.description>血肉甲壳雕像</FH_Building_CarapaStatue.description>
+  <FH_Building_CarapaStatue.description>巢穴生长出的造型扭曲的甲壳器官，其形状令人感到不安。它散发出轻柔的嗡鸣声，通过这个器官巢穴可以将其内部不断生成的信息素安全排出，使血肉兽们其更好的由巢穴意识指挥。</FH_Building_CarapaStatue.description>
   <FH_Building_BoneSpearSpitter.label>骨矛喷吐器</FH_Building_BoneSpearSpitter.label>
-  <FH_Building_BoneSpearSpitter.description>骨矛喷吐器</FH_Building_BoneSpearSpitter.description>
+  <FH_Building_BoneSpearSpitter.description>一种重型巢穴防御器官。它通过引爆爆炸囊快速推出的活铁质骨矛能够在可观的攻击范围内重创重甲目标，并对其造成持续伤害。但它的喷射口在多次使用后必须新的活铁来进行修补。它不能向近距离的目标开火，并且在损坏时可能会因为爆炸囊受损而发生爆炸。</FH_Building_BoneSpearSpitter.description>
 </LanguageData>

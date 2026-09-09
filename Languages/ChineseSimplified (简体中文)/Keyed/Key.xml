@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  <FH_BoneSpearSpitter_RefuelCost>每补充1发备用骨矛消耗1活铁</FH_BoneSpearSpitter_RefuelCost>
   <!-- EN: Allow hunting undesignated creatures -->
   <FH_GroupHunt_AllowUndesignatedAnimals>允许狩猎非标记生物</FH_GroupHunt_AllowUndesignatedAnimals>
   <!-- EN: When enabled, a group in hunt mode automatically targets wild animals if no target has an original hunt designation. When disabled, the group only hunts designated targets. -->
