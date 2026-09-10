@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/discoveredResearchProjects</xpath><value><li>FH_Research_BasicFleshHive</li></value></Operation>
   <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Fingerspike</li></value></Operation>
   <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Puffspike</li></value></Operation>
   <Operation Class="PatchOperationAdd"><xpath>/Defs/EntityCodexEntryDef[defName="Fleshbeasts"]/linkedThings</xpath><value><li>FH_Whipspike</li></value></Operation>

@@ -395,7 +395,7 @@ public class ParasitismSystem : HediffWithComps
 
         if (lord != null && map.lordManager.lords.Contains(lord) && lord.CanAddPawn(flesh))
         {
-            lord.AddPawns(new List<Pawn> { flesh }, updateDuties: false);
+            lord.AddPawn(flesh);
             return;
         }
 
