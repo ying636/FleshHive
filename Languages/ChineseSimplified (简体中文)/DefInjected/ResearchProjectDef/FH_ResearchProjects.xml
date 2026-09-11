@@ -78,11 +78,11 @@
   <!-- EN: Unlocks bone-spike spitters, small guard tentacles, and flesh barricades. -->
   <FH_Research_ImmuneSystem.description>解锁骨刺喷吐器、小型警卫触手和血肉掩体。</FH_Research_ImmuneSystem.description>
   
-  <!-- EN: mother-beast control -->
+  <!-- EN: meld-beast control -->
   <FH_Research_MotherBeastControl.label>血肉母兽控制</FH_Research_MotherBeastControl.label>
-  <!-- EN: Allows cultivation of mother beasts. -->
+  <!-- EN: Allows cultivation of meld beasts. -->
   <FH_Research_MotherBeastControl.description>允许培育血肉母兽。</FH_Research_MotherBeastControl.description>
-  <!-- EN: Mother-beast cultivation -->
+  <!-- EN: Meld-beast cultivation -->
   <FH_Research_MotherBeastControl.customUnlockTexts.0>血肉母兽培育</FH_Research_MotherBeastControl.customUnlockTexts.0>
   
   <!-- EN: nutrition cycle -->

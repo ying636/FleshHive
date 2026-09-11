@@ -47,7 +47,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Nexusmeld</defName>
     <label>nexusmeld parasitism</label>
-    <description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.\n\n-Motherbeast tentacle</description>
+    <description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.\n\n-Meld beast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.2, 0.6)</defaultLabelColor>
@@ -260,7 +260,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Dreadmeld</defName>
     <label>dreadmeld parasitism</label>
-    <description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains incredible regeneration, improved mining work, and a terror roar.\n\n-Motherbeast tentacle</description>
+    <description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains incredible regeneration, improved mining work, and a terror roar.\n\n-Meld beast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.45, 0.2, 0.15)</defaultLabelColor>
@@ -337,7 +337,7 @@
   <HediffDef>
     <defName>FH_Parasitism_Fissionmeld</defName>
     <label>fissionmeld parasitism</label>
-    <description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's twisted flesh capacity and regeneration are increased; flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.\n\n-Motherbeast tentacle</description>
+    <description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's twisted flesh capacity and regeneration are increased; flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.\n\n-Meld beast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.75, 0.25, 0.2)</defaultLabelColor>

@@ -13,9 +13,19 @@ public class Window_FleshHiveTutorial : Window
         forcePause = true;
         absorbInputAroundWindow = true;
         closeOnAccept = false;
-        for (int i = 0; i < ImagePaths.Length; i++)
+        string language = LanguageDatabase.activeLanguage?.LegacyFolderName ?? "English";
+        for (int i = 0; i < PageNames.Length; i++)
         {
-            images[i] = ContentFinder<Texture2D>.Get(ImagePaths[i]);
+            imagePaths[i] = $"UI/Tutorial/{language}/{PageNames[i]}";
+            if (language != "English")
+            {
+                images[i] = ContentFinder<Texture2D>.Get(imagePaths[i], false);
+            }
+            if (images[i] == null)
+            {
+                imagePaths[i] = $"UI/Tutorial/English/{PageNames[i]}";
+                images[i] = ContentFinder<Texture2D>.Get(imagePaths[i]);
+            }
         }
     }
 
@@ -41,7 +51,7 @@ public class Window_FleshHiveTutorial : Window
         }
         else
         {
-            Widgets.Label(inRect, ImagePaths[pageIndex]);
+            Widgets.Label(inRect, imagePaths[pageIndex]);
         }
 
         const float buttonSize = 40f;
@@ -81,19 +91,20 @@ public class Window_FleshHiveTutorial : Window
         return enabled && Widgets.ButtonInvisible(rect);
     }
 
-    private static readonly string[] ImagePaths =
+    private static readonly string[] PageNames =
     {
-        "UI/Tutorial/info_c2",
-        "UI/Tutorial/info_c3",
-        "UI/Tutorial/info_c24",
-        "UI/Tutorial/info_c26",
-        "UI/Tutorial/info_c25",
-        "UI/Tutorial/info_c27",
-        "UI/Tutorial/info_c29",
-        "UI/Tutorial/info_c30",
-        "UI/Tutorial/info_c31"
+        "info_2",
+        "info_3",
+        "info_24",
+        "info_26",
+        "info_25",
+        "info_27",
+        "info_29",
+        "info_30",
+        "info_31"
     };
 
-    private readonly Texture2D?[] images = new Texture2D?[ImagePaths.Length];
+    private readonly Texture2D?[] images = new Texture2D?[PageNames.Length];
+    private readonly string[] imagePaths = new string[PageNames.Length];
     private int pageIndex;
 }

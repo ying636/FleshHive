@@ -325,7 +325,7 @@
   <FH_MeldGrowth_CannotConsume>Cannot consume {0}</FH_MeldGrowth_CannotConsume>
   <FH_MeldGrowth_CannotConsumeWrongSeed>Cannot consume {0}: it does not correspond to {1}</FH_MeldGrowth_CannotConsumeWrongSeed>
   <FH_MeldGrowth_CannotConsumeMaxLevel>Cannot consume {0}: growth has reached the maximum level of {1}</FH_MeldGrowth_CannotConsumeMaxLevel>
-  <FH_MeldGrowth_CannotConsumeDowned>Cannot consume {0}: the mother beast is downed</FH_MeldGrowth_CannotConsumeDowned>
+  <FH_MeldGrowth_CannotConsumeDowned>Cannot consume {0}: the meld beast is downed</FH_MeldGrowth_CannotConsumeDowned>
   <FH_MeldGrowth_CannotConsumeReserved>Cannot consume {0}: reserved by someone else</FH_MeldGrowth_CannotConsumeReserved>
   <FH_MeldGrowth_ConsumeFailed>{0} could not complete the growth.</FH_MeldGrowth_ConsumeFailed>
   <FH_MeldGrowth_Upgraded>{0} has grown to level {1}/{2}.</FH_MeldGrowth_Upgraded>

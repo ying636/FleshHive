@@ -67,8 +67,8 @@
 
     <HiveCreatureFramework.SpawnCategoryDef>
         <defName>FH_Category_GiantFleshBeast</defName>
-        <label>Mother flesh beast</label>
-        <description>Mother flesh beast</description>
+        <label>Meld beast</label>
+        <description>Meld beast</description>
         <color>(0.85, 0.18, 0.18)</color>
         <worker Class="FleshHive.SpawnCategoryWorker_ResearchPrerequisite">
             <research>FH_Research_MotherBeastControl</research>

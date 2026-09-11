@@ -150,8 +150,8 @@
         <cost>6</cost>
         <hediff>FH_Parasitism_Nexusmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
-        <abilityLabel>Motherbeast tentacle</abilityLabel>
-        <abilityDescription>The host grows two motherbeast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
+        <abilityLabel>Meld beast tentacle</abilityLabel>
+        <abilityDescription>The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
@@ -927,8 +927,8 @@
         <cost>6</cost>
         <hediff>FH_Parasitism_Fissionmeld</hediff>
         <twistedFleshCapacity>800</twistedFleshCapacity>
-        <abilityLabel>Motherbeast tentacle</abilityLabel>
-        <abilityDescription>The host grows two motherbeast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
+        <abilityLabel>Meld beast tentacle</abilityLabel>
+        <abilityDescription>The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>
@@ -1018,6 +1018,7 @@
     <statBases>
       <MoveSpeed>1</MoveSpeed>
       <MinimumContainmentStrength>200</MinimumContainmentStrength>
+      <PsychicSensitivity>0</PsychicSensitivity>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
       <ArmorRating_Heat>2.0</ArmorRating_Heat>
@@ -1268,8 +1269,8 @@
         <cost>6</cost>
         <hediff>FH_Parasitism_Dreadmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
-        <abilityLabel>Motherbeast tentacle</abilityLabel>
-        <abilityDescription>The host grows two motherbeast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
+        <abilityLabel>Meld beast tentacle</abilityLabel>
+        <abilityDescription>The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
       </li>
       <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
     </comps>

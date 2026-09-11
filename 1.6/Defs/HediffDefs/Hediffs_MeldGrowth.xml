@@ -3,8 +3,8 @@
 
   <HediffDef>
     <defName>FH_MeldGrowth</defName>
-    <label>mother beast growth</label>
-    <description>The mother beast has consumed its corresponding core and undergone permanent growth. Each growth level increases parasitism capacity, twisted flesh capacity, body part health, regeneration, bleed resistance, and damage resistance.</description>
+    <label>meld beast growth</label>
+    <description>The meld beast has consumed its corresponding core and undergone permanent growth. Each growth level increases parasitism capacity, twisted flesh capacity, body part health, regeneration, bleed resistance, and damage resistance.</description>
     <hediffClass>FleshHive.Hediff_MeldGrowth</hediffClass>
     <initialSeverity>1</initialSeverity>
     <maxSeverity>5</maxSeverity>

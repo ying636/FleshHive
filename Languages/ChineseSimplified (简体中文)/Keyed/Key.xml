@@ -626,7 +626,7 @@
   <FH_MeldGrowth_CannotConsumeWrongSeed>无法吞食{0}：该结块不属于{1}</FH_MeldGrowth_CannotConsumeWrongSeed>
   <!-- EN: Cannot consume {0}: growth has reached the maximum level of {1} -->
   <FH_MeldGrowth_CannotConsumeMaxLevel>无法吞食{0}：成长已经达到最高{1}级</FH_MeldGrowth_CannotConsumeMaxLevel>
-  <!-- EN: Cannot consume {0}: the mother beast is downed -->
+  <!-- EN: Cannot consume {0}: the meld beast is downed -->
   <FH_MeldGrowth_CannotConsumeDowned>无法吞食{0}：母兽已经倒地</FH_MeldGrowth_CannotConsumeDowned>
   <!-- EN: Cannot consume {0}: reserved by someone else -->
   <FH_MeldGrowth_CannotConsumeReserved>无法吞食{0}：已被其他单位预留</FH_MeldGrowth_CannotConsumeReserved>

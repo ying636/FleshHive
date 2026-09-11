@@ -183,12 +183,12 @@
 
   <ResearchProjectDef>
     <defName>FH_Research_MotherBeastControl</defName>
-    <label>mother-beast control</label>
-    <description>Allows cultivation of mother beasts.</description>
+    <label>meld-beast control</label>
+    <description>Allows cultivation of meld beasts.</description>
     <knowledgeCost>45</knowledgeCost>
     <knowledgeCategory>Advanced</knowledgeCategory>
     <techLevel>Industrial</techLevel>
-    <customUnlockTexts><li>Mother-beast cultivation</li></customUnlockTexts>
+    <customUnlockTexts><li>Meld-beast cultivation</li></customUnlockTexts>
     <prerequisites><li>FH_Research_FleshPrimaryHive</li></prerequisites>
     <researchViewX>4.50</researchViewX>
     <researchViewY>3.30</researchViewY>
@@ -235,13 +235,13 @@
   <ResearchProjectDef>
     <defName>FH_Research_AdvancedFleshHive</defName>
     <label>advanced flesh hive</label>
-    <description>Unlocks large fleshbeast fusion, advanced mother-beast fusion when the required mother-beast node is available, nerve centers, fleshmass spitters, flesh burst launchers, and parasite expansion packs.</description>
+    <description>Unlocks large fleshbeast fusion, advanced meld-beast fusion when the required meld-beast node is available, nerve centers, fleshmass spitters, flesh burst launchers, and parasite expansion packs.</description>
     <knowledgeCost>45</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
     <techLevel>Industrial</techLevel>
     <customUnlockTexts>
       <li>Large fleshbeast fusion</li>
-      <li>Advanced mother-beast fusion</li>
+      <li>Advanced meld-beast fusion</li>
       <li>Nerve centers</li>
       <li>Fleshmass spitters</li>
       <li>Flesh burst launchers</li>
