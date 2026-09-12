@@ -19,6 +19,9 @@ public class JobDriver_PutPawnInParasitePod : JobDriver
     {
         this.FailOn(() => this.job.targetB.Thing is not FleshParasitePod pod
             || (pod.curQuest == null && pod.targetUI == null));
+        this.FailOn(() => this.job.targetB.Thing is FleshParasitePod { curQuest: null }
+            && (TargetA.Pawn == null || TargetA.Pawn.Dead
+                || (!TargetA.Pawn.Downed && TargetA.Pawn.Faction?.IsPlayer != true && !TargetA.Pawn.IsPrisoner)));
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
         yield return Toils_Haul.StartCarryThing(TargetIndex.A);
         yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.InteractionCell);

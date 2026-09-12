@@ -64,10 +64,6 @@
 
   <TwistedFleshCapacity>Twisted Flesh: {0}/{1}</TwistedFleshCapacity>
   <FH_NotEnoughTwistedFlesh>Requires {0} twisted flesh.</FH_NotEnoughTwistedFlesh>
-  <FH_TrispikeFill>Fill with twisted flesh</FH_TrispikeFill>
-  <FH_TrispikeFillCharged>Fill with twisted flesh: charged</FH_TrispikeFillCharged>
-  <FH_TrispikeFillNeed>Fill with twisted flesh: requires {0}</FH_TrispikeFillNeed>
-  <FH_TrispikeNeedsTwistedFlesh>Requires twisted flesh to be loaded</FH_TrispikeNeedsTwistedFlesh>
   <FH_DevAddTwistedFlesh>DEV: +10% twisted flesh</FH_DevAddTwistedFlesh>
   <FH_DevFillTwistedFlesh>DEV: fill twisted flesh</FH_DevFillTwistedFlesh>
   <FH_DevGiveParasite>DEV: add parasite</FH_DevGiveParasite>

@@ -1,5 +1,4 @@
 using System.Text;
-using HiveCreatureFramework;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -26,7 +25,7 @@ public class FleshSack : Building, IThingHolder
         }
         digestionProgress++;
         float nutritionPerTick = 20f / 60000f * MapComponent_FleshHive.GetNutritionAbsorptionFactor(Map);
-        GiveNutrition(nutritionPerTick);
+        MapComponent_FleshHive.AddNutrition(Map, nutritionPerTick);
         if (digestionProgress >= totalDigestionTime)
         {
             EjectCorpse();
@@ -126,7 +125,7 @@ public class FleshSack : Building, IThingHolder
         if (remainingTicks > 0)
         {
             float nutritionPerTick = 20f / 60000f * MapComponent_FleshHive.GetNutritionAbsorptionFactor(Map);
-            GiveNutrition(remainingTicks * nutritionPerTick);
+            MapComponent_FleshHive.AddNutrition(Map, remainingTicks * nutritionPerTick);
         }
 
         EjectCorpse();
@@ -145,36 +144,6 @@ public class FleshSack : Building, IThingHolder
         contents.TryDropAll(Position, Map, ThingPlaceMode.Near);
         digestionProgress = 0;
         digestionFinished = false;
-    }
-
-    private void GiveNutrition(float value)
-    {
-        MapFleshHive fleshHive = MapComponent_FleshHive.GetMapFleshHive(Map);
-        if (fleshHive == null)
-        {
-            return;
-        }
-        fleshHive.nutrition = Mathf.Min(GetNutritionLimit(), fleshHive.nutrition + value);
-    }
-
-    private float GetNutritionLimit()
-    {
-        foreach (Thing thing in Map.listerThings.ThingsInGroup(ThingRequestGroup.BuildingArtificial))
-        {
-            CompHiveResource comp = thing.TryGetComp<CompHiveResource>();
-            if (comp == null)
-            {
-                continue;
-            }
-            foreach (HiveResource resource in comp.resources)
-            {
-                if (resource.def == FleshHiveDefOf.FH_Resource_Nutrition)
-                {
-                    return resource.GetLimit();
-                }
-            }
-        }
-        return float.MaxValue;
     }
 
     public ThingOwner<Thing> contents;

@@ -61,7 +61,7 @@ public class Building_FleshBox : Building_Storage
 
     private void ConvertNutrition(Thing thing)
     {
-        if (!Spawned || thing == null || thing.Destroyed)
+        if (!Spawned || thing == null || thing.Destroyed || thing is Corpse)
         {
             return;
         }

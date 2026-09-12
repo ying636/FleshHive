@@ -24,18 +24,20 @@ public sealed class FloatMenuOptionProvider_CarryAnimalToParasitePod : FloatMenu
 
     public override IEnumerable<FloatMenuOption> GetOptionsFor(Thing clickedThing, FloatMenuContext context)
     {
-        if (clickedThing is not Pawn animal || animal.Dead || !animal.Downed)
+        if (clickedThing is not Pawn animal || !animal.Spawned || animal.Dead
+            || (!animal.Downed && animal.Faction?.IsPlayer != true && !animal.IsPrisoner))
         {
             yield break;
         }
 
-        if (!animal.RaceProps.Animal && animal.RaceProps.FleshType != FleshTypeDefOf.Fleshbeast)
+        if (!animal.RaceProps.Animal && animal.RaceProps.FleshType != FleshTypeDefOf.Fleshbeast
+            && animal.Faction?.IsPlayer != true && !animal.IsPrisoner)
         {
             yield break;
         }
 
         Pawn carrier = context.FirstSelectedPawn;
-        if (carrier == null || carrier.DeadOrDowned || carrier.Map != animal.Map)
+        if (carrier == null || carrier == animal || carrier.DeadOrDowned || carrier.Map != animal.Map)
         {
             yield break;
         }
@@ -60,7 +62,8 @@ public sealed class FloatMenuOptionProvider_CarryAnimalToParasitePod : FloatMenu
             yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption(
                 "FH_Parasitism_CarryAnimalToPod".Translate(selectedPod.LabelCap), () =>
                 {
-                    if (carrier.Map != animal.Map || !animal.Spawned || animal.Dead || !animal.Downed
+                    if (carrier.Map != animal.Map || !animal.Spawned || animal.Dead
+                        || (!animal.Downed && animal.Faction?.IsPlayer != true && !animal.IsPrisoner)
                         || !carrier.CanReserveAndReach(animal, PathEndMode.Touch, Danger.Deadly)
                         || !carrier.CanReserveAndReach(selectedPod, PathEndMode.Touch, Danger.Deadly)
                         || !selectedPod.TryQueueTargetPawn(animal))

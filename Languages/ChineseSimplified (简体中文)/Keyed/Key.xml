@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   <FH_BoneSpearSpitter_RefuelCost>每补充1发备用骨矛消耗1活铁</FH_BoneSpearSpitter_RefuelCost>
   <!-- EN: Allow hunting undesignated creatures -->
@@ -120,13 +120,9 @@
   <!-- EN: Requires {0} twisted flesh. -->
   <FH_NotEnoughTwistedFlesh>需要{0}扭曲肉。</FH_NotEnoughTwistedFlesh>
   <!-- EN: Fill with twisted flesh -->
-  <FH_TrispikeFill>填充扭曲肉</FH_TrispikeFill>
   <!-- EN: Fill with twisted flesh: charged -->
-  <FH_TrispikeFillCharged>填充扭曲肉：已充能</FH_TrispikeFillCharged>
   <!-- EN: Fill with twisted flesh: requires {0} -->
-  <FH_TrispikeFillNeed>填充扭曲肉：需要{0}</FH_TrispikeFillNeed>
   <!-- EN: Requires twisted flesh to be loaded -->
-  <FH_TrispikeNeedsTwistedFlesh>需要填充扭曲肉</FH_TrispikeNeedsTwistedFlesh>
   <!-- EN: DEV: +10% twisted flesh -->
   <FH_DevAddTwistedFlesh>开发：增加10%扭曲肉</FH_DevAddTwistedFlesh>
   <!-- EN: DEV: fill twisted flesh -->

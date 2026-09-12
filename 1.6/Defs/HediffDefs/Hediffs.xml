@@ -416,10 +416,6 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
       </li>
     </stages>
     <comps>
-      <li Class="FleshHive.Effect.HediffCompProperties_TrispikeCharge">
-        <active>false</active>
-        <fillCount>10</fillCount>
-      </li>
       <li Class="FleshHive.HediffCompProperties_Parasitism">
         <tentacles>
           <li>

@@ -627,7 +627,17 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
             .Where(group => group != mapComp.group)
             .GroupBy(group => group.hive))
         {
-            yield return new FleshHiveGroupEntry(groupSet.Key, groupSet.ToList(), false);
+            if (groupSet.Key is Building)
+            {
+                foreach (UnitGroup group in groupSet)
+                {
+                    yield return new FleshHiveGroupEntry(groupSet.Key, new List<UnitGroup> { group }, false);
+                }
+            }
+            else
+            {
+                yield return new FleshHiveGroupEntry(groupSet.Key, groupSet.ToList(), false);
+            }
         }
 
         if (mapComp.group != null)
@@ -731,6 +741,15 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
                 if (IsTemporary)
                 {
                     return "FH_FleshManagement_TemporaryGroup".Translate();
+                }
+
+                if (hive is Pawn node)
+                {
+                    return node.LabelCap;
+                }
+                if (hive is Building)
+                {
+                    return groups.FirstOrDefault(group => group != null)?.RenamableLabel ?? "FH_FleshManagement_NoHive".Translate();
                 }
 
                 return hive?.LabelCap ?? "FH_FleshManagement_NoHive".Translate();

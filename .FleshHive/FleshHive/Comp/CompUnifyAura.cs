@@ -57,7 +57,7 @@ public class CompUnifyAura : ThingComp
             return;
         }
 
-        HashSet<Pawn> newAffected = new HashSet<Pawn>();
+        newAffected.Clear();
         foreach (Pawn pawn in mapComp.CachedFleshBeasts)
         {
             if (pawn == caster)
@@ -86,6 +86,7 @@ public class CompUnifyAura : ThingComp
 
         CachedAffectedPawns.Clear();
         CachedAffectedPawns.AddRange(newAffected);
+        newAffected.Clear();
     }
 
     private void ApplyUnification(Pawn pawn)
@@ -123,4 +124,5 @@ public class CompUnifyAura : ThingComp
     private int tickCounter;
 
     private List<Pawn> cachedAffectedPawns;
+    private readonly HashSet<Pawn> newAffected = new();
 }

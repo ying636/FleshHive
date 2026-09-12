@@ -170,7 +170,6 @@ public static class FleshHiveDefOf
     public static StatDef FH_Stat_SuppressionEffect;
     public static JobDef FH_Job_PutPawnInParasitePod;
     public static JobDef FH_Job_EnterParasitePod;
-    public static JobDef FH_Job_FillTrispikeCharge;
     public static JobDef FH_Job_RefillTwistedFlesh;
     public static JobDef FH_Job_RefillTwistedFlesh_Help;
     public static JobDef FH_Job_FillFleshSack;

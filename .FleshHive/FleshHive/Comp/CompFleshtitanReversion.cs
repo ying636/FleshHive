@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HiveCreatureFramework;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -25,6 +26,7 @@ public class CompFleshtitanReversion : ThingComp
         Scribe_Values.Look(ref sourceHeartBiosignature, "sourceHeartBiosignature", -1);
         Scribe_References.Look(ref escortLord, "escortLord");
         Scribe_References.Look(ref responseLord, "responseLord");
+        Scribe_References.Look(ref nativeEscortLord, "nativeEscortLord");
         Scribe_Values.Look(ref assaultPending, "assaultPending", defaultValue: false);
         Scribe_Values.Look(ref responseReadyAtTick, "responseReadyAtTick", -1);
         Scribe_Values.Look(ref assemblyPoint, "assemblyPoint", IntVec3.Invalid);
@@ -47,6 +49,36 @@ public class CompFleshtitanReversion : ThingComp
     public override void CompTick()
     {
         base.CompTick();
+        if (escortLord?.LordJob is LordJob_HiveGroup groupJob && parent.IsHashIntervalTick(60))
+        {
+            if (groupJob.group.units.RemoveWhere(member => member == null || member.TryGetComp<UnitComp>() == null) > 0)
+            {
+                groupJob.group.CalculateCost();
+            }
+            foreach (Pawn member in escortLord.ownedPawns.ToList())
+            {
+                if (member.TryGetComp<UnitComp>() == null)
+                {
+                    nativeEscortLord ??= LordMaker.MakeNewLord(parent.Faction, new LordJob_FleshbeastAssault(), parent.Map);
+                    escortLord.RemovePawn(member);
+                    nativeEscortLord.AddPawn(member);
+                }
+                else if (!groupJob.group.units.Contains(member))
+                {
+                    groupJob.group.AcceptUnit(member);
+                }
+            }
+            if (nativeEscortLord != null)
+            {
+                foreach (Pawn member in nativeEscortLord.ownedPawns.ToList())
+                {
+                    if (member.TryGetComp<UnitComp>() != null)
+                    {
+                        groupJob.group.AcceptUnit(member);
+                    }
+                }
+            }
+        }
         if (assaultPending)
         {
             TryStartAssault();
@@ -69,12 +101,13 @@ public class CompFleshtitanReversion : ThingComp
         return "FH_FleshtitanReversionCountdown".Translate(remainingTicks.ToStringTicksToPeriod());
     }
 
-    public void InitializeFromHeart(float heartThreatPoints, Lord? titanEscortLord, int heartBiosignature = -1)
+    public void InitializeFromHeart(float heartThreatPoints, Lord? titanEscortLord, int heartBiosignature = -1, Lord? nativeLord = null)
     {
         sourceHeartThreatPoints = heartThreatPoints;
         sourceHeartBiosignature = heartBiosignature;
         escortLord = titanEscortLord;
-        assaultPending = titanEscortLord != null;
+        nativeEscortLord = nativeLord;
+        assaultPending = titanEscortLord != null && titanEscortLord.LordJob is not LordJob_HiveGroup;
         responseReadyAtTick = -1;
         assemblyPoint = IntVec3.Invalid;
         nextAssemblyAttemptTick = -1;
@@ -315,19 +348,50 @@ public class CompFleshtitanReversion : ThingComp
         List<Pawn> escorts = escortLord?.ownedPawns
             .Where(pawn => pawn != parent && pawn.Spawned && pawn.Map == map && !pawn.Dead)
             .ToList() ?? new List<Pawn>();
+        if (nativeEscortLord != null)
+        {
+            escorts.AddRange(nativeEscortLord.ownedPawns
+                .Where(pawn => pawn.Spawned && pawn.Map == map && !pawn.Dead && !escorts.Contains(pawn)).ToList());
+        }
+        UnitGroup? retainedGroup = (escortLord?.LordJob as LordJob_HiveGroup)?.group;
+        if (retainedGroup != null)
+        {
+            parent.TryGetComp<CompHiveGroup>()?.groups.Remove(retainedGroup);
+            retainedGroup.hive = heart;
+            retainedGroup.map = map;
+        }
         List<Pawn> lordPawns = escortLord?.ownedPawns
             .Where(pawn => pawn.Spawned && pawn.Map == map && !pawn.Dead)
             .ToList() ?? new List<Pawn>();
-        escortLord?.RemovePawns(lordPawns);
+        foreach (Pawn lordPawn in lordPawns)
+        {
+            if (retainedGroup != null && lordPawn != parent && lordPawn.TryGetComp<UnitComp>() != null)
+            {
+                continue;
+            }
+            lordPawn.TryGetComp<UnitComp>()?.group?.RemoveUnit(lordPawn);
+            lordPawn.GetLord()?.RemovePawn(lordPawn);
+        }
 
         parent.Destroy(DestroyMode.Vanish);
         GenSpawn.Spawn(heart, position, map, Rot4.North, WipeMode.Vanish);
+        if (retainedGroup != null)
+        {
+            retainedGroup.SetTarget(new TargetInfo(position, map), false);
+            retainedGroup.SetMode(HCFDefOf.HCF_GroupWorkMode_Defend, false);
+        }
         if (heart is Building_FleshmassHeart restoredHeart && escorts.Count > 0)
         {
             Lord defendHeartLord = restoredHeart.DefendHeartLord;
-            defendHeartLord.AddPawns(escorts);
             foreach (Pawn escort in escorts)
             {
+                if (retainedGroup != null && escort.TryGetComp<UnitComp>() != null)
+                {
+                    retainedGroup.AcceptUnit(escort);
+                    continue;
+                }
+                escort.GetLord()?.RemovePawn(escort);
+                defendHeartLord.AddPawn(escort);
                 if (escort.mindState?.duty == null)
                 {
                     PawnDuty duty = new(DutyDefOf.DefendFleshmassHeart, restoredHeart.Position)
@@ -342,6 +406,14 @@ public class CompFleshtitanReversion : ThingComp
                 {
                     escort.jobs.EndCurrentJob(JobCondition.InterruptForced);
                 }
+            }
+        }
+        if (heart is Building_FleshmassHeart responseHeart && nativeEscortLord != null)
+        {
+            SpawnRequest request = map.deferredSpawner.GetRequestByLord(nativeEscortLord);
+            if (request != null)
+            {
+                request.lord = responseHeart.DefendHeartLord;
             }
         }
         EffecterDefOf.MeatExplosionExtraLarge.Spawn(position, map).Cleanup();
@@ -374,6 +446,8 @@ public class CompFleshtitanReversion : ThingComp
     private Lord? escortLord;
 
     private Lord? responseLord;
+
+    private Lord? nativeEscortLord;
 
     private bool assaultPending;
 

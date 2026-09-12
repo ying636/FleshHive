@@ -1473,6 +1473,7 @@ public class MapComponent_FleshHive : MapComponent
 
     private void DispatchHiveResourcers()
     {
+        List<CompHiveResource>? resourceSources = null;
         foreach (Blueprint_FleshBuild blueprint in GetCachedFleshBlueprints())
         {
             if (!blueprint.Spawned || !blueprint.HasPendingMaterials || HasIncomingResourcer(blueprint))
@@ -1480,7 +1481,7 @@ public class MapComponent_FleshHive : MapComponent
                 continue;
             }
 
-            TryCreateResourcer(blueprint);
+            TryCreateResourcer(blueprint, ref resourceSources);
         }
     }
 
@@ -1613,15 +1614,16 @@ public class MapComponent_FleshHive : MapComponent
         return desiredBushes > 0 && fleshBushes >= desiredBushes;
     }
 
-    private CompHiveResource FindClosestHiveWithResource(IntVec3 targetCell, HiveResourceDef resourceDef)
+    private CompHiveResource FindClosestHiveWithResource(IntVec3 targetCell, HiveResourceDef resourceDef, List<CompHiveResource> resourceSources)
     {
         CompHiveResource closest = null;
         float closestDistance = float.MaxValue;
-        foreach (CompHiveResource comp in map.listerThings.AllThings
-                     .OfType<ThingWithComps>()
-                     .Select(thing => thing.TryGetComp<CompHiveResource>())
-                     .Where(comp => comp != null && comp.parent.Faction == Faction.OfPlayer))
+        foreach (CompHiveResource comp in resourceSources)
         {
+            if (!comp.parent.Spawned || comp.parent.Map != map || comp.parent.Faction != Faction.OfPlayer)
+            {
+                continue;
+            }
             HiveResource hiveResource = comp.resources.FirstOrDefault(resource => resource.def == resourceDef && resource.Amount > 0f);
             if (hiveResource == null)
             {
@@ -1646,12 +1648,17 @@ public class MapComponent_FleshHive : MapComponent
         return hiveResourcers != null && hiveResourcers.Any(resourcer => resourcer?.targetBlueprint == blueprint);
     }
 
-    private void TryCreateResourcer(Blueprint_FleshBuild blueprint)
+    private void TryCreateResourcer(Blueprint_FleshBuild blueprint, ref List<CompHiveResource>? resourceSources)
     {
         ResourceCount needed = blueprint.GetNextNeededResource();
         if (needed != null && needed.amount > 0f)
         {
-            CompHiveResource sourceComp = FindClosestHiveWithResource(blueprint.Position, needed.resource);
+            resourceSources ??= map.listerThings.AllThings
+                .OfType<ThingWithComps>()
+                .Select(thing => thing.TryGetComp<CompHiveResource>())
+                .Where(comp => comp != null && comp.parent.Faction == Faction.OfPlayer)
+                .ToList();
+            CompHiveResource sourceComp = FindClosestHiveWithResource(blueprint.Position, needed.resource, resourceSources);
             HiveResource hiveResource = sourceComp?.resources.FirstOrDefault(resource => resource.def == needed.resource && resource.Amount > 0f);
             if (hiveResource == null)
             {

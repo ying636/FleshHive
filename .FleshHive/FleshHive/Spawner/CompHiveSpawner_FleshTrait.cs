@@ -135,8 +135,8 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
         Widgets.Label(labelRect, item.label);
         Text.Font = GameFont.Small;
 
-        Rect descRect = new Rect(labelRect.x, labelRect.yMax + 4f, labelRect.width, GetDescriptionHeight(item.description, labelRect.width));
-        Widgets.Label(descRect, item.description);
+        Rect descRect = new Rect(labelRect.x, labelRect.yMax + 4f, labelRect.width, GetDescriptionHeight(item.thing.description, labelRect.width));
+        Widgets.Label(descRect, item.thing.description);
 
         Rect costRect = new Rect(labelRect.x, cardRect.yMax - CostLineHeight - 5f, labelRect.width, CostLineHeight);
         DrawCostLine(costRect, item.costs, item.requirements, item.specialResources);
@@ -288,7 +288,7 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
     {
         StringBuilder tip = new StringBuilder();
         tip.AppendLine(item.label);
-        tip.AppendLine(item.description);
+        tip.AppendLine(item.thing.description);
         AppendCosts(tip, item.costs, item.requirements, item.specialResources);
         return tip.ToString().Trim();
     }
@@ -334,7 +334,13 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
 
     private string GetUnitDescription(UnitDef unit)
     {
-        return unit.description.NullOrEmpty() ? unit.kind.race.description : unit.description;
+        string description = unit.kind.race.description;
+        HediffDef selectedTrait = GetSelectedTrait(unit);
+        if (selectedTrait != null && !selectedTrait.description.NullOrEmpty())
+        {
+            description = description.NullOrEmpty() ? selectedTrait.description : description + "\n\n" + selectedTrait.description;
+        }
+        return description;
     }
 
     private float GetDescriptionHeight(string description, float width)
@@ -356,7 +362,7 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
     private float GetItemCardHeight(ItemDef item, float width)
     {
         float labelWidth = Mathf.Max(80f, width - 244f);
-        float height = 8f + 28f + 4f + GetDescriptionHeight(item.description, labelWidth) + 8f;
+        float height = 8f + 28f + 4f + GetDescriptionHeight(item.thing.description, labelWidth) + 8f;
         if (!BuildCostLine(item.costs, item.requirements, item.specialResources).NullOrEmpty())
         {
             height += CostLineHeight + 5f;

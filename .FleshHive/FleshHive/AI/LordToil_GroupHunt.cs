@@ -132,6 +132,14 @@ public class LordToil_GroupHunt : LordToil
 
     private Pawn? FindPrey()
     {
+        preySearchMembers.Clear();
+        foreach (Pawn member in lord.ownedPawns)
+        {
+            if (IsActiveMember(member))
+            {
+                preySearchMembers.Add(member);
+            }
+        }
         IntVec3 origin = GetSearchOrigin();
         IEnumerable<Pawn> markedPrey = Map.designationManager
             .SpawnedDesignationsOfDef(DesignationDefOf.Hunt)
@@ -219,7 +227,6 @@ public class LordToil_GroupHunt : LordToil
 
     private bool IsValidPrey(Pawn? prey)
     {
-        List<Pawn> activeMembers = lord.ownedPawns.Where(IsActiveMember).ToList();
         return prey != null
             && prey.Spawned
             && prey.Map == Map
@@ -228,8 +235,8 @@ public class LordToil_GroupHunt : LordToil
             && prey.AnimalOrWildMan()
             && !prey.IsPrisonerInPrisonCell()
             && (prey.Faction == null || !prey.Faction.def.humanlikeFaction)
-            && activeMembers.Count > 0
-            && activeMembers.All(member => member.CanReach(prey, PathEndMode.Touch, Danger.Deadly));
+            && preySearchMembers.Count > 0
+            && preySearchMembers.All(member => member.CanReach(prey, PathEndMode.Touch, Danger.Deadly));
     }
 
     private bool IsPreyStillPresent(Pawn? prey)
@@ -243,11 +250,12 @@ public class LordToil_GroupHunt : LordToil
 
     private bool IsValidUndesignatedPrey(Pawn? prey)
     {
-        return IsValidPrey(prey)
-            && prey.RaceProps.Animal
+        return prey != null && prey.RaceProps.Animal
+            && prey.Spawned && prey.Map == Map
             && prey.Faction == null
             && !prey.Position.Fogged(Map)
-            && Map.designationManager.DesignationOn(prey, DesignationDefOf.Hunt) == null;
+            && Map.designationManager.DesignationOn(prey, DesignationDefOf.Hunt) == null
+            && IsValidPrey(prey);
     }
 
     private bool TryStartHuntCycle()
@@ -309,6 +317,7 @@ public class LordToil_GroupHunt : LordToil
     private const float WaitingWanderRadius = 8f;
 
     private readonly UnitGroup group;
+    private readonly List<Pawn> preySearchMembers = new();
 
     private Pawn? currentPrey;
 

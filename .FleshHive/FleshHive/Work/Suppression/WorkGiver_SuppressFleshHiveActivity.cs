@@ -36,29 +36,32 @@ public class WorkGiver_SuppressFleshHiveActivity : WorkGiver_Scanner
 
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        return JobOnThing(pawn, t, forced) != null;
-    }
-
-    public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
-    {
         MapComponent_FleshHive mapComp = pawn.Map?.GetComponent<MapComponent_FleshHive>();
         if (!forced && mapComp?.ShouldAutoSuppressActivity != true)
         {
-            return null;
+            return false;
         }
 
         CompSuppressible suppressible = t.TryGetComp<CompSuppressible>();
         if (suppressible == null || !suppressible.CanSuppress(pawn, forced))
         {
-            return null;
+            return false;
         }
 
         if (!FleshHiveActivitySuppressionUtility.TryGetSuppressionRate(pawn, out _))
         {
             JobFailReason.Is("ZeroSuppressionRate".Translate());
+            return false;
+        }
+        return true;
+    }
+
+    public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
+    {
+        if (!HasJobOnThing(pawn, t, forced))
+        {
             return null;
         }
-
         Job job = JobMaker.MakeJob(FleshHiveDefOf.FH_Job_SuppressFleshHiveActivity, t);
         job.playerForced = forced;
         return job;

@@ -58,8 +58,10 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
 
     public bool TryQueueTargetPawn(Pawn pawn)
     {
-        if (pawn == null || !pawn.Spawned || pawn.Dead || !pawn.Downed
-            || (!pawn.RaceProps.Animal && pawn.RaceProps.FleshType != FleshTypeDefOf.Fleshbeast)
+        if (pawn == null || !pawn.Spawned || pawn.Dead
+            || (!pawn.Downed && pawn.Faction?.IsPlayer != true && !pawn.IsPrisoner)
+            || (!pawn.RaceProps.Animal && pawn.RaceProps.FleshType != FleshTypeDefOf.Fleshbeast
+                && pawn.Faction?.IsPlayer != true && !pawn.IsPrisoner)
             || this.curQuest != null || this.start || this.targetUI != null
             || this.target.Any || this.flesh.Any)
         {
@@ -151,6 +153,15 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
                 "ParasitismFailDesc".Translate(pawn.Label),LetterDefOf.NegativeEvent,this);
         } 
         this.target.TryDrop(pawn, ThingPlaceMode.Near, out _);
+        ClearTaskState();
+    }
+
+    public void ClearTaskState()
+    {
+        this.curQuest = null;
+        this.progress = 0;
+        this.start = false;
+        this.startRequested = false;
         this.fleshUI = null;
         this.targetUI = null;
         this.system = null;
@@ -413,14 +424,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
 
     private void CancelInsert()
     {
-        this.curQuest = null;
-        this.start = false;
-        this.startRequested = false;
-        this.progress = 0;
-        this.targetUI = null;
-        this.fleshUI = null;
-        this.system = null;
-        this.cachedComp = null;
+        ClearTaskState();
         if (this.target.Any)
         {
             Pawn pawn = this.target[0];
@@ -967,7 +971,6 @@ public class ParasiteQuest : IExposable
     public virtual void Do(FleshParasitePod pod)
     {
         pod.FinishParasitism();
-        pod.curQuest = null;
     }
 
     public virtual void ExposeData()
@@ -1030,9 +1033,7 @@ public class ParasiteQuest_Remove : ParasiteQuest
             pod.target.TryDropAll(pod.Position,pod.Map,ThingPlaceMode.Near);
         }
 
-        pod.curQuest = null; 
-        pod.progress = 0;
-        pod.start = false;
+        pod.ClearTaskState();
     }
 
     public override void ExposeData()

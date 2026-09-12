@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using HiveCreatureFramework;
 using RimWorld;
 using Verse;
 using Verse.AI.Group;
@@ -111,6 +112,10 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
             .Where(pawn => pawn.Spawned && pawn.Map == map && !pawn.Dead)
             .ToList();
         heartLord.RemovePawns(escorts);
+        List<UnitGroup> heartGroups = GameComponent_UnitGroup.Instance.groups
+            .Where(group => group.hive == parent).ToList();
+        escorts.AddRange(heartGroups.SelectMany(group => group.units)
+            .Where(pawn => pawn != null && pawn.Spawned && pawn.Map == map && !pawn.Dead && !escorts.Contains(pawn)).ToList());
 
         List<Lord> lordsBeforeResponse = map.lordManager.lords.ToList();
         FleshbeastUtility.DoFleshbeastResponse(this, position);
@@ -131,32 +136,54 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
         }
 
         GenSpawn.Spawn(titan, position, map);
-        Lord assemblyLord = LordMaker.MakeNewLord(
-            Faction.OfEntities,
-            new LordJob_FleshtitanAssembly(),
-            map);
-        assemblyLord.AddPawns(new List<Pawn> { titan }, updateDuties: false);
-        assemblyLord.AddPawns(escorts);
+        UnitGroup titanGroup = titan.TryGetComp<UnitComp>()?.group;
+        if (titanGroup?.lord == null)
+        {
+            Log.Error($"[FleshHive] Heart transformation created {titan} without a hive group lord.");
+            heartLord.AddPawns(escorts);
+            return;
+        }
+        Lord assemblyLord = titanGroup.lord;
+        foreach (Pawn escort in escorts)
+        {
+            if (escort.TryGetComp<UnitComp>() != null)
+            {
+                titanGroup.AcceptUnit(escort);
+            }
+            else
+            {
+                escort.GetLord()?.RemovePawn(escort);
+                responseLord ??= LordMaker.MakeNewLord(Faction.OfEntities, new LordJob_FleshbeastAssault(), map);
+                responseLord.AddPawn(escort);
+            }
+        }
+        titanGroup.SetTarget(new TargetInfo(position, map), false);
+        titanGroup.SetMode(HCFDefOf.HCF_GroupWorkMode_Attack, false);
 
         if (responseLord != null)
         {
-            SpawnRequest responseRequest = map.deferredSpawner.GetRequestByLord(responseLord);
-            if (responseRequest != null)
-            {
-                responseRequest.lord = assemblyLord;
-            }
-
             List<Pawn> responsePawns = responseLord.ownedPawns
-                .Where(pawn => !pawn.Dead)
+                .Where(pawn => !pawn.Dead && pawn.TryGetComp<UnitComp>() != null)
                 .ToList();
             responseLord.RemovePawns(responsePawns);
-            assemblyLord.AddPawns(responsePawns, updateDuties: false);
+            foreach (Pawn responsePawn in responsePawns)
+            {
+                titanGroup.AcceptUnit(responsePawn);
+            }
         }
 
         titan.TryGetComp<CompFleshtitanReversion>()?.InitializeFromHeart(
             sourceThreatPoints,
             assemblyLord,
-            biosignature);
+            biosignature,
+            responseLord);
+        foreach (UnitGroup heartGroup in heartGroups)
+        {
+            if (heartGroup.units.Count == 0)
+            {
+                heartGroup.Destroy();
+            }
+        }
         EffecterDefOf.MeatExplosionExtraLarge.Spawn(position, map).Cleanup();
     }
 

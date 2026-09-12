@@ -553,7 +553,7 @@
     <defName>FH_Trispike_ReleaseSpikes</defName>
     <label>release fleshbeasts</label>
     <description>Consume 100 twisted flesh to release two random small fleshbeasts.</description>
-    <abilityClass>FleshHive.Effect.Ability_TrispikeRelease</abilityClass>
+    <abilityClass>Ability</abilityClass>
     <aiCanUse>true</aiCanUse>
     <cooldownTicksRange>60000</cooldownTicksRange>
     <iconPath>UI/Ability/FH_Trispike_ReleaseSpikes</iconPath>
