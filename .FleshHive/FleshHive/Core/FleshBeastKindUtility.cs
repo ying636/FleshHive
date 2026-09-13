@@ -8,7 +8,6 @@ public static class FleshBeastKindUtility
 {
     static FleshBeastKindUtility()
     {
-        DefOfHelper.EnsureInitializedInCtor(typeof(FleshHiveDefOf));
         RegisterKinds();
     }
 

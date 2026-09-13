@@ -13,6 +13,12 @@ public class CompProperties_FleshDigester : CompProperties
         compClass = typeof(CompFleshDigester);
     }
 
+    public override void ResolveReferences(ThingDef parentDef)
+    {
+        base.ResolveReferences(parentDef);
+        attackDamageDef ??= DamageDefOf.Bite;
+    }
+
     public float attackRadius = 8.9f;
 
     public int attackIntervalTicks = 180;
@@ -23,7 +29,7 @@ public class CompProperties_FleshDigester : CompProperties
 
     public int maxAttackTargets = 15;
 
-    public DamageDef attackDamageDef = DamageDefOf.Bite;
+    public DamageDef attackDamageDef = null!;
 
     public float attackDamage = 8f;
 

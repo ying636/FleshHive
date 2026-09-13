@@ -3,4 +3,6 @@
   <FH_Tutorial_Title>教程</FH_Tutorial_Title>
   <FH_Tutorial_Previous>上一页</FH_Tutorial_Previous>
   <FH_Tutorial_Next>下一页</FH_Tutorial_Next>
+  <FH_Tutorial_Disable>不会再有教程图片出现</FH_Tutorial_Disable>
+  <FH_Tutorial_Open>手动打开教程</FH_Tutorial_Open>
 </LanguageData>

@@ -80,6 +80,13 @@ public class Window_FleshHiveTutorial : Window
         }
     }
 
+    public override void PostClose()
+    {
+        base.PostClose();
+        FleshHiveMod.Settings.disableTutorial = true;
+        FleshHiveMod.Settings.Write();
+    }
+
     private bool DrawArrow(Rect rect, Texture2D arrow, bool enabled, string tooltip)
     {
         Widgets.DrawBoxSolid(rect, new Color(0f, 0f, 0f, 0.65f));

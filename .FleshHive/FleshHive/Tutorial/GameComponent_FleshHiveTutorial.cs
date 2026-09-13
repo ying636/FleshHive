@@ -8,19 +8,14 @@ public class GameComponent_FleshHiveTutorial : GameComponent
     {
     }
 
-    public override void ExposeData()
-    {
-        Scribe_Values.Look(ref tutorialShown, "fleshHiveTutorialShown", false);
-    }
-
     public override void StartedNewGame()
     {
-        pending = !tutorialShown;
+        pending = !FleshHiveMod.Settings.disableTutorial;
     }
 
     public override void LoadedGame()
     {
-        pending = !tutorialShown;
+        pending = !FleshHiveMod.Settings.disableTutorial;
     }
 
     public override void GameComponentUpdate()
@@ -30,11 +25,12 @@ public class GameComponent_FleshHiveTutorial : GameComponent
             return;
         }
 
-        Find.WindowStack.Add(new Window_FleshHiveTutorial());
-        tutorialShown = true;
         pending = false;
+        if (!FleshHiveMod.Settings.disableTutorial && !Find.WindowStack.IsOpen<Window_FleshHiveTutorial>())
+        {
+            Find.WindowStack.Add(new Window_FleshHiveTutorial());
+        }
     }
 
-    private bool tutorialShown;
     private bool pending;
 }

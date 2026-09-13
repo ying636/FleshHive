@@ -645,6 +645,7 @@
     <description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</description>
     <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
     <thingClass>FleshHive.FleshParasitePod</thingClass>
+    <uiIconPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Icon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

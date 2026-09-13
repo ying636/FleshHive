@@ -22,6 +22,16 @@ public class FleshHiveMod : Mod
         listing.Begin(inRect);
         listing.Label("FleshHive_RaidParasiteChance".Translate(Settings.raidParasiteChance.ToStringPercent()));
         Settings.raidParasiteChance = listing.Slider(Settings.raidParasiteChance, 0f, 1f);
+        bool previousDisableTutorial = Settings.disableTutorial;
+        listing.CheckboxLabeled("FH_Tutorial_Disable".Translate(), ref Settings.disableTutorial);
+        if (previousDisableTutorial != Settings.disableTutorial)
+        {
+            WriteSettings();
+        }
+        if (listing.ButtonText("FH_Tutorial_Open".Translate()))
+        {
+            Find.WindowStack.Add(new Window_FleshHiveTutorial());
+        }
         listing.End();
         base.DoSettingsWindowContents(inRect);
     }
@@ -34,7 +44,9 @@ public class FleshHiveSettings : ModSettings
     public override void ExposeData()
     {
         Scribe_Values.Look(ref raidParasiteChance, "raidParasiteChance", 0.6f);
+        Scribe_Values.Look(ref disableTutorial, "disableTutorial", false);
     }
 
     public float raidParasiteChance = 0.6f;
+    public bool disableTutorial;
 }

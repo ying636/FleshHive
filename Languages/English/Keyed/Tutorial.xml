@@ -3,4 +3,6 @@
   <FH_Tutorial_Title>Tutorial</FH_Tutorial_Title>
   <FH_Tutorial_Previous>Previous page</FH_Tutorial_Previous>
   <FH_Tutorial_Next>Next page</FH_Tutorial_Next>
+  <FH_Tutorial_Disable>Do not show tutorial images automatically</FH_Tutorial_Disable>
+  <FH_Tutorial_Open>Open tutorial manually</FH_Tutorial_Open>
 </LanguageData>

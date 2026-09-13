@@ -5,6 +5,7 @@ using Verse;
 
 namespace FleshHive;
 
+[StaticConstructorOnStartup]
 public class Building_FleshBox : Building_Storage
 {
     public Building_FleshBox()

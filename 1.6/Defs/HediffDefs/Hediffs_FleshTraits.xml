@@ -207,7 +207,7 @@
     <comps>
       <li Class="FleshHive.HediffCompProperties_Regeneration">
         <regenHediff>Regeneration</regenHediff>
-        <regenSeverity>0.5</regenSeverity>
+        <regenSeverity>0.1</regenSeverity>
       </li>
     </comps>
   </HediffDef>

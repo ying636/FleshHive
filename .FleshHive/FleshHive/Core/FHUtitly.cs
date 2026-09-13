@@ -3,6 +3,7 @@ using Verse;
 
 namespace FleshHive;
 
+[StaticConstructorOnStartup]
 public static class FHUtitly
 {
     public static Texture2D right = ContentFinder<Texture2D>.Get("UI/FH_Right");
