@@ -434,6 +434,11 @@ public class ParasitismSystem : HediffWithComps
             return;
         }
         Pawn flesh = PawnGenerator.GeneratePawn(kindDef, Faction.OfPlayer);
+        if (flesh.Faction == Faction.OfPlayer && flesh.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(flesh))
+        {
+            flesh.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         if (flesh == null)
         {
             return;

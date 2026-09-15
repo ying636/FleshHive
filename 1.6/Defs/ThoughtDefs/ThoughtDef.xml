@@ -7,75 +7,75 @@
         </nullifyingHediffs>
         <workerClass>FleshHive.ThoughtWorker_FleshParasitism</workerClass>
         <thoughtClass>FleshHive.Thought_FleshParasitism</thoughtClass>
-        <label>flesh parasitism</label>
+        <label>flesh mutualism</label>
         <stages>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-5</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-10</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-15</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-20</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-25</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-30</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-35</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-40</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-45</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-50</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-55</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-60</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-65</baseMoodEffect>
             </li>
             <li>
-                <label>flesh parasitism</label>
+                <label>flesh mutualism</label>
                 <description>Living flesh resides within the body.</description>
                 <baseMoodEffect>-70</baseMoodEffect>
             </li>

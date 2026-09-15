@@ -4,7 +4,7 @@
 
   <StatDef>
     <defName>FH_Stat_ParasitismCapacity</defName>
-    <label>parasitism capacity</label>
+    <label>mutualism capacity</label>
     <description>ParasitismCapacity</description>
     <workerClass>FleshHive.ParasitismCapacityStat</workerClass>
     <category>BasicsPawn</category>

@@ -24,7 +24,9 @@ public class HediffComp_ScarletField : HCFHediffComp
 {
     public new HediffCompProperties_ScarletField Props => (HediffCompProperties_ScarletField)this.props;
 
-    public bool Active => active;
+    public bool Active => active && Pawn != null && TwistedFleshUtility.GetCurrentTwistedFlesh(Pawn) >= 1;
+
+    public bool CanActivate => Pawn != null && Pawn.Spawned && TwistedFleshUtility.GetCurrentTwistedFlesh(Pawn) >= 1;
 
     private static MethodInfo ImpactMethod
     {
@@ -38,9 +40,22 @@ public class HediffComp_ScarletField : HCFHediffComp
         }
     }
 
+    public static HediffComp_ScarletField FindOnPawn(Pawn pawn)
+    {
+        foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
+        {
+            HediffComp_ScarletField comp = hediff.TryGetComp<HediffComp_ScarletField>();
+            if (comp != null)
+            {
+                return comp;
+            }
+        }
+        return null;
+    }
+
     public void Activate()
     {
-        SetActive(!active);
+        SetActive(!active && CanActivate);
     }
 
     public override bool PreApplyDamage(ref DamageInfo dinfo)
@@ -49,10 +64,19 @@ public class HediffComp_ScarletField : HCFHediffComp
         {
             return true;
         }
+        if (TwistedFleshUtility.GetCurrentTwistedFlesh(Pawn) < 1)
+        {
+            SetActive(false);
+            return true;
+        }
         bool isRanged = dinfo.Def.isRanged;
         int cost = isRanged ? 1 : 20;
         if (TwistedFleshUtility.ConsumeTwistedFlesh(this.Pawn, cost))
         {
+            if (TwistedFleshUtility.GetCurrentTwistedFlesh(Pawn) < 1)
+            {
+                SetActive(false);
+            }
             return false;
         }
         return true;
@@ -68,6 +92,11 @@ public class HediffComp_ScarletField : HCFHediffComp
         }
         if (active)
         {
+            if (TwistedFleshUtility.GetCurrentTwistedFlesh(pawn) < 1)
+            {
+                SetActive(false);
+                return;
+            }
             tickCounter++;
             if (tickCounter >= 2)
             {
@@ -75,6 +104,12 @@ public class HediffComp_ScarletField : HCFHediffComp
                 InterceptProjectiles(pawn);
             }
         }
+    }
+
+    public override void CompExposeData()
+    {
+        base.CompExposeData();
+        Scribe_Values.Look(ref active, "active");
     }
 
     private void InterceptProjectiles(Pawn pawn)
@@ -87,7 +122,7 @@ public class HediffComp_ScarletField : HCFHediffComp
         Vector3 shieldCenter = pawn.Position.ToVector3Shifted();
         float radiusSq = (Props.areaShieldRadius + 1f) * (Props.areaShieldRadius + 1f);
         List<Thing> things = map.listerThings.ThingsInGroup(ThingRequestGroup.Projectile);
-        for (int i = 0; i < things.Count; i++)
+        for (int i = things.Count - 1; i >= 0; i--)
         {
             if (things[i] is not Projectile proj || !proj.Spawned || proj.Destroyed)
             {
@@ -97,14 +132,13 @@ public class HediffComp_ScarletField : HCFHediffComp
             {
                 continue;
             }
-            bool hostile = true;
-            if (proj.Launcher != null && pawn.Faction != null)
+            if (proj.Launcher == null)
             {
-                hostile = proj.Launcher.Spawned
-                    ? proj.Launcher.HostileTo(pawn.Faction)
-                    : proj.Launcher.Faction?.HostileTo(pawn.Faction) ?? true;
+                continue;
             }
-            if (!hostile)
+            if (pawn.Faction != null && !(proj.Launcher.Spawned
+                    ? proj.Launcher.HostileTo(pawn.Faction)
+                    : proj.Launcher.Faction?.HostileTo(pawn.Faction) == true))
             {
                 continue;
             }
@@ -115,12 +149,32 @@ public class HediffComp_ScarletField : HCFHediffComp
             {
                 continue;
             }
-            if (!TwistedFleshUtility.ConsumeTwistedFlesh(pawn, 1))
+            if (!IsIncomingProjectile(projectileOrigin(proj), projPos, shieldCenter))
             {
                 continue;
             }
+
+            if (!TwistedFleshUtility.ConsumeTwistedFlesh(pawn, 1))
+            {
+                SetActive(false);
+                return;
+            }
             ImpactMethod.Invoke(proj, new object[] { null, true });
+            if (TwistedFleshUtility.GetCurrentTwistedFlesh(pawn) < 1)
+            {
+                SetActive(false);
+                return;
+            }
         }
+    }
+
+    private bool IsIncomingProjectile(Vector3 origin, Vector3 position, Vector3 center)
+    {
+        float originX = origin.x - center.x;
+        float originZ = origin.z - center.z;
+        return originX * originX + originZ * originZ > Props.areaShieldRadius * Props.areaShieldRadius
+            && (position.x - center.x) * (position.x - origin.x)
+                + (position.z - center.z) * (position.z - origin.z) < 0f;
     }
 
     private void SetActive(bool value)
@@ -134,7 +188,7 @@ public class HediffComp_ScarletField : HCFHediffComp
         {
             if (pawn.Spawned)
             {
-                EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, 1f);
+                EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, Props.areaShieldRadius);
             }
         }
         active = value;
@@ -148,26 +202,10 @@ public class HediffComp_ScarletField : HCFHediffComp
         }
     }
 
-    public override void CompExposeData()
-    {
-        base.CompExposeData();
-        Scribe_Values.Look(ref active, "active");
-    }
-
     private bool active = true;
     private int tickCounter;
     private static MethodInfo impactMethod;
 
-    public static HediffComp_ScarletField FindOnPawn(Pawn pawn)
-    {
-        foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
-        {
-            HediffComp_ScarletField comp = hediff.TryGetComp<HediffComp_ScarletField>();
-            if (comp != null)
-            {
-                return comp;
-            }
-        }
-        return null;
-    }
+    private static readonly AccessTools.FieldRef<Projectile, Vector3> projectileOrigin =
+        AccessTools.FieldRefAccess<Projectile, Vector3>("origin");
 }

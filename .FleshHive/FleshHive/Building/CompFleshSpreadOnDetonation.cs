@@ -43,6 +43,7 @@ public class CompFleshSpreadOnDetonation : ThingComp
 
     private bool CanSpreadTo(IntVec3 cell, Map map)
     {
-        return cell.InBounds(map) && !cell.Impassable(map) && !FleshTerrainUtility.IsFleshTerrain(map, cell);
+        return cell.InBounds(map) && !cell.Impassable(map) && !FleshTerrainUtility.IsFleshTerrain(map, cell)
+            && map.terrainGrid.FoundationAt(cell)?.IsSubstructure != true;
     }
 }

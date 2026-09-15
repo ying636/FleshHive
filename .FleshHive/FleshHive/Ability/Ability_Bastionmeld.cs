@@ -93,6 +93,11 @@ public class CompAbilityEffect_BastionmeldSummonDeadguard : CompAbilityEffect
             0f, null, null, null, null, null, false, false, false, false, null, null, null, null, null, 0f, DevelopmentalStage.Adult,
             null, null, null, false, false, false, -1, 0, false));
         FleshParasiteUtility.TryApplyDefaultParasites(pawn);
+        if (pawn.Faction == Faction.OfPlayer && pawn.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(pawn))
+        {
+            pawn.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         return pawn;
     }
 

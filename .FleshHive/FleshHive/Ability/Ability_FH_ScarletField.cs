@@ -39,13 +39,13 @@ public class CompAbilityEffect_FH_ScarletField : CompAbilityEffect
         {
             return false;
         }
-        if (caster.TryGetComp<CompScarletField>() != null)
+        if (caster.TryGetComp<CompScarletField>() is CompScarletField thingComp)
         {
-            return true;
+            return thingComp.Active || thingComp.CanActivate;
         }
-        if (HediffComp_ScarletField.FindOnPawn(caster) != null)
+        if (HediffComp_ScarletField.FindOnPawn(caster) is HediffComp_ScarletField hediffComp)
         {
-            return true;
+            return hediffComp.Active || hediffComp.CanActivate;
         }
         return false;
     }

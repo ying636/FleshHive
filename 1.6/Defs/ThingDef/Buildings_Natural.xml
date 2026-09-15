@@ -197,6 +197,9 @@
         <size>(3,2)</size>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -384,6 +387,9 @@
         <size>(3,3)</size>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -452,6 +458,9 @@
         <sound>FleshmassHeart_Ambience</sound>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -538,6 +547,9 @@
         <building>FH_Building_NerveBundle</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -636,6 +648,9 @@
         <building>FH_Building_NerveCenter</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -653,7 +668,7 @@
     </graphicData>
     <drawerType>RealtimeOnly</drawerType>
     <size>(3,2)</size>
-    <uiIconScale>0.65</uiIconScale>
+    <uiIconScale>1</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>true</rotatable>
     <fillPercent>0.5</fillPercent>
@@ -695,6 +710,9 @@
         <building>FH_Building_FleshParasiteVat</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -748,6 +766,9 @@
         <building>FH_Building_FleshSack</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -802,6 +823,9 @@
         <building>FH_Building_FleshBlock</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -855,6 +879,9 @@
         <building>FH_Building_ChitinFleshBlock</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -926,6 +953,7 @@
     </replaceTags>
     <placeWorkers>
       <li>PlaceWorker_DoorLearnOpeningSpeed</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
   </ThingDef>
 
@@ -1000,6 +1028,9 @@
         <building>FH_Building_FleshHopper</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1093,6 +1124,9 @@
         <building>FH_Building_FleshBox</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -1148,6 +1182,9 @@
         <building>FH_Building_FleshBarricade</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -1202,6 +1239,9 @@
         <building>FH_Building_ChitinFleshBarricade</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -1233,6 +1273,7 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
     <statBases>
       <MaxHitPoints>140</MaxHitPoints>
@@ -1301,6 +1342,7 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
@@ -1386,6 +1428,9 @@
         <building>FH_Building_FleshColumn</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1430,6 +1475,9 @@
         <building>FH_Building_FleshStool</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1479,6 +1527,9 @@
         <building>FH_Building_FleshTableSmall</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1528,6 +1579,9 @@
         <building>FH_Building_FleshTableSquare</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1577,6 +1631,9 @@
         <building>FH_Building_FleshTableLong</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -1626,6 +1683,9 @@
         <building>FH_Building_FleshTableLarge</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 
@@ -1685,6 +1745,9 @@
         <building>FH_Building_FleshPower</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -1749,6 +1812,9 @@
         <building>FH_Building_FleshLamp</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="TreeBase">
@@ -1892,6 +1958,9 @@
         </yields>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="StumpChoppedBase">
@@ -1960,6 +2029,9 @@
         <resurrectTicks>3600</resurrectTicks>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 </Defs>

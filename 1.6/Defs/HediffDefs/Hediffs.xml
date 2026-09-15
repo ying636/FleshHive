@@ -66,7 +66,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Fingerspike</defName>
-    <label>fingerspike parasitism</label>
+    <label>fingerspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a fingerspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Bone-spike tentacle</description>
     <isBad>false</isBad>
@@ -110,7 +110,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Puffspike</defName>
-    <label>puffspike parasitism</label>
+    <label>puffspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a puffspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is immune to asthma and lung rot, which are cured from its lungs. It moves faster and tolerates toxic environments better.</description>
     <isBad>false</isBad>
@@ -141,7 +141,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Gutspike</defName>
-    <label>gutspike parasitism</label>
+    <label>gutspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a gutspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is almost immune to food poisoning, and gains immunity to gut worms while purging existing infestations.</description>
     <isBad>false</isBad>
@@ -170,7 +170,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Whipspike</defName>
-    <label>whipspike parasitism</label>
+    <label>whipspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a whipspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Whip-claw tentacle</description>
     <isBad>false</isBad>
@@ -212,7 +212,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Fleshwind</defName>
-    <label>fleshwind parasitism</label>
+    <label>fleshwind mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a fleshwind. The fleshbeast grants it additional abilities, but also imposes significant costs.
 
@@ -230,9 +230,9 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Paraspike</defName>
-    <label>paraspike parasitism</label>
+    <label>paraspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
-    <description>This creature is parasitized by a paraspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBleeding is reduced, wound infections are prevented, and offspring inherit this parasitism.\n\n-Spiral tentacle</description>
+    <description>This creature is parasitized by a paraspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBleeding is reduced, wound infections are prevented, and offspring inherit this mutualism.\n\n-Spiral tentacle</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
     <stages>
@@ -282,7 +282,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Shieldspike</defName>
-    <label>shieldspike parasitism</label>
+    <label>shieldspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a shieldspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains stronger armor.\n\n-Shield-claw tentacle</description>
     <isBad>false</isBad>
@@ -326,7 +326,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Toughspike</defName>
-    <label>toughspike parasitism</label>
+    <label>toughspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a toughspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains improved global work speed.\n\n-Carapace tentacle</description>
     <isBad>false</isBad>
@@ -402,7 +402,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Trispike</defName>
-    <label>trispike parasitism</label>
+    <label>trispike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a trispike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can release two random small fleshbeasts.\n\n-Bone-spike tentacle</description>
     <isBad>false</isBad>
@@ -466,7 +466,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Shatterspike</defName>
-    <label>shatterspike parasitism</label>
+    <label>shatterspike mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a shatterspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Shatter-claw tentacle</description>
     <isBad>false</isBad>
@@ -509,7 +509,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Bulbfreak</defName>
-    <label>bulbfreak parasitism</label>
+    <label>bulbfreak mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a bulbfreak. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can consume twisted flesh to release two random medium fleshbeasts.\n\n-Tentacle</description>
     <isBad>false</isBad>
@@ -574,7 +574,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Acidbulb</defName>
-    <label>acidbulb parasitism</label>
+    <label>acidbulb mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by an acidbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host becomes immune to toxic buildup, gains 200 twisted flesh capacity, and gains acid mortar and acid spray abilities.\n\n-Tentacle</description>
     <isBad>false</isBad>
@@ -632,7 +632,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Spitbulb</defName>
-    <label>spitbulb parasitism</label>
+    <label>spitbulb mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains 200 twisted flesh capacity and a flesh mortar that releases a small fleshbeast at the impact point.\n\n-Tentacle</description>
     <isBad>false</isBad>
@@ -700,7 +700,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Bulbplump</defName>
-    <label>bulbplump parasitism</label>
+    <label>bulbplump mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced, gains 400 twisted flesh capacity, recovers 50 twisted flesh per day, and gains the flesh jump ability.\n\n-Tentacle</description>
     <isBad>false</isBad>
@@ -766,7 +766,7 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
 
   <HediffDef>
     <defName>FH_Parasitism_Synbulb</defName>
-    <label>synbulb parasitism</label>
+    <label>synbulb mutualism</label>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <description>This creature is parasitized by a synbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host enters psychic harmonization.\n\n-Shatter-claw tentacle</description>
     <isBad>false</isBad>

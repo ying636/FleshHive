@@ -210,7 +210,7 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
 
         string label = material != null
             ? material.LabelCap.ToString()
-            : (fuser.LargeFusionMode ? "FH_Fusion_SlotMedium" : "FH_Fusion_SlotSmall").Translate().ToString();
+            : (fuser.LargeFusionMode && index < 2 ? "FH_Fusion_SlotMedium" : "FH_Fusion_SlotSmall").Translate().ToString();
         Text.Anchor = TextAnchor.MiddleCenter;
         Widgets.Label(new Rect(rect.x - 20f, rect.yMax + 4f, rect.width + 40f, 24f), label);
         Text.Anchor = TextAnchor.UpperLeft;

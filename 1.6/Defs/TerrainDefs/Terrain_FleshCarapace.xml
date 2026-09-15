@@ -18,6 +18,9 @@
     <fertility>0</fertility>
     <layerable>true</layerable>
     <pathCost>0</pathCost>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
     <renderPrecedence>341</renderPrecedence>
     <researchPrerequisites>
       <li>FH_Research_FleshFurniture</li>

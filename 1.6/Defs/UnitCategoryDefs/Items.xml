@@ -160,7 +160,7 @@
     <defName>FH_Item_FleshPack</defName>
     <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
     <label>flesh pack</label>
-    <description>A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's parasitism capacity.</description>
+    <description>A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's mutualism capacity.</description>
     <thing>FH_FleshPack</thing>
     <stackCountRange>1~1</stackCountRange>
     <spawningDay>0.233333~0.233333</spawningDay>

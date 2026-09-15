@@ -94,8 +94,13 @@
     <defName>FH_Skill_Bulbfreak</defName>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="JobGiver_AICastAbilityOnSelf">
-          <ability>FH_BulbfreakReleaseFleshbeasts</ability>
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="JobGiver_AICastAbilityOnSelf">
+              <ability>FH_BulbfreakReleaseFleshbeasts</ability>
+            </li>
+          </subNodes>
         </li>
         <li Class="HiveCreatureFramework.ThinkNode_GroupAcquireAttackTarget">
           <targetAcquireRadius>36</targetAcquireRadius>
@@ -196,15 +201,25 @@
 
   <DutyDef>
     <defName>FH_Skill_Bastionmeld</defName>
-    <thinkNode Class="JobGiver_AICastAbilityOnSelf">
-      <ability>FH_BastionmeldSummonDeadguard</ability>
+    <thinkNode Class="ThinkNode_ConditionalOfPlayerFaction">
+      <invert>true</invert>
+      <subNodes>
+        <li Class="JobGiver_AICastAbilityOnSelf">
+          <ability>FH_BastionmeldSummonDeadguard</ability>
+        </li>
+      </subNodes>
     </thinkNode>
   </DutyDef>
 
   <DutyDef>
     <defName>FH_Skill_Fissionmeld</defName>
-    <thinkNode Class="JobGiver_AICastAbilityOnSelf">
-      <ability>FH_FissionmeldFission</ability>
+    <thinkNode Class="ThinkNode_ConditionalOfPlayerFaction">
+      <invert>true</invert>
+      <subNodes>
+        <li Class="JobGiver_AICastAbilityOnSelf">
+          <ability>FH_FissionmeldFission</ability>
+        </li>
+      </subNodes>
     </thinkNode>
   </DutyDef>
 

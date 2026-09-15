@@ -129,6 +129,11 @@ public class FormulaMaterial_Parasite : FormulaMaterial
             system = (ParasitismSystem)unit.health.AddHediff(FleshHiveDefOf.FH_ParasitismSystem);
         }
         Pawn parasitePawn = PawnGenerator.GeneratePawn(parasiteKind, comp.parent.Faction);
+        if (parasitePawn.Faction == Faction.OfPlayer && parasitePawn.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(parasitePawn))
+        {
+            parasitePawn.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         if (system.Parasite(parasitePawn) && parasitePawn.TryGetComp<ParasitismComp>()?.Props.synchronizeHost == true)
         {
             system.EnsureSynchronizedReplicaSpawned(parasitePawn);

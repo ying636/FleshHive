@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshRegenerationSac</defName>
+    <label>flesh regeneration sac</label>
+    <description>A regeneration sac woven from hive nerves and twisted flesh. Injured fleshbeasts crawl inside, where warm, viscous flesh fluid closes their wounds and repairs their carapaces. It works only on fleshbeasts and cannot be used to heal other creatures.</description>
+    <thingClass>FleshHive.Building_FleshRegenerationSac</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshRegenerationSac/FH_FleshRegenerationSac_Bottom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(2.5,2.5)</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshRegenerationSac/FH_FleshRegenerationSac_MenuIcon</uiIconPath>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <MarketValue>600</MarketValue>
+      <HCF_Stat_HiveCapacity>1</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <resources>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
+        </resources>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshRegenerationSac">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <topGraphicData>
+          <texPath>Things/Building/FH_FleshRegenerationSac/FH_FleshRegenerationSac_Top</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>Transparent</shaderType>
+          <drawSize>(2.5,2.5)</drawSize>
+        </topGraphicData>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshRegenerationSac</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+</Defs>

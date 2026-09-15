@@ -9,13 +9,6 @@
       <li Class="FleshHive.CompProperties_FleshBeastCache">
       </li>
       <li Class="FleshHive.CompProperties_FleshBeastAgility" />
-      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
-        <frequencyTicks>120000</frequencyTicks>
-        <knowledgeCategory>Basic</knowledgeCategory>
-        <anomalyKnowledge>1</anomalyKnowledge>
-        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
-        <requiresHoldingPlatform>true</requiresHoldingPlatform>
-      </li>
     </comps>
     <race>
       <thinkTreeMain>FH_ThinkTree_FleshBeast</thinkTreeMain>
@@ -38,6 +31,13 @@
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LittleFleshBeast" Abstract="True">
     <comps>
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Small</size>
       </li>
@@ -94,6 +94,13 @@
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_MediumFleshBeast" Abstract="True">
     <comps>
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
       <li Class="FleshHive.CompProperties_FleshBeastCache">
         <size>Medium</size>
       </li>
@@ -142,6 +149,13 @@
 
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_LargeFleshBeast" Abstract="True">
     <comps>
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
       <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
         <bioferriteDensity>2</bioferriteDensity>
       </li>
@@ -167,6 +181,7 @@
       </li>
     </comps>
     <statBases>
+      <MarketValue>900</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
     </statBases>
   </ThingDef>
@@ -186,7 +201,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>1</cost>
         <hediff>FH_Parasitism_Fingerspike</hediff>
-        <effect>Global Work Speed +10%; Social Impact -5%; Flesh parasitism mood -6; host grows one bone-spike tentacle</effect>
+        <effect>Global Work Speed +10%; Social Impact -5%; Flesh mutualism mood -6; host grows one bone-spike tentacle</effect>
         <abilityLabel>Bone-spike tentacle</abilityLabel>
         <abilityDescription>The host grows one bone-spike tentacle that deals 5 sharp damage every 2 seconds.</abilityDescription>
       </li>
@@ -390,7 +405,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>1</cost>
         <hediff>FH_Parasitism_Whipspike</hediff>
-        <effect>Social Impact -5%; Flesh parasitism mood -6; host grows one whip tentacle</effect>
+        <effect>Social Impact -5%; Flesh mutualism mood -6; host grows one whip tentacle</effect>
         <abilityLabel>Whip-claw tentacle</abilityLabel>
         <abilityDescription>The host grows one whip-claw tentacle that deals 12 sharp damage every 5 seconds with 60% armor penetration.</abilityDescription>
       </li>
@@ -565,7 +580,7 @@
   <ThingDef ParentName="FH_LittleFleshBeast">
     <defName>FH_Paraspike</defName>
     <label>paraspike</label>
-    <description>A small fleshbeast specialized for parasitism, roughly the size of a dog. It can fire a parasitic stinger into a victim, causing tiny internal wounds that continue to bleed. Each paraspike has only one stinger and soon dies after firing it. Paraspikes can also actively parasitize other animals and emerge when the host dies.</description>
+    <description>A small fleshbeast specialized for mutualism, roughly the size of a dog. It can fire a parasitic stinger into a victim, causing tiny internal wounds that continue to bleed. Each paraspike has only one stinger and soon dies after firing it. Paraspikes can also actively parasitize other animals and emerge when the host dies.</description>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Paraspike/FH_Paraspike_east</uiIconPath>
     <race>
       <body>Fingerspike</body>
@@ -597,7 +612,7 @@
         <cost>1</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Paraspike</hediff>
-        <effect>Bleeding rate x75%; Immunity: wound infection; Social Impact -5%; Pain +6%; host grows one spiral tentacle; offspring inherit paraspike parasitism</effect>
+        <effect>Bleeding rate x75%; Immunity: wound infection; Social Impact -5%; Pain +6%; host grows one spiral tentacle; offspring inherit paraspike mutualism</effect>
         <abilityLabel>Spiral tentacle</abilityLabel>
         <abilityDescription>The host grows one spiral tentacle that deals 5 sharp damage every 3 seconds with 40% armor penetration.</abilityDescription>
       </li>
@@ -693,7 +708,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>2</cost>
         <hediff>FH_Parasitism_Shatterspike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -5%; host grows one shatterspike tentacle</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -5%; host grows one shatterspike tentacle</effect>
         <abilityLabel>Shatter-claw tentacle</abilityLabel>
         <abilityDescription>The host grows one shatter-claw tentacle that fires bone shards for 18 sharp damage with 100% armor penetration, 1-second aiming, a 1.5-second cooldown, 16-cell range, 55 projectile speed, and 3 stopping power.</abilityDescription>
       </li>
@@ -861,6 +876,10 @@
           <li>Mining</li>
         </availableRoutineWorks>
         <skill>
+          <useFixedSkill>true</useFixedSkill>
+          <skills>
+            <Mining>8</Mining>
+          </skills>
           <disabledRoutineWorkGivers>
             <li>Drill</li>
           </disabledRoutineWorkGivers>
@@ -872,7 +891,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>2</cost>
         <hediff>FH_Parasitism_Toughspike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; Global Work Speed +15%; host grows two carapace tentacles</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; Global Work Speed +15%; host grows two carapace tentacles</effect>
         <abilityLabel>Carapace tentacle</abilityLabel>
         <abilityDescription>The host grows two carapace tentacles that deal 10 sharp damage every 2 seconds.</abilityDescription>
       </li>
@@ -995,7 +1014,7 @@
     <thingClass>FleshHive.FleshReplicaUnit</thingClass>
     <description>A humanoid fleshbeast covered in a small amount of carapace and roughly the size of an adult human. Flesh replicas can use human weapons, most of which are scavenged from the victims of fleshbeasts. After a flesh replica parasitizes a host, its original body remains independent and mimics the host's appearance. A flesh replica with a host can perform complex work just like a human.</description>
     <statBases>
-      <MarketValue>350</MarketValue>
+      <MarketValue>300</MarketValue>
       <MoveSpeed>4.3</MoveSpeed>
       <MinimumContainmentStrength>50</MinimumContainmentStrength>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -1212,7 +1231,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>2</cost>
         <hediff>FH_Parasitism_Shieldspike</hediff>
-        <effect>Sharp Armor +25%; Blunt Armor +10%; Heat Armor +20%; Social Impact -5%; Flesh parasitism mood -6; host grows one shieldspike tentacle</effect>
+        <effect>Sharp Armor +25%; Blunt Armor +10%; Heat Armor +20%; Social Impact -5%; Flesh mutualism mood -6; host grows one shieldspike tentacle</effect>
         <abilityLabel>Shield-claw tentacle</abilityLabel>
         <abilityDescription>The host grows one shield-claw tentacle that deals 16 blunt damage every 3 seconds.</abilityDescription>
       </li>
@@ -1365,6 +1384,10 @@
           <li>Mining</li>
         </availableRoutineWorks>
         <skill>
+          <useFixedSkill>true</useFixedSkill>
+          <skills>
+            <Mining>8</Mining>
+          </skills>
           <disabledRoutineWorkGivers>
             <li>Drill</li>
           </disabledRoutineWorkGivers>
@@ -1377,7 +1400,7 @@
         <cost>2</cost>
         <drawIcon>false</drawIcon>
         <hediff>FH_Parasitism_Trispike</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; host grows two bone-spike tentacles; charge with 10 twisted flesh to release 2 random small fleshbeasts (1-day cooldown)</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; twisted flesh capacity +100; host grows two bone-spike tentacles; charge with 10 twisted flesh to release 2 random small fleshbeasts (1-day cooldown)</effect>
         <abilityLabel>Bone-spike tentacle</abilityLabel>
         <abilityDescription>The host grows two bone-spike tentacles that deal 5 sharp damage every 2 seconds.</abilityDescription>
         <twistedFleshCapacity>100</twistedFleshCapacity>
@@ -1622,7 +1645,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>800</MarketValue>
+      <MarketValue>900</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1681,7 +1704,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>3</cost>
         <hediff>FH_Parasitism_Bulbfreak</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability.</effect>
         <abilityLabel>Tentacle</abilityLabel>
         <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds.</abilityDescription>
         <twistedFleshCapacity>200</twistedFleshCapacity>
@@ -1797,7 +1820,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>800</MarketValue>
+      <MarketValue>900</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -1853,7 +1876,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>3</cost>
         <hediff>FH_Parasitism_Acidbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; Toxic Resistance +100%; twisted flesh capacity +200; grants two tentacles, acid mortar, and acid spray abilities.</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; Toxic Resistance +100%; twisted flesh capacity +200; grants two tentacles, acid mortar, and acid spray abilities.</effect>
         <abilityLabel>Tentacle</abilityLabel>
         <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds.</abilityDescription>
         <twistedFleshCapacity>200</twistedFleshCapacity>
@@ -1972,7 +1995,7 @@
     </comps>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>800</MarketValue>
+      <MarketValue>900</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -2031,7 +2054,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>3</cost>
         <hediff>FH_Parasitism_Spitbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +200; grants two tentacles and the flesh mortar ability.</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; twisted flesh capacity +200; grants two tentacles and the flesh mortar ability.</effect>
         <abilityLabel>Tentacle</abilityLabel>
         <abilityDescription>The host grows two tentacles that deal 10 blunt damage every 2 seconds.</abilityDescription>
         <twistedFleshCapacity>200</twistedFleshCapacity>
@@ -2142,7 +2165,7 @@
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Bulbplump/FH_Bulbplump</uiIconPath>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>800</MarketValue>
+      <MarketValue>900</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -2205,7 +2228,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>3</cost>
         <hediff>FH_Parasitism_Bulbplump</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; hunger rate x50%; twisted flesh capacity +400; restores 50 twisted flesh per day; grants two tentacles.</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; hunger rate x50%; twisted flesh capacity +400; restores 50 twisted flesh per day; grants two tentacles.</effect>
         <abilityLabel>Tentacle</abilityLabel>
         <abilityDescription>The host grows two tentacles that strike nearby enemies for 10 blunt damage every 2 seconds.</abilityDescription>
         <twistedFleshCapacity>400</twistedFleshCapacity>
@@ -2283,7 +2306,7 @@
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Synbulb/FH_Synbulb</uiIconPath>
     <statBases>
       <MoveSpeed>3.8</MoveSpeed>
-      <MarketValue>800</MarketValue>
+      <MarketValue>900</MarketValue>
       <MinimumContainmentStrength>75</MinimumContainmentStrength>
       <ToxicResistance>0.5</ToxicResistance>
     </statBases>
@@ -2345,7 +2368,7 @@
       <li Class="FleshHive.ParasitismCompProperties">
         <cost>3</cost>
         <hediff>FH_Parasitism_Synbulb</hediff>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; twisted flesh capacity +100; grants two shatterspike tentacles and the psychic harmonizer condition.</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; twisted flesh capacity +100; grants two shatterspike tentacles and the psychic harmonizer condition.</effect>
         <abilityLabel>Shatter-claw tentacle</abilityLabel>
         <abilityDescription>The host grows two shatter-claw tentacles that fire bone shards for 18 sharp damage with 100% armor penetration, 1-second aiming, a 1.5-second cooldown, 16-cell range, 55 projectile speed, and 3 stopping power.</abilityDescription>
         <twistedFleshCapacity>100</twistedFleshCapacity>

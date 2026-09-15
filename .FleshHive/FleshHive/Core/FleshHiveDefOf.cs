@@ -42,6 +42,8 @@ public static class FleshHiveDefOf
     public static AbilityDef FH_SpikeLaunch_Shatterspike;
     public static AbilityDef FH_SpikeLaunch_Synbulb;
     public static JobDef FH_FishAnimal;
+    public static JobDef FH_Job_EnterFleshRegenerationSac = null!;
+    public static ThingDef FH_FleshRegenerationSac = null!;
 
     public static HairDef FH_Hair_Victoria;
 

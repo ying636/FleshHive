@@ -113,6 +113,7 @@
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>
       <li>FleshHive.PlaceWorker_FleshTurretRadius</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
@@ -231,6 +232,9 @@
         <building>FH_Building_FleshmassSpitter</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -279,6 +283,7 @@
     </building>
     <placeWorkers>
       <li>PlaceWorker_NeverAdjacentTrap</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
@@ -378,6 +383,9 @@
         <building>FH_Building_FleshDigester</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="BuildingNaturalBase">
@@ -455,6 +463,9 @@
         <building>FH_Building_FleshDigesterS</building>
       </li>
     </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
   </ThingDef>
 
 </Defs>

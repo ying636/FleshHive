@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  <!-- EN: Replenishing each spare bone spear consumes 1 bioferrite -->
   <FH_BoneSpearSpitter_RefuelCost>每补充1发备用骨矛消耗1活铁</FH_BoneSpearSpitter_RefuelCost>
   <!-- EN: Allow hunting undesignated creatures -->
   <FH_GroupHunt_AllowUndesignatedAnimals>允许狩猎非标记生物</FH_GroupHunt_AllowUndesignatedAnimals>
@@ -30,9 +31,13 @@
   <FleshParasitePod_NutritionCost>寄生消耗：{0}营养</FleshParasitePod_NutritionCost>
   <!-- EN: A parasitism task already exists -->
   <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
+  <!-- EN: Selected to parasite {0} with {1} -->
   <FleshParasitePod_SelectedParasitismTask>已选定执行{0}寄生{1}任务</FleshParasitePod_SelectedParasitismTask>
+  <!-- EN: Currently parasitizing {0} with {1} -->
   <FleshParasitePod_ExecutingParasitismTask>正在执行{0}寄生{1}任务</FleshParasitePod_ExecutingParasitismTask>
+  <!-- EN: Selected to remove {1} from {0} -->
   <FleshParasitePod_SelectedRemoveTask>已选定执行从{0}中移除{1}任务</FleshParasitePod_SelectedRemoveTask>
+  <!-- EN: Currently removing {1} from {0} -->
   <FleshParasitePod_ExecutingRemoveTask>正在执行从{0}中移除{1}任务</FleshParasitePod_ExecutingRemoveTask>
   <!-- EN: Insert fleshbeast -->
   <FleshParasitePod_Flesh>置入血肉兽</FleshParasitePod_Flesh>
@@ -119,10 +124,6 @@
   <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
   <!-- EN: Requires {0} twisted flesh. -->
   <FH_NotEnoughTwistedFlesh>需要{0}扭曲肉。</FH_NotEnoughTwistedFlesh>
-  <!-- EN: Fill with twisted flesh -->
-  <!-- EN: Fill with twisted flesh: charged -->
-  <!-- EN: Fill with twisted flesh: requires {0} -->
-  <!-- EN: Requires twisted flesh to be loaded -->
   <!-- EN: DEV: +10% twisted flesh -->
   <FH_DevAddTwistedFlesh>开发：增加10%扭曲肉</FH_DevAddTwistedFlesh>
   <!-- EN: DEV: fill twisted flesh -->
@@ -140,6 +141,7 @@
   <TentacleAttackModeOn>触手攻击：开启</TentacleAttackModeOn>
   <!-- EN: Tentacle Attack: Off -->
   <TentacleAttackModeOff>触手攻击：关闭</TentacleAttackModeOff>
+  <!-- EN: Parasitic tentacle -->
   <FH_ParasiticTentacle>寄生触手</FH_ParasiticTentacle>
 
   <!-- EN: Mark Prey -->
@@ -363,7 +365,7 @@
   <FH_Fusion_FuserUnavailable>主巢的血肉兽融合组件不可用。</FH_Fusion_FuserUnavailable>
   <!-- EN: Parasitic weapons -->
   <FH_TabParasiticWeapons>寄生武器</FH_TabParasiticWeapons>
-  <!-- EN: Parasitic weapon slot -->
+  <!-- EN: Weapon slot -->
   <FH_ParasiticWeaponSlot>武器插槽</FH_ParasiticWeaponSlot>
   <!-- EN: Parasitic weapon: left slot -->
   <FH_LeftParasiticWeaponSlot>寄生武器：左装备栏</FH_LeftParasiticWeaponSlot>
@@ -549,7 +551,7 @@
   <FH_Gestation_CustomFormulaInsufficientResources>资源不足，无法生产此自定义配方。</FH_Gestation_CustomFormulaInsufficientResources>
   <!-- EN: Owned fleshbeasts: {0} -->
   <FH_HiveOwnedFleshbeasts>拥有血肉兽：{0}</FH_HiveOwnedFleshbeasts>
-  <!-- EN: Flesh hive upgrades -->
+  <!-- EN: Hive upgrades -->
   <FH_Upgrade_PageTitle>血肉巢群升级</FH_Upgrade_PageTitle>
   <!-- EN: No upgrade is currently processing. -->
   <FH_Upgrade_NoActive>当前没有正在处理的升级。</FH_Upgrade_NoActive>
@@ -638,4 +640,6 @@
   <FH_Gestation_ReservedGroupTip>优先将生产出的血肉兽分配到此巢群；如果该巢群无法接收单位，则使用HCF的常规分配规则。</FH_Gestation_ReservedGroupTip>
   <!-- EN: No available groups on this map. -->
   <FH_Gestation_ReservedGroupUnavailable>当前地图没有可用巢群。</FH_Gestation_ReservedGroupUnavailable>
+  <FH_GroupHunt_BelowSafeCount>低于安全狩猎数量</FH_GroupHunt_BelowSafeCount>
+  <FH_Dev_FinishMutualism>FH_Dev_FinishMutualism</FH_Dev_FinishMutualism>
 </LanguageData>

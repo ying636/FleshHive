@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TerrainDef[defName="Flesh" or defName="FH_FleshCarapaceFloor"]</xpath>
+    <value>
+      <spaceEdgeGraphicData MayRequire="Ludeon.RimWorld.Odyssey">
+        <OShapeTexPath>Terrain/Surfaces/Asteroid/BorderInside/AsteroidBorderInside_OShape</OShapeTexPath>
+        <UShapeTexPath>Terrain/Surfaces/Asteroid/BorderInside/AsteroidBorderInside_UShape</UShapeTexPath>
+        <CornerInnerTexPath>Terrain/Surfaces/Asteroid/BorderInside/AsteroidBorderInside_CornerInner</CornerInnerTexPath>
+        <CornerOuterTexPath>Terrain/Surfaces/Asteroid/BorderInside/AsteroidBorderInside_CornerOuter</CornerOuterTexPath>
+        <FlatTexPath>Terrain/Surfaces/Asteroid/BorderInside/AsteroidBorderInside_Flat</FlatTexPath>
+        <LoopLeftTexPath>Terrain/Surfaces/Asteroid/AsteroidEdge_Left</LoopLeftTexPath>
+        <LoopRightTexPath>Terrain/Surfaces/Asteroid/AsteroidEdge_Right</LoopRightTexPath>
+        <LoopSingleTexPath>Terrain/Surfaces/Asteroid/AsteroidEdge_Single</LoopSingleTexPath>
+        <LoopTexPaths>
+          <li>Terrain/Surfaces/Asteroid/Loop/AsteroidEdge_Loop1</li>
+          <li>Terrain/Surfaces/Asteroid/Loop/AsteroidEdge_Loop2</li>
+          <li>Terrain/Surfaces/Asteroid/Loop/AsteroidEdge_Loop3</li>
+          <li>Terrain/Surfaces/Asteroid/Loop/AsteroidEdge_Loop4</li>
+          <li>Terrain/Surfaces/Asteroid/Loop/AsteroidEdge_Loop5</li>
+        </LoopTexPaths>
+        <overrideColor>(177, 133, 132)</overrideColor>
+      </spaceEdgeGraphicData>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/TerrainDef[defName="Flesh"]/edgeType</xpath>
+    <value>
+      <edgeType>Hard</edgeType>
+    </value>
+  </Operation>
+</Patch>

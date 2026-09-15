@@ -9,13 +9,19 @@ public class ParasitismCapacityStat : StatWorker
     public override float GetBaseValueFor(StatRequest request)
     {
         Pawn pawn = request.Thing as Pawn ?? request.Pawn;
+        if (pawn != null && Hediff_Hela.GetCached(pawn) is Hediff_Hela hela)
+        {
+            return hela.ParasiteCapacity;
+        }
+
+        ThingDef? raceDef = pawn?.def ?? request.Def as ThingDef;
+        if (raceDef == FleshHiveDefOf.FH_Nexusmeld.race || raceDef == FleshHiveDefOf.FH_Dreadmeld.race)
+        {
+            return base.GetBaseValueFor(request);
+        }
+
         if (pawn != null)
         {
-            if (Hediff_Hela.GetCached(pawn) is Hediff_Hela hela)
-            {
-                return hela.ParasiteCapacity;
-            }
-
             bool isFleshbeast = pawn.RaceProps.FleshType == FleshTypeDefOf.Fleshbeast;
             return pawn.BodySize + (isFleshbeast ? 0f : 1f);
         }

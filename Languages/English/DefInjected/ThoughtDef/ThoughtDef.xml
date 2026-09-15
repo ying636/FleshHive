@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <FH_Thought_FleshParasitism.label>flesh parasitism</FH_Thought_FleshParasitism.label>
-  <FH_Thought_FleshParasitism.stages.0.label>flesh parasitism</FH_Thought_FleshParasitism.stages.0.label>
+  <FH_Thought_FleshParasitism.label>flesh mutualism</FH_Thought_FleshParasitism.label>
+  <FH_Thought_FleshParasitism.stages.0.label>flesh mutualism</FH_Thought_FleshParasitism.stages.0.label>
   <FH_Thought_FleshParasitism.stages.0.description>Parasitized by flesh.</FH_Thought_FleshParasitism.stages.0.description>
 
   <FH_AteRawFleshberry.stages.0.label>ate raw fleshberries</FH_AteRawFleshberry.stages.0.label>

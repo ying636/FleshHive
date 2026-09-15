@@ -10,6 +10,16 @@ public class HediffComp_HelaNode : HediffComp_NodeUnit
 {
     public new HediffCompProperties_HelaNode Props => (HediffCompProperties_HelaNode)props;
 
+    public override IEnumerable<Gizmo> CompGetGizmos()
+    {
+        foreach (Gizmo gizmo in base.CompGetGizmos())
+        {
+            yield return gizmo is Gizmo_Group { group: UnitGroup_FleshHive } groupGizmo
+                ? new Gizmo_Group_FleshHive(groupGizmo.group)
+                : gizmo;
+        }
+    }
+
     public bool TryAcceptUnit(Pawn unit)
     {
         UnitGroup? group = Groups?.FirstOrDefault();

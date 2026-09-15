@@ -14,15 +14,14 @@ public class CompPropertiesHiveGroup_MotherBeast : CompPropertiesHiveGroup_NodeU
 
 public class CompHiveGroup_MotherBeast : CompHiveGroup_NodeUnit
 {
-    public override void PostSpawnSetup(bool respawningAfterLoad)
+    public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
-        base.PostSpawnSetup(respawningAfterLoad);
-        if (respawningAfterLoad || parent is not Pawn pawn || pawn.Faction == null || !pawn.Faction.HostileTo(Faction.OfPlayer))
+        foreach (Gizmo gizmo in base.CompGetGizmosExtra())
         {
-            return;
+            yield return gizmo is Gizmo_Group { group: UnitGroup_FleshHive } groupGizmo
+                ? new Gizmo_Group_FleshHive(groupGizmo.group)
+                : gizmo;
         }
-
-        SetFollowMode(pawn);
     }
 
     public void SetAttackMode()
@@ -34,22 +33,8 @@ public class CompHiveGroup_MotherBeast : CompHiveGroup_NodeUnit
                 continue;
             }
 
+            group.SetTarget(new TargetInfo(parent), false);
             group.SetMode(HCFDefOf.HCF_GroupWorkMode_Attack, false);
-            group.SetTarget(null, false);
-        }
-    }
-
-    private void SetFollowMode(Pawn pawn)
-    {
-        foreach (UnitGroup group in groups)
-        {
-            if (group == null)
-            {
-                continue;
-            }
-
-            group.SetMode(HCFDefOf.HCF_GroupWorkMode_Follow, false);
-            group.SetTarget(new TargetInfo(pawn), false);
         }
     }
 

@@ -57,7 +57,7 @@ public class Tentacle_RangeAttack : Tentacle_Attackable
                     continue;
                 }
 
-                if (intVec3.GetFirstPawn(map) is { } target && target.HostileTo(pawn)
+                if (intVec3.GetFirstPawn(map) is { Downed: false } target && target.HostileTo(pawn)
                     && GenSight.LineOfSight(pawn.Position, intVec3, map))
                 {
                     targets.Add(target);
@@ -68,7 +68,7 @@ public class Tentacle_RangeAttack : Tentacle_Attackable
         {
             foreach (var p in map.mapPawns.AllPawnsSpawned)
             {
-                if (pawn.HostileTo(p) && GenSight.LineOfSight(pawn.Position, p.Position, map) && p.Position.DistanceTo(pawn.Position) <= range)
+                if (!p.Downed && pawn.HostileTo(p) && GenSight.LineOfSight(pawn.Position, p.Position, map) && p.Position.DistanceTo(pawn.Position) <= range)
                 {
                     targets.Add(p);
                 }

@@ -32,6 +32,11 @@ public static class FleshHiveFleshbeastSpawnUtility
     public static Pawn GeneratePawn(PawnKindDef kind, Faction faction, bool applyDefaultParasites = true)
     {
         Pawn pawn = PawnGenerator.GeneratePawn(GenerateRequest(kind, faction));
+        if (pawn.Faction == Faction.OfPlayer && pawn.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(pawn))
+        {
+            pawn.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         if (applyDefaultParasites && faction?.IsPlayer != true)
         {
             FleshParasiteUtility.TryApplyDefaultParasites(pawn);

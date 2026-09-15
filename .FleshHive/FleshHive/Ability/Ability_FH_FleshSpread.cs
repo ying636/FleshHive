@@ -34,6 +34,7 @@ public class CompAbilityEffect_FH_FleshSpread : CompAbilityEffect
         foreach (IntVec3 c in GenRadial.RadialCellsAround(cell, Props.explosionRadius, true))
         {
             if (c.InBounds(map) &&
+                map.terrainGrid.FoundationAt(c)?.IsSubstructure != true &&
                 c.Walkable(map) &&
                 !FleshTerrainUtility.IsFleshTerrain(map, c) &&
                 !c.GetTerrain(map).IsRiver &&

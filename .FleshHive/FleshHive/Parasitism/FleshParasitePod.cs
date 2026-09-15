@@ -104,7 +104,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             {
                 yield return new Command_Action()
                 {
-                    defaultLabel = "Finish Parasitism",
+                    defaultLabel = "FH_Dev_FinishMutualism".Translate(),
                     action = () => this.curQuest.Do(this)
                 };
             }

@@ -38,6 +38,11 @@ public static class Patch_InheritParaspikeParasitism
         }
 
         Pawn parasite = PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Paraspike, child.Faction ?? inheritingParent.Faction);
+        if (parasite.Faction == Faction.OfPlayer && parasite.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(parasite))
+        {
+            parasite.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         if (!system.Parasite(parasite))
         {
             if (!parasite.Destroyed)

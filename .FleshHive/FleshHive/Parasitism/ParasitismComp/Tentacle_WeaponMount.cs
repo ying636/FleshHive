@@ -164,6 +164,7 @@ public class Tentacle_WeaponMount : Tentacle
                 || !target.Spawned
                 || target.Map != pawn.Map
                 || !target.HostileTo(pawn)
+                || target is Pawn { Downed: true }
                 || attackTarget.ThreatDisabled(pawn)
                 || !AttackTargetFinder.IsAutoTargetable(attackTarget)
                 || !verb.ValidateTarget(target, false)

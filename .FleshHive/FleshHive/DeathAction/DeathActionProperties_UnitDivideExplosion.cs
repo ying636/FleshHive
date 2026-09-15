@@ -57,6 +57,7 @@ public class DeathActionWorker_UnitDivideExplosion : DeathActionWorker_UnitDivid
         foreach (IntVec3 cell in GenRadial.RadialCellsAround(position, Props.explosionRadius, true))
         {
             if (cell.InBounds(map)
+                && map.terrainGrid.FoundationAt(cell)?.IsSubstructure != true
                 && cell.Walkable(map)
                 && !FleshTerrainUtility.IsFleshTerrain(map, cell)
                 && !cell.GetTerrain(map).IsRiver

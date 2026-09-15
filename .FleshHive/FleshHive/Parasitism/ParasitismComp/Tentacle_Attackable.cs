@@ -46,7 +46,7 @@ public class Tentacle_Attackable : Tentacle
                     continue;
                 }
 
-                if (c.GetFirstPawn(pawn.Map) is { } target && target.HostileTo(pawn))
+                if (c.GetFirstPawn(pawn.Map) is { Downed: false } target && target.HostileTo(pawn))
                 {
                     this.Attack(target);
                     return;

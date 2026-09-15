@@ -139,6 +139,11 @@ public static class FleshParasiteUtility
             foreach (PawnKindDef parasiteKind in parasites)
             {
                 Pawn parasite = PawnGenerator.GeneratePawn(parasiteKind, pawn.Faction);
+                if (parasite.Faction == Faction.OfPlayer && parasite.playerSettings != null
+                    && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(parasite))
+                {
+                    parasite.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+                }
                 if (!system.Parasite(parasite, true) && !parasite.Destroyed)
                 {
                     parasite.Destroy();

@@ -49,6 +49,7 @@
         </li>
 
         <li Class="HiveCreatureFramework.JobGiver_EnterFuser" />
+        <li Class="FleshHive.JobGiver_EnterFleshRegenerationSac" />
         <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
         <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
         <li Class="FleshHive.ThinkNode_AssaultOverrideDutyAttack" />

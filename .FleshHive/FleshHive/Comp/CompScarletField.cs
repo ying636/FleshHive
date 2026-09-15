@@ -27,11 +27,12 @@ public class CompScarletField : ThingComp
 
     private Pawn PawnOwner => this.parent as Pawn;
 
-    public bool Active => active;
+    public bool Active => active && PawnOwner != null && TwistedFleshUtility.GetCurrentTwistedFlesh(PawnOwner) >= 1;
 
     public float AreaShieldRadius => Props.areaShieldRadius;
 
-    public bool CanActivate => PawnOwner != null && PawnOwner.Spawned;
+    public bool CanActivate => PawnOwner != null && PawnOwner.Spawned
+        && TwistedFleshUtility.GetCurrentTwistedFlesh(PawnOwner) >= 1;
 
     private static MethodInfo ImpactMethod
     {
@@ -45,21 +46,9 @@ public class CompScarletField : ThingComp
         }
     }
 
-    private static Material GetShieldMat(float alpha)
-    {
-        float key = Mathf.Round(alpha * 100f);
-        if (!shieldMatCache.TryGetValue(key, out Material mat))
-        {
-            mat = new Material(MaterialPool.MatFrom("Other/FleshShieldBubble", ShaderDatabase.Transparent));
-            mat.color = new Color(1f, 0.15f, 0.15f, alpha);
-            shieldMatCache[key] = mat;
-        }
-        return mat;
-    }
-
     public void Activate()
     {
-        SetActive(!active);
+        SetActive(!active && CanActivate);
     }
 
     public override void CompTick()
@@ -67,6 +56,12 @@ public class CompScarletField : ThingComp
         base.CompTick();
         if (!active || PawnOwner == null || !PawnOwner.Spawned)
         {
+            return;
+        }
+
+        if (TwistedFleshUtility.GetCurrentTwistedFlesh(PawnOwner) < 1)
+        {
+            SetActive(false);
             return;
         }
 
@@ -94,19 +89,29 @@ public class CompScarletField : ThingComp
             return;
         }
 
+        if (TwistedFleshUtility.GetCurrentTwistedFlesh(pawn) < 1)
+        {
+            SetActive(false);
+            return;
+        }
+
         bool isRanged = dinfo.Def.isRanged;
         int cost = isRanged ? 1 : 20;
 
         if (TwistedFleshUtility.ConsumeTwistedFlesh(pawn, cost))
         {
             absorbed = true;
+            if (TwistedFleshUtility.GetCurrentTwistedFlesh(pawn) < 1)
+            {
+                SetActive(false);
+            }
         }
     }
 
     public override void PostDraw()
     {
         base.PostDraw();
-        if (!active || PawnOwner == null || !PawnOwner.Spawned)
+        if (!Active || PawnOwner == null || !PawnOwner.Spawned)
         {
             return;
         }
@@ -131,6 +136,18 @@ public class CompScarletField : ThingComp
         Scribe_Values.Look(ref active, "active");
     }
 
+    private static Material GetShieldMat(float alpha)
+    {
+        float key = Mathf.Round(alpha * 100f);
+        if (!shieldMatCache.TryGetValue(key, out Material mat))
+        {
+            mat = new Material(MaterialPool.MatFrom("Other/FleshShieldBubble", ShaderDatabase.Transparent));
+            mat.color = new Color(1f, 0.15f, 0.15f, alpha);
+            shieldMatCache[key] = mat;
+        }
+        return mat;
+    }
+
     private void AreaShieldInterceptTick()
     {
         Pawn pawn = PawnOwner;
@@ -144,13 +161,24 @@ public class CompScarletField : ThingComp
         float radiusSq = (Props.areaShieldRadius + 1f) * (Props.areaShieldRadius + 1f);
 
         List<Thing> things = map.listerThings.ThingsInGroup(ThingRequestGroup.Projectile);
-        for (int i = 0; i < things.Count; i++)
+        for (int i = things.Count - 1; i >= 0; i--)
         {
             if (things[i] is not Projectile proj || !proj.Spawned || proj.Destroyed)
             {
                 continue;
             }
             if (proj.Map != map)
+            {
+                continue;
+            }
+
+            if (proj.Launcher == null)
+            {
+                continue;
+            }
+            if (pawn.Faction != null && !(proj.Launcher.Spawned
+                    ? proj.Launcher.HostileTo(pawn.Faction)
+                    : proj.Launcher.Faction?.HostileTo(pawn.Faction) == true))
             {
                 continue;
             }
@@ -163,13 +191,33 @@ public class CompScarletField : ThingComp
                 continue;
             }
 
-            if (!TwistedFleshUtility.ConsumeTwistedFlesh(pawn, 1))
+            if (!IsIncomingProjectile(projectileOrigin(proj), projPos, shieldCenter))
             {
                 continue;
             }
 
+            if (!TwistedFleshUtility.ConsumeTwistedFlesh(pawn, 1))
+            {
+                SetActive(false);
+                return;
+            }
+
             ImpactMethod.Invoke(proj, new object[] { null, true });
+            if (TwistedFleshUtility.GetCurrentTwistedFlesh(pawn) < 1)
+            {
+                SetActive(false);
+                return;
+            }
         }
+    }
+
+    private bool IsIncomingProjectile(Vector3 origin, Vector3 position, Vector3 center)
+    {
+        float originX = origin.x - center.x;
+        float originZ = origin.z - center.z;
+        return originX * originX + originZ * originZ > Props.areaShieldRadius * Props.areaShieldRadius
+            && (position.x - center.x) * (position.x - origin.x)
+                + (position.z - center.z) * (position.z - origin.z) < 0f;
     }
 
     private void SetActive(bool value)
@@ -180,7 +228,7 @@ public class CompScarletField : ThingComp
         }
         if (active && !value && PawnOwner is Pawn pawn && pawn.Spawned)
         {
-            EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, 1f);
+            EffecterDefOf.Shield_Break.SpawnAttached(pawn, pawn.MapHeld, Props.areaShieldRadius);
         }
         active = value;
         if (active)
@@ -194,6 +242,9 @@ public class CompScarletField : ThingComp
     private int tickCounter;
 
     private static MethodInfo impactMethod;
+
+    private static readonly AccessTools.FieldRef<Projectile, Vector3> projectileOrigin =
+        AccessTools.FieldRefAccess<Projectile, Vector3>("origin");
 
     private static Dictionary<float, Material> shieldMatCache = new Dictionary<float, Material>();
 }

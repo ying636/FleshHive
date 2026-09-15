@@ -46,7 +46,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Nexusmeld</defName>
-    <label>nexusmeld parasitism</label>
+    <label>nexusmeld mutualism</label>
     <description>This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.\n\n-Meld beast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
@@ -57,7 +57,7 @@
         <statOffsets>
           <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
-        <label>nexusmeld parasitism</label>
+        <label>nexusmeld mutualism</label>
       </li>
     </stages>
     <comps>
@@ -115,7 +115,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Furiousmeld</defName>
-    <label>furiousmeld parasitism</label>
+    <label>furiousmeld mutualism</label>
     <description>This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, stronger armor, and regeneration.\n\n-Shield-claw tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
@@ -130,7 +130,7 @@
           <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
           <ArmorRating_Heat>0.5</ArmorRating_Heat>
         </statOffsets>
-        <label>furiousmeld parasitism</label>
+        <label>furiousmeld mutualism</label>
       </li>
     </stages>
     <comps>
@@ -188,7 +188,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Bastionmeld</defName>
-    <label>bastionmeld parasitism</label>
+    <label>bastionmeld mutualism</label>
     <description>This creature is parasitized by a bastionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nTwo parasitic weapon mounts are grafted onto the body, allowing the host to release an EMP pulse.</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
@@ -200,7 +200,7 @@
         <statOffsets>
           <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
-        <label>bastionmeld parasitism</label>
+        <label>bastionmeld mutualism</label>
       </li>
     </stages>
     <comps>
@@ -259,7 +259,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Dreadmeld</defName>
-    <label>dreadmeld parasitism</label>
+    <label>dreadmeld mutualism</label>
     <description>This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains incredible regeneration, improved mining work, and a terror roar.\n\n-Meld beast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
@@ -275,7 +275,7 @@
           <MiningSpeed>2.6</MiningSpeed>
           <DeepDrillingSpeed>1.7</DeepDrillingSpeed>
         </statFactors>
-        <label>dreadmeld parasitism</label>
+        <label>dreadmeld mutualism</label>
       </li>
     </stages>
     <comps>
@@ -336,7 +336,7 @@
 
   <HediffDef>
     <defName>FH_Parasitism_Fissionmeld</defName>
-    <label>fissionmeld parasitism</label>
+    <label>fissionmeld mutualism</label>
     <description>This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's twisted flesh capacity and regeneration are increased; flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.\n\n-Meld beast tentacle</description>
     <hediffClass>FleshHive.ParasitismHediff</hediffClass>
     <isBad>false</isBad>
@@ -348,7 +348,7 @@
         <statOffsets>
           <SocialImpact>-0.1</SocialImpact>
         </statOffsets>
-        <label>fissionmeld parasitism</label>
+        <label>fissionmeld mutualism</label>
       </li>
     </stages>
     <comps>

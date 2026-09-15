@@ -34,6 +34,11 @@ public class HediffComp_FleshUpgradeReactivation : HediffComp
         }
 
         Pawn spawnedPawn = PawnGenerator.GeneratePawn(Props.spawnKind, Faction.OfPlayer);
+        if (spawnedPawn.Faction == Faction.OfPlayer && spawnedPawn.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(spawnedPawn))
+        {
+            spawnedPawn.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         GenSpawn.Spawn(spawnedPawn, Pawn.PositionHeld, Pawn.MapHeld);
     }
 }

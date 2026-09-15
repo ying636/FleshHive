@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
     <statBases>
-      <MarketValue>1800</MarketValue>
+      <MarketValue>3500</MarketValue>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
     </statBases>
     <race>
@@ -66,6 +66,7 @@
       <MoveSpeed>2.8</MoveSpeed>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
       <ToxicResistance>0.8</ToxicResistance>
+      <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld_east</uiIconPath>
     <modExtensions>
@@ -76,7 +77,7 @@
     <race>
       <body>Bulbfreak</body>
       <baseBodySize>3.8</baseBodySize>
-      <baseHealthScale>0.7</baseHealthScale>
+      <baseHealthScale>10.0</baseHealthScale>
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>
@@ -643,7 +644,7 @@
         <cost>6</cost>
         <hediff>FH_Parasitism_Bastionmeld</hediff>
         <twistedFleshCapacity>400</twistedFleshCapacity>
-        <effect>Flesh parasitism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
         <abilityLabel>Weapon slot</abilityLabel>
         <abilityDescription>The host grows two weapon slots that can mount weapons and use the mounted weapons to attack.</abilityDescription>
       </li>
@@ -1186,6 +1187,7 @@
       <MoveSpeed>2.8</MoveSpeed>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
       <ToxicResistance>0.8</ToxicResistance>
+      <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
     </statBases>
     <uiIconPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld_MenuIcon</uiIconPath>
     <modExtensions>
@@ -1196,7 +1198,7 @@
     <race>
       <body>Bulbfreak</body>
       <baseBodySize>3.8</baseBodySize>
-      <baseHealthScale>0.7</baseHealthScale>
+      <baseHealthScale>10.0</baseHealthScale>
       <lifeExpectancy>25</lifeExpectancy>
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <renderTree>Dreadmeld</renderTree>

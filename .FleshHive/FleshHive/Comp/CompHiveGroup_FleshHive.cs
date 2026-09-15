@@ -13,6 +13,16 @@ public class CompPropertiesHiveGroup_FleshHive : CompPropertiesHiveGroup
 
 public class CompHiveGroup_FleshHive : CompHiveGroup
 {
+    public override IEnumerable<Gizmo> CompGetGizmosExtra()
+    {
+        foreach (Gizmo gizmo in base.CompGetGizmosExtra())
+        {
+            yield return gizmo is Gizmo_Group { group: UnitGroup_FleshHive } groupGizmo
+                ? new Gizmo_Group_FleshHive(groupGizmo.group)
+                : gizmo;
+        }
+    }
+
     public override void PostDrawExtraSelectionOverlays()
     {
         base.PostDrawExtraSelectionOverlays();

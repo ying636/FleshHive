@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: consuming TargetA to grow. -->
@@ -9,8 +9,6 @@
   
   <!-- EN: carrying TargetA to flesh sack. -->
   <FH_Job_FillFleshSack.reportString>正在将TargetA搬运至血肉囊。</FH_Job_FillFleshSack.reportString>
-  
-  <!-- EN: fill trispike charge. -->
   
   <!-- EN: finishing off TargetA. -->
   <FH_Job_HuntExecution.reportString>正在处决TargetA。</FH_Job_HuntExecution.reportString>

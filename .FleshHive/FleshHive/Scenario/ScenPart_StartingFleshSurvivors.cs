@@ -35,7 +35,7 @@ public class ScenPart_StartingFleshSurvivors : ScenPart
 
     public override IEnumerable<Thing> PlayerStartingThings()
     {
-        return new List<Pawn>
+        List<Pawn> pawns = new List<Pawn>
         {
             PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Fingerspike, Faction.OfPlayer),
             PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Fingerspike, Faction.OfPlayer),
@@ -43,6 +43,15 @@ public class ScenPart_StartingFleshSurvivors : ScenPart
             PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Puffspike, Faction.OfPlayer),
             PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Puffspike, Faction.OfPlayer)
         };
+        foreach (Pawn pawn in pawns)
+        {
+            if (pawn.Faction == Faction.OfPlayer && pawn.playerSettings != null
+                && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(pawn))
+            {
+                pawn.playerSettings.medCare = MedicalCareCategory.NoCare;
+            }
+        }
+        return pawns;
 
     }
 

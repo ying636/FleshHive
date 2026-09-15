@@ -12,10 +12,10 @@
   <FleshParasitePod_Remove>Remove</FleshParasitePod_Remove>
   <FleshParasitePod_InsufficientCapacity>Cannot parasite: insufficient capacity</FleshParasitePod_InsufficientCapacity>
   <FH_ActiveParasitism_InvalidTarget>Select a living, player-controlled organic creature.</FH_ActiveParasitism_InvalidTarget>
-  <FH_ActiveParasitism_Failed>Active parasitism failed. Check the error log for details.</FH_ActiveParasitism_Failed>
+  <FH_ActiveParasitism_Failed>Active mutualism failed. Check the error log for details.</FH_ActiveParasitism_Failed>
   <FleshParasitePod_InsufficientNutrition>Cannot parasite: requires {0} nutrition</FleshParasitePod_InsufficientNutrition>
-  <FleshParasitePod_NutritionCost>Parasitism cost: {0} nutrition</FleshParasitePod_NutritionCost>
-  <FleshParasitePod_CurQuest>A parasitism task already exists</FleshParasitePod_CurQuest>
+  <FleshParasitePod_NutritionCost>Mutualism cost: {0} nutrition</FleshParasitePod_NutritionCost>
+  <FleshParasitePod_CurQuest>A mutualism task already exists</FleshParasitePod_CurQuest>
   <FleshParasitePod_SelectedParasitismTask>Selected to parasite {0} with {1}</FleshParasitePod_SelectedParasitismTask>
   <FleshParasitePod_ExecutingParasitismTask>Currently parasitizing {0} with {1}</FleshParasitePod_ExecutingParasitismTask>
   <FleshParasitePod_SelectedRemoveTask>Selected to remove {1} from {0}</FleshParasitePod_SelectedRemoveTask>
@@ -23,20 +23,20 @@
   <FleshParasitePod_Flesh>Insert fleshbeast</FleshParasitePod_Flesh>
   <FleshParasitePod_Inner>Contains: {0}, {1}</FleshParasitePod_Inner>
   <FleshParasitePod_Progress>Progress: {0}</FleshParasitePod_Progress>
-  <FleshParasitePod_Starting>Performing parasitism task</FleshParasitePod_Starting>
+  <FleshParasitePod_Starting>Performing mutualism task</FleshParasitePod_Starting>
   <FleshParasitePod_Target>Insert host</FleshParasitePod_Target>
   <FleshParasitePod_Title>Implant a fleshbeast into a host with the aid of a flesh parasite vat. The fleshbeast consumes the host's nutrition to survive. Different fleshbeasts grant different abilities, making the host more powerful.</FleshParasitePod_Title>
   <FH_Parasitism_CarryAnimalToPod>Carry to flesh parasite vat: {0}</FH_Parasitism_CarryAnimalToPod>
   <ParasitismAbility>Parasitic abilities</ParasitismAbility>
   <ParasitismCapacity>Parasite capacity: {0}/{1}</ParasitismCapacity>
   <ParasitismCapacityCost>Capacity cost:</ParasitismCapacityCost>
-  <ParasitismFleshBeast>{0} parasitism</ParasitismFleshBeast>
-  <Tab_Parasitism>Parasitism</Tab_Parasitism>
+  <ParasitismFleshBeast>{0} mutualism</ParasitismFleshBeast>
+  <Tab_Parasitism>Mutualism</Tab_Parasitism>
   <Unparasitized>Unparasitized</Unparasitized>
   <FH_HungerRate>Hunger rate offset: {0}</FH_HungerRate>
-  <ParasitismSucceed>{0}: parasitism succeeded</ParasitismSucceed>
+  <ParasitismSucceed>{0}: mutualism succeeded</ParasitismSucceed>
   <ParasitismSucceedDesc>{1} has successfully parasitized {0}.</ParasitismSucceedDesc>
-  <ParasitismFail>{0}: parasitism failed</ParasitismFail>
+  <ParasitismFail>{0}: mutualism failed</ParasitismFail>
   <ParasitismFailDesc>The attempt to parasite {0} failed. The fleshbeast has been released.</ParasitismFailDesc>
   <FH_Parasitism_VatSelector>Flesh parasite vats</FH_Parasitism_VatSelector>
   <FH_Parasitism_NoVats>No player-controlled flesh parasite vats are available on this map.</FH_Parasitism_NoVats>
@@ -329,4 +329,6 @@
   <FH_Gestation_ReservedGroupNone>Automatic assignment</FH_Gestation_ReservedGroupNone>
   <FH_Gestation_ReservedGroupTip>Prefer assigning the produced fleshbeast to this group. If it cannot accept the unit, HCF will use its normal assignment rules.</FH_Gestation_ReservedGroupTip>
   <FH_Gestation_ReservedGroupUnavailable>No available groups on this map.</FH_Gestation_ReservedGroupUnavailable>
+  <FH_GroupHunt_BelowSafeCount>FH_GroupHunt_BelowSafeCount</FH_GroupHunt_BelowSafeCount>
+  <FH_Dev_FinishMutualism>Finish Mutualism</FH_Dev_FinishMutualism>
 </LanguageData>

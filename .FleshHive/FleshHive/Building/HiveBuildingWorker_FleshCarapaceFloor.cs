@@ -13,7 +13,8 @@ public class HiveBuildingWorker_FleshCarapaceFloor : HiveBuildingWorker_FleshBlu
         {
             return "OutOfBounds".Translate();
         }
-        if (loc.GetTerrain(map) != TerrainDefOf.Flesh)
+        TerrainDef terrain = loc.GetTerrain(map);
+        if (terrain != TerrainDefOf.Flesh && !terrain.HasTag(FleshHiveTags.FleshTerrain))
         {
             return "FH_FleshCarapaceFloor_MustPlaceOnFlesh".Translate();
         }

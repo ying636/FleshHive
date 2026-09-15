@@ -16,6 +16,8 @@ public class LordToil_GroupHunt : LordToil
         this.group = group;
     }
 
+    public bool HasEnoughHealthyMembers => CountHealthyMembers() >= GetMinimumHealthyHunters();
+
     public override void Init()
     {
         base.Init();
@@ -68,7 +70,7 @@ public class LordToil_GroupHunt : LordToil
         int currentTick = Find.TickManager.TicksGame;
         if (currentPrey == null)
         {
-            if (waitingForRecovery && !HasEnoughHealthyMembers())
+            if (waitingForRecovery && !HasEnoughHealthyMembers)
             {
                 return;
             }
@@ -118,11 +120,6 @@ public class LordToil_GroupHunt : LordToil
     private bool IsHunterReady(Pawn pawn, Pawn prey)
     {
         return pawn.Position.InHorDistOf(prey.Position, GatherRadius);
-    }
-
-    private bool HasEnoughHealthyMembers()
-    {
-        return CountHealthyMembers() >= GetMinimumHealthyHunters();
     }
 
     private int CountHealthyMembers()
@@ -266,7 +263,7 @@ public class LordToil_GroupHunt : LordToil
             return false;
         }
 
-        if (CountHealthyMembers() < GetMinimumHealthyHunters())
+        if (!HasEnoughHealthyMembers)
         {
             nextPreySearchTick = currentTick + PreySearchInterval;
             return false;

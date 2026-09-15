@@ -24,19 +24,36 @@ public class Designator_MarkPrey : Designator_Cells
 
     public override AcceptanceReport CanDesignateThing(Thing t)
     {
-        if (t is not Pawn pawn)
+        Pawn pawn;
+        if (t is Corpse corpse)
+        {
+            if (!corpse.Spawned)
+            {
+                return false;
+            }
+            if (corpse.GetRotStage() != RotStage.Fresh)
+            {
+                return "StatsReport_NotFresh".Translate();
+            }
+            pawn = corpse.InnerPawn;
+        }
+        else if (t is Pawn target)
+        {
+            pawn = target;
+            if (!pawn.Downed || !pawn.Spawned || pawn.Dead)
+            {
+                return "FH_MarkPrey_NotDowned".Translate();
+            }
+        }
+        else
         {
             return false;
-        }
-        if (!pawn.Downed || !pawn.Spawned)
-        {
-            return "FH_MarkPrey_NotDowned".Translate();
         }
         if (!pawn.RaceProps.IsFlesh || pawn.RaceProps.IsMechanoid)
         {
             return "FH_MarkPrey_NotFlesh".Translate();
         }
-        if (pawn.MapHeld.designationManager.DesignationOn(pawn, FleshHiveDefOf.FH_MarkPrey) != null)
+        if (t.MapHeld.designationManager.DesignationOn(t, FleshHiveDefOf.FH_MarkPrey) != null)
         {
             return "FH_MarkPrey_AlreadyMarked".Translate();
         }

@@ -209,7 +209,8 @@ public class CompFleshSpread : ThingComp, ITransfer
         float radiusSq = Props.radius * Props.radius;
 
         var weighted = borderCache
-            .Where(c => (c.ToVector3Shifted() - center).sqrMagnitude <= radiusSq)
+            .Where(c => (c.ToVector3Shifted() - center).sqrMagnitude <= radiusSq
+                && parent.Map.terrainGrid.FoundationAt(c)?.IsSubstructure != true)
             .Select(c =>
             {
                 float dist = (c.ToVector3Shifted() - center).magnitude;
@@ -272,7 +273,8 @@ public class CompFleshSpread : ThingComp, ITransfer
 
     private bool IsValidTarget(IntVec3 c)
     {
-        if (!FleshTerrainUtility.CanFleshSpreadTo(parent.Map, c))
+        if (!FleshTerrainUtility.CanFleshSpreadTo(parent.Map, c)
+            || parent.Map.terrainGrid.FoundationAt(c)?.IsSubstructure == true)
         {
             return false;
         }

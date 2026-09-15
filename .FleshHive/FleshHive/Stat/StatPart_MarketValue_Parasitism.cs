@@ -28,8 +28,8 @@ public class StatPart_MarketValue_Parasitism : StatPart
             {
                 FleshBeastSize.Small => 120f,
                 FleshBeastSize.Medium => 300f,
-                FleshBeastSize.Large => 800f,
-                FleshBeastSize.Giant => 1800f,
+                FleshBeastSize.Large => 900f,
+                FleshBeastSize.Giant => 3500f,
                 _ => 0f
             };
         }

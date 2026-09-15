@@ -44,8 +44,8 @@
 
     <HiveCreatureFramework.HiveTabOptionDef>
         <defName>FH_CategoryOption_Parasitism</defName>
-        <label>Parasitism</label>
-        <description>Manage fleshbeast parasitism tasks at flesh parasite vats.</description>
+        <label>Mutualism</label>
+        <description>Manage fleshbeast mutualism tasks at flesh parasite vats.</description>
         <option Class="FleshHive.HiveTabOption_Parasitism" />
     </HiveCreatureFramework.HiveTabOptionDef>
 

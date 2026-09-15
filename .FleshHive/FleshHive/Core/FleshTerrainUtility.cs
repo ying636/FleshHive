@@ -12,7 +12,8 @@ public static class FleshTerrainUtility
 
     public static bool IsFleshTerrain(TerrainDef terrain)
     {
-        return terrain == TerrainDefOf.Flesh || terrain == FleshHiveDefOf.FH_FleshCarapaceFloor;
+        return terrain == TerrainDefOf.Flesh || terrain == FleshHiveDefOf.FH_FleshCarapaceFloor
+            || terrain?.HasTag(FleshHiveTags.FleshTerrain) == true;
     }
 
     public static bool CanFleshSpreadTo(Map map, IntVec3 cell)
@@ -23,7 +24,8 @@ public static class FleshTerrainUtility
         }
 
         TerrainDef terrain = cell.GetTerrain(map);
-        return !IsFleshTerrain(terrain) && (terrain.natural || terrain.defName == "Space");
+        return !IsFleshTerrain(terrain) && (terrain.natural || terrain.IsRock
+            || terrain.affordances.Contains(TerrainAffordanceDefOf.SmoothableStone) || terrain.defName == "Space");
     }
 
     public static bool HasLargeFleshEcosystem(Map map)

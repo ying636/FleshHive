@@ -91,6 +91,11 @@ public static class FleshSurvivorHelaGenerator
 
         ParasitismSystem system = (ParasitismSystem)pawn.health.AddHediff(FleshHiveDefOf.FH_ParasitismSystem);
         Pawn parasite = PawnGenerator.GeneratePawn(FleshHiveDefOf.FH_Whipspike, Faction.OfPlayer);
+        if (parasite.Faction == Faction.OfPlayer && parasite.playerSettings != null
+            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(parasite))
+        {
+            parasite.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+        }
         if (!system.Parasite(parasite) && !parasite.Destroyed)
         {
             parasite.Destroy();

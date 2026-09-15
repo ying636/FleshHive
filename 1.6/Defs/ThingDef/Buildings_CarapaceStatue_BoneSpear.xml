@@ -32,7 +32,7 @@
       <li>FH_FleshBuilding</li>
       <li>FH_FleshAdaptationBeauty</li>
     </tradeTags>
-    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li><li>PlaceWorker_InvalidOverSubstructure</li></placeWorkers>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="CompProperties_Facility">
@@ -150,6 +150,7 @@
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>
       <li>FleshHive.PlaceWorker_FleshTurretRadius</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />

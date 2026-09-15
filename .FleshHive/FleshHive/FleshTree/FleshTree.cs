@@ -329,7 +329,7 @@ public class FleshTree : Plant
         {
             return false;
         }
-        if (!cell.InBounds(Map) || cell.Fogged(Map))
+        if (!cell.InBounds(Map) || cell.Fogged(Map) || Map.terrainGrid.FoundationAt(cell)?.IsSubstructure == true)
         {
             return false;
         }

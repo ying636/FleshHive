@@ -46,6 +46,29 @@ public class FleshSack : Building, IThingHolder
         return true;
     }
 
+    public bool InsertCorpse(Corpse corpse)
+    {
+        if (corpse.GetRotStage() != RotStage.Fresh)
+        {
+            if (corpse.MapHeld is Map corpseMap
+                && corpseMap.designationManager.DesignationOn(corpse, FleshHiveDefOf.FH_MarkPrey) is Designation designation)
+            {
+                corpseMap.designationManager.RemoveDesignation(designation);
+            }
+            return false;
+        }
+        if (!CanAcceptMore || !corpse.InnerPawn.RaceProps.IsFlesh || corpse.InnerPawn.RaceProps.IsMechanoid
+            || !contents.TryAddOrTransfer(corpse))
+        {
+            return false;
+        }
+
+        totalDigestionTime = Mathf.RoundToInt(corpse.InnerPawn.BodySize * 5f * 60000f);
+        digestionProgress = 0;
+        digestionFinished = false;
+        return true;
+    }
+
     public override IEnumerable<Gizmo> GetGizmos()
     {
         foreach (Gizmo gizmo in base.GetGizmos())

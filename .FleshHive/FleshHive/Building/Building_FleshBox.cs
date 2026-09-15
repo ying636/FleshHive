@@ -67,6 +67,17 @@ public class Building_FleshBox : Building_Storage
             return;
         }
 
+        CompIngredients ingredients = thing.TryGetComp<CompIngredients>();
+        bool containsMeat = ingredients?.ingredients.Count > 0
+            ? ingredients.ingredients.Any(ingredient => ingredient.IsMeat
+                || ingredient.ingestible?.foodType.HasFlag(FoodTypeFlags.Meat) == true)
+            : thing.def.IsMeat || thing.def.ingestible?.foodType.HasFlag(FoodTypeFlags.Meat) == true
+                || ingredients?.Props.noIngredientsFoodKind == FoodKind.Meat;
+        if (!containsMeat)
+        {
+            return;
+        }
+
         float nutritionPerItem = thing.GetStatValue(StatDefOf.Nutrition, true, -1);
         if (nutritionPerItem <= 0f)
         {

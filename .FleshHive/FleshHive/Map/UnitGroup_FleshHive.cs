@@ -23,6 +23,13 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
 
     public override bool CanReturnHive => base.CanReturnHive && !IsPlayerHiveHungry;
 
+    public string StatusLabel => lord?.CurLordToil is LordToil_GroupHunt { HasEnoughHealthyMembers: false }
+        ? "FH_GroupHunt_BelowSafeCount".Translate()
+        : string.Empty;
+
+    private bool IsPlayerHiveHungry => hive?.TryGetComp<CompHiveGroup_MotherBeast>() == null
+        && hive?.Faction == Faction.OfPlayer && FleshHiveHungerUtility.IsHungry(hive);
+
     public override void AcceptUnit(Pawn unit)
     {
         if (unit == null)
@@ -62,8 +69,6 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
         Find.WindowStack.TryRemove(typeof(Window_GroupWorkSetting));
         Find.WindowStack.Add(new Window_GroupWorkSetting(this, new Vector2(260f, 440f)));
     }
-
-    private bool IsPlayerHiveHungry => hive?.Faction == Faction.OfPlayer && FleshHiveHungerUtility.IsHungry(hive);
 
     public override void DrawWorkSettings(Rect inRect, ref Vector2 scrollPosition, ref float contentHeight)
     {

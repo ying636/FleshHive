@@ -13,6 +13,10 @@ public class HiveBuildingWorker_FleshFloor : HiveBuildingWorker_FleshBlueprint
         {
             return "OutOfBounds".Translate();
         }
+        if (map.terrainGrid.FoundationAt(loc)?.IsSubstructure == true)
+        {
+            return "MessageCannotPlaceOverSubstructure".Translate();
+        }
         if (FleshTerrainUtility.IsFleshTerrain(map, loc))
         {
             return "FH_FleshFloor_AlreadyFlesh".Translate();
