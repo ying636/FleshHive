@@ -5,4 +5,21 @@
     <driverClass>FleshHive.JobDriver_EnterFleshRegenerationSac</driverClass>
     <reportString>flesh regeneration sac</reportString>
   </JobDef>
+  <JobDef>
+    <defName>FH_Job_CarryToFleshRegenerationSac</defName>
+    <driverClass>FleshHive.JobDriver_CarryToFleshRegenerationSac</driverClass>
+    <reportString>carrying downed node-group units to the flesh regeneration sac</reportString>
+  </JobDef>
+  <WorkGiverDef>
+    <defName>FH_WorkGiver_CarryToFleshRegenerationSac</defName>
+    <label>carry downed node-group units to the flesh regeneration sac</label>
+    <giverClass>FleshHive.WorkGiver_CarryToFleshRegenerationSac</giverClass>
+    <workType>Hauling</workType>
+    <verb>carry</verb>
+    <gerund>carrying</gerund>
+    <priorityInType>24</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
 </Defs>

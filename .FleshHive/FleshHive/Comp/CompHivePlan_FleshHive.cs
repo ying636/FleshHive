@@ -87,7 +87,8 @@ public class CompHivePlan_FleshHive : CompHivePlan
             return false;
         }
 
-        if (entry.itemDef.worker is ItemSpawnWorker_FleshHopper)
+        if (parent is not Building_FleshHopper
+            && entry.itemDef.worker is ItemSpawnWorker_FleshHopper)
         {
             foreach (Building_FleshHopper hopper in FleshHopperUtility.GetCachedHoppers(parent.Map))
             {

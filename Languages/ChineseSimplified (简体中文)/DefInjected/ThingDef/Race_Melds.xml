@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
   <!-- EN: bastionmeld -->
@@ -19,7 +19,7 @@
   <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两个武器插槽，可安装武器，并使用所安装的武器进行攻击。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Weapon slot -->
   <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>武器插槽</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh parasitism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts. -->
+  <!-- EN: Flesh mutualism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts. -->
   <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主获得再生（不可思议）；提供2个额外的寄生武器装备位。</FH_Bastionmeld.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bastionmeld.tools.tentacle-0.label>触手</FH_Bastionmeld.tools.tentacle-0.label>

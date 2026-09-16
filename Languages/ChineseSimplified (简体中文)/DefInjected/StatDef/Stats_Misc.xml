@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: parasitism capacity -->
+  <!-- EN: mutualism capacity -->
   <FH_Stat_ParasitismCapacity.label>寄生空间</FH_Stat_ParasitismCapacity.label>
   <!-- EN: ParasitismCapacity -->
   <FH_Stat_ParasitismCapacity.description>宿主能够容纳血肉兽寄生体的总空间。</FH_Stat_ParasitismCapacity.description>

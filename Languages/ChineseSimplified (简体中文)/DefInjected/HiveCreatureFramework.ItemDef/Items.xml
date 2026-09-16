@@ -28,7 +28,7 @@
   
   <!-- EN: flesh pack -->
   <FH_Item_FleshPack.label>寄生背包</FH_Item_FleshPack.label>
-  <!-- EN: A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's parasitism capacity. -->
+  <!-- EN: A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's mutualism capacity. -->
   <FH_Item_FleshPack.description>配有适合血肉兽生长环境的背包，血肉兽可以以更小的体积压缩在里边。它可以增强佩戴者的寄生空间上限。</FH_Item_FleshPack.description>
   
   <!-- EN: flesh symbiosis module -->

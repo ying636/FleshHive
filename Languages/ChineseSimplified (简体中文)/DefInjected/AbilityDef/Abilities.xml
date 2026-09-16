@@ -6,7 +6,7 @@
   <!-- EN: Launch acid. -->
   <FH_Acidbulb_Launch.description>发射一枚酸液炮弹。</FH_Acidbulb_Launch.description>
   
-  <!-- EN: active parasitism -->
+  <!-- EN: active mutualism -->
   <FH_ActiveParasitism_Paraspike.label>主动寄生</FH_ActiveParasitism_Paraspike.label>
   <!-- EN: Select a target creature and parasitize it. -->
   <FH_ActiveParasitism_Paraspike.description>选择一个目标生物并寄生。</FH_ActiveParasitism_Paraspike.description>

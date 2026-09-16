@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>FH_DeathOnDowned</defName>
+    <label>pit horror</label>
+    <description>The survival of this underground hive is tied to this mother beast. Its death will cause the hive to collapse.</description>
+    <hediffClass>FleshHive.Hediff_DeathOnDowned</hediffClass>
+    <initialSeverity>1</initialSeverity>
+    <isBad>true</isBad>
+  </HediffDef>
+</Defs>

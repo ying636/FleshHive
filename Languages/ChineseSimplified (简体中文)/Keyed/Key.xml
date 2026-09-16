@@ -23,13 +23,13 @@
   <FleshParasitePod_InsufficientCapacity>无法寄生、空间不足</FleshParasitePod_InsufficientCapacity>
   <!-- EN: Select a living, player-controlled organic creature. -->
   <FH_ActiveParasitism_InvalidTarget>请选择一个存活且由我方控制的有机生物。</FH_ActiveParasitism_InvalidTarget>
-  <!-- EN: Active parasitism failed. Check the error log for details. -->
+  <!-- EN: Active mutualism failed. Check the error log for details. -->
   <FH_ActiveParasitism_Failed>主动寄生失败，请查看错误日志。</FH_ActiveParasitism_Failed>
   <!-- EN: Cannot parasite: requires {0} nutrition -->
   <FleshParasitePod_InsufficientNutrition>无法寄生，需要{0}营养</FleshParasitePod_InsufficientNutrition>
-  <!-- EN: Parasitism cost: {0} nutrition -->
+  <!-- EN: Mutualism cost: {0} nutrition -->
   <FleshParasitePod_NutritionCost>寄生消耗：{0}营养</FleshParasitePod_NutritionCost>
-  <!-- EN: A parasitism task already exists -->
+  <!-- EN: A mutualism task already exists -->
   <FleshParasitePod_CurQuest>已有寄生任务</FleshParasitePod_CurQuest>
   <!-- EN: Selected to parasite {0} with {1} -->
   <FleshParasitePod_SelectedParasitismTask>已选定执行{0}寄生{1}任务</FleshParasitePod_SelectedParasitismTask>
@@ -45,7 +45,7 @@
   <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
   <!-- EN: Progress: {0} -->
   <FleshParasitePod_Progress>进度：{0}</FleshParasitePod_Progress>
-  <!-- EN: Performing parasitism task -->
+  <!-- EN: Performing mutualism task -->
   <FleshParasitePod_Starting>正在执行寄生任务</FleshParasitePod_Starting>
   <!-- EN: Insert host -->
   <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
@@ -59,19 +59,19 @@
   <ParasitismCapacity>寄生空间：{0}/{1}</ParasitismCapacity>
   <!-- EN: Capacity cost: -->
   <ParasitismCapacityCost>空间占用：</ParasitismCapacityCost>
-  <!-- EN: {0} parasitism -->
+  <!-- EN: {0} mutualism -->
   <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
-  <!-- EN: Parasitism -->
+  <!-- EN: Mutualism -->
   <Tab_Parasitism>寄生</Tab_Parasitism>
   <!-- EN: Unparasitized -->
   <Unparasitized>未被寄生</Unparasitized>
   <!-- EN: Hunger rate offset: {0} -->
   <FH_HungerRate>饥饿速率偏移：{0}</FH_HungerRate>
-  <!-- EN: {0}: parasitism succeeded -->
+  <!-- EN: {0}: mutualism succeeded -->
   <ParasitismSucceed>{0}寄生成功</ParasitismSucceed>
   <!-- EN: {1} has successfully parasitized {0}. -->
   <ParasitismSucceedDesc>{1}已成功寄生于{0}体内。</ParasitismSucceedDesc>
-  <!-- EN: {0}: parasitism failed -->
+  <!-- EN: {0}: mutualism failed -->
   <ParasitismFail>{0}寄生失败</ParasitismFail>
   <!-- EN: The attempt to parasite {0} failed. The fleshbeast has been released. -->
   <ParasitismFailDesc>对{0}的寄生未能完成，血肉兽已被释放。</ParasitismFailDesc>
@@ -640,6 +640,8 @@
   <FH_Gestation_ReservedGroupTip>优先将生产出的血肉兽分配到此巢群；如果该巢群无法接收单位，则使用HCF的常规分配规则。</FH_Gestation_ReservedGroupTip>
   <!-- EN: No available groups on this map. -->
   <FH_Gestation_ReservedGroupUnavailable>当前地图没有可用巢群。</FH_Gestation_ReservedGroupUnavailable>
+  <!-- EN: FH_GroupHunt_BelowSafeCount -->
   <FH_GroupHunt_BelowSafeCount>低于安全狩猎数量</FH_GroupHunt_BelowSafeCount>
-  <FH_Dev_FinishMutualism>FH_Dev_FinishMutualism</FH_Dev_FinishMutualism>
+  <!-- EN: Finish Mutualism -->
+  <FH_Dev_FinishMutualism>完成寄生</FH_Dev_FinishMutualism>
 </LanguageData>

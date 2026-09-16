@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+
+  <!-- EN: flesh regeneration sac -->
   <FH_Job_EnterFleshRegenerationSac.reportString>血肉修复囊</FH_Job_EnterFleshRegenerationSac.reportString>
+
+  <FH_Job_CarryToFleshRegenerationSac.reportString>搬运倒地的节点群组单位到修复囊</FH_Job_CarryToFleshRegenerationSac.reportString>
 </LanguageData>

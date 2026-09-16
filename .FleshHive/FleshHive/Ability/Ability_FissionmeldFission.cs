@@ -62,11 +62,16 @@ public class CompAbilityEffect_FissionmeldFission : CompAbilityEffect
 
     private static void TryAssignEnemyLord(Pawn pawn, Map map)
     {
-        if (pawn.Faction == null || pawn.Faction.IsPlayer || !pawn.Faction.HostileTo(Faction.OfPlayer))
+        if (pawn.GetLord() != null
+            || pawn.Faction == null
+            || pawn.Faction.IsPlayer
+            || !pawn.Faction.HostileTo(Faction.OfPlayer))
         {
             return;
         }
-        Lord lord = map.lordManager.lords.FirstOrDefault(l => l.faction == pawn.Faction && l.CanAddPawn(pawn));
+        Lord lord = map.lordManager.lords.FirstOrDefault(l => l.faction == pawn.Faction
+            && !l.ownedPawns.Contains(pawn)
+            && l.CanAddPawn(pawn));
         lord?.AddPawn(pawn);
     }
 

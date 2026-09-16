@@ -23,6 +23,7 @@ public static class FleshHiveDefOf
     public static HediffDef FH_Trait_BoneSpurGrowth;
     public static HediffDef FH_Hela;
     public static HediffDef FH_HelaShardComa;
+    public static HediffDef FH_DeathOnDowned = null!;
     public static MutantDef FH_HelaSubhuman;
     public static HediffDef FH_MeldGrowth;
     public static HediffDef FH_Hediff_Upgrade_Reactivation;
@@ -43,6 +44,8 @@ public static class FleshHiveDefOf
     public static AbilityDef FH_SpikeLaunch_Synbulb;
     public static JobDef FH_FishAnimal;
     public static JobDef FH_Job_EnterFleshRegenerationSac = null!;
+
+    public static JobDef FH_Job_CarryToFleshRegenerationSac = null!;
     public static ThingDef FH_FleshRegenerationSac = null!;
 
     public static HairDef FH_Hair_Victoria;

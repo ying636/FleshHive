@@ -41,6 +41,7 @@ public class GenStep_Dreadmeld_FleshHive : GenStep_Dreadmeld
 
         Pawn mother = PawnGenerator.GeneratePawn(new PawnGenerationRequest(GetMotherKind(), Faction.OfEntities));
         FleshParasiteUtility.TryApplyDefaultParasites(mother);
+        mother.health.AddHediff(FleshHiveDefOf.FH_DeathOnDowned);
         GenSpawn.Spawn(mother, result, map, Rot4.Random);
 
         string signalTag = "dreadmeldApproached-" + Find.UniqueIDsManager.GetNextSignalTagID();

@@ -3,24 +3,21 @@ using Verse;
 
 namespace FleshHive;
 
-public class CompProperties_DreadmeldCollapse : CompProperties
-{
-    public CompProperties_DreadmeldCollapse()
-    {
-        compClass = typeof(CompDreadmeldCollapse);
-    }
-}
-
 public class CompDreadmeldCollapse : ThingComp
 {
     public override void Notify_Killed(Map prevMap, DamageInfo? dinfo = null)
     {
-        if (!ModLister.CheckAnomaly("Dreadmeld"))
+        BeginCollapse(prevMap);
+    }
+
+    private void BeginCollapse(Map map)
+    {
+        if (!ModsConfig.AnomalyActive)
         {
             return;
         }
 
-        UndercaveMapComponent? undercave = prevMap?.GetComponent<UndercaveMapComponent>();
+        UndercaveMapComponent? undercave = map?.GetComponent<UndercaveMapComponent>();
         if (undercave == null)
         {
             return;
@@ -28,7 +25,11 @@ public class CompDreadmeldCollapse : ThingComp
 
         if (undercave.pitGate == null)
         {
-            Log.Error("[FleshHive] 地下母兽死亡时找不到对应的 PitGate，无法开始坍塌。");
+            Log.Error("[FleshHive] Cannot begin undercave collapse: the mother's map has no PitGate.");
+            return;
+        }
+        if (undercave.pitGate.IsCollapsing)
+        {
             return;
         }
 

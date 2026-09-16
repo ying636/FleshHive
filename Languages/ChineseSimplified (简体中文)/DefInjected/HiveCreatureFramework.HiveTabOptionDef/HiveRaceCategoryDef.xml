@@ -31,9 +31,9 @@
   <!-- EN: Manage item production tasks for flesh hoppers. -->
   <FH_CategoryOption_ItemProduction.description>管理产出物喷口的物品生产任务。</FH_CategoryOption_ItemProduction.description>
   
-  <!-- EN: Parasitism -->
+  <!-- EN: Mutualism -->
   <FH_CategoryOption_Parasitism.label>血肉兽寄生</FH_CategoryOption_Parasitism.label>
-  <!-- EN: Manage fleshbeast parasitism tasks at flesh parasite vats. -->
+  <!-- EN: Manage fleshbeast mutualism tasks at flesh parasite vats. -->
   <FH_CategoryOption_Parasitism.description>管理血肉寄生仓中的血肉兽寄生任务。</FH_CategoryOption_Parasitism.description>
   
 </LanguageData>
