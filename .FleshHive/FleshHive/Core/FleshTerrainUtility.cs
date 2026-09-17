@@ -24,7 +24,7 @@ public static class FleshTerrainUtility
         }
 
         TerrainDef terrain = cell.GetTerrain(map);
-        return !IsFleshTerrain(terrain) && (terrain.natural || terrain.IsRock
+        return !IsFleshTerrain(terrain) && (terrain.IsWater || terrain.natural || terrain.IsRock
             || terrain.affordances.Contains(TerrainAffordanceDefOf.SmoothableStone) || terrain.defName == "Space");
     }
 

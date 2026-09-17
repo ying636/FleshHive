@@ -24,7 +24,7 @@ public class FleshSack : Building, IThingHolder
             return;
         }
         digestionProgress++;
-        float nutritionPerTick = 20f / 60000f * MapComponent_FleshHive.GetNutritionAbsorptionFactor(Map);
+        float nutritionPerTick = 10f / 60000f * MapComponent_FleshHive.GetNutritionAbsorptionFactor(Map);
         MapComponent_FleshHive.AddNutrition(Map, nutritionPerTick);
         if (digestionProgress >= totalDigestionTime)
         {
@@ -147,7 +147,7 @@ public class FleshSack : Building, IThingHolder
         int remainingTicks = Mathf.Max(totalDigestionTime - digestionProgress, 0);
         if (remainingTicks > 0)
         {
-            float nutritionPerTick = 20f / 60000f * MapComponent_FleshHive.GetNutritionAbsorptionFactor(Map);
+            float nutritionPerTick = 10f / 60000f * MapComponent_FleshHive.GetNutritionAbsorptionFactor(Map);
             MapComponent_FleshHive.AddNutrition(Map, remainingTicks * nutritionPerTick);
         }
 

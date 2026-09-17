@@ -316,7 +316,7 @@
     <costList>
       <Meat_Twisted>1280</Meat_Twisted>
     </costList>
-    <thingClass>Building</thingClass>
+    <thingClass>FleshHive.Building_FleshDigester</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshDigester/Main</texPath>
       <graphicClass>Graphic_Indexed</graphicClass>
@@ -347,7 +347,8 @@
     </tradeTags>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-      <isInert>true</isInert>
+      <isInert>false</isInert>
+      <ai_combatDangerous>true</ai_combatDangerous>
       <claimable>false</claimable>
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>false</deconstructible>
@@ -396,7 +397,7 @@
     <costList>
       <Meat_Twisted>320</Meat_Twisted>
     </costList>
-    <thingClass>Building</thingClass>
+    <thingClass>FleshHive.Building_FleshDigester</thingClass>
     <graphicData>
       <texPath>Things/Building/FH_FleshDigester/Small</texPath>
       <graphicClass>Graphic_Indexed</graphicClass>
@@ -427,7 +428,8 @@
     </tradeTags>
     <building>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-      <isInert>true</isInert>
+      <isInert>false</isInert>
+      <ai_combatDangerous>true</ai_combatDangerous>
       <claimable>false</claimable>
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>false</deconstructible>

@@ -3,11 +3,23 @@
 
   <DutyDef>
     <defName>FH_GroupHuntGather</defName>
-    <thinkNode Class="FleshHive.JobGiver_GroupHuntGather" />
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
+        <li Class="FleshHive.JobGiver_GroupHuntGather" />
+      </subNodes>
+    </thinkNode>
   </DutyDef>
   <DutyDef>
     <defName>FH_GroupHuntExecute</defName>
-    <thinkNode Class="FleshHive.JobGiver_GroupHuntExecute" />
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
+        <li Class="FleshHive.JobGiver_GroupHuntExecute" />
+      </subNodes>
+    </thinkNode>
   </DutyDef>
   <!-- 通用近战 -->
   <DutyDef>
@@ -21,6 +33,8 @@
           <targetKeepRadius>24</targetKeepRadius>
           <allowTurrets>true</allowTurrets>
         </li>
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
         <li Class="ThinkNode_ForbidOutsideFlagRadius">
           <maxDistToSquadFlag>18</maxDistToSquadFlag>
         </li>
@@ -43,6 +57,8 @@
           <enemyDistToFleeRange>4.9</enemyDistToFleeRange>
           <fleeDistRange>6~12</fleeDistRange>
         </li>
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
         <li Class="ThinkNode_ForbidOutsideFlagRadius">
           <maxDistToSquadFlag>18</maxDistToSquadFlag>
         </li>
@@ -263,6 +279,8 @@
     <alwaysShowWeapon>true</alwaysShowWeapon>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
         <li Class="FleshHive.ThinkNode_FleshbeastEscortSkillDuty" />
         <li Class="JobGiver_TakeCombatEnhancingDrug">
           <onlyIfInDanger>true</onlyIfInDanger>
@@ -301,6 +319,8 @@
         <li Class="JobGiver_AITrashColonyClose" />
         <li Class="JobGiver_AITrashBuildingsDistant" />
         <li Class="JobGiver_AIGotoNearestHostile" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
       </subNodes>
     </thinkNode>
   </DutyDef>
@@ -323,6 +343,8 @@
         <li Class="JobGiver_AITrashColonyClose" />
         <li Class="JobGiver_AITrashBuildingsDistant" />
         <li Class="JobGiver_AIGotoNearestHostile" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
       </subNodes>
     </thinkNode>
   </DutyDef>

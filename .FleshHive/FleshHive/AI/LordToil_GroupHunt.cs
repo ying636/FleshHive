@@ -88,6 +88,7 @@ public class LordToil_GroupHunt : LordToil
         {
             EndHuntCycle();
             UpdateAllDuties();
+            InterruptActiveJobs();
             return;
         }
 
@@ -290,7 +291,8 @@ public class LordToil_GroupHunt : LordToil
 
     private void EndHuntCycle()
     {
-        Corpse corpse = currentPrey?.Corpse;
+        Pawn? prey = currentPrey;
+        Corpse corpse = prey?.Corpse;
         if (corpse != null && !corpse.Destroyed)
         {
             corpse.SetForbidden(false);
@@ -300,7 +302,15 @@ public class LordToil_GroupHunt : LordToil
         huntStarted = false;
         waitingForRecovery = true;
         nextPreySearchTick = Find.TickManager.TicksGame + CheckInterval;
-        InterruptActiveJobs();
+        if (prey != null && group.Target.Thing == prey)
+        {
+            IntVec3 waitingPoint = group.Position;
+            if (group.Target.Map != Map || !waitingPoint.IsValid || !waitingPoint.InBounds(Map))
+            {
+                waitingPoint = GetSearchOrigin();
+            }
+            group.SetTarget(new TargetInfo(waitingPoint, Map), false);
+        }
     }
 
     public const float GatherRadius = 9f;

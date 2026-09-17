@@ -9,16 +9,10 @@ public class JobGiver_GroupHuntGather : ThinkNode_JobGiver
     protected override Job? TryGiveJob(Pawn pawn)
     {
         Pawn? prey = pawn.mindState.duty?.focus.Pawn;
-        if (prey == null || !prey.Spawned || prey.Dead || prey.Map != pawn.Map)
+        if (prey == null || !prey.Spawned || prey.Dead || prey.Map != pawn.Map
+            || pawn.Position.InHorDistOf(prey.Position, LordToil_GroupHunt.GatherRadius))
         {
-            return JobMaker.MakeJob(JobDefOf.Wait_Wander);
-        }
-
-        if (pawn.Position.InHorDistOf(prey.Position, LordToil_GroupHunt.GatherRadius))
-        {
-            Job wait = JobMaker.MakeJob(JobDefOf.Wait_Wander);
-            wait.expiryInterval = WaitTicks;
-            return wait;
+            return JobMaker.MakeJob(JobDefOf.Wait_Wander, WaitTicks);
         }
 
         IntVec3 destination = CellFinder.RandomClosewalkCellNear(prey.Position, pawn.Map, DestinationRadius);

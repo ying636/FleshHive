@@ -25,7 +25,6 @@
       <li>FleshHive.ITab_FleshHive</li>
       <li>FleshHive.ITab_FleshHiveGroup</li>
       <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
-      <li>HiveCreatureFramework.ITab_HiveBuilding</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>1300</MaxHitPoints>
@@ -228,7 +227,6 @@
     <inspectorTabs>
       <li>FleshHive.ITab_FleshHive</li>
       <li>FleshHive.ITab_FleshHiveGroup</li>
-      <li>HiveCreatureFramework.ITab_HiveBuilding</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>2200</MaxHitPoints>

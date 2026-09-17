@@ -50,8 +50,6 @@
 
         <li Class="HiveCreatureFramework.JobGiver_EnterFuser" />
         <li Class="FleshHive.JobGiver_EnterFleshRegenerationSac" />
-        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
-        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
         <li Class="FleshHive.ThinkNode_AssaultOverrideDutyAttack" />
         <li Class="ThinkNode_Subtree">
           <treeDef>HCF_ThinkTree_LordDuty</treeDef>

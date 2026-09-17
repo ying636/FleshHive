@@ -41,6 +41,10 @@ public class CompProperties_FleshDigester : CompProperties
 
 public class CompFleshDigester : ThingComp
 {
+    public LocalTargetInfo CurrentTarget => attackTargets.Count > 0
+        ? new LocalTargetInfo(attackTargets[0])
+        : LocalTargetInfo.Invalid;
+
     private CompProperties_FleshDigester Props => (CompProperties_FleshDigester)props;
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
