@@ -296,7 +296,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshmassSpitter</defName>
     <label>fleshmass spitter</label>
-    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.</description>
+    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.\n\nConsumes 1 hive nutrition per day.</description>
     <building>FH_FleshmassSpitter</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>300</workAmount>
@@ -337,7 +337,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshDigester</defName>
     <label>flesh digester</label>
-    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 4 hive nutrition per day and increases hive activity by 0.02 per hour.</description>
     <building>FH_FleshDigester</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>520</workAmount>
@@ -359,7 +359,7 @@
   <FleshHive.FleshHiveBuildingDef>
     <defName>FH_Building_FleshDigesterS</defName>
     <label>small flesh digester</label>
-    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 0.5 hive nutrition per day.</description>
     <building>FH_FleshDigesterS</building>
     <category>FH_BuildingCategory_Flesh</category>
     <workAmount>130</workAmount>

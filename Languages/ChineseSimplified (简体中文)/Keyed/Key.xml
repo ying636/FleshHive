@@ -644,4 +644,6 @@
   <FH_GroupHunt_BelowSafeCount>低于安全狩猎数量</FH_GroupHunt_BelowSafeCount>
   <!-- EN: Finish Mutualism -->
   <FH_Dev_FinishMutualism>完成寄生</FH_Dev_FinishMutualism>
+  <FH_FusionRemodelingLetterLabel>血肉重塑</FH_FusionRemodelingLetterLabel>
+  <FH_FusionRemodelingLetterText>某个极为遥远的地方正在发出一阵阵的黑暗灵能脉冲，现实在脉冲之中扭曲重塑，一些我们熟知或尚未熟知的事物已然发生了改变\n\n大型血肉兽的融合配方修改了，已经发现的组合会直接解锁对应的配方，已经发现的配方也不需要再发现一次，会直接解锁</FH_FusionRemodelingLetterText>
 </LanguageData>

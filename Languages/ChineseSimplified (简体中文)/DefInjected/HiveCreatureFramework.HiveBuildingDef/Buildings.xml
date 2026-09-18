@@ -48,13 +48,13 @@
   
   <!-- EN: flesh digester -->
   <FH_Building_FleshDigester.label>警卫触手中枢</FH_Building_FleshDigester.label>
-  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. -->
-  <FH_Building_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。</FH_Building_FleshDigester.description>
+  <!-- EN: A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 4 hive nutrition per day and increases hive activity by 0.02 per hour. -->
+  <FH_Building_FleshDigester.description>血肉巢穴中负责警卫的神经中枢器官。它会活性化附近的血肉板块，当敌人经过这些地面时，就会有触手生长出来阻碍敌人移动并对其造成伤害。\n\n每日消耗巢穴4营养，每小时提升0.02巢穴活跃。</FH_Building_FleshDigester.description>
   
   <!-- EN: small flesh digester -->
   <FH_Building_FleshDigesterS.label>警卫触手</FH_Building_FleshDigesterS.label>
-  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage. -->
-  <FH_Building_FleshDigesterS.description>负责警卫血肉巢穴的小型神经中枢器官。它会活化附近的血肉，使其抽打入侵者、阻碍移动并造成伤害。</FH_Building_FleshDigesterS.description>
+  <!-- EN: A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 0.5 hive nutrition per day. -->
+  <FH_Building_FleshDigesterS.description>负责警卫血肉巢穴的小型神经中枢器官。它会活化附近的血肉，使其抽打入侵者、阻碍移动并造成伤害。\n\n每日消耗巢穴0.5营养。</FH_Building_FleshDigesterS.description>
   
   <!-- EN: flesh door -->
   <FH_Building_FleshDoor.label>血肉门</FH_Building_FleshDoor.label>
@@ -83,8 +83,8 @@
   
   <!-- EN: fleshmass spitter -->
   <FH_Building_FleshmassSpitter.label>血肉喷吐器</FH_Building_FleshmassSpitter.label>
-  <!-- EN: A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass. -->
-  <FH_Building_FleshmassSpitter.description>可远距离喷吐酸性涎液的防御性血肉块器官。这种酸性涎液是从周围生物质中过滤出的天然有毒副产物。</FH_Building_FleshmassSpitter.description>
+  <!-- EN: A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.\n\nConsumes 1 hive nutrition per day. -->
+  <FH_Building_FleshmassSpitter.description>可远距离喷吐酸性涎液的防御性血肉块器官。这种酸性涎液是从周围生物质中过滤出的天然有毒副产物。\n\n每日消耗巢穴1营养。</FH_Building_FleshmassSpitter.description>
   
   <!-- EN: flesh parasite vat -->
   <FH_Building_FleshParasiteVat.label>血肉寄生仓</FH_Building_FleshParasiteVat.label>

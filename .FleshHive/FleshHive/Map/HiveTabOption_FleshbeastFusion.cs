@@ -472,7 +472,12 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
         List<(FusionDef Fusion, IReadOnlyList<ThingDef> Materials)> recipes = new();
         foreach (FusionDefData data in GameComponent_UnitGroup.Instance.fusionDatas)
         {
-            FusionDef? fusion = data?.def;
+            if (data == null)
+            {
+                continue;
+            }
+
+            FusionDef? fusion = data.def;
             if (fusion == null || fusion != fuser.Props.defaultFusion
                 && fusion.category != fuser.Props.category
                 && fusion.category != fuser.Props.largeCategory)
@@ -484,7 +489,10 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
             {
                 foreach (FusionRecipe recipe in data.Recipes.Where(recipe => !recipe.materials.NullOrEmpty()))
                 {
-                    recipes.Add((fusion, recipe.materials));
+                    if (!HasUnlockedSpecificRecipe(recipe.materials, fuser))
+                    {
+                        recipes.Add((fusion, recipe.materials));
+                    }
                 }
                 continue;
             }
@@ -500,6 +508,53 @@ public class HiveTabOption_FleshbeastFusion : HiveTabOption_FleshHive
         }
 
         return recipes;
+    }
+
+    private bool HasUnlockedSpecificRecipe(IReadOnlyList<ThingDef> materials, CompFleshHiveUnitFuser fuser)
+    {
+        foreach (FusionDefData data in GameComponent_UnitGroup.Instance.fusionDatas)
+        {
+            if (data == null)
+            {
+                continue;
+            }
+
+            FusionDef? fusion = data.def;
+            if (fusion == null || fusion.isDefault || !data.unlocked
+                || fusion.category != fuser.Props.category && fusion.category != fuser.Props.largeCategory)
+            {
+                continue;
+            }
+
+            if (MaterialDefsMatch(materials, GetFusionMaterialDefs(data)))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool MaterialDefsMatch(IReadOnlyList<ThingDef> left, IReadOnlyList<ThingDef> right)
+    {
+        if (left.Count != right.Count)
+        {
+            return false;
+        }
+
+        List<ThingDef> remaining = right.ToList();
+        foreach (ThingDef def in left)
+        {
+            int index = remaining.IndexOf(def);
+            if (index < 0)
+            {
+                return false;
+            }
+
+            remaining.RemoveAt(index);
+        }
+
+        return remaining.Count == 0;
     }
 
     private List<ThingDef> GetFusionMaterialDefs(FusionDefData data)

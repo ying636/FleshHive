@@ -3,7 +3,7 @@
   <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
     <defName>FH_SummonNexusmeld</defName>
     <label>draw nexusmeld</label>
-    <description>Create a psychic pulse which will draw a nexusmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <description>Create a psychic pulse that draws a nexusmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
     <requiredDiscovery>PitGate</requiredDiscovery>
     <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
     <hoursUntilOutcome>2</hoursUntilOutcome>
@@ -35,7 +35,7 @@
   <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
     <defName>FH_SummonDreadmeld</defName>
     <label>draw dreadmeld</label>
-    <description>Create a psychic pulse which will draw a dreadmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <description>Create a psychic pulse that draws a dreadmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
     <requiredDiscovery>PitGate</requiredDiscovery>
     <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
     <hoursUntilOutcome>2</hoursUntilOutcome>
@@ -67,7 +67,7 @@
   <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
     <defName>FH_SummonFuriousmeld</defName>
     <label>draw furiousmeld</label>
-    <description>Create a psychic pulse which will draw a furiousmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <description>Create a psychic pulse that draws a furiousmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
     <requiredDiscovery>PitGate</requiredDiscovery>
     <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
     <hoursUntilOutcome>2</hoursUntilOutcome>
@@ -99,7 +99,7 @@
   <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
     <defName>FH_SummonBastionmeld</defName>
     <label>draw bastionmeld</label>
-    <description>Create a psychic pulse which will draw a bastionmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <description>Create a psychic pulse that draws a bastionmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
     <requiredDiscovery>PitGate</requiredDiscovery>
     <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
     <hoursUntilOutcome>2</hoursUntilOutcome>
@@ -131,7 +131,7 @@
   <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
     <defName>FH_SummonFissionmeld</defName>
     <label>draw fissionmeld</label>
-    <description>Create a psychic pulse which will draw a fissionmeld to dig upwards and emerge near your enemies. Lower-quality rituals are less precise and will attract more fleshbeast escorts.</description>
+    <description>Create a psychic pulse that draws a fissionmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
     <requiredDiscovery>PitGate</requiredDiscovery>
     <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
     <hoursUntilOutcome>2</hoursUntilOutcome>

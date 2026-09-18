@@ -148,7 +148,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshmassSpitter</defName>
     <label>fleshmass spitter</label>
-    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.</description>
+    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.\n\nConsumes 1 hive nutrition per day.</description>
     <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
     <costList>
       <Meat_Twisted>160</Meat_Twisted>
@@ -227,6 +227,9 @@
       </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(2,2)</size>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>1</dailyNutritionCost>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshmassSpitter</building>
@@ -311,7 +314,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshDigester</defName>
     <label>flesh digester</label>
-    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 4 hive nutrition per day and increases hive activity by 0.02 per hour.</description>
     <researchPrerequisites><li>FH_Research_ComplexImmuneSystem</li></researchPrerequisites>
     <costList>
       <Meat_Twisted>1280</Meat_Twisted>
@@ -358,6 +361,10 @@
     </building>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>4</dailyNutritionCost>
+        <activityPerHour>0.02</activityPerHour>
+      </li>
       <li Class="FleshHive.CompProperties_FleshDigester">
         <attackDurationTicks>90</attackDurationTicks>
         <attackMouthOpenTicks>60</attackMouthOpenTicks>
@@ -392,7 +399,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>FH_FleshDigesterS</defName>
     <label>small flesh digester</label>
-    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.</description>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 0.5 hive nutrition per day.</description>
     <researchPrerequisites><li>FH_Research_ImmuneSystem</li></researchPrerequisites>
     <costList>
       <Meat_Twisted>320</Meat_Twisted>
@@ -439,6 +446,9 @@
     </building>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>0.5</dailyNutritionCost>
+      </li>
       <li Class="FleshHive.CompProperties_FleshDigester">
         <attackDurationTicks>90</attackDurationTicks>
         <attackMouthOpenTicks>60</attackMouthOpenTicks>

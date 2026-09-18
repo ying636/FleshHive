@@ -87,6 +87,8 @@ public class CompProperties_HiveNutritionUpkeep : CompProperties
     }
 
     public float dailyNutritionCost = 1f;
+
+    public float activityPerHour;
 }
 
 public class CompHiveNutritionUpkeep : ThingComp
@@ -106,13 +108,18 @@ public class CompHiveNutritionUpkeep : ThingComp
         }
 
         ticksUntilUpkeep--;
-        if (ticksUntilUpkeep > 0)
+        if (ticksUntilUpkeep <= 0)
         {
-            return;
+            ticksUntilUpkeep = GenDate.TicksPerDay;
+            TryConsumeUpkeep();
         }
 
-        ticksUntilUpkeep = GenDate.TicksPerDay;
-        TryConsumeUpkeep();
+        ticksUntilActivityIncrease--;
+        if (ticksUntilActivityIncrease <= 0)
+        {
+            ticksUntilActivityIncrease = GenDate.TicksPerHour;
+            TryIncreaseActivity();
+        }
     }
 
     public override string CompInspectStringExtra()
@@ -130,6 +137,7 @@ public class CompHiveNutritionUpkeep : ThingComp
     {
         base.PostExposeData();
         Scribe_Values.Look(ref ticksUntilUpkeep, "ticksUntilUpkeep", GenDate.TicksPerDay);
+        Scribe_Values.Look(ref ticksUntilActivityIncrease, "ticksUntilActivityIncrease", GenDate.TicksPerHour);
     }
 
     private void TryConsumeUpkeep()
@@ -143,5 +151,21 @@ public class CompHiveNutritionUpkeep : ThingComp
         fleshHive.nutrition = Mathf.Max(0f, fleshHive.nutrition - Props.dailyNutritionCost);
     }
 
+    private void TryIncreaseActivity()
+    {
+        if (Props.activityPerHour <= 0f)
+        {
+            return;
+        }
+
+        MapComponent_FleshHive? mapComp = parent.Map?.GetComponent<MapComponent_FleshHive>();
+        if (mapComp != null)
+        {
+            mapComp.Activity += Props.activityPerHour;
+        }
+    }
+
     private int ticksUntilUpkeep = GenDate.TicksPerDay;
+
+    private int ticksUntilActivityIncrease = GenDate.TicksPerHour;
 }

@@ -331,4 +331,6 @@
   <FH_Gestation_ReservedGroupUnavailable>No available groups on this map.</FH_Gestation_ReservedGroupUnavailable>
   <FH_GroupHunt_BelowSafeCount>FH_GroupHunt_BelowSafeCount</FH_GroupHunt_BelowSafeCount>
   <FH_Dev_FinishMutualism>Finish Mutualism</FH_Dev_FinishMutualism>
+  <FH_FusionRemodelingLetterLabel>Flesh Reshaping</FH_FusionRemodelingLetterLabel>
+  <FH_FusionRemodelingLetterText>Somewhere unimaginably distant, waves of dark psychic pulses are emanating. Reality twists and reshapes within them, and some things familiar to us—or not yet known to us—have already changed.\n\nLarge fleshbeast fusion recipes have been changed. Combinations you have already discovered will directly unlock their corresponding recipes, and recipes you have already discovered will remain unlocked without needing to be discovered again.</FH_FusionRemodelingLetterText>
 </LanguageData>
