@@ -21,6 +21,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     private CachedTexture MenuIcon => menuIcon ??= new CachedTexture("UI/Buttons/MainButtons/Menu");
     private Texture2D MaintenanceSettingsIconTex => maintenanceSettingsIconTex ??= ContentFinder<Texture2D>.Get("UI/Group/WorkMode/MechRechargeSettings");
     private Texture2D MiscSettingsIconTex => miscSettingsIconTex ??= ContentFinder<Texture2D>.Get("UI/Icon_Edit");
+    private Texture2D AcceptAllIconTex => acceptAllIconTex ??= ContentFinder<Texture2D>.Get("UI/Icon_AcceptAll");
 
     public override void Draw(List<Pawn> pawns, HiveRaceCategoryDef def, Rect inRect)
     {
@@ -305,11 +306,36 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
             group.OpenWorkSettings();
         });
 
+        controlRect.x += GroupControlSize + GroupControlGap;
+        DrawGroupButton(controlRect, AcceptAllIconTex, "HCF_AcceptAll".Translate(), () => AcceptAllUnits(group));
+
         if (isTemporary)
         {
             controlRect.x += GroupControlSize + GroupControlGap;
             DrawGroupButton(controlRect, TexButton.Reload, "FH_FleshManagement_RecallTemporary".Translate(),
                 () => RecallTemporaryUnits(group, mapComp));
+        }
+    }
+
+    private void AcceptAllUnits(UnitGroup group)
+    {
+        if (group.Map is not { } currentMap)
+        {
+            return;
+        }
+
+        foreach (Pawn pawn in currentMap.mapPawns.AllPawnsSpawned.ToList())
+        {
+            UnitComp? comp = HCFGameUtility.GetUnitComp(pawn);
+            if (comp == null || comp.group == group || comp.group?.hive?.Map == currentMap)
+            {
+                continue;
+            }
+
+            if (group.CanAccept(pawn).Accepted)
+            {
+                group.AcceptUnit(pawn);
+            }
         }
     }
 
@@ -627,16 +653,9 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
             .Where(group => group != mapComp.group)
             .GroupBy(group => group.hive))
         {
-            if (groupSet.Key is Building)
+            foreach (UnitGroup group in groupSet)
             {
-                foreach (UnitGroup group in groupSet)
-                {
-                    yield return new FleshHiveGroupEntry(groupSet.Key, new List<UnitGroup> { group }, false);
-                }
-            }
-            else
-            {
-                yield return new FleshHiveGroupEntry(groupSet.Key, groupSet.ToList(), false);
+                yield return new FleshHiveGroupEntry(groupSet.Key, new List<UnitGroup> { group }, false);
             }
         }
 
@@ -697,6 +716,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     private CachedTexture? menuIcon;
     private Texture2D? maintenanceSettingsIconTex;
     private Texture2D? miscSettingsIconTex;
+    private Texture2D? acceptAllIconTex;
 
     private const float SummaryBaseHeight = 125f;
     private const float RowHeight = 166f;
@@ -707,7 +727,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     private const float ScaleBlockStride = ScaleBlockSize + ScaleBlockGap;
     private const float GroupControlSize = 26f;
     private const float GroupControlGap = 4f;
-    private const int GroupControlCount = 6;
+    private const int GroupControlCount = 7;
     private static readonly Color NutritionBarColor = new Color(0.55f, 0.28f, 0.25f);
     private static readonly Color ActivityBarColor = new Color(0.42f, 0.55f, 0.55f);
     private static readonly Color ActivityDangerBarColor = new Color(0.75f, 0.08f, 0.08f);
@@ -743,11 +763,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
                     return "FH_FleshManagement_TemporaryGroup".Translate();
                 }
 
-                if (hive is Pawn node)
-                {
-                    return node.LabelCap;
-                }
-                if (hive is Building)
+                if (hive is Pawn or Building)
                 {
                     return groups.FirstOrDefault(group => group != null)?.RenamableLabel ?? "FH_FleshManagement_NoHive".Translate();
                 }

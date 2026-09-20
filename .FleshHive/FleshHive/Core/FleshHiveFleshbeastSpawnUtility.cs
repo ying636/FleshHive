@@ -94,7 +94,7 @@ public static class FleshHiveFleshbeastSpawnUtility
 
     public static void SpawnRandomByCount(IEnumerable<PawnKindDef> options, int count, Faction faction, IntVec3 position, Map map, int spawnRadius, bool makeFilth = true, Pawn? sourcePawn = null)
     {
-        List<PawnKindDef> spawnOptions = ValidOptions(options);
+        List<PawnKindDef> spawnOptions = ValidOptions(options, IsValidSplitSpawnKind);
         if (spawnOptions.Count == 0 || map == null || count <= 0)
         {
             return;
@@ -115,14 +115,15 @@ public static class FleshHiveFleshbeastSpawnUtility
 
     public static void SpawnRandomBySize(FleshBeastSize size, int count, Faction faction, IntVec3 position, Map map, int spawnRadius, Pawn? sourcePawn = null, bool makeFilth = true, bool tryAssignEnemyLord = false)
     {
-        if (map == null || count <= 0)
+        List<PawnKindDef> spawnOptions = ValidOptions(FleshBeastKindUtility.KindsOfSize(size), IsValidSplitSpawnKind);
+        if (spawnOptions.Count == 0 || map == null || count <= 0)
         {
             return;
         }
 
         for (int i = 0; i < count; i++)
         {
-            Pawn pawn = GenerateRandomPawn(size, faction);
+            Pawn pawn = GeneratePawn(spawnOptions.RandomElement(), faction);
             SpawnPawnAsFlyer(pawn, position, map, spawnRadius, sourcePawn, tryAssignEnemyLord);
         }
 
@@ -144,7 +145,7 @@ public static class FleshHiveFleshbeastSpawnUtility
             return;
         }
 
-        foreach (Pawn pawn in GenerateRandomByPoints(options, targetPoints, faction))
+        foreach (Pawn pawn in GenerateRandomByPoints(ValidOptions(options, IsValidSplitSpawnKind), targetPoints, faction))
         {
             SpawnPawnAsFlyer(pawn, position, map, spawnRadius, sourcePawn, tryAssignEnemyLord);
         }
@@ -162,10 +163,6 @@ public static class FleshHiveFleshbeastSpawnUtility
             if (pawn.TryGetComp<CompInspectStringEmergence>() is { } emergence)
             {
                 emergence.sourcePawn = sourcePawn;
-            }
-            if (pawn is FleshReplicaUnit replica)
-            {
-                replica.MarkAsSplitSpawn();
             }
         }
         GenSpawn.Spawn(pawn, position, map, WipeMode.VanishOrMoveAside);
@@ -202,6 +199,11 @@ public static class FleshHiveFleshbeastSpawnUtility
         }
 
         return options.Where(kind => kind != null && (validator == null || validator(kind))).ToList();
+    }
+
+    private static bool IsValidSplitSpawnKind(PawnKindDef kind)
+    {
+        return kind.defName != "FH_FleshReplica";
     }
 
     private static void TryAssignEnemyLord(Pawn pawn, Map map)
