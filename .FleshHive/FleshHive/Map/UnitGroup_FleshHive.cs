@@ -124,7 +124,7 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
         Widgets.EndScrollView();
     }
 
-    void IExposable.ExposeData()
+    public override void ExposeData()
     {
         base.ExposeData();
         Scribe_Values.Look(ref allowHuntUndesignatedAnimals, "allowHuntUndesignatedAnimals");

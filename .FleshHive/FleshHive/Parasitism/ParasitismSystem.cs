@@ -387,13 +387,13 @@ public class ParasitismSystem : HediffWithComps
         }
 
         Lord lord = originalLord;
-        if (lord == null || !map.lordManager.lords.Contains(lord) || !lord.CanAddPawn(flesh))
+        if (!CanAssignReleasedParasiteToLord(lord, flesh, map))
         {
             lord = map.lordManager.lords.FirstOrDefault(candidate =>
-                candidate.faction == flesh.Faction && candidate.CanAddPawn(flesh));
+                candidate.faction == flesh.Faction && CanAssignReleasedParasiteToLord(candidate, flesh, map));
         }
 
-        if (lord != null && map.lordManager.lords.Contains(lord) && lord.CanAddPawn(flesh))
+        if (CanAssignReleasedParasiteToLord(lord, flesh, map))
         {
             lord.AddPawn(flesh);
             return;
@@ -403,6 +403,28 @@ public class ParasitismSystem : HediffWithComps
         {
             flesh.SetFaction(this.pawn.Faction);
         }
+
+        if (flesh.Faction != null && !flesh.Faction.IsPlayer && flesh.Faction.HostileTo(Faction.OfPlayer))
+        {
+            LordMaker.MakeNewLord(flesh.Faction, new LordJob_FleshbeastAssault(), map, new[] { flesh });
+        }
+    }
+
+    private static bool CanAssignReleasedParasiteToLord(Lord lord, Pawn flesh, Map map)
+    {
+        if (lord == null || !map.lordManager.lords.Contains(lord))
+        {
+            return false;
+        }
+        if (lord.CurLordToil is LordToil_PsychicRitual)
+        {
+            return false;
+        }
+        if (lord.LordJob is LordJob_HateChant && lord.CurLordToil is not LordToil_AssaultColony)
+        {
+            return false;
+        }
+        return lord.CanAddPawn(flesh);
     }
 
     public void EnsureSynchronizedReplicaSpawned(Pawn flesh)

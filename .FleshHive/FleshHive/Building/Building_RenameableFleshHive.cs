@@ -24,6 +24,11 @@ public class Building_RenameableFleshHive : Building_Hive, IRenameable
             yield return gizmo;
         }
 
+        if (Faction == RimWorld.Faction.OfPlayer && Map?.GetComponent<MapComponent_FleshHive>() is { } mapComp)
+        {
+            yield return new Gizmo_FleshHiveDailySummary(mapComp);
+        }
+
         if (this.TryGetComp<CompFleshHiveEvolution>() is { CanShowEvolutionButton: true } evolution)
         {
             yield return evolution.CreateEvolutionCommand();

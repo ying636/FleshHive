@@ -162,6 +162,20 @@ public class MapComponent_FleshHive : MapComponent
         }
     }
 
+    public void GetDailyHiveSummary(out float nutritionUpkeep, out float activityIncrease)
+    {
+        int currentTick = Find.TickManager.TicksGame;
+        if (dailyHiveSummaryUpdateTick < 0
+            || currentTick < dailyHiveSummaryUpdateTick
+            || currentTick - dailyHiveSummaryUpdateTick >= DailyHiveSummaryUpdateInterval)
+        {
+            RefreshDailyHiveSummary(currentTick);
+        }
+
+        nutritionUpkeep = cachedDailyNutritionUpkeep;
+        activityIncrease = cachedDailyActivityIncrease;
+    }
+
     public List<CompHiveSpawner_FleshTrait> GetFleshbeastSpawners()
     {
         return map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshHive)
@@ -1251,6 +1265,46 @@ public class MapComponent_FleshHive : MapComponent
         return pressure;
     }
 
+    private void RefreshDailyHiveSummary(int currentTick)
+    {
+        float nutritionUpkeep = 0f;
+        float activityIncrease = GetActivityGrowthPerDay();
+        foreach (Building building in CachedFleshBuildings)
+        {
+            if (building == null
+                || building.Destroyed
+                || !building.Spawned
+                || building.Map != map
+                || building.Faction != Faction.OfPlayer)
+            {
+                continue;
+            }
+
+            CompHiveNutritionUpkeep upkeep = building.TryGetComp<CompHiveNutritionUpkeep>();
+            if (upkeep != null)
+            {
+                nutritionUpkeep += upkeep.DailyNutritionCost;
+                activityIncrease += upkeep.DailyActivityIncrease;
+            }
+
+            CompFleshPowerPlant powerPlant = building.TryGetComp<CompFleshPowerPlant>();
+            if (powerPlant != null)
+            {
+                nutritionUpkeep += powerPlant.DailyNutritionCost;
+            }
+
+            CompHiveNutritionProducer producer = building.TryGetComp<CompHiveNutritionProducer>();
+            if (producer != null)
+            {
+                activityIncrease += producer.DailyActivityIncrease;
+            }
+        }
+
+        cachedDailyNutritionUpkeep = nutritionUpkeep;
+        cachedDailyActivityIncrease = activityIncrease;
+        dailyHiveSummaryUpdateTick = currentTick;
+    }
+
     public bool HasUpgradeEffect(FleshHiveUpgradeEffect effect)
     {
         return MapFleshHive.completedUpgrades.Any(upgrade => upgrade != null && upgrade.effect == effect);
@@ -1850,6 +1904,9 @@ public class MapComponent_FleshHive : MapComponent
     private Dictionary<UnitDef, int> unitMaximumTargets = new Dictionary<UnitDef, int>();
     private int fleshBushCycleIndex;
     private int planCheckIntervalTicks;
+    private int dailyHiveSummaryUpdateTick = -1;
+    private float cachedDailyNutritionUpkeep;
+    private float cachedDailyActivityIncrease;
     private bool nutritionClampPending;
     private const int ResourceTransportInterval = 250;
     private const int BoneSpearRefuelCheckInterval = GenDate.TicksPerHour * 3;
@@ -1878,6 +1935,7 @@ public class MapComponent_FleshHive : MapComponent
     private const int SelfRepairTickInterval = GenDate.TicksPerHour;
     private const int SelfRepairHitPointsPerTick = 200;
     private const int DefaultPlanCheckIntervalTicks = GenDate.TicksPerHour * 6;
+    private const int DailyHiveSummaryUpdateInterval = 60;
     private const float SelfRepairNutritionPerHitPoint = 0.02f;
     private const string FleshBuildingTradeTag = "FH_FleshBuilding";
     private static readonly Dictionary<Map, MapFleshHive> mapFleshHives = new Dictionary<Map, MapFleshHive>();

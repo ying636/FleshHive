@@ -110,6 +110,8 @@
   <FH_FleshManagement_HiveCapacityTooltip>Fleshbeast scale: {0} / {1}</FH_FleshManagement_HiveCapacityTooltip>
   <FH_FleshManagement_Nutrition>Nutrition</FH_FleshManagement_Nutrition>
   <FH_FleshManagement_Activity>Activity</FH_FleshManagement_Activity>
+  <FH_HiveDailyUpkeep>Daily hive upkeep: {0}</FH_HiveDailyUpkeep>
+  <FH_HiveDailyActivityIncrease>Daily hive activity increase: {0}</FH_HiveDailyActivityIncrease>
   <FH_FleshManagement_ActivityTooltip>Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot.</FH_FleshManagement_ActivityTooltip>
   <FH_FleshManagement_AutoSuppressTooltip>Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold.</FH_FleshManagement_AutoSuppressTooltip>
   <FH_FleshManagement_ActivityThreshold>Suppression threshold: {0}</FH_FleshManagement_ActivityThreshold>

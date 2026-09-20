@@ -136,7 +136,6 @@
       <li Class="CompProperties_Stunnable">
         <affectedDamageDefs>
           <li>Stun</li>
-          <li>EMP</li>
         </affectedDamageDefs>
       </li>
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">

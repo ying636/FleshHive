@@ -238,7 +238,7 @@
             <li>
               <debugLabel>Beard</debugLabel>
               <nodeClass>FleshHive.PawnRenderNode_FleshReplicaBeard</nodeClass>
-              <workerClass>PawnRenderNodeWorker_Beard</workerClass>
+              <workerClass>FleshHive.PawnRenderNodeWorker_FleshReplicaBeard</workerClass>
               <rotDrawMode>Fresh, Rotting</rotDrawMode>
               <colorType>Hair</colorType>
               <skipFlag>Beard</skipFlag>

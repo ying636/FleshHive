@@ -36,6 +36,7 @@
     <defName>FH_SummonDreadmeld</defName>
     <label>draw dreadmeld</label>
     <description>Create a psychic pulse that draws a dreadmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
+    <playerCastable>false</playerCastable>
     <requiredDiscovery>PitGate</requiredDiscovery>
     <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
     <hoursUntilOutcome>2</hoursUntilOutcome>

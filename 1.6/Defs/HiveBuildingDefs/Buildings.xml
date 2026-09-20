@@ -128,6 +128,7 @@
     <building>FH_FleshBlock</building>
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Walls</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
     <workAmount>150</workAmount>
     <researchPrerequisites>
       <li>FH_Research_BasicFleshHive</li>
@@ -152,6 +153,7 @@
     <building>FH_ChitinFleshBlock</building>
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Walls</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
     <workAmount>150</workAmount>
     <researchPrerequisites>
       <li>FH_Research_BonePlatingFleshBlock</li>
@@ -194,6 +196,7 @@
     <building>FH_FleshBarricade</building>
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Defenses</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
     <workAmount>150</workAmount>
     <researchPrerequisites>
       <li>FH_Research_ImmuneSystem</li>
@@ -385,6 +388,7 @@
     <building>FH_ChitinFleshBarricade</building>
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Defenses</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
     <workAmount>150</workAmount>
     <researchPrerequisites>
       <li>FH_Research_BonePlatingFleshBlock</li>
@@ -445,6 +449,7 @@
     <building>FH_FleshBush</building>
     <category>FH_BuildingCategory_Flesh</category>
     <drawStyleCategory>Floors</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
     <workAmount>100</workAmount>
     <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
     <worker Class="FleshHive.HiveBuildingWorker_FleshPlantBlueprint" />

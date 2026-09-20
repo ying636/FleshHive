@@ -102,7 +102,7 @@
       <DeteriorationRate>6</DeteriorationRate>
       <Mass>0.027</Mass>
       <Flammability>0.5</Flammability>
-      <Nutrition>0.25</Nutrition>
+      <Nutrition>0.125</Nutrition>
       <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
       <MarketValue>1.2</MarketValue>
     </statBases>

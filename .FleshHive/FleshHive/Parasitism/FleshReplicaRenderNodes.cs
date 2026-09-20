@@ -13,7 +13,7 @@ public class PawnRenderNode_FleshReplicaBody(Pawn pawn, PawnRenderNodeProperties
             return base.MeshSetFor(host);
         }
 
-        Vector2 drawSize = pawn.ageTracker.CurKindLifeStage.bodyGraphicData.drawSize;
+        Vector2 drawSize = pawn.ageTracker.CurKindLifeStage.bodyGraphicData.drawSize * BodyDrawScale;
         return MeshPool.GetMeshSetForSize(drawSize.x, drawSize.y);
     }
 
@@ -26,6 +26,8 @@ public class PawnRenderNode_FleshReplicaBody(Pawn pawn, PawnRenderNodeProperties
 
         return pawn.ageTracker.CurKindLifeStage.bodyGraphicData.Graphic;
     }
+
+    private const float BodyDrawScale = 0.9f;
 }
 
 public class PawnRenderNode_FleshReplicaHead(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)

@@ -1,7 +1,7 @@
 <ModMetaData> 
   <name>Flesh Hive</name>
   <author>HaiLuan</author>
-  <modVersion>5.9</modVersion>
+  <modVersion>5.10</modVersion>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -18,5 +18,6 @@ HaiLuan,昏暗</description>
   </modDependencies>
   <loadAfter>
     <li>HaiLuan.HiveCreatureFramework</li>
+    <li>sarg.alphabiomes</li>
   </loadAfter>
 </ModMetaData>

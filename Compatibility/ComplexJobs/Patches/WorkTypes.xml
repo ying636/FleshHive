@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[starts-with(defName, "FH_")]/comps/li[@Class="FleshHive.FleshHiveUnitCompProperties"][availableRoutineWorks/li="Hauling"]/availableRoutineWorks</xpath>
+    <value>
+      <li>FSFHauling</li>
+    </value>
+  </Operation>
+</Patch>

@@ -16,6 +16,16 @@ public static class FleshTerrainUtility
             || terrain?.HasTag(FleshHiveTags.FleshTerrain) == true;
     }
 
+    public static bool CanSupportFleshBuilding(Map map, IntVec3 cell)
+    {
+        return map != null && cell.InBounds(map) && CanSupportFleshBuilding(cell.GetTerrain(map));
+    }
+
+    public static bool CanSupportFleshBuilding(TerrainDef terrain)
+    {
+        return IsFleshTerrain(terrain) || terrain?.HasTag(FleshHiveTags.FleshBuildingTerrain) == true;
+    }
+
     public static bool CanFleshSpreadTo(Map map, IntVec3 cell)
     {
         if (map == null || !cell.InBounds(map))

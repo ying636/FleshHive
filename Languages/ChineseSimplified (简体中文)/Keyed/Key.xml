@@ -211,6 +211,8 @@
   <FH_FleshManagement_Nutrition>营养度</FH_FleshManagement_Nutrition>
   <!-- EN: Activity -->
   <FH_FleshManagement_Activity>活跃度</FH_FleshManagement_Activity>
+  <FH_HiveDailyUpkeep>巢群每日维持消耗：{0}</FH_HiveDailyUpkeep>
+  <FH_HiveDailyActivityIncrease>巢群每日增加活跃：{0}</FH_HiveDailyActivityIncrease>
   <!-- EN: Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot. -->
   <FH_FleshManagement_ActivityTooltip>巢穴活跃度会随血肉兽和巢穴规模上升。可在血肉巢穴或神经结节处进行压制，降低暴动概率。</FH_FleshManagement_ActivityTooltip>
   <!-- EN: Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold. -->

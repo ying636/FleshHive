@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <MutantDef>
+  <FleshHive.MutantDef_Hela>
     <defName>FH_HelaSubhuman</defName>
     <label>Hela</label>
     <description>Hela's body has become a living command node for fleshbeasts. She can control a large fleshbeast group and automatically sustain its members with twisted flesh. Occupied parasite space reinforces every part of her body.</description>
@@ -45,6 +45,6 @@
     <producesBioferrite>false</producesBioferrite>
     <overrideLabel>false</overrideLabel>
     <overrideInspectString>false</overrideInspectString>
-  </MutantDef>
+  </FleshHive.MutantDef_Hela>
 
 </Defs>

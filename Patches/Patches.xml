@@ -1,42 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GenStepDef[defName="Dreadmeld"]/genStep</xpath>
-		<value>
-			<genStep Class="FleshHive.GenStep_Dreadmeld_FleshHive" />
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GenStepDef[defName="UndercaveInterest"]/genStep</xpath>
-		<value>
-			<genStep Class="FleshHive.GenStep_UndercaveInterest_FleshHive" />
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationRemove">
-		<xpath>/Defs/ThingDef[defName="Dreadmeld"]/comps/li[compClass="CompDreadmeld"]</xpath>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="Dreadmeld"]/comps</xpath>
-		<value>
-			<li Class="FleshHive.CompProperties_MeldSplit">
-				<spawnOptions>
-					<li>FH_Fingerspike</li>
-					<li>FH_Whipspike</li>
-					<li>FH_Gutspike</li>
-					<li>FH_Paraspike</li>
-					<li>FH_Puffspike</li>
-				</spawnOptions>
-				<firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
-				<firstHitSpawnRadius>5</firstHitSpawnRadius>
-				<thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
-				<damageThreshold>200</damageThreshold>
-			</li>
-		</value>
-	</Operation>
-
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="Trispike"]/race/deathAction/dividePawnKindOptions</xpath>
 		<value>
@@ -51,16 +14,6 @@
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="Bulbfreak"]/race/deathAction/dividePawnKindOptions</xpath>
-		<value>
-			<li>FH_Toughspike</li>
-			<li>FH_Trispike</li>
-			<li>FH_Shieldspike</li>
-			<li>FH_Shatterspike</li>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="Dreadmeld"]/race/deathAction/dividePawnKindAdditionalForced</xpath>
 		<value>
 			<li>FH_Toughspike</li>
 			<li>FH_Trispike</li>

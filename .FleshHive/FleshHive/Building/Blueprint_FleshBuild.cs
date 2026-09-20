@@ -71,6 +71,19 @@ public class Blueprint_FleshBuild : Blueprint_HiveBuild
         }
     }
 
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        foreach (Gizmo gizmo in base.GetGizmos())
+        {
+            if (gizmo is Command_Action command && command.defaultLabel == "DesignatorCancel".Translate())
+            {
+                command.hotKey = KeyBindingDefOf.Designator_Cancel;
+            }
+
+            yield return gizmo;
+        }
+    }
+
     public ResourceCount GetNextNeededResource()
     {
         return needResources.FirstOrDefault(resourceCount => resourceCount.amount > 0f);

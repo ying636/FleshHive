@@ -60,3 +60,16 @@ public class PawnRenderNodeWorker_FleshReplicaHead : PawnRenderNodeWorker_FlipWh
         return result;
     }
 }
+
+public class PawnRenderNodeWorker_FleshReplicaBeard : PawnRenderNodeWorker_Beard
+{
+    public override Vector3 OffsetFor(PawnRenderNode node, PawnDrawParms parms, out Vector3 pivot)
+    {
+        if (parms.pawn is FleshReplicaUnit { Host: { } host })
+        {
+            parms.pawn = host;
+        }
+
+        return base.OffsetFor(node, parms, out pivot);
+    }
+}

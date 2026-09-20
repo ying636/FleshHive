@@ -51,6 +51,8 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     }
     public int TickToParasite => GenDate.TicksPerHour;
 
+    private bool IsTaskExecuting => this.start || this.startRequested;
+
     public void Start()
     {
         this.start = true;
@@ -84,11 +86,22 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         if (start)
         {
             this.progress += delta;
+            UpdateProgressBar();
             if (this.progress >= this.TickToParasite)
             { 
                 this.curQuest.Do(this);
             }
         }
+        else
+        {
+            CleanupProgressBar();
+        }
+    }
+
+    public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+    {
+        CleanupProgressBar();
+        base.DeSpawn(mode);
     }
 
     public override IEnumerable<Gizmo> GetGizmos()
@@ -158,6 +171,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
 
     public void ClearTaskState()
     {
+        CleanupProgressBar();
         this.curQuest = null;
         this.progress = 0;
         this.start = false;
@@ -923,6 +937,21 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
     {
         return target;
     }
+
+    private void UpdateProgressBar()
+    {
+        this.progressBarEffecter ??= EffecterDefOf.ProgressBarAlwaysVisible.Spawn();
+        this.progressBarEffecter.EffectTick(this, TargetInfo.Invalid);
+        MoteProgressBar mote = ((SubEffecter_ProgressBar)this.progressBarEffecter.children[0]).mote;
+        mote.progress = Mathf.Clamp01((float)this.progress / this.TickToParasite);
+        mote.offsetZ = -0.8f;
+    }
+
+    private void CleanupProgressBar()
+    {
+        this.progressBarEffecter?.Cleanup();
+        this.progressBarEffecter = null;
+    }
     
     public int progress;
     public bool start;
@@ -943,7 +972,8 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
 
     private string? customName;
 
-    private bool IsTaskExecuting => this.start || this.startRequested;
+    [Unsaved(false)]
+    private Effecter? progressBarEffecter;
     
 }
 

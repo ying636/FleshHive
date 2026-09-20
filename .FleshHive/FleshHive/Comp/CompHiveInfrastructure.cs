@@ -95,6 +95,8 @@ public class CompHiveNutritionUpkeep : ThingComp
 {
     public float DailyNutritionCost => Props.dailyNutritionCost;
 
+    public float DailyActivityIncrease => Props.activityPerHour * GenDate.TicksPerDay / GenDate.TicksPerHour;
+
     public bool Hungry => FleshHiveHungerUtility.IsHungry(parent);
 
     private CompProperties_HiveNutritionUpkeep Props => (CompProperties_HiveNutritionUpkeep)props;

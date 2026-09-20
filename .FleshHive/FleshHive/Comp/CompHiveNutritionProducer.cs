@@ -59,6 +59,8 @@ public class CompProperties_HiveNutritionProducer : CompProperties
 
 public class CompHiveNutritionProducer : ThingComp
 {
+    public float DailyActivityIncrease => Props.activityPerHour * GenDate.TicksPerDay / GenDate.TicksPerHour;
+
     private CompProperties_HiveNutritionProducer Props => (CompProperties_HiveNutritionProducer)props;
 
     public override void CompTick()

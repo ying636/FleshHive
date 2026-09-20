@@ -15,7 +15,7 @@ public class PlaceWorker_RequireFleshTerrain : PlaceWorker
         }
         foreach (IntVec3 cell in GenAdj.CellsOccupiedBy(loc, rot, thingDef.Size))
         {
-            if (!FleshTerrainUtility.IsFleshTerrain(map, cell))
+            if (!FleshTerrainUtility.CanSupportFleshBuilding(map, cell))
             {
                 return "FH_MustPlaceOnFleshTerrain".Translate();
             }

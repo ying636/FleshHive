@@ -172,7 +172,7 @@
       </li>
       <li Class="FleshHive.CompProperties_HiveNutritionUpkeep"><dailyNutritionCost>1</dailyNutritionCost></li>
       <li Class="CompProperties_Stunnable">
-        <affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs>
+        <affectedDamageDefs><li>Stun</li></affectedDamageDefs>
       </li>
       <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
