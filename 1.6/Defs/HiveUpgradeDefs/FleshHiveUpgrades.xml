@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_HiveCapacity1</defName>
+    <label>hive expansion I</label>
+    <description>Flesh hive capacity increases by 10.</description>
+    <effect>HiveCapacity</effect>
+    <effectValue>10</effectValue>
+    <nutritionCost>50</nutritionCost>
+    <nerveFleshCost>2</nerveFleshCost>
+    <processingTicks>180000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_HiveCapacity2</defName>
+    <label>hive expansion II</label>
+    <description>Flesh hive capacity increases by another 10. Nerve center and nerve node capacity increases by 10.</description>
+    <effect>HiveCapacity</effect>
+    <effectValue>10</effectValue>
+    <prerequisites><li>FH_Upgrade_HiveCapacity1</li></prerequisites>
+    <nutritionCost>150</nutritionCost>
+    <nerveFleshCost>5</nerveFleshCost>
+    <processingTicks>300000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_FleshExpansion1</defName>
     <label>flesh rapid expansion I</label>
     <description>All flesh buildings that grow outward grow 50% faster on this map.</description>

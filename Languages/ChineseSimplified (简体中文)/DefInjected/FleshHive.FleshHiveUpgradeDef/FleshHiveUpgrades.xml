@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
+  <FH_Upgrade_HiveCapacity1.label>巢穴扩容Ⅰ</FH_Upgrade_HiveCapacity1.label>
+  <FH_Upgrade_HiveCapacity1.description>巢穴的血肉兽容量+10</FH_Upgrade_HiveCapacity1.description>
+  <FH_Upgrade_HiveCapacity2.label>巢穴扩容Ⅱ</FH_Upgrade_HiveCapacity2.label>
+  <FH_Upgrade_HiveCapacity2.description>巢穴的血肉兽容量再增加+10，神经中枢，神经节点的血肉兽容量+10</FH_Upgrade_HiveCapacity2.description>
   
   <!-- EN: agility -->
   <FH_Upgrade_Agility.label>敏捷化</FH_Upgrade_Agility.label>

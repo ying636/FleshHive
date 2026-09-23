@@ -21,10 +21,10 @@
   <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>武器插槽</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
   <!-- EN: Flesh mutualism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts. -->
   <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主获得再生（不可思议）；提供2个额外的寄生武器装备位。</FH_Bastionmeld.comps.ParasitismComp.effect>
-  <!-- EN: tentacle -->
-  <FH_Bastionmeld.tools.tentacle-0.label>触手</FH_Bastionmeld.tools.tentacle-0.label>
-  <!-- EN: tentacle -->
-  <FH_Bastionmeld.tools.tentacle-1.label>触手</FH_Bastionmeld.tools.tentacle-1.label>
+  <!-- EN: left bone spike -->
+  <FH_Bastionmeld.tools.left_bone_spike.label>左骨刺</FH_Bastionmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Bastionmeld.tools.right_bone_spike.label>右骨刺</FH_Bastionmeld.tools.right_bone_spike.label>
   <!-- EN: head -->
   <FH_Bastionmeld.tools.head.label>头</FH_Bastionmeld.tools.head.label>
 
@@ -48,10 +48,10 @@
   <!-- EN: Meld beast tentacle -->
   <FH_Dreadmeld.comps.ParasitismComp.abilityLabel>母兽触手</FH_Dreadmeld.comps.ParasitismComp.abilityLabel>
   <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主获得再生（不可思议）；采矿速度+160%；深钻井操作速度+70%；提供两条母兽触手和“惊惧咆哮”主动能力。</FH_Dreadmeld.comps.ParasitismComp.effect>
-  <!-- EN: tentacle -->
-  <FH_Dreadmeld.tools.tentacle-0.label>触手</FH_Dreadmeld.tools.tentacle-0.label>
-  <!-- EN: tentacle -->
-  <FH_Dreadmeld.tools.tentacle-1.label>触手</FH_Dreadmeld.tools.tentacle-1.label>
+  <!-- EN: left bone spike -->
+  <FH_Dreadmeld.tools.left_bone_spike.label>左骨刺</FH_Dreadmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Dreadmeld.tools.right_bone_spike.label>右骨刺</FH_Dreadmeld.tools.right_bone_spike.label>
   <!-- EN: head -->
   <FH_Dreadmeld.tools.head.label>头</FH_Dreadmeld.tools.head.label>
 
@@ -110,10 +110,10 @@
   <FH_Furiousmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条盾爪触手，每条造成16点钝器伤害，攻击冷却3秒。</FH_Furiousmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Shield-claw tentacle -->
   <FH_Furiousmeld.comps.ParasitismComp.abilityLabel>盾爪触手</FH_Furiousmeld.comps.ParasitismComp.abilityLabel>
-  <!-- EN: left horn -->
-  <FH_Furiousmeld.tools.left_horn.label>左角</FH_Furiousmeld.tools.left_horn.label>
-  <!-- EN: right horn -->
-  <FH_Furiousmeld.tools.right_horn.label>右角</FH_Furiousmeld.tools.right_horn.label>
+  <!-- EN: left bone spike -->
+  <FH_Furiousmeld.tools.left_bone_spike.label>左骨刺</FH_Furiousmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Furiousmeld.tools.right_bone_spike.label>右骨刺</FH_Furiousmeld.tools.right_bone_spike.label>
   <!-- EN: carapace -->
   <FH_Furiousmeld.tools.carapace.label>甲壳</FH_Furiousmeld.tools.carapace.label>
   <!-- EN: head -->
@@ -146,10 +146,10 @@
   <FH_Nexusmeld.comps.ParasitismComp.abilityDescription>宿主体表生长两条母兽触手，每条造成14点锐器伤害，攻击冷却2秒，护甲穿透40%。</FH_Nexusmeld.comps.ParasitismComp.abilityDescription>
   <!-- EN: Meld beast tentacle -->
   <FH_Nexusmeld.comps.ParasitismComp.abilityLabel>母兽触手</FH_Nexusmeld.comps.ParasitismComp.abilityLabel>
-  <!-- EN: tentacle -->
-  <FH_Nexusmeld.tools.tentacle-0.label>触手</FH_Nexusmeld.tools.tentacle-0.label>
-  <!-- EN: tentacle -->
-  <FH_Nexusmeld.tools.tentacle-1.label>触手</FH_Nexusmeld.tools.tentacle-1.label>
+  <!-- EN: left bone spike -->
+  <FH_Nexusmeld.tools.left_bone_spike.label>左骨刺</FH_Nexusmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Nexusmeld.tools.right_bone_spike.label>右骨刺</FH_Nexusmeld.tools.right_bone_spike.label>
   <!-- EN: head -->
   <FH_Nexusmeld.tools.head.label>头</FH_Nexusmeld.tools.head.label>
 

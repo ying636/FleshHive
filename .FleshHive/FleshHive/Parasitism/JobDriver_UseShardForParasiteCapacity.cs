@@ -4,7 +4,7 @@ using Verse.AI;
 
 namespace FleshHive;
 
-public class JobDriver_UseShardOnHela : JobDriver
+public class JobDriver_UseShardForParasiteCapacity : JobDriver
 {
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
@@ -21,26 +21,27 @@ public class JobDriver_UseShardOnHela : JobDriver
         wait.WithProgressBarToilDelay(TargetIndex.A);
         yield return wait;
 
-        Toil useShard = ToilMaker.MakeToil("UseShardOnHela");
+        Toil useShard = ToilMaker.MakeToil("UseShardForParasiteCapacity");
         useShard.initAction = delegate
         {
-            Hediff_Hela hela = pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_Hela) as Hediff_Hela;
-            Thing shard = TargetThingA;
-            if (hela == null || shard == null || shard.def != ThingDefOf.Shard || shard.stackCount <= 0)
+            IShardExpandableParasiteCapacity? expandableCapacity = pawn.health?.hediffSet?.hediffs?
+                .OfType<IShardExpandableParasiteCapacity>().FirstOrDefault();
+            Thing? shard = TargetThingA;
+            if (expandableCapacity == null || shard == null || shard.def != ThingDefOf.Shard || shard.stackCount <= 0)
             {
                 EndJobWith(JobCondition.Incompletable);
                 return;
             }
-            if (!hela.TryIncreaseParasiteCapacity())
+            if (!expandableCapacity.TryIncreaseParasiteCapacity())
             {
                 EndJobWith(JobCondition.Incompletable);
                 return;
             }
 
             shard.SplitOff(1).Destroy(DestroyMode.Vanish);
-            pawn.health.AddHediff(FleshHiveDefOf.FH_HelaShardComa);
-            Messages.Message("FH_Hela_ShardUsed".Translate(pawn.LabelShortCap, hela.ParasiteCapacity), pawn,
-                MessageTypeDefOf.PositiveEvent, false);
+            pawn.health!.AddHediff(expandableCapacity.ShardComaDef);
+            Messages.Message("FH_ParasiteCapacity_ShardUsed".Translate(pawn.LabelShortCap,
+                expandableCapacity.ParasiteCapacity), pawn, MessageTypeDefOf.PositiveEvent, false);
         };
         useShard.defaultCompleteMode = ToilCompleteMode.Instant;
         yield return useShard;

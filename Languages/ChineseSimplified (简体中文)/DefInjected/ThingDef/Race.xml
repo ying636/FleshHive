@@ -36,8 +36,8 @@
   <FH_Bulbfreak.comps.ParasitismComp.abilityDescription>宿主体表生长两条触手，每条造成10点钝器伤害，攻击冷却2秒。</FH_Bulbfreak.comps.ParasitismComp.abilityDescription>
   <!-- EN: Tentacle -->
   <FH_Bulbfreak.comps.ParasitismComp.abilityLabel>触手</FH_Bulbfreak.comps.ParasitismComp.abilityLabel>
-  <!-- EN: Flesh mutualism mood -6; Social Impact -10%; Global Work Speed +20%; twisted flesh capacity +200; grants two tentacles and the release fleshbeasts ability. -->
-  <FH_Bulbfreak.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；全局工作效率+20%；扭曲肉容量+200；提供两条触手和“释放血肉兽”主动能力。</FH_Bulbfreak.comps.ParasitismComp.effect>
+  <!-- EN: Flesh mutualism mood -6; Social Impact -10%; Global Work Speed +20%; twisted flesh capacity +300; grants two tentacles and the release fleshbeasts ability. -->
+  <FH_Bulbfreak.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；全局工作效率+20%；扭曲肉容量+300；提供两条触手和“释放血肉兽”主动能力。</FH_Bulbfreak.comps.ParasitismComp.effect>
   <!-- EN: tentacle -->
   <FH_Bulbfreak.tools.tentacle-0.label>触手</FH_Bulbfreak.tools.tentacle-0.label>
   <!-- EN: tentacle -->

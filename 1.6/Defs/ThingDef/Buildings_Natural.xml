@@ -138,6 +138,10 @@
       </li>
       <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
         <capacity>20</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity1</li>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
       </li>
       <li Class="FleshHive.CompProperties_HiveScaleProvider">
         <scale>20</scale>
@@ -667,6 +671,10 @@
       </li>
       <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
         <capacity>50</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity1</li>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
       </li>
       <li Class="FleshHive.CompProperties_HiveScaleProvider">
         <scale>50</scale>
@@ -849,6 +857,9 @@
       </li>
       <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
         <capacity>10</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
       </li>
       <li Class="FleshHive.CompProperties_HiveScaleProvider">
         <scale>10</scale>
@@ -937,6 +948,9 @@
       </li>
       <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
         <capacity>30</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
       </li>
       <li Class="FleshHive.CompProperties_HiveScaleProvider">
         <scale>30</scale>
@@ -2281,6 +2295,10 @@
         <yields>
           <Meat_Twisted>20</Meat_Twisted>
         </yields>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionProducer">
+        <nutritionPerInterval>0.04</nutritionPerInterval>
+        <intervalTicks>2500</intervalTicks>
       </li>
     </comps>
     <placeWorkers>

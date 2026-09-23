@@ -13,6 +13,30 @@ public class CompPropertiesHiveGroup_FleshHive : CompPropertiesHiveGroup
 
 public class CompHiveGroup_FleshHive : CompHiveGroup
 {
+    public override void PostSpawnSetup(bool respawningAfterLoad)
+    {
+        base.PostSpawnSetup(respawningAfterLoad);
+        RefreshUnitLimits();
+    }
+
+    public override UnitGroup MakeGroup()
+    {
+        UnitGroup group = base.MakeGroup();
+        group.unitLimit = Props.defaultUnitLimit
+            + (parent.TryGetComp<CompHiveGroupCapacityProvider>()?.CapacityUpgradeBonus ?? 0);
+        return group;
+    }
+
+    public void RefreshUnitLimits()
+    {
+        int limit = Props.defaultUnitLimit
+            + (parent.TryGetComp<CompHiveGroupCapacityProvider>()?.CapacityUpgradeBonus ?? 0);
+        foreach (UnitGroup group in groups)
+        {
+            group.unitLimit = limit;
+        }
+    }
+
     public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
         foreach (Gizmo gizmo in base.CompGetGizmosExtra())

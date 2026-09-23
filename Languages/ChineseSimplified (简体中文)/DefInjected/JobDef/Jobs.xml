@@ -32,6 +32,6 @@
   <FH_Job_SuppressFleshHiveActivity.reportString>正在压制TargetA。</FH_Job_SuppressFleshHiveActivity.reportString>
   
   <!-- EN: using TargetA to expand parasite capacity. -->
-  <FH_Job_UseShardOnHela.reportString>正在使用TargetA扩展寄生空间。</FH_Job_UseShardOnHela.reportString>
+  <FH_Job_UseShardForParasiteCapacity.reportString>正在使用TargetA扩展寄生空间。</FH_Job_UseShardForParasiteCapacity.reportString>
   
 </LanguageData>

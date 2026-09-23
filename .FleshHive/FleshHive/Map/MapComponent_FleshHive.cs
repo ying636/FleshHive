@@ -500,6 +500,7 @@ public class MapComponent_FleshHive : MapComponent
         MapFleshHive.activeUpgrade = null;
         MapFleshHive.activeUpgradeProgress = 0f;
         MapFleshHive.activeUpgradeTotalTime = 0f;
+        RefreshHiveGroupUnitLimits();
         GrantAllFleshBeastUpgradeHediffs();
         Messages.Message("FH_Upgrade_DebugUnlocked".Translate(), MessageTypeDefOf.PositiveEvent, false);
     }
@@ -800,6 +801,7 @@ public class MapComponent_FleshHive : MapComponent
         }
 
         RebuildFleshHiveCache();
+        RefreshHiveGroupUnitLimits();
         if (group is not UnitGroup_TemporaryFleshHive)
         {
             return;
@@ -975,9 +977,23 @@ public class MapComponent_FleshHive : MapComponent
         MapFleshHive.activeUpgrade = null;
         MapFleshHive.activeUpgradeProgress = 0f;
         MapFleshHive.activeUpgradeTotalTime = 0f;
+        RefreshHiveGroupUnitLimits();
         GrantAllFleshBeastUpgradeHediffs();
         Messages.Message("FH_Upgrade_CompletedMessage".Translate(completedUpgrade.label),
             MessageTypeDefOf.PositiveEvent, false);
+    }
+
+    private void RefreshHiveGroupUnitLimits()
+    {
+        if (hiveCapacityProviders == null)
+        {
+            return;
+        }
+
+        foreach (CompHiveGroupCapacityProvider provider in hiveCapacityProviders)
+        {
+            provider?.parent?.TryGetComp<CompHiveGroup_FleshHive>()?.RefreshUnitLimits();
+        }
     }
 
     private void GrantAllFleshBeastUpgradeHediffs()
@@ -1254,7 +1270,7 @@ public class MapComponent_FleshHive : MapComponent
 
     private float GetActivityGrowthPerDay()
     {
-        int fleshBeastCost = GetMapFleshBeastCost();
+        float fleshBeastCost = GetMapFleshBeastActivityCost();
         // float pressure = HiveScale * ActivityPerHiveScalePerDay + fleshBeastCost * ActivityPerGroupCostPerDay;
         // if (MapFleshHive.nutrition <= 0f)
         // {
@@ -1371,10 +1387,18 @@ public class MapComponent_FleshHive : MapComponent
         return thing?.def?.tradeTags?.Contains(FleshBuildingTradeTag) == true;
     }
 
-    private int GetMapFleshBeastCost()
+    private float GetMapFleshBeastActivityCost()
     {
         CleanupCachedFleshBeasts();
-        return CachedFleshBeasts.Sum(pawn => pawn.TryGetComp<UnitComp>()?.Props.groupCost ?? 1);
+        float cost = 0f;
+        foreach (Pawn pawn in CachedFleshBeasts)
+        {
+            UnitComp unitComp = pawn.TryGetComp<UnitComp>();
+            int groupCost = unitComp?.Props.groupCost ?? 1;
+            cost += unitComp?.group is UnitGroup_TemporaryFleshHive ? groupCost * 0.5f : groupCost;
+        }
+
+        return cost;
     }
 
     private void CleanupCachedFleshBeasts()

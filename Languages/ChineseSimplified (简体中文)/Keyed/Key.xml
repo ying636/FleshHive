@@ -181,6 +181,8 @@
   <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
   <!-- EN: Raid parasite carrier chance: {0} -->
   <FleshHive_RaidParasiteChance>袭击单位携带血肉兽寄生概率：{0}</FleshHive_RaidParasiteChance>
+  <FH_Settings_ResearchUnlockGestation>研究解锁无特性孕育</FH_Settings_ResearchUnlockGestation>
+  <FH_Settings_ResearchUnlockGestationTip>完成血肉融合后解锁所有中型血肉兽的无特性版孕育；完成复杂血肉融合后解锁所有大型血肉兽的无特性版孕育。</FH_Settings_ResearchUnlockGestationTip>
   <!-- EN: Flesh -->
   <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
   <!-- EN: Flesh hive container -->
@@ -422,21 +424,21 @@
   <FH_Hela_LastName>贝茨</FH_Hela_LastName>
 
   <!-- EN: Parasite capacity: {0}/{1} -->
-  <FH_Hela_ParasiteCapacityInfo>寄生空间：{0}/{1}</FH_Hela_ParasiteCapacityInfo>
+  <FH_ParasiteCapacity_Info>寄生空间：{0}/{1}</FH_ParasiteCapacity_Info>
   <!-- EN: Occupied parasite space: {0}; body part health: {1}; pain factor: {2} -->
   <FH_Hela_BodyPartHealthInfo>已激活寄生空间：{0}；部位生命值：{1}；疼痛倍率：{2}</FH_Hela_BodyPartHealthInfo>
   <!-- EN: Use {0} to expand parasite capacity -->
-  <FH_Hela_UseShard>使用{0}扩展寄生空间</FH_Hela_UseShard>
+  <FH_ParasiteCapacity_UseShard>使用{0}扩展寄生空间</FH_ParasiteCapacity_UseShard>
   <!-- EN: Cannot use {0} -->
-  <FH_Hela_CannotUseShard>无法使用{0}</FH_Hela_CannotUseShard>
+  <FH_ParasiteCapacity_CannotUseShard>无法使用{0}</FH_ParasiteCapacity_CannotUseShard>
   <!-- EN: Cannot use {0}: parasite capacity has reached its maximum of {1} -->
-  <FH_Hela_CannotUseShardMax>无法使用{0}：寄生空间已达到上限{1}</FH_Hela_CannotUseShardMax>
-  <!-- EN: Cannot use {0}: Hela is downed -->
-  <FH_Hela_CannotUseShardDowned>无法使用{0}：海拉已经倒地</FH_Hela_CannotUseShardDowned>
+  <FH_ParasiteCapacity_CannotUseShardMax>无法使用{0}：寄生空间已达到上限{1}</FH_ParasiteCapacity_CannotUseShardMax>
+  <!-- EN: Cannot use {0}: {1} is downed -->
+  <FH_ParasiteCapacity_CannotUseShardDowned>无法使用{0}：{1}已经倒地</FH_ParasiteCapacity_CannotUseShardDowned>
   <!-- EN: Cannot use {0}: reserved by someone else -->
-  <FH_Hela_CannotUseShardReserved>无法使用{0}：已被其他人预留</FH_Hela_CannotUseShardReserved>
-  <!-- EN: {0} has expanded her parasite capacity to {1} and fallen into a one-day coma. -->
-  <FH_Hela_ShardUsed>{0}的寄生空间已扩展至{1}，并陷入了为期一天的昏迷。</FH_Hela_ShardUsed>
+  <FH_ParasiteCapacity_CannotUseShardReserved>无法使用{0}：已被其他人预留</FH_ParasiteCapacity_CannotUseShardReserved>
+  <!-- EN: {0} has expanded their parasite capacity to {1} and fallen into a one-day coma. -->
+  <FH_ParasiteCapacity_ShardUsed>{0}的寄生空间已扩展至{1}，并陷入了为期一天的昏迷。</FH_ParasiteCapacity_ShardUsed>
 
   <!-- EN: Cost: {0} -->
   <FH_ItemProduction_Cost>消耗：{0}</FH_ItemProduction_Cost>

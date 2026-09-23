@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <FH_FleshRetainer.label>血肉眷属</FH_FleshRetainer.label>
+  <FH_FleshRetainer.description>海拉能力的弱化版本。寄生不会提升躯体系数，宿主也不是节点生物。初始寄生空间为4，可以通过食用碎片提升至10，每次都会昏迷1天。</FH_FleshRetainer.description>
+
+  <FH_FleshRetainerShardComa.label>碎片适应性昏迷</FH_FleshRetainerShardComa.label>
+  <FH_FleshRetainerShardComa.description>血肉眷属正在昏迷，其身体正适应暗黑超凡碎片并生长出新的寄生空间。</FH_FleshRetainerShardComa.description>
+
+</LanguageData>

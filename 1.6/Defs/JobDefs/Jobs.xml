@@ -52,8 +52,8 @@
   </JobDef>
 
   <JobDef>
-    <defName>FH_Job_UseShardOnHela</defName>
-    <driverClass>FleshHive.JobDriver_UseShardOnHela</driverClass>
+    <defName>FH_Job_UseShardForParasiteCapacity</defName>
+    <driverClass>FleshHive.JobDriver_UseShardForParasiteCapacity</driverClass>
     <reportString>using TargetA to expand parasite capacity.</reportString>
   </JobDef>
 

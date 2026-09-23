@@ -13,11 +13,34 @@ public class CompProperties_HiveGroupCapacityProvider : CompProperties
     }
 
     public int capacity = 10;
+    public List<FleshHiveUpgradeDef> capacityUpgrades = new();
 }
 
 public class CompHiveGroupCapacityProvider : ThingComp
 {
-    public int Capacity => Props.capacity;
+    public int Capacity => Props.capacity + CapacityUpgradeBonus;
+    public int CapacityUpgradeBonus
+    {
+        get
+        {
+            MapComponent_FleshHive mapComp = parent.Map?.GetComponent<MapComponent_FleshHive>();
+            if (mapComp == null)
+            {
+                return 0;
+            }
+
+            int bonus = 0;
+            foreach (FleshHiveUpgradeDef upgrade in Props.capacityUpgrades)
+            {
+                if (mapComp.IsUpgradeCompleted(upgrade))
+                {
+                    bonus += (int)upgrade.effectValue;
+                }
+            }
+
+            return bonus;
+        }
+    }
 
     private CompProperties_HiveGroupCapacityProvider Props => (CompProperties_HiveGroupCapacityProvider)props;
 

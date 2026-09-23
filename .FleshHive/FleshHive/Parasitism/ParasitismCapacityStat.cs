@@ -13,6 +13,10 @@ public class ParasitismCapacityStat : StatWorker
         {
             return hela.ParasiteCapacity;
         }
+        if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_FleshRetainer) is Hediff_FleshRetainer fleshRetainer)
+        {
+            return fleshRetainer.ParasiteCapacity;
+        }
 
         ThingDef? raceDef = pawn?.def ?? request.Def as ThingDef;
         if (raceDef == FleshHiveDefOf.FH_Nexusmeld.race || raceDef == FleshHiveDefOf.FH_Dreadmeld.race)

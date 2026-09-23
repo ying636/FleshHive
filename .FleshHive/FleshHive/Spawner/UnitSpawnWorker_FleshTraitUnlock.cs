@@ -17,6 +17,20 @@ public class UnitSpawnWorker_FleshTraitUnlock : UnitSpawnWorker
             return false;
         }
 
+        if (FleshHiveMod.Settings.unlockUnmodifiedFleshbeastsByFusionResearch)
+        {
+            FleshBeastSize? size = FleshBeastKindUtility.SizeOf(def.kind);
+            if (size == FleshBeastSize.Medium && FleshHiveDefOf.FH_Research_FleshFusion?.IsFinished == true)
+            {
+                return true;
+            }
+
+            if (size == FleshBeastSize.Large && FleshHiveDefOf.FH_Research_ComplexFleshFusion?.IsFinished == true)
+            {
+                return true;
+            }
+        }
+
         return GameComponent_UnitGroup.Instance?.fusionDatas?.Any(data =>
             data?.unlocked == true
             && data.def?.results?.Any(result =>

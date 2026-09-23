@@ -23,6 +23,8 @@ public static class FleshHiveDefOf
     public static HediffDef FH_Trait_BoneSpurGrowth;
     public static HediffDef FH_Hela;
     public static HediffDef FH_HelaShardComa;
+    public static HediffDef FH_FleshRetainer = null!;
+    public static HediffDef FH_FleshRetainerShardComa = null!;
     public static HediffDef FH_DeathOnDowned = null!;
     public static MutantDef FH_HelaSubhuman;
     public static HediffDef FH_MeldGrowth;
@@ -181,7 +183,7 @@ public static class FleshHiveDefOf
     public static JobDef FH_Job_InfectHarbingerTree;
     public static JobDef FH_Job_SuppressFleshHiveActivity;
     public static JobDef FH_Job_MountParasiticWeapon;
-    public static JobDef FH_Job_UseShardOnHela;
+    public static JobDef FH_Job_UseShardForParasiteCapacity = null!;
     public static JobDef FH_Job_ConsumeMeldSeed;
     public static JobDef FH_Job_HuntExecution;
 

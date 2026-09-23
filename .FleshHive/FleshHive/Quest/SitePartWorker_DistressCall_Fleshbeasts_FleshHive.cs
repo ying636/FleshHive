@@ -4,6 +4,7 @@ using HiveCreatureFramework;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
+using Verse.AI.Group;
 
 namespace FleshHive;
 
@@ -52,7 +53,7 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
             return;
         }
 
-        CaptureFleshbeastsForAmbush(mother, map);
+        mother.TryGetComp<CompHiveGroup_MotherBeast>()?.SetAttackMode();
     }
 
     private List<Pawn> SpawnAttackers(IEnumerable<Pawn> attackers, Map map)
@@ -76,17 +77,25 @@ public class SitePartWorker_DistressCall_Fleshbeasts_FleshHive : SitePartWorker_
             spawnedAttackers.Add(attacker);
         }
 
+        if (spawnedAttackers.Count > 0)
+        {
+            LordMaker.MakeNewLord(Faction.OfEntities, new LordJob_FleshbeastAssault(), map, spawnedAttackers);
+        }
+
         return spawnedAttackers;
     }
 
     private static bool TrySpawnMother(Pawn mother, Map map)
     {
-        if (!RCellFinder.TryFindRandomCellNearWith(
-                map.Center,
-                cell => cell.Standable(map) && cell.GetEdifice(map) == null,
-                map,
-                out IntVec3 spawnCell,
-                SpawnRadius))
+        bool IsValidSpawnCell(IntVec3 cell) => cell.Standable(map)
+            && cell.GetEdifice(map) == null
+            && !cell.Roofed(map)
+            && !cell.Fogged(map)
+            && map.reachability.CanReachMapEdge(cell, TraverseMode.PassDoors);
+
+        if (!RCellFinder.TryFindRandomCellNearWith(map.Center, IsValidSpawnCell, map,
+                out IntVec3 spawnCell, SpawnRadius)
+            && !CellFinder.TryFindRandomCell(map, IsValidSpawnCell, out spawnCell))
         {
             mother.Destroy();
             return false;

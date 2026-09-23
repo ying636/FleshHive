@@ -95,6 +95,8 @@
   <FH_RequireFleshHopper>An available flesh hopper is required.</FH_RequireFleshHopper>
   <FleshHive_SettingsCategory>Flesh Hive</FleshHive_SettingsCategory>
   <FleshHive_RaidParasiteChance>Raid parasite carrier chance: {0}</FleshHive_RaidParasiteChance>
+  <FH_Settings_ResearchUnlockGestation>Research unlocks unmodified gestation</FH_Settings_ResearchUnlockGestation>
+  <FH_Settings_ResearchUnlockGestationTip>Unlock all unmodified medium fleshbeasts after Flesh Fusion and large fleshbeasts after Complex Flesh Fusion.</FH_Settings_ResearchUnlockGestationTip>
   <HCF_Tag_Flesh>Flesh</HCF_Tag_Flesh>
   <HCF_Tag_FH_FleshContainer>Flesh hive container</HCF_Tag_FH_FleshContainer>
   <FH_GroupReject_HivePopulationCapacity>Hive scale capacity reached.</FH_GroupReject_HivePopulationCapacity>
@@ -218,14 +220,14 @@
   <FH_Hela_FirstName>Hela</FH_Hela_FirstName>
   <FH_Hela_LastName>Bates</FH_Hela_LastName>
 
-  <FH_Hela_ParasiteCapacityInfo>Parasite capacity: {0}/{1}</FH_Hela_ParasiteCapacityInfo>
+  <FH_ParasiteCapacity_Info>Parasite capacity: {0}/{1}</FH_ParasiteCapacity_Info>
   <FH_Hela_BodyPartHealthInfo>Occupied parasite space: {0}; body part health: {1}; pain factor: {2}</FH_Hela_BodyPartHealthInfo>
-  <FH_Hela_UseShard>Use {0} to expand parasite capacity</FH_Hela_UseShard>
-  <FH_Hela_CannotUseShard>Cannot use {0}</FH_Hela_CannotUseShard>
-  <FH_Hela_CannotUseShardMax>Cannot use {0}: parasite capacity has reached its maximum of {1}</FH_Hela_CannotUseShardMax>
-  <FH_Hela_CannotUseShardDowned>Cannot use {0}: Hela is downed</FH_Hela_CannotUseShardDowned>
-  <FH_Hela_CannotUseShardReserved>Cannot use {0}: reserved by someone else</FH_Hela_CannotUseShardReserved>
-  <FH_Hela_ShardUsed>{0} has expanded her parasite capacity to {1} and fallen into a one-day coma.</FH_Hela_ShardUsed>
+  <FH_ParasiteCapacity_UseShard>Use {0} to expand parasite capacity</FH_ParasiteCapacity_UseShard>
+  <FH_ParasiteCapacity_CannotUseShard>Cannot use {0}</FH_ParasiteCapacity_CannotUseShard>
+  <FH_ParasiteCapacity_CannotUseShardMax>Cannot use {0}: parasite capacity has reached its maximum of {1}</FH_ParasiteCapacity_CannotUseShardMax>
+  <FH_ParasiteCapacity_CannotUseShardDowned>Cannot use {0}: {1} is downed</FH_ParasiteCapacity_CannotUseShardDowned>
+  <FH_ParasiteCapacity_CannotUseShardReserved>Cannot use {0}: reserved by someone else</FH_ParasiteCapacity_CannotUseShardReserved>
+  <FH_ParasiteCapacity_ShardUsed>{0} has expanded their parasite capacity to {1} and fallen into a one-day coma.</FH_ParasiteCapacity_ShardUsed>
 
   <FH_ItemProduction_Cost>Cost: {0}</FH_ItemProduction_Cost>
   <FH_ItemProduction_Time>Production time: {0} days</FH_ItemProduction_Time>

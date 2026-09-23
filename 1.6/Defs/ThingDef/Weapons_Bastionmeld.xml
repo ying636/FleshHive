@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 铁骸母兽武器：焚灭脉冲炮 -->
-  <!-- 焚灭脉冲炮 (Beam Incinerator Cannon) -->
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>FH_Gun_BastionmeldTrackingLaser</defName>
     <label>Beam Incinerator Cannon</label>

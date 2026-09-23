@@ -4,7 +4,7 @@ using Verse;
 
 namespace FleshHive;
 
-public class Hediff_Hela : HediffWithComps
+public class Hediff_Hela : HediffWithComps, IShardExpandableParasiteCapacity
 {
     public int ParasiteCapacity => parasiteCapacity;
 
@@ -27,6 +27,8 @@ public class Hediff_Hela : HediffWithComps
 
     public bool CanIncreaseParasiteCapacity => parasiteCapacity < MaxParasiteCapacity;
 
+    public HediffDef ShardComaDef => FleshHiveDefOf.FH_HelaShardComa;
+
     public override string TipStringExtra
     {
         get
@@ -37,7 +39,7 @@ public class Hediff_Hela : HediffWithComps
             {
                 builder.AppendLine(baseTip.TrimEnd());
             }
-            builder.AppendLine("FH_Hela_ParasiteCapacityInfo".Translate(ParasiteCapacity, MaxParasiteCapacity));
+            builder.AppendLine("FH_ParasiteCapacity_Info".Translate(ParasiteCapacity, MaxParasiteCapacity));
             builder.AppendLine("FH_Hela_BodyPartHealthInfo".Translate(
                 ActiveParasiteCapacity,
                 BodyPartHealthFactor.ToStringPercent(),

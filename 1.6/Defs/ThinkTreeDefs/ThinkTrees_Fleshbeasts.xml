@@ -58,6 +58,16 @@
           <insertTag>Animal_PreMain</insertTag>
         </li>
 
+        <li Class="ThinkNode_ConditionalOfPlayerFaction">
+          <invert>true</invert>
+          <subNodes>
+            <li Class="JobGiver_AIFightEnemies">
+              <targetAcquireRadius>30</targetAcquireRadius>
+              <targetKeepRadius>35</targetKeepRadius>
+            </li>
+          </subNodes>
+        </li>
+
         <li Class="JobGiver_LayEgg" />
 
         <li Class="ThinkNode_ConditionalOfPlayerFaction">

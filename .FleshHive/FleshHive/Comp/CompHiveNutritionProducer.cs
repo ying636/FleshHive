@@ -75,6 +75,12 @@ public class CompHiveNutritionProducer : ThingComp
         TickInterval(GenTicks.TickRareInterval);
     }
 
+    public override void CompTickLong()
+    {
+        base.CompTickLong();
+        TickInterval(GenTicks.TickLongInterval);
+    }
+
     public override string CompInspectStringExtra()
     {
         return "FH_HiveNutritionProducer_Value".Translate(GetIntervalLabel(), Props.nutritionPerInterval.ToString("0.##"));
@@ -99,9 +105,9 @@ public class CompHiveNutritionProducer : ThingComp
         }
 
         ticksSinceProduce += ticks;
-        if (ticksSinceProduce >= Props.intervalTicks)
+        while (ticksSinceProduce >= Props.intervalTicks)
         {
-            ticksSinceProduce = 0;
+            ticksSinceProduce -= Props.intervalTicks;
             ProduceNutrition();
         }
     }

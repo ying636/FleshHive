@@ -79,7 +79,7 @@ public class QuestNode_Root_DistressCall_FleshHive : QuestNode_Root_DistressCall
             {
                 quest.SignalPass(null, null, ambushSignal);
             }, siteMapGeneratedSignal);
-            quest.AddPart(new QuestPart_DistressCallAmbush(ambushSignal, site, AmbushPointsCurve.Evaluate(points)));
+            quest.AddPart(new QuestPart_DistressCallAmbush_FleshHive(ambushSignal, site, AmbushPointsCurve.Evaluate(points)));
         }
 
         quest.WorldObjectTimeout(site, TimeoutTicks);

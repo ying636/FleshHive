@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
     <statBases>
@@ -65,6 +65,7 @@
     <statBases>
       <MoveSpeed>2.8</MoveSpeed>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
       <ToxicResistance>0.8</ToxicResistance>
       <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
     </statBases>
@@ -158,33 +159,33 @@
     </comps>
     <tools>
       <li>
-        <label>tentacle</label>
+        <label>left bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>12</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
-        <label>tentacle</label>
+        <label>right bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>12</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>5</power>
+        <power>3</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -196,7 +197,8 @@
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Nexusmeld</defName>
     <label>nexusmeld</label>
-    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
     <race>FH_Nexusmeld</race>
     <combatPower>600</combatPower>
     <abilities>
@@ -232,6 +234,7 @@
     <statBases>
       <MoveSpeed>1.25</MoveSpeed>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
       <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
       <ArmorRating_Heat>1.00</ArmorRating_Heat>
@@ -331,23 +334,23 @@
     </comps>
     <tools>
       <li>
-        <label>left horn</label>
+        <label>left bone spike</label>
         <capacities>
+          <li>Scratch</li>
           <li>Stab</li>
-          <li>Cut</li>
         </capacities>
-        <power>34</power>
+        <power>28</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
       </li>
       <li>
-        <label>right horn</label>
+        <label>right bone spike</label>
         <capacities>
+          <li>Scratch</li>
           <li>Stab</li>
-          <li>Cut</li>
         </capacities>
-        <power>34</power>
+        <power>28</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
@@ -378,7 +381,8 @@
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Furiousmeld</defName>
     <label>furiousmeld</label>
-    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
     <race>FH_Furiousmeld</race>
     <combatPower>650</combatPower>
     <abilities>
@@ -652,33 +656,33 @@
     </comps>
     <tools>
       <li>
-        <label>tentacle</label>
+        <label>left bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>12</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
-        <label>tentacle</label>
+        <label>right bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>12</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>5</power>
+        <power>3</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -764,6 +768,7 @@
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_FleshDeadguard</defName>
     <label>flesh deadguard</label>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
     <race>FH_FleshDeadguard</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
     <combatPower>30</combatPower>
@@ -791,7 +796,8 @@
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Bastionmeld</defName>
     <label>bastionmeld</label>
-    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
     <race>FH_Bastionmeld</race>
     <combatPower>550</combatPower>
     <abilities>
@@ -979,7 +985,8 @@
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Fissionmeld</defName>
     <label>fissionmeld</label>
-    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
     <race>FH_Fissionmeld</race>
     <combatPower>450</combatPower>
     <abilities>
@@ -1010,7 +1017,6 @@
       </li>
     </lifeStages>
   </PawnKindDef>
-  <!-- 铁骸母兽 -->
   <!-- 血肉泰坦 -->
   <ThingDef ParentName="FH_NodeFleshBeast" Name="FH_FleshtitanBase">
     <defName>FH_Fleshtitan</defName>
@@ -1186,6 +1192,7 @@
     <statBases>
       <MoveSpeed>2.8</MoveSpeed>
       <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
       <ToxicResistance>0.8</ToxicResistance>
       <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
     </statBases>
@@ -1278,33 +1285,33 @@
     </comps>
     <tools>
       <li>
-        <label>tentacle</label>
+        <label>left bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>12</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
-        <label>tentacle</label>
+        <label>right bone spike</label>
         <capacities>
-          <li>Blunt</li>
+          <li>Stab</li>
         </capacities>
-        <power>12</power>
+        <power>14</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>5</power>
+        <power>3</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
@@ -1316,7 +1323,8 @@
   <PawnKindDef ParentName="BaseFleshbeastKind">
     <defName>FH_Dreadmeld</defName>
     <label>dreadmeld</label>
-    <overrideDeathOnDownedChance>0.9</overrideDeathOnDownedChance>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
     <race>FH_Dreadmeld</race>
     <combatPower>600</combatPower>
     <abilities>
