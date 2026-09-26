@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: bastionmeld -->
+  <FH_Bastionmeld.label>鐵骸母獸</FH_Bastionmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, coordinated by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld continually assembles armed fleshbeasts and defeats its enemies through long-range fire. -->
+  <FH_Bastionmeld.description>由數十隻小型血肉獸組成的龐然大物，通過鬆散相連的中樞神經系統協調統一。身軀上鑲嵌著各種機械族的殘骸。通過某種超自然能量控制著這些原本屬於機械族的武裝。鐵骸母獸很少出現在襲擊中，通常只能通過儀式召喚。鐵骸母獸在戰鬥中通常會不斷組裝持槍血肉獸，以遠距離戰鬥戰勝敵人。</FH_Bastionmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_Bastionmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: Beam Incinerator Cannon -->
+  <FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.0.label>焚滅脈衝炮</FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.0.label>
+  <!-- EN: Flesh weapon mount -->
+  <FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.1.label>
+  <!-- EN: Flesh weapon mount -->
+  <FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.2.label>
+  <!-- EN: Flesh weapon mount -->
+  <FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.3.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret_Bastionmeld.turrets.3.label>
+  <!-- EN: The host grows two weapon slots that can mount weapons and use the mounted weapons to attack. -->
+  <FH_Bastionmeld.comps.ParasitismComp.abilityDescription>宿主體表生長兩個武器插槽，可安裝武器，並使用所安裝的武器進行攻擊。</FH_Bastionmeld.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Weapon slot -->
+  <FH_Bastionmeld.comps.ParasitismComp.abilityLabel>武器插槽</FH_Bastionmeld.comps.ParasitismComp.abilityLabel>
+  <!-- EN: Flesh mutualism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts. -->
+  <FH_Bastionmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主獲得再生（不可思議）；提供2個額外的寄生武器裝備位。</FH_Bastionmeld.comps.ParasitismComp.effect>
+  <!-- EN: left bone spike -->
+  <FH_Bastionmeld.tools.left_bone_spike.label>左骨刺</FH_Bastionmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Bastionmeld.tools.right_bone_spike.label>右骨刺</FH_Bastionmeld.tools.right_bone_spike.label>
+  <!-- EN: head -->
+  <FH_Bastionmeld.tools.head.label>頭</FH_Bastionmeld.tools.head.label>
+
+  <!-- UNUSED -->
+  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.0.label>焚滅脈衝炮</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.0.label>
+  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.1.label>
+  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.2.label>
+  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.3.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.3.label>
+  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>焚滅脈衝炮</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>
+  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>
+  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>
+
+  <!-- EN: dreadmeld -->
+  <FH_Dreadmeld.label>驚懼母獸</FH_Dreadmeld.label>
+  <!-- EN: A gargantuan amalgamation of dozens of smaller fleshbeasts linked together by a loosely shared central nervous system. It uses its massive claws to dig tunnels through solid rock. Fleshbeast dreadmelds are rarely seen above ground, instead sheltering in caverns built from living flesh. They share a psychic connection with the flesh used to create their burrow. -->
+  <FH_Dreadmeld.description>由數十隻小型血肉獸聚合而成的龐然巨物，以鬆散共享的中樞神經系統連接在一起。它會用巨大的爪肢在堅巖中挖掘隧道。驚懼母獸很少出現在地表，通常棲身於活體血肉構成的洞窟中，並與構成巢穴的血肉保持心靈連接。</FH_Dreadmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_Dreadmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration. -->
+  <FH_Dreadmeld.comps.ParasitismComp.abilityDescription>宿主體表生長兩條母獸觸手，每條造成14點銳器傷害，攻擊冷卻2秒，護甲穿透40%。</FH_Dreadmeld.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Meld beast tentacle -->
+  <FH_Dreadmeld.comps.ParasitismComp.abilityLabel>母獸觸手</FH_Dreadmeld.comps.ParasitismComp.abilityLabel>
+  <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主獲得再生（不可思議）；採礦速度+160%；深鑽井操作速度+70%；提供兩條母獸觸手和“驚懼咆哮”主動能力。</FH_Dreadmeld.comps.ParasitismComp.effect>
+  <!-- EN: left bone spike -->
+  <FH_Dreadmeld.tools.left_bone_spike.label>左骨刺</FH_Dreadmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Dreadmeld.tools.right_bone_spike.label>右骨刺</FH_Dreadmeld.tools.right_bone_spike.label>
+  <!-- EN: head -->
+  <FH_Dreadmeld.tools.head.label>頭</FH_Dreadmeld.tools.head.label>
+
+  <!-- EN: fissionmeld -->
+  <FH_Fissionmeld.label>裂殖母獸</FH_Fissionmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate. -->
+  <FH_Fissionmeld.description>由數十隻小型血肉獸聚合而成的龐然巨物，以鬆散連接的中樞神經系統維繫整體。它的身體持續高速增生，會定期從軀體上萌生新的血肉獸。這些寄生子嗣讓裂殖母獸成為可怕的血肉絞肉機。裂殖母獸很少出現在襲擊中，通常只能通過儀式召喚。死亡後，裂殖母獸會進入休眠狀態，並最終再生。</FH_Fissionmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_Fissionmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration. -->
+  <FH_Fissionmeld.comps.ParasitismComp.abilityDescription>宿主體表生長兩條母獸觸手，每條造成14點銳器傷害，攻擊冷卻2秒，護甲穿透40%。</FH_Fissionmeld.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Meld beast tentacle -->
+  <FH_Fissionmeld.comps.ParasitismComp.abilityLabel>母獸觸手</FH_Fissionmeld.comps.ParasitismComp.abilityLabel>
+  <!-- EN: left bone spike -->
+  <FH_Fissionmeld.tools.left_bone_spike.label>左骨刺</FH_Fissionmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Fissionmeld.tools.right_bone_spike.label>右骨刺</FH_Fissionmeld.tools.right_bone_spike.label>
+  <!-- EN: head -->
+  <FH_Fissionmeld.tools.head.label>頭</FH_Fissionmeld.tools.head.label>
+
+  <!-- EN: flesh deadguard -->
+  <FH_FleshDeadguard.label>血肉死衛</FH_FleshDeadguard.label>
+  <!-- EN: A temporary fleshbeast guard summoned by a fleshbeast meld. -->
+  <FH_FleshDeadguard.description>由血肉母獸召喚的臨時血肉獸守衛。</FH_FleshDeadguard.description>
+  <!-- EN: spike -->
+  <FH_FleshDeadguard.tools.spike.label>骨刺</FH_FleshDeadguard.tools.spike.label>
+  <!-- EN: spike -->
+  <FH_FleshDeadguard.tools.spike.labelNoLocation>骨刺</FH_FleshDeadguard.tools.spike.labelNoLocation>
+  <!-- EN: head -->
+  <FH_FleshDeadguard.tools.head.label>頭</FH_FleshDeadguard.tools.head.label>
+
+  <!-- EN: fleshtitan -->
+  <FH_Fleshtitan.label>血肉泰坦</FH_Fleshtitan.label>
+  <!-- EN: The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. -->
+  <FH_Fleshtitan.description>血肉獸災變的核心，一隻不知如何長出肢體的血肉心臟。超快的再生速度讓心臟幾乎無懈可擊。幾乎沒有任何已知的方式能夠傷害血肉泰坦。近乎無限的怪力使其可以摧毀一切阻擋它前進的障礙。血肉泰坦的移動極其緩慢，而且會在一段時間後重新變為血肉心臟。</FH_Fleshtitan.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_Fleshtitan.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left arm -->
+  <FH_Fleshtitan.tools.left_arm.label>左臂</FH_Fleshtitan.tools.left_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_Fleshtitan.tools.left_arm.labelNoLocation>重拳</FH_Fleshtitan.tools.left_arm.labelNoLocation>
+  <!-- EN: right arm -->
+  <FH_Fleshtitan.tools.right_arm.label>右臂</FH_Fleshtitan.tools.right_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_Fleshtitan.tools.right_arm.labelNoLocation>重拳</FH_Fleshtitan.tools.right_arm.labelNoLocation>
+  <!-- EN: head -->
+  <FH_Fleshtitan.tools.head.label>頭</FH_Fleshtitan.tools.head.label>
+
+  <!-- EN: furiousmeld -->
+  <FH_Furiousmeld.label>暴怒母獸</FH_Furiousmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses, clearing a path for lesser fleshbeasts to overwhelm the enemy. -->
+  <FH_Furiousmeld.description>由數十隻小型血肉獸聚合而成的龐然巨物，以鬆散連接的中樞神經系統維繫整體。它生有厚重的活體鋼鐵甲殼，並能投射球形生物防護力場，允許子彈由內向外穿過，卻會阻擋外部射擊。暴怒母獸很少出現在襲擊中，通常只能通過儀式召喚。戰鬥時，它會正面衝鋒摧毀防禦，為較小的血肉獸開闢突破敵陣的道路。</FH_Furiousmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_Furiousmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: The host grows two shield-claw tentacles that deal 16 blunt damage every 3 seconds. -->
+  <FH_Furiousmeld.comps.ParasitismComp.abilityDescription>宿主體表生長兩條盾爪觸手，每條造成16點鈍器傷害，攻擊冷卻3秒。</FH_Furiousmeld.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Shield-claw tentacle -->
+  <FH_Furiousmeld.comps.ParasitismComp.abilityLabel>盾爪觸手</FH_Furiousmeld.comps.ParasitismComp.abilityLabel>
+  <!-- EN: left bone spike -->
+  <FH_Furiousmeld.tools.left_bone_spike.label>左骨刺</FH_Furiousmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Furiousmeld.tools.right_bone_spike.label>右骨刺</FH_Furiousmeld.tools.right_bone_spike.label>
+  <!-- EN: carapace -->
+  <FH_Furiousmeld.tools.carapace.label>甲殼</FH_Furiousmeld.tools.carapace.label>
+  <!-- EN: head -->
+  <FH_Furiousmeld.tools.head.label>頭</FH_Furiousmeld.tools.head.label>
+
+  <!-- EN: harnessed fleshtitan -->
+  <FH_HarnessedFleshtitan.label>受控血肉泰坦</FH_HarnessedFleshtitan.label>
+  <!-- EN: The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. Under the restraint of an archotechnological device, the fleshtitan can accept simple commands and participate in combat. -->
+  <FH_HarnessedFleshtitan.description>血肉獸災變的核心，一隻不知如何長出肢體的血肉心臟。超快的再生速度讓心臟幾乎無懈可擊。幾乎沒有任何已知的方式能夠傷害血肉泰坦。近乎無限的怪力使其可以摧毀一切阻擋它前進的障礙。血肉泰坦的移動極其緩慢，而且會在一段時間後重新變為血肉心臟。在超凡智能裝置的約束下，血肉泰坦能夠接受簡單的指令並參與戰鬥。</FH_HarnessedFleshtitan.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_HarnessedFleshtitan.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_HarnessedFleshtitan.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: left arm -->
+  <FH_HarnessedFleshtitan.tools.left_arm.label>左臂</FH_HarnessedFleshtitan.tools.left_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_HarnessedFleshtitan.tools.left_arm.labelNoLocation>重拳</FH_HarnessedFleshtitan.tools.left_arm.labelNoLocation>
+  <!-- EN: right arm -->
+  <FH_HarnessedFleshtitan.tools.right_arm.label>右臂</FH_HarnessedFleshtitan.tools.right_arm.label>
+  <!-- EN: heavy punch -->
+  <FH_HarnessedFleshtitan.tools.right_arm.labelNoLocation>重拳</FH_HarnessedFleshtitan.tools.right_arm.labelNoLocation>
+  <!-- EN: head -->
+  <FH_HarnessedFleshtitan.tools.head.label>頭</FH_HarnessedFleshtitan.tools.head.label>
+
+  <!-- EN: nexusmeld -->
+  <FH_Nexusmeld.label>統合母獸</FH_Nexusmeld.label>
+  <!-- EN: A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. The nexusmeld is the core of the fleshbeast swarm's coordination, using its powerful psychic abilities to command other fleshbeasts in assaults. Nexusmelds rarely appear in raids, preferring to lurk within nests supported by fleshmass hearts, with which they share a psychic bond. -->
+  <FH_Nexusmeld.description>由數十隻小型血肉獸聚合而成的龐然巨物，以鬆散連接的中樞神經系統維繫整體。統合母獸是血肉獸群協調行動的核心，利用強大的心靈能力指揮其他血肉獸發起進攻。它們很少出現在襲擊中，更喜歡潛伏在由血肉心臟支撐的巢穴內，並與心臟保持心靈連接。</FH_Nexusmeld.description>
+  <!-- EN: Emerged from {SOURCEPAWN_labelShort}. -->
+  <FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>從{SOURCEPAWN_labelShort}中出現。</FH_Nexusmeld.comps.CompInspectStringEmergence.inspectString>
+  <!-- EN: The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration. -->
+  <FH_Nexusmeld.comps.ParasitismComp.abilityDescription>宿主體表生長兩條母獸觸手，每條造成14點銳器傷害，攻擊冷卻2秒，護甲穿透40%。</FH_Nexusmeld.comps.ParasitismComp.abilityDescription>
+  <!-- EN: Meld beast tentacle -->
+  <FH_Nexusmeld.comps.ParasitismComp.abilityLabel>母獸觸手</FH_Nexusmeld.comps.ParasitismComp.abilityLabel>
+  <!-- EN: left bone spike -->
+  <FH_Nexusmeld.tools.left_bone_spike.label>左骨刺</FH_Nexusmeld.tools.left_bone_spike.label>
+  <!-- EN: right bone spike -->
+  <FH_Nexusmeld.tools.right_bone_spike.label>右骨刺</FH_Nexusmeld.tools.right_bone_spike.label>
+  <!-- EN: head -->
+  <FH_Nexusmeld.tools.head.label>頭</FH_Nexusmeld.tools.head.label>
+
+</LanguageData>

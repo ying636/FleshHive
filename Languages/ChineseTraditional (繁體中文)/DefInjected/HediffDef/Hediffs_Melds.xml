@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh berserk -->
+  <FH_Berserk.label>血肉暴走</FH_Berserk.label>
+  <!-- EN: The flesh beasts are driven into a frenzied berserk state. -->
+  <FH_Berserk.description>血肉獸陷入狂暴狀態。</FH_Berserk.description>
+  <!-- EN: berserk -->
+  <FH_Berserk.stages.berserk.label>狂暴</FH_Berserk.stages.berserk.label>
+
+  <!-- EN: flesh undying -->
+  <FH_FleshUndying.label>血肉不死</FH_FleshUndying.label>
+  <!-- EN: Stored twisted flesh keeps the host from dying while the parasite rebuilds ruined tissue. -->
+  <FH_FleshUndying.description>儲存的扭曲肉會阻止宿主死亡，並由寄生體重塑破損組織。</FH_FleshUndying.description>
+
+  <!-- EN: bastionmeld mutualism -->
+  <FH_Parasitism_Bastionmeld.label>鐵骸母獸寄生</FH_Parasitism_Bastionmeld.label>
+  <!-- EN: This creature is parasitized by a bastionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nTwo parasitic weapon mounts are grafted onto the body, allowing the host to release an EMP pulse. -->
+  <FH_Parasitism_Bastionmeld.description>該生物被鐵骸母獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n在體表嫁接兩個寄生武器裝備位，並允許釋放EMP脈衝。</FH_Parasitism_Bastionmeld.description>
+  <!-- EN: Left weapon mount -->
+  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.0.renderNode.debugLabel>左武器基座</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right weapon mount -->
+  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.1.renderNode.debugLabel>右武器基座</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.1.renderNode.debugLabel>
+  <!-- EN: bastionmeld mutualism -->
+  <FH_Parasitism_Bastionmeld.stages.bastionmeld_mutualism.label>鐵骸母獸寄生</FH_Parasitism_Bastionmeld.stages.bastionmeld_mutualism.label>
+
+
+  <!-- EN: dreadmeld mutualism -->
+  <FH_Parasitism_Dreadmeld.label>驚懼母獸寄生</FH_Parasitism_Dreadmeld.label>
+  <!-- EN: This creature is parasitized by a dreadmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains incredible regeneration, improved mining work, and a terror roar.\n\n-Meld beast tentacle -->
+  <FH_Parasitism_Dreadmeld.description>該生物被驚懼母獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n賦予不可思議的再生能力，強化採礦工作，並允許釋放驚懼咆哮。\n\n-母獸觸手</FH_Parasitism_Dreadmeld.description>
+  <!-- EN: Left Bone Spike -->
+  <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right Bone Spike -->
+  <FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Dreadmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <!-- EN: dreadmeld mutualism -->
+  <FH_Parasitism_Dreadmeld.stages.dreadmeld_mutualism.label>驚懼母獸寄生</FH_Parasitism_Dreadmeld.stages.dreadmeld_mutualism.label>
+
+
+  <!-- EN: fissionmeld mutualism -->
+  <FH_Parasitism_Fissionmeld.label>裂殖母獸寄生</FH_Parasitism_Fissionmeld.label>
+  <!-- EN: This creature is parasitized by a fissionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's twisted flesh capacity and regeneration are increased; flesh undying is sustained while enough twisted flesh is stored, and harmful conditions can be purged.\n\n-Meld beast tentacle -->
+  <FH_Parasitism_Fissionmeld.description>該生物被裂殖母獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n提升扭曲肉容量並提供再生；扭曲肉充足時維持血肉不死，並允許清除負面狀態和傷口。\n\n-母獸觸手</FH_Parasitism_Fissionmeld.description>
+  <!-- EN: Left Bone Spike -->
+  <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right Bone Spike -->
+  <FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Fissionmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <!-- EN: fissionmeld mutualism -->
+  <FH_Parasitism_Fissionmeld.stages.fissionmeld_mutualism.label>裂殖母獸寄生</FH_Parasitism_Fissionmeld.stages.fissionmeld_mutualism.label>
+
+
+  <!-- EN: furiousmeld mutualism -->
+  <FH_Parasitism_Furiousmeld.label>暴怒母獸寄生</FH_Parasitism_Furiousmeld.label>
+  <!-- EN: This creature is parasitized by a furiousmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity, stronger armor, and regeneration.\n\n-Shield-claw tentacle -->
+  <FH_Parasitism_Furiousmeld.description>該生物被暴怒母獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n提供扭曲肉容量、護甲和再生能力。\n\n-盾爪觸手</FH_Parasitism_Furiousmeld.description>
+  <!-- EN: Shield Claw -->
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>盾爪觸手</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Shield Claw -->
+  <FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>盾爪觸手</FH_Parasitism_Furiousmeld.comps.HediffComp_ParasitismWithShield.tentacles.1.renderNode.debugLabel>
+  <!-- EN: furiousmeld mutualism -->
+  <FH_Parasitism_Furiousmeld.stages.furiousmeld_mutualism.label>暴怒母獸寄生</FH_Parasitism_Furiousmeld.stages.furiousmeld_mutualism.label>
+
+
+  <!-- EN: nexusmeld mutualism -->
+  <FH_Parasitism_Nexusmeld.label>統合母獸寄生</FH_Parasitism_Nexusmeld.label>
+  <!-- EN: This creature is parasitized by a nexusmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains twisted flesh capacity and regeneration, and all friendly fleshbeasts are strengthened.\n\n-Meld beast tentacle -->
+  <FH_Parasitism_Nexusmeld.description>該生物被統合母獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n提供扭曲肉容量和再生能力，並強化所有友方血肉獸。\n\n-母獸觸手</FH_Parasitism_Nexusmeld.description>
+  <!-- EN: Left Spike -->
+  <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>左骨刺</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.0.renderNode.debugLabel>
+  <!-- EN: Right Spike -->
+  <FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>右骨刺</FH_Parasitism_Nexusmeld.comps.HediffComp_Parasitism.tentacles.1.renderNode.debugLabel>
+  <!-- EN: nexusmeld mutualism -->
+  <FH_Parasitism_Nexusmeld.stages.nexusmeld_mutualism.label>統合母獸寄生</FH_Parasitism_Nexusmeld.stages.nexusmeld_mutualism.label>
+
+
+  <!-- EN: devastating strike ready -->
+  <FH_TitanDevastatingStrikeReady.label>毀滅重擊已蓄力</FH_TitanDevastatingStrikeReady.label>
+  <!-- EN: The next melee attack that hits will shatter everything. -->
+  <FH_TitanDevastatingStrikeReady.description>下一次命中的近戰攻擊將會粉碎一切</FH_TitanDevastatingStrikeReady.description>
+
+  <!-- EN: flesh unification -->
+  <FH_Unification.label>血肉統合</FH_Unification.label>
+  <!-- EN: The nexusmeld's psychic unity strengthens the flesh. Melee damage increased, incoming damage reduced. -->
+  <FH_Unification.description>統合母獸的心靈力量強化了血肉。近戰傷害提升，承受傷害降低。</FH_Unification.description>
+
+</LanguageData>

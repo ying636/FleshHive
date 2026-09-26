@@ -187,7 +187,7 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
         EffecterDefOf.MeatExplosionExtraLarge.Spawn(position, map).Cleanup();
     }
 
-    private const int TransformDelayTicks = GenDate.TicksPerHour;
+    private const int TransformDelayTicks = GenDate.TicksPerHour * 10;
 
     private const int BlockedGrowthThreshold = 30;
 

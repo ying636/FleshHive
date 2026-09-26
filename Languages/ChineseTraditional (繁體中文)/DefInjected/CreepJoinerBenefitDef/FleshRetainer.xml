@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <FH_CreepJoinerBenefit_FleshRetainer.label>血肉眷屬</FH_CreepJoinerBenefit_FleshRetainer.label>
+  <FH_CreepJoinerBenefit_FleshRetainer.letterExtra>{PAWN_nameDef}擁有弱化版的海拉能力“血肉眷屬”。寄生不會提升{PAWN_possessive}軀體系數，{PAWN_pronoun}也不是節點生物。{PAWN_pronoun}擁有4點寄生空間，生成時必定寄生1隻隨機小型血肉獸；可以通過食用碎片提升寄生空間，最大為10，每次都會昏迷1天。</FH_CreepJoinerBenefit_FleshRetainer.letterExtra>
+
+</LanguageData>

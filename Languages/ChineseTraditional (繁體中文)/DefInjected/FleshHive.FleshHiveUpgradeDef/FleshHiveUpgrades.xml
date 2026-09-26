@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <FH_Upgrade_HiveCapacity1.label>巢穴擴容Ⅰ</FH_Upgrade_HiveCapacity1.label>
+  <FH_Upgrade_HiveCapacity1.description>巢穴的血肉獸容量+10</FH_Upgrade_HiveCapacity1.description>
+  <FH_Upgrade_HiveCapacity2.label>巢穴擴容Ⅱ</FH_Upgrade_HiveCapacity2.label>
+  <FH_Upgrade_HiveCapacity2.description>巢穴的血肉獸容量再增加+10，神經中樞，神經節點的血肉獸容量+10</FH_Upgrade_HiveCapacity2.description>
+
+  <!-- EN: agility -->
+  <FH_Upgrade_Agility.label>敏捷化</FH_Upgrade_Agility.label>
+  <!-- EN: Small player fleshbeasts have a 20% chance to dodge any damage. -->
+  <FH_Upgrade_Agility.description>小型血肉獸受到任何傷害時，有20%的概率躲避這次傷害。</FH_Upgrade_Agility.description>
+
+  <!-- EN: monomolecular bone spikes -->
+  <FH_Upgrade_BoneSpikePenetration.label>單分子骨刺</FH_Upgrade_BoneSpikePenetration.label>
+  <!-- EN: Player fleshbeasts gain +80% melee armor penetration. -->
+  <FH_Upgrade_BoneSpikePenetration.description>所有血肉獸獲得+80%的近戰護甲穿透。</FH_Upgrade_BoneSpikePenetration.description>
+
+  <!-- EN: efficient cell division -->
+  <FH_Upgrade_CellDivision.label>高效細胞分裂</FH_Upgrade_CellDivision.label>
+  <!-- EN: Flesh hives produce fleshbeasts at 150% speed on this map. -->
+  <FH_Upgrade_CellDivision.description>血肉巢穴生產血肉獸的速度變為150%。</FH_Upgrade_CellDivision.description>
+
+  <!-- EN: rapid healing -->
+  <FH_Upgrade_FastHealing.label>高速癒合</FH_Upgrade_FastHealing.label>
+  <!-- EN: Fleshbeasts recover wounds in flesh hives 50% faster. -->
+  <FH_Upgrade_FastHealing.description>血肉獸在巢穴中的傷口恢復速度提高50%。</FH_Upgrade_FastHealing.description>
+
+  <!-- EN: fleshbeast taming I -->
+  <FH_Upgrade_FleshbeastTaming1.label>血肉馴化 I</FH_Upgrade_FleshbeastTaming1.label>
+  <!-- EN: Player fleshbeast control decays 25% more slowly. -->
+  <FH_Upgrade_FleshbeastTaming1.description>血肉獸控制度降低速度降低25%。</FH_Upgrade_FleshbeastTaming1.description>
+
+  <!-- EN: fleshbeast taming II -->
+  <FH_Upgrade_FleshbeastTaming2.label>血肉馴化 II</FH_Upgrade_FleshbeastTaming2.label>
+  <!-- EN: Player fleshbeast control decays another 25% more slowly. -->
+  <FH_Upgrade_FleshbeastTaming2.description>血肉獸控制度降低速度再降低25%。</FH_Upgrade_FleshbeastTaming2.description>
+
+  <!-- EN: flesh rapid expansion I -->
+  <FH_Upgrade_FleshExpansion1.label>血肉快速擴張 I</FH_Upgrade_FleshExpansion1.label>
+  <!-- EN: All flesh buildings that grow outward grow 50% faster on this map. -->
+  <FH_Upgrade_FleshExpansion1.description>所有向外生長血肉的建築生長速度提高50%。</FH_Upgrade_FleshExpansion1.description>
+
+  <!-- EN: flesh rapid expansion II -->
+  <FH_Upgrade_FleshExpansion2.label>血肉快速擴張 II</FH_Upgrade_FleshExpansion2.label>
+  <!-- EN: All flesh buildings that grow outward grow another 50% faster on this map. -->
+  <FH_Upgrade_FleshExpansion2.description>所有向外生長血肉的建築生長速度再提高50%。</FH_Upgrade_FleshExpansion2.description>
+
+  <!-- EN: flesh shaping I -->
+  <FH_Upgrade_FleshShaping1.label>血肉塑形 I</FH_Upgrade_FleshShaping1.label>
+  <!-- EN: Flesh production outlets work 50% faster. -->
+  <FH_Upgrade_FleshShaping1.description>血肉產出口生產速度提高50%。</FH_Upgrade_FleshShaping1.description>
+
+  <!-- EN: flesh shaping II -->
+  <FH_Upgrade_FleshShaping2.label>血肉塑形 II</FH_Upgrade_FleshShaping2.label>
+  <!-- EN: Flesh production outlets work another 50% faster. -->
+  <FH_Upgrade_FleshShaping2.description>血肉產出口生產速度再提高50%。</FH_Upgrade_FleshShaping2.description>
+
+  <!-- EN: giant flesh expansion -->
+  <FH_Upgrade_GiantFleshExpansion.label>巨型血肉擴展</FH_Upgrade_GiantFleshExpansion.label>
+  <!-- EN: Large and giant fleshbeasts gain 2 parasitic spaces. -->
+  <FH_Upgrade_GiantFleshExpansion.description>大型、巨型血肉獸的寄生空間增加2。</FH_Upgrade_GiantFleshExpansion.description>
+
+  <!-- EN: nest master carapace -->
+  <FH_Upgrade_NestMasterCarapace.label>巢主甲殼</FH_Upgrade_NestMasterCarapace.label>
+  <!-- EN: Giant fleshbeasts gain +45% blunt armor, +106% sharp armor, and +54% heat armor. -->
+  <FH_Upgrade_NestMasterCarapace.description>巨型血肉獸的鈍器護甲提高45%，利器護甲提高106%，熱能護甲提高54%。</FH_Upgrade_NestMasterCarapace.description>
+
+  <!-- EN: nest taming I -->
+  <FH_Upgrade_NestTaming1.label>巢穴馴化 I</FH_Upgrade_NestTaming1.label>
+  <!-- EN: Flesh hive activity rises 25% more slowly on this map. -->
+  <FH_Upgrade_NestTaming1.description>巢穴活躍度提升速度降低25%。</FH_Upgrade_NestTaming1.description>
+
+  <!-- EN: nest taming II -->
+  <FH_Upgrade_NestTaming2.label>巢穴馴化 II</FH_Upgrade_NestTaming2.label>
+  <!-- EN: Flesh hive activity rises another 25% more slowly on this map. -->
+  <FH_Upgrade_NestTaming2.description>巢穴活躍度提升速度再降低25%。</FH_Upgrade_NestTaming2.description>
+
+  <!-- EN: efficient nutrition absorption -->
+  <FH_Upgrade_NutritionAbsorption.label>高效營養吸收</FH_Upgrade_NutritionAbsorption.label>
+  <!-- EN: Nutrition gained from corpses and flesh sacks increases by 50%. Food nutrition is unchanged. -->
+  <FH_Upgrade_NutritionAbsorption.description>從屍體（血肉樹）、血肉袋獲取的營養量增加50%，不增加從食物獲取的營養。</FH_Upgrade_NutritionAbsorption.description>
+
+  <!-- EN: reactivation -->
+  <FH_Upgrade_Reactivation.label>再活性化</FH_Upgrade_Reactivation.label>
+  <!-- EN: Each player fleshbeast has a 10% chance to create an extra puffspike when it dies. -->
+  <FH_Upgrade_Reactivation.description>所有血肉獸死亡時有10%的概率額外生成一隻肺血獸。</FH_Upgrade_Reactivation.description>
+
+  <!-- EN: robustification -->
+  <FH_Upgrade_Robust.label>健壯化</FH_Upgrade_Robust.label>
+  <!-- EN: Large fleshbeasts have twice their normal body part health, increasing it from 100% to 200%. Pain is multiplied by 0%. -->
+  <FH_Upgrade_Robust.description>大型血肉獸的肢體系數變為原來的2倍，從100%提高到200%。疼痛×0%。</FH_Upgrade_Robust.description>
+
+  <!-- EN: self-repairing flesh I -->
+  <FH_Upgrade_SelfRepair1.label>自修復血肉 I</FH_Upgrade_SelfRepair1.label>
+  <!-- EN: Enables the flesh hive auto-repair switch. Each hour, up to 200 hit points are repaired for 4 nutrition. -->
+  <FH_Upgrade_SelfRepair1.description>允許血肉建築消耗巢穴營養自動修補，每小時修復200點，消耗4營養。</FH_Upgrade_SelfRepair1.description>
+
+  <!-- EN: self-repairing flesh II -->
+  <FH_Upgrade_SelfRepair2.label>自修復血肉 II</FH_Upgrade_SelfRepair2.label>
+  <!-- EN: Auto-repair capacity becomes 400 hit points per hour for 8 nutrition. -->
+  <FH_Upgrade_SelfRepair2.description>自動修補速度提高到每小時400點，消耗8營養。</FH_Upgrade_SelfRepair2.description>
+
+</LanguageData>

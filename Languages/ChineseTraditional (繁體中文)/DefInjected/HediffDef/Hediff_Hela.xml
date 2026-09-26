@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Hela -->
+  <FH_Hela.label>海拉</FH_Hela.label>
+  <!-- EN: Hela's body has become a living command node for fleshbeasts. She can control a large fleshbeast group and automatically sustain its members with twisted flesh. Occupied parasite space reinforces every part of her body. -->
+  <FH_Hela.description>海拉的身體已經成為能夠統御血肉獸的活體節點。她可以控制一支龐大的血肉獸群，並使用扭曲肉自動維持其中的成員。已經被佔用的寄生空間會強化她的每一個身體部位。</FH_Hela.description>
+
+  <!-- EN: dark archotech adaptation coma -->
+  <FH_HelaShardComa.label>暗黑超凡適應性昏迷</FH_HelaShardComa.label>
+  <!-- EN: Hela is unconscious while her body adapts to a dark archotech shard and grows new parasite space. -->
+  <FH_HelaShardComa.description>海拉正在昏迷，她的身體正適應暗黑超凡碎片並生長出新的寄生空間。</FH_HelaShardComa.description>
+
+</LanguageData>

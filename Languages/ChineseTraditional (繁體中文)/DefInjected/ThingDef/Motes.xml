@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: missile target -->
+  <FH_Missile_Target.label>導彈目標</FH_Missile_Target.label>
+
+  <!-- EN: Mote -->
+  <FH_Mote_Bastionmeld_Charge.label>微粒</FH_Mote_Bastionmeld_Charge.label>
+
+  <!-- EN: Mote -->
+  <FH_Mote_BeamIncinerator_RedLine.label>光點</FH_Mote_BeamIncinerator_RedLine.label>
+
+</LanguageData>

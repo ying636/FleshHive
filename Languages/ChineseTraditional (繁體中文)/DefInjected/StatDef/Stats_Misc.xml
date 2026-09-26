@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: mutualism capacity -->
+  <FH_Stat_ParasitismCapacity.label>寄生空間</FH_Stat_ParasitismCapacity.label>
+  <!-- EN: ParasitismCapacity -->
+  <FH_Stat_ParasitismCapacity.description>宿主能夠容納血肉獸寄生體的總空間。</FH_Stat_ParasitismCapacity.description>
+
+  <!-- EN: hive suppression speed factor -->
+  <FH_Stat_SuppressionEffect.label>巢穴壓制速度係數</FH_Stat_SuppressionEffect.label>
+  <!-- EN: Multiplies the amount of hive activity reduced by suppression work at this building. -->
+  <FH_Stat_SuppressionEffect.description>在此建築進行壓制工作時，降低巢穴活躍度的效果倍率。</FH_Stat_SuppressionEffect.description>
+
+</LanguageData>

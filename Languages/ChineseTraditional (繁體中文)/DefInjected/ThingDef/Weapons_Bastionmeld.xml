@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: charge lance -->
+  <FH_Gun_BastionmeldChargeLance.label>電荷標槍</FH_Gun_BastionmeldChargeLance.label>
+  <!-- EN: A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail. -->
+  <FH_Gun_BastionmeldChargeLance.description>一種脈衝充能的軌道輔助標槍武器。它會以高速發射單發彈丸，並在彈丸離開加速軌道時為其注入不穩定能量。</FH_Gun_BastionmeldChargeLance.description>
+  <!-- EN: charge lance -->
+  <FH_Gun_BastionmeldChargeLance.verbs.Verb_Shoot.label>電荷標槍</FH_Gun_BastionmeldChargeLance.verbs.Verb_Shoot.label>
+
+  <!-- EN: inferno cannon -->
+  <FH_Gun_BastionmeldInfernoCannon.label>地獄火加農炮</FH_Gun_BastionmeldInfernoCannon.label>
+  <!-- EN: An incendiary-shot mini-artillery device. It fires a large incendiary warhead. -->
+  <FH_Gun_BastionmeldInfernoCannon.description>一種發射燃燒彈的小型火炮裝置。它會射出大型燃燒彈頭。</FH_Gun_BastionmeldInfernoCannon.description>
+  <!-- EN: inferno cannon -->
+  <FH_Gun_BastionmeldInfernoCannon.verbs.Verb_Shoot.label>地獄火加農炮</FH_Gun_BastionmeldInfernoCannon.verbs.Verb_Shoot.label>
+
+  <!-- EN: Beam Incinerator Cannon -->
+  <FH_Gun_BastionmeldTrackingLaser.label>焚滅脈衝炮</FH_Gun_BastionmeldTrackingLaser.label>
+  <!-- EN: A tracking thermal beam cannon designed for wide-area lethality. It must lock onto a target and charge for several seconds before firing a sustained searing beam. The end of the beam corrects its own trajectory; anything swept by it will be badly burned, and the ground will ignite. Keep moving or be caught. Cannot fire at targets that are too close. -->
+  <FH_Gun_BastionmeldTrackingLaser.description>專為大範圍殺傷而設計的追蹤型熱光束加農炮。需要鎖定目標充能數秒，隨後發射一道持續的炙熱光束。光束末段會自行修正彈道，任何被掃到的單位都將嚴重灼傷，地面亦會燃起大火。必須不停移動才能逃脫。無法射擊過近目標。</FH_Gun_BastionmeldTrackingLaser.description>
+  <!-- EN: Beam Incinerator Cannon -->
+  <FH_Gun_BastionmeldTrackingLaser.verbs.Beam_Incinerator_Cannon.label>焚滅脈衝炮</FH_Gun_BastionmeldTrackingLaser.verbs.Beam_Incinerator_Cannon.label>
+
+</LanguageData>

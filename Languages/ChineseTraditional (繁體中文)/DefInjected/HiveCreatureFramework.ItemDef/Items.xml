@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: bioferrite -->
+  <FH_Item_Bioferrite.label>活鐵</FH_Item_Bioferrite.label>
+  <!-- EN: An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel. -->
+  <FH_Item_Bioferrite.description>一種奇異的金屬狀纖維物質，兼具有機物與金屬的特性。活鐵通常由故障的納米機械加工生物質材料得來，而這些納米機械全都產生了與癌症相似的系統混亂狀況。\n\n這種材料以其與幾種靈流的良好相性而聞名。若在特定環境下施加壓力，活鐵會變得極度易燃，使其成為不錯的燃料。</FH_Item_Bioferrite.description>
+
+  <!-- EN: flesh adaptation module -->
+  <FH_Item_FleshAdaptationModule.label>血肉適應模塊</FH_Item_FleshAdaptationModule.label>
+  <!-- EN: A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive. -->
+  <FH_Item_FleshAdaptationModule.description>血肉巢穴生產的一個肉瘤型的模塊，會影響植入者的心智精神，使其不再對血肉生物或製品乃至扭曲肉產生厭惡情緒，從而能夠更好地與血肉巢穴共同生活。</FH_Item_FleshAdaptationModule.description>
+
+  <!-- EN: flesh carapace -->
+  <FH_Item_FleshCarapace.label>血肉甲殼</FH_Item_FleshCarapace.label>
+  <!-- EN: A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material. -->
+  <FH_Item_FleshCarapace.description>在血肉獸身上常見的甲殼，內部含有難以提取的微量活鐵，堅硬且輕便。可以作為建築材料。</FH_Item_FleshCarapace.description>
+
+  <!-- EN: fleshmass lung -->
+  <FH_Item_FleshmassLung.label>血肉肺</FH_Item_FleshmassLung.label>
+  <!-- EN: A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_FleshmassLung.description>一塊有不完全知覺的腫瘤血肉肺。其上組織不斷再生更替，能使安裝者免疫肺瘟、哮喘等疾病。\n\n這個器官有自己的神經結構，將其移除可能招致危險。</FH_Item_FleshmassLung.description>
+
+  <!-- EN: fleshmass stomach -->
+  <FH_Item_FleshmassStomach.label>血肉胃</FH_Item_FleshmassStomach.label>
+  <!-- EN: A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_FleshmassStomach.description>一塊有不完全知覺的腫瘤血肉胃。其中含有的強酸會給安裝者帶來痛苦，但也能完全避免食物中毒。\n\n這個器官有自己的神經結構，將其移除可能招致危險。</FH_Item_FleshmassStomach.description>
+
+  <!-- EN: flesh pack -->
+  <FH_Item_FleshPack.label>寄生揹包</FH_Item_FleshPack.label>
+  <!-- EN: A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's mutualism capacity. -->
+  <FH_Item_FleshPack.description>配有適合血肉獸生長環境的揹包，血肉獸可以以更小的體積壓縮在裡邊。它可以增強佩戴者的寄生空間上限。</FH_Item_FleshPack.description>
+
+  <!-- EN: flesh symbiosis module -->
+  <FH_Item_FleshSymbiosisModule.label>血肉共生模塊</FH_Item_FleshSymbiosisModule.label>
+  <!-- EN: A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating. -->
+  <FH_Item_FleshSymbiosisModule.description>血肉巢穴生產的一個肉瘤型的模塊，使植入者可以直接從巢穴獲取營養，從而能夠更好地與血肉巢穴共同生活。但是營養直接輸入身體而非進食會使植入者感到煩躁。</FH_Item_FleshSymbiosisModule.description>
+
+  <!-- EN: symbiosis serum -->
+  <FH_Item_FleshSymbiosisSerum.label>共生血清</FH_Item_FleshSymbiosisSerum.label>
+  <!-- EN: A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive. -->
+  <FH_Item_FleshSymbiosisSerum.description>裝有不透明肉色流體的注射針劑，能夠讓使用者與血肉結構心靈共通。注射進肌肉後，血清會影響使用者的心智精神，使其不再對血肉生物或製品乃至扭曲肉產生厭惡情緒，從而能夠更好地與血肉巢穴共同生活。</FH_Item_FleshSymbiosisSerum.description>
+
+  <!-- EN: flesh whip -->
+  <FH_Item_FleshWhip.label>血肉觸鞭</FH_Item_FleshWhip.label>
+  <!-- EN: A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_FleshWhip.description>強健發達、末端帶刃的肉乎乎觸手。這隻血肉觸鞭算是不錯的近戰武器。\n\n這個部件有自己的神經結構，將其移除可能招致危險。</FH_Item_FleshWhip.description>
+
+  <!-- EN: nerve flesh -->
+  <FH_Item_NerveFlesh.label>神經塊</FH_Item_NerveFlesh.label>
+  <!-- EN: An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction. -->
+  <FH_Item_NerveFlesh.description>血肉神經的必須部分。許多複雜的血肉結構需要神經塊才能夠完成製作。</FH_Item_NerveFlesh.description>
+
+  <!-- EN: flesh tentacle -->
+  <FH_Item_Tentacle.label>血肉觸手</FH_Item_Tentacle.label>
+  <!-- EN: A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed. -->
+  <FH_Item_Tentacle.description>強健發達、已經有點血肉獸樣子的肉乎乎觸手。這隻觸手操控起來還是非常趁手的。\n\n這隻血肉觸手有自己的神經結構，將其移除可能招致危險。</FH_Item_Tentacle.description>
+
+  <!-- EN: twisted meat -->
+  <FH_Item_TwistedMeat.label>扭曲肉</FH_Item_TwistedMeat.label>
+  <!-- EN: Pieces of twisted muscle and gristle, bloated with tumorous growths. These bizarre shreds of flesh must have come from a horrific creature. -->
+  <FH_Item_TwistedMeat.description>扭曲的肌肉與軟骨碎塊，上面遍佈著贅生的腫瘤組織。這些詭異的碎肉一定來自某種恐怖生物。</FH_Item_TwistedMeat.description>
+
+</LanguageData>

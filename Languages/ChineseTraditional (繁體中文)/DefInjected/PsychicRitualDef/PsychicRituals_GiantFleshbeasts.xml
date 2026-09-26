@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: draw bastionmeld -->
+  <FH_SummonBastionmeld.label>吸引鐵骸母獸</FH_SummonBastionmeld.label>
+  <!-- EN: Create a psychic pulse that draws a bastionmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts. -->
+  <FH_SummonBastionmeld.description>製造一道心靈脈衝，吸引一隻鐵骸母獸靠近並在殖民地附近遊蕩。它很可能會襲擊附近的其他營地並在那裡暫留。如果低質量儀式不夠精準，會吸引更多血肉獸護衛。</FH_SummonBastionmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonBastionmeld.outcomeDescription>儀式質量越高，吸引的血肉獸護衛越少。</FH_SummonBastionmeld.outcomeDescription>
+
+  <!-- EN: draw dreadmeld -->
+  <FH_SummonDreadmeld.label>吸引驚懼母獸</FH_SummonDreadmeld.label>
+  <!-- EN: Create a psychic pulse that draws a dreadmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts. -->
+  <FH_SummonDreadmeld.description>製造一道心靈脈衝，吸引一隻驚懼母獸靠近並在殖民地附近遊蕩。它很可能會襲擊附近的其他營地並在那裡暫留。如果低質量儀式不夠精準，會吸引更多血肉獸護衛。</FH_SummonDreadmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonDreadmeld.outcomeDescription>儀式質量越高，吸引的血肉獸護衛越少。</FH_SummonDreadmeld.outcomeDescription>
+
+  <!-- EN: draw fissionmeld -->
+  <FH_SummonFissionmeld.label>吸引裂殖母獸</FH_SummonFissionmeld.label>
+  <!-- EN: Create a psychic pulse that draws a fissionmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts. -->
+  <FH_SummonFissionmeld.description>製造一道心靈脈衝，吸引一隻裂殖母獸靠近並在殖民地附近遊蕩。它很可能會襲擊附近的其他營地並在那裡暫留。如果低質量儀式不夠精準，會吸引更多血肉獸護衛。</FH_SummonFissionmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonFissionmeld.outcomeDescription>儀式質量越高，吸引的血肉獸護衛越少。</FH_SummonFissionmeld.outcomeDescription>
+
+  <!-- EN: draw furiousmeld -->
+  <FH_SummonFuriousmeld.label>吸引暴怒母獸</FH_SummonFuriousmeld.label>
+  <!-- EN: Create a psychic pulse that draws a furiousmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts. -->
+  <FH_SummonFuriousmeld.description>製造一道心靈脈衝，吸引一隻暴怒母獸靠近並在殖民地附近遊蕩。它很可能會襲擊附近的其他營地並在那裡暫留。如果低質量儀式不夠精準，會吸引更多血肉獸護衛。</FH_SummonFuriousmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonFuriousmeld.outcomeDescription>儀式質量越高，吸引的血肉獸護衛越少。</FH_SummonFuriousmeld.outcomeDescription>
+
+  <!-- EN: draw nexusmeld -->
+  <FH_SummonNexusmeld.label>吸引統合母獸</FH_SummonNexusmeld.label>
+  <!-- EN: Create a psychic pulse that draws a nexusmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts. -->
+  <FH_SummonNexusmeld.description>製造一道心靈脈衝，吸引一隻統合母獸靠近並在殖民地附近遊蕩。它很可能會襲擊附近的其他營地並在那裡暫留。如果低質量儀式不夠精準，會吸引更多血肉獸護衛。</FH_SummonNexusmeld.description>
+  <!-- EN: A higher-quality ritual will attract fewer fleshbeast escorts. -->
+  <FH_SummonNexusmeld.outcomeDescription>儀式質量越高，吸引的血肉獸護衛越少。</FH_SummonNexusmeld.outcomeDescription>
+
+</LanguageData>

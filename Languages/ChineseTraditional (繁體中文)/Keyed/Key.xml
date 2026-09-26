@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Replenishing each spare bone spear consumes 1 bioferrite -->
+  <FH_BoneSpearSpitter_RefuelCost>每補充1發備用骨矛消耗1活鐵</FH_BoneSpearSpitter_RefuelCost>
+  <!-- EN: Allow hunting undesignated creatures -->
+  <FH_GroupHunt_AllowUndesignatedAnimals>允許狩獵非標記生物</FH_GroupHunt_AllowUndesignatedAnimals>
+  <!-- EN: When enabled, a group in hunt mode automatically targets wild animals if no target has an original hunt designation. When disabled, the group only hunts designated targets. -->
+  <FH_GroupHunt_AllowUndesignatedAnimalsTip>啟用後，處於狩獵模式的群組在沒有原版狩獵標記目標時，會自動鎖定地圖上的野生動物。關閉時只狩獵帶有原版狩獵標記的目標。</FH_GroupHunt_AllowUndesignatedAnimalsTip>
+  <!-- EN: Minimum healthy hunters -->
+  <FH_GroupHunt_MinimumHealthyHunters>最低健康狩獵單位數</FH_GroupHunt_MinimumHealthyHunters>
+  <!-- EN: The group only attempts to hunt when at least this many members are fully recovered and healthy. It also waits for this number after each hunt. -->
+  <FH_GroupHunt_MinimumHealthyHuntersTip>只有當群組中完全恢復的健康單位達到此數量時，才會嘗試開始狩獵。每輪狩獵結束後也會等待達到此數量。</FH_GroupHunt_MinimumHealthyHuntersTip>
+
+  <!-- EN: Cancel insert -->
+  <FleshParasitePod_CancelInsert>取消植入</FleshParasitePod_CancelInsert>
+  <!-- EN: Start -->
+  <FleshParasitePod_Start>開始</FleshParasitePod_Start>
+  <!-- EN: Parasitized flesh beasts -->
+  <FleshParasitePod_ParasitizedFleshBeasts>已寄生血肉獸</FleshParasitePod_ParasitizedFleshBeasts>
+  <!-- EN: Remove -->
+  <FleshParasitePod_Remove>移除</FleshParasitePod_Remove>
+  <!-- EN: Cannot parasite: insufficient capacity -->
+  <FleshParasitePod_InsufficientCapacity>無法寄生、空間不足</FleshParasitePod_InsufficientCapacity>
+  <!-- EN: Select a living, player-controlled organic creature. -->
+  <FH_ActiveParasitism_InvalidTarget>請選擇一個存活且由我方控制的有機生物。</FH_ActiveParasitism_InvalidTarget>
+  <!-- EN: Active mutualism failed. Check the error log for details. -->
+  <FH_ActiveParasitism_Failed>主動寄生失敗，請查看錯誤日誌。</FH_ActiveParasitism_Failed>
+  <!-- EN: Cannot parasite: requires {0} nutrition -->
+  <FleshParasitePod_InsufficientNutrition>無法寄生，需要{0}營養</FleshParasitePod_InsufficientNutrition>
+  <!-- EN: Mutualism cost: {0} nutrition -->
+  <FleshParasitePod_NutritionCost>寄生消耗：{0}營養</FleshParasitePod_NutritionCost>
+  <!-- EN: A mutualism task already exists -->
+  <FleshParasitePod_CurQuest>已有寄生任務</FleshParasitePod_CurQuest>
+  <!-- EN: Selected to parasite {0} with {1} -->
+  <FleshParasitePod_SelectedParasitismTask>已選定執行{0}寄生{1}任務</FleshParasitePod_SelectedParasitismTask>
+  <!-- EN: Currently parasitizing {0} with {1} -->
+  <FleshParasitePod_ExecutingParasitismTask>正在執行{0}寄生{1}任務</FleshParasitePod_ExecutingParasitismTask>
+  <!-- EN: Selected to remove {1} from {0} -->
+  <FleshParasitePod_SelectedRemoveTask>已選定執行從{0}中移除{1}任務</FleshParasitePod_SelectedRemoveTask>
+  <!-- EN: Currently removing {1} from {0} -->
+  <FleshParasitePod_ExecutingRemoveTask>正在執行從{0}中移除{1}任務</FleshParasitePod_ExecutingRemoveTask>
+  <!-- EN: Insert fleshbeast -->
+  <FleshParasitePod_Flesh>置入血肉獸</FleshParasitePod_Flesh>
+  <!-- EN: Contains: {0}, {1} -->
+  <FleshParasitePod_Inner>包含：{0}，{1}</FleshParasitePod_Inner>
+  <!-- EN: Progress: {0} -->
+  <FleshParasitePod_Progress>進度：{0}</FleshParasitePod_Progress>
+  <!-- EN: Performing mutualism task -->
+  <FleshParasitePod_Starting>正在執行寄生任務</FleshParasitePod_Starting>
+  <!-- EN: Insert host -->
+  <FleshParasitePod_Target>置入宿主</FleshParasitePod_Target>
+  <!-- EN: Implant a fleshbeast into a host with the aid of a flesh parasite vat. The fleshbeast consumes the host's nutrition to survive. Different fleshbeasts grant different abilities, making the host more powerful. -->
+  <FleshParasitePod_Title>將一隻血肉獸在血肉寄生倉的輔助下寄生在宿主的身體中。血肉獸將會消耗寄生目標的營養存活。不同的血肉獸會提供不同的能力，使宿主變得更加強大。</FleshParasitePod_Title>
+  <!-- EN: Carry to flesh parasite vat: {0} -->
+  <FH_Parasitism_CarryAnimalToPod>搬入血肉寄生倉：{0}</FH_Parasitism_CarryAnimalToPod>
+  <!-- EN: Parasitic abilities -->
+  <ParasitismAbility>寄生能力</ParasitismAbility>
+  <!-- EN: Parasite capacity: {0}/{1} -->
+  <ParasitismCapacity>寄生空間：{0}/{1}</ParasitismCapacity>
+  <!-- EN: Capacity cost: -->
+  <ParasitismCapacityCost>空間佔用：</ParasitismCapacityCost>
+  <!-- EN: {0} mutualism -->
+  <ParasitismFleshBeast>{0}寄生</ParasitismFleshBeast>
+  <!-- EN: Mutualism -->
+  <Tab_Parasitism>寄生</Tab_Parasitism>
+  <!-- EN: Unparasitized -->
+  <Unparasitized>未被寄生</Unparasitized>
+  <!-- EN: Hunger rate offset: {0} -->
+  <FH_HungerRate>飢餓速率偏移：{0}</FH_HungerRate>
+  <!-- EN: {0}: mutualism succeeded -->
+  <ParasitismSucceed>{0}寄生成功</ParasitismSucceed>
+  <!-- EN: {1} has successfully parasitized {0}. -->
+  <ParasitismSucceedDesc>{1}已成功寄生於{0}體內。</ParasitismSucceedDesc>
+  <!-- EN: {0}: mutualism failed -->
+  <ParasitismFail>{0}寄生失敗</ParasitismFail>
+  <!-- EN: The attempt to parasite {0} failed. The fleshbeast has been released. -->
+  <ParasitismFailDesc>對{0}的寄生未能完成，血肉獸已被釋放。</ParasitismFailDesc>
+  <!-- EN: Flesh parasite vats -->
+  <FH_Parasitism_VatSelector>血肉寄生倉</FH_Parasitism_VatSelector>
+  <!-- EN: No player-controlled flesh parasite vats are available on this map. -->
+  <FH_Parasitism_NoVats>當前地圖上沒有可用的血肉寄生倉。</FH_Parasitism_NoVats>
+  <!-- EN: Idle -->
+  <FH_Parasitism_VatIdle>空閒</FH_Parasitism_VatIdle>
+  <!-- EN: Task queued -->
+  <FH_Parasitism_VatQueued>任務已建立</FH_Parasitism_VatQueued>
+  <!-- EN: Parasitizing: {0} -->
+  <FH_Parasitism_VatWorking>寄生中：{0}</FH_Parasitism_VatWorking>
+
+  <!-- EN: Flesh hives -->
+  <FH_HivePlan_Selector>血肉巢穴</FH_HivePlan_Selector>
+  <!-- EN: No flesh hives or flesh primary nest are available on this map. -->
+  <FH_HivePlan_NoHives>當前地圖沒有可用的血肉巢穴或血肉主巢。</FH_HivePlan_NoHives>
+  <!-- EN: No plans -->
+  <FH_HivePlan_StatusEmpty>暫無計劃</FH_HivePlan_StatusEmpty>
+  <!-- EN: {0} plans, {1} active -->
+  <FH_HivePlan_StatusEntries>{0}項計劃，{1}項啟用</FH_HivePlan_StatusEntries>
+
+  <!-- EN: Parasite -->
+  <HCF_FormulaCategory_Parasite>寄生體</HCF_FormulaCategory_Parasite>
+  <!-- EN: Flesh trait -->
+  <HCF_FormulaCategory_FleshTrait>血肉特性</HCF_FormulaCategory_FleshTrait>
+  <!-- EN: Only one flesh trait can be selected. -->
+  <FH_FormulaTrait_OnlyOne>只能選擇一個血肉特性。</FH_FormulaTrait_OnlyOne>
+  <!-- EN: No discovered traits are available for this fleshbeast. -->
+  <FH_FormulaTrait_NoneAvailable>這隻血肉獸沒有可用的已發現特性。</FH_FormulaTrait_NoneAvailable>
+  <!-- EN: trait -->
+  <FH_FormulaTrait_Noun>特性</FH_FormulaTrait_Noun>
+  <!-- EN: Add Parasite -->
+  <HCF_AddParasite>添加寄生獸</HCF_AddParasite>
+  <!-- EN: Select Parasite -->
+  <HCF_SelectParasite>選擇寄生血肉獸</HCF_SelectParasite>
+  <!-- EN: Insufficient parasite space (remaining {0}, need {1}) -->
+  <HCF_Parasite_NoSpace>寄生空間不足（剩餘{0}，需要{1}）</HCF_Parasite_NoSpace>
+  <!-- EN: Used parasite space: {0}/{1} -->
+  <HCF_Parasite_CapacityInfo>已使用寄生空間：{0}/{1}</HCF_Parasite_CapacityInfo>
+  <!-- EN: No available parasite beasts -->
+  <HCF_Parasite_NoChoices>沒有可用的寄生血肉獸</HCF_Parasite_NoChoices>
+  <!-- EN: Already added -->
+  <HCF_Parasite_AlreadyAdded>已添加此寄生獸</HCF_Parasite_AlreadyAdded>
+  <!-- EN: Parasite -->
+  <HCF_Parasite_Noun>寄生</HCF_Parasite_Noun>
+
+  <!-- EN: Twisted Flesh: {0}/{1} -->
+  <TwistedFleshCapacity>扭曲肉：{0}/{1}</TwistedFleshCapacity>
+  <!-- EN: Requires {0} twisted flesh. -->
+  <FH_NotEnoughTwistedFlesh>需要{0}扭曲肉。</FH_NotEnoughTwistedFlesh>
+  <!-- EN: DEV: +10% twisted flesh -->
+  <FH_DevAddTwistedFlesh>開發：增加10%扭曲肉</FH_DevAddTwistedFlesh>
+  <!-- EN: DEV: fill twisted flesh -->
+  <FH_DevFillTwistedFlesh>開發：填滿扭曲肉</FH_DevFillTwistedFlesh>
+  <!-- EN: DEV: add parasite -->
+  <FH_DevGiveParasite>開發：添加寄生體</FH_DevGiveParasite>
+  <!-- EN: DEV: complete flesh sack digestion -->
+  <FH_DevCompleteFleshSackDigestion>開發：完成血肉囊消化</FH_DevCompleteFleshSackDigestion>
+  <!-- EN: Immediately finish the current flesh sack digestion and eject its contents. -->
+  <FH_DevCompleteFleshSackDigestionDesc>立即完成當前血肉囊的消化並排出內容物。</FH_DevCompleteFleshSackDigestionDesc>
+
+  <!-- EN: Toggle {0}'s tentacle attack mode -->
+  <ToggleTentacleAttackMode>開關{0}的觸手攻擊模式</ToggleTentacleAttackMode>
+  <!-- EN: Tentacle Attack: On -->
+  <TentacleAttackModeOn>觸手攻擊：開啟</TentacleAttackModeOn>
+  <!-- EN: Tentacle Attack: Off -->
+  <TentacleAttackModeOff>觸手攻擊：關閉</TentacleAttackModeOff>
+  <!-- EN: Parasitic tentacle -->
+  <FH_ParasiticTentacle>寄生觸手</FH_ParasiticTentacle>
+
+  <!-- EN: Mark Prey -->
+  <FH_MarkPrey>標記獵物</FH_MarkPrey>
+  <!-- EN: Mark downed creatures to be carried to a flesh sack for digestion. -->
+  <FH_MarkPreyDesc>標記倒地生物，將其搬運至血肉囊進行消化。</FH_MarkPreyDesc>
+  <!-- EN: Target is not downed -->
+  <FH_MarkPrey_NotDowned>目標未倒地</FH_MarkPrey_NotDowned>
+  <!-- EN: Can only mark fleshy creatures -->
+  <FH_MarkPrey_NotFlesh>只能標記血肉生物</FH_MarkPrey_NotFlesh>
+  <!-- EN: Already marked -->
+  <FH_MarkPrey_AlreadyMarked>已標記</FH_MarkPrey_AlreadyMarked>
+
+  <!-- EN: Digesting: {0} -->
+  <FH_FleshSack_Digesting>消化中：{0}</FH_FleshSack_Digesting>
+  <!-- EN: Contains: {0} -->
+  <FH_FleshSack_Inner>內含：{0}</FH_FleshSack_Inner>
+  <!-- EN: Empty -->
+  <FH_FleshSack_Empty>空</FH_FleshSack_Empty>
+
+  <!-- EN: Friendly unit being digested -->
+  <FH_FleshSack_FriendlyTitle>友方單位被消化</FH_FleshSack_FriendlyTitle>
+  <!-- EN: {0} has been placed into a flesh sack for digestion. -->
+  <FH_FleshSack_FriendlyDesc>{0}被放入血肉囊中消化。</FH_FleshSack_FriendlyDesc>
+
+  <!-- EN: This building has been replaced by {0}. -->
+  <FH_Building_ReplacedBy>該建築已被{0}取代。</FH_Building_ReplacedBy>
+  <!-- EN: This building is currently unavailable. -->
+  <FH_HiveBuildingUnavailable>該建築當前不可用。</FH_HiveBuildingUnavailable>
+  <!-- EN: A hive can only support one flesh primary nest. -->
+  <FH_FleshPrimaryNest_OnlyOne>一個巢群只能有一個血肉主巢。</FH_FleshPrimaryNest_OnlyOne>
+  <!-- EN: Must be placed on flesh terrain. -->
+  <FH_MustPlaceOnFleshTerrain>必須放置在血肉地形上。</FH_MustPlaceOnFleshTerrain>
+  <!-- EN: An available flesh hopper is required. -->
+  <FH_RequireFleshHopper>需要至少一個可用的產出物噴口。</FH_RequireFleshHopper>
+  <!-- EN: Flesh Hive -->
+  <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
+  <!-- EN: Raid parasite carrier chance: {0} -->
+  <FleshHive_RaidParasiteChance>襲擊單位攜帶血肉獸寄生概率：{0}</FleshHive_RaidParasiteChance>
+  <FH_Settings_ResearchUnlockGestation>研究解鎖無特性孕育</FH_Settings_ResearchUnlockGestation>
+  <FH_Settings_ResearchUnlockGestationTip>完成血肉融合後解鎖所有中型血肉獸的無特性版孕育；完成複雜血肉融合後解鎖所有大型血肉獸的無特性版孕育。</FH_Settings_ResearchUnlockGestationTip>
+  <!-- EN: Flesh -->
+  <HCF_Tag_Flesh>血肉</HCF_Tag_Flesh>
+  <!-- EN: Flesh hive container -->
+  <HCF_Tag_FH_FleshContainer>血肉巢穴容器</HCF_Tag_FH_FleshContainer>
+  <!-- EN: Hive scale capacity reached. -->
+  <FH_GroupReject_HivePopulationCapacity>巢穴規模容量已達上限。</FH_GroupReject_HivePopulationCapacity>
+  <!-- EN: The hive is too hungry to accept returning units. -->
+  <FH_GroupReject_Hungry>巢穴過於飢餓，無法接收返回的單位。</FH_GroupReject_Hungry>
+  <!-- EN: Hive cluster scale: {0} -->
+  <FH_FleshManagement_HiveScale>巢群規模：{0}</FH_FleshManagement_HiveScale>
+  <!-- EN: Hive scale sources: -->
+  <FH_FleshManagement_HiveScaleTooltipTitle>巢穴規模來源：</FH_FleshManagement_HiveScaleTooltipTitle>
+  <!-- EN: Flesh terrain: {0} tiles, +{1} scale -->
+  <FH_FleshManagement_HiveScaleTooltipTerrain>血肉地形：{0}格，+{1}規模</FH_FleshManagement_HiveScaleTooltipTerrain>
+  <!-- EN: {0} x{1}: +{2} scale -->
+  <FH_FleshManagement_HiveScaleTooltipBuilding>{0} x{1}：+{2}規模</FH_FleshManagement_HiveScaleTooltipBuilding>
+  <!-- EN: Buildings: +0 scale -->
+  <FH_FleshManagement_HiveScaleTooltipBuildingsNone>建築：+0規模</FH_FleshManagement_HiveScaleTooltipBuildingsNone>
+  <!-- EN: Total: {0} -->
+  <FH_FleshManagement_HiveScaleTooltipTotal>總計：{0}</FH_FleshManagement_HiveScaleTooltipTotal>
+  <!-- EN: Every 50 flesh terrain tiles provide 1 hive scale. Flesh hives, primary nests, nerve bundles, and nerve centers provide additional scale. -->
+  <FH_FleshManagement_HiveScaleTooltipRule>每50格血肉地形提供1巢穴規模。血肉巢穴、血肉主巢、巢群神經結節和巢群神經中樞會額外提供規模。</FH_FleshManagement_HiveScaleTooltipRule>
+  <!-- EN: Beast scale -->
+  <FH_FleshManagement_FleshbeastScale>血肉獸規模</FH_FleshManagement_FleshbeastScale>
+  <!-- EN: Fleshbeast scale: {0} / {1} -->
+  <FH_FleshManagement_HiveCapacityTooltip>血肉獸規模：{0} / {1}</FH_FleshManagement_HiveCapacityTooltip>
+  <!-- EN: Nutrition -->
+  <FH_FleshManagement_Nutrition>營養度</FH_FleshManagement_Nutrition>
+  <!-- EN: Activity -->
+  <FH_FleshManagement_Activity>活躍度</FH_FleshManagement_Activity>
+  <FH_HiveDailyUpkeep>巢群每日維持消耗：{0}</FH_HiveDailyUpkeep>
+  <FH_HiveDailyActivityIncrease>巢群每日增加活躍：{0}</FH_HiveDailyActivityIncrease>
+  <!-- EN: Hive activity rises with fleshbeasts and hive scale. Suppress it at flesh hives or nerve nodes to reduce the chance of a riot. -->
+  <FH_FleshManagement_ActivityTooltip>巢穴活躍度會隨血肉獸和巢穴規模上升。可在血肉巢穴或神經結節處進行壓制，降低暴動概率。</FH_FleshManagement_ActivityTooltip>
+  <!-- EN: Auto suppression: colonists will automatically suppress hive activity when it rises above the suppression threshold. -->
+  <FH_FleshManagement_AutoSuppressTooltip>自動壓制：開啟後，活躍度高於壓制閾值時，殖民者會自動壓制巢穴活躍度。</FH_FleshManagement_AutoSuppressTooltip>
+  <!-- EN: Suppression threshold: {0} -->
+  <FH_FleshManagement_ActivityThreshold>壓制閾值：{0}</FH_FleshManagement_ActivityThreshold>
+  <!-- EN: Colonists start suppressing activity when it reaches {0}. -->
+  <FH_FleshManagement_ActivityThresholdTooltip>達到{0}活躍度後，殖民者會開始自動壓制。</FH_FleshManagement_ActivityThresholdTooltip>
+  <!-- EN: Flesh terrain: {0} -->
+  <FH_FleshManagement_FleshCount>血肉數量：{0}</FH_FleshManagement_FleshCount>
+  <!-- EN: Owned fleshbeasts: {0} -->
+  <FH_FleshManagement_HiveScaleShort>擁有血肉獸：{0}</FH_FleshManagement_HiveScaleShort>
+  <!-- EN: Hive progress -->
+  <FH_FleshManagement_Progress>巢穴進程</FH_FleshManagement_Progress>
+  <!-- EN: Breeding -->
+  <FH_FleshManagement_Breeding>培育中</FH_FleshManagement_Breeding>
+  <!-- EN: Stray fleshbeasts -->
+  <FH_FleshManagement_TemporaryGroup>離群血肉獸</FH_FleshManagement_TemporaryGroup>
+  <!-- EN: Ungrouped fleshbeasts -->
+  <FH_FleshManagement_Ungrouped>無編組血肉獸</FH_FleshManagement_Ungrouped>
+  <!-- EN: Add them to a group to restore normal behavior. -->
+  <FH_FleshManagement_UngroupedHint>將其加入某個編組恢復正常。</FH_FleshManagement_UngroupedHint>
+  <!-- EN: No linked hive -->
+  <FH_FleshManagement_NoHive>無所屬巢穴</FH_FleshManagement_NoHive>
+  <!-- EN: Set group color -->
+  <FH_FleshManagement_GroupColor>設置群組顏色</FH_FleshManagement_GroupColor>
+  <!-- EN: Other group settings -->
+  <FH_FleshManagement_GroupSettings>其他群組設置</FH_FleshManagement_GroupSettings>
+  <!-- EN: Recall stray fleshbeasts -->
+  <FH_FleshManagement_RecallTemporary>一鍵收回離群血肉獸</FH_FleshManagement_RecallTemporary>
+  <!-- EN: There are no stray fleshbeasts to recall. -->
+  <FH_FleshManagement_RecallTemporaryEmpty>沒有需要收回的離群血肉獸。</FH_FleshManagement_RecallTemporaryEmpty>
+  <!-- EN: There are no available flesh hive groups to receive stray fleshbeasts. -->
+  <FH_FleshManagement_RecallTemporaryNoHive>沒有可接收離群血肉獸的巢穴群組。</FH_FleshManagement_RecallTemporaryNoHive>
+  <!-- EN: Recalled {0} stray fleshbeast(s). -->
+  <FH_FleshManagement_RecallTemporaryComplete>已收回{0}隻離群血肉獸。</FH_FleshManagement_RecallTemporaryComplete>
+  <!-- EN: Recalled {0} stray fleshbeast(s); {1} remain. Cannot continue: {2} -->
+  <FH_FleshManagement_RecallTemporaryPartial>已收回{0}隻離群血肉獸，剩餘{1}隻。無法繼續：{2}</FH_FleshManagement_RecallTemporaryPartial>
+  <!-- EN: Hive activity: {0} -->
+  <FH_Suppressible_Inspect>巢穴活躍度：{0}</FH_Suppressible_Inspect>
+  <!-- EN: Flesh hive activity: {0} -->
+  <FH_DebugActivity>血肉巢穴活躍度：{0}</FH_DebugActivity>
+  <!-- EN: No flesh hive component is available on the current map. -->
+  <FH_DebugNoHiveComponent>當前地圖沒有可用的血肉巢穴組件。</FH_DebugNoHiveComponent>
+  <!-- EN: Flesh hive riot triggered. -->
+  <FH_DebugRiotTriggered>已立即觸發血肉巢穴失控。</FH_DebugRiotTriggered>
+  <!-- EN: Flesh hive riot -->
+  <FH_FleshHiveRiot_Label>血肉巢穴暴動</FH_FleshHiveRiot_Label>
+  <!-- EN: The flesh hive can no longer be controlled. {0} fleshbeasts have broken loose and turned hostile. -->
+  <FH_FleshHiveRiot_Text>血肉巢穴已經無法控制。{0}隻血肉獸掙脫巢群約束，並轉為敵對。</FH_FleshHiveRiot_Text>
+  <!-- EN: Infect harbinger tree -->
+  <FH_InfectHarbingerTree>感染噩兆噬樹</FH_InfectHarbingerTree>
+  <!-- EN: Mark this harbinger tree to be infected with twisted meat and transformed into a flesh tree. -->
+  <FH_InfectHarbingerTreeDesc>標記這棵噩兆噬樹，使用扭曲肉將其感染並轉化為血肉樹。</FH_InfectHarbingerTreeDesc>
+  <!-- EN: Terraform nutrition: {0} ({1}) -->
+  <FH_FleshTree_TerraformNutrition>地形轉化營養：{0}（{1}）</FH_FleshTree_TerraformNutrition>
+  <!-- EN: Every {0}: {1} nutrition -->
+  <FH_HiveNutritionProducer_Value>每{0}產生{1}營養</FH_HiveNutritionProducer_Value>
+  <!-- EN: Daily nutrition upkeep: {0} -->
+  <FH_HiveNutritionUpkeep_Value>每日消耗巢穴營養：{0}</FH_HiveNutritionUpkeep_Value>
+  <!-- EN: I am very hungry. I need to feed... -->
+  <FH_HiveHungryInspect>我很飢餓，需要進食.......</FH_HiveHungryInspect>
+  <!-- EN: HUNGRY -->
+  <FH_HiveHungryBanner>飢餓</FH_HiveHungryBanner>
+  <!-- EN: I am so hungry............. -->
+  <FH_HiveHungryWhisper1>我很餓.............</FH_HiveHungryWhisper1>
+  <!-- EN: Fo....od........ -->
+  <FH_HiveHungryWhisper2>食....物........</FH_HiveHungryWhisper2>
+  <!-- EN: Hungry hungry hungry hungry hungry -->
+  <FH_HiveHungryWhisper3>餓餓餓餓餓</FH_HiveHungryWhisper3>
+  <!-- EN: Flesh........... -->
+  <FH_HiveHungryWhisper4>血肉...........</FH_HiveHungryWhisper4>
+  <!-- EN: Automatically consumes {0} hive nutrition per replacement shot. -->
+  <FH_HiveNutritionRefuelable_NutritionPerFuel>每補充1發備用骨刺自動消耗{0}巢穴營養。</FH_HiveNutritionRefuelable_NutritionPerFuel>
+  <!-- EN: Daily hive nutrition upkeep: {0} -->
+  <FH_FleshPowerPlant_NutritionUpkeep>每日消耗巢群營養：{0}</FH_FleshPowerPlant_NutritionUpkeep>
+  <!-- EN: Inactive: insufficient hive nutrition. -->
+  <FH_FleshPowerPlant_Inactive>未運行：巢群營養不足。</FH_FleshPowerPlant_Inactive>
+  <!-- EN: Trait -->
+  <FH_Spawner_Trait>特性</FH_Spawner_Trait>
+  <!-- EN: None -->
+  <FH_Spawner_TraitNone>無</FH_Spawner_TraitNone>
+  <!-- EN: Daily nutrition upkeep: {0} -->
+  <FH_FleshDigester_NutritionUpkeep>每日消耗巢穴營養：{0}</FH_FleshDigester_NutritionUpkeep>
+  <!-- EN: Attack radius: {0} -->
+  <FH_FleshDigester_AttackRadius>攻擊範圍：{0}</FH_FleshDigester_AttackRadius>
+  <!-- EN: Consume radius: {0} -->
+  <FH_FleshDigester_ConsumeRadius>吞噬範圍：{0}</FH_FleshDigester_ConsumeRadius>
+  <!-- EN: Status: Active -->
+  <FH_FleshDigester_Status_Active>狀態：活躍</FH_FleshDigester_Status_Active>
+  <!-- EN: Status: Inactive (insufficient nutrition) -->
+  <FH_FleshDigester_Status_Inactive>狀態：停用（營養不足）</FH_FleshDigester_Status_Inactive>
+  <!-- EN: Flesh weapon mount -->
+  <FH_FleshWeaponMount>血肉武器基座</FH_FleshWeaponMount>
+  <!-- EN: Mount {0} to parasitic weapon slot -->
+  <FH_MountParasiticWeapon>將{0}掛載到寄生武器槽</FH_MountParasiticWeapon>
+  <!-- EN: Cannot mount {0} to parasitic weapon slot -->
+  <FH_CannotMountParasiticWeapon>無法將{0}掛載到寄生武器槽</FH_CannotMountParasiticWeapon>
+  <!-- EN: Large fusion -->
+  <FH_Fusion_SwitchToLarge>大型融合</FH_Fusion_SwitchToLarge>
+  <!-- EN: Medium fusion -->
+  <FH_Fusion_SwitchToMedium>中型融合</FH_Fusion_SwitchToMedium>
+  <!-- EN: Small fleshbeast -->
+  <FH_Fusion_SlotSmall>小型血肉獸</FH_Fusion_SlotSmall>
+  <!-- EN: Medium fleshbeast -->
+  <FH_Fusion_SlotMedium>中型血肉獸</FH_Fusion_SlotMedium>
+  <!-- EN: Large fleshbeast -->
+  <FH_Fusion_SlotLarge>大型血肉獸</FH_Fusion_SlotLarge>
+  <!-- EN: Unknown -->
+  <FH_Fusion_Unknown>未知</FH_Fusion_Unknown>
+  <!-- EN: None -->
+  <FH_Fusion_NoTrait>無</FH_Fusion_NoTrait>
+  <!-- EN: Cannot fuse -->
+  <FH_Fusion_NotFleshbeast>不可融合</FH_Fusion_NotFleshbeast>
+  <!-- EN: Fusion failed -->
+  <FH_Fusion_Failed>融合失敗</FH_Fusion_Failed>
+  <!-- EN: Fleshbeast type: {0} -->
+  <FH_Fusion_ResultType>血肉獸類型：{0}</FH_Fusion_ResultType>
+  <!-- EN: Trait: {0} -->
+  <FH_Fusion_ResultTraits>特性：{0}</FH_Fusion_ResultTraits>
+  <!-- EN: Perform this fusion once to learn the result. -->
+  <FH_Fusion_ResultHint>只有進行一次融合後才能瞭解融合結果。</FH_Fusion_ResultHint>
+  <!-- EN: Result: {0} -->
+  <FH_Fusion_Result>融合結果：{0}</FH_Fusion_Result>
+  <!-- EN: Materials: {0} x{1} -->
+  <FH_Fusion_MaterialRequirement>所需素材：{0} x{1}</FH_Fusion_MaterialRequirement>
+  <!-- EN: Materials: {0} x2, {1} x1 -->
+  <FH_Fusion_LargeMaterialRequirement>所需素材：{0} x2，{1} x1</FH_Fusion_LargeMaterialRequirement>
+  <!-- EN: Fusion time: {0} days -->
+  <FH_Fusion_Time>融合時間：{0}天</FH_Fusion_Time>
+  <!-- EN: Value: {0} -->
+  <FH_Fusion_Value>價值：{0}</FH_Fusion_Value>
+  <!-- EN: Select the fleshbeasts to consume in the fusion. Different materials produce fleshbeasts with different traits, and the result is only revealed after the fusion is complete.\nCompleted combinations are recorded automatically as discovered templates for later reuse. -->
+  <FH_Fusion_Description>選擇融合所消耗的血肉獸，不同的材料會融合出帶有不同特性的血肉獸，只有在融合結束後才能知道結果。\n已完成的組合會自動記錄為已發現模板，供之後再次使用。</FH_Fusion_Description>
+  <!-- EN: Fuse fleshbeasts -->
+  <FH_Fusion_Start>融合血肉獸</FH_Fusion_Start>
+  <!-- EN: Select fusion material -->
+  <FH_Fusion_SelectMaterial>選擇融合素材</FH_Fusion_SelectMaterial>
+  <!-- EN: Clear selection -->
+  <FH_Fusion_ClearSlot>清除選擇</FH_Fusion_ClearSlot>
+  <!-- EN: Discovered templates -->
+  <FH_Fusion_SavedTemplates>已發現模板</FH_Fusion_SavedTemplates>
+  <!-- EN: No fusion templates have been discovered. -->
+  <FH_Fusion_NoTemplates>尚未發現融合模板。</FH_Fusion_NoTemplates>
+  <!-- EN: Apply -->
+  <FH_Fusion_ApplyTemplate>應用</FH_Fusion_ApplyTemplate>
+  <!-- EN: The required fleshbeasts are not currently available. -->
+  <FH_Fusion_TemplateMissingMaterials>當前沒有足夠的血肉獸來應用該模板。</FH_Fusion_TemplateMissingMaterials>
+  <!-- EN: Select all required fusion materials first. -->
+  <FH_Fusion_NoValidFusion>請先選擇全部融合素材。</FH_Fusion_NoValidFusion>
+  <!-- EN: The fleshbeast fusion component on the primary nest is unavailable. -->
+  <FH_Fusion_FuserUnavailable>主巢的血肉獸融合組件不可用。</FH_Fusion_FuserUnavailable>
+  <!-- EN: Parasitic weapons -->
+  <FH_TabParasiticWeapons>寄生武器</FH_TabParasiticWeapons>
+  <!-- EN: Weapon slot -->
+  <FH_ParasiticWeaponSlot>武器插槽</FH_ParasiticWeaponSlot>
+  <!-- EN: Parasitic weapon: left slot -->
+  <FH_LeftParasiticWeaponSlot>寄生武器：左裝備欄</FH_LeftParasiticWeaponSlot>
+  <!-- EN: Parasitic weapon: right slot -->
+  <FH_RightParasiticWeaponSlot>寄生武器：右裝備欄</FH_RightParasiticWeaponSlot>
+  <!-- EN: Empty -->
+  <FH_ParasiticWeaponSlotEmpty>空</FH_ParasiticWeaponSlotEmpty>
+  <!-- EN: Unmount {1} from {0} -->
+  <FH_UnmountParasiticWeaponDesc>從{0}卸下{1}</FH_UnmountParasiticWeaponDesc>
+
+  <!-- EN: Stray fleshbeasts -->
+  <TemporaryFleshGroup>離群血肉獸</TemporaryFleshGroup>
+  <!-- EN: Resurrects in: {0} -->
+  <FH_FissionmeldDormant_ResurrectsIn>復生剩餘時間：{0}</FH_FissionmeldDormant_ResurrectsIn>
+  <!-- EN: {0_nameDef} has finished performing {RITUAL_definite} ritual. {GIANT_label} and its fleshbeast escorts are emerging from the ground! -->
+  <FH_SummonGiantFleshbeastCompleteText>{0_nameDef}完成了{RITUAL_definite}儀式。{GIANT_label}和它的血肉獸護衛正在從地下出現！</FH_SummonGiantFleshbeastCompleteText>
+  <!-- EN: Become fleshtitan -->
+  <FH_HarnessedFleshmassHeart_TransformLabel>化身血肉泰坦</FH_HarnessedFleshmassHeart_TransformLabel>
+  <!-- EN: Consume {0} hive nutrition and transform this heart into a harnessed fleshtitan. -->
+  <FH_HarnessedFleshmassHeart_TransformDesc>消耗{0}巢穴營養，將這顆心臟轉化為受控血肉泰坦。</FH_HarnessedFleshmassHeart_TransformDesc>
+  <!-- EN: Requires {0} hive nutrition. Available: {1}. -->
+  <FH_HarnessedFleshmassHeart_TransformDisabled>需要{0}巢穴營養。當前擁有：{1}。</FH_HarnessedFleshmassHeart_TransformDisabled>
+  <!-- EN: Consume {0} hive nutrition and permanently transform this heart into a harnessed fleshtitan? -->
+  <FH_HarnessedFleshmassHeart_TransformConfirm>是否消耗{0}巢穴營養，將這顆心臟永久轉化為受控血肉泰坦？</FH_HarnessedFleshmassHeart_TransformConfirm>
+  <!-- EN: There is not enough hive nutrition to transform the heart. -->
+  <FH_HarnessedFleshmassHeart_TransformFailed>巢穴營養不足，無法轉化心臟。</FH_HarnessedFleshmassHeart_TransformFailed>
+  <!-- EN: {TITAN_labelShort} has emerged from the harnessed fleshmass heart. -->
+  <FH_HarnessedFleshmassHeart_Transformed>{TITAN_labelShort}已從受控血肉心臟中誕生。</FH_HarnessedFleshmassHeart_Transformed>
+  <!-- EN: Transformation into fleshtitan: {0} -->
+  <FH_FleshmassHeartTitanCountdown>化身血肉泰坦：{0}</FH_FleshmassHeartTitanCountdown>
+  <!-- EN: Fleshmass heart transforming -->
+  <FH_FleshmassHeartTitanWarningLabel>血肉心臟正在蛻變</FH_FleshmassHeartTitanWarningLabel>
+  <!-- EN: The fleshmass heart will transform into a fleshtitan in {0}. -->
+  <FH_FleshmassHeartTitanWarningText>血肉心臟將在{0}後化身為血肉泰坦。</FH_FleshmassHeartTitanWarningText>
+  <!-- EN: Reversion to fleshmass heart: {0} -->
+  <FH_FleshtitanReversionCountdown>恢復血肉心臟：{0}</FH_FleshtitanReversionCountdown>
+
+  <!-- EN: Flesh survivor -->
+  <FH_Quest_FleshSurvivor_Name>血肉倖存者</FH_Quest_FleshSurvivor_Name>
+  <!-- EN: A blood-soaked researcher is approaching the colony. She contacted you from nearby, claiming that she has just escaped from a research facility disaster that spiraled out of control. Her memory of the event is already badly fragmented, and a pack of frenzied fleshbeasts is hunting her. She asks for protection in your colony and promises to join afterward.\n\nIf you accept her request, the fleshbeasts will arrive within one hour.\n\nFor unknown reasons, the researcher is suffering from severe amnesia. You cannot obtain any further information. -->
+  <FH_Quest_FleshSurvivor_Description>一位渾身血跡的研究員正在接近殖民地。她在附近發來通訊，稱她剛從一場失控的研究所災難中逃脫。她對具體情況的記憶已經十分模糊，現在正被一群狂暴的血肉獸追殺。她希望你能在殖民地保護她，並答應事後加入。\n\n如果你接受她的請求，一群血肉獸將在1小時內出現。\n\n研究員因為某些原因出現了嚴重失憶，你也無法獲得更多情報。</FH_Quest_FleshSurvivor_Description>
+  <!-- EN: Fleshbeasts will arrive in {0}. -->
+  <FH_Quest_FleshSurvivor_AttackIn>血肉獸將在{0}後抵達。</FH_Quest_FleshSurvivor_AttackIn>
+  <!-- EN: Fleshbeasts incoming -->
+  <FH_Quest_FleshSurvivor_AttackLabel>血肉獸來襲</FH_Quest_FleshSurvivor_AttackLabel>
+  <!-- EN: The frenzied fleshbeasts pursuing Hela Bates have reached the colony. -->
+  <FH_Quest_FleshSurvivor_AttackText>追蹤海拉·貝茨的狂暴血肉獸已經抵達殖民地。</FH_Quest_FleshSurvivor_AttackText>
+
+  <!-- EN: Hela -->
+  <FH_Hela_FirstName>海拉</FH_Hela_FirstName>
+  <!-- EN: Bates -->
+  <FH_Hela_LastName>貝茨</FH_Hela_LastName>
+
+  <!-- EN: Parasite capacity: {0}/{1} -->
+  <FH_ParasiteCapacity_Info>寄生空間：{0}/{1}</FH_ParasiteCapacity_Info>
+  <!-- EN: Occupied parasite space: {0}; body part health: {1}; pain factor: {2} -->
+  <FH_Hela_BodyPartHealthInfo>已激活寄生空間：{0}；部位生命值：{1}；疼痛倍率：{2}</FH_Hela_BodyPartHealthInfo>
+  <!-- EN: Use {0} to expand parasite capacity -->
+  <FH_ParasiteCapacity_UseShard>使用{0}擴展寄生空間</FH_ParasiteCapacity_UseShard>
+  <!-- EN: Cannot use {0} -->
+  <FH_ParasiteCapacity_CannotUseShard>無法使用{0}</FH_ParasiteCapacity_CannotUseShard>
+  <!-- EN: Cannot use {0}: parasite capacity has reached its maximum of {1} -->
+  <FH_ParasiteCapacity_CannotUseShardMax>無法使用{0}：寄生空間已達到上限{1}</FH_ParasiteCapacity_CannotUseShardMax>
+  <!-- EN: Cannot use {0}: {1} is downed -->
+  <FH_ParasiteCapacity_CannotUseShardDowned>無法使用{0}：{1}已經倒地</FH_ParasiteCapacity_CannotUseShardDowned>
+  <!-- EN: Cannot use {0}: reserved by someone else -->
+  <FH_ParasiteCapacity_CannotUseShardReserved>無法使用{0}：已被其他人預留</FH_ParasiteCapacity_CannotUseShardReserved>
+  <!-- EN: {0} has expanded their parasite capacity to {1} and fallen into a one-day coma. -->
+  <FH_ParasiteCapacity_ShardUsed>{0}的寄生空間已擴展至{1}，並陷入了為期一天的昏迷。</FH_ParasiteCapacity_ShardUsed>
+
+  <!-- EN: Cost: {0} -->
+  <FH_ItemProduction_Cost>消耗：{0}</FH_ItemProduction_Cost>
+  <!-- EN: Production time: {0} days -->
+  <FH_ItemProduction_Time>生產時間：{0}天</FH_ItemProduction_Time>
+  <!-- EN: Output: {0} -->
+  <FH_ItemProduction_Output>產量：{0}</FH_ItemProduction_Output>
+  <!-- EN: Market value: {0} -->
+  <FH_ItemProduction_Value>市場價值：{0}</FH_ItemProduction_Value>
+  <!-- EN: Repeat: -->
+  <FH_ItemProduction_Repeat>重複：</FH_ItemProduction_Repeat>
+  <!-- EN: Produce -->
+  <FH_ItemProduction_Produce>生產</FH_ItemProduction_Produce>
+  <!-- EN: Add bill -->
+  <FH_ItemProduction_AddBill>添加清單</FH_ItemProduction_AddBill>
+  <!-- EN: Cancel production task -->
+  <FH_ItemProduction_CancelTask>取消生產任務</FH_ItemProduction_CancelTask>
+  <!-- EN: No flesh hoppers are available. -->
+  <FH_ItemProduction_NoHoppers>當前沒有可用的產出物噴口。</FH_ItemProduction_NoHoppers>
+  <!-- EN: No items are currently available for production. -->
+  <FH_ItemProduction_NoAvailableItems>當前沒有可生產的物品。</FH_ItemProduction_NoAvailableItems>
+  <!-- EN: None -->
+  <FH_ItemProduction_NoCost>無</FH_ItemProduction_NoCost>
+  <!-- EN: {0}-{1} -->
+  <FH_ItemProduction_Range>{0}-{1}</FH_ItemProduction_Range>
+  <!-- EN: Unknown reason -->
+  <FH_ItemProduction_UnknownReason>未知原因</FH_ItemProduction_UnknownReason>
+  <!-- EN: Added {0} of {1} production tasks. {2} -->
+  <FH_ItemProduction_PartialQueue>已添加{0}/{1}個生產任務。{2}</FH_ItemProduction_PartialQueue>
+  <!-- EN: Could not open the flesh hopper production page. Check the error log for details. -->
+  <FH_ItemProduction_OpenPageFailed>無法打開血肉產出口生產頁面，請檢查錯誤日誌。</FH_ItemProduction_OpenPageFailed>
+  <!-- EN: Could not open the hive group production page. Check the error log for details. -->
+  <FH_HiveGroup_OpenPageFailed>無法打開巢群生產頁面，請檢查錯誤日誌。</FH_HiveGroup_OpenPageFailed>
+  <!-- EN: Hive group -->
+  <FH_ITab_HiveGroup>巢群</FH_ITab_HiveGroup>
+  <!-- EN: Evolution -->
+  <FH_FleshHive_EvolutionButton>進化</FH_FleshHive_EvolutionButton>
+  <!-- EN: Consume the required resources and immediately begin evolving this flesh hive into a flesh primary nest. -->
+  <FH_FleshHive_EvolutionButtonDesc>消耗所需資源，直接開始將血肉巢穴進化為血肉主巢。</FH_FleshHive_EvolutionButtonDesc>
+  <!-- EN: The flesh hive evolution configuration is invalid. Check the error log for details. -->
+  <FH_FleshHive_EvolutionUnavailable>血肉巢穴的進化配置無效，請檢查錯誤日誌。</FH_FleshHive_EvolutionUnavailable>
+  <!-- EN: This flesh hive is already evolving. -->
+  <FH_FleshHive_EvolutionInProgress>這個血肉巢穴已經在進化。</FH_FleshHive_EvolutionInProgress>
+  <!-- EN: The flesh hive resource state has changed, so evolution cannot begin. -->
+  <FH_FleshHive_EvolutionResourceChanged>血肉巢穴的資源狀態已經改變，無法開始進化。</FH_FleshHive_EvolutionResourceChanged>
+  <!-- EN: Cannot evolve: {0} -->
+  <FH_FleshHive_EvolutionBlockedReason>無法進化：{0}</FH_FleshHive_EvolutionBlockedReason>
+  <!-- EN: Evolution is currently unavailable, but no specific reason was provided. -->
+  <FH_FleshHive_EvolutionUnknownReason>當前無法進化，但沒有提供具體原因。</FH_FleshHive_EvolutionUnknownReason>
+
+  <!-- EN: Cost: {0} -->
+  <FH_Gestation_Cost>消耗：{0}</FH_Gestation_Cost>
+  <!-- EN: Gestation time: {0} days; actual: {1} days -->
+  <FH_Gestation_Time>孕育時間：{0}天；實際孕育時間：{1}天</FH_Gestation_Time>
+  <!-- EN: Hive capacity: {0} -->
+  <FH_Gestation_GroupCost>巢穴佔用：{0}</FH_Gestation_GroupCost>
+  <!-- EN: Assigned node: {0} -->
+  <FH_Gestation_Node>歸屬節點：{0}</FH_Gestation_Node>
+  <!-- EN: Market value: {0} -->
+  <FH_Gestation_Value>市場價值：{0}</FH_Gestation_Value>
+  <!-- EN: Repeat: -->
+  <FH_Gestation_Repeat>重複：</FH_Gestation_Repeat>
+  <!-- EN: Gestate -->
+  <FH_Gestation_Start>孕育</FH_Gestation_Start>
+  <!-- EN: Add bill -->
+  <FH_Gestation_AddBill>添加清單</FH_Gestation_AddBill>
+  <!-- EN: Hive capacity: {0}/{1} -->
+  <FH_Gestation_NodeCapacity>巢穴規模：{0}/{1}</FH_Gestation_NodeCapacity>
+  <!-- EN: Cancel gestation task -->
+  <FH_Gestation_CancelTask>取消孕育任務</FH_Gestation_CancelTask>
+  <!-- EN: No flesh hive nodes are available for gestation. -->
+  <FH_Gestation_NoSpawners>當前沒有可用於孕育的血肉巢穴節點。</FH_Gestation_NoSpawners>
+  <!-- EN: No fleshbeasts are currently available for gestation. -->
+  <FH_Gestation_NoAvailableUnits>當前沒有可孕育的血肉獸。</FH_Gestation_NoAvailableUnits>
+  <!-- EN: Fleshbeast -->
+  <FH_Gestation_QuotaUnit>血肉獸</FH_Gestation_QuotaUnit>
+  <!-- EN: Current -->
+  <FH_Gestation_QuotaCurrent>當前</FH_Gestation_QuotaCurrent>
+  <!-- EN: Maintain -->
+  <FH_Gestation_QuotaMaintain>維持</FH_Gestation_QuotaMaintain>
+  <!-- EN: Maximum -->
+  <FH_Gestation_QuotaMaximum>最大</FH_Gestation_QuotaMaximum>
+  <!-- EN: Types of fleshbeasts in the hive. -->
+  <FH_Gestation_QuotaUnitTip>巢群中的血肉獸種類</FH_Gestation_QuotaUnitTip>
+  <!-- EN: Number of fleshbeasts currently in the hive. -->
+  <FH_Gestation_QuotaCurrentTip>巢群中目前的血肉獸數量</FH_Gestation_QuotaCurrentTip>
+  <!-- EN: Minimum number in the hive; the hive automatically gestates fleshbeasts until this target is reached. -->
+  <FH_Gestation_QuotaMaintainTip>巢群中的最小數量，巢穴會自動孕育血肉獸以達到維持數量</FH_Gestation_QuotaMaintainTip>
+  <!-- EN: Maximum number in the hive; the hive automatically reclaims excess fleshbeasts. -->
+  <FH_Gestation_QuotaMaximumTip>巢群中的最大數量，巢穴會自動回收任何多餘的血肉獸</FH_Gestation_QuotaMaximumTip>
+  <!-- EN: Fleshbeast: types of fleshbeasts in the hive.\nCurrent: number of fleshbeasts currently in the hive.\nMaintain: minimum number in the hive; the hive automatically gestates fleshbeasts until this target is reached.\nMaximum: maximum number in the hive; the hive automatically reclaims excess fleshbeasts. -->
+  <FH_Gestation_QuotaHelp>血肉獸：巢群中的血肉獸種類。\n當前：巢群中目前的血肉獸數量。\n維持：巢群中的最小數量，巢穴會自動孕育血肉獸以達到維持數量。\n最大：巢群中的最大數量，巢穴會自動回收任何多餘的血肉獸。</FH_Gestation_QuotaHelp>
+  <!-- EN: Set a finite maximum equal to the greater of the current and maintain counts. -->
+  <FH_Gestation_SetFiniteMaximum>設置有限最大值，初始值取當前數量與維持值中的較大者。</FH_Gestation_SetFiniteMaximum>
+  <!-- EN: Remove the maximum limit. -->
+  <FH_Gestation_SetInfiniteMaximum>取消最大數量限制。</FH_Gestation_SetInfiniteMaximum>
+  <!-- EN: None -->
+  <FH_Gestation_NoCost>無</FH_Gestation_NoCost>
+  <!-- EN: {0}-{1} -->
+  <FH_Gestation_Range>{0}-{1}</FH_Gestation_Range>
+  <!-- EN: Unknown reason -->
+  <FH_Gestation_UnknownReason>未知原因</FH_Gestation_UnknownReason>
+  <!-- EN: Added {0} of {1} gestation tasks. {2} -->
+  <FH_Gestation_PartialQueue>已添加{0}/{1}個孕育任務。{2}</FH_Gestation_PartialQueue>
+  <!-- EN: Custom formulas -->
+  <FH_Gestation_CustomFormula>自定義配方</FH_Gestation_CustomFormula>
+  <!-- EN: Custom formulas -->
+  <FH_Gestation_CustomFormulaTitle>自定義配方</FH_Gestation_CustomFormulaTitle>
+  <!-- EN: Custom formula: {0} -->
+  <FH_Gestation_CustomFormulaMenuEntry>自定義配方：{0}</FH_Gestation_CustomFormulaMenuEntry>
+  <!-- EN: This custom formula is not available at this producer. -->
+  <FH_Gestation_CustomFormulaUnavailable>當前生產方無法使用此自定義配方。</FH_Gestation_CustomFormulaUnavailable>
+  <!-- EN: There are not enough resources to produce this custom formula. -->
+  <FH_Gestation_CustomFormulaInsufficientResources>資源不足，無法生產此自定義配方。</FH_Gestation_CustomFormulaInsufficientResources>
+  <!-- EN: Owned fleshbeasts: {0} -->
+  <FH_HiveOwnedFleshbeasts>擁有血肉獸：{0}</FH_HiveOwnedFleshbeasts>
+  <!-- EN: Hive upgrades -->
+  <FH_Upgrade_PageTitle>血肉巢群升級</FH_Upgrade_PageTitle>
+  <!-- EN: No upgrade is currently processing. -->
+  <FH_Upgrade_NoActive>當前沒有正在處理的升級。</FH_Upgrade_NoActive>
+  <!-- EN: {0}: {1} complete, {2} remaining -->
+  <FH_Upgrade_Active>{0}：已完成{1}，剩餘{2}</FH_Upgrade_Active>
+  <!-- EN: Cost: {0} nutrition, {1} nerve flesh; processing time: {2} -->
+  <FH_Upgrade_Cost>消耗：{0}營養，{1}神經塊；處理時間：{2}</FH_Upgrade_Cost>
+  <!-- EN: Start upgrade -->
+  <FH_Upgrade_Start>開始升級</FH_Upgrade_Start>
+  <!-- EN: Locked -->
+  <FH_Upgrade_Locked>未解鎖</FH_Upgrade_Locked>
+  <!-- EN: Completed -->
+  <FH_Upgrade_Completed>已完成</FH_Upgrade_Completed>
+  <!-- EN: Processing -->
+  <FH_Upgrade_Processing>處理中</FH_Upgrade_Processing>
+  <!-- EN: Requires: {0} -->
+  <FH_Upgrade_PrerequisiteTooltip>需要完成：{0}</FH_Upgrade_PrerequisiteTooltip>
+  <!-- EN: Requires {0} nutrition. -->
+  <FH_Upgrade_NutritionTooltip>需要{0}營養。</FH_Upgrade_NutritionTooltip>
+  <!-- EN: Requires {0} nerve flesh stored in flesh vesicles. -->
+  <FH_Upgrade_NerveFleshTooltip>需要血肉囊泡中儲存{0}神經塊。</FH_Upgrade_NerveFleshTooltip>
+  <!-- EN: Requires a flesh primary nest on this map. -->
+  <FH_Upgrade_PrimaryNestTooltip>需要本地圖存在血肉主巢。</FH_Upgrade_PrimaryNestTooltip>
+  <!-- EN: {0} is already processing. -->
+  <FH_Upgrade_AlreadyProcessing>{0}正在處理中。</FH_Upgrade_AlreadyProcessing>
+  <!-- EN: {0} is already completed. -->
+  <FH_Upgrade_AlreadyCompleted>{0}已經完成。</FH_Upgrade_AlreadyCompleted>
+  <!-- EN: Prerequisites for {0} are not complete. -->
+  <FH_Upgrade_MissingPrerequisite>{0}的前置升級尚未完成。</FH_Upgrade_MissingPrerequisite>
+  <!-- EN: Insufficient nutrition. Requires {0}. -->
+  <FH_Upgrade_InsufficientNutrition>營養不足，需要{0}。</FH_Upgrade_InsufficientNutrition>
+  <!-- EN: Insufficient nerve flesh in flesh vesicles. Requires {0}. -->
+  <FH_Upgrade_InsufficientNerveFlesh>血肉囊泡中的神經塊不足，需要{0}。</FH_Upgrade_InsufficientNerveFlesh>
+  <!-- EN: Requires research: {0}. -->
+  <FH_Upgrade_RequiresResearch>需要先完成研究：{0}。</FH_Upgrade_RequiresResearch>
+  <!-- EN: {0} requires a flesh primary nest on this map. -->
+  <FH_Upgrade_RequiresPrimaryNest>{0}需要本地圖存在血肉主巢。</FH_Upgrade_RequiresPrimaryNest>
+  <!-- EN: Started processing {0}. -->
+  <FH_Upgrade_Started>開始處理升級：{0}。</FH_Upgrade_Started>
+  <!-- EN: Completed upgrade: {0}. -->
+  <FH_Upgrade_CompletedMessage>升級完成：{0}。</FH_Upgrade_CompletedMessage>
+  <!-- EN: Unlock all upgrades -->
+  <FH_Upgrade_DebugUnlock>一鍵解鎖全部升級</FH_Upgrade_DebugUnlock>
+  <!-- EN: All flesh hive upgrades unlocked. -->
+  <FH_Upgrade_DebugUnlocked>已解鎖全部血肉巢群升級。</FH_Upgrade_DebugUnlocked>
+
+  <!-- EN: Automatic flesh building repair -->
+  <FH_AutoRepair_Label>自動修補血肉建築</FH_AutoRepair_Label>
+  <!-- EN: Toggle automatic repair of flesh buildings using hive nutrition. -->
+  <FH_AutoRepair_Description>切換是否消耗巢穴營養自動修補血肉建築。</FH_AutoRepair_Description>
+
+  <!-- EN: This cell is already flesh floor. -->
+  <FH_FleshFloor_AlreadyFlesh>此處已經是血肉地板。</FH_FleshFloor_AlreadyFlesh>
+  <!-- EN: Flesh floor cannot be built on this terrain. -->
+  <FH_FleshFloor_UnsupportedTerrain>無法在此地形上建設血肉地板。</FH_FleshFloor_UnsupportedTerrain>
+  <!-- EN: Flesh floor must connect to existing flesh floor. -->
+  <FH_FleshFloor_MustConnect>血肉地板必須與已有血肉地板相連。</FH_FleshFloor_MustConnect>
+  <!-- EN: Carapace floor must be built on flesh terrain. -->
+  <FH_FleshCarapaceFloor_MustPlaceOnFlesh>甲殼地磚只能在血肉地板上建設。</FH_FleshCarapaceFloor_MustPlaceOnFlesh>
+
+  <!-- EN: Level {0}/{1} -->
+  <FH_MeldGrowth_Level>等級{0}/{1}</FH_MeldGrowth_Level>
+  <!-- EN: Growth level: {0}/{1}\nParasitism capacity: +{2}\nTwisted flesh capacity: +{3}\nBody part health: +{4}%\nRegeneration: +{5} per day\nTotal bleed factor: -{6}%\nIncoming damage factor: -{7}% -->
+  <FH_MeldGrowth_Effects>成長等級：{0}/{1}\n寄生空間：+{2}\n扭曲肉容量：+{3}\n部位生命值：+{4}%\n再生：+{5}/天\n總失血係數：-{6}%\n承傷係數：-{7}%</FH_MeldGrowth_Effects>
+  <!-- EN: Consume {0} to grow -->
+  <FH_MeldGrowth_ConsumeSeed>吞食{0}並升級</FH_MeldGrowth_ConsumeSeed>
+  <!-- EN: Cannot consume {0} -->
+  <FH_MeldGrowth_CannotConsume>無法吞食{0}</FH_MeldGrowth_CannotConsume>
+  <!-- EN: Cannot consume {0}: it does not correspond to {1} -->
+  <FH_MeldGrowth_CannotConsumeWrongSeed>無法吞食{0}：該結塊不屬於{1}</FH_MeldGrowth_CannotConsumeWrongSeed>
+  <!-- EN: Cannot consume {0}: growth has reached the maximum level of {1} -->
+  <FH_MeldGrowth_CannotConsumeMaxLevel>無法吞食{0}：成長已經達到最高{1}級</FH_MeldGrowth_CannotConsumeMaxLevel>
+  <!-- EN: Cannot consume {0}: the meld beast is downed -->
+  <FH_MeldGrowth_CannotConsumeDowned>無法吞食{0}：母獸已經倒地</FH_MeldGrowth_CannotConsumeDowned>
+  <!-- EN: Cannot consume {0}: reserved by someone else -->
+  <FH_MeldGrowth_CannotConsumeReserved>無法吞食{0}：已被其他單位預留</FH_MeldGrowth_CannotConsumeReserved>
+  <!-- EN: {0} could not complete the growth. -->
+  <FH_MeldGrowth_ConsumeFailed>{0}未能完成成長。</FH_MeldGrowth_ConsumeFailed>
+  <!-- EN: {0} has grown to level {1}/{2}. -->
+  <FH_MeldGrowth_Upgraded>{0}已經成長至{1}/{2}級。</FH_MeldGrowth_Upgraded>
+  <!-- EN: Assigned node: {0} -->
+  <FH_Gestation_ReservedGroup>歸屬節點：{0}</FH_Gestation_ReservedGroup>
+  <!-- EN: Automatic assignment -->
+  <FH_Gestation_ReservedGroupNone>自動分配</FH_Gestation_ReservedGroupNone>
+  <!-- EN: Prefer assigning the produced fleshbeast to this group. If it cannot accept the unit, HCF will use its normal assignment rules. -->
+  <FH_Gestation_ReservedGroupTip>優先將生產出的血肉獸分配到此巢群；如果該巢群無法接收單位，則使用HCF的常規分配規則。</FH_Gestation_ReservedGroupTip>
+  <!-- EN: No available groups on this map. -->
+  <FH_Gestation_ReservedGroupUnavailable>當前地圖沒有可用巢群。</FH_Gestation_ReservedGroupUnavailable>
+  <!-- EN: FH_GroupHunt_BelowSafeCount -->
+  <FH_GroupHunt_BelowSafeCount>低於安全狩獵數量</FH_GroupHunt_BelowSafeCount>
+  <!-- EN: Finish Mutualism -->
+  <FH_Dev_FinishMutualism>完成寄生</FH_Dev_FinishMutualism>
+  <FH_FusionRemodelingLetterLabel>血肉重塑</FH_FusionRemodelingLetterLabel>
+  <FH_FusionRemodelingLetterText>某個極為遙遠的地方正在發出一陣陣的黑暗靈能脈衝，現實在脈衝之中扭曲重塑，一些我們熟知或尚未熟知的事物已然發生了改變\n\n大型血肉獸的融合配方修改了，已經發現的組合會直接解鎖對應的配方，已經發現的配方也不需要再發現一次，會直接解鎖</FH_FusionRemodelingLetterText>
+</LanguageData>

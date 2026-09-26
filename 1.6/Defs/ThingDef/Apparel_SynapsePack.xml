@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>FH_SynapsePack</defName>
+    <label>synapse command pack</label>
+    <description>Grants the wearer one fleshbeast command group with a capacity of 20 and space for 100 twisted meat. A living pack made of carapace and pheromone synapses. It lets the wearer command fleshbeasts and holds twisted meat to sustain their upkeep.</description>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
+    <thingClass>Apparel</thingClass>
+    <smeltable>false</smeltable>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Apparel/FH_SynapsePack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="FleshHive.CompProperties_SynapsePack">
+        <nodeHediff>FH_SynapsePackNode</nodeHediff>
+        <capacity>100</capacity>
+      </li>
+    </comps>
+    <statBases>
+      <Mass>0.5</Mass>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <wornGraphicPath>Things/Apparel/FH_SynapsePack</wornGraphicPath>
+    </apparel>
+    <techLevel>Neolithic</techLevel>
+  </ThingDef>
+</Defs>

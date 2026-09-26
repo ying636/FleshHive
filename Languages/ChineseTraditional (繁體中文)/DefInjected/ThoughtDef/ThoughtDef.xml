@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: ate cooked fleshberries -->
+  <FH_AteCookedFleshberry.stages.ate_cooked_fleshberries.label>吃了烹飪過的肉果</FH_AteCookedFleshberry.stages.ate_cooked_fleshberries.label>
+  <!-- EN: The fleshberries were cooked, but the meal still carried a faint fleshy aftertaste. -->
+  <FH_AteCookedFleshberry.stages.ate_cooked_fleshberries.description>肉果已經烹飪過了，但這頓飯裡仍然殘留著一絲肉質回味。</FH_AteCookedFleshberry.stages.ate_cooked_fleshberries.description>
+
+  <!-- EN: ate raw fleshberries -->
+  <FH_AteRawFleshberry.stages.ate_raw_fleshberries.label>生吃肉果</FH_AteRawFleshberry.stages.ate_raw_fleshberries.label>
+  <!-- EN: The fleshberries were sweet, but eating them raw left a disturbing taste of living meat. -->
+  <FH_AteRawFleshberry.stages.ate_raw_fleshberries.description>肉果確實帶著甜味，但生吃後留下了一股令人不安的活肉味。</FH_AteRawFleshberry.stages.ate_raw_fleshberries.description>
+
+  <!-- EN: flesh nutrition -->
+  <FH_Thought_FleshNutrition.stages.flesh_nutrition.label>血肉營養</FH_Thought_FleshNutrition.stages.flesh_nutrition.label>
+  <!-- EN: I drew nutrition directly from the flesh hive. It did not feel good. -->
+  <FH_Thought_FleshNutrition.stages.flesh_nutrition.description>我直接從血肉巢群中獲取了營養，這感覺不太好。</FH_Thought_FleshNutrition.stages.flesh_nutrition.description>
+
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.label>血肉寄生</FH_Thought_FleshParasitism.label>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-0.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-0.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-0.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-0.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-1.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-1.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-1.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-1.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-2.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-2.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-2.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-2.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-3.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-3.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-3.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-3.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-4.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-4.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-4.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-4.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-5.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-5.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-5.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-5.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-6.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-6.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-6.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-6.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-7.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-7.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-7.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-7.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-8.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-8.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-8.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-8.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-9.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-9.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-9.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-9.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-10.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-10.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-10.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-10.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-11.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-11.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-11.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-11.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-12.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-12.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-12.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-12.description>
+  <!-- EN: flesh mutualism -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-13.label>血肉寄生</FH_Thought_FleshParasitism.stages.flesh_mutualism-13.label>
+  <!-- EN: Living flesh resides within the body. -->
+  <FH_Thought_FleshParasitism.stages.flesh_mutualism-13.description>身體中寄宿著活體血肉。</FH_Thought_FleshParasitism.stages.flesh_mutualism-13.description>
+
+
+</LanguageData>

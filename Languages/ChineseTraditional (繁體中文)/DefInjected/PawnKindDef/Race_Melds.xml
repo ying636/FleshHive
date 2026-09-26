@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: bastionmeld -->
+  <FH_Bastionmeld.label>鐵骸母獸</FH_Bastionmeld.label>
+
+  <!-- EN: dreadmeld -->
+  <FH_Dreadmeld.label>驚懼母獸</FH_Dreadmeld.label>
+
+  <!-- EN: fissionmeld -->
+  <FH_Fissionmeld.label>裂殖母獸</FH_Fissionmeld.label>
+
+  <!-- EN: flesh deadguard -->
+  <FH_FleshDeadguard.label>血肉死衛</FH_FleshDeadguard.label>
+
+  <!-- EN: fleshtitan -->
+  <FH_Fleshtitan.label>血肉泰坦</FH_Fleshtitan.label>
+
+  <!-- EN: furiousmeld -->
+  <FH_Furiousmeld.label>暴怒母獸</FH_Furiousmeld.label>
+
+  <!-- EN: harnessed fleshtitan -->
+  <FH_HarnessedFleshtitan.label>受控血肉泰坦</FH_HarnessedFleshtitan.label>
+
+  <!-- EN: nexusmeld -->
+  <FH_Nexusmeld.label>統合母獸</FH_Nexusmeld.label>
+
+</LanguageData>

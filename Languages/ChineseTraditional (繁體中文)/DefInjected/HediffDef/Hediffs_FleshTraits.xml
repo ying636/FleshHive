@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: acidic -->
+  <FH_Trait_Acidic.label>酸蝕</FH_Trait_Acidic.label>
+  <!-- EN: This fleshbeast ruptures in a burst of acid when it dies. -->
+  <FH_Trait_Acidic.description>這隻血肉獸死亡時會破裂並釋放酸蝕爆炸。</FH_Trait_Acidic.description>
+
+  <!-- EN: bone spur growth -->
+  <FH_Trait_BoneSpurGrowth.label>骨刺增生</FH_Trait_BoneSpurGrowth.label>
+  <!-- EN: This fleshbeast grows excess bone spurs, reducing the cooldown of its abilities. -->
+  <FH_Trait_BoneSpurGrowth.description>這隻血肉獸長出了過量的骨刺，使其能力冷卻時間縮短。</FH_Trait_BoneSpurGrowth.description>
+
+  <!-- EN: cancerous -->
+  <FH_Trait_Cancerous.label>癌變</FH_Trait_Cancerous.label>
+  <!-- EN: This fleshbeast regenerates like a ghoul, but its control decays much faster. -->
+  <FH_Trait_Cancerous.description>這隻血肉獸像食屍鬼一樣再生，但控制值下降得更快。</FH_Trait_Cancerous.description>
+
+  <!-- EN: degraded -->
+  <FH_Trait_Degraded.label>劣化</FH_Trait_Degraded.label>
+  <!-- EN: This fleshbeast's nervous tissue has degraded, reducing its consciousness. -->
+  <FH_Trait_Degraded.description>這隻血肉獸的神經組織已經劣化，意識能力降低。</FH_Trait_Degraded.description>
+
+  <!-- EN: domesticated -->
+  <FH_Trait_Domesticated.label>馴化</FH_Trait_Domesticated.label>
+  <!-- EN: This fleshbeast is more stable under hive control. -->
+  <FH_Trait_Domesticated.description>這隻血肉獸在巢穴控制下更加穩定。</FH_Trait_Domesticated.description>
+
+  <!-- EN: expanded capacity -->
+  <FH_Trait_ExpandedCapacity.label>擴容</FH_Trait_ExpandedCapacity.label>
+  <!-- EN: This fleshbeast can hold additional parasite mass. -->
+  <FH_Trait_ExpandedCapacity.description>這隻血肉獸可以容納額外的寄生體質量。</FH_Trait_ExpandedCapacity.description>
+
+  <!-- EN: fragile -->
+  <FH_Trait_Fragile.label>脆弱</FH_Trait_Fragile.label>
+  <!-- EN: This fleshbeast's body is unstable and takes more damage. -->
+  <FH_Trait_Fragile.description>這隻血肉獸的軀體結構不穩定，受到的傷害提高。</FH_Trait_Fragile.description>
+
+  <!-- EN: rapid growth -->
+  <FH_Trait_RapidGrowth.label>猛長</FH_Trait_RapidGrowth.label>
+  <!-- EN: This fleshbeast grows unusually quickly. -->
+  <FH_Trait_RapidGrowth.description>這隻血肉獸以異常迅猛的速度生長。</FH_Trait_RapidGrowth.description>
+
+  <!-- EN: robust -->
+  <FH_Trait_Robust.label>健壯</FH_Trait_Robust.label>
+  <!-- EN: This fleshbeast hits harder in melee. -->
+  <FH_Trait_Robust.description>這隻血肉獸在近戰中能造成更高傷害。</FH_Trait_Robust.description>
+
+  <!-- EN: runaway -->
+  <FH_Trait_Runaway.label>失控</FH_Trait_Runaway.label>
+  <!-- EN: This fleshbeast is prone to breaking free of control after fusion. -->
+  <FH_Trait_Runaway.description>這隻血肉獸在融合後更容易脫離控制。</FH_Trait_Runaway.description>
+
+  <!-- EN: sharp -->
+  <FH_Trait_Sharp.label>銳利</FH_Trait_Sharp.label>
+  <!-- EN: This fleshbeast's sharp natural weapons pierce armor more easily. -->
+  <FH_Trait_Sharp.description>這隻血肉獸的銳利天然武器更容易刺穿護甲。</FH_Trait_Sharp.description>
+
+  <!-- EN: split -->
+  <FH_Trait_Split.label>分裂</FH_Trait_Split.label>
+  <!-- EN: This fleshbeast splits into a small fleshbeast when it dies. -->
+  <FH_Trait_Split.description>這隻血肉獸死亡時會分裂出一隻小型血肉獸。</FH_Trait_Split.description>
+
+  <!-- EN: swift -->
+  <FH_Trait_Swift.label>迅捷</FH_Trait_Swift.label>
+  <!-- EN: This fleshbeast moves with abnormal speed. -->
+  <FH_Trait_Swift.description>這隻血肉獸以異常的速度移動。</FH_Trait_Swift.description>
+
+  <!-- EN: tough -->
+  <FH_Trait_Tough.label>皮實</FH_Trait_Tough.label>
+  <!-- EN: This fleshbeast has a dense, resilient body and takes less damage. -->
+  <FH_Trait_Tough.description>這隻血肉獸擁有致密而堅韌的軀體，受到的傷害降低。</FH_Trait_Tough.description>
+
+</LanguageData>

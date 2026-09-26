@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Flesh Catastrophe -->
+  <FH_FleshCatastropheSurvivors.label>血肉災變</FH_FleshCatastropheSurvivors.label>
+  <!-- EN: The once-impenetrable anomalous research facility was consumed by a spreading wave of flesh. You survived only because you were outside when it happened. While searching the remains of the guard detail, you found another survivor. She claims to be a senior researcher from the laboratory, and more terrifyingly, she seems able to command the fleshbeasts at will. You gather essential supplies from the edge of the facility and leave the flesh hell behind. -->
+  <FH_FleshCatastropheSurvivors.description>曾經堅不可摧的異象實驗基地已被蔓延的血肉浪潮吞噬，而你僥倖在外躲過一劫。當你在守備部隊的屍骸中搜尋時，發現了另一名倖存者。她自稱是實驗室的高級研究員，更令人畏懼的是，她似乎可以自如地操控那些猙獰的血肉獸。你們收集了基地外圍的必要物資，離開了這座血肉地獄。</FH_FleshCatastropheSurvivors.description>
+  <!-- EN: The once-impenetrable anomalous research facility was consumed by a spreading wave of flesh. You survived only because you were outside when it happened. While searching the remains of the guard detail, you found another survivor. She claims to be a senior researcher from the laboratory, and more terrifyingly, she seems able to command the fleshbeasts at will. You gather essential supplies from the edge of the facility and leave the flesh hell behind. -->
+  <FH_FleshCatastropheSurvivors.scenario.description>曾經堅不可摧的異象實驗基地已被蔓延的血肉浪潮吞噬，而你僥倖在外躲過一劫。當你在守備部隊的屍骸中搜尋時，發現了另一名倖存者。她自稱是實驗室的高級研究員，更令人畏懼的是，她似乎可以自如地操控那些猙獰的血肉獸。你們收集了基地外圍的必要物資，離開了這座血肉地獄。</FH_FleshCatastropheSurvivors.scenario.description>
+  <!-- EN: Flesh Catastrophe -->
+  <FH_FleshCatastropheSurvivors.scenario.name>血肉災變</FH_FleshCatastropheSurvivors.scenario.name>
+  <!-- EN: The surviving researcher appears to be hiding something. She carries a fleshbeast core and claims that its power can be used to establish a controlled fleshbeast hive. It is an absurd idea, but in the sparsely inhabited wilderness of the rim, it may be the only way forward. -->
+  <FH_FleshCatastropheSurvivors.scenario.parts.GameStartDialog.text>倖存的研究員似乎隱瞞了一些信息。她攜帶著某種血肉獸核心，並聲稱可以利用這股力量建立一個受控的血肉獸巢群。多麼荒誕的設想，但是在這個人煙稀少的邊緣世界荒野，似乎也只能如此了。</FH_FleshCatastropheSurvivors.scenario.parts.GameStartDialog.text>
+  <!-- EN: Start with one colonist, one special character, and several fleshbeast servants. -->
+  <FH_FleshCatastropheSurvivors.scenario.parts.ConfigurePawnsMutants.customSummary>以一名殖民者與一名特殊角色以及幾個血肉獸僕從開局</FH_FleshCatastropheSurvivors.scenario.parts.ConfigurePawnsMutants.customSummary>
+  <!-- EN: Start with one colonist, one special character, and several fleshbeast servants. -->
+  <FH_FleshCatastropheSurvivors.scenario.summary>以一名殖民者與一名特殊角色以及幾個血肉獸僕從開局</FH_FleshCatastropheSurvivors.scenario.summary>
+
+</LanguageData>

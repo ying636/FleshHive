@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: titan ground slam -->
+  <FH_Flyer_TitanGroundSlam.label>血肉泰坦震地重擊</FH_Flyer_TitanGroundSlam.label>
+
+  <!-- EN: titan ground slam impact -->
+  <FH_Flyer_TitanGroundSlamVictim.label>血肉泰坦震地衝擊</FH_Flyer_TitanGroundSlamVictim.label>
+
+  <!-- EN: flying -->
+  <FH_PawnFlyer_Rampage.label>衝鋒中</FH_PawnFlyer_Rampage.label>
+
+  <!-- EN: flying -->
+  <FH_PawnFlyer_TitanCharge.label>飛行中</FH_PawnFlyer_TitanCharge.label>
+
+  <!-- EN: rampage -->
+  <FH_Projectile_Rampage.label>狂暴衝鋒</FH_Projectile_Rampage.label>
+
+  <!-- EN: titan charge -->
+  <FH_Projectile_TitanCharge.label>血肉泰坦衝鋒</FH_Projectile_TitanCharge.label>
+
+  <!-- EN: titan ground slam trigger -->
+  <FH_TitanGroundSlamTrigger.label>血肉泰坦震地觸發器</FH_TitanGroundSlamTrigger.label>
+
+</LanguageData>

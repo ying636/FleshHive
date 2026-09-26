@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh pack -->
+  <FH_FleshPack.label>寄生揹包</FH_FleshPack.label>
+  <!-- EN: A parasitic growth that expands the host's capacity to sustain flesh beast parasites. -->
+  <FH_FleshPack.description>配有適合血肉獸生長環境的揹包，血肉獸可以以更小的體積壓縮在裡邊。它可以增強佩戴者的寄生空間上限。</FH_FleshPack.description>
+
+</LanguageData>

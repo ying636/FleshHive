@@ -1104,7 +1104,7 @@
         <controlledTitanRace>FH_HarnessedFleshtitan</controlledTitanRace>
         <heartDef>FleshmassHeart</heartDef>
         <controlledHeartDef>FH_HarnessedFleshmassHeart</controlledHeartDef>
-        <revertAfterTicks>30000</revertAfterTicks>
+        <revertAfterTicks>25000</revertAfterTicks>
       </li>
     </comps>
     <tools>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh pulse -->
+  <FH_BastionmeldFleshPulse.label>血肉脈衝</FH_BastionmeldFleshPulse.label>
+  <!-- EN: Release a flesh pulse centered on the caster, disabling electronics and affected mechanoids. -->
+  <FH_BastionmeldFleshPulse.description>以自身為中心釋放血肉脈衝，癱瘓電器。以及波及到的機械族。</FH_BastionmeldFleshPulse.description>
+
+  <!-- EN: flesh pulse -->
+  <FH_BastionmeldFleshPulse_Parasitism.label>血肉脈衝</FH_BastionmeldFleshPulse_Parasitism.label>
+  <!-- EN: Release a flesh pulse centered on the caster, disabling electronics and affected mechanoids. -->
+  <FH_BastionmeldFleshPulse_Parasitism.description>以自身為中心釋放血肉脈衝，癱瘓電器。以及波及到的機械族。</FH_BastionmeldFleshPulse_Parasitism.description>
+
+  <!-- EN: summon flesh deadguard -->
+  <FH_BastionmeldSummonDeadguard.label>召喚血肉死衛</FH_BastionmeldSummonDeadguard.label>
+  <!-- EN: Release 4 flesh deadguards armed with scavenged mechanoid firearms. -->
+  <FH_BastionmeldSummonDeadguard.description>釋放4隻持有隨機小型機械族槍械的血肉死衛，消耗50扭曲肉。</FH_BastionmeldSummonDeadguard.description>
+
+  <!-- EN: terror roar -->
+  <FH_DreadmeldTerrorRoar.label>驚懼咆哮</FH_DreadmeldTerrorRoar.label>
+  <!-- EN: Consume 100 twisted flesh to release a terrifying roar which has a chance to send nearby hostile humans and animals fleeing in terror. -->
+  <FH_DreadmeldTerrorRoar.description>消耗100扭曲肉，發出令人膽裂的咆哮，有一定幾率使附近敵人與動物驚逃四散。</FH_DreadmeldTerrorRoar.description>
+
+  <!-- EN: flesh fission -->
+  <FH_FissionmeldFission.label>血肉裂殖</FH_FissionmeldFission.label>
+  <!-- EN: The fissionmeld consumes twisted flesh and immediately buds a parasitic fleshbeast from its own body. -->
+  <FH_FissionmeldFission.description>裂殖母獸消耗扭曲肉，立刻從自身軀體上萌生一隻寄生血肉獸。</FH_FissionmeldFission.description>
+
+  <!-- EN: flesh berserk -->
+  <FH_FleshBerserk.label>血肉暴走</FH_FleshBerserk.label>
+  <!-- EN: All friendly flesh beasts on the map enter a frenzied berserk state for 6 hours, gaining increased move speed and melee damage. -->
+  <FH_FleshBerserk.description>地圖中所有我方血肉獸進入狂暴狀態6小時，提升移動速度和近戰傷害。</FH_FleshBerserk.description>
+
+  <!-- EN: flesh rebirth -->
+  <FH_FleshRebirth.label>血肉重生</FH_FleshRebirth.label>
+  <!-- EN: Consume 200 twisted flesh to purge harmful conditions and rebuild damaged flesh. -->
+  <FH_FleshRebirth.description>消耗200扭曲肉，清除宿主身上的負面狀態並重建受損血肉。</FH_FleshRebirth.description>
+
+  <!-- EN: flesh spread -->
+  <FH_FleshSpread.label>血肉蔓延</FH_FleshSpread.label>
+  <!-- EN: Spread twisted flesh across an area, consuming twisted flesh from the host. -->
+  <FH_FleshSpread.description>在目標區域蔓延扭曲血肉，消耗宿主的扭曲肉。</FH_FleshSpread.description>
+
+  <!-- EN: flesh spread -->
+  <FH_FleshSpread_Parasitism.label>血肉蔓延</FH_FleshSpread_Parasitism.label>
+  <!-- EN: Spread twisted flesh across an area. -->
+  <FH_FleshSpread_Parasitism.description>在一片區域內蔓延扭曲血肉。</FH_FleshSpread_Parasitism.description>
+
+  <!-- EN: rampage charge -->
+  <FH_RampageCharge.label>狂暴衝鋒</FH_RampageCharge.label>
+  <!-- EN: The furiousmeld charges forward, dealing damage to everything in its path. Buildings are destroyed until a cumulative limit is reached. -->
+  <FH_RampageCharge.description>暴怒母獸向前衝鋒，對路徑上的一切目標造成傷害，並持續摧毀建築，直至達到累計破壞上限。</FH_RampageCharge.description>
+
+  <!-- EN: scarlet field -->
+  <FH_ScarletField.label>猩紅立場</FH_ScarletField.label>
+  <!-- EN: Project a bioprotective forcefield that allows friendly projectiles to pass out but blocks incoming attacks. Each projectile blocked consumes 1 twisted flesh, each melee attack consumes 20 twisted flesh. -->
+  <FH_ScarletField.description>投射出生物防護力場，讓友方子彈能夠射出而無法射入。每攔截一次射擊消耗1扭曲肉，每攔截一次近戰攻擊消耗20扭曲肉。</FH_ScarletField.description>
+
+  <!-- EN: titan charge -->
+  <FH_TitanCharge.label>泰坦衝鋒</FH_TitanCharge.label>
+  <!-- EN: The fleshtitan surges forward, destroying buildings in its path and dealing blunt damage to anything it collides with. -->
+  <FH_TitanCharge.description>血肉泰坦向前快速衝刺，摧毀途經的建築，並對沖撞到的目標造成鈍擊傷害。</FH_TitanCharge.description>
+
+  <!-- EN: devastating strike -->
+  <FH_TitanDevastatingStrike.label>毀滅重擊</FH_TitanDevastatingStrike.label>
+  <!-- EN: The next melee attack that hits will shatter everything. -->
+  <FH_TitanDevastatingStrike.description>下一次命中的近戰攻擊將會粉碎一切</FH_TitanDevastatingStrike.description>
+
+  <!-- EN: titan ground slam -->
+  <FH_TitanGroundSlam.label>泰坦震地</FH_TitanGroundSlam.label>
+  <!-- EN: The fleshtitan leaps high and slams into the ground, dealing blunt damage to all nearby creatures, throwing them into the air, and stunning them for a long time. -->
+  <FH_TitanGroundSlam.description>血肉泰坦高高躍起並重擊地面，使附近所有生物受到鈍擊傷害、被震飛並長時間眩暈。</FH_TitanGroundSlam.description>
+
+</LanguageData>

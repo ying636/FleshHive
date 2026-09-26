@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: control -->
+  <FH_Need_Control.label>控制度</FH_Need_Control.label>
+  <!-- EN: Control represents how much control the colony has over this unit.\nWhen it reaches zero, the unit will attempt to break free from control. -->
+  <FH_Need_Control.description>控制度代表殖民地對該單位的控制程度。\n當控制度降至零時，該單位會試圖掙脫控制。</FH_Need_Control.description>
+
+</LanguageData>

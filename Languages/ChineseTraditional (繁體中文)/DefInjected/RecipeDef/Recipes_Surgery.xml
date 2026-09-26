@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: install flesh adaptation module -->
+  <FH_InstallFleshAdaptationModule.label>植入血肉適應模塊</FH_InstallFleshAdaptationModule.label>
+  <!-- EN: Install a flesh adaptation module. -->
+  <FH_InstallFleshAdaptationModule.description>植入一個血肉適應模塊。</FH_InstallFleshAdaptationModule.description>
+  <!-- EN: Installing flesh adaptation module. -->
+  <FH_InstallFleshAdaptationModule.jobString>正在植入血肉適應模塊。</FH_InstallFleshAdaptationModule.jobString>
+
+  <!-- EN: install fleshmass lung -->
+  <FH_InstallFleshmassLung.label>安裝血肉肺</FH_InstallFleshmassLung.label>
+  <!-- EN: Install a fleshmass lung. -->
+  <FH_InstallFleshmassLung.description>安裝一隻血肉肺。</FH_InstallFleshmassLung.description>
+  <!-- EN: Installing fleshmass lung. -->
+  <FH_InstallFleshmassLung.jobString>正在安裝血肉肺。</FH_InstallFleshmassLung.jobString>
+
+  <!-- EN: install fleshmass stomach -->
+  <FH_InstallFleshmassStomach.label>安裝血肉胃</FH_InstallFleshmassStomach.label>
+  <!-- EN: Install a fleshmass stomach. -->
+  <FH_InstallFleshmassStomach.description>安裝一個血肉胃。</FH_InstallFleshmassStomach.description>
+  <!-- EN: Installing fleshmass stomach. -->
+  <FH_InstallFleshmassStomach.jobString>正在安裝血肉胃。</FH_InstallFleshmassStomach.jobString>
+
+  <!-- EN: install flesh symbiosis module -->
+  <FH_InstallFleshSymbiosisModule.label>植入血肉共生模塊</FH_InstallFleshSymbiosisModule.label>
+  <!-- EN: Install a flesh symbiosis module. -->
+  <FH_InstallFleshSymbiosisModule.description>植入一個血肉共生模塊。</FH_InstallFleshSymbiosisModule.description>
+  <!-- EN: Installing flesh symbiosis module. -->
+  <FH_InstallFleshSymbiosisModule.jobString>正在植入血肉共生模塊。</FH_InstallFleshSymbiosisModule.jobString>
+
+  <!-- EN: install flesh whip -->
+  <FH_InstallFleshWhip.label>安裝血肉觸鞭</FH_InstallFleshWhip.label>
+  <!-- EN: Install a flesh whip. -->
+  <FH_InstallFleshWhip.description>安裝一隻血肉觸鞭。</FH_InstallFleshWhip.description>
+  <!-- EN: Installing flesh whip. -->
+  <FH_InstallFleshWhip.jobString>正在安裝血肉觸鞭。</FH_InstallFleshWhip.jobString>
+
+  <!-- EN: install flesh tentacle -->
+  <FH_InstallTentacle.label>安裝血肉觸手</FH_InstallTentacle.label>
+  <!-- EN: Install a flesh tentacle. -->
+  <FH_InstallTentacle.description>安裝一隻血肉觸手。</FH_InstallTentacle.description>
+  <!-- EN: Installing flesh tentacle. -->
+  <FH_InstallTentacle.jobString>正在安裝血肉觸手。</FH_InstallTentacle.jobString>
+
+</LanguageData>

@@ -52,7 +52,7 @@ public class JobDriver_RefillTwistedFlesh_Help : JobDriver
                 return;
             }
 
-            int needed = TwistedFleshUtility.GetNeededAmount(targetPawn);
+            int needed = TwistedFleshUtility.GetNeededAmount(targetPawn, this.job.playerForced);
             int count = Mathf.Min(carried.stackCount, needed, this.job.count);
             if (count <= 0)
             {
@@ -62,7 +62,7 @@ public class JobDriver_RefillTwistedFlesh_Help : JobDriver
 
             Thing consumed = carried.SplitOff(count);
             consumed.Destroy(DestroyMode.Vanish);
-            TwistedFleshUtility.FillTwistedFlesh(targetPawn, count);
+            TwistedFleshUtility.FillTwistedFlesh(targetPawn, count, this.job.playerForced);
         };
         yield return fill;
     }

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh regeneration sac -->
+  <FH_FleshRegenerationSac.label>血肉修復囊</FH_FleshRegenerationSac.label>
+  <!-- EN: A regeneration sac woven from hive nerves and twisted flesh. Injured fleshbeasts crawl inside, where warm, viscous flesh fluid closes their wounds and repairs their carapaces. It works only on fleshbeasts and cannot be used to heal other creatures. -->
+  <FH_FleshRegenerationSac.description>一座由巢群神經與扭曲血肉編織而成的再生囊。受傷的血肉獸會主動鑽入囊中，在溫熱黏稠的血肉液裡重新閉合傷口、修補甲殼。它只對血肉獸生效，無法用於治療其他生物。</FH_FleshRegenerationSac.description>
+
+</LanguageData>

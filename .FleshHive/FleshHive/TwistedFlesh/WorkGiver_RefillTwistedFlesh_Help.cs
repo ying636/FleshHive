@@ -60,7 +60,7 @@ public class WorkGiver_RefillTwistedFlesh_Help : WorkGiver_Scanner
             return null;
         }
 
-        int needed = TwistedFleshUtility.GetNeededAmount(targetPawn);
+        int needed = TwistedFleshUtility.GetNeededAmount(targetPawn, forced);
         int refillAmount = Mathf.Max(1,
             Mathf.RoundToInt(TwistedFleshUtility.GetMaxTwistedFlesh(targetPawn) * 0.25f));
         int count = Mathf.Min(twistedMeat.stackCount, needed, refillAmount);
@@ -71,6 +71,7 @@ public class WorkGiver_RefillTwistedFlesh_Help : WorkGiver_Scanner
 
         Job job = JobMaker.MakeJob(FleshHiveDefOf.FH_Job_RefillTwistedFlesh_Help, twistedMeat, targetPawn);
         job.count = count;
+        job.playerForced = forced;
         return job;
     }
 

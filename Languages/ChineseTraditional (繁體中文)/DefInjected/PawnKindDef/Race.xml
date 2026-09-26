@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Acidbulb -->
+  <FH_Acidbulb.label>腐蝕瘤獸</FH_Acidbulb.label>
+
+  <!-- EN: bulbfreak -->
+  <FH_Bulbfreak.label>惡臭瘤獸</FH_Bulbfreak.label>
+
+  <!-- EN: bulbplump -->
+  <FH_Bulbplump.label>增生瘤獸</FH_Bulbplump.label>
+
+  <!-- EN: fingerspike -->
+  <FH_Fingerspike.label>獨爪獸</FH_Fingerspike.label>
+
+  <!-- EN: flesh replica -->
+  <FH_FleshReplica.label>血肉擬像</FH_FleshReplica.label>
+
+  <!-- EN: fleshwind -->
+  <FH_Fleshwind.label>翼爪獸</FH_Fleshwind.label>
+
+  <!-- EN: gutspike -->
+  <FH_Gutspike.label>胃血獸</FH_Gutspike.label>
+
+  <!-- EN: paraspike -->
+  <FH_Paraspike.label>寄血獸</FH_Paraspike.label>
+
+  <!-- EN: puffspike -->
+  <FH_Puffspike.label>肺血獸</FH_Puffspike.label>
+
+  <!-- EN: shatterspike -->
+  <FH_Shatterspike.label>碎爪獸</FH_Shatterspike.label>
+
+  <!-- EN: shieldspike -->
+  <FH_Shieldspike.label>盾爪獸</FH_Shieldspike.label>
+
+  <!-- EN: spitbulb -->
+  <FH_Spitbulb.label>噴射瘤獸</FH_Spitbulb.label>
+
+  <!-- EN: synbulb -->
+  <FH_Synbulb.label>共鳴瘤獸</FH_Synbulb.label>
+
+  <!-- EN: toughspike -->
+  <FH_Toughspike.label>雙爪獸</FH_Toughspike.label>
+
+  <!-- EN: trispike -->
+  <FH_Trispike.label>三爪獸</FH_Trispike.label>
+
+  <!-- EN: whipspike -->
+  <FH_Whipspike.label>鞭爪獸</FH_Whipspike.label>
+
+</LanguageData>

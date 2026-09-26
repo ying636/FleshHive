@@ -16,6 +16,7 @@
       <li MayRequire="Ludeon.RimWorld.Anomaly">FH_Item_FleshSymbiosisSerum</li>
       <li>FH_Item_FleshSymbiosisModule</li>
       <li>FH_Item_FleshPack</li>
+      <li>FH_Item_SynapsePack</li>
       <li>FH_Item_FleshWhip</li>
       <li>FH_Item_FleshmassStomach</li>
       <li>FH_Item_FleshmassLung</li>
@@ -170,6 +171,28 @@
         <requirements>
           <Bioferrite>20</Bioferrite>
           <FH_NerveFlesh>5</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_SynapsePack</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>synapse command pack</label>
+    <description>A living pack made of carapace and pheromone synapses. It lets the wearer command fleshbeasts and holds twisted meat to sustain their upkeep.</description>
+    <thing>FH_SynapsePack</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.233333~0.233333</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </costs>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <FH_NerveFlesh>2</FH_NerveFlesh>
+          <FH_FleshCarapace>60</FH_FleshCarapace>
         </requirements>
       </li>
     </specialResources>

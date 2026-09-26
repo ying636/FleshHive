@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: flesh deadguard -->
+  <FH_FleshDeadguardLifespan.label>血肉死衛</FH_FleshDeadguardLifespan.label>
+  <!-- EN: Flesh deadguards cannot exist stably and naturally die after a period of time. -->
+  <FH_FleshDeadguardLifespan.description>血肉死衛無法穩定存在，在一段時間後會自然死亡</FH_FleshDeadguardLifespan.description>
+
+  <!-- EN: lost spike -->
+  <FH_LostSpike_Paraspike.label>失去骨刺</FH_LostSpike_Paraspike.label>
+  <!-- EN: The paraspike has lost the core bone spike it needs to survive. Unless it regenerates soon, it will weaken and die. -->
+  <FH_LostSpike_Paraspike.description>寄血獸失去了維持生命所需的核心骨刺。若無法及時恢復，它將逐漸衰竭並死亡。</FH_LostSpike_Paraspike.description>
+
+  <!-- EN: acidbulb mutualism -->
+  <FH_Parasitism_Acidbulb.label>腐蝕瘤獸寄生</FH_Parasitism_Acidbulb.label>
+  <!-- EN: This creature is parasitized by an acidbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host becomes immune to toxic buildup, gains 200 twisted flesh capacity, and gains acid mortar and acid spray abilities.\n\n-Tentacle -->
+  <FH_Parasitism_Acidbulb.description>該生物被腐蝕瘤獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n免疫毒素積累，扭曲肉容量+200，並獲得“酸蝕迫擊炮”和“酸液噴吐”能力。\n\n-觸手</FH_Parasitism_Acidbulb.description>
+
+  <!-- EN: bulbfreak mutualism -->
+  <FH_Parasitism_Bulbfreak.label>惡臭瘤獸寄生</FH_Parasitism_Bulbfreak.label>
+  <!-- EN: This creature is parasitized by a bulbfreak. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can consume twisted flesh to release two random medium fleshbeasts.\n\n-Tentacle -->
+  <FH_Parasitism_Bulbfreak.description>該生物被惡臭瘤獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n可消耗扭曲肉釋放兩隻隨機中型血肉獸。\n\n-觸手</FH_Parasitism_Bulbfreak.description>
+
+  <!-- EN: bulbplump mutualism -->
+  <FH_Parasitism_Bulbplump.label>增生瘤獸寄生</FH_Parasitism_Bulbplump.label>
+  <!-- EN: This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced, gains 400 twisted flesh capacity, recovers 50 twisted flesh per day, and gains the flesh jump ability.\n\n-Tentacle -->
+  <FH_Parasitism_Bulbplump.description>該生物被增生瘤獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n飢餓速度降低，扭曲肉容量+400，每天恢復50扭曲肉，並獲得血肉跳躍能力。\n\n-觸手</FH_Parasitism_Bulbplump.description>
+
+  <!-- EN: fingerspike mutualism -->
+  <FH_Parasitism_Fingerspike.label>獨爪獸寄生</FH_Parasitism_Fingerspike.label>
+  <!-- EN: This creature is parasitized by a fingerspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Bone-spike tentacle -->
+  <FH_Parasitism_Fingerspike.description>該生物被獨爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n-骨刺觸手</FH_Parasitism_Fingerspike.description>
+
+  <!-- EN: flesh replica synchronization -->
+  <FH_Parasitism_FleshReplica.label>血肉擬像同步</FH_Parasitism_FleshReplica.label>
+  <!-- EN: A synchronization link between a flesh replica and its host, allowing it to mimic the host's appearance and abilities. -->
+  <FH_Parasitism_FleshReplica.description>血肉擬像與宿主之間的同步連接，能夠模仿宿主的外貌與能力。</FH_Parasitism_FleshReplica.description>
+
+  <!-- EN: fleshwind mutualism -->
+  <FH_Parasitism_Fleshwind.label>翼爪獸寄生</FH_Parasitism_Fleshwind.label>
+  <!-- EN: This creature is parasitized by a fleshwind. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host ignores terrain movement penalties and has 120% Move Speed. -->
+  <FH_Parasitism_Fleshwind.description>該生物被翼爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n無視地形移動阻攔，移動速度×120%。</FH_Parasitism_Fleshwind.description>
+
+  <!-- EN: gutspike mutualism -->
+  <FH_Parasitism_Gutspike.label>胃血獸寄生</FH_Parasitism_Gutspike.label>
+  <!-- EN: This creature is parasitized by a gutspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is almost immune to food poisoning, and gains immunity to gut worms while purging existing infestations. -->
+  <FH_Parasitism_Gutspike.description>該生物被胃血獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n幾乎不會食物中毒，並對腸道蠕蟲具備免疫與清除能力。</FH_Parasitism_Gutspike.description>
+
+  <!-- EN: paraspike mutualism -->
+  <FH_Parasitism_Paraspike.label>寄血獸寄生</FH_Parasitism_Paraspike.label>
+  <!-- EN: This creature is parasitized by a paraspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBleeding is reduced, wound infections are prevented, and offspring inherit this mutualism.\n\n-Spiral tentacle -->
+  <FH_Parasitism_Paraspike.description>該生物被寄血獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n降低失血速率並免疫感染，其後代也會繼承這種寄生。\n\n-螺旋觸手</FH_Parasitism_Paraspike.description>
+
+  <!-- EN: puffspike mutualism -->
+  <FH_Parasitism_Puffspike.label>肺血獸寄生</FH_Parasitism_Puffspike.label>
+  <!-- EN: This creature is parasitized by a puffspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is immune to asthma and lung rot, which are cured from its lungs. It moves faster and tolerates toxic environments better. -->
+  <FH_Parasitism_Puffspike.description>該生物被肺血獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n完全免疫哮喘與肺瘟，並治癒肺中的這些疾病。移動速度提升且更耐受毒性環境。</FH_Parasitism_Puffspike.description>
+
+  <!-- EN: shatterspike mutualism -->
+  <FH_Parasitism_Shatterspike.label>碎爪獸寄生</FH_Parasitism_Shatterspike.label>
+  <!-- EN: This creature is parasitized by a shatterspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Shatter-claw tentacle -->
+  <FH_Parasitism_Shatterspike.description>該生物被碎爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n-碎爪觸手</FH_Parasitism_Shatterspike.description>
+
+  <!-- EN: shieldspike mutualism -->
+  <FH_Parasitism_Shieldspike.label>盾爪獸寄生</FH_Parasitism_Shieldspike.label>
+  <!-- EN: This creature is parasitized by a shieldspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains stronger armor.\n\n-Shield-claw tentacle -->
+  <FH_Parasitism_Shieldspike.description>該生物被盾爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n獲得更強的護甲。\n\n-盾爪觸手</FH_Parasitism_Shieldspike.description>
+
+  <!-- EN: spitbulb mutualism -->
+  <FH_Parasitism_Spitbulb.label>噴射瘤獸寄生</FH_Parasitism_Spitbulb.label>
+  <!-- EN: This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains 200 twisted flesh capacity and a flesh mortar that releases a small fleshbeast at the impact point.\n\n-Tentacle -->
+  <FH_Parasitism_Spitbulb.description>該生物被噴射瘤獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n扭曲肉容量+200，獲得一門血肉迫擊炮，並在命中位置釋放一隻小型血肉獸。\n\n-觸手</FH_Parasitism_Spitbulb.description>
+
+  <!-- EN: synbulb mutualism -->
+  <FH_Parasitism_Synbulb.label>共鳴瘤獸寄生</FH_Parasitism_Synbulb.label>
+  <!-- EN: This creature is parasitized by a synbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host enters psychic harmonization.\n\n-Shatter-claw tentacle -->
+  <FH_Parasitism_Synbulb.description>該生物被共鳴瘤獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n進入心靈同調狀態。\n\n-碎爪觸手</FH_Parasitism_Synbulb.description>
+
+  <!-- EN: toughspike mutualism -->
+  <FH_Parasitism_Toughspike.label>雙爪獸寄生</FH_Parasitism_Toughspike.label>
+  <!-- EN: This creature is parasitized by a toughspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains improved global work speed.\n\n-Carapace tentacle -->
+  <FH_Parasitism_Toughspike.description>該生物被雙爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n提高全局工作效率。\n\n-甲殼觸手</FH_Parasitism_Toughspike.description>
+
+  <!-- EN: trispike mutualism -->
+  <FH_Parasitism_Trispike.label>三爪獸寄生</FH_Parasitism_Trispike.label>
+  <!-- EN: This creature is parasitized by a trispike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can release two random small fleshbeasts.\n\n-Bone-spike tentacle -->
+  <FH_Parasitism_Trispike.description>該生物被三爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n可以釋放2隻隨機的小型血肉獸。\n\n-骨刺觸手</FH_Parasitism_Trispike.description>
+
+  <!-- EN: whipspike mutualism -->
+  <FH_Parasitism_Whipspike.label>鞭爪獸寄生</FH_Parasitism_Whipspike.label>
+  <!-- EN: This creature is parasitized by a whipspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Whip-claw tentacle -->
+  <FH_Parasitism_Whipspike.description>該生物被鞭爪獸所寄生，血肉獸為這個生物提供了額外的能力，但也為其帶來了一些不小的代價。\n\n-鞭爪觸手</FH_Parasitism_Whipspike.description>
+
+  <!-- EN: flesh psychic harmonization -->
+  <FH_PsychicHarmonizer.label>血肉心靈同調</FH_PsychicHarmonizer.label>
+  <!-- EN: A flesh-induced psychic harmonization effect that projects the host's mood to nearby pawns. -->
+  <FH_PsychicHarmonizer.description>由血肉寄生引發的心靈同調效果，將宿主的心情投射給附近的殖民者。</FH_PsychicHarmonizer.description>
+
+  <!-- EN: paraspike's spike -->
+  <FH_Spike_Paraspike.label>寄血獸骨刺</FH_Spike_Paraspike.label>
+  <!-- EN: A paraspike's core bone spike, used to parasite a host and sustain its life. It remains embedded in the host, continuously regulating flesh and blood. -->
+  <FH_Spike_Paraspike.description>寄血獸用於寄生與維持生命的骨刺。它嵌入宿主體內，持續調節血肉與血液。</FH_Spike_Paraspike.description>
+
+  <!-- EN: synbulb rampage -->
+  <FH_SynbulbRampage.label>共鳴暴走</FH_SynbulbRampage.label>
+  <!-- EN: Pheromones released by a dying synbulb drive the fleshbeast into a violent rampage. -->
+  <FH_SynbulbRampage.description>共鳴瘤獸死亡時釋放的信息素使血肉獸陷入暴走。</FH_SynbulbRampage.description>
+  <!-- EN: rampage -->
+  <FH_SynbulbRampage.stages.rampage.label>暴走</FH_SynbulbRampage.stages.rampage.label>
+
+</LanguageData>

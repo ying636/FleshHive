@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: carry prey to flesh sack -->
+  <FH_WorkGiver_FillFleshSack.label>將獵物搬運至血肉囊</FH_WorkGiver_FillFleshSack.label>
+  <!-- EN: carrying -->
+  <FH_WorkGiver_FillFleshSack.gerund>搬運到血肉囊</FH_WorkGiver_FillFleshSack.gerund>
+  <!-- EN: carry -->
+  <FH_WorkGiver_FillFleshSack.verb>搬運</FH_WorkGiver_FillFleshSack.verb>
+
+  <!-- EN: infect harbinger tree -->
+  <FH_WorkGiver_InfectHarbingerTree.label>感染噩兆噬樹</FH_WorkGiver_InfectHarbingerTree.label>
+  <!-- EN: infecting -->
+  <FH_WorkGiver_InfectHarbingerTree.gerund>感染中</FH_WorkGiver_InfectHarbingerTree.gerund>
+  <!-- EN: infect -->
+  <FH_WorkGiver_InfectHarbingerTree.verb>感染</FH_WorkGiver_InfectHarbingerTree.verb>
+
+  <!-- EN: carrry pawn to parasite pod -->
+  <FH_WorkGiver_PutPawnInParasitePod.label>將目標搬運至血肉寄生倉</FH_WorkGiver_PutPawnInParasitePod.label>
+  <!-- EN: carring -->
+  <FH_WorkGiver_PutPawnInParasitePod.gerund>搬運中</FH_WorkGiver_PutPawnInParasitePod.gerund>
+  <!-- EN: carry -->
+  <FH_WorkGiver_PutPawnInParasitePod.verb>搬運</FH_WorkGiver_PutPawnInParasitePod.verb>
+
+  <!-- EN: refill twisted flesh -->
+  <FH_WorkGiver_RefillTwistedFlesh.label>補充扭曲肉</FH_WorkGiver_RefillTwistedFlesh.label>
+  <!-- EN: refilling -->
+  <FH_WorkGiver_RefillTwistedFlesh.gerund>補充中</FH_WorkGiver_RefillTwistedFlesh.gerund>
+  <!-- EN: refill -->
+  <FH_WorkGiver_RefillTwistedFlesh.verb>補充</FH_WorkGiver_RefillTwistedFlesh.verb>
+
+  <!-- EN: refill others' twisted flesh -->
+  <FH_WorkGiver_RefillTwistedFlesh_Help.label>為他人補充扭曲肉</FH_WorkGiver_RefillTwistedFlesh_Help.label>
+  <!-- EN: refilling -->
+  <FH_WorkGiver_RefillTwistedFlesh_Help.gerund>補充中</FH_WorkGiver_RefillTwistedFlesh_Help.gerund>
+  <!-- EN: refill -->
+  <FH_WorkGiver_RefillTwistedFlesh_Help.verb>補充</FH_WorkGiver_RefillTwistedFlesh_Help.verb>
+
+  <!-- EN: suppress flesh hive activity -->
+  <FH_WorkGiver_SuppressFleshHiveActivity.label>壓制血肉巢穴活躍度</FH_WorkGiver_SuppressFleshHiveActivity.label>
+  <!-- EN: suppressing -->
+  <FH_WorkGiver_SuppressFleshHiveActivity.gerund>壓制中</FH_WorkGiver_SuppressFleshHiveActivity.gerund>
+  <!-- EN: suppress -->
+  <FH_WorkGiver_SuppressFleshHiveActivity.verb>壓制</FH_WorkGiver_SuppressFleshHiveActivity.verb>
+
+</LanguageData>

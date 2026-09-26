@@ -96,7 +96,7 @@ public class MapComponent_FleshHive : MapComponent
         && hive.Faction == Faction.OfPlayer
         && FleshHiveHungerUtility.IsHungry(hive)) == true;
     public int ExtraHiveGroupCostLimit => hiveCapacityProviders?.Where(comp => comp?.parent?.Spawned == true).Sum(comp => comp.Capacity) ?? 0;
-    public int ExtraHiveScale => hiveScaleProviders?.Where(comp => comp?.parent?.Spawned == true).Sum(comp => comp.Scale) ?? 0;
+    public int ExtraHiveScale => extraHiveScale;
     public bool NutritionAllowedToFill
     {
         get => MapFleshHive.nutritionAllowedToFill;
@@ -649,6 +649,7 @@ public class MapComponent_FleshHive : MapComponent
         if (!hiveScaleProviders.Contains(provider))
         {
             hiveScaleProviders.Add(provider);
+            extraHiveScale += provider.Scale;
             ClampNutritionToHiveScaleLimit();
             EnforceHiveGroupCapacity();
         }
@@ -715,6 +716,7 @@ public class MapComponent_FleshHive : MapComponent
 
         if (hiveScaleProviders.Remove(provider))
         {
+            extraHiveScale -= provider.Scale;
             ClampNutritionToHiveScaleLimit();
             EnforceHiveGroupCapacity();
         }
@@ -1612,6 +1614,7 @@ public class MapComponent_FleshHive : MapComponent
 
         int cellsPerTick = Mathf.CeilToInt(mapArea * WildPlantSpawnerMapFractionCheckPerTick);
         int tickInterval = Mathf.CeilToInt(WildPlantSpawnerTickInterval);
+        float chanceFromDensity = Mathf.Clamp01((float)HiveScale / mapArea);
         for (int i = 0; i < cellsPerTick; i++)
         {
             if (fleshBushCycleIndex >= mapArea)
@@ -1620,21 +1623,25 @@ public class MapComponent_FleshHive : MapComponent
             }
 
             IntVec3 cell = map.cellsInRandomOrder.Get(fleshBushCycleIndex);
-            TrySpawnWildFleshBushAt(cell, tickInterval);
+            TrySpawnWildFleshBushAt(cell, tickInterval, chanceFromDensity);
             fleshBushCycleIndex++;
         }
     }
 
-    private void TrySpawnWildFleshBushAt(IntVec3 cell, int tickInterval)
+    private void TrySpawnWildFleshBushAt(IntVec3 cell, int tickInterval, float chanceFromDensity)
     {
-        if (!CanSpawnWildFleshBushAt(cell))
+        if (!FleshTerrainUtility.IsFleshTerrain(map, cell))
         {
             return;
         }
 
-        float chanceFromDensity = Mathf.Clamp01((float)HiveScale / map.Area);
         float regrowDays = map.BiomeAt(cell).wildPlantRegrowDays;
         if (!Rand.Chance(chanceFromDensity) || !Rand.MTBEventOccurs(regrowDays, GenDate.TicksPerDay, tickInterval))
+        {
+            return;
+        }
+
+        if (!CanSpawnWildFleshBushAt(cell))
         {
             return;
         }
@@ -1923,6 +1930,7 @@ public class MapComponent_FleshHive : MapComponent
     private List<HiveResourcer> hiveResourcers;
     private List<CompHiveGroupCapacityProvider> hiveCapacityProviders;
     private List<CompHiveScaleProvider> hiveScaleProviders;
+    private int extraHiveScale;
     private MapFleshHive mapFleshHive;
     private Dictionary<UnitDef, int> unitMaintainTargets = new Dictionary<UnitDef, int>();
     private Dictionary<UnitDef, int> unitMaximumTargets = new Dictionary<UnitDef, int>();

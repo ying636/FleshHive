@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Tutorial -->
+  <FH_Tutorial_Title>教程</FH_Tutorial_Title>
+  <!-- EN: Previous page -->
+  <FH_Tutorial_Previous>上一頁</FH_Tutorial_Previous>
+  <!-- EN: Next page -->
+  <FH_Tutorial_Next>下一頁</FH_Tutorial_Next>
+  <!-- EN: Do not show tutorial images automatically -->
+  <FH_Tutorial_Disable>不會再有教程圖片出現</FH_Tutorial_Disable>
+  <!-- EN: Open tutorial manually -->
+  <FH_Tutorial_Open>手動打開教程</FH_Tutorial_Open>
+</LanguageData>

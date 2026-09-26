@@ -17,5 +17,5 @@ public class CompProperties_FleshtitanReversion : CompProperties
 
     public ThingDef controlledHeartDef = null!;
 
-    public int revertAfterTicks = 30000;
+    public int revertAfterTicks = 25000;
 }

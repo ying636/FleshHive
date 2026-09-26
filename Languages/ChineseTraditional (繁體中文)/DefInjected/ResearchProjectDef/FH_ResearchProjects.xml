@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: basic flesh hive -->
+  <FH_Research_BasicFleshHive.label>基礎血肉巢穴</FH_Research_BasicFleshHive.label>
+  <!-- EN: Unlocks the basic flesh hive, flesh floors, flesh blocks, flesh doors, flesh vesicles, flesh hoppers, twisted meat production, and cultivation of all small fleshbeasts. -->
+  <FH_Research_BasicFleshHive.description>解鎖血肉巢穴、血肉地板、血肉塊、血肉門、血肉囊泡、血肉產出口、扭曲肉生產，以及小型血肉獸培育。</FH_Research_BasicFleshHive.description>
+  <!-- EN: Twisted meat -->
+  <FH_Research_BasicFleshHive.customUnlockTexts.0>扭曲肉</FH_Research_BasicFleshHive.customUnlockTexts.0>
+  <!-- EN: All small fleshbeasts -->
+  <FH_Research_BasicFleshHive.customUnlockTexts.1>小型血肉獸</FH_Research_BasicFleshHive.customUnlockTexts.1>
+
+  <!-- EN: chitin-plated flesh blocks -->
+  <FH_Research_BonePlatingFleshBlock.label>甲殼血肉塊</FH_Research_BonePlatingFleshBlock.label>
+  <!-- EN: Replaces flesh blocks and flesh barricades on all maps with chitin-plated versions and unlocks their construction. -->
+  <FH_Research_BonePlatingFleshBlock.description>研究後，將地圖中的血肉塊和血肉掩體替換為甲殼版本，並解鎖甲殼血肉塊和甲殼血肉掩體。</FH_Research_BonePlatingFleshBlock.description>
+  <!-- EN: Harden all flesh blocks and barricades -->
+  <FH_Research_BonePlatingFleshBlock.customUnlockTexts.0>硬化所有血肉塊和掩體</FH_Research_BonePlatingFleshBlock.customUnlockTexts.0>
+
+  <!-- EN: complex flesh fusion -->
+  <FH_Research_ComplexFleshFusion.label>複雜血肉融合</FH_Research_ComplexFleshFusion.label>
+  <!-- EN: Allows large fleshbeast fusion and unlocks production of parasite expansion packs. -->
+  <FH_Research_ComplexFleshFusion.description>允許大型血肉獸融合，並解鎖寄生擴容揹包的生產。</FH_Research_ComplexFleshFusion.description>
+  <!-- EN: Large fleshbeast fusion -->
+  <FH_Research_ComplexFleshFusion.customUnlockTexts.0>大型血肉獸融合</FH_Research_ComplexFleshFusion.customUnlockTexts.0>
+
+  <!-- EN: complex flesh hive -->
+  <FH_Research_ComplexFleshHive.label>複雜血肉巢穴</FH_Research_ComplexFleshHive.label>
+  <!-- EN: Unlocks nerve bundles, flesh hive upgrades, cultivation of all discovered medium fleshbeast formulas except flesh replicas, and production of bioferrite and nerve flesh. -->
+  <FH_Research_ComplexFleshHive.description>解鎖巢群神經結節、血肉巢群升級、中型血肉獸培育、活鐵和神經塊生產。培育單位仍需先發現對應融合配方。</FH_Research_ComplexFleshHive.description>
+  <!-- EN: All medium fleshbeasts except flesh replicas -->
+  <FH_Research_ComplexFleshHive.customUnlockTexts.0>中型血肉獸</FH_Research_ComplexFleshHive.customUnlockTexts.0>
+  <!-- EN: Bioferrite -->
+  <FH_Research_ComplexFleshHive.customUnlockTexts.1>活鐵</FH_Research_ComplexFleshHive.customUnlockTexts.1>
+  <!-- EN: Flesh hive upgrades -->
+  <FH_Research_ComplexFleshHive.customUnlockTexts.2>血肉巢群升級</FH_Research_ComplexFleshHive.customUnlockTexts.2>
+
+  <!-- EN: complex immune system -->
+  <FH_Research_ComplexImmuneSystem.label>複雜免疫系統</FH_Research_ComplexImmuneSystem.label>
+  <!-- EN: Unlocks fleshmass spitters, flesh bursters, and guard tentacle centers. -->
+  <FH_Research_ComplexImmuneSystem.description>解鎖血肉噴吐器、血肉爆炸器和警衛觸手中樞。</FH_Research_ComplexImmuneSystem.description>
+
+  <!-- EN: fleshbeast coexistence -->
+  <FH_Research_FleshbeastCoexistence.label>血肉獸共存</FH_Research_FleshbeastCoexistence.label>
+  <!-- EN: Unlocks flesh parasite vats and production of flesh adaptation modules and flesh symbiosis modules. -->
+  <FH_Research_FleshbeastCoexistence.description>解鎖血肉寄生倉，並允許生產血肉適應模塊和血肉共生模塊。</FH_Research_FleshbeastCoexistence.description>
+
+  <!-- EN: flesh furniture -->
+  <FH_Research_FleshFurniture.label>血肉傢俱</FH_Research_FleshFurniture.label>
+  <!-- EN: Unlocks flesh beds, tables, stools, and support columns. -->
+  <FH_Research_FleshFurniture.description>解鎖血肉床、血肉桌子、血肉凳子和血肉支撐柱。</FH_Research_FleshFurniture.description>
+
+  <!-- EN: flesh fusion -->
+  <FH_Research_FleshFusion.label>血肉融合</FH_Research_FleshFusion.label>
+  <!-- EN: Allows medium fleshbeast fusion and unlocks production of flesh tentacles, flesh whips, fleshmass stomachs, and fleshmass lungs. -->
+  <FH_Research_FleshFusion.description>允許中型血肉獸融合，並解鎖血肉觸手、血肉觸鞭、血肉胃和血肉肺的生產。</FH_Research_FleshFusion.description>
+  <!-- EN: Medium fleshbeast fusion -->
+  <FH_Research_FleshFusion.customUnlockTexts.0>中型血肉獸融合</FH_Research_FleshFusion.customUnlockTexts.0>
+
+  <!-- EN: advanced flesh hive -->
+  <FH_Research_FleshPrimaryHive.label>高級血肉巢穴</FH_Research_FleshPrimaryHive.label>
+  <!-- EN: Unlocks the nerve center, cultivation of all large fleshbeasts, and evolution into a flesh primary nest. -->
+  <FH_Research_FleshPrimaryHive.description>解鎖巢群神經中樞、大型血肉獸培育，以及血肉巢穴進化為血肉主巢。</FH_Research_FleshPrimaryHive.description>
+  <!-- EN: All large fleshbeasts -->
+  <FH_Research_FleshPrimaryHive.customUnlockTexts.0>大型血肉獸</FH_Research_FleshPrimaryHive.customUnlockTexts.0>
+  <!-- EN: Flesh primary nest evolution -->
+  <FH_Research_FleshPrimaryHive.customUnlockTexts.1>血肉主巢進化</FH_Research_FleshPrimaryHive.customUnlockTexts.1>
+
+  <!-- EN: flesh replica -->
+  <FH_Research_FleshReplica.label>血肉擬像</FH_Research_FleshReplica.label>
+  <!-- EN: Allows cultivation of flesh replicas. -->
+  <FH_Research_FleshReplica.description>允許培育血肉擬像。</FH_Research_FleshReplica.description>
+  <!-- EN: Flesh replica cultivation -->
+  <FH_Research_FleshReplica.customUnlockTexts.0>血肉擬像培育</FH_Research_FleshReplica.customUnlockTexts.0>
+
+  <!-- EN: immune system -->
+  <FH_Research_ImmuneSystem.label>免疫系統</FH_Research_ImmuneSystem.label>
+  <!-- EN: Unlocks bone-spike spitters, small guard tentacles, and flesh barricades. -->
+  <FH_Research_ImmuneSystem.description>解鎖骨刺噴吐器、小型警衛觸手和血肉掩體。</FH_Research_ImmuneSystem.description>
+
+  <!-- EN: meld-beast control -->
+  <FH_Research_MotherBeastControl.label>血肉母獸控制</FH_Research_MotherBeastControl.label>
+  <!-- EN: Allows cultivation of meld beasts. -->
+  <FH_Research_MotherBeastControl.description>允許培育血肉母獸。</FH_Research_MotherBeastControl.description>
+  <!-- EN: Meld-beast cultivation -->
+  <FH_Research_MotherBeastControl.customUnlockTexts.0>血肉母獸培育</FH_Research_MotherBeastControl.customUnlockTexts.0>
+
+  <!-- EN: nutrition cycle -->
+  <FH_Research_NutritionCycle.label>營養循環</FH_Research_NutritionCycle.label>
+  <!-- EN: Unlocks production of flesh lamps, fleshberry bushes, flesh sacks, and flesh power generators. -->
+  <FH_Research_NutritionCycle.description>解鎖血肉燈、肉果叢、血肉囊和血肉發電機的生產。</FH_Research_NutritionCycle.description>
+
+</LanguageData>

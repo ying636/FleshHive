@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: ParasitismSystem -->
+  <FH_ParasitismSystem.label>寄生系統</FH_ParasitismSystem.label>
+  <!-- EN: The fleshbeast mutualism system within the host. It sustains parasitic fleshbeasts, tracks parasite capacity, and releases all parasites when the host dies. -->
+  <FH_ParasitismSystem.description>宿主體內的血肉獸寄生系統。它維持寄生血肉獸、統計寄生容量，並在宿主死亡時釋放所有寄生體。</FH_ParasitismSystem.description>
+
+</LanguageData>

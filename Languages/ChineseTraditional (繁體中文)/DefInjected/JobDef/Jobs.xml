@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: consuming TargetA to grow. -->
+  <FH_Job_ConsumeMeldSeed.reportString>正在吞食TargetA併成長。</FH_Job_ConsumeMeldSeed.reportString>
+
+  <!-- EN: enter parasite pod. -->
+  <FH_Job_EnterParasitePod.reportString>正在進入血肉寄生倉。</FH_Job_EnterParasitePod.reportString>
+
+  <!-- EN: carrying TargetA to flesh sack. -->
+  <FH_Job_FillFleshSack.reportString>正在將TargetA搬運至血肉囊。</FH_Job_FillFleshSack.reportString>
+
+  <!-- EN: finishing off TargetA. -->
+  <FH_Job_HuntExecution.reportString>正在處決TargetA。</FH_Job_HuntExecution.reportString>
+
+  <!-- EN: infecting TargetA. -->
+  <FH_Job_InfectHarbingerTree.reportString>正在感染TargetA。</FH_Job_InfectHarbingerTree.reportString>
+
+  <!-- EN: mounting TargetA. -->
+  <FH_Job_MountParasiticWeapon.reportString>正在將TargetA安裝至寄生武器槽。</FH_Job_MountParasiticWeapon.reportString>
+
+  <!-- EN: carrry TargetA to TargetB. -->
+  <FH_Job_PutPawnInParasitePod.reportString>正在將TargetA搬運至TargetB。</FH_Job_PutPawnInParasitePod.reportString>
+
+  <!-- EN: refilling twisted flesh. -->
+  <FH_Job_RefillTwistedFlesh.reportString>正在填充扭曲肉。</FH_Job_RefillTwistedFlesh.reportString>
+
+  <!-- EN: refilling TargetB's twisted flesh. -->
+  <FH_Job_RefillTwistedFlesh_Help.reportString>正在為TargetB補充扭曲肉。</FH_Job_RefillTwistedFlesh_Help.reportString>
+
+  <!-- EN: suppressing TargetA. -->
+  <FH_Job_SuppressFleshHiveActivity.reportString>正在壓制TargetA。</FH_Job_SuppressFleshHiveActivity.reportString>
+
+  <!-- EN: using TargetA to expand parasite capacity. -->
+  <FH_Job_UseShardForParasiteCapacity.reportString>正在使用TargetA擴展寄生空間。</FH_Job_UseShardForParasiteCapacity.reportString>
+
+</LanguageData>
