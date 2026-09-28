@@ -9,6 +9,8 @@
     </researchPrerequisites>
     <thingClass>Apparel</thingClass>
     <smeltable>false</smeltable>
+    <generateCommonality>0</generateCommonality>
+    <generateAllowChance>0</generateAllowChance>
     <thingCategories>
       <li>ApparelUtility</li>
     </thingCategories>

@@ -11,34 +11,32 @@ public static class TwistedFleshUtility
         {
             return 999999;
         }
-        int storedInPack = CompSynapsePack.GetWorn(pawn)?.CurrentTwistedFlesh ?? 0;
         CompTwistedFlesh comp = pawn.TryGetComp<CompTwistedFlesh>();
         if (comp != null && comp.MaxTwistedFlesh > 0)
         {
-            return storedInPack + Mathf.FloorToInt(comp.CurrentTwistedFlesh);
+            return Mathf.FloorToInt(comp.CurrentTwistedFlesh);
         }
         ParasitismSystem system = pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
         if (system != null)
         {
-            return storedInPack + system.CurrentTwistedFlesh;
+            return system.CurrentTwistedFlesh;
         }
-        return storedInPack;
+        return 0;
     }
 
     public static int GetMaxTwistedFlesh(Pawn pawn)
     {
-        int packCapacity = CompSynapsePack.GetWorn(pawn)?.MaxTwistedFlesh ?? 0;
         CompTwistedFlesh comp = pawn.TryGetComp<CompTwistedFlesh>();
         if (comp != null && comp.MaxTwistedFlesh > 0)
         {
-            return packCapacity + comp.MaxTwistedFlesh;
+            return comp.MaxTwistedFlesh;
         }
         ParasitismSystem system = pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
         if (system != null)
         {
-            return packCapacity + system.MaxTwistedFlesh;
+            return system.MaxTwistedFlesh;
         }
-        return packCapacity;
+        return 0;
     }
 
     public static bool CanConsumeTwistedFlesh(Pawn pawn, int amount)
@@ -60,17 +58,6 @@ public static class TwistedFleshUtility
         {
             return false;
         }
-        CompSynapsePack? pack = CompSynapsePack.GetWorn(pawn);
-        int fromPack = Mathf.Min(amount, pack?.CurrentTwistedFlesh ?? 0);
-        if (pack != null && fromPack > 0)
-        {
-            pack.ConsumeTwistedFlesh(fromPack);
-            amount -= fromPack;
-        }
-        if (amount == 0)
-        {
-            return true;
-        }
         CompTwistedFlesh comp = pawn.TryGetComp<CompTwistedFlesh>();
         if (comp != null && comp.MaxTwistedFlesh > 0)
         {
@@ -86,15 +73,6 @@ public static class TwistedFleshUtility
 
     public static void FillTwistedFlesh(Pawn pawn, int amount, bool forced = false)
     {
-        CompSynapsePack? pack = CompSynapsePack.GetWorn(pawn);
-        if (pack != null && (forced || pack.AllowAutoRefillTwistedFlesh))
-        {
-            amount -= pack.FillTwistedFlesh(Mathf.Min(amount, pack.NeededAmount));
-        }
-        if (amount <= 0)
-        {
-            return;
-        }
         CompTwistedFlesh comp = pawn.TryGetComp<CompTwistedFlesh>();
         if (comp != null && comp.MaxTwistedFlesh > 0)
         {
@@ -113,21 +91,19 @@ public static class TwistedFleshUtility
 
     public static int GetNeededAmount(Pawn pawn, bool forced = false)
     {
-        CompSynapsePack? pack = CompSynapsePack.GetWorn(pawn);
-        int needed = pack != null && (forced || pack.AllowAutoRefillTwistedFlesh) ? pack.NeededAmount : 0;
         CompTwistedFlesh comp = pawn.TryGetComp<CompTwistedFlesh>();
         if (comp != null && comp.MaxTwistedFlesh > 0)
         {
-            return needed + (forced || comp.AllowAutoRefillTwistedFlesh
+            return forced || comp.AllowAutoRefillTwistedFlesh
                 ? Mathf.Max(0, Mathf.RoundToInt(comp.MaxTwistedFlesh * comp.TwistedFleshTargetValue)
                     - Mathf.FloorToInt(comp.CurrentTwistedFlesh))
-                : 0);
+                : 0;
         }
         ParasitismSystem system = pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
-        return needed + (system != null && (forced || system.AllowAutoRefillTwistedFlesh)
+        return system != null && (forced || system.AllowAutoRefillTwistedFlesh)
             ? Mathf.Max(0, Mathf.RoundToInt(system.MaxTwistedFlesh * system.TwistedFleshTargetValue)
                 - system.CurrentTwistedFlesh)
-            : 0);
+            : 0;
     }
 
     public static bool NeedsRefill(Pawn pawn, bool forced = false)
@@ -137,10 +113,6 @@ public static class TwistedFleshUtility
 
     public static bool HasTwistedFleshStorage(Pawn pawn)
     {
-        if (CompSynapsePack.GetWorn(pawn)?.MaxTwistedFlesh > 0)
-        {
-            return true;
-        }
         CompTwistedFlesh comp = pawn.TryGetComp<CompTwistedFlesh>();
         if (comp != null && comp.MaxTwistedFlesh > 0)
         {

@@ -91,20 +91,30 @@ public class ParasitismSystem : HediffWithComps
         {
             if (cacheAdditionalTwistedFleshCapacity == -1)
             {
-                cacheAdditionalTwistedFleshCapacity = 0;
-                if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_Hela) is Hediff_Hela hela)
-                {
-                    cacheAdditionalTwistedFleshCapacity += hela.TwistedFleshCapacity;
-                }
-                foreach (ParasitismHediff hd in ParasitismHediffs)
-                {
-                    if (hd.flesh?.TryGetComp<ParasitismComp>() is ParasitismComp comp)
-                    {
-                        cacheAdditionalTwistedFleshCapacity += comp.Props.twistedFleshCapacity;
-                    }
-                }
+                cacheAdditionalTwistedFleshCapacity = IntrinsicTwistedFleshCapacity
+                    + (CompSynapsePack.GetWorn(pawn)?.MaxTwistedFlesh ?? 0);
             }
             return cacheAdditionalTwistedFleshCapacity;
+        }
+    }
+
+    public int IntrinsicTwistedFleshCapacity
+    {
+        get
+        {
+            int capacity = 0;
+            if (pawn?.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_Hela) is Hediff_Hela hela)
+            {
+                capacity += hela.TwistedFleshCapacity;
+            }
+            foreach (ParasitismHediff hd in ParasitismHediffs)
+            {
+                if (hd.flesh?.TryGetComp<ParasitismComp>() is ParasitismComp comp)
+                {
+                    capacity += comp.Props.twistedFleshCapacity;
+                }
+            }
+            return capacity;
         }
     }
 

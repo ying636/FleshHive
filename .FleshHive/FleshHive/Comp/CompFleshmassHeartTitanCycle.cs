@@ -17,6 +17,21 @@ public class CompFleshmassHeartTitanCycle : CompFleshmassHeart
         Scribe_Values.Look(ref consecutiveFailedGrowths, "consecutiveFailedGrowths", 0);
     }
 
+    public override void PostDestroy(DestroyMode mode, Map previousMap)
+    {
+        base.PostDestroy(mode, previousMap);
+        if (mode != DestroyMode.KillFinalize)
+        {
+            return;
+        }
+
+        foreach (UnitGroup group in GameComponent_UnitGroup.Instance.groups
+                     .Where(group => group.hive == parent).ToList())
+        {
+            group.Destroy();
+        }
+    }
+
     public override void CompTick()
     {
         base.CompTick();

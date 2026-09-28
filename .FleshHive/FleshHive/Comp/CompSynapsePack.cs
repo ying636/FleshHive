@@ -6,7 +6,7 @@ using Verse;
 
 namespace FleshHive;
 
-public class CompSynapsePack : CompPawnResourceContainer
+public class CompSynapsePack : ThingComp
 {
     public CompProperties_SynapsePack Props => (CompProperties_SynapsePack)props;
 
@@ -14,21 +14,7 @@ public class CompSynapsePack : CompPawnResourceContainer
 
     public int MaxTwistedFlesh => Mathf.Max(0, Props.capacity);
 
-    public int NeededAmount => Mathf.Max(0, Mathf.RoundToInt(MaxTwistedFlesh * targetValue) - currentTwistedFlesh);
-
-    public bool AllowAutoRefillTwistedFlesh => allowAutoRefillTwistedFlesh;
-
-    public override IEnumerable<HiveResourceDef> ResourceDefs
-    {
-        get
-        {
-            yield return FleshHiveDefOf.FH_Resource_TwistedFlesh;
-        }
-    }
-
-    public override HiveResourceDef PrimaryResourceDef => FleshHiveDefOf.FH_Resource_TwistedFlesh;
-
-    public static CompSynapsePack? GetWorn(Pawn pawn)
+    public static CompSynapsePack? GetWorn(Pawn? pawn)
     {
         if (pawn?.apparel == null)
         {
@@ -46,76 +32,16 @@ public class CompSynapsePack : CompPawnResourceContainer
         return null;
     }
 
-    public override bool HasResource(HiveResourceDef resourceDef)
-    {
-        return resourceDef != null && resourceDef == FleshHiveDefOf.FH_Resource_TwistedFlesh;
-    }
-
-    public override float GetAmount(HiveResourceDef resourceDef)
-    {
-        return HasResource(resourceDef) ? currentTwistedFlesh : 0f;
-    }
-
-    public override void SetAmount(HiveResourceDef resourceDef, float amount)
-    {
-        if (HasResource(resourceDef))
-        {
-            currentTwistedFlesh = Mathf.Clamp(Mathf.RoundToInt(amount), 0, MaxTwistedFlesh);
-        }
-    }
-
-    public override float GetLimit(HiveResourceDef resourceDef)
-    {
-        return HasResource(resourceDef) ? MaxTwistedFlesh : 0f;
-    }
-
-    public override float GetTargetValue(HiveResourceDef resourceDef)
-    {
-        return HasResource(resourceDef) ? targetValue : 0f;
-    }
-
-    public override void SetTargetValue(HiveResourceDef resourceDef, float value)
-    {
-        if (HasResource(resourceDef))
-        {
-            targetValue = Mathf.Clamp01(value);
-        }
-    }
-
-    public override bool GetAllowedToFill(HiveResourceDef resourceDef)
-    {
-        return HasResource(resourceDef) && allowAutoRefillTwistedFlesh;
-    }
-
-    public override void SetAllowedToFill(HiveResourceDef resourceDef, bool allowedToFill)
-    {
-        if (HasResource(resourceDef))
-        {
-            allowAutoRefillTwistedFlesh = allowedToFill;
-        }
-    }
-
-    public bool ConsumeTwistedFlesh(int amount)
-    {
-        if (amount < 0 || currentTwistedFlesh < amount)
-        {
-            return false;
-        }
-
-        currentTwistedFlesh -= amount;
-        return true;
-    }
-
-    public int FillTwistedFlesh(int amount)
-    {
-        int accepted = Mathf.Clamp(amount, 0, MaxTwistedFlesh - currentTwistedFlesh);
-        currentTwistedFlesh += accepted;
-        return accepted;
-    }
-
     public override void Notify_Equipped(Pawn pawn)
     {
         base.Notify_Equipped(pawn);
+        ParasitismSystem? system = EnsureSystem(pawn);
+        if (system != null)
+        {
+            system.SetDirty();
+            capacityDirty = false;
+            TransferStoredTwistedFlesh(pawn, system);
+        }
         EnsureNode(pawn);
         pawn.Map?.GetComponent<MapComponent_FleshHive>()?.RegisterTwistedFlesh(pawn);
     }
@@ -123,7 +49,25 @@ public class CompSynapsePack : CompPawnResourceContainer
     public override void Notify_Unequipped(Pawn pawn)
     {
         base.Notify_Unequipped(pawn);
+        ParasitismSystem? system = pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem)
+            as ParasitismSystem;
+        if (system != null)
+        {
+            StoreTwistedFlesh(pawn, system);
+        }
+        else
+        {
+            Log.Error("[FleshHive] Could not find the twisted flesh system when removing FH_SynapsePack from " + pawn + ".");
+        }
         RemoveNode(pawn);
+        system?.SetDirty();
+        if (createdSystem && system != null && system.ParasitismHediffs.Count == 0
+            && pawn.health?.hediffSet?.HasHediff(FleshHiveDefOf.FH_Hela) != true)
+        {
+            pawn.health?.RemoveHediff(system);
+        }
+        createdSystem = false;
+        capacityDirty = true;
         MapComponent_FleshHive? mapComponent = pawn.Map?.GetComponent<MapComponent_FleshHive>();
         mapComponent?.UnregisterTwistedFlesh(pawn);
         if (pawn.TryGetComp<CompTwistedFlesh>()?.MaxTwistedFlesh > 0
@@ -140,6 +84,16 @@ public class CompSynapsePack : CompPawnResourceContainer
         Pawn? pawn = (parent as Apparel)?.Wearer;
         if (pawn != null && !pawn.Dead && pawn.IsHashIntervalTick(250))
         {
+            ParasitismSystem? system = EnsureSystem(pawn);
+            if (system != null)
+            {
+                if (capacityDirty)
+                {
+                    system.SetDirty();
+                    capacityDirty = false;
+                }
+                TransferStoredTwistedFlesh(pawn, system);
+            }
             EnsureNode(pawn);
             pawn.Map?.GetComponent<MapComponent_FleshHive>()?.RegisterTwistedFlesh(pawn);
         }
@@ -149,20 +103,87 @@ public class CompSynapsePack : CompPawnResourceContainer
     {
         base.PostExposeData();
         Scribe_Values.Look(ref currentTwistedFlesh, "synapsePackTwistedFlesh");
-        Scribe_Values.Look(ref targetValue, "synapsePackTargetValue", 1f);
-        Scribe_Values.Look(ref allowAutoRefillTwistedFlesh, "synapsePackAutoRefill", true);
+        Scribe_Values.Look(ref createdSystem, "synapsePackCreatedSystem");
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
             currentTwistedFlesh = Mathf.Clamp(currentTwistedFlesh, 0, MaxTwistedFlesh);
-            targetValue = Mathf.Clamp01(targetValue);
+            capacityDirty = true;
         }
     }
 
-    public override IEnumerable<Gizmo> CompGetWornGizmosExtra()
+    private ParasitismSystem? EnsureSystem(Pawn pawn)
     {
-        if ((parent as Apparel)?.Wearer?.Faction?.IsPlayer == true)
+        if (pawn.health?.hediffSet?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem)
+            is ParasitismSystem system)
         {
-            yield return new Gizmo_ResourceForUnitSlider(this, FleshHiveDefOf.FH_Resource_TwistedFlesh);
+            return system;
+        }
+
+        ParasitismSystem? addedSystem = pawn.health?.AddHediff(FleshHiveDefOf.FH_ParasitismSystem)
+            as ParasitismSystem;
+        if (addedSystem == null)
+        {
+            Log.Error("[FleshHive] Could not add the twisted flesh system to " + pawn + " for FH_SynapsePack.");
+            return null;
+        }
+
+        createdSystem = true;
+        capacityDirty = true;
+        return addedSystem;
+    }
+
+    private void TransferStoredTwistedFlesh(Pawn pawn, ParasitismSystem system)
+    {
+        if (currentTwistedFlesh <= 0)
+        {
+            return;
+        }
+
+        CompTwistedFlesh? comp = pawn.TryGetComp<CompTwistedFlesh>();
+        int before = comp != null ? Mathf.FloorToInt(comp.CurrentTwistedFlesh) : system.CurrentTwistedFlesh;
+        if (comp != null)
+        {
+            comp.FillTwistedFlesh(currentTwistedFlesh);
+        }
+        else
+        {
+            system.FillTwistedFlesh(currentTwistedFlesh);
+        }
+
+        int after = comp != null ? Mathf.FloorToInt(comp.CurrentTwistedFlesh) : system.CurrentTwistedFlesh;
+        currentTwistedFlesh -= Mathf.Clamp(after - before, 0, currentTwistedFlesh);
+        if (currentTwistedFlesh > 0)
+        {
+            Log.ErrorOnce("[FleshHive] Could not transfer all stored twisted flesh from " + parent + " to " + pawn + ".",
+                parent.thingIDNumber);
+        }
+    }
+
+    private void StoreTwistedFlesh(Pawn pawn, ParasitismSystem system)
+    {
+        int available = MaxTwistedFlesh - currentTwistedFlesh;
+        if (available <= 0)
+        {
+            return;
+        }
+
+        CompTwistedFlesh? comp = pawn.TryGetComp<CompTwistedFlesh>();
+        int storedByPawn = comp != null ? Mathf.FloorToInt(comp.CurrentTwistedFlesh) : system.CurrentTwistedFlesh;
+        int capacityWithoutPack = (comp?.BaseMaxTwistedFlesh ?? 0) + system.IntrinsicTwistedFleshCapacity;
+        int amount = Mathf.Min(available, Mathf.Max(0, storedByPawn - capacityWithoutPack));
+        if (amount <= 0)
+        {
+            return;
+        }
+
+        bool consumed = comp != null ? comp.ConsumeTwistedFlesh(amount) : system.ConsumeTwistedFlesh(amount);
+        if (consumed)
+        {
+            currentTwistedFlesh += amount;
+        }
+        else
+        {
+            Log.Error("[FleshHive] Could not store twisted flesh in " + parent + " while removing it from " + pawn + ".");
         }
     }
 
@@ -219,8 +240,6 @@ public class CompSynapsePack : CompPawnResourceContainer
     }
 
     private int currentTwistedFlesh;
-
-    private float targetValue = 1f;
-
-    private bool allowAutoRefillTwistedFlesh = true;
+    private bool createdSystem;
+    private bool capacityDirty = true;
 }
