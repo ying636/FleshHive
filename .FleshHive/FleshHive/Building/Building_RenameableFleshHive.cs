@@ -48,6 +48,23 @@ public class Building_RenameableFleshHive : Building_Hive, IRenameable
         base.DeSpawn(mode);
     }
 
+    public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+    {
+        Map map = Map;
+        bool spawned = Spawned;
+        base.Destroy(mode);
+        if (mode != DestroyMode.Deconstruct || !spawned || !Destroyed)
+        {
+            return;
+        }
+
+        Thing seed = ThingMaker.MakeThing(FleshHiveDefOf.FH_DreadmeldSeed);
+        if (!GenPlace.TryPlaceThing(seed, Position, map, ThingPlaceMode.Near))
+        {
+            Log.Error($"[FleshHive] Failed to place {seed.def.defName} after deconstructing {def.defName} at {Position}.");
+        }
+    }
+
     public override string GetInspectString()
     {
         string inspectString = base.GetInspectString();

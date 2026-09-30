@@ -39,8 +39,10 @@
     <blockWind>true</blockWind>
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <killedLeavings>
-      <InsectJelly>30</InsectJelly>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
     </killedLeavings>
     <costList>
       <Shard>2</Shard>
@@ -246,8 +248,10 @@
     <blockWind>true</blockWind>
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <killedLeavings>
-      <InsectJelly>30</InsectJelly>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
     </killedLeavings>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />

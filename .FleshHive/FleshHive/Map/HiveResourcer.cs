@@ -174,9 +174,10 @@ public class HiveResourcer : IExposable
             while (remainingCount > 0)
             {
                 Thing thing = ThingMaker.MakeThing(carriedThingDef);
-                thing.stackCount = Mathf.Min(remainingCount, carriedThingDef.stackLimit);
+                int count = Mathf.Min(remainingCount, carriedThingDef.stackLimit);
+                thing.stackCount = count;
                 DropThing(map, dropCell, thing);
-                remainingCount -= thing.stackCount;
+                remainingCount -= count;
             }
         }
 
@@ -300,9 +301,10 @@ public class HiveResourcer : IExposable
         while (remainingCount > 0)
         {
             Thing thing = ThingMaker.MakeThing(carriedResourceDef.thing);
-            thing.stackCount = Mathf.Min(remainingCount, carriedResourceDef.thing.stackLimit);
+            int count = Mathf.Min(remainingCount, carriedResourceDef.thing.stackLimit);
+            thing.stackCount = count;
             DropThing(map, dropCell, thing);
-            remainingCount -= thing.stackCount;
+            remainingCount -= count;
         }
     }
 

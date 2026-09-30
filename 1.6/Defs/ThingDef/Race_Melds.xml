@@ -167,7 +167,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>right bone spike</label>
@@ -178,7 +178,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
@@ -190,7 +190,7 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
     </tools>
   </ThingDef>
@@ -343,6 +343,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>right bone spike</label>
@@ -354,6 +355,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>carapace</label>
@@ -363,6 +365,7 @@
         <power>26</power>
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
@@ -375,6 +378,7 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
     </tools>
   </ThingDef>
@@ -664,7 +668,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>right bone spike</label>
@@ -675,7 +679,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
@@ -687,7 +691,7 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
     </tools>
   </ThingDef>
@@ -951,7 +955,7 @@
         <armorPenetration>1</armorPenetration>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-          <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>right bone spike</label>
@@ -964,12 +968,11 @@
         <armorPenetration>1</armorPenetration>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-          <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
         <capacities>
-          <li>Cut</li>
           <li>Stab</li>
         </capacities>
         <power>42</power>
@@ -978,7 +981,7 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
     </tools>
   </ThingDef>
@@ -1293,7 +1296,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>right bone spike</label>
@@ -1304,7 +1307,7 @@
         <cooldownTime>2</cooldownTime>
         <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
         <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
       <li>
         <label>head</label>
@@ -1316,7 +1319,7 @@
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
         <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
         <chanceFactor>0.2</chanceFactor>
-        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
       </li>
     </tools>
   </ThingDef>

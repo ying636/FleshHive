@@ -3,8 +3,8 @@
 
     <HiveCreatureFramework.HiveResourceDef>
         <defName>FH_Resource_Nutrition</defName>
-        <label>Nurtition</label>
-        <description>Nurtition.</description>
+        <label>Nutrition</label>
+        <description>Nutrition.</description>
         <color>(0.55, 0.28, 0.25)</color>
         <graphic>
             <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
