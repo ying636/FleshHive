@@ -693,21 +693,12 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
             return report;
         }
 
-        CompHiveFormulaSpawner formulaSpawner = spawner.parent.TryGetComp<CompHiveFormulaSpawner>();
-        foreach (ResourceCount cost in formula.cacheCosts)
+        CompHiveFormulaSpawner_FleshTrait formulaSpawner = spawner.parent.TryGetComp<CompHiveFormulaSpawner_FleshTrait>();
+        if (formulaSpawner == null || !formulaSpawner.TryStartFormula(formula, reservedGroup))
         {
-            formulaSpawner.Resource.ConsumeResource(cost);
+            return "FH_Gestation_CustomFormulaInsufficientResources".Translate();
         }
-        formulaSpawner.Resource.ConsumeRequiredItems(formula.cacheRequirements);
-
-        FormulaProgress_FleshTrait progress = new FormulaProgress_FleshTrait
-        {
-            time = formula.unit.spawningDay.RandomInRange * GenDate.TicksPerDay,
-            formula = formula,
-            ReservedGroup = reservedGroup
-        };
-        progress.totalTime = progress.time;
-        formulaSpawner.ProgressHolder.progresses.Add(progress);
+        Progress progress = formulaSpawner.ProgressHolder.progresses.Last();
         spawner.SendProgressAddedMessage(progress);
         return true;
     }

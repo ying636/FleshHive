@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_SpikeLaunch_Toughspike"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>18.9</range>
+        <defaultProjectile>FH_Spike_Toughspike</defaultProjectile>
+        <verbClass>CombatExtended.Verb_AbilityShootCE</verbClass>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Spike_Toughspike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>11</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>16</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_SpikeLaunch_Fingerspike"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>12.9</range>
+        <defaultProjectile>FH_Spike_Fingerspike</defaultProjectile>
+        <verbClass>CombatExtended.Verb_AbilityShootCE</verbClass>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Spike_Fingerspike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>8</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>12</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_SpikeLaunch_Whipspike"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>3.9</range>
+        <defaultProjectile>FH_Spike_Whipspike</defaultProjectile>
+        <minRange>1.9</minRange>
+        <verbClass>FleshHive.CE.Verb_AbilityShootMoveAfterAttackCE</verbClass>
+        <defaultCooldownTime>0.5</defaultCooldownTime>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Spike_Whipspike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>14</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>8</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_SpikeLaunch_Paraspike"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>54.9</range>
+        <defaultProjectile>FH_Projectile_Spike_Paraspike</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <soundCast>Ability_SpineLaunch</soundCast>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <verbClass>FleshHive.CE.Verb_AbilityShootWithEffectsCE</verbClass>
+        <defaultCooldownTime>0.5</defaultCooldownTime>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Projectile_Spike_Paraspike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <speed>88</speed>
+        <damageAmountBase>14</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>16</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_SpikeLaunch_Shatterspike"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>24.9</range>
+        <defaultProjectile>FH_Spike_Shatterspike</defaultProjectile>
+        <burstShotCount>6</burstShotCount>
+        <verbClass>FleshHive.CE.Verb_AbilityShootMoveAfterAttackCE</verbClass>
+        <defaultCooldownTime>0.5</defaultCooldownTime>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Spike_Shatterspike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>14</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>12</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_SpikeLaunch_Synbulb"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>24.9</range>
+        <defaultProjectile>FH_Spike_Shatterspike</defaultProjectile>
+        <burstShotCount>12</burstShotCount>
+        <defaultCooldownTime>0.5</defaultCooldownTime>
+        <verbClass>CombatExtended.Verb_AbilityShootCE</verbClass>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_Acidbulb_Launch"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>61.9</range>
+        <defaultProjectile>FH_Bullet_Shell_ParasitismAcidMortar</defaultProjectile>
+        <defaultCooldownTime>5</defaultCooldownTime>
+        <verbClass>CombatExtended.Verb_AbilityShootCE</verbClass>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>Ability_SpineLaunch</soundCast>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_Parasitism_AcidLaunch"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>39.9</range>
+        <defaultProjectile>FH_Bullet_Shell_AcidSpit</defaultProjectile>
+        <defaultCooldownTime>5</defaultCooldownTime>
+        <verbClass>CombatExtended.Verb_AbilityShootCE</verbClass>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>Ability_SpineLaunch</soundCast>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_Parasitism_AcidMortar"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>61.9</range>
+        <defaultProjectile>FH_Bullet_Shell_ParasitismAcidMortar</defaultProjectile>
+        <defaultCooldownTime>5</defaultCooldownTime>
+        <verbClass>CombatExtended.Verb_AbilityShootCE</verbClass>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>Ability_SpineLaunch</soundCast>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_ParasitismAcidMortar"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>30</damageAmountBase>
+        <useGraphicClass>True</useGraphicClass>
+        <shadowSize>1</shadowSize>
+        <damageDef>AcidBurn</damageDef>
+        <spinRate>20</spinRate>
+        <speed>41</speed>
+        <arcHeightFactor>1</arcHeightFactor>
+        <explosionRadius>1.95</explosionRadius>
+        <flyOverhead>true</flyOverhead>
+        <soundExplode>SpitterSpitLands</soundExplode>
+        <filth>Filth_SpentAcid</filth>
+        <filthCount>1</filthCount>
+        <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+        <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+        <doExplosionVFX>false</doExplosionVFX>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_AcidSpit"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>20</damageAmountBase>
+        <useGraphicClass>True</useGraphicClass>
+        <shadowSize>1</shadowSize>
+        <damageDef>AcidBurn</damageDef>
+        <spinRate>20</spinRate>
+        <speed>41</speed>
+        <arcHeightFactor>1</arcHeightFactor>
+        <explosionRadius>1.95</explosionRadius>
+        <flyOverhead>true</flyOverhead>
+        <soundExplode>SpitterSpitLands</soundExplode>
+        <filth>Filth_SpentAcid</filth>
+        <filthCount>1</filthCount>
+        <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+        <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+        <doExplosionVFX>false</doExplosionVFX>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_Parasitism_AcidSpray"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>18.9</range>
+        <verbClass>Verb_CastAbility</verbClass>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>FH_AcidSpray_Resolve</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[defName="FH_Projectile_Parasitism_AcidSpray"]/projectile/stoppingPower</xpath>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_Spitbulb_Launch"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>75</range>
+        <defaultProjectile>FH_Bullet_Shell_Spit</defaultProjectile>
+        <defaultCooldownTime>5</defaultCooldownTime>
+        <verbClass>FleshHive.CE.Verb_AbilityShootWithEffectsCE</verbClass>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>Ability_SpineLaunch</soundCast>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_Parasitism_FleshMortar"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>75</range>
+        <defaultProjectile>FH_Bullet_Shell_ParasitismSpit</defaultProjectile>
+        <defaultCooldownTime>5</defaultCooldownTime>
+        <verbClass>FleshHive.CE.Verb_AbilityShootWithEffectsCE</verbClass>
+        <warmupTime>0.5</warmupTime>
+        <soundCast>Ability_SpineLaunch</soundCast>
+        <ai_IsWeapon>false</ai_IsWeapon>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_ParasitismSpit"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>102</damageAmountBase>
+        <explosionRadius>2.5</explosionRadius>
+        <useGraphicClass>True</useGraphicClass>
+        <shadowSize>1</shadowSize>
+        <damageDef>Bomb</damageDef>
+        <spinRate>20</spinRate>
+        <speed>41</speed>
+        <arcHeightFactor>1</arcHeightFactor>
+        <flyOverhead>true</flyOverhead>
+        <soundExplode>SpitterSpitLands</soundExplode>
+        <filthCount>1</filthCount>
+        <doExplosionVFX>false</doExplosionVFX>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_Spit"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>102</damageAmountBase>
+        <explosionRadius>2.5</explosionRadius>
+        <useGraphicClass>True</useGraphicClass>
+        <shadowSize>1</shadowSize>
+        <damageDef>Bomb</damageDef>
+        <spinRate>20</spinRate>
+        <speed>41</speed>
+        <arcHeightFactor>1</arcHeightFactor>
+        <flyOverhead>true</flyOverhead>
+        <soundExplode>SpitterSpitLands</soundExplode>
+        <filthCount>1</filthCount>
+        <doExplosionVFX>false</doExplosionVFX>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Proj_CorrosiveFluid_Gutspike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageAmountBase>20</damageAmountBase>
+        <damageDef>AcidBurn</damageDef>
+        <speed>25</speed>
+        <arcHeightFactor>0.4</arcHeightFactor>
+        <armorPenetrationBase>0.8</armorPenetrationBase>
+        <stoppingPower>1</stoppingPower>
+        <shadowSize>0</shadowSize>
+        <filth>Filth_SpentAcid</filth>
+        <filthCount>1</filthCount>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_CorrosiveSpray_Gutspike"]/verbProperties</xpath>
+    <value>
+      <verbProperties Class="CombatExtended.VerbPropertiesCE">
+        <range>24.9</range>
+        <defaultProjectile>FH_Proj_CorrosiveFluid_Gutspike</defaultProjectile>
+        <verbClass>Verb_CastAbility</verbClass>
+        <warmupTime>0.25</warmupTime>
+        <soundCast>AcidSpray_Resolve</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </verbProperties>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Spike_Parasitism_BoneSpike"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>RangedStab</damageDef>
+        <damageAmountBase>8</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>8</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bullet_BoneShard"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>RangedStab</damageDef>
+        <damageAmountBase>18</damageAmountBase>
+        <armorPenetrationSharp>18</armorPenetrationSharp>
+        <armorPenetrationBlunt>20</armorPenetrationBlunt>
+        <armorPenetrationBase>18</armorPenetrationBase>
+        <speed>55</speed>
+        <stoppingPower>3.0</stoppingPower>
+      </projectile>
+    </value>
+  </Operation>
+</Patch>

@@ -54,7 +54,7 @@
     <designationCategory>HCF_Hive</designationCategory>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
-      <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
+      <li Class="FleshHive.CompPropertiesHiveFormulaSpawner_FleshTrait" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
         <transferOnEvolution>false</transferOnEvolution>
         <resources>
@@ -261,7 +261,7 @@
         <knowledgeCategory>Advanced</knowledgeCategory>
         <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
       </li>
-      <li Class="HiveCreatureFramework.CompPropertiesHiveFormulaSpawner" />
+      <li Class="FleshHive.CompPropertiesHiveFormulaSpawner_FleshTrait" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
         <transferOnEvolution>false</transferOnEvolution>
         <resources>

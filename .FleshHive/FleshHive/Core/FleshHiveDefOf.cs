@@ -128,6 +128,7 @@ public static class FleshHiveDefOf
     public static FleshHiveUpgradeDef FH_Upgrade_SelfRepair1;
     public static FleshHiveUpgradeDef FH_Upgrade_SelfRepair2;
     public static FleshHiveUpgradeDef FH_Upgrade_CellDivision;
+    public static FleshHiveUpgradeDef FH_Upgrade_CellDivision2;
     public static FleshHiveUpgradeDef FH_Upgrade_Reactivation;
     public static FleshHiveUpgradeDef FH_Upgrade_Agility;
     public static FleshHiveUpgradeDef FH_Upgrade_BoneSpikePenetration;

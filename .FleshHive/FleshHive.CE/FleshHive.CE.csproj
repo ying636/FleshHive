@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputPath>../../Compatibility/CombatExtended/Assemblies</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
+    <ProjectReference Include="../FleshHive/FleshHive.csproj" Private="false" />
+    <Reference Include="CombatExtended">
+      <HintPath>D:/Game/Steam/steamapps/workshop/content/294100/2890901044/Assemblies/CombatExtended.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="HiveCreatureFramework">
+      <HintPath>D:/Game/Steam/steamapps/common/RimWorld/Mods/巢群生物框架/1.6/Assemblies/net472/HiveCreatureFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

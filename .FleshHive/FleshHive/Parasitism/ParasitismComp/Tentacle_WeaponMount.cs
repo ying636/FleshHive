@@ -128,6 +128,12 @@ public class Tentacle_WeaponMount : Tentacle
         ResetCurrentTarget();
     }
 
+    protected virtual bool PerformMeleeAttack(Verb_MeleeAttack verb, LocalTargetInfo target)
+    {
+        ApplyMeleeDamageDelegate(verb, target);
+        return true;
+    }
+
     private void FindAttackTargetAndAttack()
     {
         Pawn pawn = Comp?.Pawn;
@@ -299,7 +305,12 @@ public class Tentacle_WeaponMount : Tentacle
             return false;
         }
 
-        ApplyMeleeDamageDelegate(meleeVerb, target);
+        currentTargetField.SetValue(verb, target);
+        if (!PerformMeleeAttack(meleeVerb, target))
+        {
+            ResetCurrentTarget();
+            return false;
+        }
         pawn.Notify_UsedVerb(pawn, verb);
         pawn.health?.Notify_UsedVerb(verb, target);
         verb.EquipmentSource?.Notify_UsedWeapon(pawn);

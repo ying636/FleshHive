@@ -22,7 +22,8 @@ public class HediffComp_FleshUpgradeReactivation : HediffComp
     public override void Notify_PawnDied(DamageInfo? dinfo, Hediff? culprit = null)
     {
         base.Notify_PawnDied(dinfo, culprit);
-        if (Pawn.Faction != Faction.OfPlayer || Pawn.MapHeld == null || !Rand.Chance(Props.chance))
+        Map map = Pawn.MapHeld;
+        if (Pawn.Faction != Faction.OfPlayer || map == null || !Rand.Chance(Props.chance))
         {
             return;
         }
@@ -33,12 +34,17 @@ public class HediffComp_FleshUpgradeReactivation : HediffComp
             return;
         }
 
-        Pawn spawnedPawn = PawnGenerator.GeneratePawn(Props.spawnKind, Faction.OfPlayer);
-        if (spawnedPawn.Faction == Faction.OfPlayer && spawnedPawn.playerSettings != null
-            && !HiveCreatureFramework.HCFGameUtility.IsNodeUnit(spawnedPawn))
+        Pawn spawnedPawn = FleshHiveFleshbeastSpawnUtility.GeneratePawn(Props.spawnKind, Faction.OfPlayer);
+        GenSpawn.Spawn(spawnedPawn, Pawn.PositionHeld, map);
+        MapComponent_FleshHive mapComp = map.GetComponent<MapComponent_FleshHive>();
+        if (mapComp?.group is UnitGroup_TemporaryFleshHive group)
         {
-            spawnedPawn.playerSettings.medCare = RimWorld.MedicalCareCategory.NoCare;
+            group.AcceptUnit(spawnedPawn);
         }
-        GenSpawn.Spawn(spawnedPawn, Pawn.PositionHeld, Pawn.MapHeld);
+        else
+        {
+            Log.Error($"[FleshHive] Cannot assign reactivated {spawnedPawn.def.defName} to the temporary fleshbeast group.");
+        }
+        mapComp?.GrantFleshBeastUpgradeHediffs(spawnedPawn);
     }
 }

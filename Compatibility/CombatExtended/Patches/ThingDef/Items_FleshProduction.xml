@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_FleshCarapace"]/statBases</xpath>
+    <value>
+      <Bulk>0.04</Bulk>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_FleshCarapace"]/statBases/StuffPower_Armor_Sharp</xpath>
+    <value>
+      <StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_FleshCarapace"]/statBases/StuffPower_Armor_Blunt</xpath>
+    <value>
+      <StuffPower_Armor_Blunt>0.8</StuffPower_Armor_Blunt>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_FleshCarapace"]/statBases/StuffPower_Armor_Heat</xpath>
+    <value>
+      <StuffPower_Armor_Heat>0.015</StuffPower_Armor_Heat>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_FleshCarapace"]/stuffProps/statFactors</xpath>
+    <value>
+      <Mass>0.85</Mass>
+      <MeleePenetrationFactor>1.0</MeleePenetrationFactor>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_DreadmeldSeed" or defName="FH_NexusmeldSeed" or defName="FH_FuriousmeldSeed" or defName="FH_FissionmeldSeed" or defName="FH_BastionmeldSeed"]/statBases</xpath>
+    <value>
+      <Bulk>10</Bulk>
+    </value>
+  </Operation>
+</Patch>

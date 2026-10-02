@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Projectile_FleshmassSpitterCE</defName>
+    <label>acid spit</label>
+    <graphicData>
+      <graphicClass>Graphic_Single_AgeSecs</graphicClass>
+      <texPath>Things/Projectile/FleshmassSpitterProjectileSheet</texPath>
+      <drawSize>(.75, .75)</drawSize>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <useGraphicClass>True</useGraphicClass>
+      <shadowSize>1</shadowSize>
+      <damageDef>AcidBurn</damageDef>
+      <spinRate>20</spinRate>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>41</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>SpitterSpitLands</soundExplode>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+      <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+      <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+      <doExplosionVFX>false</doExplosionVFX>
+    </projectile>
+    <comps>
+      <li Class="FleshHive.CE.CompProperties_ProjectileEffecterCE">
+        <effecterDef>Shell_AcidSpitStream</effecterDef>
+      </li>
+      <li Class="FleshHive.CE.CompProperties_ProjectileEffecterCE">
+        <effecterDef>Shell_AcidSpitLaunched</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Projectile_TrackingBeamCE</defName>
+    <label>Beam Incinerator Cannon</label>
+    <thingClass>FleshHive.CE.Projectile_TrackingBeamCE</thingClass>
+    <isSaveable>false</isSaveable>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Beam</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>100</speed>
+      <armorPenetrationBlunt>1.25</armorPenetrationBlunt>
+      <armorPenetrationSharp>1.25</armorPenetrationSharp>
+      <suppressionFactor>0</suppressionFactor>
+    </projectile>
+  </ThingDef>
+</Defs>

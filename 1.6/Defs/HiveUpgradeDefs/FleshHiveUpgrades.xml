@@ -77,11 +77,22 @@
   </FleshHive.FleshHiveUpgradeDef>
   <FleshHive.FleshHiveUpgradeDef>
     <defName>FH_Upgrade_CellDivision</defName>
-    <label>efficient cell division</label>
-    <description>Flesh hives produce fleshbeasts at 150% speed on this map.</description>
+    <label>efficient cell division I</label>
+    <description>Flesh hives produce fleshbeasts 50% faster.</description>
+    <effect>CellDivision</effect>
+    <effectValue>0.5</effectValue>
+    <nutritionCost>75</nutritionCost>
+    <nerveFleshCost>3</nerveFleshCost>
+    <processingTicks>240000</processingTicks>
+  </FleshHive.FleshHiveUpgradeDef>
+  <FleshHive.FleshHiveUpgradeDef>
+    <defName>FH_Upgrade_CellDivision2</defName>
+    <label>efficient cell division II</label>
+    <description>Flesh hives produce fleshbeasts another 50% faster.</description>
     <effect>CellDivision</effect>
     <effectValue>0.5</effectValue>
     <requiresPrimaryNest>true</requiresPrimaryNest>
+    <prerequisites><li>FH_Upgrade_CellDivision</li></prerequisites>
     <nutritionCost>120</nutritionCost>
     <nerveFleshCost>5</nerveFleshCost>
     <processingTicks>360000</processingTicks>

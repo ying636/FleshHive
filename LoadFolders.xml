@@ -7,5 +7,6 @@
     <li IfModActiveAll="sarg.alphabiomes,Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Anomaly">Compatibility/AlphaBiomes</li>
     <li IfModActive="FrozenSnowFox.ComplexJobs">Compatibility/ComplexJobs</li>
     <li IfModActive="FB.DemobRoka">Compatibility/FleshbeastColony</li>
+    <li IfModActive="CETeam.CombatExtended">Compatibility/CombatExtended</li>
   </v1.6>
 </loadFolders>

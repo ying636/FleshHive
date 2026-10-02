@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[
+			defName="FH_FleshPack"
+			]/apparel/bodyPartGroups
+		</xpath>
+    <value>
+      <li>Shoulders</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[
+			defName="FH_FleshPack"
+			]/apparel/layers
+		</xpath>
+    <value>
+      <li>Backpack</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>
+			Defs/ThingDef[
+			defName="FH_FleshPack"
+			]/statBases
+		</xpath>
+    <value>
+      <Bulk>10</Bulk>
+      <WornBulk>2</WornBulk>
+    </value>
+  </Operation>
+</Patch>

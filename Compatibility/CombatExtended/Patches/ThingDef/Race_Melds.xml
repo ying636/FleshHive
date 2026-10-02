@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_Nexusmeld"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Quadruped</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_Nexusmeld"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_Nexusmeld"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Nexusmeld"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.16</MeleeCritChance>
+      <MeleeParryChance>0.64</MeleeParryChance>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Nexusmeld"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left bone spike</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>17.2</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right bone spike</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>17.2</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>8</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>10</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Quadruped</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_Furiousmeld"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.17</MeleeCritChance>
+      <MeleeParryChance>0.66</MeleeParryChance>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>22</ArmorRating_Sharp>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>50</ArmorRating_Blunt>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left bone spike</label>
+          <capacities>
+            <li>Scratch</li>
+          </capacities>
+          <power>48</power>
+          <cooldownTime>2.3</cooldownTime>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>4.3</armorPenetrationSharp>
+          <armorPenetrationBlunt>10.8</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>left bone spike</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>36</power>
+          <cooldownTime>1.8</cooldownTime>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>50</armorPenetrationSharp>
+          <armorPenetrationBlunt>25</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right bone spike</label>
+          <capacities>
+            <li>Scratch</li>
+          </capacities>
+          <power>48</power>
+          <cooldownTime>2.3</cooldownTime>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>4.3</armorPenetrationSharp>
+          <armorPenetrationBlunt>10.8</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right bone spike</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>36</power>
+          <cooldownTime>1.8</cooldownTime>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>50</armorPenetrationSharp>
+          <armorPenetrationBlunt>25</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>27</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Furiousmeld"]/comps</xpath>
+    <value>
+      <li Class="CombatExtended.CompProperties_ArmorDurability">
+        <Durability>4000</Durability>
+        <Regenerates>true</Regenerates>
+        <RegenInterval>1400</RegenInterval>
+        <RegenValue>5</RegenValue>
+        <Repairable>true</Repairable>
+        <RepairIngredients>
+          <Steel>5</Steel>
+          <Bioferrite>5</Bioferrite>
+        </RepairIngredients>
+        <RepairTime>300</RepairTime>
+        <RepairValue>200</RepairValue>
+        <MinArmorPct>0.5</MinArmorPct>
+        <MinArmorValueSharp>13</MinArmorValueSharp>
+        <MinArmorValueBlunt>29</MinArmorValueBlunt>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Quadruped</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_Bastionmeld"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.15</MeleeCritChance>
+      <MeleeParryChance>0.63</MeleeParryChance>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>16</ArmorRating_Sharp>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>38</ArmorRating_Blunt>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left bone spike</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>17.2</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right bone spike</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>17.2</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>8</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>10</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Bastionmeld"]/comps</xpath>
+    <value>
+      <li Class="CombatExtended.CompProperties_ArmorDurability">
+        <Durability>2500</Durability>
+        <Regenerates>true</Regenerates>
+        <RegenInterval>800</RegenInterval>
+        <RegenValue>5</RegenValue>
+        <Repairable>true</Repairable>
+        <RepairIngredients>
+          <Steel>5</Steel>
+          <Bioferrite>5</Bioferrite>
+        </RepairIngredients>
+        <RepairTime>300</RepairTime>
+        <RepairValue>200</RepairValue>
+        <MinArmorPct>0.5</MinArmorPct>
+        <MinArmorValueSharp>10</MinArmorValueSharp>
+        <MinArmorValueBlunt>23</MinArmorValueBlunt>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_FleshDeadguard"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>QuadrupedLow</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_FleshDeadguard"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_FleshDeadguard"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_FleshDeadguard"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.15</MeleeCritChance>
+      <MeleeParryChance>0.63</MeleeParryChance>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_FleshDeadguard"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>spike</label>
+          <labelNoLocation>spike</labelNoLocation>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>6.3</power>
+          <cooldownTime>1.2</cooldownTime>
+          <armorPenetrationBlunt>4</armorPenetrationBlunt>
+          <armorPenetrationSharp>8</armorPenetrationSharp>
+          <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>3</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>0.875</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_Fissionmeld"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Quadruped</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_Fissionmeld"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_Fissionmeld"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Fissionmeld"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.17</MeleeCritChance>
+      <MeleeParryChance>0.66</MeleeParryChance>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Fissionmeld"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left bone spike</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>52</power>
+          <cooldownTime>2.3</cooldownTime>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>4.7</armorPenetrationSharp>
+          <armorPenetrationBlunt>12</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>left bone spike</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>38</power>
+          <cooldownTime>1.8</cooldownTime>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>54</armorPenetrationSharp>
+          <armorPenetrationBlunt>27</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right bone spike</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>52</power>
+          <cooldownTime>2.3</cooldownTime>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>4.7</armorPenetrationSharp>
+          <armorPenetrationBlunt>12</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right bone spike</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>38</power>
+          <cooldownTime>1.8</cooldownTime>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <armorPenetrationSharp>54</armorPenetrationSharp>
+          <armorPenetrationBlunt>27</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>50</power>
+          <cooldownTime>3</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationSharp>54</armorPenetrationSharp>
+          <armorPenetrationBlunt>27</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Quadruped</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_Fleshtitan"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.17</MeleeCritChance>
+      <MeleeParryChance>0.66</MeleeParryChance>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <ShootingAccuracyPawn>1.25</ShootingAccuracyPawn>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>21</ArmorRating_Sharp>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>50</ArmorRating_Blunt>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left arm</label>
+          <labelNoLocation>heavy punch</labelNoLocation>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>36</power>
+          <cooldownTime>2.3</cooldownTime>
+          <linkedBodyPartsGroup>LeftFleshClub</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>100</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right arm</label>
+          <labelNoLocation>heavy punch</labelNoLocation>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>36</power>
+          <cooldownTime>2.3</cooldownTime>
+          <linkedBodyPartsGroup>RightFleshClub</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>100</armorPenetrationBlunt>
+          <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>27</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>29</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Fleshtitan"]/comps</xpath>
+    <value>
+      <li Class="CombatExtended.CompProperties_ArmorDurability">
+        <Durability>3000</Durability>
+        <Regenerates>true</Regenerates>
+        <RegenInterval>1100</RegenInterval>
+        <RegenValue>5</RegenValue>
+        <Repairable>true</Repairable>
+        <RepairIngredients>
+          <Steel>5</Steel>
+          <Bioferrite>5</Bioferrite>
+        </RepairIngredients>
+        <RepairTime>300</RepairTime>
+        <RepairValue>200</RepairValue>
+        <MinArmorPct>0.5</MinArmorPct>
+        <MinArmorValueSharp>13</MinArmorValueSharp>
+        <MinArmorValueBlunt>29</MinArmorValueBlunt>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FH_Dreadmeld"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Quadruped</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="FH_Dreadmeld"]/statBases</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="FH_Dreadmeld"]</xpath>
+      <value>
+        <statBases />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Dreadmeld"]/statBases</xpath>
+    <value>
+      <MeleeDodgeChance>0.02</MeleeDodgeChance>
+      <MeleeCritChance>0.16</MeleeCritChance>
+      <MeleeParryChance>0.64</MeleeParryChance>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Dreadmeld"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left spike</label>
+          <labelNoLocation>spike</labelNoLocation>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>17.2</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right spike</label>
+          <labelNoLocation>spike</labelNoLocation>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>17.2</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>15</armorPenetrationBlunt>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>head</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>8</power>
+          <cooldownTime>2</cooldownTime>
+          <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>10</armorPenetrationBlunt>
+          <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+          <chanceFactor>0.2</chanceFactor>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+</Patch>

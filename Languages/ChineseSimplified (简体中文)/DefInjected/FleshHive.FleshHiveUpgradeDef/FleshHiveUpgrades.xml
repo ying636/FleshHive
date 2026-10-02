@@ -15,10 +15,12 @@
   <!-- EN: Player fleshbeasts gain +80% melee armor penetration. -->
   <FH_Upgrade_BoneSpikePenetration.description>所有血肉兽获得+80%的近战护甲穿透。</FH_Upgrade_BoneSpikePenetration.description>
   
-  <!-- EN: efficient cell division -->
-  <FH_Upgrade_CellDivision.label>高效细胞分裂</FH_Upgrade_CellDivision.label>
-  <!-- EN: Flesh hives produce fleshbeasts at 150% speed on this map. -->
-  <FH_Upgrade_CellDivision.description>血肉巢穴生产血肉兽的速度变为150%。</FH_Upgrade_CellDivision.description>
+  <!-- EN: efficient cell division I -->
+  <FH_Upgrade_CellDivision.label>高效细胞分裂Ⅰ</FH_Upgrade_CellDivision.label>
+  <!-- EN: Flesh hives produce fleshbeasts 50% faster. -->
+  <FH_Upgrade_CellDivision.description>血肉巢穴生产血肉兽的速度提升50%</FH_Upgrade_CellDivision.description>
+  <FH_Upgrade_CellDivision2.label>高效细胞分裂Ⅱ</FH_Upgrade_CellDivision2.label>
+  <FH_Upgrade_CellDivision2.description>血肉巢穴生产血肉兽的速度再提升50%</FH_Upgrade_CellDivision2.description>
   
   <!-- EN: rapid healing -->
   <FH_Upgrade_FastHealing.label>高速愈合</FH_Upgrade_FastHealing.label>
