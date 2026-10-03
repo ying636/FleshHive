@@ -323,7 +323,7 @@
     <statBases>
       <Mass>1</Mass>
       <WorkToMake>26000</WorkToMake>
-      <MarketValue>600</MarketValue>
+      <MarketValue>200</MarketValue>
     </statBases>
     <thingCategories>
       <li>BodyPartsNatural</li>
