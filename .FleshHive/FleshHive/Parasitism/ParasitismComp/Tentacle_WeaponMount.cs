@@ -57,12 +57,17 @@ public class Tentacle_WeaponMount : Tentacle
         }
 
         EnsureVerbCaster();
+        if (!CanUseMountedWeapon(pawn))
+        {
+            ResetCurrentTarget();
+            return;
+        }
         CompEquippable equippable = mountedWeapon.GetComp<CompEquippable>();
         foreach (Verb verb in equippable.AllVerbs)
         {
             verb.VerbTick();
         }
-        if (!AutoAttackEnabled)
+        if (!AutoAttackEnabled || !CanUseMountedWeapon(pawn))
         {
             ResetCurrentTarget();
             return;
@@ -132,6 +137,17 @@ public class Tentacle_WeaponMount : Tentacle
     {
         ApplyMeleeDamageDelegate(verb, target);
         return true;
+    }
+
+    protected virtual bool CanUseMountedWeapon(Pawn pawn)
+    {
+        return pawn.Spawned && !pawn.Dead && !pawn.Downed && pawn.Awake()
+               && !pawn.stances.stunner.Stunned;
+    }
+
+    protected virtual void CompleteMountedWarmup(Verb verb)
+    {
+        verb.WarmupComplete();
     }
 
     private void FindAttackTargetAndAttack()
@@ -290,7 +306,7 @@ public class Tentacle_WeaponMount : Tentacle
         nonInterruptingSelfCastField.SetValue(verb, true);
         currentTargetField.SetValue(verb, target);
         currentDestinationField.SetValue(verb, LocalTargetInfo.Invalid);
-        verb.WarmupComplete();
+        CompleteMountedWarmup(verb);
         return true;
     }
 

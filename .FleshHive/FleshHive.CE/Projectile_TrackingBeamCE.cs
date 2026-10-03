@@ -12,6 +12,8 @@ public class Projectile_TrackingBeamCE : ProjectileCE
 
     public Thing? HitThing { get; private set; }
 
+    public bool Intercepted { get; private set; }
+
     public Vector3 Trace(Thing source, Vector3 start, Vector3 end, LocalTargetInfo target)
     {
         launcher = source;
@@ -30,6 +32,7 @@ public class Projectile_TrackingBeamCE : ProjectileCE
             FlightTicks++;
             if (CheckForCollisionBetween())
             {
+                Intercepted = Destroyed || HitThing == null;
                 break;
             }
         }

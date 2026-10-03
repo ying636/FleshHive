@@ -72,10 +72,10 @@
     <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
     <thing>FH_NerveFlesh</thing>
     <stackCountRange>1~1</stackCountRange>
-    <spawningDay>0.166667~0.166667</spawningDay>
+    <spawningDay>0.25~0.25</spawningDay>
     <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
     <costs>
-      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
     </costs>
   </HiveCreatureFramework.ItemDef>
 

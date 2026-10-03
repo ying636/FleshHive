@@ -26,10 +26,6 @@ public class UnitTurret_PlayerEmptyWeaponMountCE : UnitTurret_PlayerEmptyWeaponM
         CompAmmoUser? ammo = MountedWeapon?.TryGetComp<CompAmmoUser>();
         if (ammo != null)
         {
-            foreach (Gizmo gizmo in ammo.CompGetGizmosExtra())
-            {
-                yield return gizmo;
-            }
             if (Thing is Pawn pawn && pawn.Faction == Faction.OfPlayer
                 && !pawn.IsColonistPlayerControlled && !pawn.IsColonyMech)
             {

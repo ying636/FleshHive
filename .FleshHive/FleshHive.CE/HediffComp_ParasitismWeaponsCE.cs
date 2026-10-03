@@ -20,6 +20,10 @@ public class HediffComp_ParasitismWeaponsCE : HediffComp_ParasitismWeaponMounts
             {
                 foreach (Gizmo gizmo in ammo.CompGetGizmosExtra())
                 {
+                    if (gizmo is Command_Reload reload && mount is Tentacle_WeaponMountCE ceMount)
+                    {
+                        reload.action = ceMount.TryStartReload;
+                    }
                     yield return gizmo;
                 }
                 if (Pawn.Faction == Faction.OfPlayer && !Pawn.IsColonistPlayerControlled && !Pawn.IsColonyMech)
@@ -28,7 +32,7 @@ public class HediffComp_ParasitismWeaponsCE : HediffComp_ParasitismWeaponMounts
                     yield return new Command_Reload
                     {
                         compAmmo = ammo,
-                        action = ammo.TryStartReload,
+                        action = mount is Tentacle_WeaponMountCE ceMount ? ceMount.TryStartReload : ammo.TryStartReload,
                         defaultLabel = ammo.HasMagazine ? "CE_ReloadLabel".Translate() : "",
                         defaultDesc = "CE_ReloadDesc".Translate(),
                         icon = ammo.CurrentAmmo == null ? ContentFinder<Texture2D>.Get("UI/Buttons/Reload") : ammo.SelectedAmmo.IconTexture(),

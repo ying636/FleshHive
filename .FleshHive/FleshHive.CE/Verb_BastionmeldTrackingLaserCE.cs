@@ -47,7 +47,10 @@ public class Verb_BastionmeldTrackingLaserCE : Verb_BastionmeldTrackingLaser
             float traceLength = Vector3.Distance(start.Yto0(), end.Yto0());
             clippedLength = traceLength < fullLength - 0.01f ? traceLength : float.PositiveInfinity;
             mote.ClipEnd(end.Yto0());
-            ApplyBeamDamage(projectile, start.Yto0(), end.Yto0(), map);
+            if (!projectile.Intercepted)
+            {
+                ApplyBeamDamage(projectile, start.Yto0(), end.Yto0(), map);
+            }
         }
         finally
         {
