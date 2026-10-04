@@ -20,6 +20,7 @@ public class HediffComp_GrantLinkedHediff : HediffComp
     public override void CompPostPostAdd(DamageInfo? dinfo)
     {
         base.CompPostPostAdd(dinfo);
+        grantedByThisComp = false;
         if (this.Props.hediff == null || this.Pawn.health.hediffSet.HasHediff(this.Props.hediff))
         {
             return;

@@ -36,16 +36,8 @@ public class CompFleshPack : ThingComp
         int limit = system.Limit;
         while (system.Count > limit)
         {
-            ParasitismHediff hediff = system.ParasitismHediffs.Last();
-            if (hediff.flesh != null)
-            {
-                GenSpawn.Spawn(hediff.flesh, pawn.Position, pawn.Map);
-            }
-
-            hediff.flesh = null;
-            pawn.health.RemoveHediff(hediff);
-            system.ParasitismHediffs.Remove(hediff);
-            system.SetDirty();
+            ParasitismHediff hediff = system.ParasitismHediffs.Last(parasite => parasite.parentParasite == null);
+            system.RemoveFlesh(hediff, pawn);
         }
     }
 }

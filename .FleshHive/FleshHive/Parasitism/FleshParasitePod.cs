@@ -312,7 +312,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         string reason = null;
         if (canQueueBase || canStartBase)
         {
-            int need = comp.Props.cost;
+            int need = comp.TotalCost;
             int capacity = 0;
             if (this.system == null)
             {
@@ -322,7 +322,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             {
                 capacity = this.system.Limit - this.system.Count;
             }
-            spaceOk = capacity >= need;
+            spaceOk = capacity >= need && (this.system?.ParasitismHediffs.Count ?? 0) + comp.ParasiteCount <= 14;
             if (!spaceOk)
             {
                 reason = "FleshParasitePod_InsufficientCapacity".Translate();   
@@ -517,7 +517,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         float y = rowRect.y;
         foreach (var hd in this.system.ParasitismHediffs)
         {
-            if (hd?.flesh == null) continue;
+            if (hd?.flesh == null || hd.parentParasite != null) continue;
             var comp = hd.flesh.TryGetComp<ParasitismComp>();
             Rect cell = new Rect(x, y, cellW, rowRect.height);
             Rect iconRect = new Rect(cell.x, cell.y, iconSize, iconSize);
@@ -527,7 +527,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
             if (comp != null)
             {
                 Rect costRect = new Rect(iconRect.x, iconRect.yMax + 2f, iconRect.width, 12f);
-                int cost = comp.Props.cost;
+                int cost = hd.Count + this.system.ParasitismHediffs.Where(hediff => hediff.IsAttachedTo(hd)).Sum(hediff => hediff.Count);
                 float blockGap = 2f;
                 float blockSize = 8f;
                 float blocksWidth = cost > 0 ? cost * blockSize + (cost - 1) * blockGap : 0f;
@@ -615,7 +615,7 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         rect.width = 12f;
         rect.height = 12f;
         rect.y += 9f;
-        for (int i = 0; i < comp.Props.cost; i++)
+        for (int i = 0; i < comp.TotalCost; i++)
         {
             Widgets.DrawBoxSolid(rect,Color.red);
             Widgets.DrawBox(rect,1,BaseContent.BlackTex);
@@ -626,6 +626,13 @@ public class FleshParasitePod : Building, IThingHolder, IThingHolderWithDrawnPaw
         Rect abilityRect = list.GetRect(72f);
         List<ParasitismDisplayEntry> entries = new List<ParasitismDisplayEntry>();
         AddDefParasitismEntries(entries, comp.Props.hediff, comp);
+        if (fleshUI.health.hediffSet.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) is ParasitismSystem sourceSystem)
+        {
+            foreach (ParasitismHediff attached in sourceSystem.ParasitismHediffs)
+            {
+                AddRuntimeParasitismEntries(entries, attached);
+            }
+        }
         DrawParasitismEntries(abilityRect, entries);
         list.End();
         Text.Font = GameFont.Small;

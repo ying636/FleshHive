@@ -121,6 +121,10 @@ public static class FleshSurvivorHelaGenerator
         }
 
         ThingDef? stuff = stuffDefName.NullOrEmpty() ? null : DefDatabase<ThingDef>.GetNamed(stuffDefName);
+        if (apparelDef.MadeFromStuff && stuff == null)
+        {
+            stuff = GenStuff.DefaultStuffFor(apparelDef);
+        }
         Apparel apparel = (Apparel)ThingMaker.MakeThing(apparelDef, stuff);
         apparel.TryGetComp<CompQuality>()?.SetQuality(quality, null);
         pawn.apparel.Wear(apparel, false);

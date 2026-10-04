@@ -28,4 +28,11 @@ public class ParasitismCompProperties : CompProperties
 public class ParasitismComp : ThingComp
 {
     public ParasitismCompProperties Props => (ParasitismCompProperties)this.props;
+
+    public int TotalCost => Props.cost + (System?.Count ?? 0);
+
+    public int ParasiteCount => 1 + (System?.ParasitismHediffs.Count ?? 0);
+
+    private ParasitismSystem? System => (parent as Pawn)?.health?.hediffSet
+        ?.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
 }

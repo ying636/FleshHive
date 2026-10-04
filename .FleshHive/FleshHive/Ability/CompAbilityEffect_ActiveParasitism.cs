@@ -98,7 +98,8 @@ public class CompAbilityEffect_ActiveParasitism : CompAbilityEffect
         ParasitismSystem? system = host.health.hediffSet.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
         int usedCapacity = system?.Count ?? 0;
         int capacity = system?.Limit ?? Mathf.FloorToInt(host.GetStatValue(FleshHiveDefOf.FH_Stat_ParasitismCapacity));
-        if (system?.ParasitismHediffs.Count >= 14 || capacity - usedCapacity < comp.Props.cost)
+        if ((system?.ParasitismHediffs.Count ?? 0) + comp.ParasiteCount > 14
+            || capacity - usedCapacity < comp.TotalCost)
         {
             reason = "FleshParasitePod_InsufficientCapacity".Translate();
             return false;

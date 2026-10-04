@@ -184,7 +184,7 @@ public class CompTwistedFlesh : CompPawnResourceContainer
 
     public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
-        if (MaxTwistedFlesh > 0 && this.parent.Faction == Faction.OfPlayer)
+        if (MaxTwistedFlesh > 0)
         {
             yield return new Gizmo_TwistedFleshStatus(this);
         }

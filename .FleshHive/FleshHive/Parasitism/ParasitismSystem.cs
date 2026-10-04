@@ -246,7 +246,7 @@ public class ParasitismSystem : HediffWithComps
 
     public bool Parasite(Pawn flesh, bool parentChildParasite = false)
     {
-        if (flesh == null || flesh is FleshReplicaUnit { HasSync: true })
+        if (flesh == null || flesh == this.pawn || flesh is FleshReplicaUnit { HasSync: true })
         {
             return false;
         }
@@ -255,13 +255,16 @@ public class ParasitismSystem : HediffWithComps
         {
             return false;
         }
-        if (this.ParasitismHediffs.Count >= 14)
+        if (this.ParasitismHediffs.Count + comp.ParasiteCount > 14)
         {
             return false;
         }
-        int spaceCost = comp.Props.cost;
-        if (this.Limit - this.Count >= spaceCost)
+        if (this.Limit - this.Count >= comp.TotalCost)
         {
+            ParasitismSystem? sourceSystem = flesh.health.hediffSet
+                .GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem;
+            List<ParasitismHediff> attachedParasites = sourceSystem?.ParasitismHediffs.ToList()
+                ?? new List<ParasitismHediff>();
             bool synchronizeHost = comp.Props.synchronizeHost;
             if (!synchronizeHost && flesh.Spawned)
             {
@@ -273,18 +276,27 @@ public class ParasitismSystem : HediffWithComps
             {
                 return false;
             }
-            hd.spaceCost = spaceCost;
+            hd.spaceCost = comp.Props.cost;
             hd.flesh = flesh;
             hd.lord = this.pawn.GetLord();
             hd.parentChildParasite = parentChildParasite;
-            if (parentChildParasite)
+            if (parentChildParasite || !synchronizeHost)
             {
                 flesh.TryGetComp<UnitComp>()?.group?.RemoveUnit(flesh);
-                if (synchronizeHost)
-                {
-                    flesh.Map?.GetComponent<MapComponent_FleshHive>()?.UnregisterFleshBeast(flesh);
-                }
             }
+            if (parentChildParasite && synchronizeHost)
+            {
+                flesh.Map?.GetComponent<MapComponent_FleshHive>()?.UnregisterFleshBeast(flesh);
+            }
+            foreach (ParasitismHediff attached in attachedParasites)
+            {
+                if (attached.parentParasite == null)
+                {
+                    attached.parentParasite = hd;
+                }
+                TransferParasite(attached, this.pawn);
+            }
+            sourceSystem?.AssignAngle();
             if (synchronizeHost)
             {
                 (flesh as FleshReplicaUnit)?.SyncTo(this.pawn, hd);
@@ -299,6 +311,7 @@ public class ParasitismSystem : HediffWithComps
 
     public void RemoveFlesh(ParasitismHediff hd, Thing pod)
     {
+        RestoreAttachedParasites(hd);
         Pawn flesh = hd.flesh;
         if (flesh != null)
         {
@@ -318,6 +331,37 @@ public class ParasitismSystem : HediffWithComps
         SetDirty();
         this.ParasitismHediffs.Remove(hd);
         AssignAngle();
+    }
+
+    public void RestoreAttachedParasites(ParasitismHediff root)
+    {
+        List<ParasitismHediff> attachedParasites = ParasitismHediffs
+            .Where(hediff => hediff.IsAttachedTo(root)).ToList();
+        if (root.flesh == null)
+        {
+            foreach (ParasitismHediff attached in attachedParasites)
+            {
+                if (attached.parentParasite == root)
+                {
+                    attached.parentParasite = null;
+                }
+            }
+            return;
+        }
+        foreach (ParasitismHediff attached in attachedParasites)
+        {
+            if (attached.parentParasite == root)
+            {
+                attached.parentParasite = null;
+            }
+            TransferParasite(attached, root.flesh);
+        }
+        if (root.flesh.health.hediffSet.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) is ParasitismSystem sourceSystem)
+        {
+            sourceSystem.SetDirty();
+            sourceSystem.AssignAngle();
+        }
+        SetDirty();
     }
 
     public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
@@ -350,7 +394,7 @@ public class ParasitismSystem : HediffWithComps
             return;
         }
         IntVec3 position = this.pawn.PositionHeld;
-        foreach (ParasitismHediff hd in this.ParasitismHediffs.ToList())
+        foreach (ParasitismHediff hd in this.ParasitismHediffs.Where(hediff => hediff.parentParasite == null).ToList())
         {
             ReleaseParasiteOnDeath(hd, position, map);
         }
@@ -364,6 +408,7 @@ public class ParasitismSystem : HediffWithComps
         {
             return;
         }
+        RestoreAttachedParasites(hd);
         Pawn flesh = hd.flesh;
         Lord originalLord = hd.lord;
         hd.lord = null;
@@ -568,6 +613,25 @@ public class ParasitismSystem : HediffWithComps
     public void NotifyAngleAssignmentAfterLoad()
     {
         needAssignAngleAfterLoad = true;
+    }
+
+    private void TransferParasite(ParasitismHediff hediff, Pawn destination)
+    {
+        int ageTicks = hediff.ageTicks;
+        hediff.transferring = true;
+        try
+        {
+            hediff.pawn.health.RemoveHediff(hediff);
+            EnsureAbilityTracker(destination);
+            (destination.health.hediffSet.GetFirstHediffOfDef(FleshHiveDefOf.FH_ParasitismSystem) as ParasitismSystem)?.SetDirty();
+            destination.health.AddHediff(hediff);
+            hediff.ageTicks = ageTicks;
+            (hediff.flesh as FleshReplicaUnit)?.SyncTo(destination, hediff);
+        }
+        finally
+        {
+            hediff.transferring = false;
+        }
     }
 
     private void NotifyRenderTreeChanged()

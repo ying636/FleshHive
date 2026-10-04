@@ -32,7 +32,10 @@ public class HediffComp_ParasitismWeaponMounts : HediffComp_Parasitism
 
     public override void CompPostPostRemoved()
     {
-        DropMountedWeapons();
+        if (!Hediff.transferring)
+        {
+            DropMountedWeapons();
+        }
         base.CompPostPostRemoved();
     }
 
