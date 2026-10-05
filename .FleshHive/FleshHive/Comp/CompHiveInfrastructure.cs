@@ -118,7 +118,8 @@ public class CompHiveNutritionUpkeep : ThingComp
 {
     public float DailyNutritionCost => Props.dailyNutritionCost;
 
-    public float DailyActivityIncrease => Props.activityPerHour * GenDate.TicksPerDay / GenDate.TicksPerHour;
+    public float DailyActivityIncrease => Props.activityPerHour * GenDate.TicksPerDay / GenDate.TicksPerHour
+        * (parent.Map?.GetComponent<MapComponent_FleshHive>()?.InhibitorActivityGrowthFactor ?? 1f);
 
     public bool Hungry => FleshHiveHungerUtility.IsHungry(parent);
 
@@ -186,7 +187,7 @@ public class CompHiveNutritionUpkeep : ThingComp
         MapComponent_FleshHive? mapComp = parent.Map?.GetComponent<MapComponent_FleshHive>();
         if (mapComp != null)
         {
-            mapComp.Activity += Props.activityPerHour;
+            mapComp.Activity += Props.activityPerHour * mapComp.InhibitorActivityGrowthFactor;
         }
     }
 

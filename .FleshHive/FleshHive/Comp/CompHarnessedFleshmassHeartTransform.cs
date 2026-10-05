@@ -91,7 +91,7 @@ public class CompHarnessedFleshmassHeartTransform : ThingComp
         IntVec3 position = parent.Position;
         Faction faction = parent.Faction ?? Faction.OfPlayer;
         Pawn titan = FleshHiveFleshbeastSpawnUtility.GeneratePawn(Props.titanKind, faction);
-        int biosignature = parent.GetComp<CompBiosignatureOwner>()?.biosignature ?? -1;
+        int? biosignature = parent.GetComp<CompBiosignatureOwner>()?.biosignature;
 
         if (consumeNutrition)
         {

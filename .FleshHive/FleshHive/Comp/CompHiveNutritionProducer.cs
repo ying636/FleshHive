@@ -59,7 +59,8 @@ public class CompProperties_HiveNutritionProducer : CompProperties
 
 public class CompHiveNutritionProducer : ThingComp
 {
-    public float DailyActivityIncrease => Props.activityPerHour * GenDate.TicksPerDay / GenDate.TicksPerHour;
+    public float DailyActivityIncrease => Props.activityPerHour * GenDate.TicksPerDay / GenDate.TicksPerHour
+        * (parent.Map?.GetComponent<MapComponent_FleshHive>()?.InhibitorActivityGrowthFactor ?? 1f);
 
     private CompProperties_HiveNutritionProducer Props => (CompProperties_HiveNutritionProducer)props;
 
@@ -126,7 +127,8 @@ public class CompHiveNutritionProducer : ThingComp
             return;
         }
 
-        mapComp.Activity += Props.activityPerHour * Props.intervalTicks / GenDate.TicksPerHour;
+        mapComp.Activity += Props.activityPerHour * Props.intervalTicks / GenDate.TicksPerHour
+            * mapComp.InhibitorActivityGrowthFactor;
     }
 
     private int ticksSinceProduce;

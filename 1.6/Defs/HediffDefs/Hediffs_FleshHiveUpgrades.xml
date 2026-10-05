@@ -138,4 +138,21 @@
       </li>
     </stages>
   </HediffDef>
+  <HediffDef>
+    <defName>FH_Hediff_Upgrade_ToxicResistance</defName>
+    <label>toxic resistance</label>
+    <description>Fleshbeast toxic resistance increases by 50%.</description>
+    <hediffClass>Hediff</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <makesAlert>false</makesAlert>
+    <stages>
+      <li>
+        <statOffsets>
+          <ToxicResistance>0.5</ToxicResistance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
 </Defs>

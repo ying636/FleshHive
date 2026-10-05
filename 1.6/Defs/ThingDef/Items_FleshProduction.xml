@@ -345,6 +345,7 @@
     </graphicData>
     <comps>
       <li Class="CompProperties_UseEffectAddHediff">
+        <compClass>FleshHive.CompUseEffect_FleshAdaptationSerum</compClass>
         <hediffDef>FH_FleshAdaptation</hediffDef>
         <allowRepeatedUse>false</allowRepeatedUse>
       </li>
@@ -371,7 +372,7 @@
     <statBases>
       <Mass>1</Mass>
       <WorkToMake>26000</WorkToMake>
-      <MarketValue>600</MarketValue>
+      <MarketValue>200</MarketValue>
     </statBases>
     <thingCategories>
       <li>BodyPartsNatural</li>

@@ -188,6 +188,8 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>FH_NerveCenter</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ElectricInhibitor</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ShardInhibitor</li>
         </linkableFacilities>
       </li>
       <li Class="FleshHive.CompProperties_Suppressible">
@@ -715,6 +717,8 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>FH_NerveCenter</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ElectricInhibitor</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ShardInhibitor</li>
         </linkableFacilities>
       </li>
       <li Class="FleshHive.CompProperties_Suppressible">

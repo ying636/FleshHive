@@ -36,6 +36,7 @@ public static class FleshHiveDefOf
     public static HediffDef FH_Hediff_Upgrade_FastHealing;
     public static HediffDef FH_Hediff_Upgrade_FleshbeastTaming;
     public static HediffDef FH_Hediff_Upgrade_Robust;
+    public static HediffDef FH_Hediff_Upgrade_ToxicResistance = null!;
 
     public static AbilityDef FH_FleshSpread;
     public static AbilityDef FH_SpikeLaunch_Fingerspike;
@@ -142,6 +143,7 @@ public static class FleshHiveDefOf
     public static FleshHiveUpgradeDef FH_Upgrade_FleshShaping1;
     public static FleshHiveUpgradeDef FH_Upgrade_FleshShaping2;
     public static FleshHiveUpgradeDef FH_Upgrade_Robust;
+    public static FleshHiveUpgradeDef FH_Upgrade_ToxicResistance = null!;
 
     public static HiveBuildingDef FH_Building_FleshBlock;
     public static HiveBuildingDef FH_Building_ChitinFleshBlock;

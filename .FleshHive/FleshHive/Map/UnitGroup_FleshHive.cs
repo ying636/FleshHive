@@ -43,7 +43,10 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
         }
 
         base.AcceptUnit(unit);
-        Map?.GetComponent<MapComponent_FleshHive>()?.EnforceHiveGroupCapacity();
+        if (this is not UnitGroup_TemporaryFleshHive)
+        {
+            Map?.GetComponent<MapComponent_FleshHive>()?.EnforceHiveGroupCapacity();
+        }
     }
 
     public override AcceptReason CanAccept(Pawn unit)

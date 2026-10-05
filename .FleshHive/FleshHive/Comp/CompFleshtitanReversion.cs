@@ -24,6 +24,7 @@ public class CompFleshtitanReversion : ThingComp
         Scribe_Values.Look(ref revertAtTick, "revertAtTick", -1);
         Scribe_Values.Look(ref sourceHeartThreatPoints, "sourceHeartThreatPoints", 0f);
         Scribe_Values.Look(ref sourceHeartBiosignature, "sourceHeartBiosignature", -1);
+        Scribe_Values.Look(ref hasSourceHeartBiosignature, "hasSourceHeartBiosignature");
         Scribe_References.Look(ref escortLord, "escortLord");
         Scribe_References.Look(ref responseLord, "responseLord");
         Scribe_References.Look(ref nativeEscortLord, "nativeEscortLord");
@@ -101,10 +102,11 @@ public class CompFleshtitanReversion : ThingComp
         return "FH_FleshtitanReversionCountdown".Translate(remainingTicks.ToStringTicksToPeriod());
     }
 
-    public void InitializeFromHeart(float heartThreatPoints, Lord? titanEscortLord, int heartBiosignature = -1, Lord? nativeLord = null)
+    public void InitializeFromHeart(float heartThreatPoints, Lord? titanEscortLord, int? heartBiosignature = null, Lord? nativeLord = null)
     {
         sourceHeartThreatPoints = heartThreatPoints;
-        sourceHeartBiosignature = heartBiosignature;
+        hasSourceHeartBiosignature = heartBiosignature.HasValue;
+        sourceHeartBiosignature = heartBiosignature.GetValueOrDefault();
         escortLord = titanEscortLord;
         nativeEscortLord = nativeLord;
         assaultPending = titanEscortLord != null && titanEscortLord.LordJob is not LordJob_HiveGroup;
@@ -328,7 +330,7 @@ public class CompFleshtitanReversion : ThingComp
         IntVec3 position = parent.Position;
         ThingDef heartDef = IsWildTitan ? Props.heartDef : Props.controlledHeartDef;
         Thing heart = ThingMaker.MakeThing(heartDef);
-        if (sourceHeartBiosignature >= 0 && heart is ThingWithComps heartWithComps)
+        if (hasSourceHeartBiosignature && heart is ThingWithComps heartWithComps)
         {
             CompBiosignatureOwner? biosignatureOwner = heartWithComps.GetComp<CompBiosignatureOwner>();
             if (biosignatureOwner != null)
@@ -442,6 +444,7 @@ public class CompFleshtitanReversion : ThingComp
     private float sourceHeartThreatPoints;
 
     private int sourceHeartBiosignature = -1;
+    private bool hasSourceHeartBiosignature;
 
     private Lord? escortLord;
 

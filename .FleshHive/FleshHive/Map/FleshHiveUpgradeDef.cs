@@ -20,7 +20,8 @@ public enum FleshHiveUpgradeEffect
     FleshbeastTaming,
     FleshShaping,
     Robust,
-    HiveCapacity
+    HiveCapacity,
+    ToxicResistance
 }
 
 public class FleshHiveUpgradeDef : Def

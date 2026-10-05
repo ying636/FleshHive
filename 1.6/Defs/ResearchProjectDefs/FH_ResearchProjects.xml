@@ -6,7 +6,7 @@
     <description>Unlocks the basic flesh hive, flesh floors, flesh blocks, flesh doors, flesh vesicles, flesh hoppers, twisted meat production, and cultivation of all small fleshbeasts.</description>
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts>
       <li>Twisted meat</li>
       <li>All small fleshbeasts</li>
@@ -22,7 +22,7 @@
     <description>Unlocks production of flesh lamps, fleshberry bushes, flesh sacks, and flesh power generators.</description>
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>0.00</researchViewY>
@@ -35,7 +35,7 @@
     <description>Unlocks bone-spike spitters, small guard tentacles, and flesh barricades.</description>
     <knowledgeCost>10</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>1.30</researchViewY>
@@ -48,7 +48,7 @@
     <description>Unlocks flesh beds, tables, stools, and support columns.</description>
     <knowledgeCost>5</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>4.90</researchViewY>
@@ -61,7 +61,7 @@
     <description>Unlocks flesh parasite vats and production of flesh adaptation modules and flesh symbiosis modules.</description>
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
     <researchViewX>1.50</researchViewX>
     <researchViewY>3.80</researchViewY>
@@ -74,7 +74,7 @@
     <description>Unlocks nerve bundles, flesh hive upgrades, cultivation of all discovered medium fleshbeast formulas except flesh replicas, and production of bioferrite and nerve flesh.</description>
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts>
       <li>All medium fleshbeasts except flesh replicas</li>
       <li>Bioferrite</li>
@@ -92,7 +92,7 @@
     <description>Allows medium fleshbeast fusion and unlocks production of flesh tentacles, flesh whips, fleshmass stomachs, and fleshmass lungs.</description>
     <knowledgeCost>10</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts>
       <li>Medium fleshbeast fusion</li>
     </customUnlockTexts>
@@ -108,7 +108,7 @@
     <description>Allows cultivation of flesh replicas.</description>
     <knowledgeCost>15</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts><li>Flesh replica cultivation</li></customUnlockTexts>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
     <researchViewX>3.00</researchViewX>
@@ -122,7 +122,7 @@
     <description>Replaces flesh blocks and flesh barricades on all maps with chitin-plated versions and unlocks their construction.</description>
     <knowledgeCost>15</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts>
       <li>Harden all flesh blocks and barricades</li>
     </customUnlockTexts>
@@ -138,7 +138,7 @@
     <description>Unlocks fleshmass spitters, flesh bursters, and guard tentacle centers.</description>
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Basic</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
     <researchViewX>3.00</researchViewX>
     <researchViewY>3.80</researchViewY>
@@ -151,7 +151,7 @@
     <description>Unlocks the nerve center, cultivation of all large fleshbeasts, and evolution into a flesh primary nest.</description>
     <knowledgeCost>20</knowledgeCost>
     <knowledgeCategory>Advanced</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts>
       <li>All large fleshbeasts</li>
       <li>Flesh primary nest evolution</li>
@@ -168,7 +168,7 @@
     <description>Allows large fleshbeast fusion and unlocks production of parasite expansion packs.</description>
     <knowledgeCost>30</knowledgeCost>
     <knowledgeCategory>Advanced</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts>
       <li>Large fleshbeast fusion</li>
     </customUnlockTexts>
@@ -187,7 +187,7 @@
     <description>Allows cultivation of meld beasts.</description>
     <knowledgeCost>45</knowledgeCost>
     <knowledgeCategory>Advanced</knowledgeCategory>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Undefined</techLevel>
     <customUnlockTexts><li>Meld-beast cultivation</li></customUnlockTexts>
     <prerequisites><li>FH_Research_FleshPrimaryHive</li></prerequisites>
     <researchViewX>4.50</researchViewX>

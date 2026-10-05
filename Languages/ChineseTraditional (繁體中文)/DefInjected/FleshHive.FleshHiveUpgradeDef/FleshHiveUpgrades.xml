@@ -102,4 +102,6 @@
   <!-- EN: Auto-repair capacity becomes 400 hit points per hour for 8 nutrition. -->
   <FH_Upgrade_SelfRepair2.description>自動修補速度提高到每小時400點，消耗8營養。</FH_Upgrade_SelfRepair2.description>
 
+  <FH_Upgrade_ToxicResistance.label>毒素抗性</FH_Upgrade_ToxicResistance.label>
+  <FH_Upgrade_ToxicResistance.description>血肉獸毒素抗性+50%。</FH_Upgrade_ToxicResistance.description>
 </LanguageData>

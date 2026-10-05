@@ -326,6 +326,8 @@ public class MapComponent_FleshHive : MapComponent
 
         SetFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_Reactivation,
             HasUpgradeEffect(FleshHiveUpgradeEffect.Reactivation));
+        SetFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_ToxicResistance,
+            HasUpgradeEffect(FleshHiveUpgradeEffect.ToxicResistance));
         SetFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_Agility,
             HasUpgradeEffect(FleshHiveUpgradeEffect.Agility) && FleshBeastKindUtility.IsSmall(pawn.kindDef));
         SetFleshBeastUpgradeHediff(pawn, FleshHiveDefOf.FH_Hediff_Upgrade_BoneSpikePenetration,
@@ -536,7 +538,10 @@ public class MapComponent_FleshHive : MapComponent
     public bool HasPrimaryNest => map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshPrimaryNest)
         .Any(thing => thing.Spawned && thing.Faction == Faction.OfPlayer);
 
-    public float ActivityGrowthFactor => GetUpgradeEffectFactor(FleshHiveUpgradeEffect.NestTaming);
+    public float ActivityGrowthFactor => GetUpgradeEffectFactor(FleshHiveUpgradeEffect.NestTaming)
+        * InhibitorActivityGrowthFactor;
+
+    public float InhibitorActivityGrowthFactor => GetInhibitorActivityGrowthFactor();
 
     public float GetUpgradeEffectValue(FleshHiveUpgradeEffect effect)
     {
@@ -759,7 +764,7 @@ public class MapComponent_FleshHive : MapComponent
 
     public void EnforceHiveGroupCapacity()
     {
-        if (group == null || GameComponent_UnitGroup.Instance == null)
+        if (nutritionClampPending || group == null || GameComponent_UnitGroup.Instance == null)
         {
             return;
         }
@@ -1268,6 +1273,46 @@ public class MapComponent_FleshHive : MapComponent
         {
             MapFleshHive.fullActivityTicks = 0;
         }
+    }
+
+    private float GetInhibitorActivityGrowthFactor()
+    {
+        if (!ModsConfig.AnomalyActive || cachedFleshHives.NullOrEmpty())
+        {
+            return 1f;
+        }
+
+        ThingDef shardInhibitor = DefDatabase<ThingDef>.GetNamed("ShardInhibitor");
+        HashSet<Thing> activeInhibitors = new();
+        foreach (Building_RenameableFleshHive hive in cachedFleshHives)
+        {
+            if (hive.Destroyed || !hive.Spawned || hive.Map != map || hive.Faction != Faction.OfPlayer)
+            {
+                continue;
+            }
+
+            CompAffectedByFacilities? facilities = hive.GetComp<CompAffectedByFacilities>();
+            if (facilities == null)
+            {
+                continue;
+            }
+
+            foreach (Thing facility in facilities.LinkedFacilitiesListForReading)
+            {
+                if ((facility.def == ThingDefOf.ElectricInhibitor || facility.def == shardInhibitor)
+                    && facility.Spawned && facility.Map == map && facilities.IsFacilityActive(facility)
+                    && CompAffectedByFacilities.CanPotentiallyLinkTo_Static(
+                        facility, hive.def, hive.Position, hive.Rotation, map))
+                {
+                    activeInhibitors.Add(facility);
+                }
+            }
+        }
+
+        int shardCount = Mathf.Min(1, activeInhibitors.Count(facility => facility.def == shardInhibitor));
+        int electricCount = Mathf.Min(6 - shardCount,
+            activeInhibitors.Count(facility => facility.def == ThingDefOf.ElectricInhibitor));
+        return 1f - electricCount * 0.05f - shardCount * 0.1f;
     }
 
     private float GetActivityGrowthPerDay()
