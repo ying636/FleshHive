@@ -95,6 +95,7 @@
   <FH_RequireFleshHopper>An available flesh hopper is required.</FH_RequireFleshHopper>
   <FleshHive_SettingsCategory>Flesh Hive</FleshHive_SettingsCategory>
   <FleshHive_RaidParasiteChance>Raid parasite carrier chance: {0}</FleshHive_RaidParasiteChance>
+  <FH_Settings_FleshtitanMetamorphosisTime>Fleshtitan metamorphosis time: {0}</FH_Settings_FleshtitanMetamorphosisTime>
   <FH_Settings_ResearchUnlockGestation>Research unlocks unmodified gestation</FH_Settings_ResearchUnlockGestation>
   <FH_Settings_ResearchUnlockGestationTip>Unlock all unmodified medium fleshbeasts after Flesh Fusion and large fleshbeasts after Complex Flesh Fusion.</FH_Settings_ResearchUnlockGestationTip>
   <HCF_Tag_Flesh>Flesh</HCF_Tag_Flesh>

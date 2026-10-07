@@ -284,7 +284,7 @@
       <ai_chillDestination>false</ai_chillDestination>
     </building>
     <placeWorkers>
-      <li>PlaceWorker_NeverAdjacentTrap</li>
+      <li>FleshHive.PlaceWorker_FleshNeverAdjacentTrap</li>
       <li>PlaceWorker_InvalidOverSubstructure</li>
     </placeWorkers>
     <comps>

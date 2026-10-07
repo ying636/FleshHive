@@ -181,6 +181,7 @@
   <FleshHive_SettingsCategory>血肉巢穴</FleshHive_SettingsCategory>
   <!-- EN: Raid parasite carrier chance: {0} -->
   <FleshHive_RaidParasiteChance>袭击单位携带血肉兽寄生概率：{0}</FleshHive_RaidParasiteChance>
+  <FH_Settings_FleshtitanMetamorphosisTime>血肉泰坦蜕变时间：{0}</FH_Settings_FleshtitanMetamorphosisTime>
   <FH_Settings_ResearchUnlockGestation>研究解锁无特性孕育</FH_Settings_ResearchUnlockGestation>
   <FH_Settings_ResearchUnlockGestationTip>完成血肉融合后解锁所有中型血肉兽的无特性版孕育；完成复杂血肉融合后解锁所有大型血肉兽的无特性版孕育。</FH_Settings_ResearchUnlockGestationTip>
   <!-- EN: Flesh -->

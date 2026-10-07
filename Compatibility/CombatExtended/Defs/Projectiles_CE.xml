@@ -41,6 +41,8 @@
     <label>Beam Incinerator Cannon</label>
     <thingClass>FleshHive.CE.Projectile_TrackingBeamCE</thingClass>
     <isSaveable>false</isSaveable>
+    <drawerType>None</drawerType>
+    <graphicData Inherit="False" IsNull="True" />
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Beam</damageDef>
       <damageAmountBase>20</damageAmountBase>

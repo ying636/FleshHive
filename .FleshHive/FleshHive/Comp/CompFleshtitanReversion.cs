@@ -43,7 +43,7 @@ public class CompFleshtitanReversion : ThingComp
         base.PostSpawnSetup(respawningAfterLoad);
         if (IsTrackedTitan && revertAtTick < 0)
         {
-            revertAtTick = Find.TickManager.TicksGame + Props.revertAfterTicks;
+            revertAtTick = Find.TickManager.TicksGame + FleshHiveMod.Settings.FleshtitanReversionTicks;
         }
     }
 

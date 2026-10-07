@@ -211,7 +211,7 @@
         <speed>41</speed>
         <arcHeightFactor>1</arcHeightFactor>
         <explosionRadius>1.95</explosionRadius>
-        <flyOverhead>true</flyOverhead>
+        <flyOverhead>false</flyOverhead>
         <soundExplode>SpitterSpitLands</soundExplode>
         <filth>Filth_SpentAcid</filth>
         <filthCount>1</filthCount>

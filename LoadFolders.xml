@@ -8,5 +8,6 @@
     <li IfModActive="FrozenSnowFox.ComplexJobs">Compatibility/ComplexJobs</li>
     <li IfModActive="FB.DemobRoka">Compatibility/FleshbeastColony</li>
     <li IfModActive="CETeam.CombatExtended">Compatibility/CombatExtended</li>
+    <li IfModActive="neku.largepawns">Compatibility/LargePawns</li>
   </v1.6>
 </loadFolders>

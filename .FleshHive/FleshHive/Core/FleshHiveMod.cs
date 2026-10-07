@@ -22,6 +22,10 @@ public class FleshHiveMod : Mod
         listing.Begin(inRect);
         listing.Label("FleshHive_RaidParasiteChance".Translate(Settings.raidParasiteChance.ToStringPercent()));
         Settings.raidParasiteChance = listing.Slider(Settings.raidParasiteChance, 0f, 1f);
+        listing.Label(
+            "FH_Settings_FleshtitanMetamorphosisTime".Translate(Settings.FleshtitanReversionTicks.ToStringTicksToPeriod()),
+            tooltip: "FH_FleshtitanReversionCountdown".Translate(Settings.FleshtitanReversionTicks.ToStringTicksToPeriod()));
+        Settings.fleshtitanReversionHours = Mathf.RoundToInt(listing.Slider(Settings.fleshtitanReversionHours, 1f, 240f));
         bool previousDisableTutorial = Settings.disableTutorial;
         bool previousUnlockUnmodifiedFleshbeastsByFusionResearch = Settings.unlockUnmodifiedFleshbeastsByFusionResearch;
         listing.CheckboxLabeled("FH_Tutorial_Disable".Translate(), ref Settings.disableTutorial);
@@ -47,14 +51,22 @@ public class FleshHiveMod : Mod
 
 public class FleshHiveSettings : ModSettings
 {
+    public int FleshtitanReversionTicks => Mathf.Clamp(fleshtitanReversionHours, 1, 240) * GenDate.TicksPerHour;
+
     public override void ExposeData()
     {
         Scribe_Values.Look(ref raidParasiteChance, "raidParasiteChance", 0.6f);
+        Scribe_Values.Look(ref fleshtitanReversionHours, "fleshtitanReversionHours", 10);
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            fleshtitanReversionHours = Mathf.Clamp(fleshtitanReversionHours, 1, 240);
+        }
         Scribe_Values.Look(ref disableTutorial, "disableTutorial", false);
         Scribe_Values.Look(ref unlockUnmodifiedFleshbeastsByFusionResearch, "unlockUnmodifiedFleshbeastsByFusionResearch", false);
     }
 
     public float raidParasiteChance = 0.6f;
+    public int fleshtitanReversionHours = 10;
     public bool disableTutorial;
     public bool unlockUnmodifiedFleshbeastsByFusionResearch;
 }

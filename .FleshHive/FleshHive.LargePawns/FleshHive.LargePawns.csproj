@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <OutputPath>../../Compatibility/LargePawns/Assemblies</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
+    <Reference Include="HiveCreatureFramework">
+      <HintPath>D:/Game/Steam/steamapps/common/RimWorld/Mods/巢群生物框架/1.6/Assemblies/net472/HiveCreatureFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

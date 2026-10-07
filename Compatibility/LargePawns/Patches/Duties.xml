@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/DutyDef[starts-with(defName, "FH_Skill_")]//*[@Class="JobGiver_AIAbilityFight"]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.JobGiver_FleshAbilityFight</value>
+  </Operation>
+</Patch>
