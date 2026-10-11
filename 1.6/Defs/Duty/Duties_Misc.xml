@@ -192,7 +192,8 @@
 
   <DutyDef>
     <defName>FH_Skill_Nexusmeld</defName>
-    <thinkNode Class="ThinkNode_Priority">
+    <thinkNode Class="ThinkNode_ConditionalOfPlayerFaction">
+      <invert>true</invert>
       <subNodes>
         <li Class="JobGiver_AICastAbilityOnSelf">
           <ability>FH_FleshBerserk</ability>

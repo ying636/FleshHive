@@ -6,9 +6,18 @@ namespace FleshHive;
 public class PawnRenderNode_FleshReplicaBody(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
     : PawnRenderNode_Body(pawn, props, tree)
 {
+    public override Mesh GetMesh(PawnDrawParms parms)
+    {
+        if (parms.pawn is FleshReplicaUnit { Host: { } host })
+        {
+            parms.pawn = host;
+        }
+        return base.GetMesh(parms);
+    }
+
     public override GraphicMeshSet MeshSetFor(Pawn pawn)
     {
-        if (pawn is FleshReplicaUnit { Host: { } host })
+        if (tree.pawn is FleshReplicaUnit { Host: { } host })
         {
             return base.MeshSetFor(host);
         }
@@ -33,9 +42,18 @@ public class PawnRenderNode_FleshReplicaBody(Pawn pawn, PawnRenderNodeProperties
 public class PawnRenderNode_FleshReplicaHead(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
     : PawnRenderNode_Head(pawn, props, tree)
 {
+    public override Mesh GetMesh(PawnDrawParms parms)
+    {
+        if (parms.pawn is FleshReplicaUnit { Host: { } host })
+        {
+            parms.pawn = host;
+        }
+        return base.GetMesh(parms);
+    }
+
     public override GraphicMeshSet MeshSetFor(Pawn pawn)
     {
-        return pawn is FleshReplicaUnit { Host: { } host } ? base.MeshSetFor(host) : null;
+        return tree.pawn is FleshReplicaUnit { Host: { } host } ? base.MeshSetFor(host) : null;
     }
 
     public override Graphic GraphicFor(Pawn pawn)
@@ -47,9 +65,18 @@ public class PawnRenderNode_FleshReplicaHead(Pawn pawn, PawnRenderNodeProperties
 public class PawnRenderNode_FleshReplicaHair(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
     : PawnRenderNode_Hair(pawn, props, tree)
 {
+    public override Mesh GetMesh(PawnDrawParms parms)
+    {
+        if (parms.pawn is FleshReplicaUnit { Host: { } host })
+        {
+            parms.pawn = host;
+        }
+        return base.GetMesh(parms);
+    }
+
     public override GraphicMeshSet MeshSetFor(Pawn pawn)
     {
-        return pawn is FleshReplicaUnit { Host: { } host } ? base.MeshSetFor(host) : null;
+        return tree.pawn is FleshReplicaUnit { Host: { } host } ? base.MeshSetFor(host) : null;
     }
 
     public override Graphic GraphicFor(Pawn pawn)
@@ -61,9 +88,18 @@ public class PawnRenderNode_FleshReplicaHair(Pawn pawn, PawnRenderNodeProperties
 public class PawnRenderNode_FleshReplicaBeard(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree)
     : PawnRenderNode_Beard(pawn, props, tree)
 {
+    public override Mesh GetMesh(PawnDrawParms parms)
+    {
+        if (parms.pawn is FleshReplicaUnit { Host: { } host })
+        {
+            parms.pawn = host;
+        }
+        return base.GetMesh(parms);
+    }
+
     public override GraphicMeshSet MeshSetFor(Pawn pawn)
     {
-        return pawn is FleshReplicaUnit { Host: { } host } ? base.MeshSetFor(host) : null;
+        return tree.pawn is FleshReplicaUnit { Host: { } host } ? base.MeshSetFor(host) : null;
     }
 
     public override Graphic GraphicFor(Pawn pawn)

@@ -120,8 +120,8 @@ public class MapComponent_FleshHive : MapComponent
     }
     public float AutoSuppressActivityThreshold
     {
-        get => Mathf.Clamp01(MapFleshHive.autoSuppressActivityThreshold);
-        set => MapFleshHive.autoSuppressActivityThreshold = Mathf.Clamp01(value);
+        get => Mathf.Clamp(MapFleshHive.autoSuppressActivityThreshold, 0.06f, 1f);
+        set => MapFleshHive.autoSuppressActivityThreshold = Mathf.Clamp(value, 0.06f, 1f);
     }
     public bool ShouldAutoSuppressActivity => AutoSuppressActivity && ActivityPercent >= AutoSuppressActivityThreshold;
     public float ActivityLimit => 100f;

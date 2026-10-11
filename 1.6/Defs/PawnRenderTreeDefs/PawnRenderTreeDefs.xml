@@ -217,7 +217,7 @@
         <li>
           <debugLabel>Body</debugLabel>
           <nodeClass>FleshHive.PawnRenderNode_FleshReplicaBody</nodeClass>
-          <workerClass>PawnRenderNodeWorker_Body</workerClass>
+          <workerClass>FleshHive.PawnRenderNodeWorker_FleshReplicaBody</workerClass>
           <tagDef>Body</tagDef>
           <skipFlag>Body</skipFlag>
           <colorType>Skin</colorType>

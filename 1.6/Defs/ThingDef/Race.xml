@@ -1668,7 +1668,7 @@
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>6</dividePawnCount>
+        <dividePawnCount>5</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Toughspike</li>
           <li>FH_Trispike</li>
@@ -1843,7 +1843,7 @@
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
+        <dividePawnCount>3</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Toughspike</li>
           <li>FH_Trispike</li>
@@ -2018,7 +2018,7 @@
       <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
       <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
+        <dividePawnCount>3</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Toughspike</li>
           <li>FH_Trispike</li>
@@ -2189,7 +2189,7 @@
         <baseDamage>50</baseDamage>
         <explosionRadius>4.5</explosionRadius>
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
+        <dividePawnCount>3</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Toughspike</li>
           <li>FH_Trispike</li>
@@ -2329,7 +2329,7 @@
       <deathAction Class="FleshHive.DeathActionProperties_UnitDivideSmoke">
         <smokeRadius>4.9</smokeRadius>
         <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
-        <dividePawnCount>4</dividePawnCount>
+        <dividePawnCount>3</dividePawnCount>
         <dividePawnKindOptions>
           <li>FH_Toughspike</li>
           <li>FH_Trispike</li>
