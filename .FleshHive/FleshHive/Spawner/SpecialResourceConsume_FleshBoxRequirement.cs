@@ -25,14 +25,37 @@ public class SpecialResourceConsume_FleshBoxRequirement : SpecialResourceConsume
             return false;
         }
 
-        List<Thing> storedThings = FleshBoxUtility.GetCachedBoxes(map)
-            .SelectMany(FleshBoxUtility.GetStoredThings)
-            .ToList();
-        foreach (ThingDefCountClass requirement in requirements)
+        if (requirements.Count == 1)
         {
-            int availableCount = storedThings
+            ThingDefCountClass requirement = requirements[0];
+            int availableCount = FleshBoxUtility.GetCachedBoxes(map)
+                .SelectMany(FleshBoxUtility.GetStoredThings)
                 .Where(thing => thing.def == requirement.thingDef)
                 .Sum(thing => thing.stackCount);
+            return availableCount < requirement.count ? "LackRequiredItems".Translate(requirement.Label) : true;
+        }
+
+        Dictionary<ThingDef, long> availableCounts = new();
+        foreach (ThingDefCountClass requirement in requirements)
+        {
+            if (requirement.thingDef != null)
+            {
+                availableCounts[requirement.thingDef] = 0;
+            }
+        }
+        foreach (Thing thing in FleshBoxUtility.GetCachedBoxes(map).SelectMany(FleshBoxUtility.GetStoredThings))
+        {
+            if (!availableCounts.TryGetValue(thing.def, out long count))
+            {
+                continue;
+            }
+
+            availableCounts[thing.def] = count + thing.stackCount;
+        }
+        foreach (ThingDefCountClass requirement in requirements)
+        {
+            int availableCount = requirement.thingDef != null && availableCounts.TryGetValue(requirement.thingDef, out long count)
+                ? checked((int)count) : 0;
             if (availableCount < requirement.count)
             {
                 return "LackRequiredItems".Translate(requirement.Label);

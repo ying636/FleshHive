@@ -164,14 +164,25 @@ public class HiveTabOption_HivePlan : HiveTabOption_FleshHive
 
     private List<CompHivePlan> GetPlans(Map map)
     {
-        return map.listerThings.AllThings
+        List<CompHivePlan> plans = map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshHive)
+            .Concat(map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshPrimaryNest))
+            .Concat(map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshHopper))
             .OfType<ThingWithComps>()
-            .Where(thing => thing.Spawned && thing.Faction == Faction.OfPlayer && IsPlanTarget(thing))
+            .Where(thing => thing.Spawned && thing.Faction == Faction.OfPlayer)
             .Select(thing => thing.TryGetComp<CompHivePlan>())
             .Where(plan => plan?.CanShow == true)
-            .OrderBy(plan => plan.parent.Position.z)
-            .ThenBy(plan => plan.parent.Position.x)
             .ToList();
+        plans.Sort((left, right) =>
+        {
+            int order = left.parent.Position.z.CompareTo(right.parent.Position.z);
+            if (order == 0)
+            {
+                order = left.parent.Position.x.CompareTo(right.parent.Position.x);
+            }
+            return order != 0 ? order : map.listerThings.AllThings.IndexOf(left.parent)
+                .CompareTo(map.listerThings.AllThings.IndexOf(right.parent));
+        });
+        return plans;
     }
 
     private void ValidateSelection(List<CompHivePlan> plans)
@@ -213,20 +224,12 @@ public class HiveTabOption_HivePlan : HiveTabOption_FleshHive
         return "FH_HivePlan_StatusEntries".Translate(plan.entries.Count, activeCount);
     }
 
-    private bool IsPlanTarget(Thing thing)
-    {
-        return thing.def == FleshHiveDefOf.FH_FleshPrimaryNest
-            || thing.def.defName == FleshHiveDefName
-            || thing.def == FleshHiveDefOf.FH_FleshHopper;
-    }
-
     private Vector2 selectorScrollPosition;
     private Vector2 planScrollPosition;
     private CompHivePlan? selectedPlan;
     private List<HivePlanEntry> copiedEntries = new List<HivePlanEntry>();
     private float planContentHeight = 1f;
 
-    private const string FleshHiveDefName = "FH_FleshHive";
     private const float SelectorWidth = 240f;
     private const float PanelGap = 10f;
     private const float HeaderHeight = 34f;

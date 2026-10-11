@@ -6,14 +6,14 @@
   <!-- EN: A pulse-charged rail-assisted lance weapon. It fires a single shot at high velocity, charging it with unstable energy as it leaves the acceleration rail. -->
   <FH_Gun_BastionmeldChargeLance.description>一种脉冲充能的轨道辅助标枪武器。它会以高速发射单发弹丸，并在弹丸离开加速轨道时为其注入不稳定能量。</FH_Gun_BastionmeldChargeLance.description>
   <!-- EN: charge lance -->
-  <FH_Gun_BastionmeldChargeLance.verbs.Verb_Shoot.label>电荷标枪</FH_Gun_BastionmeldChargeLance.verbs.Verb_Shoot.label>
+  <FH_Gun_BastionmeldChargeLance.verbs.0.label>电荷标枪</FH_Gun_BastionmeldChargeLance.verbs.0.label>
   
   <!-- EN: inferno cannon -->
   <FH_Gun_BastionmeldInfernoCannon.label>地狱火加农炮</FH_Gun_BastionmeldInfernoCannon.label>
   <!-- EN: An incendiary-shot mini-artillery device. It fires a large incendiary warhead. -->
   <FH_Gun_BastionmeldInfernoCannon.description>一种发射燃烧弹的小型火炮装置。它会射出大型燃烧弹头。</FH_Gun_BastionmeldInfernoCannon.description>
   <!-- EN: inferno cannon -->
-  <FH_Gun_BastionmeldInfernoCannon.verbs.Verb_Shoot.label>地狱火加农炮</FH_Gun_BastionmeldInfernoCannon.verbs.Verb_Shoot.label>
+  <FH_Gun_BastionmeldInfernoCannon.verbs.0.label>地狱火加农炮</FH_Gun_BastionmeldInfernoCannon.verbs.0.label>
   
   <!-- EN: Beam Incinerator Cannon -->
   <FH_Gun_BastionmeldTrackingLaser.label>焚灭脉冲炮</FH_Gun_BastionmeldTrackingLaser.label>

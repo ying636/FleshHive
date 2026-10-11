@@ -10,11 +10,7 @@ public abstract class HiveTabOption_FleshHive : HiveTabOption
     protected bool DrawHungryIfNeeded(Rect inRect)
     {
         Map map = Find.CurrentMap;
-        if (map == null || !map.listerThings.AllThings
-                .OfType<ThingWithComps>()
-                .Where(thing => thing.Faction == Faction.OfPlayer
-                    && (thing.def.defName == FleshHiveDefName || thing.def == FleshHiveDefOf.FH_FleshPrimaryNest))
-                .Any(FleshHiveHungerUtility.IsHungry))
+        if (map == null || !HasHungryHive(map))
         {
             return false;
         }
@@ -23,5 +19,12 @@ public abstract class HiveTabOption_FleshHive : HiveTabOption
         return true;
     }
 
-    private const string FleshHiveDefName = "FH_FleshHive";
+    private static bool HasHungryHive(Map map)
+    {
+        return map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshHive)
+            .Concat(map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_FleshPrimaryNest))
+            .OfType<ThingWithComps>()
+            .Where(thing => thing.Faction == Faction.OfPlayer)
+            .Any(FleshHiveHungerUtility.IsHungry);
+    }
 }

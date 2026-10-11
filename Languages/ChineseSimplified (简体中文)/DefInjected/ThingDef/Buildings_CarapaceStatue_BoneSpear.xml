@@ -23,6 +23,6 @@
   <!-- EN: A heavy hive defense organ. By detonating explosive sacs, it rapidly propels bioferrite bone spears that can severely damage heavily armored targets at considerable range and inflict ongoing damage. After repeated use, its firing orifice must be repaired with fresh bioferrite. It cannot fire at nearby targets and may explode when damaged if its explosive sacs are ruptured. -->
   <FH_Gun_BoneSpearSpitter.description>一种重型巢穴防御器官。它通过引爆爆炸囊快速推出的活铁质骨矛能够在可观的攻击范围内重创重甲目标，并对其造成持续伤害。但它的喷射口在多次使用后必须新的活铁来进行修补。它不能向近距离的目标开火，并且在损坏时可能会因为爆炸囊受损而发生爆炸。</FH_Gun_BoneSpearSpitter.description>
   <!-- EN: bone spear spitter -->
-  <FH_Gun_BoneSpearSpitter.verbs.Verb_Shoot.label>骨矛喷吐器</FH_Gun_BoneSpearSpitter.verbs.Verb_Shoot.label>
+  <FH_Gun_BoneSpearSpitter.verbs.0.label>骨矛喷吐器</FH_Gun_BoneSpearSpitter.verbs.0.label>
 
 </LanguageData>

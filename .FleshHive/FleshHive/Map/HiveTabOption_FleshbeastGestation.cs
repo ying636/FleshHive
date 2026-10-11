@@ -487,15 +487,17 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         Rect viewRect = new Rect(0f, 0f, outRect.width - ScrollbarWidth, viewHeight);
         Widgets.BeginScrollView(outRect, ref quotaScrollPosition, viewRect);
 
+        Dictionary<PawnKindDef, int> currentCounts = units.Count > 0 ? mapComp.GetCurrentUnitCounts() : new();
         for (int i = 0; i < units.Count; i++)
         {
-            DrawQuotaRow(new Rect(0f, i * QuotaRowHeight, viewRect.width, QuotaRowHeight), mapComp, units[i]);
+            currentCounts.TryGetValue(units[i].kind, out int currentCount);
+            DrawQuotaRow(new Rect(0f, i * QuotaRowHeight, viewRect.width, QuotaRowHeight), mapComp, units[i], currentCount);
         }
 
         Widgets.EndScrollView();
     }
 
-    private void DrawQuotaRow(Rect rect, MapComponent_FleshHive mapComp, UnitDef unit)
+    private void DrawQuotaRow(Rect rect, MapComponent_FleshHive mapComp, UnitDef unit, int currentCount)
     {
         if ((Mathf.FloorToInt(rect.y / QuotaRowHeight) & 1) == 1)
         {
@@ -511,7 +513,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         Text.Anchor = TextAnchor.MiddleCenter;
 
         Rect currentRect = new Rect(rect.x + unitWidth, rect.y, CurrentColumnWidth, rect.height);
-        Widgets.Label(currentRect, mapComp.GetCurrentUnitCount(unit).ToString());
+        Widgets.Label(currentRect, currentCount.ToString());
 
         int maintain = mapComp.GetUnitMaintainTarget(unit);
         string maintainBuffer = GetMaintainBuffer(unit, maintain);
@@ -534,7 +536,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         {
             if (Widgets.ButtonText(maximumRect, "\u221E"))
             {
-                mapComp.SetUnitMaximumTarget(unit, Mathf.Max(mapComp.GetCurrentUnitCount(unit), maintain));
+                mapComp.SetUnitMaximumTarget(unit, Mathf.Max(currentCount, maintain));
             }
             TooltipHandler.TipRegion(maximumRect, "FH_Gestation_SetFiniteMaximum".Translate());
         }

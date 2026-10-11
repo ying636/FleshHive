@@ -29,7 +29,7 @@ public class CompFleshSpread : ThingComp, ITransfer
     private CompProperties_FleshSpread Props => (CompProperties_FleshSpread)props;
 
     private int TicksBetweenErosions => Mathf.Max(1, Mathf.RoundToInt(Props.intervalDays * 60000f
-        / MapComponent_FleshHive.GetFleshExpansionSpeedFactor(parent.Map)));
+        / (parent.Faction?.IsPlayer == true ? MapComponent_FleshHive.GetFleshExpansionSpeedFactor(parent.Map) : 1f)));
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
@@ -160,6 +160,10 @@ public class CompFleshSpread : ThingComp, ITransfer
             borderCache.Clear();
             cacheBuildIndex = 0;
             cacheDirty = false;
+        }
+        if (cacheBuildIndex >= infectedCells.Count)
+        {
+            return;
         }
         int processed = 0;
         var infectedList = infectedCells.ToList();

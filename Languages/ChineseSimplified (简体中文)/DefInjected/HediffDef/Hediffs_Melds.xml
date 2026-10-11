@@ -18,9 +18,9 @@
   <!-- EN: This creature is parasitized by a bastionmeld. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nTwo parasitic weapon mounts are grafted onto the body, allowing the host to release an EMP pulse. -->
   <FH_Parasitism_Bastionmeld.description>该生物被铁骸母兽所寄生，血肉兽为这个生物提供了额外的能力，但也为其带来了一些不小的代价。\n\n在体表嫁接两个寄生武器装备位，并允许释放EMP脉冲。</FH_Parasitism_Bastionmeld.description>
   <!-- EN: Left weapon mount -->
-  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.0.renderNode.debugLabel>左武器基座</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.0.renderNode.debugLabel>
+  <FH_Parasitism_Bastionmeld.comps.0.tentacles.0.renderNode.debugLabel>左武器基座</FH_Parasitism_Bastionmeld.comps.0.tentacles.0.renderNode.debugLabel>
   <!-- EN: Right weapon mount -->
-  <FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.1.renderNode.debugLabel>右武器基座</FH_Parasitism_Bastionmeld.comps.HediffComp_ParasitismWeaponMounts.tentacles.1.renderNode.debugLabel>
+  <FH_Parasitism_Bastionmeld.comps.0.tentacles.1.renderNode.debugLabel>右武器基座</FH_Parasitism_Bastionmeld.comps.0.tentacles.1.renderNode.debugLabel>
   <!-- EN: bastionmeld mutualism -->
   <FH_Parasitism_Bastionmeld.stages.bastionmeld_mutualism.label>铁骸母兽寄生</FH_Parasitism_Bastionmeld.stages.bastionmeld_mutualism.label>
   

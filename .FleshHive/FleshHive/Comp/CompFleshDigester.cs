@@ -242,7 +242,7 @@ public class CompFleshDigester : ThingComp
                pawn.Spawned &&
                !pawn.Dead &&
                pawn.Map == parent.Map &&
-               pawn.HostileTo(Faction.OfPlayer) &&
+               pawn.HostileTo(parent.Faction ?? Faction.OfPlayer) &&
                pawn.Position.InHorDistOf(parent.Position, Props.attackRadius) &&
                FleshTerrainUtility.IsFleshTerrain(parent.Map, pawn.Position);
     }

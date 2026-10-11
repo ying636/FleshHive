@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HiveCreatureFramework.HiveResourceDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Resource_HostileNutrition</defName>
+    <label>Nutrition</label>
+    <description>FH_Resource_HostileNutrition</description>
+    <defaultLimit>200</defaultLimit>
+    <initValue>0</initValue>
+    <color>(0.55, 0.28, 0.25)</color>
+    <graphic>
+      <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphic>
+  </HiveCreatureFramework.HiveResourceDef>
+</Defs>

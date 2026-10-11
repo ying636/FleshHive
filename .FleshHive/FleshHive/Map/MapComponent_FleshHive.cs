@@ -219,6 +219,31 @@ public class MapComponent_FleshHive : MapComponent
             .Count();
     }
 
+    public Dictionary<PawnKindDef, int> GetCurrentUnitCounts()
+    {
+        CleanupCachedFleshBeasts();
+        IEnumerable<Pawn> containedUnits = GameComponent_UnitGroup.Instance.groups
+            .Where(group => group?.Map == map && group.units != null)
+            .SelectMany(group => group.units)
+            .Where(pawn => pawn?.ParentHolder is CompHiveContainer container
+                && container.parent.Map == map
+                && container.parent.Faction == Faction.OfPlayer);
+        Dictionary<PawnKindDef, int> counts = new();
+        HashSet<Pawn> countedPawns = new();
+        foreach (Pawn pawn in CachedFleshBeasts.Concat(containedUnits))
+        {
+            if (pawn == null || pawn.Destroyed || pawn.Dead || pawn.Faction != Faction.OfPlayer
+                || pawn.kindDef == null || !countedPawns.Add(pawn))
+            {
+                continue;
+            }
+
+            counts.TryGetValue(pawn.kindDef, out int count);
+            counts[pawn.kindDef] = count + 1;
+        }
+        return counts;
+    }
+
     public int GetQueuedUnitCount(UnitDef unit)
     {
         if (unit == null)
@@ -1114,33 +1139,41 @@ public class MapComponent_FleshHive : MapComponent
 
     private void TickUnitQuotas()
     {
-        EnforceUnitMaximumTargets();
+        Dictionary<PawnKindDef, int>? currentCounts = null;
+        Dictionary<UnitDef, int>? queuedCounts = null;
+        EnforceUnitMaximumTargets(ref currentCounts, ref queuedCounts);
         if (IsHiveHungry)
         {
             return;
         }
 
-        QueueMissingMaintainedUnits();
+        QueueMissingMaintainedUnits(ref currentCounts, ref queuedCounts);
     }
 
-    private void EnforceUnitMaximumTargets()
+    private void EnforceUnitMaximumTargets(ref Dictionary<PawnKindDef, int>? currentCounts, ref Dictionary<UnitDef, int>? queuedCounts)
     {
         foreach (KeyValuePair<UnitDef, int> pair in unitMaximumTargets.ToList())
         {
             UnitDef unit = pair.Key;
             int maximum = pair.Value;
-            int currentCount = GetCurrentUnitCount(unit);
-            int queuedCount = GetQueuedUnitCount(unit);
+            currentCounts ??= GetCurrentUnitCounts();
+            queuedCounts ??= GetQueuedUnitCounts();
+            int currentCount = unit.kind != null && currentCounts.TryGetValue(unit.kind, out int count) ? count : 0;
+            int queuedCount = queuedCounts.TryGetValue(unit, out int queued) ? queued : 0;
             int excessProjectedCount = currentCount + queuedCount - maximum;
             if (excessProjectedCount > 0)
             {
                 CancelQueuedUnitTasks(unit, excessProjectedCount);
+                currentCounts = GetCurrentUnitCounts();
+                queuedCounts = null;
             }
 
-            currentCount = GetCurrentUnitCount(unit);
+            currentCount = unit.kind != null && currentCounts.TryGetValue(unit.kind, out count) ? count : 0;
             if (currentCount > maximum)
             {
                 ReclaimUnits(unit, currentCount - maximum);
+                currentCounts = null;
+                queuedCounts = null;
             }
         }
     }
@@ -1204,16 +1237,22 @@ public class MapComponent_FleshHive : MapComponent
         }
     }
 
-    private void QueueMissingMaintainedUnits()
+    private void QueueMissingMaintainedUnits(ref Dictionary<PawnKindDef, int>? currentCounts, ref Dictionary<UnitDef, int>? queuedCounts)
     {
         int tasksAdded = 0;
         List<CompHiveSpawner_FleshTrait> spawners = GetFleshbeastSpawners();
         foreach (KeyValuePair<UnitDef, int> pair in unitMaintainTargets.InRandomOrder())
         {
             UnitDef unit = pair.Key;
-            int missingCount = pair.Value - GetCurrentUnitCount(unit) - GetQueuedUnitCount(unit);
+            currentCounts ??= GetCurrentUnitCounts();
+            queuedCounts ??= GetQueuedUnitCounts();
+            int currentCount = unit.kind != null && currentCounts.TryGetValue(unit.kind, out int count) ? count : 0;
+            int queuedCount = queuedCounts.TryGetValue(unit, out int queued) ? queued : 0;
+            int missingCount = pair.Value - currentCount - queuedCount;
             while (missingCount > 0 && tasksAdded < MaxAutomaticUnitTasksPerInterval)
             {
+                currentCounts = null;
+                queuedCounts = null;
                 IEnumerable<CompHiveSpawner_FleshTrait> candidates = spawners
                     .Where(spawner => GetAvailableUnits(spawner).Contains(unit) && unit.CanProduce(spawner).Accepted);
                 if (!candidates.TryRandomElement(out CompHiveSpawner_FleshTrait spawner))
@@ -1236,6 +1275,26 @@ public class MapComponent_FleshHive : MapComponent
                 break;
             }
         }
+    }
+
+    private Dictionary<UnitDef, int> GetQueuedUnitCounts()
+    {
+        Dictionary<UnitDef, int> counts = new();
+        foreach (CompHiveSpawner_FleshTrait spawner in GetFleshbeastSpawners())
+        {
+            foreach (Progress progress in spawner.ProgressHolder.progresses)
+            {
+                UnitDef? unit = GetProgressUnitDef(progress);
+                if (unit == null)
+                {
+                    continue;
+                }
+
+                counts.TryGetValue(unit, out int count);
+                counts[unit] = count + 1;
+            }
+        }
+        return counts;
     }
 
     private float GetUnitNutritionCost(UnitDef unit)
@@ -1613,7 +1672,7 @@ public class MapComponent_FleshHive : MapComponent
     private void DispatchBoneSpearFuel()
     {
         CleanupInvalidFleshBoxes();
-        foreach (Building_BoneSpearSpitter turret in map.listerThings.ThingsInGroup(ThingRequestGroup.Refuelable).OfType<Building_BoneSpearSpitter>())
+        foreach (Building_Turret turret in map.listerThings.ThingsOfDef(FleshHiveDefOf.FH_BoneSpearSpitter).OfType<Building_Turret>())
         {
             CompRefuelable fuel = turret.GetComp<CompRefuelable>();
             if (!turret.Spawned || turret.Faction != Faction.OfPlayer || fuel == null || !fuel.ShouldAutoRefuelNow ||
@@ -1628,10 +1687,22 @@ public class MapComponent_FleshHive : MapComponent
                 continue;
             }
 
-            foreach (Building_FleshBox box in mapFleshHive.CachedFleshBoxes
-                         .Where(box => box != null && box.Spawned && box.Map == map && box.Faction == Faction.OfPlayer)
-                         .OrderBy(box => box.Position.DistanceToSquared(turret.Position)))
+            Building_FleshBox? closestBox = null;
+            Thing? closestSource = null;
+            int closestDistance = int.MaxValue;
+            foreach (Building_FleshBox box in mapFleshHive.CachedFleshBoxes)
             {
+                if (box == null || !box.Spawned || box.Map != map || box.Faction != Faction.OfPlayer)
+                {
+                    continue;
+                }
+
+                int distance = box.Position.DistanceToSquared(turret.Position);
+                if (distance >= closestDistance)
+                {
+                    continue;
+                }
+
                 Thing sourceThing = box.Position.GetThingList(map).FirstOrDefault(thing =>
                     thing.def == ThingDefOf.Bioferrite && thing.stackCount > 0 &&
                     !map.reservationManager.IsReservedByAnyoneOf(thing, Faction.OfPlayer));
@@ -1640,11 +1711,16 @@ public class MapComponent_FleshHive : MapComponent
                     continue;
                 }
 
-                int count = Mathf.Min(needed, Mathf.Min((int)ResourceCarryCapacity, sourceThing.stackCount));
-                Thing carriedThing = sourceThing.SplitOff(count);
-                HiveResourcers.Add(new HiveResourcer(box, turret, carriedThing.def, carriedThing.stackCount));
+                closestBox = box;
+                closestSource = sourceThing;
+                closestDistance = distance;
+            }
+            if (closestBox != null && closestSource != null)
+            {
+                int count = Mathf.Min(needed, Mathf.Min((int)ResourceCarryCapacity, closestSource.stackCount));
+                Thing carriedThing = closestSource.SplitOff(count);
+                HiveResourcers.Add(new HiveResourcer(closestBox, turret, carriedThing.def, carriedThing.stackCount));
                 carriedThing.Destroy();
-                break;
             }
         }
     }

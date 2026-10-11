@@ -19,7 +19,7 @@
   <!-- EN: A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.\n\nConsumes 1 hive nutrition per day. -->
   <FH_FleshmassSpitter.description>可远距离喷吐酸性涎液的防御性血肉块器官。这种酸性涎液是从周围生物质中过滤出的天然有毒副产物。\n\n每日消耗巢穴1营养。</FH_FleshmassSpitter.description>
   <!-- EN: fleshmass spitter -->
-  <FH_FleshmassSpitter.verbs.Verb_Shoot.label>血肉喷吐器</FH_FleshmassSpitter.verbs.Verb_Shoot.label>
+  <FH_FleshmassSpitter.verbs.0.label>血肉喷吐器</FH_FleshmassSpitter.verbs.0.label>
   
   <!-- EN: flesh burster -->
   <FH_FleshSpreader.label>血肉爆炸器</FH_FleshSpreader.label>
@@ -40,6 +40,6 @@
   <!-- EN: A simple bone-spitting organ grown to act as a turret weapon. -->
   <FH_Gun_FleshTurret.description>一种作为炮塔武器生长出来的简易骨刺喷吐器官。</FH_Gun_FleshTurret.description>
   <!-- EN: bone spitter -->
-  <FH_Gun_FleshTurret.verbs.Verb_Shoot.label>骨刺喷吐器</FH_Gun_FleshTurret.verbs.Verb_Shoot.label>
+  <FH_Gun_FleshTurret.verbs.0.label>骨刺喷吐器</FH_Gun_FleshTurret.verbs.0.label>
   
 </LanguageData>

@@ -28,14 +28,6 @@
   <!-- EN: head -->
   <FH_Bastionmeld.tools.head.label>頭</FH_Bastionmeld.tools.head.label>
 
-  <!-- UNUSED -->
-  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.0.label>焚滅脈衝炮</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.0.label>
-  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.1.label>
-  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.2.label>
-  <FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.3.label>血肉武器基座</FH_Bastionmeld.comps.CompUnitMultiTurret.turrets.3.label>
-  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>焚滅脈衝炮</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.0.label>
-  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.1.label>
-  <FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>血肉武器基座</FH_Bastionmeld.comps.CompProperties_UnitMultiTurret.turrets.2.label>
 
   <!-- EN: dreadmeld -->
   <FH_Dreadmeld.label>驚懼母獸</FH_Dreadmeld.label>
@@ -49,9 +41,9 @@
   <FH_Dreadmeld.comps.ParasitismComp.abilityLabel>母獸觸手</FH_Dreadmeld.comps.ParasitismComp.abilityLabel>
   <FH_Dreadmeld.comps.ParasitismComp.effect>“血肉寄生”心情-6；魅力-10%；扭曲肉容量+400；宿主獲得再生（不可思議）；採礦速度+160%；深鑽井操作速度+70%；提供兩條母獸觸手和“驚懼咆哮”主動能力。</FH_Dreadmeld.comps.ParasitismComp.effect>
   <!-- EN: left bone spike -->
-  <FH_Dreadmeld.tools.left_bone_spike.label>左骨刺</FH_Dreadmeld.tools.left_bone_spike.label>
+  <FH_Dreadmeld.tools.0.label>左骨刺</FH_Dreadmeld.tools.0.label>
   <!-- EN: right bone spike -->
-  <FH_Dreadmeld.tools.right_bone_spike.label>右骨刺</FH_Dreadmeld.tools.right_bone_spike.label>
+  <FH_Dreadmeld.tools.1.label>右骨刺</FH_Dreadmeld.tools.1.label>
   <!-- EN: head -->
   <FH_Dreadmeld.tools.head.label>頭</FH_Dreadmeld.tools.head.label>
 
@@ -115,7 +107,6 @@
   <!-- EN: right bone spike -->
   <FH_Furiousmeld.tools.right_bone_spike.label>右骨刺</FH_Furiousmeld.tools.right_bone_spike.label>
   <!-- EN: carapace -->
-  <FH_Furiousmeld.tools.carapace.label>甲殼</FH_Furiousmeld.tools.carapace.label>
   <!-- EN: head -->
   <FH_Furiousmeld.tools.head.label>頭</FH_Furiousmeld.tools.head.label>
 

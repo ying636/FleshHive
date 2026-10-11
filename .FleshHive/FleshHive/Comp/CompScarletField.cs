@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -34,15 +33,16 @@ public class CompScarletField : ThingComp
     public bool CanActivate => PawnOwner != null && PawnOwner.Spawned
         && TwistedFleshUtility.GetCurrentTwistedFlesh(PawnOwner) >= 1;
 
-    private static MethodInfo ImpactMethod
+    private static Action<Projectile, Thing, bool> ImpactProjectile
     {
         get
         {
-            if (impactMethod == null)
+            if (impactProjectile == null)
             {
-                impactMethod = AccessTools.Method(typeof(Projectile), "Impact", new Type[] { typeof(Thing), typeof(bool) });
+                impactProjectile = AccessTools.MethodDelegate<Action<Projectile, Thing, bool>>(
+                    AccessTools.Method(typeof(Projectile), "Impact", new Type[] { typeof(Thing), typeof(bool) }));
             }
-            return impactMethod;
+            return impactProjectile;
         }
     }
 
@@ -176,17 +176,17 @@ public class CompScarletField : ThingComp
             {
                 continue;
             }
-            if (pawn.Faction != null && !(proj.Launcher.Spawned
-                    ? proj.Launcher.HostileTo(pawn.Faction)
-                    : proj.Launcher.Faction?.HostileTo(pawn.Faction) == true))
-            {
-                continue;
-            }
 
             Vector3 projPos = proj.ExactPosition;
             float dx = projPos.x - shieldCenter.x;
             float dz = projPos.z - shieldCenter.z;
             if (dx * dx + dz * dz > radiusSq)
+            {
+                continue;
+            }
+            if (pawn.Faction != null && !(proj.Launcher.Spawned
+                    ? proj.Launcher.HostileTo(pawn.Faction)
+                    : proj.Launcher.Faction?.HostileTo(pawn.Faction) == true))
             {
                 continue;
             }
@@ -202,7 +202,7 @@ public class CompScarletField : ThingComp
                 return;
             }
 
-            ImpactMethod.Invoke(proj, new object[] { null, true });
+            ImpactProjectile(proj, null, true);
             if (TwistedFleshUtility.GetCurrentTwistedFlesh(pawn) < 1)
             {
                 SetActive(false);
@@ -241,7 +241,7 @@ public class CompScarletField : ThingComp
 
     private int tickCounter;
 
-    private static MethodInfo impactMethod;
+    private static Action<Projectile, Thing, bool>? impactProjectile;
 
     private static readonly AccessTools.FieldRef<Projectile, Vector3> projectileOrigin =
         AccessTools.FieldRefAccess<Projectile, Vector3>("origin");

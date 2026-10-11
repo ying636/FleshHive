@@ -83,6 +83,7 @@ public static class FleshHiveDefOf
     public static ThingDef FH_ChitinFleshBarricade;
     public static ThingDef FH_FleshHopper;
     public static ThingDef FH_FleshBox;
+    public static ThingDef FH_BoneSpearSpitter = null!;
     public static ThingDef FH_NerveFlesh;
     public static ThingDef FH_FleshCarapace;
     public static ThingDef FH_FleshTree;

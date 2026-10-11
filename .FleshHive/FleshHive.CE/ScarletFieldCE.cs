@@ -1,5 +1,6 @@
 using CombatExtended;
 using CombatExtended.Compatibility;
+using HarmonyLib;
 using UnityEngine;
 using RimWorld;
 using Verse;
@@ -11,6 +12,7 @@ public static class ScarletFieldCE
 {
     static ScarletFieldCE()
     {
+        new Harmony("hailuan.fleshhive.ce.scarletfield").PatchAll(typeof(ScarletFieldCE).Assembly);
         BlockerRegistry.RegisterCheckForCollisionBetweenCallback(Intercept);
         BlockerRegistry.RegisterCheckForCollisionCallback((projectile, cell, launcher) => Intercept(projectile, projectile.LastPos, projectile.ExactPosition));
         BlockerRegistry.RegisterImpactSomethingCallback((projectile, launcher) => Intercept(projectile, projectile.LastPos, projectile.ExactPosition));
@@ -31,16 +33,16 @@ public static class ScarletFieldCE
         Vector3 impact = to;
         foreach (var (pawn, field, radius) in ActiveFields(projectile.Map))
         {
-            if (pawn.Faction != null
-                && !(projectile.launcher.Spawned ? projectile.launcher.HostileTo(pawn.Faction)
-                    : projectile.launcher.Faction?.HostileTo(pawn.Faction) == true))
-            {
-                continue;
-            }
             Vector3 center = pawn.Position.ToVector3Shifted();
             Vector3 origin = new(projectile.origin.x, 0f, projectile.origin.y);
             if ((origin - center).Yto0().sqrMagnitude <= radius * radius
                 || !TryIntersect(from, to, center, radius, out float progress) || progress >= nearestProgress)
+            {
+                continue;
+            }
+            if (pawn.Faction != null
+                && !(projectile.launcher.Spawned ? projectile.launcher.HostileTo(pawn.Faction)
+                    : projectile.launcher.Faction?.HostileTo(pawn.Faction) == true))
             {
                 continue;
             }
@@ -113,9 +115,9 @@ public static class ScarletFieldCE
         }
         foreach (var (owner, field, radius) in ActiveFields(pawn.Map))
         {
-            if (!pawn.HostileTo(owner)
-                && pawn.Position.InHorDistOf(owner.Position, radius)
-                && !origin.InHorDistOf(owner.Position, radius))
+            if (pawn.Position.InHorDistOf(owner.Position, radius)
+                && !origin.InHorDistOf(owner.Position, radius)
+                && !pawn.HostileTo(owner))
             {
                 return true;
             }
@@ -125,7 +127,7 @@ public static class ScarletFieldCE
 
     private static IEnumerable<(Pawn owner, object field, float radius)> ActiveFields(Map map)
     {
-        foreach (Pawn pawn in map.mapPawns.AllPawnsSpawned)
+        foreach (Pawn pawn in ScarletFieldMapIndex.GetCandidates(map))
         {
             CompScarletField? innate = pawn.TryGetComp<CompScarletField>();
             if (innate?.Active == true)

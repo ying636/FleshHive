@@ -329,7 +329,6 @@
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_80x256mmFuel_Incendiary</defaultProjectile>
-        <forcedMissRadius>3.5</forcedMissRadius>
         <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
         <warmupTime>1.25</warmupTime>
         <range>26.9</range>
@@ -355,7 +354,6 @@
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
         <warmupTime>4</warmupTime>
-        <forcedMissRadius>3</forcedMissRadius>
         <defaultProjectile>FH_Projectile_FleshmassSpitterCE</defaultProjectile>
         <isMortar>true</isMortar>
         <requireLineOfSight>false</requireLineOfSight>

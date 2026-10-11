@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HiveCreatureFramework.SpawnCategoryDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Category_HostileFleshBeasts</defName>
+    <label>FH_Category_HostileFleshBeasts</label>
+    <units>
+      <li>FH_Unit_HostileFingerspike</li>
+      <li>FH_Unit_HostileWhipspike</li>
+      <li>FH_Unit_HostilePuffspike</li>
+      <li>FH_Unit_HostileParaspike</li>
+      <li>FH_Unit_HostileGutspike</li>
+      <li>FH_Unit_HostileToughspike</li>
+      <li>FH_Unit_HostileShieldspike</li>
+      <li>FH_Unit_HostileShatterspike</li>
+    </units>
+  </HiveCreatureFramework.SpawnCategoryDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileFingerspike</defName>
+    <label>Fingerspike</label>
+    <description>FH_Unit_HostileFingerspike</description>
+    <kind>FH_Fingerspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>3</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.25~0.25</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileWhipspike</defName>
+    <label>Whipspike</label>
+    <description>FH_Unit_HostileWhipspike</description>
+    <kind>FH_Whipspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>3</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.25~0.25</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostilePuffspike</defName>
+    <label>Puffspike</label>
+    <description>FH_Unit_HostilePuffspike</description>
+    <kind>FH_Puffspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>3</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.25~0.25</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileParaspike</defName>
+    <label>Paraspike</label>
+    <description>FH_Unit_HostileParaspike</description>
+    <kind>FH_Paraspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>3</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.25~0.25</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileGutspike</defName>
+    <label>Gutspike</label>
+    <description>FH_Unit_HostileGutspike</description>
+    <kind>FH_Gutspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>3</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.25~0.25</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileToughspike</defName>
+    <label>Toughspike</label>
+    <description>FH_Unit_HostileToughspike</description>
+    <kind>FH_Toughspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>9</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.75~0.75</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileShieldspike</defName>
+    <label>Shieldspike</label>
+    <description>FH_Unit_HostileShieldspike</description>
+    <kind>FH_Shieldspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>9</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.75~0.75</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+  <HiveCreatureFramework.UnitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Unit_HostileShatterspike</defName>
+    <label>Shatterspike</label>
+    <description>FH_Unit_HostileShatterspike</description>
+    <kind>FH_Shatterspike</kind>
+    <costs>
+      <FH_Resource_HostileNutrition>9</FH_Resource_HostileNutrition>
+    </costs>
+    <spawningDay>0.75~0.75</spawningDay>
+  </HiveCreatureFramework.UnitDef>
+</Defs>

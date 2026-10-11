@@ -28,7 +28,7 @@ public class HiveResourcer : IExposable
         this.carriedAmount = carriedCount;
     }
 
-    public HiveResourcer(Thing sourceHive, Building_BoneSpearSpitter targetTurret, ThingDef carriedThingDef, int carriedCount)
+    public HiveResourcer(Thing sourceHive, Building_Turret targetTurret, ThingDef carriedThingDef, int carriedCount)
     {
         this.sourceHive = sourceHive;
         this.targetTurret = targetTurret;
@@ -346,7 +346,7 @@ public class HiveResourcer : IExposable
 
     public Thing sourceHive;
     public Blueprint_FleshBuild targetBlueprint;
-    public Building_BoneSpearSpitter targetTurret;
+    public Building_Turret targetTurret;
     public HiveResourceDef carriedResourceDef;
     public ThingDef carriedThingDef;
     public float carriedAmount;
