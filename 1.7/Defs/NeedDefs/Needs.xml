@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<NeedDef>
+  <defName>FH_Need_Control</defName>
+  <needClass>HiveCreatureFramework.Need_Control</needClass>
+  <label>control</label>
+  <description>Control represents how much control the colony has over this unit.
+When it reaches zero, the unit will attempt to break free from control.</description>
+  <listPriority>800</listPriority>
+  <showForCaravanMembers>true</showForCaravanMembers>
+</NeedDef>
+
+</Defs>

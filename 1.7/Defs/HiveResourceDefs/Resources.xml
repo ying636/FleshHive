@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HiveCreatureFramework.HiveResourceDef>
+        <defName>FH_Resource_Nutrition</defName>
+        <label>Nutrition</label>
+        <description>Nutrition.</description>
+        <color>(0.55, 0.28, 0.25)</color>
+        <graphic>
+            <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphic>
+        <worker Class="HiveCreatureFramework.HiveResourceWorker_Nutrition">
+        </worker>
+        <resourceClass>FleshHive.HiveResource_FleshHiveNutrition</resourceClass>
+        <thing>Meat_Twisted</thing>
+        <thingCountPerResource>20</thingCountPerResource>
+    </HiveCreatureFramework.HiveResourceDef>
+
+
+
+
+
+
+    <HiveCreatureFramework.HiveResourceDef>
+        <defName>FH_Resource_TwistedFlesh</defName>
+        <label>twisted flesh</label>
+        <description>Twisted flesh stored within a fleshbeast.</description>
+        <color>(0.65, 0.08, 0.08)</color>
+        <graphic>
+            <texPath>Things/Item/Resource/TwistedMeat/TwistedMeat_b</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+        </graphic>
+        <thing>Meat_Twisted</thing>
+    </HiveCreatureFramework.HiveResourceDef>
+
+</Defs>

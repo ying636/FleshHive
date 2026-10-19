@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_FleshmassSpitterVanilla</defName>
+    <label>fleshmass spitter</label>
+    <graphicData>
+      <texPath>Things/Mote/Transparent</texPath>
+    </graphicData>
+    <statBases>
+      <RangedWeapon_Cooldown>41.6666667</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+        <warmupTime>4</warmupTime>
+        <forcedMissRadius>3</forcedMissRadius>
+        <defaultProjectile>FH_Projectile_FleshmassSpitterVanilla</defaultProjectile>
+        <isMortar>true</isMortar>
+        <requireLineOfSight>false</requireLineOfSight>
+        <minRange>6.9</minRange>
+        <range>41.9</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>SpitterSpit</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Projectile_FleshmassSpitterVanilla</defName>
+    <label>acid spit</label>
+    <graphicData>
+      <shaderType>MoteGlow</shaderType>
+      <graphicClass>Graphic_Single_AgeSecs</graphicClass>
+      <texPath>Things/Projectile/FleshmassSpitterProjectileSheet</texPath>
+      <drawSize>(.75, .75)</drawSize>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <useGraphicClass>true</useGraphicClass>
+      <shadowSize>1</shadowSize>
+      <damageDef>AcidBurn</damageDef>
+      <spinRate>20</spinRate>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>41</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>SpitterSpitLands</soundExplode>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+      <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+      <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+      <doExplosionVFX>false</doExplosionVFX>
+    </projectile>
+    <comps>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>Shell_AcidSpitStream</effecterDef>
+      </li>
+      <li Class="CompProperties_ProjectileEffecter">
+        <effecterDef>Shell_AcidSpitLaunched</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

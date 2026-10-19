@@ -236,7 +236,7 @@ public class CompHiveSpawner_FleshTrait : CompHiveSpawner
         }
     }
 
-    private HediffDef GetSelectedTrait(UnitDef unit)
+    public HediffDef GetSelectedTrait(UnitDef unit)
     {
         return selectedTraits.TryGetValue(unit, out HediffDef trait) ? trait : null;
     }
@@ -454,15 +454,19 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
     {
     }
 
-    public UnitSpawnData_FleshTrait(UnitDef def, HediffDef traitDef) : base(def)
+    public UnitSpawnData_FleshTrait(UnitDef def, HediffDef traitDef) : this(def, traitDef, 1f)
     {
-        this.traitDef = traitDef;
     }
 
     public UnitSpawnData_FleshTrait(UnitDef def, HediffDef traitDef, float productionSpeedFactor, UnitGroup reservedGroup = null) : base(def)
     {
         this.traitDef = traitDef;
         this.reservedGroup = reservedGroup;
+        if (traitDef?.defName == "FH_Trait_RapidGrowth")
+        {
+            time = Mathf.Max(1, Mathf.RoundToInt(time * 0.75f));
+            totalTime = Mathf.Max(1, Mathf.RoundToInt(totalTime * 0.75f));
+        }
         if (productionSpeedFactor > 0f && productionSpeedFactor != 1f)
         {
             time = Mathf.Max(1, Mathf.RoundToInt(time / productionSpeedFactor));
@@ -485,6 +489,7 @@ public class UnitSpawnData_FleshTrait : UnitSpawnData
         };
         foreach (Pawn pawn in pawns)
         {
+            comp.parent.Map?.GetComponent<MapComponent_FleshHive>()?.AssignGestationGroup(pawn, def);
             if (FleshBeastKindUtility.IsGiant(pawn.kindDef)
                 && comp.parent.TryGetComp<CompHiveContainer>() is { } container
                 && container.units.Contains(pawn))

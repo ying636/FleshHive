@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_PutPawnInParasitePod</defName>
+        <label>carrry pawn to parasite pod</label>
+        <giverClass>FleshHive.WorkGiver_FillParasitePod</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>carry</verb>
+        <gerund>carring</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>19</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_RefillTwistedFlesh</defName>
+        <label>refill twisted flesh</label>
+        <giverClass>FleshHive.WorkGiver_RefillTwistedFlesh</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>refill</verb>
+        <gerund>refilling</gerund>
+        <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+        <priorityInType>23</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_RefillTwistedFlesh_Help</defName>
+        <label>refill others' twisted flesh</label>
+        <giverClass>FleshHive.WorkGiver_RefillTwistedFlesh_Help</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>refill</verb>
+        <gerund>refilling</gerund>
+        <canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+        <priorityInType>21</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_FillFleshSack</defName>
+        <label>carry prey to flesh sack</label>
+        <giverClass>FleshHive.WorkGiver_FillFleshSack</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>carry</verb>
+        <gerund>carrying</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>19</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_InfectHarbingerTree</defName>
+        <label>infect harbinger tree</label>
+        <giverClass>FleshHive.WorkGiver_InfectHarbingerTree</giverClass>
+        <workType>Hauling</workType>
+        <emergency>false</emergency>
+        <verb>infect</verb>
+        <gerund>infecting</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>22</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>FH_WorkGiver_SuppressFleshHiveActivity</defName>
+        <label>suppress flesh hive activity</label>
+        <giverClass>FleshHive.WorkGiver_SuppressFleshHiveActivity</giverClass>
+        <workType>Warden</workType>
+        <verb>suppress</verb>
+        <gerund>suppressing</gerund>
+        <canBeDoneWhileDrafted>false</canBeDoneWhileDrafted>
+        <priorityInType>95</priorityInType>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+    </WorkGiverDef>
+
+</Defs>

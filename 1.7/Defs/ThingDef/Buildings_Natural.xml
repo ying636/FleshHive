@@ -1,0 +1,2396 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshHive</defName>
+    <label>flesh hive</label>
+    <description>The foundation of a flesh hive. It can gestate fleshbeasts within the nest and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shards, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive.</description>
+    <thingClass>FleshHive.Building_RenameableFleshHive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshHive/FH_FleshHive</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <drawSize>(3.5,3.5)</drawSize>
+      <drawOffset>(0,0,0.6)</drawOffset>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <size>(3,2)</size>
+    <uiIconScale>0.65</uiIconScale>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+      <li>FleshHive.ITab_FleshHiveGroup</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">ITab_Entity</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>1300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <HCF_Stat_HiveCapacity>20</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <killedLeavings>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
+    </killedLeavings>
+    <costList>
+      <Shard>2</Shard>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
+    </costList>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <designationCategory>HCF_Hive</designationCategory>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompPropertiesHiveFormulaSpawner_FleshTrait" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <transferOnEvolution>false</transferOnEvolution>
+        <resources>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
+        </resources>
+        <tags>
+          <li>Flesh</li>
+          <li>FleshHive</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompPropertiesHiveSpawner_FleshTrait">
+        <compClass>FleshHive.CompHiveSpawner_FleshTrait</compClass>
+        <UnitCategories>
+          <li>FH_Category_LittleFleshBeast</li>
+          <li>FH_Category_MediumFleshBeast</li>
+          <li>FH_Category_FleshReplica</li>
+        </UnitCategories>
+        <traitOptions>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Fingerspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Puffspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Puffspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Puffspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Gutspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Paraspike</prerequisiteFusion>
+          </li>
+        </traitOptions>
+      </li>
+      <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>20</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity1</li>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>20</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>2</dailyNutritionCost>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>0.5</intervalDays>
+        <radius>10.5</radius>
+        <cellsPerErosion>12</cellsPerErosion>
+        <initialErosionCount>10</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveInitialNutrition">
+        <initialNutrition>100</initialNutrition>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshHiveUnitFuser">
+        <defaultFusion>FH_Fusion_Default</defaultFusion>
+        <category>LittleFlesh</category>
+        <largeCategory>LargeFlesh</largeCategory>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveUpgrader">
+        <upgrades>
+          <!-- 当前没有可用的普通巢群升级 Def。 -->
+        </upgrades>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshHiveEvolution">
+        <map>FH_EvolutionMap_FleshHive</map>
+        <research>FH_Research_FleshPrimaryHive</research>
+        <evolution>FH_Evolution_FleshPrimaryNest</evolution>
+      </li>
+      <li>
+        <compClass>FleshHive.CompProgressHolder_FleshHive</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshHiveContainer">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <tags>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>FH_NerveCenter</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ElectricInhibitor</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ShardInhibitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
+      </li>
+      <li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>FleshHive.CompStudiable_FleshHive</compClass>
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(3,2)</size>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshPrimaryNest</defName>
+    <label>flesh primary nest</label>
+    <description>The core of a large flesh hive. It can gestate and fuse flesh beasts within the nest, and spreads flesh carpet outward to expand the hive. Because of the artificially implanted dark archite shard, it can no longer expand without limit or draw nutrients from the surroundings on its own. It must instead rely on deliberate feeding, a far safer way to sustain the hive. A hive can only support one flesh primary nest.</description>
+    <thingClass>FleshHive.Building_RenameableFleshHive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <drawSize>3.85</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+      <drawOffset>(0,0,0.6)</drawOffset>
+    </graphicData>
+    <size>(3,3)</size>
+    <uiIconPath>Things/Building/FH_FleshHive/FH_FleshPrimaryNest</uiIconPath>
+    <uiIconScale>0.58</uiIconScale>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+      <li>FleshHive.ITab_FleshHiveGroup</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>2200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>3800</MarketValue>
+      <HCF_Stat_HiveCapacity>50</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <killedLeavings>
+      <FH_DreadmeldSeed>1</FH_DreadmeldSeed>
+    </killedLeavings>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Studiable" MayRequire="Ludeon.RimWorld.Anomaly">
+        <compClass>FleshHive.CompStudiable_FleshHive</compClass>
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+      </li>
+      <li Class="FleshHive.CompPropertiesHiveFormulaSpawner_FleshTrait" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <transferOnEvolution>false</transferOnEvolution>
+        <resources>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
+        </resources>
+        <tags>
+          <li>Flesh</li>
+          <li>FleshHive</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompPropertiesHiveSpawner_FleshTrait">
+        <compClass>FleshHive.CompHiveSpawner_FleshTrait</compClass>
+        <UnitCategories>
+          <li>FH_Category_LittleFleshBeast</li>
+          <li>FH_Category_MediumFleshBeast</li>
+          <li>FH_Category_FleshReplica</li>
+          <li>FH_Category_LargeFleshBeast</li>
+          <li>FH_Category_GiantFleshBeast</li>
+          <li>FH_Category_FleshItems</li>
+        </UnitCategories>
+        <traitOptions>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Fingerspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Fingerspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shieldspike</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_Shieldspike_Fingerspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Puffspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Toughspike</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_Toughspike_Puffspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Puffspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Shatterspike</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_Shatterspike_Gutspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Trispike</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_Trispike_Gutspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Fleshwind</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_Fleshwind_Whipspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L02_Bulbfreak_Shatterspike_Trispike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_L03_Bulbfreak_Shatterspike_Fleshwind_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_L04_Bulbfreak_Shieldspike_Trispike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_L05_Bulbfreak_Shieldspike_Fleshwind_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_L06_Bulbfreak_Trispike_Trispike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Runaway</hediff>
+            <prerequisiteFusion>FH_Fusion_L07_Bulbfreak_Shatterspike_Toughspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_RapidGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L08_Bulbfreak_Shieldspike_Toughspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_L09_Bulbfreak_Trispike_Toughspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_L10_Bulbfreak_Toughspike_Fleshwind_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_L11_Bulbfreak_Shatterspike_Shieldspike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_L12_Bulbfreak_Puffspike_Shieldspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_L14_Bulbfreak_Trispike_Fleshwind_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbfreak</unit>
+            <hediff>FH_Trait_Degraded</hediff>
+            <prerequisiteFusion>FH_Fusion_L15_Bulbfreak_Toughspike_Toughspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_L16_Acidbulb_Shatterspike_Shatterspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_L17_Acidbulb_Shatterspike_Shieldspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_L19_Acidbulb_Shieldspike_Shieldspike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_L20_Acidbulb_Shieldspike_Trispike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Fragile</hediff>
+            <prerequisiteFusion>FH_Fusion_L22_Acidbulb_Trispike_Trispike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_L23_Acidbulb_Shatterspike_Fleshwind_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_L24_Acidbulb_Shieldspike_Fleshwind_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_RapidGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L25_Acidbulb_Toughspike_Toughspike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L26_Acidbulb_Toughspike_Fleshwind_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_L27_Acidbulb_Puffspike_Toughspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Runaway</hediff>
+            <prerequisiteFusion>FH_Fusion_L28_Acidbulb_Puffspike_Shieldspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_L29_Acidbulb_Trispike_Toughspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Acidbulb</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_L30_Acidbulb_Trispike_Fleshwind_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_L31_Spitbulb_Shatterspike_Shatterspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_RapidGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L33_Spitbulb_Shatterspike_Toughspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L34_Spitbulb_Shieldspike_Shieldspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_L35_Spitbulb_Shieldspike_Toughspike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_L37_Spitbulb_Trispike_Toughspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_L38_Spitbulb_Toughspike_Toughspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_L39_Spitbulb_Shatterspike_Fleshwind_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Runaway</hediff>
+            <prerequisiteFusion>FH_Fusion_L40_Spitbulb_Shieldspike_Fleshwind_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_L41_Spitbulb_Puffspike_Fleshwind_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_L42_Spitbulb_Trispike_Fleshwind_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_L43_Spitbulb_Puffspike_Trispike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_L44_Spitbulb_Puffspike_Toughspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Spitbulb</unit>
+            <hediff>FH_Trait_Degraded</hediff>
+            <prerequisiteFusion>FH_Fusion_L45_Spitbulb_Puffspike_Shieldspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_RapidGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Degraded</hediff>
+            <prerequisiteFusion>FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Runaway</hediff>
+            <prerequisiteFusion>FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Bulbplump</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Cancerous</hediff>
+            <prerequisiteFusion>FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Acidic</hediff>
+            <prerequisiteFusion>FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_RapidGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Runaway</hediff>
+            <prerequisiteFusion>FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Split</hediff>
+            <prerequisiteFusion>FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Robust</hediff>
+            <prerequisiteFusion>FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Swift</hediff>
+            <prerequisiteFusion>FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Tough</hediff>
+            <prerequisiteFusion>FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Sharp</hediff>
+            <prerequisiteFusion>FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Domesticated</hediff>
+            <prerequisiteFusion>FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_BoneSpurGrowth</hediff>
+            <prerequisiteFusion>FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_ExpandedCapacity</hediff>
+            <prerequisiteFusion>FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike</prerequisiteFusion>
+          </li>
+          <li>
+            <unit>FH_Unit_Synbulb</unit>
+            <hediff>FH_Trait_Fragile</hediff>
+            <prerequisiteFusion>FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike</prerequisiteFusion>
+          </li>
+        </traitOptions>
+      </li>
+      <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>50</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity1</li>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>50</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>3</dailyNutritionCost>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>1.5</intervalDays>
+        <radius>10.5</radius>
+        <cellsPerErosion>3</cellsPerErosion>
+        <initialErosionCount>10</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshHiveUnitFuser">
+        <defaultFusion>FH_Fusion_Default</defaultFusion>
+        <category>LittleFlesh</category>
+        <largeCategory>LargeFlesh</largeCategory>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveUpgrader">
+        <upgrades>
+          <!-- 当前没有可用的高级巢群升级 Def。 -->
+        </upgrades>
+      </li>
+      <li>
+        <compClass>FleshHive.CompProgressHolder_FleshHive</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshHiveContainer">
+        <resource>FH_Resource_Nutrition</resource>
+        <healResource>FH_Resource_Nutrition</healResource>
+        <tags>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>FH_NerveCenter</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ElectricInhibitor</li>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">ShardInhibitor</li>
+        </linkableFacilities>
+      </li>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(3,3)</size>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_HarnessedFleshmassHeart</defName>
+    <label>harnessed fleshmass heart</label>
+    <description>The primary organ of a fleshmass catastrophe. The heart draws material through roots extending deep underground. Once it has gathered enough, it spreads fleshmass around itself in cancer-like growth. It will continue growing until it consumes everything. Under the restraint of an archotechnological device, some of the heart's functions have been brought under control.\n\nThe heart can produce an endless supply of flesh and greatly expand the scale of a flesh hive. When needed, the harnessed fleshmass heart can consume a large amount of nutrition and transform into a harnessed fleshtitan to join the battle.</description>
+    <thingClass>FleshHive.Building_HarnessedFleshmassHeart</thingClass>
+    <size>(3,3)</size>
+    <uiIconPath>Things/Building/FH_HarnessedFleshmassHeart/HarnessedFleshmassHeart</uiIconPath>
+    <specialDisplayRadius>40</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.75</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Beauty>-25</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>Impassable</passability>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <selectable>true</selectable>
+    <building>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isEdifice>true</isEdifice>
+      <isInert>true</isInert>
+      <claimable>false</claimable>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>100</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionProducer">
+        <nutritionPerInterval>2</nutritionPerInterval>
+        <intervalTicks>2500</intervalTicks>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>1</intervalDays>
+        <radius>40</radius>
+        <cellsPerErosion>5</cellsPerErosion>
+        <initialErosionCount>10</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_HarnessedFleshmassHeartTransform">
+        <titanKind>FH_HarnessedFleshtitan</titanKind>
+        <nutritionCost>1000</nutritionCost>
+        <iconPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_HarnessedFleshtitan_east</iconPath>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(3,3)</size>
+      </li>
+      <li Class="CompProperties_AmbientSound">
+        <sound>FleshmassHeart_Ambience</sound>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_NerveBundle</defName>
+    <label>hive nerve bundle</label>
+    <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>400</Meat_Twisted>
+    </costList>
+    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_NerveBundle/FH_FleshmassNerveBundle</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <size>(2,2)</size>
+    <specialDisplayRadius>5.5</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>600</MarketValue>
+      <HCF_Stat_HiveCapacity>10</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>10</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>10</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>1</dailyNutritionCost>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>5.5</radius>
+        <cellsPerErosion>2</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_NerveBundle</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_NerveCenter</defName>
+    <label>hive nerve center</label>
+    <description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</description>
+    <researchPrerequisites><li>FH_Research_FleshPrimaryHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>1600</Meat_Twisted>
+    </costList>
+    <thingClass>HiveCreatureFramework.Building_Hive</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_NerveCenter/FH_NerveCenter</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <drawSize>(2.6,2.6)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <size>(3,2)</size>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>1600</MarketValue>
+      <HCF_Stat_HiveCapacity>30</HCF_Stat_HiveCapacity>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompPropertiesHiveGroup_FleshHive">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+          <li>FH_FleshContainer</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveGroupCapacityProvider">
+        <capacity>30</capacity>
+        <capacityUpgrades>
+          <li>FH_Upgrade_HiveCapacity2</li>
+        </capacityUpgrades>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveScaleProvider">
+        <scale>30</scale>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionUpkeep">
+        <dailyNutritionCost>3</dailyNutritionCost>
+      </li>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <HCF_Stat_HiveMaintenanceFactor>0.2</HCF_Stat_HiveMaintenanceFactor>
+        </statOffsets>
+        <linkableBuildings>
+          <li>FH_FleshHive</li>
+          <li>FH_FleshPrimaryNest</li>
+          <li>FH_NerveCenter</li>
+        </linkableBuildings>
+        <maxSimultaneous>5</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+        <requiresLOS>false</requiresLOS>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>3</intervalDays>
+        <radius>10.5</radius>
+        <cellsPerErosion>3</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_Suppressible">
+        <suppressIfAbove>0.05</suppressIfAbove>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(3,2)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_NerveCenter</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshParasiteVat</defName>
+    <label>flesh parasite vat</label>
+    <description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</description>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
+    <thingClass>FleshHive.FleshParasitePod</thingClass>
+    <uiIconPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Icon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,2.5)</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(3,2)</size>
+    <uiIconScale>1</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <inspectorTabs>
+      <li>FleshHive.ITab_Parasitism</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <receivesSignals>true</receivesSignals>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <killedLeavings>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </killedLeavings>
+    <costList>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+      <Meat_Twisted>160</Meat_Twisted>
+    </costList>
+    <building>
+
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompProperties_BuildingOutline">
+        <graphicData>
+          <texPath>Things/Building/FH_FleshParasiteVat/FH_FleshParasiteVat_Outline</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>(3.5,2.5)</drawSize>
+        </graphicData>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshParasiteVat</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshSack</defName>
+    <label>flesh sack</label>
+    <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
+    <thingClass>FleshHive.FleshSack</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshSack</texPath>
+      <graphicClass>FleshHive.Graphic_Random_SquashNStretch</graphicClass>
+      <drawSize>2.5</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <size>(2,2)</size>
+    <specialDisplayRadius>3</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>100</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>1.5</intervalDays>
+        <radius>3</radius>
+        <cellsPerErosion>1</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshSack</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshBlock</defName>
+    <label>flesh block</label>
+    <description>An impassable lump of twisted flesh. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <pathCost>300</pathCost>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <holdsRoof>true</holdsRoof>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass1_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBlock</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_ChitinFleshBlock</defName>
+    <label>chitin flesh block</label>
+    <description>An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
+    <researchPrerequisites><li>FH_Research_BonePlatingFleshBlock</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Wall</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <pathCost>300</pathCost>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <holdsRoof>true</holdsRoof>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isWall>true</isWall>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_Fleshmass_Atlas/Fleshmass2_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_ChitinFleshBlock</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshDoor</defName>
+    <label>flesh door</label>
+    <description>A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>16</Meat_Twisted>
+    </costList>
+    <thingClass>FleshHive.Building_FleshDoor</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshDoor/FH_FleshDoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.885,1.3)</drawSize>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshDoor/FH_FleshDoor_MenuIcon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <drawerType>RealtimeOnly</drawerType>
+    <forceMoveItemsBeforeConstruction>true</forceMoveItemsBeforeConstruction>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>22</MarketValue>
+      <WorkToBuild>850</WorkToBuild>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <isInert>true</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_FleshDoor/FH_FleshDoor_MenuIcon</texPath>
+      </blueprintGraphicData>
+      <ai_chillDestination>false</ai_chillDestination>
+      <canExchangeVacuum>true</canExchangeVacuum>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Forbiddable">
+        <allowNonPlayer>true</allowNonPlayer>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshDoor</building>
+      </li>
+    </comps>
+    <replaceTags>
+      <li>Door</li>
+    </replaceTags>
+    <placeWorkers>
+      <li>PlaceWorker_DoorLearnOpeningSpeed</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshHopper</defName>
+    <label>flesh hopper</label>
+    <description>An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>112</Meat_Twisted>
+    </costList>
+    <thingClass>FleshHive.Building_FleshHopper</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshHopper/FH_FleshHopper</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshHopper/FH_FleshHopper</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHiveGroup</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>105</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveResource">
+        <transferOnEvolution>false</transferOnEvolution>
+        <resources>
+          <FH_Resource_Nutrition>0</FH_Resource_Nutrition>
+        </resources>
+        <tags>
+          <li>Flesh</li>
+          <li>FleshHive</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompPropertiesHiveSpawner_FleshTrait">
+        <compClass>FleshHive.CompHiveSpawner_FleshTrait</compClass>
+        <UnitCategories>
+          <li>FH_Category_FleshItems</li>
+        </UnitCategories>
+      </li>
+      <li Class="FleshHive.CompPropertiesHivePlan_FleshHive" />
+      <li>
+        <compClass>FleshHive.CompProgressHolder_FleshHive</compClass>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshHopper</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshBox</defName>
+    <label>flesh vesicle</label>
+    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>32</Meat_Twisted>
+    </costList>
+    <thingClass>FleshHive.Building_FleshBox</thingClass>
+    <graphicData>
+      <texPath>FH_FleshBox/FH_FleshBox</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <drawSize>(1.1,1.1)</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <uiIconPath>FH_FleshBox/FH_FleshBox</uiIconPath>
+    <uiIconScale>0.9</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.5</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <surfaceType>Item</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <storageGroupTag>FH_FleshBox</storageGroupTag>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Root</li>
+          </categories>
+          <disallowedCategories>
+            <li>Chunks</li>
+            <li>Plants</li>
+            <li>Buildings</li>
+          </disallowedCategories>
+          <specialFiltersToDisallow>
+            <li>AllowLargeCorpses</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <thingDefs>
+            <li>Bioferrite</li>
+            <li>FH_NerveFlesh</li>
+            <li>FH_FleshCarapace</li>
+            <li>Shard</li>
+            <li>FH_DreadmeldSeed</li>
+            <li>FH_NexusmeldSeed</li>
+            <li>FH_FuriousmeldSeed</li>
+            <li>FH_BastionmeldSeed</li>
+            <li>FH_FissionmeldSeed</li>
+          </thingDefs>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBox</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshBarricade</defName>
+    <label>flesh barricade</label>
+    <description>A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
+    <researchPrerequisites><li>FH_Research_ImmuneSystem</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Barricades</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <pathCost>42</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.55</fillPercent>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Beauty>-3</Beauty>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_FleshBarricade/FH_Flesh_Barricade_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBarricade</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_ChitinFleshBarricade</defName>
+    <label>chitin flesh barricade</label>
+    <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
+    <researchPrerequisites><li>FH_Research_BonePlatingFleshBlock</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>8</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Barricades</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_MenuIcon</uiIconPath>
+    <uiIconScale>1.2</uiIconScale>
+    <altitudeLayer>DoorMoveable</altitudeLayer>
+    <pathCost>42</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.55</fillPercent>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Beauty>-3</Beauty>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isFence>true</isFence>
+      <isPlaceOverableWall>true</isPlaceOverableWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/FH_FleshBarricade/FH_FleshBarricade2_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_ChitinFleshBarricade</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshBed</defName>
+    <label>flesh bed</label>
+    <description>A single bed made of flesh. Soft flesh has grown into a pocket-like structure and a pillow for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>72</Meat_Twisted>
+    </costList>
+    <thingClass>Building_Bed</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBed/FH_FleshBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(1,2)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.80</Comfort>
+      <BedRestEffectiveness>1.00</BedRestEffectiveness>
+      <SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <Beauty>1</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <buildingTags>
+        <li>Bed</li>
+      </buildingTags>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshBed</building>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshDoubleBed</defName>
+    <label>flesh double bed</label>
+    <description>A double bed made of flesh. Soft flesh has grown into a pocket-like structure and pillows for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>136</Meat_Twisted>
+    </costList>
+    <thingClass>Building_Bed</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshBed/FH_FleshDoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(2,2)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.80</Comfort>
+      <BedRestEffectiveness>1.00</BedRestEffectiveness>
+      <SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <Beauty>2</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <buildingTags>
+        <li>Bed</li>
+      </buildingTags>
+      <bed_showSleeperBody>false</bed_showSleeperBody>
+      <bed_healPerDay>4</bed_healPerDay>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshDoubleBed</building>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshColumn</defName>
+    <label>flesh column</label>
+    <description>A column made of flesh, used to support roofs. It does not block sight or movement.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>32</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshColumn/FH_FleshColumn</texPath>
+      <graphicClass>FleshHive.Graphic_Single_SquashNStretchSafe</graphicClass>
+      <drawSize>(0.75,1.125)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.25</fillPercent>
+    <holdsRoof>true</holdsRoof>
+    <passability>PassThroughOnly</passability>
+    <pathCost>0</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshColumn</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshStool</defName>
+    <label>flesh stool</label>
+    <description>A simple stool made of flesh for people to sit on. It is unexpectedly comfortable. It can be used near dining tables, workbenches, or elsewhere.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>40</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshStool/FH_FleshStool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <fillPercent>0.2</fillPercent>
+    <pathCost>30</pathCost>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.70</Comfort>
+      <Beauty>1</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <replaceTags>
+      <li>Chair</li>
+    </replaceTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshStool</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableSmall</defName>
+    <label>flesh table (1x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>40</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable1x2</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(1,2)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableSmall</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableSquare</defName>
+    <label>flesh table (2x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable2x2_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.3,3.3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(2,2)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableSquare</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableLong</defName>
+    <label>flesh table (2x4)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>152</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable2x4</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,5)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(2,4)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>true</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableLong</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>FH_FleshTableLarge</defName>
+    <label>flesh table (3x3)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>160</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshTable/FH_FleshTable3x3_north</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4.4,4.4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <size>(3,3)</size>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <surfaceType>Eat</surfaceType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <building>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <replaceTags>
+      <li>Table</li>
+    </replaceTags>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshTableLarge</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshPower</defName>
+    <label>flesh power generator</label>
+    <description>Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive.</description>
+    <costList>
+      <Meat_Twisted>80</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_FleshPower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.25,2.25)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(2,2)</size>
+    <fillPercent>0.75</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <rotatable>false</rotatable>
+    <researchPrerequisites>
+      <li>FH_Research_NutritionCycle</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.7</Flammability>
+      <MarketValue>145</MarketValue>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="FleshHive.CompProperties_FleshPowerPlant">
+        <basePowerConsumption>-1000</basePowerConsumption>
+        <powerOutput>1000</powerOutput>
+        <dailyNutritionCost>1.2</dailyNutritionCost>
+        <transmitsPower>true</transmitsPower>
+        <soundAmbientProducingPower>WoodFiredGenerator_Ambience</soundAmbientProducingPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(255,171,171,0)</glowColor>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(2,2)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshPower</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_FleshLamp</defName>
+    <label>flesh lamp</label>
+    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. They slightly increase the growth of hive activity.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>32</Meat_Twisted>
+    </costList>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/FH_Fleshbulb/Variants</texPath>
+      <graphicClass>FleshHive.Graphic_Random_SquashNStretch</graphicClass>
+      <drawSize>0.9</drawSize>
+      <shaderType>BuildingSquashNStretch</shaderType>
+      <maxSnS>(.9, .95)</maxSnS>
+      <offsetSnS>(.5, -.45)</offsetSnS>
+    </graphicData>
+    <specialDisplayRadius>3</specialDisplayRadius>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>0</pathCost>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MarketValue>24</MarketValue>
+      <Beauty>-12</Beauty>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="FleshHive.CompProperties_FleshBuildingCache" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(255,171,171,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>21</heatPerSecond>
+        <heatPushMinTemperature>-999</heatPushMinTemperature>
+        <heatPushMaxTemperature>21</heatPushMaxTemperature>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshSpread">
+        <intervalDays>0.5</intervalDays>
+        <radius>3</radius>
+        <cellsPerErosion>4</cellsPerErosion>
+        <initialErosionCount>0</initialErosionCount>
+      </li>
+      <li Class="FleshHive.CompProperties_HiveNutritionProducer">
+        <nutritionPerInterval>0.05</nutritionPerInterval>
+        <intervalTicks>2500</intervalTicks>
+        <activityPerHour>0.005</activityPerHour>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshmassBase">
+        <size>(1,1)</size>
+      </li>
+      <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
+        <building>FH_Building_FleshLamp</building>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>FH_FleshTree</defName>
+    <label>flesh tree</label>
+    <description>A towering tree made entirely of flesh. Infect a harbinger tree with twisted meat to transform it into a flesh tree. It feeds on nearby corpses, raw meat, and heads. Unlike a harbinger tree, the flesh tree is connected to the flesh hive: the nutrition it absorbs supports the whole hive instead of reproducing itself.</description>
+    <thingClass>FleshHive.FleshTree</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Indexed</graphicClass>
+      <texPath>Things/Plant/FH_FleshTree/Stages</texPath>
+      <shadowData>
+        <volume>(0.4, 0.3, 0.1)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </shadowData>
+    </graphicData>
+    <minifiedDef>MinifiedTree</minifiedDef>
+    <statBases>
+      <Beauty>-10</Beauty>
+      <BeautyOutdoors>-10</BeautyOutdoors>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>230</MaxHitPoints>
+      <MeditationFocusStrength>0.14</MeditationFocusStrength>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <ingestible />
+    <tickerType>Normal</tickerType>
+    <neverMultiSelect>false</neverMultiSelect>
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <canScatterOver>false</canScatterOver>
+    <plant>
+      <pollution>Any</pollution>
+      <growDays>10</growDays>
+      <visualSizeRange>1.5~2.1</visualSizeRange>
+      <sowMinSkill>0</sowMinSkill>
+      <sowTags Inherit="False"/>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility>
+      <wildClusterWeight>0</wildClusterWeight>
+      <sowWork>400</sowWork>
+      <harvestYield>15</harvestYield>
+      <harvestedThingDef>Bioferrite</harvestedThingDef>
+      <treeCategory>Super</treeCategory>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <sowResearchPrerequisites Inherit="False" />
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <showGrowthInInspectPane>true</showGrowthInInspectPane>
+      <minSpacingBetweenSamePlant>4.9</minSpacingBetweenSamePlant>
+      <harvestWork>1000</harvestWork>
+      <choppedThingDef>FH_ChoppedStump_FleshTree</choppedThingDef>
+      <smashedThingDef>FH_SmashedStump_FleshTree</smashedThingDef>
+    </plant>
+    <comps>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Void</li>
+        </focusTypes>
+      </li>
+      <li Class="CompProperties_PlantPreventCutting"/>
+    </comps>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>FH_FleshBush</defName>
+    <label>fleshberry bush</label>
+    <description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <costList>
+      <Meat_Twisted>40</Meat_Twisted>
+    </costList>
+    <thingClass>FleshHive.FleshBush</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.2</fillPercent>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutPlant</shaderType>
+      <texPath>Things/Plant/FH_FleshBush/FH_FleshBush</texPath>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+    </graphicData>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <pathCost>30</pathCost>
+    <plant>
+      <pollution>Any</pollution>
+      <fertilityMin>0</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility>
+      <soundHarvesting>Harvest_Standard</soundHarvesting>
+      <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+      <sowTags Inherit="False" />
+      <sowWork>170</sowWork>
+      <harvestWork>250</harvestWork>
+      <visualSizeRange>0.95~1.7</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <growDays>6</growDays>
+      <leaflessGraphicPath>Things/Plant/FH_FleshBush/FH_FleshBush</leaflessGraphicPath>
+      <immatureGraphicPath>Things/Plant/FH_FleshBush/FH_FleshBushImmature</immatureGraphicPath>
+      <harvestYield>10</harvestYield>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.3</harvestAfterGrowth>
+      <harvestedThingDef>FH_FleshBerry</harvestedThingDef>
+      <wildClusterRadius>5</wildClusterRadius>
+      <wildClusterWeight>250</wildClusterWeight>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+      <dieIfNoSunlight>false</dieIfNoSunlight>
+      <growMinGlow>0</growMinGlow>
+      <minGrowthTemperature>-9999</minGrowthTemperature>
+      <maxGrowthTemperature>9999</maxGrowthTemperature>
+      <dieFromToxicFallout>false</dieFromToxicFallout>
+    </plant>
+    <selectable>true</selectable>
+    <statBases>
+      <Flammability>0</Flammability>
+      <BeautyOutdoors>-2</BeautyOutdoors>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>2.5</Nutrition>
+    </statBases>
+    <tradeTags>
+      <li>FH_FleshBuilding</li>
+    </tradeTags>
+    <comps>
+      <li Class="FleshHive.CompProperties_AdditionalHarvestYield">
+        <yields>
+          <Meat_Twisted>20</Meat_Twisted>
+        </yields>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpChoppedBase">
+    <defName>FH_ChoppedStump_FleshTree</defName>
+    <label>chopped flesh tree stump</label>
+    <description>A stump left behind after a flesh tree has been felled.</description>
+    <graphicData>
+      <texPath>Things/Plant/FH_FleshTree/FH_StumpChopped_FleshTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="StumpSmashedBase">
+    <defName>FH_SmashedStump_FleshTree</defName>
+    <label>smashed flesh tree stump</label>
+    <description>The pulped remains of a destroyed flesh tree.</description>
+    <graphicData>
+      <texPath>Things/Plant/FH_FleshTree/StumpSmashed_FleshTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>FH_DormantFissionmeld</defName>
+    <label>weakened fissionmeld</label>
+    <description>A structure produced by a fissionmeld in its weakened state to prevent its own complete death.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld_Build</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4.5,4.5)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+    </graphicData>
+    <size>(3,3)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <fillPercent>0.75</fillPercent>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <blockWind>true</blockWind>
+    <killedLeavings>
+      <FH_FissionmeldSeed>1</FH_FissionmeldSeed>
+      <Shard>3</Shard>
+    </killedLeavings>
+    <building>
+      <claimable>false</claimable>
+    </building>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="FleshHive.CompProperties_FissionmeldDormant">
+        <resurrectKind>FH_Fissionmeld</resurrectKind>
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <spawnPointsRange>50~150</spawnPointsRange>
+        <spawnRadius>5</spawnRadius>
+        <spawnIntervalTicks>600</spawnIntervalTicks>
+        <resurrectTicks>3600</resurrectTicks>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_NerveFlesh</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>nerve flesh</label>
+    <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_NerveFlesh</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Mass>0.15</Mass>
+      <Flammability>0.5</Flammability>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_FleshCarapace</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>flesh carapace</label>
+    <description>A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material.</description>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshCarapace</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+      <Mass>0.35</Mass>
+      <StuffPower_Armor_Sharp>0.82</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.52</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.45</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.85</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <stuffProps>
+      <stuffAdjective>carapace</stuffAdjective>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0</commonality>
+      <allowedInStuffGeneration>false</allowedInStuffGeneration>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(120, 86, 86)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>1.3</MaxHitPoints>
+        <Beauty>0.65</Beauty>
+        <Flammability>0.85</Flammability>
+        <MeleeWeapon_CooldownMultiplier>1</MeleeWeapon_CooldownMultiplier>
+        <DoorOpenSpeed>1.1</DoorOpenSpeed>
+        <WorkToBuild>1.6</WorkToBuild>
+        <WorkToMake>1.6</WorkToMake>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>FH_FleshBerry</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>fleshberry</label>
+    <description>A red, fleshy fruit grown from a twisted flesh bush. It can be eaten raw, but its dense metallic taste lingers unpleasantly. The fruit is probably still alive; it does not rot.</description>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Plant/FH_FleshBush/FH_MeatBerries</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Beauty>-4</Beauty>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Mass>0.027</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.125</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <MarketValue>1.2</MarketValue>
+    </statBases>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought/>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+      <foodType>Meat</foodType>
+      <specialThoughtDirect>FH_AteRawFleshberry</specialThoughtDirect>
+      <specialThoughtAsIngredient>FH_AteCookedFleshberry</specialThoughtAsIngredient>
+    </ingestible>
+    <ingredient>
+      <mergeCompatibilityTags>
+        <li>Meat</li>
+      </mergeCompatibilityTags>
+    </ingredient>
+    <thingCategories Inherit="False">
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_DreadmeldSeed</defName>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>dreadmeld seed</label>
+    <description>The fleshy core of a dreadmeld. It is a tumor-like lump made entirely of flesh, beating endlessly like a heart. A dreadmeld seed can be used to cultivate your own flesh hive or giant fleshbeast, or consumed by a dreadmeld to strengthen itself.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_DreadmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <meld>FH_Dreadmeld</meld>
+      </li>
+    </modExtensions>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_NexusmeldSeed</defName>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>nexusmeld seed</label>
+    <description>The fleshy core of a nexusmeld. It is a tumor-like lump made entirely of flesh, with green patterns of nerve tissue growing across it. It beats endlessly like a heart. A nexusmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a nexusmeld to strengthen itself.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_NexusmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <meld>FH_Nexusmeld</meld>
+      </li>
+    </modExtensions>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_FuriousmeldSeed</defName>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>furiousmeld seed</label>
+    <description>The fleshy core of a furiousmeld. It is a tumor-like lump made entirely of flesh, covered with a layer of red carapace. It beats endlessly like a heart. A furiousmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a furiousmeld to strengthen itself.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FuriousmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <meld>FH_Furiousmeld</meld>
+      </li>
+    </modExtensions>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_FissionmeldSeed</defName>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>fissionmeld seed</label>
+    <description>The fleshy core of a fissionmeld. It is a tumor-like lump made entirely of flesh, with many bony spikes growing from it. It beats endlessly like a heart. A fissionmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a fissionmeld to strengthen itself.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_FissionmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <meld>FH_Fissionmeld</meld>
+      </li>
+    </modExtensions>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FH_BastionmeldSeed</defName>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>bastionmeld seed</label>
+    <description>The fleshy core of a bastionmeld. It is a tumor-like lump made entirely of flesh, covered with pieces of metallic carapace. It beats endlessly like a heart. A bastionmeld seed can be used to cultivate your own giant fleshbeast, or consumed by a bastionmeld to strengthen itself.</description>
+    <graphicData>
+      <texPath>Things/Item/FH_BastionmeldSeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Beauty>-10</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>8</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>800</MarketValue>
+    </statBases>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <meld>FH_Bastionmeld</meld>
+      </li>
+    </modExtensions>
+    <thingCategories Inherit="False">
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>Tentacle</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>flesh tentacle</label>
+    <description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</description>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FH_FleshAdaptationModule</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>flesh adaptation module</label>
+    <description>A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive.</description>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+      <MarketValue>200</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="SerumBase" MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_FleshSymbiosisSerum</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>symbiosis serum</label>
+    <description>A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive.</description>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/Serum/SerumMetalblood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <compClass>FleshHive.CompUseEffect_FleshAdaptationSerum</compClass>
+        <hediffDef>FH_FleshAdaptation</hediffDef>
+        <allowRepeatedUse>false</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+    </comps>
+    <recipeMaker Inherit="False" IsNull="True" />
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FH_FleshSymbiosisModule</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>flesh symbiosis module</label>
+    <description>A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating.</description>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+      <MarketValue>200</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FleshWhip</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>flesh whip</label>
+    <description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</description>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FleshmassStomach</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>fleshmass stomach</label>
+    <description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>FleshmassLung</defName>
+    <tradeTags>
+      <li>FH_FleshAdaptationBeauty</li>
+    </tradeTags>
+    <label>fleshmass lung</label>
+    <description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Item/FH_FleshHealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

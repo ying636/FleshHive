@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[(@Name="BaseFleshbeast" or defName="Meat_Twisted") and not(tradeTags)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[(@Name="BaseFleshbeast" or defName="Meat_Twisted") and not(tradeTags)]</xpath>
+      <value>
+        <tradeTags />
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[tradeTags/li="FH_FleshBuilding" or @Name="BaseFleshbeast" or defName="Meat_Twisted"]/tradeTags[not(li="FH_FleshAdaptationBeauty")]</xpath>
+    <value>
+      <li>FH_FleshAdaptationBeauty</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/TerrainDef[defName="Flesh" and not(tags)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/TerrainDef[defName="Flesh" and not(tags)]</xpath>
+      <value>
+        <tags />
+      </value>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TerrainDef[defName="Flesh" or defName="FH_FleshCarapaceFloor"]/tags[not(li="FH_FleshAdaptationBeauty")]</xpath>
+    <value>
+      <li>FH_FleshAdaptationBeauty</li>
+    </value>
+  </Operation>
+</Patch>

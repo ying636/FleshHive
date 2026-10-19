@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <LifeStageDef ParentName="EntityFullyFormed">
+    <defName>FH_EntityFullyFormed_Milkable</defName>
+    <milkable>true</milkable>
+  </LifeStageDef>
+
+</Defs>

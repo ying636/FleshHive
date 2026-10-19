@@ -242,6 +242,8 @@ The host ignores terrain movement penalties and has 120% Move Speed.</descriptio
         <totalBleedFactor>0.75</totalBleedFactor>
         <statOffsets>
           <SocialImpact>-0.05</SocialImpact>
+          <ComfyTemperatureMax>10</ComfyTemperatureMax>
+          <ComfyTemperatureMin>-10</ComfyTemperatureMin>
         </statOffsets>
         <makeImmuneTo>
           <li>WoundInfection</li>

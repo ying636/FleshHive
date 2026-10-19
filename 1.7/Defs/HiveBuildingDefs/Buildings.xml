@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshPower</defName>
+    <label>flesh power generator</label>
+    <description>Generates electricity by consuming hive nutrition, automatically drawing nutrition from the hive.</description>
+    <building>FH_FleshPower</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>250</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_NutritionCycle</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshFloor</defName>
+    <label>flesh floor</label>
+    <description>A dense mat of living flesh spread over the ground. It must be extended from existing flesh floor.</description>
+    <terrain>Flesh</terrain>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <workAmount>100</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshFloor" />
+    <resourcesCosts>
+      <FH_Resource_Nutrition>1.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshCarapaceFloor</defName>
+    <label>flesh carapace tile</label>
+    <description>A carapace floor specially grown by the flesh hive. It is slightly flammable, but quick to clean, easier to walk on, and more attractive than ordinary flesh. Natural flesh hives do not grow structures like this; it appears to be a specialized organ evolved for living alongside humans.</description>
+    <terrain>FH_FleshCarapaceFloor</terrain>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <workAmount>100</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_FleshFurniture</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshCarapaceFloor" />
+    <resourcesCosts>
+        <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_NerveBundle</defName>
+    <label>hive nerve bundle</label>
+    <description>A node in the fleshmass nervous system. It can expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state.</description>
+    <building>FH_NerveBundle</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>5.5</specialDisplayRadius>
+    <workAmount>400</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>25</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_NerveCenter</defName>
+    <label>hive nerve center</label>
+    <description>The core node of the fleshmass nervous system. It can greatly expand hive scale and provide an independent hive control beacon. It spreads flesh carpet outward, expanding the hive. When fleshbeasts have low control, they need to return to the node to recover control, or they may enter a berserk state. A hive nerve center makes fleshbeasts easier to control.</description>
+    <building>FH_NerveCenter</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>10.5</specialDisplayRadius>
+    <workAmount>700</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_FleshPrimaryHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>5</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshSack</defName>
+    <label>flesh sack</label>
+    <description>A swollen sack of flesh. These immobile flesh beasts serve as digestive organs. Place living creatures inside to continuously supply the hive with nutrition. They cannot digest inorganic matter, and when digestion is complete they will eject desiccated remains.</description>
+    <building>FH_FleshSack</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>3</specialDisplayRadius>
+    <workAmount>400</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_NutritionCycle</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBlock</defName>
+    <label>flesh block</label>
+    <description>An impassable lump of twisted flesh. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
+    <building>FH_FleshBlock</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Walls</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
+    <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
+      <research>FH_Research_BonePlatingFleshBlock</research>
+      <showWhenFinished>false</showWhenFinished>
+      <replacementBuilding>FH_ChitinFleshBlock</replacementBuilding>
+    </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>0.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_ChitinFleshBlock</defName>
+    <label>chitin flesh block</label>
+    <description>An impassable lump of twisted flesh reinforced with hardened chitin. It pulses and trembles, filled with terrible vitality. It can support a roof.</description>
+    <building>FH_ChitinFleshBlock</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Walls</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
+    <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BonePlatingFleshBlock</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
+      <research>FH_Research_BonePlatingFleshBlock</research>
+      <showWhenFinished>true</showWhenFinished>
+    </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>0.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDoor</defName>
+    <label>flesh door</label>
+    <description>A door grown from twisted flesh. It writhes open for approaching creatures and seals the passage behind them.</description>
+    <building>FH_FleshDoor</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshDoor" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBarricade</defName>
+    <label>flesh barricade</label>
+    <description>A waist-high, sturdy lump of twisted flesh used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Flesh barricades will block certain animals the same way that fences do.</description>
+    <building>FH_FleshBarricade</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Defenses</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
+    <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ImmuneSystem</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
+      <research>FH_Research_BonePlatingFleshBlock</research>
+      <showWhenFinished>false</showWhenFinished>
+      <replacementBuilding>FH_ChitinFleshBarricade</replacementBuilding>
+    </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>0.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshHopper</defName>
+    <label>flesh hopper</label>
+    <description>An organ that allows the flesh hive to vomit out internally processed products. Through a flesh hopper, the hive can be ordered to consume nutrition and produce supplies.</description>
+    <building>FH_FleshHopper</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>120</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>7</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBox</defName>
+    <label>flesh vesicle</label>
+    <description>A flesh organ used for storage. Items kept inside it never age, and it does not affect the beauty of its surroundings. Any stored item with nutrition is automatically digested into hive nutrition. Other materials remain available for use by the flesh hive.</description>
+    <building>FH_FleshBox</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>120</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshParasiteVat</defName>
+    <label>flesh parasite vat</label>
+    <description>A flesh device made from sharp bone-spike tentacles and clotted flesh. It gradually devours fleshbeast cells and implants them into a host, allowing the fleshbeast to survive independently inside the host's body. The parasite strengthens its host and can actively attack the host's enemies, but its nutrition must be supplied by the host, causing the host to become hungry more easily.</description>
+    <building>FH_FleshParasiteVat</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>300</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_FleshbeastCoexistence</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshTurret</defName>
+    <label>bone spitter</label>
+    <description>A small, short-ranged defensive fleshmass organ. After prolonged use, it needs a large amount of nutrition to grow replacement bone spikes.</description>
+    <building>FH_FleshTurret</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>180</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ImmuneSystem</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_FleshCarapace>30</FH_FleshCarapace>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshmassSpitter</defName>
+    <label>fleshmass spitter</label>
+    <description>A defensive fleshmass organ that can spit acid long distances. The acid is a natural byproduct of toxins filtered from the surrounding biomass.\n\nConsumes 1 hive nutrition per day.</description>
+    <building>FH_FleshmassSpitter</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>300</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexImmuneSystem</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshmassSpitterGhost" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>2</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshSpreader</defName>
+    <label>flesh burster</label>
+    <description>A flesh organ made from clusters of high-pressure vesicles and a fragile outer wall. It explodes when triggered by a living creature or hit by bullets, spreading flesh plates across the nearby ground. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense it when calm.</description>
+    <building>FH_FleshSpreader</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>180</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexImmuneSystem</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDigester</defName>
+    <label>flesh digester</label>
+    <description>A flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 4 hive nutrition per day and increases hive activity by 0.02 per hour.</description>
+    <building>FH_FleshDigester</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>520</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ComplexImmuneSystem</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>4</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>80</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDigesterS</defName>
+    <label>small flesh digester</label>
+    <description>A small flesh neural organ responsible for guarding the hive. It activates nearby flesh to lash at intruders, hindering their movement and inflicting damage.\n\nConsumes 0.5 hive nutrition per day.</description>
+    <building>FH_FleshDigesterS</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>130</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_ImmuneSystem</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <requirments>
+      <FH_NerveFlesh>1</FH_NerveFlesh>
+    </requirments>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>20</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_ChitinFleshBarricade</defName>
+    <label>chitin flesh barricade</label>
+    <description>A waist-high, sturdy lump of twisted flesh reinforced with hardened chitin. It is used to stop incoming bullets. Though unsightly, it provides better cover than other low objects. Chitin flesh barricades will block certain animals the same way that fences do.</description>
+    <building>FH_ChitinFleshBarricade</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Defenses</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
+    <workAmount>150</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_BonePlatingFleshBlock</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprintResearchVisibility">
+      <research>FH_Research_BonePlatingFleshBlock</research>
+      <showWhenFinished>true</showWhenFinished>
+    </worker>
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>0.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshLamp</defName>
+    <label>flesh lamp</label>
+    <description>A spherical lump of flesh. These fleshbeast organs refine and store nutrition for nearby flesh masses. This chemical process makes them emit a soft bioluminescent glow. They slightly increase the growth of hive activity.</description>
+    <building>FH_FleshLamp</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <specialDisplayRadius>3</specialDisplayRadius>
+    <workAmount>100</workAmount>
+    <researchPrerequisites>
+      <li>FH_Research_NutritionCycle</li>
+    </researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshColumn</defName>
+    <label>flesh column</label>
+    <description>A column made of flesh, used to support roofs. It does not block sight or movement.</description>
+    <building>FH_FleshColumn</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBush</defName>
+    <label>fleshberry bush</label>
+    <description>A strange fleshy mass with a few thorns, like a twisted copy of some ordinary shrub. It grows edible red fleshberries and yields a large amount of twisted meat when harvested.</description>
+    <building>FH_FleshBush</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <drawStyleCategory>Floors</drawStyleCategory>
+    <dragDrawMeasurements>true</dragDrawMeasurements>
+    <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_NutritionCycle</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshPlantBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshStool</defName>
+    <label>flesh stool</label>
+    <description>A simple stool made of flesh for people to sit on. It is unexpectedly comfortable. It can be used near dining tables, workbenches, or elsewhere.</description>
+    <building>FH_FleshStool</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshTableSmall</defName>
+    <label>flesh table (1x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <building>FH_FleshTableSmall</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>2.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshTableSquare</defName>
+    <label>flesh table (2x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <building>FH_FleshTableSquare</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>140</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshTableLong</defName>
+    <label>flesh table (4x2)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <building>FH_FleshTableLong</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>220</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>9.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshTableLarge</defName>
+    <label>flesh table (3x3)</label>
+    <description>A flat lump of flesh shaped into a table. People eat off it when chairs are placed facing it.</description>
+    <building>FH_FleshTableLarge</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>240</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>10</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshBed</defName>
+    <label>flesh bed</label>
+    <description>A single bed made of flesh. Soft flesh has grown into a pocket-like structure and a pillow for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <building>FH_FleshBed</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>100</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>4.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+  <FleshHive.FleshHiveBuildingDef>
+    <defName>FH_Building_FleshDoubleBed</defName>
+    <label>flesh double bed</label>
+    <description>A double bed made of flesh. Soft flesh has grown into a pocket-like structure and pillows for resting. It is unexpectedly comfortable, and those who rest on it recover from injuries more quickly.</description>
+    <building>FH_FleshDoubleBed</building>
+    <category>FH_BuildingCategory_Flesh</category>
+    <workAmount>160</workAmount>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <worker Class="FleshHive.HiveBuildingWorker_FleshBlueprint" />
+    <placeWorkers>
+      <li Class="FleshHive.PlaceWorker_RequireFleshTerrain" />
+    </placeWorkers>
+    <resourcesCosts>
+      <FH_Resource_Nutrition>8.5</FH_Resource_Nutrition>
+    </resourcesCosts>
+  </FleshHive.FleshHiveBuildingDef>
+
+</Defs>

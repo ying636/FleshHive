@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <EffecterDef>
+    <defName>FH_Effect_TitanDevastatingStrikeLightning</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <fleckDef>FH_Fleck_TitanElectricalSpark</fleckDef>
+        <chancePerTick>0.2</chancePerTick>
+        <positionRadius>6</positionRadius>
+        <positionRadiusMin>3</positionRadiusMin>
+      </li>
+    </children>
+  </EffecterDef>
+
+</Defs>

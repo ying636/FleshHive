@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
     <statBases>
@@ -719,6 +719,8 @@
         <bioferriteDensity>2</bioferriteDensity>
       </li>
       <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <overrideDuty_Attack>FH_FleshReplicaAttack</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_FleshReplicaDefend</overrideDuty_Defend>
         <overrideNeedDef>FH_Need_Control</overrideNeedDef>
         <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
           <faction>Entities</faction>
@@ -776,6 +778,13 @@
     <race>FH_FleshDeadguard</race>
     <forceNoDeathNotification>true</forceNoDeathNotification>
     <combatPower>30</combatPower>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <combatMode>Ranged</combatMode>
+        <seekCover>true</seekCover>
+        <targetAcquireRadius>36</targetAcquireRadius>
+      </li>
+    </modExtensions>
     <startingHediffs>
       <li>
         <def>FH_FleshDeadguardLifespan</def>

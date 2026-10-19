@@ -312,6 +312,7 @@
           <li>Firefighter</li>
           <li>Cleaning</li>
           <li>Hauling</li>
+          <li>BasicWorker</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -398,6 +399,7 @@
         <availableRoutineWorks>
           <li>Firefighter</li>
           <li>Hauling</li>
+          <li>BasicWorker</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -505,6 +507,7 @@
           <li>Firefighter</li>
           <li>Hauling</li>
           <li>PlantCutting</li>
+          <li>BasicWorker</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -606,6 +609,7 @@
         <availableRoutineWorks>
           <li>Firefighter</li>
           <li>Hauling</li>
+          <li>BasicWorker</li>
         </availableRoutineWorks>
         <tags>
           <li>Flesh</li>
@@ -2434,6 +2438,10 @@
     <modExtensions>
       <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
         <skillDuty>FH_Skill_Synbulb</skillDuty>
+        <combatMode>Ranged</combatMode>
+        <minimumRange>15</minimumRange>
+        <maximumRange>18.9</maximumRange>
+        <targetAcquireRadius>48</targetAcquireRadius>
       </li>
     </modExtensions>
     <lifeStages>

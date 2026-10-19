@@ -24,6 +24,10 @@ public class Tentacle_RangeAttack : Tentacle_Attackable
 
     public override void Attack(Thing t)
     {
+        if (HostDownedAttackBlocked)
+        {
+            return;
+        }
         Pawn pawn = this.Comp.parent.pawn;
         LaunchProjectile(pawn, t);
         this.rotateTime = this.Prop.rotatingTime;
@@ -40,7 +44,7 @@ public class Tentacle_RangeAttack : Tentacle_Attackable
 
     public override void FindAttackTargetAndAttack()
     {
-        if (this.Comp?.Pawn is not { Spawned: true } pawn || pawn.Map == null)
+        if (HostDownedAttackBlocked || this.Comp?.Pawn is not { Spawned: true } pawn || pawn.Map == null)
         {
             return;
         }

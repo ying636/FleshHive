@@ -21,12 +21,7 @@ public class JobDriver_SuppressFleshHiveActivity : JobDriver
         this.FailOn(() => SuppressTarget.TryGetComp<CompSuppressible>() == null);
 
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-        Toil suppression = SuppressActivity();
-        yield return suppression;
-        yield return Toils_Jump.JumpIf(suppression, () => !job.playerForced
-            && SuppressTarget.Map?.GetComponent<MapComponent_FleshHive>() is { } mapComp
-            && mapComp.Activity > mapComp.ActivityLimit * (mapComp.AutoSuppressActivityThreshold - 0.05f)
-            && !Mathf.Approximately(mapComp.Activity, mapComp.ActivityLimit * (mapComp.AutoSuppressActivityThreshold - 0.05f)));
+        yield return SuppressActivity();
     }
 
     private Toil SuppressActivity()

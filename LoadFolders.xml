@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <loadFolders>
   <v1.6>
     <li>/</li>
@@ -11,4 +11,4 @@
     <li IfModNotActive="CETeam.CombatExtended">Compatibility/WithoutCombatExtended</li>
     <li IfModActive="neku.largepawns">Compatibility/LargePawns</li>
   </v1.6>
-</loadFolders>
+<v1.7><li>/</li><li>1.7</li><li IfModActive="Ludeon.RimWorld.Odyssey">1.7/Compatibility/Odyssey</li><li IfModActiveAll="sarg.alphabiomes,Ludeon.RimWorld.Odyssey,Ludeon.RimWorld.Anomaly">1.7/Compatibility/AlphaBiomes</li><li IfModActive="FrozenSnowFox.ComplexJobs">1.7/Compatibility/ComplexJobs</li><li IfModActive="FB.DemobRoka">1.7/Compatibility/FleshbeastColony</li><li IfModActive="CETeam.CombatExtended">1.7/Compatibility/CombatExtended</li><li IfModNotActive="CETeam.CombatExtended">1.7/Compatibility/WithoutCombatExtended</li><li IfModActive="neku.largepawns">1.7/Compatibility/LargePawns</li></v1.7></loadFolders>

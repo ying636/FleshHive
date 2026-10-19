@@ -3,7 +3,7 @@
 
   <ThinkTreeDef>
     <defName>FH_ThinkTree_FleshBeast</defName>
-    <thinkRoot Class="ThinkNode_Priority">
+    <thinkRoot Class="FleshHive.ThinkNode_FleshHiveAllowedArea">
       <subNodes>
         <li Class="ThinkNode_ConditionalMustKeepLyingDown">
           <subNodes>

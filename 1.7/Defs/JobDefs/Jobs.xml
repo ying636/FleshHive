@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>FH_Job_PutPawnInParasitePod</defName>
+    <driverClass>FleshHive.JobDriver_PutPawnInParasitePod</driverClass>
+    <reportString>carrry TargetA to TargetB.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_EnterParasitePod</defName>
+    <driverClass>FleshHive.JobDriver_EnterParasitePod</driverClass>
+    <reportString>enter parasite pod.</reportString>
+  </JobDef>
+
+
+  <JobDef>
+    <defName>FH_Job_RefillTwistedFlesh</defName>
+    <driverClass>FleshHive.JobDriver_RefillTwistedFlesh</driverClass>
+    <reportString>refilling twisted flesh.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_RefillTwistedFlesh_Help</defName>
+    <driverClass>FleshHive.JobDriver_RefillTwistedFlesh_Help</driverClass>
+    <reportString>refilling TargetB's twisted flesh.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_FillFleshSack</defName>
+    <driverClass>FleshHive.JobDriver_FillFleshSack</driverClass>
+    <reportString>carrying TargetA to flesh sack.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_InfectHarbingerTree</defName>
+    <driverClass>FleshHive.JobDriver_InfectHarbingerTree</driverClass>
+    <reportString>infecting TargetA.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_SuppressFleshHiveActivity</defName>
+    <driverClass>FleshHive.JobDriver_SuppressFleshHiveActivity</driverClass>
+    <reportString>suppressing TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_MountParasiticWeapon</defName>
+    <driverClass>FleshHive.JobDriver_MountParasiticWeapon</driverClass>
+    <reportString>mounting TargetA.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_UseShardForParasiteCapacity</defName>
+    <driverClass>FleshHive.JobDriver_UseShardForParasiteCapacity</driverClass>
+    <reportString>using TargetA to expand parasite capacity.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_ConsumeMeldSeed</defName>
+    <driverClass>FleshHive.JobDriver_ConsumeMeldSeed</driverClass>
+    <reportString>consuming TargetA to grow.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>FH_Job_HuntExecution</defName>
+    <driverClass>FleshHive.JobDriver_GroupHuntExecution</driverClass>
+    <reportString>finishing off TargetA.</reportString>
+  </JobDef>
+
+</Defs>

@@ -17,6 +17,7 @@
     <drawStyleCategory>Floors</drawStyleCategory>
     <fertility>0</fertility>
     <layerable>true</layerable>
+    <edgeType>Hard</edgeType>
     <pathCost>0</pathCost>
     <placeWorkers>
       <li>PlaceWorker_InvalidOverSubstructure</li>

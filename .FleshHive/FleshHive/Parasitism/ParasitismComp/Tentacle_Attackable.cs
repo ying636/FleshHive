@@ -27,7 +27,7 @@ public class Tentacle_Attackable : Tentacle
 
     public override void RareTick()
     {
-        if (this.cooldown > 0 || !AutoAttackEnabled || this.Comp?.Pawn == null)
+        if (this.cooldown > 0 || !AutoAttackEnabled || HostDownedAttackBlocked || this.Comp?.Pawn == null)
         {
             return;
         }
@@ -36,6 +36,10 @@ public class Tentacle_Attackable : Tentacle
 
     public virtual void FindAttackTargetAndAttack()
     {
+        if (HostDownedAttackBlocked)
+        {
+            return;
+        }
         if (this.Comp?.Pawn is { Spawned: true } pawn)
         {
             for (int i = 0; i < GenAdj.AdjacentCellsAndInside.Length; i++)
@@ -57,6 +61,10 @@ public class Tentacle_Attackable : Tentacle
 
     public override void Attack(Thing t)
     {
+        if (HostDownedAttackBlocked)
+        {
+            return;
+        }
         Pawn pawn = this.Comp.Pawn;
         this.rotateTime = this.Prop.rotatingTime;
         DamageInfo damageInfo = new DamageInfo(this.Prop.damageDef, this.Prop.damageAmount,

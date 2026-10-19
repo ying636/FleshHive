@@ -80,7 +80,7 @@
   <HediffDef>
     <defName>FH_Trait_RapidGrowth</defName>
     <label>rapid growth</label>
-    <description>This fleshbeast grows unusually quickly.</description>
+    <description>This fleshbeast's gestation time *75%.</description>
     <hediffClass>Hediff</hediffClass>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

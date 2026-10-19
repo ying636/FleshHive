@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonNexusmeld</defName>
+    <label>draw nexusmeld</label>
+    <description>Create a psychic pulse that draws a nexusmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
+    <requiredDiscovery>PitGate</requiredDiscovery>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>240</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Nexusmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonDreadmeld</defName>
+    <label>draw dreadmeld</label>
+    <description>Create a psychic pulse that draws a dreadmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
+    <playerCastable>false</playerCastable>
+    <requiredDiscovery>PitGate</requiredDiscovery>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>240</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Dreadmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld_MenuIcon</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonFuriousmeld</defName>
+    <label>draw furiousmeld</label>
+    <description>Create a psychic pulse that draws a furiousmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
+    <requiredDiscovery>PitGate</requiredDiscovery>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>240</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Furiousmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonBastionmeld</defName>
+    <label>draw bastionmeld</label>
+    <description>Create a psychic pulse that draws a bastionmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
+    <requiredDiscovery>PitGate</requiredDiscovery>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>240</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Bastionmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld</iconPath>
+  </PsychicRitualDef>
+
+  <PsychicRitualDef Class="FleshHive.PsychicRitualDef_SummonGiantFleshbeast">
+    <defName>FH_SummonFissionmeld</defName>
+    <label>draw fissionmeld</label>
+    <description>Create a psychic pulse that draws a fissionmeld closer to wander near the colony. It will likely attack other nearby settlements and linger there for a time. If a low-quality ritual is not precise enough, it will attract more fleshbeast escorts.</description>
+    <requiredDiscovery>PitGate</requiredDiscovery>
+    <outcomeDescription>A higher-quality ritual will attract fewer fleshbeast escorts.</outcomeDescription>
+    <hoursUntilOutcome>2</hoursUntilOutcome>
+    <castableOnPocketMaps>false</castableOnPocketMaps>
+    <layerWhitelist>
+      <li>Surface</li>
+    </layerWhitelist>
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+    <cooldownHours>240</cooldownHours>
+    <chanterRole>ChanterAdvanced</chanterRole>
+    <summonKind>FH_Fissionmeld</summonKind>
+    <escortPointsFromQualityCurve>
+      <points>
+        <li>(0, 650)</li>
+        <li>(0.7, 350)</li>
+        <li>(1, 150)</li>
+      </points>
+    </escortPointsFromQualityCurve>
+    <iconPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld</iconPath>
+  </PsychicRitualDef>
+</Defs>

@@ -17,7 +17,8 @@ public class FormulaProgress_FleshTrait : FormulaProgress
         this.formula = formula;
         this.reservedGroup = reservedGroup;
         float productionSpeedFactor = MapComponent_FleshHive.GetCellDivisionSpeedFactor(map);
-        time = Mathf.Max(1, Mathf.RoundToInt(formula.unit.spawningDay.RandomInRange * GenDate.TicksPerDay / productionSpeedFactor));
+        float traitTimeFactor = formula.materials.Any(material => material is FormulaMaterial_FleshTrait { trait.defName: "FH_Trait_RapidGrowth" }) ? 0.75f : 1f;
+        time = Mathf.Max(1, Mathf.RoundToInt(formula.unit.spawningDay.RandomInRange * GenDate.TicksPerDay * traitTimeFactor / productionSpeedFactor));
         totalTime = time;
     }
 
@@ -39,6 +40,7 @@ public class FormulaProgress_FleshTrait : FormulaProgress
             comp.parent,
             FleshHiveFleshbeastSpawnUtility.GeneratePawn(formula.unit.kind, comp.parent.Faction),
             ReservedGroup);
+        comp.parent.Map?.GetComponent<MapComponent_FleshHive>()?.AssignGestationGroup(unit, formula.unit);
         if (FleshBeastKindUtility.IsGiant(unit.kindDef)
             && comp.parent.TryGetComp<CompHiveContainer>() is { } container
             && container.units.Contains(unit))

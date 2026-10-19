@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="Plant_TreeHarbinger"]/comps</xpath>
+    <value>
+      <li Class="FleshHive.CompProperties_InfectHarbingerTree" />
+    </value>
+  </Operation>
+</Patch>

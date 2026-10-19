@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>FH_AcidSpray</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.04</fadeInTime>
+    <fadeOutTime>1</fadeOutTime>
+    <graphicData>
+      <texPath>Things/Mote/AcidSpray</texPath>
+      <graphicClass>Graphic_Fleck</graphicClass>
+      <shaderType>Mote</shaderType>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <growthRate>0.9</growthRate>
+    <solidTime>0.2</solidTime>
+  </FleckDef>
+
+</Defs>

@@ -1,0 +1,2904 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Toughspike_Fingerspike_Fingerspike</defName>
+    <label>toughspike fusion</label>
+    <description>Fuse two fingerspikes into a toughspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>toughspike</label>
+          <description>A stable toughspike with no special trait.</description>
+          <kind>FH_Toughspike</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Shieldspike_Fingerspike_Puffspike</defName>
+    <label>cancerous shieldspike fusion</label>
+    <description>Fuse a fingerspike and a puffspike into a cancerous shieldspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>cancerous shieldspike</label>
+          <description>A shieldspike with the cancerous trait.</description>
+          <kind>FH_Shieldspike</kind>
+          <hediffs>
+            <li>FH_Trait_Cancerous</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Toughspike_Fingerspike_Gutspike</defName>
+    <label>sharp toughspike fusion</label>
+    <description>Fuse a fingerspike and a gutspike into a sharp toughspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>sharp toughspike</label>
+          <description>A toughspike with the sharp trait.</description>
+          <kind>FH_Toughspike</kind>
+          <hediffs>
+            <li>FH_Trait_Sharp</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Trispike_Fingerspike_Whipspike</defName>
+    <label>acidic trispike fusion</label>
+    <description>Fuse a fingerspike and a whipspike into an acidic trispike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>acidic trispike</label>
+          <description>A trispike with the acidic trait.</description>
+          <kind>FH_Trispike</kind>
+          <hediffs>
+            <li>FH_Trait_Acidic</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Shieldspike_Fingerspike_Paraspike</defName>
+    <label>tough shieldspike fusion</label>
+    <description>Fuse a fingerspike and a paraspike into a tough shieldspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>tough shieldspike</label>
+          <description>A shieldspike with the tough trait.</description>
+          <kind>FH_Shieldspike</kind>
+          <hediffs>
+            <li>FH_Trait_Tough</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Trispike_Puffspike_Puffspike</defName>
+    <label>trispike fusion</label>
+    <description>Fuse two puffspikes into a trispike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>trispike</label>
+          <description>A stable trispike with no special trait.</description>
+          <kind>FH_Trispike</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Fleshwind_Puffspike_Gutspike</defName>
+    <label>swift fleshwind fusion</label>
+    <description>Fuse a puffspike and a gutspike into a swift fleshwind.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>swift fleshwind</label>
+          <description>A fleshwind with the swift trait.</description>
+          <kind>FH_Fleshwind</kind>
+          <hediffs>
+            <li>FH_Trait_Swift</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Toughspike_Puffspike_Whipspike</defName>
+    <label>robust toughspike fusion</label>
+    <description>Fuse a puffspike and a whipspike into a robust toughspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>robust toughspike</label>
+          <description>A toughspike with the robust trait.</description>
+          <kind>FH_Toughspike</kind>
+          <hediffs>
+            <li>FH_Trait_Robust</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Shatterspike_Puffspike_Paraspike</defName>
+    <label>bone spur shatterspike fusion</label>
+    <description>Fuse a puffspike and a paraspike into a bone spur shatterspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>bone spur shatterspike</label>
+          <description>A shatterspike with the bone spur growth trait.</description>
+          <kind>FH_Shatterspike</kind>
+          <hediffs>
+            <li>FH_Trait_BoneSpurGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Shatterspike_Gutspike_Gutspike</defName>
+    <label>shatterspike fusion</label>
+    <description>Fuse two gutspikes into a shatterspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>shatterspike</label>
+          <description>A stable shatterspike with no special trait.</description>
+          <kind>FH_Shatterspike</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Shatterspike_Gutspike_Whipspike</defName>
+    <label>domesticated shatterspike fusion</label>
+    <description>Fuse a gutspike and a whipspike into a domesticated shatterspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>domesticated shatterspike</label>
+          <description>A shatterspike with the domesticated trait.</description>
+          <kind>FH_Shatterspike</kind>
+          <hediffs>
+            <li>FH_Trait_Domesticated</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Trispike_Gutspike_Paraspike</defName>
+    <label>split trispike fusion</label>
+    <description>Fuse a gutspike and a paraspike into a split trispike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>split trispike</label>
+          <description>A trispike with the split trait.</description>
+          <kind>FH_Trispike</kind>
+          <hediffs>
+            <li>FH_Trait_Split</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Fleshwind_Whipspike_Whipspike</defName>
+    <label>fleshwind fusion</label>
+    <description>Fuse two whipspikes into a fleshwind.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>fleshwind</label>
+          <description>A stable fleshwind with no special trait.</description>
+          <kind>FH_Fleshwind</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Fleshwind_Whipspike_Paraspike</defName>
+    <label>expanded fleshwind fusion</label>
+    <description>Fuse a whipspike and a paraspike into an expanded fleshwind.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>expanded fleshwind</label>
+          <description>A fleshwind with the expanded capacity trait.</description>
+          <kind>FH_Fleshwind</kind>
+          <hediffs>
+            <li>FH_Trait_ExpandedCapacity</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Shieldspike_Paraspike_Paraspike</defName>
+    <label>shieldspike fusion</label>
+    <description>Fuse two paraspikes into a shieldspike.</description>
+    <category>LittleFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>shieldspike</label>
+          <description>A stable shieldspike with no special trait.</description>
+          <kind>FH_Shieldspike</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L01_Bulbfreak_Shatterspike_Shatterspike_Fingerspike</defName>
+    <label>bulbfreak fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a fingerspike into a bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>bulbfreak</label>
+          <description>A stable bulbfreak with no special trait.</description>
+          <kind>FH_Bulbfreak</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L02_Bulbfreak_Shatterspike_Trispike_Gutspike</defName>
+    <label>bone spur bulbfreak fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a whipspike into a bone spur bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>bone spur bulbfreak</label>
+          <description>A bulbfreak with the bone spur growth trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_BoneSpurGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L03_Bulbfreak_Shatterspike_Fleshwind_Paraspike</defName>
+    <label>tough bulbfreak fusion</label>
+    <description>Fuse a fleshwind, a toughspike, and a paraspike into a tough bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>tough bulbfreak</label>
+          <description>A bulbfreak with the tough trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Tough</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L04_Bulbfreak_Shieldspike_Trispike_Puffspike</defName>
+    <label>sharp bulbfreak fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a gutspike into a sharp bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>sharp bulbfreak</label>
+          <description>A bulbfreak with the sharp trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Sharp</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L05_Bulbfreak_Shieldspike_Fleshwind_Whipspike</defName>
+    <label>split bulbfreak fusion</label>
+    <description>Fuse a shieldspike, a fleshwind, and a puffspike into a split bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>split bulbfreak</label>
+          <description>A bulbfreak with the split trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Split</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L06_Bulbfreak_Trispike_Trispike_Fingerspike</defName>
+    <label>domesticated bulbfreak fusion</label>
+    <description>Fuse a fleshwind, a trispike, and a fingerspike into a domesticated bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>domesticated bulbfreak</label>
+          <description>A bulbfreak with the domesticated trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Domesticated</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L07_Bulbfreak_Shatterspike_Toughspike_Whipspike</defName>
+    <label>runaway bulbfreak fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a whipspike into a runaway bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>runaway bulbfreak</label>
+          <description>A bulbfreak with the runaway trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Runaway</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L08_Bulbfreak_Shieldspike_Toughspike_Paraspike</defName>
+    <label>rapid growth bulbfreak fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a paraspike into a rapid growth bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>rapid growth bulbfreak</label>
+          <description>A bulbfreak with the rapid growth trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_RapidGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L09_Bulbfreak_Trispike_Toughspike_Gutspike</defName>
+    <label>cancerous bulbfreak fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a gutspike into a cancerous bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>cancerous bulbfreak</label>
+          <description>A bulbfreak with the cancerous trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Cancerous</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L10_Bulbfreak_Toughspike_Fleshwind_Fingerspike</defName>
+    <label>expanded bulbfreak fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a puffspike into an expanded bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>expanded bulbfreak</label>
+          <description>A bulbfreak with the expanded capacity trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_ExpandedCapacity</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L11_Bulbfreak_Shatterspike_Shieldspike_Fingerspike</defName>
+    <label>robust bulbfreak fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a fingerspike into a robust bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>robust bulbfreak</label>
+          <description>A bulbfreak with the robust trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Robust</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L12_Bulbfreak_Puffspike_Shieldspike_Puffspike</defName>
+    <label>swift bulbfreak fusion</label>
+    <description>Fuse a toughspike, a trispike, and a whipspike into a swift bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>swift bulbfreak</label>
+          <description>A bulbfreak with the swift trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Swift</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L13_Bulbfreak_Puffspike_Fleshwind_Whipspike</defName>
+    <label>bulbfreak fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a paraspike into a bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>bulbfreak</label>
+          <description>A stable bulbfreak with no special trait.</description>
+          <kind>FH_Bulbfreak</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L14_Bulbfreak_Trispike_Fleshwind_Paraspike</defName>
+    <label>acidic bulbfreak fusion</label>
+    <description>Fuse a fleshwind, a fleshwind, and a gutspike into an acidic bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>acidic bulbfreak</label>
+          <description>A bulbfreak with the acidic trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Acidic</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L15_Bulbfreak_Toughspike_Toughspike_Gutspike</defName>
+    <label>degraded bulbfreak fusion</label>
+    <description>Fuse a trispike, a trispike, and a puffspike into a degraded bulbfreak.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>degraded bulbfreak</label>
+          <description>A bulbfreak with the degraded trait.</description>
+          <kind>FH_Bulbfreak</kind>
+          <hediffs>
+            <li>FH_Trait_Degraded</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L16_Acidbulb_Shatterspike_Shatterspike_Paraspike</defName>
+    <label>swift acidbulb fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a whipspike into a swift acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>swift acidbulb</label>
+          <description>A acidbulb with the swift trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Swift</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L17_Acidbulb_Shatterspike_Shieldspike_Gutspike</defName>
+    <label>split acidbulb fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a paraspike into a split acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>split acidbulb</label>
+          <description>A acidbulb with the split trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Split</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L18_Acidbulb_Shatterspike_Trispike_Whipspike</defName>
+    <label>acidbulb fusion</label>
+    <description>Fuse a fleshwind, a toughspike, and a gutspike into an acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>acidbulb</label>
+          <description>A stable acidbulb with no special trait.</description>
+          <kind>FH_Acidbulb</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L19_Acidbulb_Shieldspike_Shieldspike_Fingerspike</defName>
+    <label>acidic acidbulb fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a puffspike into an acidic acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>acidic acidbulb</label>
+          <description>A acidbulb with the acidic trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Acidic</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L20_Acidbulb_Shieldspike_Trispike_Fingerspike</defName>
+    <label>expanded acidbulb fusion</label>
+    <description>Fuse a shieldspike, a fleshwind, and a fingerspike into an expanded acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>expanded acidbulb</label>
+          <description>A acidbulb with the expanded capacity trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_ExpandedCapacity</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L21_Acidbulb_Shieldspike_Toughspike_Puffspike</defName>
+    <label>acidbulb fusion</label>
+    <description>Fuse a fleshwind, a trispike, and a whipspike into an acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>acidbulb</label>
+          <description>A stable acidbulb with no special trait.</description>
+          <kind>FH_Acidbulb</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L22_Acidbulb_Trispike_Trispike_Paraspike</defName>
+    <label>fragile acidbulb fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a paraspike into a fragile acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>fragile acidbulb</label>
+          <description>A acidbulb with the fragile trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Fragile</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L23_Acidbulb_Shatterspike_Fleshwind_Gutspike</defName>
+    <label>cancerous acidbulb fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a gutspike into a cancerous acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>cancerous acidbulb</label>
+          <description>A acidbulb with the cancerous trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Cancerous</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L24_Acidbulb_Shieldspike_Fleshwind_Paraspike</defName>
+    <label>domesticated acidbulb fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a puffspike into a domesticated acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>domesticated acidbulb</label>
+          <description>A acidbulb with the domesticated trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Domesticated</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L25_Acidbulb_Toughspike_Toughspike_Fingerspike</defName>
+    <label>rapid growth acidbulb fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a fingerspike into a rapid growth acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>rapid growth acidbulb</label>
+          <description>A acidbulb with the rapid growth trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_RapidGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L26_Acidbulb_Toughspike_Fleshwind_Gutspike</defName>
+    <label>bone spur acidbulb fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a whipspike into a bone spur acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>bone spur acidbulb</label>
+          <description>A acidbulb with the bone spur growth trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_BoneSpurGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L27_Acidbulb_Puffspike_Toughspike_Whipspike</defName>
+    <label>tough acidbulb fusion</label>
+    <description>Fuse a toughspike, a trispike, and a paraspike into a tough acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>tough acidbulb</label>
+          <description>A acidbulb with the tough trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Tough</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L28_Acidbulb_Puffspike_Shieldspike_Paraspike</defName>
+    <label>runaway acidbulb fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a gutspike into a runaway acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>runaway acidbulb</label>
+          <description>A acidbulb with the runaway trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Runaway</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L29_Acidbulb_Trispike_Toughspike_Puffspike</defName>
+    <label>sharp acidbulb fusion</label>
+    <description>Fuse a fleshwind, a fleshwind, and a puffspike into a sharp acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>sharp acidbulb</label>
+          <description>A acidbulb with the sharp trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Sharp</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L30_Acidbulb_Trispike_Fleshwind_Fingerspike</defName>
+    <label>robust acidbulb fusion</label>
+    <description>Fuse a trispike, a trispike, and a fingerspike into a robust acidbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>robust acidbulb</label>
+          <description>A acidbulb with the robust trait.</description>
+          <kind>FH_Acidbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Robust</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L31_Spitbulb_Shatterspike_Shatterspike_Puffspike</defName>
+    <label>tough spitbulb fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a paraspike into a tough spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>tough spitbulb</label>
+          <description>A spitbulb with the tough trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Tough</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L32_Spitbulb_Shatterspike_Shieldspike_Paraspike</defName>
+    <label>spitbulb fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a gutspike into a spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>spitbulb</label>
+          <description>A stable spitbulb with no special trait.</description>
+          <kind>FH_Spitbulb</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L33_Spitbulb_Shatterspike_Toughspike_Gutspike</defName>
+    <label>rapid growth spitbulb fusion</label>
+    <description>Fuse a fleshwind, a toughspike, and a puffspike into a rapid growth spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>rapid growth spitbulb</label>
+          <description>A spitbulb with the rapid growth trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_RapidGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L34_Spitbulb_Shieldspike_Shieldspike_Whipspike</defName>
+    <label>bone spur spitbulb fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a fingerspike into a bone spur spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>bone spur spitbulb</label>
+          <description>A spitbulb with the bone spur growth trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_BoneSpurGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L35_Spitbulb_Shieldspike_Toughspike_Fingerspike</defName>
+    <label>sharp spitbulb fusion</label>
+    <description>Fuse a shieldspike, a fleshwind, and a whipspike into a sharp spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>sharp spitbulb</label>
+          <description>A spitbulb with the sharp trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Sharp</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L36_Spitbulb_Trispike_Trispike_Gutspike</defName>
+    <label>spitbulb fusion</label>
+    <description>Fuse a fleshwind, a trispike, and a paraspike into a spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>spitbulb</label>
+          <description>A stable spitbulb with no special trait.</description>
+          <kind>FH_Spitbulb</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L37_Spitbulb_Trispike_Toughspike_Paraspike</defName>
+    <label>domesticated spitbulb fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a gutspike into a domesticated spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>domesticated spitbulb</label>
+          <description>A spitbulb with the domesticated trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Domesticated</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L38_Spitbulb_Toughspike_Toughspike_Puffspike</defName>
+    <label>split spitbulb fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a puffspike into a split spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>split spitbulb</label>
+          <description>A spitbulb with the split trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Split</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L39_Spitbulb_Shatterspike_Fleshwind_Fingerspike</defName>
+    <label>acidic spitbulb fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a fingerspike into an acidic spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>acidic spitbulb</label>
+          <description>A spitbulb with the acidic trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Acidic</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L40_Spitbulb_Shieldspike_Fleshwind_Gutspike</defName>
+    <label>runaway spitbulb fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a whipspike into a runaway spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>runaway spitbulb</label>
+          <description>A spitbulb with the runaway trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Runaway</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L41_Spitbulb_Puffspike_Fleshwind_Paraspike</defName>
+    <label>robust spitbulb fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a paraspike into a robust spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>robust spitbulb</label>
+          <description>A spitbulb with the robust trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Robust</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L42_Spitbulb_Trispike_Fleshwind_Whipspike</defName>
+    <label>expanded spitbulb fusion</label>
+    <description>Fuse a toughspike, a trispike, and a gutspike into an expanded spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>expanded spitbulb</label>
+          <description>A spitbulb with the expanded capacity trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_ExpandedCapacity</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L43_Spitbulb_Puffspike_Trispike_Fingerspike</defName>
+    <label>swift spitbulb fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a puffspike into a swift spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>swift spitbulb</label>
+          <description>A spitbulb with the swift trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Swift</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L44_Spitbulb_Puffspike_Toughspike_Gutspike</defName>
+    <label>cancerous spitbulb fusion</label>
+    <description>Fuse a fleshwind, a fleshwind, and a fingerspike into a cancerous spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>cancerous spitbulb</label>
+          <description>A spitbulb with the cancerous trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Cancerous</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L45_Spitbulb_Puffspike_Shieldspike_Puffspike</defName>
+    <label>degraded spitbulb fusion</label>
+    <description>Fuse a trispike, a trispike, and a whipspike into a degraded spitbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>degraded spitbulb</label>
+          <description>A spitbulb with the degraded trait.</description>
+          <kind>FH_Spitbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Degraded</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L46_Bulbplump_Shatterspike_Shatterspike_Whipspike</defName>
+    <label>expanded bulbplump fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a gutspike into an expanded bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>expanded bulbplump</label>
+          <description>A bulbplump with the expanded capacity trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_ExpandedCapacity</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L47_Bulbplump_Shatterspike_Shieldspike_Puffspike</defName>
+    <label>domesticated bulbplump fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a puffspike into a domesticated bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>domesticated bulbplump</label>
+          <description>A bulbplump with the domesticated trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Domesticated</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L48_Bulbplump_Shatterspike_Trispike_Fingerspike</defName>
+    <label>rapid growth bulbplump fusion</label>
+    <description>Fuse a fleshwind, a toughspike, and a fingerspike into a rapid growth bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>rapid growth bulbplump</label>
+          <description>A bulbplump with the rapid growth trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_RapidGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L49_Bulbplump_Shieldspike_Shieldspike_Gutspike</defName>
+    <label>bulbplump fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a whipspike into a bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>bulbplump</label>
+          <description>A stable bulbplump with no special trait.</description>
+          <kind>FH_Bulbplump</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L50_Bulbplump_Shieldspike_Trispike_Paraspike</defName>
+    <label>cancerous bulbplump fusion</label>
+    <description>Fuse a shieldspike, a fleshwind, and a paraspike into a cancerous bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>cancerous bulbplump</label>
+          <description>A bulbplump with the cancerous trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Cancerous</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L51_Bulbplump_Trispike_Trispike_Whipspike</defName>
+    <label>robust bulbplump fusion</label>
+    <description>Fuse a fleshwind, a trispike, and a gutspike into a robust bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>robust bulbplump</label>
+          <description>A bulbplump with the robust trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Robust</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L52_Bulbplump_Shatterspike_Toughspike_Fingerspike</defName>
+    <label>degraded bulbplump fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a puffspike into a degraded bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>degraded bulbplump</label>
+          <description>A bulbplump with the degraded trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Degraded</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L53_Bulbplump_Shieldspike_Toughspike_Whipspike</defName>
+    <label>tough bulbplump fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a fingerspike into a tough bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>tough bulbplump</label>
+          <description>A bulbplump with the tough trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Tough</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L54_Bulbplump_Trispike_Toughspike_Fingerspike</defName>
+    <label>bulbplump fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a whipspike into a bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>bulbplump</label>
+          <description>A stable bulbplump with no special trait.</description>
+          <kind>FH_Bulbplump</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L55_Bulbplump_Toughspike_Toughspike_Paraspike</defName>
+    <label>bone spur bulbplump fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a paraspike into a bone spur bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>bone spur bulbplump</label>
+          <description>A bulbplump with the bone spur growth trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_BoneSpurGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L56_Bulbplump_Shatterspike_Fleshwind_Puffspike</defName>
+    <label>split bulbplump fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a gutspike into a split bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>split bulbplump</label>
+          <description>A bulbplump with the split trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Split</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L57_Bulbplump_Shieldspike_Fleshwind_Fingerspike</defName>
+    <label>swift bulbplump fusion</label>
+    <description>Fuse a toughspike, a trispike, and a puffspike into a swift bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>swift bulbplump</label>
+          <description>A bulbplump with the swift trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Swift</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L58_Bulbplump_Puffspike_Fleshwind_Gutspike</defName>
+    <label>runaway bulbplump fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a fingerspike into a runaway bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>runaway bulbplump</label>
+          <description>A bulbplump with the runaway trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Runaway</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L59_Bulbplump_Puffspike_Trispike_Paraspike</defName>
+    <label>sharp bulbplump fusion</label>
+    <description>Fuse a fleshwind, a fleshwind, and a whipspike into a sharp bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>sharp bulbplump</label>
+          <description>A bulbplump with the sharp trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Sharp</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L60_Bulbplump_Puffspike_Shieldspike_Whipspike</defName>
+    <label>acidic bulbplump fusion</label>
+    <description>Fuse a trispike, a trispike, and a paraspike into an acidic bulbplump.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>acidic bulbplump</label>
+          <description>A bulbplump with the acidic trait.</description>
+          <kind>FH_Bulbplump</kind>
+          <hediffs>
+            <li>FH_Trait_Acidic</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L61_Synbulb_Shatterspike_Shatterspike_Gutspike</defName>
+    <label>synbulb fusion</label>
+    <description>Fuse a shatterspike, a shatterspike, and a puffspike into a synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>synbulb</label>
+          <description>A stable synbulb with no special trait.</description>
+          <kind>FH_Synbulb</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L62_Synbulb_Shatterspike_Shieldspike_Whipspike</defName>
+    <label>cancerous synbulb fusion</label>
+    <description>Fuse a shieldspike, a shieldspike, and a fingerspike into a cancerous synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>cancerous synbulb</label>
+          <description>A synbulb with the cancerous trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Cancerous</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L63_Synbulb_Shatterspike_Trispike_Puffspike</defName>
+    <label>acidic synbulb fusion</label>
+    <description>Fuse a fleshwind, a toughspike, and a whipspike into an acidic synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>acidic synbulb</label>
+          <description>A synbulb with the acidic trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Acidic</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L64_Synbulb_Shieldspike_Shieldspike_Paraspike</defName>
+    <label>rapid growth synbulb fusion</label>
+    <description>Fuse a shatterspike, a shieldspike, and a paraspike into a rapid growth synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>rapid growth synbulb</label>
+          <description>A synbulb with the rapid growth trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_RapidGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L65_Synbulb_Shieldspike_Trispike_Whipspike</defName>
+    <label>runaway synbulb fusion</label>
+    <description>Fuse a shieldspike, a fleshwind, and a gutspike into a runaway synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>runaway synbulb</label>
+          <description>A synbulb with the runaway trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Runaway</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L66_Synbulb_Trispike_Trispike_Puffspike</defName>
+    <label>split synbulb fusion</label>
+    <description>Fuse a fleshwind, a trispike, and a puffspike into a split synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>split synbulb</label>
+          <description>A synbulb with the split trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Split</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L67_Synbulb_Shatterspike_Toughspike_Paraspike</defName>
+    <label>robust synbulb fusion</label>
+    <description>Fuse a shatterspike, a fleshwind, and a fingerspike into a robust synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>robust synbulb</label>
+          <description>A synbulb with the robust trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Robust</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L68_Synbulb_Shieldspike_Toughspike_Gutspike</defName>
+    <label>swift synbulb fusion</label>
+    <description>Fuse a shieldspike, a toughspike, and a whipspike into a swift synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>swift synbulb</label>
+          <description>A synbulb with the swift trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Swift</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L69_Synbulb_Trispike_Toughspike_Whipspike</defName>
+    <label>tough synbulb fusion</label>
+    <description>Fuse a toughspike, a toughspike, and a paraspike into a tough synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>tough synbulb</label>
+          <description>A synbulb with the tough trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Tough</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L70_Synbulb_Toughspike_Toughspike_Whipspike</defName>
+    <label>sharp synbulb fusion</label>
+    <description>Fuse a shatterspike, a toughspike, and a gutspike into a sharp synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>sharp synbulb</label>
+          <description>A synbulb with the sharp trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Sharp</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L71_Synbulb_Shatterspike_Fleshwind_Whipspike</defName>
+    <label>domesticated synbulb fusion</label>
+    <description>Fuse a shieldspike, a trispike, and a puffspike into a domesticated synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shieldspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Puffspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>domesticated synbulb</label>
+          <description>A synbulb with the domesticated trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Domesticated</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L72_Synbulb_Puffspike_Fleshwind_Fingerspike</defName>
+    <label>bone spur synbulb fusion</label>
+    <description>Fuse a toughspike, a trispike, and a fingerspike into a bone spur synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Toughspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fingerspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>bone spur synbulb</label>
+          <description>A synbulb with the bone spur growth trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_BoneSpurGrowth</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L73_Synbulb_Puffspike_Trispike_Whipspike</defName>
+    <label>expanded synbulb fusion</label>
+    <description>Fuse a shatterspike, a trispike, and a whipspike into an expanded synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Shatterspike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Whipspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>expanded synbulb</label>
+          <description>A synbulb with the expanded capacity trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_ExpandedCapacity</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L74_Synbulb_Puffspike_Toughspike_Paraspike</defName>
+    <label>synbulb fusion</label>
+    <description>Fuse a fleshwind, a fleshwind, and a paraspike into a synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Fleshwind</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Paraspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_PawnKind">
+          <label>synbulb</label>
+          <description>A stable synbulb with no special trait.</description>
+          <kind>FH_Synbulb</kind>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_L75_Synbulb_Puffspike_Shieldspike_Fingerspike</defName>
+    <label>fragile synbulb fusion</label>
+    <description>Fuse a trispike, a trispike, and a gutspike into a fragile synbulb.</description>
+    <category>LargeFlesh</category>
+    <progressTick>30000</progressTick>
+    <hiden>true</hiden>
+    <materials>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Trispike</def>
+      </li>
+      <li Class="HiveCreatureFramework.FusionMaterial_Def">
+        <def>FH_Gutspike</def>
+      </li>
+    </materials>
+    <results>
+      <li>
+        <result Class="FleshHive.FusionResult_PawnKindWithHediffs">
+          <label>fragile synbulb</label>
+          <description>A synbulb with the fragile trait.</description>
+          <kind>FH_Synbulb</kind>
+          <hediffs>
+            <li>FH_Trait_Fragile</li>
+          </hediffs>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+  <HiveCreatureFramework.FusionDef>
+    <defName>FH_Fusion_Default</defName>
+    <label>unknown flesh fusion</label>
+    <description>An unstable fusion that collapses into twisted flesh.</description>
+    <progressTick>30000</progressTick>
+    <isDefault>true</isDefault>
+    <results>
+      <li>
+        <result Class="HiveCreatureFramework.FusionResult_Thing">
+          <label>twisted flesh</label>
+          <description>The failed fusion collapses into lumps of twisted flesh.</description>
+          <results>
+            <Meat_Twisted>30</Meat_Twisted>
+          </results>
+        </result>
+        <weight>1</weight>
+      </li>
+    </results>
+  </HiveCreatureFramework.FusionDef>
+
+</Defs>

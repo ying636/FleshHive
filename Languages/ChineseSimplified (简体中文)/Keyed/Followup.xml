@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FH_Gestation_QuotaGroup>群组</FH_Gestation_QuotaGroup>
+  <FH_Alert_UngroupedFleshbeasts>存在离群血肉兽</FH_Alert_UngroupedFleshbeasts>
+  <FH_Settings_DisableDownedHostTentacleAttacks>倒地单位的寄生血肉兽触手不再能够攻击</FH_Settings_DisableDownedHostTentacleAttacks>
+  <FH_Group_UngroupAll>一键离群</FH_Group_UngroupAll>
+</LanguageData>

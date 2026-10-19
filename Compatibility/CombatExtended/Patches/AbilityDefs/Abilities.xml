@@ -283,6 +283,8 @@
         <damageDef>Bomb</damageDef>
         <spinRate>20</spinRate>
         <speed>41</speed>
+        <gravityFactor>5</gravityFactor>
+        <trajectoryWorker>FleshHive.CE.TrajectoryWorker_FleshMortarCE</trajectoryWorker>
         <arcHeightFactor>1</arcHeightFactor>
         <flyOverhead>true</flyOverhead>
         <soundExplode>SpitterSpitLands</soundExplode>
@@ -302,6 +304,8 @@
         <damageDef>Bomb</damageDef>
         <spinRate>20</spinRate>
         <speed>41</speed>
+        <gravityFactor>5</gravityFactor>
+        <trajectoryWorker>FleshHive.CE.TrajectoryWorker_FleshMortarCE</trajectoryWorker>
         <arcHeightFactor>1</arcHeightFactor>
         <flyOverhead>true</flyOverhead>
         <soundExplode>SpitterSpitLands</soundExplode>

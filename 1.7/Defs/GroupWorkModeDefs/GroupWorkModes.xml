@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HiveCreatureFramework.GroupWorkModeDef>
+    <defName>FH_GroupWorkMode_Hunt</defName>
+    <label>hunt</label>
+    <description>Lock onto prey, gather all available group members, then begin a coordinated hunt.</description>
+    <iconPath>UI/Designators/Hunt</iconPath>
+    <transitionMemo>FH_GroupWorkMode_Hunt</transitionMemo>
+    <workerClass>FleshHive.GroupWorkModeDefWorker_Hunt</workerClass>
+    <order>15</order>
+  </HiveCreatureFramework.GroupWorkModeDef>
+
+</Defs>

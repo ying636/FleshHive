@@ -1869,6 +1869,9 @@
       <li>Table</li>
     </replaceTags>
     <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshTableSmall</building>
@@ -1921,6 +1924,9 @@
       <li>Table</li>
     </replaceTags>
     <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshTableSquare</building>
@@ -1973,6 +1979,9 @@
       <li>Table</li>
     </replaceTags>
     <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshTableLong</building>
@@ -2025,6 +2034,9 @@
       <li>Table</li>
     </replaceTags>
     <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
       <li Class="HiveCreatureFramework.CompPropertiesHiveBuildingCopy">
         <building>FH_Building_FleshTableLarge</building>
@@ -2303,10 +2315,6 @@
         <yields>
           <Meat_Twisted>20</Meat_Twisted>
         </yields>
-      </li>
-      <li Class="FleshHive.CompProperties_HiveNutritionProducer">
-        <nutritionPerInterval>0.04</nutritionPerInterval>
-        <intervalTicks>2500</intervalTicks>
       </li>
     </comps>
     <placeWorkers>

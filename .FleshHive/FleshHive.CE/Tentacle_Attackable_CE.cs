@@ -19,6 +19,10 @@ public class Tentacle_Attackable_CE : Tentacle_Attackable
 
     public override void Attack(Thing target)
     {
+        if (HostDownedAttackBlocked)
+        {
+            return;
+        }
         Pawn pawn = Comp.Pawn;
         ThingDef source = Prop.meleeSource;
         List<ToolCE>? tools = source?.tools?.OfType<ToolCE>()

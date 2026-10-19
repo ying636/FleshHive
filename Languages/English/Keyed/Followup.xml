@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FH_Gestation_QuotaGroup>Group</FH_Gestation_QuotaGroup>
+  <FH_Alert_UngroupedFleshbeasts>Ungrouped fleshbeasts present</FH_Alert_UngroupedFleshbeasts>
+  <FH_Settings_DisableDownedHostTentacleAttacks>Downed hosts cannot attack with parasitic fleshbeast tentacles</FH_Settings_DisableDownedHostTentacleAttacks>
+  <FH_Group_UngroupAll>Ungroup all</FH_Group_UngroupAll>
+</LanguageData>

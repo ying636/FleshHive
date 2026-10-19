@@ -28,13 +28,16 @@ public class FleshHiveMod : Mod
         Settings.fleshtitanReversionHours = Mathf.RoundToInt(listing.Slider(Settings.fleshtitanReversionHours, 1f, 240f));
         bool previousDisableTutorial = Settings.disableTutorial;
         bool previousUnlockUnmodifiedFleshbeastsByFusionResearch = Settings.unlockUnmodifiedFleshbeastsByFusionResearch;
+        bool previousDisableDownedHostTentacleAttacks = Settings.disableDownedHostTentacleAttacks;
+        listing.CheckboxLabeled("FH_Settings_DisableDownedHostTentacleAttacks".Translate(), ref Settings.disableDownedHostTentacleAttacks);
         listing.CheckboxLabeled("FH_Tutorial_Disable".Translate(), ref Settings.disableTutorial);
         listing.CheckboxLabeled(
             "FH_Settings_ResearchUnlockGestation".Translate(),
             ref Settings.unlockUnmodifiedFleshbeastsByFusionResearch,
             "FH_Settings_ResearchUnlockGestationTip".Translate());
         if (previousDisableTutorial != Settings.disableTutorial
-            || previousUnlockUnmodifiedFleshbeastsByFusionResearch != Settings.unlockUnmodifiedFleshbeastsByFusionResearch)
+            || previousUnlockUnmodifiedFleshbeastsByFusionResearch != Settings.unlockUnmodifiedFleshbeastsByFusionResearch
+            || previousDisableDownedHostTentacleAttacks != Settings.disableDownedHostTentacleAttacks)
         {
             WriteSettings();
         }
@@ -63,10 +66,12 @@ public class FleshHiveSettings : ModSettings
         }
         Scribe_Values.Look(ref disableTutorial, "disableTutorial", false);
         Scribe_Values.Look(ref unlockUnmodifiedFleshbeastsByFusionResearch, "unlockUnmodifiedFleshbeastsByFusionResearch", false);
+        Scribe_Values.Look(ref disableDownedHostTentacleAttacks, "disableDownedHostTentacleAttacks", true);
     }
 
     public float raidParasiteChance = 0.6f;
     public int fleshtitanReversionHours = 10;
     public bool disableTutorial;
     public bool unlockUnmodifiedFleshbeastsByFusionResearch;
+    public bool disableDownedHostTentacleAttacks = true;
 }

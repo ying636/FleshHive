@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Fingerspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Fingerspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Fingerspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Whipspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Paraspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Toughspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>6.3</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Toughspike</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>22</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Shieldspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>22</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Shieldspike</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>22</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>2</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Shieldspike</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Blunt</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>9</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.87</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Bulbfreak</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>17.2</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.8</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Dreadmeld</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>17.2</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.8</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Dreadmeld</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>17.2</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.8</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Dreadmeld</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>17.2</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.8</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Dreadmeld</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[1]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[1]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[1]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[1]/damageAmount</xpath>
+    <value>
+      <damageAmount>17.2</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[1]/cooldown</xpath>
+    <value>
+      <cooldown>1.8</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[1]</xpath>
+    <value>
+      <meleeSource>FH_Dreadmeld</meleeSource>
+      <sourceToolIndex>0</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[2]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.TentacleProperties_CE</value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[2]/tentacleClass</xpath>
+    <value>
+      <tentacleClass>FleshHive.CE.Tentacle_Attackable_CE</tentacleClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[2]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[2]/damageAmount</xpath>
+    <value>
+      <damageAmount>17.2</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[2]/cooldown</xpath>
+    <value>
+      <cooldown>1.8</cooldown>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]/comps/li/tentacles/li[2]</xpath>
+    <value>
+      <meleeSource>FH_Dreadmeld</meleeSource>
+      <sourceToolIndex>1</sourceToolIndex>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fingerspike"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Trispike"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Whipspike"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Paraspike"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Toughspike"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Shieldspike"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Furiousmeld"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbfreak"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Acidbulb"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Spitbulb"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Bulbplump"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Nexusmeld"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Dreadmeld"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="FH_Parasitism_Fissionmeld"]</xpath>
+    <value>
+      <li Class="FleshHive.CE.ModExtension_ParasitismParryCE">
+        <parryChanceBonus>0.05</parryChanceBonus>
+      </li>
+    </value>
+  </Operation>
+</Patch>

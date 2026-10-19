@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>FH_FleshDeadguardLifespan</defName>
+    <label>flesh deadguard</label>
+    <description>Flesh deadguards cannot exist stably and naturally die after a period of time.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsAndKills">
+        <disappearsAfterTicks>30000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+
+  <HediffDef>
+    <defName>FH_Spike_Paraspike</defName>
+    <label>paraspike's spike</label>
+    <hediffClass>FleshHive.Hediff_FH_Spike_Paraspike</hediffClass>
+    <description>A paraspike's core bone spike, used to parasite a host and sustain its life. It remains embedded in the host, continuously regulating flesh and blood.</description>
+    <isBad>true</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500~5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_LostSpike_Paraspike</defName>
+    <label>lost spike</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>The paraspike has lost the core bone spike it needs to survive. Unless it regenerates soon, it will weaken and die.</description>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <isBad>true</isBad>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsAndKills">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath" />
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Fingerspike</defName>
+    <label>fingerspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a fingerspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Bone-spike tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-0.05</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>5</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_Fingerspike</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Fingerspike/Attachments/Fingerspike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Puffspike</defName>
+    <label>puffspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a puffspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is immune to asthma and lung rot, which are cured from its lungs. It moves faster and tolerates toxic environments better.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.06</painFactor>
+        <statFactors>
+          <MoveSpeed>1.1</MoveSpeed>
+          <ToxicResistance>1.3</ToxicResistance>
+        </statFactors>
+        <makeImmuneTo>
+          <li>Asthma</li>
+          <li>LungRot</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_Immunity">
+        <hds>
+          <li>Asthma</li>
+          <li>LungRot</li>
+        </hds>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Gutspike</defName>
+    <label>gutspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a gutspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host is almost immune to food poisoning, and gains immunity to gut worms while purging existing infestations.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.08</painFactor>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <makeImmuneTo>
+          <li>GutWorms</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_Immunity">
+        <hds>
+          <li>GutWorms</li>
+        </hds>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_AcidLaunch</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Whipspike</defName>
+    <label>whipspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a whipspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Whip-claw tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-0.05</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Cut</damageDef>
+            <damageAmount>12</damageAmount>
+            <cooldown>5</cooldown>
+            <armorPenetration>0.6</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_Toughspike</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Whipspike/FH_Whipspike_TopLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Fleshwind</defName>
+    <label>fleshwind mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a fleshwind. The fleshbeast grants it additional abilities, but also imposes significant costs.
+
+The host ignores terrain movement penalties and has 120% Move Speed.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Paraspike</defName>
+    <label>paraspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a paraspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nBleeding is reduced, wound infections are prevented, and offspring inherit this mutualism.\n\n-Spiral tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>1.06</painFactor>
+        <totalBleedFactor>0.75</totalBleedFactor>
+        <statOffsets>
+          <SocialImpact>-0.05</SocialImpact>
+          <ComfyTemperatureMax>10</ComfyTemperatureMax>
+          <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+        </statOffsets>
+        <makeImmuneTo>
+          <li>WoundInfection</li>
+        </makeImmuneTo>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.Effect.HediffCompProperties_Immunity">
+        <hds>
+          <li>WoundInfection</li>
+        </hds>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>5</damageAmount>
+            <cooldown>3</cooldown>
+            <armorPenetration>0.4</armorPenetration>
+            <iconPath>UI/Ability/FH_Parasitism_SpiralTentacle</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Paraspike/Paraspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Shieldspike</defName>
+    <label>shieldspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a shieldspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains stronger armor.\n\n-Shield-claw tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.20</ArmorRating_Heat>
+          <SocialImpact>-0.05</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>16</damageAmount>
+            <cooldown>3</cooldown>
+            <iconPath>UI/Ability/FH_ShieldClaw</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Shieldspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Toughspike</defName>
+    <label>toughspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a toughspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains improved global work speed.\n\n-Carapace tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.15</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_Parasitism_DoubleClaw</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Toughspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_Parasitism_DoubleClaw</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/Toughspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_FleshReplica</defName>
+    <label>flesh replica synchronization</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>A synchronization link between a flesh replica and its host, allowing it to mimic the host's appearance and abilities.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Trispike</defName>
+    <label>trispike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a trispike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can release two random small fleshbeasts.\n\n-Bone-spike tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>5</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_Fingerspike</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Trispike/Attachments/Side/Trispike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Stab</damageDef>
+            <damageAmount>5</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_Fingerspike</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/Trispike/Attachments/Side/Trispike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>FH_Trispike_ReleaseSpikes</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Shatterspike</defName>
+    <label>shatterspike mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a shatterspike. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\n-Shatter-claw tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-0.05</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li Class="FleshHive.TentacleProperties_RangeAttack">
+            <tentacleClass>FleshHive.Tentacle_RangeAttackWithWarmup</tentacleClass>
+            <projectile>FH_Bullet_BoneShard</projectile>
+            <armorPenetration>1</armorPenetration>
+            <range>16</range>
+            <rotatingTime>60</rotatingTime>
+            <cooldown>1.5</cooldown>
+            <iconPath>UI/Ability/FH_BoneBurst</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Bulbfreak</defName>
+    <label>bulbfreak mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a bulbfreak. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host can consume twisted flesh to release two random medium fleshbeasts.\n\n-Tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_BulbfreakReleaseFleshbeasts</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Acidbulb</defName>
+    <label>acidbulb mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by an acidbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host becomes immune to toxic buildup, gains 200 twisted flesh capacity, and gains acid mortar and acid spray abilities.\n\n-Tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+          <ToxicResistance>1</ToxicResistance>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData><dataSouth><layer>-120</layer></dataSouth></drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData><dataSouth><layer>-120</layer></dataSouth></drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>FH_Parasitism_AcidMortar</li>
+          <li>FH_Parasitism_AcidSpray</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Spitbulb</defName>
+    <label>spitbulb mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a spitbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host gains 200 twisted flesh capacity and a flesh mortar that releases a small fleshbeast at the impact point.\n\n-Tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode><debugLabel>Tentacle</debugLabel><workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass><texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath><baseLayer>100</baseLayer><drawData><dataSouth><layer>-120</layer></dataSouth></drawData></renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode><debugLabel>Tentacle</debugLabel><workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass><texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath><baseLayer>100</baseLayer><drawData><dataSouth><layer>-120</layer></dataSouth></drawData></renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_FleshMortar</abilityDef>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_SynbulbRampage</defName>
+    <label>synbulb rampage</label>
+    <description>Pheromones released by a dying synbulb drive the fleshbeast into a violent rampage.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.9, 0.1, 0.1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <MoveSpeed>1.75</MoveSpeed>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+        <label>rampage</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Bulbplump</defName>
+    <label>bulbplump mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a bulbplump. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host's hunger rate is reduced, gains 400 twisted flesh capacity, recovers 50 twisted flesh per day, and gains the flesh jump ability.\n\n-Tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <hungerRateFactor>0.5</hungerRateFactor>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li>
+            <tentacleClass>FleshHive.Tentacle_Attackable</tentacleClass>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>10</damageAmount>
+            <cooldown>2</cooldown>
+            <iconPath>UI/Ability/FH_FleshTentacles</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Addon/FH_Bulbspike_Spike</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDef>FH_Parasitism_FleshJump</abilityDef>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_TwistedFleshProducer">
+        <twistedFleshPerDay>50</twistedFleshPerDay>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_Parasitism_Synbulb</defName>
+    <label>synbulb mutualism</label>
+    <hediffClass>FleshHive.ParasitismHediff</hediffClass>
+    <description>This creature is parasitized by a synbulb. The fleshbeast grants it additional abilities, but also imposes significant costs.\n\nThe host enters psychic harmonization.\n\n-Shatter-claw tentacle</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.7, 0.1, 0.1)</defaultLabelColor>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_Parasitism">
+        <tentacles>
+          <li Class="FleshHive.TentacleProperties_RangeAttack">
+            <tentacleClass>FleshHive.Tentacle_RangeAttackWithWarmup</tentacleClass>
+            <projectile>FH_Bullet_BoneShard</projectile>
+            <armorPenetration>1</armorPenetration>
+            <range>16</range>
+            <rotatingTime>60</rotatingTime>
+            <cooldown>1.5</cooldown>
+            <iconPath>UI/Ability/FH_BoneBurst</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+          <li Class="FleshHive.TentacleProperties_RangeAttack">
+            <tentacleClass>FleshHive.Tentacle_RangeAttackWithWarmup</tentacleClass>
+            <projectile>FH_Bullet_BoneShard</projectile>
+            <armorPenetration>1</armorPenetration>
+            <range>16</range>
+            <rotatingTime>60</rotatingTime>
+            <cooldown>1.5</cooldown>
+            <iconPath>UI/Ability/FH_BoneBurst</iconPath>
+            <renderNode>
+              <debugLabel>Tentacle</debugLabel>
+              <workerClass>FleshHive.PawnNodeRenderWorker_Tentacle</workerClass>
+              <texPath>Things/Pawn/Fleshbeast/FH_Shatterspike/FH_Shatterspike_SideLimb</texPath>
+              <baseLayer>100</baseLayer>
+              <drawData>
+                <dataSouth>
+                  <layer>-120</layer>
+                </dataSouth>
+              </drawData>
+            </renderNode>
+          </li>
+        </tentacles>
+      </li>
+      <li Class="FleshHive.HediffCompProperties_GrantLinkedHediff">
+        <hediff MayRequire="Ludeon.RimWorld.Royalty">FH_PsychicHarmonizer</hediff>
+        <bodyPart>Brain</bodyPart>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>FH_PsychicHarmonizer</defName>
+    <label>flesh psychic harmonization</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>A flesh-induced psychic harmonization effect that projects the host's mood to nearby pawns.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_PsychicHarmonizer" MayRequire="Ludeon.RimWorld.Royalty">
+        <range>30</range>
+        <thought>PsychicHarmonization</thought>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\1.7\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FleshHive</AssemblyName>
+    <RootNamespace>FleshHive</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <OutputPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\血肉巢穴\1.7\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>portable</DebugType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ability\Ability_Bastionmeld.cs" />
+    <Compile Include="Ability\Ability_BulbfreakReleaseFleshbeasts.cs" />
+    <Compile Include="Ability\Ability_FH_FleshBerserk.cs" />
+    <Compile Include="Ability\Ability_FH_FleshSpread.cs" />
+    <Compile Include="Ability\Ability_FH_ScarletField.cs" />
+    <Compile Include="Ability\Ability_FissionmeldFission.cs" />
+    <Compile Include="Ability\Ability_FleshRebirth.cs" />
+    <Compile Include="Ability\Ability_SpikeLaunch_Paraspike.cs" />
+    <Compile Include="Ability\CompAbilityEffect_ActiveParasitism.cs" />
+    <Compile Include="Ability\CompAbilityEffect_FleshJumpExplosion.cs" />
+    <Compile Include="Ability\CompAbilityEffect_FleshRebirth.cs" />
+    <Compile Include="Ability\CompAbilityEffect_TitanDevastatingStrike.cs" />
+    <Compile Include="Ability\CompAbilityEffect_TwistedFleshCost.cs" />
+    <Compile Include="Ability\CompProperties_AbilityTitanDevastatingStrike.cs" />
+    <Compile Include="AI\FleshHiveNodeUnitComp.cs" />
+    <Compile Include="AI\FleshHiveNodeUnitCompProperties.cs" />
+    <Compile Include="AI\FleshHiveUnitComp.cs" />
+    <Compile Include="AI\FleshHiveUnitCompProperties.cs" />
+    <Compile Include="AI\GroupWorkModeDefWorker_Hunt.cs" />
+    <Compile Include="AI\JobDriver_GroupHuntExecution.cs" />
+    <Compile Include="AI\JobGiver_AIFleshJumpToJobTarget.cs" />
+    <Compile Include="AI\JobGiver_FleshReplicaCombat.cs" />
+    <Compile Include="AI\JobGiver_FuriousmeldSapperCharge.cs" />
+    <Compile Include="AI\JobGiver_GroupHuntExecute.cs" />
+    <Compile Include="AI\JobGiver_GroupHuntGather.cs" />
+    <Compile Include="AI\LordJob_FleshtitanAssault.cs" />
+    <Compile Include="AI\LordJob_FleshtitanAssembly.cs" />
+    <Compile Include="AI\LordJob_FuriousmeldAssault.cs" />
+    <Compile Include="AI\LordJob_GiantFleshbeastAssault.cs" />
+    <Compile Include="AI\LordToil_FleshtitanAssault.cs" />
+    <Compile Include="AI\LordToil_FuriousmeldAssault.cs" />
+    <Compile Include="AI\LordToil_GiantFleshbeastAssault.cs" />
+    <Compile Include="AI\LordToil_GroupHunt.cs" />
+    <Compile Include="AI\ThinkNode_AssaultOverrideDutyAttack.cs" />
+    <Compile Include="AI\ThinkNode_FleshbeastEscortSkillDuty.cs" />
+    <Compile Include="Building\Blueprint_FleshBuild.cs" />
+    <Compile Include="Building\Building_BoneSpearSpitter.cs" />
+    <Compile Include="Building\Building_FleshBox.cs" />
+    <Compile Include="Building\Building_FleshDigester.cs" />
+    <Compile Include="Building\Building_FleshDoor.cs" />
+    <Compile Include="Building\Building_FleshHopper.cs" />
+    <Compile Include="Building\Building_FleshTurret.cs" />
+    <Compile Include="Building\Building_HarnessedFleshmassHeart.cs" />
+    <Compile Include="Building\Building_RenameableFleshHive.cs" />
+    <Compile Include="Building\ChangeCondition_OnlyOnePrimaryNest.cs" />
+    <Compile Include="Building\ChangeCondition_ResearchFinished.cs" />
+    <Compile Include="Building\CompFleshSpreadOnDetonation.cs" />
+    <Compile Include="Building\FleshBlueprintUtility.cs" />
+    <Compile Include="Building\FleshHiveBuildingDef.cs" />
+    <Compile Include="Building\Graphic_Random_SquashNStretch.cs" />
+    <Compile Include="Building\Graphic_Single_SquashNStretchSafe.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshBlueprint.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshBlueprintResearchVisibility.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshCarapaceFloor.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshDoor.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshFloor.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshmassSpitterGhost.cs" />
+    <Compile Include="Building\HiveBuildingWorker_FleshPlantBlueprint.cs" />
+    <Compile Include="Building\HiveBuildingWorker_ResearchVisibility.cs" />
+    <Compile Include="Building\PitBurrow_Furiousmeld.cs" />
+    <Compile Include="Building\PitBurrow_GiantFleshbeast.cs" />
+    <Compile Include="Building\PlaceWorker_FleshNeverAdjacentTrap.cs" />
+    <Compile Include="Building\PlaceWorker_FleshTurretRadius.cs" />
+    <Compile Include="Building\PlaceWorker_RequireFleshTerrain.cs" />
+    <Compile Include="Comp\CompAdditionalHarvestYield.cs" />
+    <Compile Include="Comp\CompDreadmeldCollapse.cs" />
+    <Compile Include="Comp\CompFissionmeldDormant.cs" />
+    <Compile Include="Comp\CompFissionmeldState.cs" />
+    <Compile Include="Comp\CompFleshBeastAgility.cs" />
+    <Compile Include="Comp\CompFleshBeastCache.cs" />
+    <Compile Include="Comp\CompFleshBuildingCache.cs" />
+    <Compile Include="Comp\CompFleshDigester.cs" />
+    <Compile Include="Comp\CompFleshHiveContainer.cs" />
+    <Compile Include="Comp\CompFleshHiveGlobalProcessSpeed.cs" />
+    <Compile Include="Comp\CompFleshmassHeartTitanCycle.cs" />
+    <Compile Include="Comp\CompFleshPack.cs" />
+    <Compile Include="Comp\CompFleshPowerPlant.cs" />
+    <Compile Include="Comp\CompFleshtitanInvulnerability.cs" />
+    <Compile Include="Comp\CompFleshtitanReversion.cs" />
+    <Compile Include="Comp\CompHarnessedFleshmassHeartTransform.cs" />
+    <Compile Include="Comp\CompHiveGroup_FleshHive.cs" />
+    <Compile Include="Comp\CompHiveGroup_MotherBeast.cs" />
+    <Compile Include="Comp\CompHiveInfrastructure.cs" />
+    <Compile Include="Comp\CompHiveNutritionProducer.cs" />
+    <Compile Include="Comp\CompHiveNutritionRefuelable.cs" />
+    <Compile Include="Comp\CompHivePlan_FleshHive.cs" />
+    <Compile Include="Comp\CompMeldSplit.cs" />
+    <Compile Include="Comp\CompProgressHolder_FleshHive.cs" />
+    <Compile Include="Comp\CompProperties_BuildingOutline.cs" />
+    <Compile Include="Comp\CompProperties_DreadmeldCollapse.cs" />
+    <Compile Include="Comp\CompProperties_FleshmassBase.cs" />
+    <Compile Include="Comp\CompProperties_FleshtitanInvulnerability.cs" />
+    <Compile Include="Comp\CompProperties_FleshtitanReversion.cs" />
+    <Compile Include="Comp\CompProperties_HarnessedFleshmassHeartTransform.cs" />
+    <Compile Include="Comp\CompProperties_SynapsePack.cs" />
+    <Compile Include="Comp\CompProperties_UnitMultiTurret_Bastionmeld.cs" />
+    <Compile Include="Comp\CompScarletField.cs" />
+    <Compile Include="Comp\CompStudiable_FleshBeast.cs" />
+    <Compile Include="Comp\CompStudiable_FleshHive.cs" />
+    <Compile Include="Comp\CompSuppressible.cs" />
+    <Compile Include="Comp\CompSynapsePack.cs" />
+    <Compile Include="Comp\CompUnifyAura.cs" />
+    <Compile Include="Comp\CompUnitMultiTurret_Bastionmeld.cs" />
+    <Compile Include="Comp\Gizmo_FleshHiveActivity.cs" />
+    <Compile Include="Comp\Gizmo_FleshHiveCapacity.cs" />
+    <Compile Include="Comp\Gizmo_FleshHiveDailySummary.cs" />
+    <Compile Include="Alert\Alert_UngroupedFleshbeasts.cs" />
+    <Compile Include="AI\ThinkNode_FleshHiveAllowedArea.cs" />
+    <Compile Include="Patch\Patch_Caravan_AddPawn_FleshHive.cs" />
+    <Compile Include="Core\FHUtitly.cs" />
+    <Compile Include="Core\FleshBeastKindUtility.cs" />
+    <Compile Include="Core\FleshBoxUtility.cs" />
+    <Compile Include="Core\FleshHiveDefOf.cs" />
+    <Compile Include="Core\FleshHiveFleshbeastSpawnUtility.cs" />
+    <Compile Include="Core\FleshHiveMod.cs" />
+    <Compile Include="Core\FleshHiveTags.cs" />
+    <Compile Include="Core\FleshHiveTex.cs" />
+    <Compile Include="Core\FleshHopperUtility.cs" />
+    <Compile Include="Core\FleshTerrainUtility.cs" />
+    <Compile Include="CreepJoiner\Hediff_FleshRetainer.cs" />
+    <Compile Include="DeathAction\DeathActionProperties_FissionmeldDormancy.cs" />
+    <Compile Include="DeathAction\DeathActionProperties_UnitDivideAreaHediff.cs" />
+    <Compile Include="DeathAction\DeathActionProperties_UnitDivideDropThing.cs" />
+    <Compile Include="DeathAction\DeathActionProperties_UnitDivideExplosion.cs" />
+    <Compile Include="DeathAction\DeathActionProperties_UnitDivideSmoke.cs" />
+    <Compile Include="DeathAction\Gas_SynbulbSmoke.cs" />
+    <Compile Include="Debug\DebugTool.cs" />
+    <Compile Include="Debug\Dialog_DebugFleshReplicaRenderTree.cs" />
+    <Compile Include="FleshAdaptation\CompUseEffect_FleshAdaptationSerum.cs" />
+    <Compile Include="FleshAdaptation\FleshAdaptationUtility.cs" />
+    <Compile Include="FleshAdaptation\HediffComp_FleshAdaptation.cs" />
+    <Compile Include="FleshAdaptation\HediffCompProperties_FleshAdaptation.cs" />
+    <Compile Include="FleshAdaptation\Patch_NeedBeauty_FleshAdaptation.cs" />
+    <Compile Include="FleshAdaptation\Thought_FleshParasitism.cs" />
+    <Compile Include="FleshAdaptation\Thought_FoodEaten_FleshAdapted.cs" />
+    <Compile Include="FleshAdaptation\ThoughtWorker_FleshParasitism.cs" />
+    <Compile Include="FleshSack\Designator_MarkPrey.cs" />
+    <Compile Include="FleshSack\FleshSack.cs" />
+    <Compile Include="FleshSack\JobDriver_FillFleshSack.cs" />
+    <Compile Include="FleshSack\WorkGiver_FillFleshSack.cs" />
+    <Compile Include="FleshSymbiosis\HediffComp_FleshSymbiosis.cs" />
+    <Compile Include="FleshSymbiosis\HediffCompProperties_FleshSymbiosis.cs" />
+    <Compile Include="FleshTree\CompInfectHarbingerTree.cs" />
+    <Compile Include="FleshTree\FleshBush.cs" />
+    <Compile Include="FleshTree\FleshTree.cs" />
+    <Compile Include="FleshTree\JobDriver_InfectHarbingerTree.cs" />
+    <Compile Include="FleshTree\WorkGiver_InfectHarbingerTree.cs" />
+    <Compile Include="Hediff\Hediff_DeathOnDowned.cs" />
+    <Compile Include="Hediff\Hediff_FH_Spike_Paraspike.cs" />
+    <Compile Include="Hediff\Hediff_TitanDevastatingStrike.cs" />
+    <Compile Include="Hediff\HediffComp_FleshUpgradeReactivation.cs" />
+    <Compile Include="Hediff\HediffComp_Regeneration.cs" />
+    <Compile Include="Hediff\HediffComp_ScarletField.cs" />
+    <Compile Include="Hediff\HediffCompProperties_FleshTraitDeathEffect.cs" />
+    <Compile Include="Hela\Hediff_Hela.cs" />
+    <Compile Include="Hela\HediffComp_HelaNode.cs" />
+    <Compile Include="Hela\HediffCompProperties_HelaNode.cs" />
+    <Compile Include="Hela\MutantDef_Hela.cs" />
+    <Compile Include="Hive\CompFleshHiveEvolution.cs" />
+    <Compile Include="Hive\CompFleshHiveUnitFuser.cs" />
+    <Compile Include="Hive\CompFleshSpread.cs" />
+    <Compile Include="Hive\FusionProgress_FleshHive.cs" />
+    <Compile Include="Hive\FusionResult_PawnKindWithHediffs.cs" />
+    <Compile Include="Hive\Gizmo_Group_FleshHive.cs" />
+    <Compile Include="Hive\ITab_FleshHive.cs" />
+    <Compile Include="Hive\ITab_FleshHiveGroup.cs" />
+    <Compile Include="Map\FleshHiveHungerUtility.cs" />
+    <Compile Include="Map\FleshHiveUpgradeDef.cs" />
+    <Compile Include="Map\FormulaMaterial_FleshTrait.cs" />
+    <Compile Include="Map\FormulaMaterialCategory_FleshTrait.cs" />
+    <Compile Include="Map\HiveResourcer.cs" />
+    <Compile Include="Map\HiveTabOption_FleshbeastFusion.cs" />
+    <Compile Include="Map\HiveTabOption_FleshbeastGestation.cs" />
+    <Compile Include="Map\HiveTabOption_FleshHive.cs" />
+    <Compile Include="Map\HiveTabOption_FleshHiveUpgrades.cs" />
+    <Compile Include="Map\HiveTabOption_FleshManagement.cs" />
+    <Compile Include="Map\HiveTabOption_HivePlan.cs" />
+    <Compile Include="Map\HiveTabOption_ItemProduction.cs" />
+    <Compile Include="Map\HiveTabOption_Parasitism.cs" />
+    <Compile Include="Map\MapComponent_FleshHive.cs" />
+    <Compile Include="Map\MapFleshHive.cs" />
+    <Compile Include="Map\UnitGroup_FleshHive.cs" />
+    <Compile Include="Map\UnitGroup_TemporaryFleshHive.cs" />
+    <Compile Include="Map\Window_FleshHiveFormula.cs" />
+    <Compile Include="MeldGrowth\FloatMenuOptionProvider_ConsumeMeldSeed.cs" />
+    <Compile Include="MeldGrowth\Hediff_MeldGrowth.cs" />
+    <Compile Include="MeldGrowth\JobDriver_ConsumeMeldSeed.cs" />
+    <Compile Include="MeldGrowth\ModExtension_MeldGrowth.cs" />
+    <Compile Include="Mote\Mote_MissileTarget.cs" />
+    <Compile Include="Parasitism\FleshParasitePod.cs" />
+    <Compile Include="Parasitism\FleshParasiteUtility.cs" />
+    <Compile Include="Parasitism\FleshReplicaRenderNodes.cs" />
+    <Compile Include="Parasitism\FleshReplicaRenderNodeWorkers.cs" />
+    <Compile Include="Parasitism\FleshReplicaSkillData.cs" />
+    <Compile Include="Parasitism\FleshReplicaUnit.cs" />
+    <Compile Include="Parasitism\FleshReplicaWeaponExtension.cs" />
+    <Compile Include="Parasitism\FloatMenuOptionProvider_CarryAnimalToParasitePod.cs" />
+    <Compile Include="Parasitism\FloatMenuOptionProvider_MountParasiticWeapon.cs" />
+    <Compile Include="Parasitism\FloatMenuOptionProvider_UseShardForParasiteCapacity.cs" />
+    <Compile Include="Parasitism\Gizmo_TwistedFleshForParasitism.cs" />
+    <Compile Include="Parasitism\IShardExpandableParasiteCapacity.cs" />
+    <Compile Include="Parasitism\ITab_FleshReplicaGear.cs" />
+    <Compile Include="Parasitism\ITab_ParasiticWeapons.cs" />
+    <Compile Include="Parasitism\ITab_Parasitism.cs" />
+    <Compile Include="Parasitism\JobDriver_MountParasiticWeapon.cs" />
+    <Compile Include="Parasitism\JobDriver_PutPawnInParasitePod.cs" />
+    <Compile Include="Parasitism\JobDriver_UseShardForParasiteCapacity.cs" />
+    <Compile Include="Parasitism\ParasitismAbilityGizmo.cs" />
+    <Compile Include="Parasitism\ParasitismCapacityGizmo.cs" />
+    <Compile Include="Parasitism\ParasitismCapacityStat.cs" />
+    <Compile Include="Parasitism\ParasitismHediff.cs" />
+    <Compile Include="Parasitism\ParasitismSystem.cs" />
+    <Compile Include="Parasitism\Patch_FleshReplicaRenderColor.cs" />
+    <Compile Include="Parasitism\PawnRenderNodeWorker_FleshReplicaBody.cs" />
+    <Compile Include="Parasitism\Window_Parasitism.cs" />
+    <Compile Include="Parasitism\WorkGiver_FillParasitePod.cs" />
+    <Compile Include="Parasitism\CustomFormula\FormulaMaterial_Parasite.cs" />
+    <Compile Include="Parasitism\CustomFormula\Window_SelectParasite.cs" />
+    <Compile Include="Parasitism\Effect\Ability_TrispikeRelease.cs" />
+    <Compile Include="Parasitism\Effect\HediffCompProperties_Immunity.cs" />
+    <Compile Include="Parasitism\ParasitismComp\DynamicPawnRenderNodeSetup_Parasitism.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_FissionmeldUndying.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_GrantLinkedHediff.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_Parasitism.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_ParasitismWeaponMounts.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_ParasitismWithShield.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_TwistedFleshProducer.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffComp_UnificationAura.cs" />
+    <Compile Include="Parasitism\ParasitismComp\HediffCompProperties_ParasitismWeaponMounts.cs" />
+    <Compile Include="Parasitism\ParasitismComp\ParasitismComp.cs" />
+    <Compile Include="Parasitism\ParasitismComp\PawnNodeRender_ScarletField.cs" />
+    <Compile Include="Parasitism\ParasitismComp\PawnNodeRender_Tentacle.cs" />
+    <Compile Include="Parasitism\ParasitismComp\Tentacle_Attackable.cs" />
+    <Compile Include="Parasitism\ParasitismComp\Tentacle_RangeAttack.cs" />
+    <Compile Include="Parasitism\ParasitismComp\Tentacle_RangeAttackWithWarmup.cs" />
+    <Compile Include="Parasitism\ParasitismComp\Tentacle_WeaponMount.cs" />
+    <Compile Include="Parasitism\ParasitismComp\Tentacle.cs" />
+    <Compile Include="Patch\Patch_Ability_StartCooldown_FleshTrait.cs" />
+    <Compile Include="Patch\Patch_WorkGiverMilk_BulbplumpSkip.cs" />
+    <Compile Include="Patch\Patch_WorkGiverMilk_BulbplumpJob.cs" />
+    <Compile Include="Patch\Patch_UnitGroup_Draw_FleshHive.cs" />
+    <Compile Include="Patch\Patch_AddHediff_Immunity.cs" />
+    <Compile Include="Patch\Patch_BodyPartDef_GetMaxHealth_Hela.cs" />
+    <Compile Include="Patch\Patch_BonePlatingFleshBlockResearch.cs" />
+    <Compile Include="Patch\Patch_BoneSpearSpitter_Refuel.cs" />
+    <Compile Include="Patch\Patch_Designator_Cancel_FleshBlueprint.cs" />
+    <Compile Include="Patch\Patch_Frame_FleshHiveConstruction.cs" />
+    <Compile Include="Patch\Patch_InheritParaspikeParasitism.cs" />
+    <Compile Include="Patch\Patch_Lord_AddPawn_Parasitism.cs" />
+    <Compile Include="Patch\Patch_MainTabWindowResearch.cs" />
+    <Compile Include="Patch\Patch_MainTabWindowResearchProgress.cs" />
+    <Compile Include="Patch\Patch_Pawn_HealthTracker_LethalDamageThreshold_Hela.cs" />
+    <Compile Include="Patch\Patch_PawnComponents_Parasitism.cs" />
+    <Compile Include="Patch\Patch_PsychicRitualDef_Visible_FleshHive.cs" />
+    <Compile Include="Patch\Patch_PawnGroupMaker_FleshParasites.cs" />
+    <Compile Include="Patch\Patch_PawnInspectTabs_ParasiticWeapons.cs" />
+    <Compile Include="Patch\Patch_PawnPathFollower_Fleshwind.cs" />
+    <Compile Include="Patch\Patch_TerrainGrid_FleshHiveScale.cs" />
+    <Compile Include="Patch\Patch_ThingUtility_AutoRebuild_FleshBlueprint.cs" />
+    <Compile Include="Patch\PatchMain.cs" />
+    <Compile Include="PawnRender\PawnRenderNode_AnimalPart_Paraspike.cs" />
+    <Compile Include="Projectile\Bullet_BoneSpear.cs" />
+    <Compile Include="Projectile\Projectile_Explosive_ParasitismSpit.cs" />
+    <Compile Include="Projectile\Projectile_Explosive_Spit.cs" />
+    <Compile Include="Projectile\Projectile_FleshHiveBoneSpike.cs" />
+    <Compile Include="Projectile\Spike_Paraspike.cs" />
+    <Compile Include="PsychicRitual\PsychicRitualDef_SummonGiantFleshbeast.cs" />
+    <Compile Include="PsychicRitual\PsychicRitualToil_SummonGiantFleshbeast.cs" />
+    <Compile Include="Quest\FleshHiveSite.cs" />
+    <Compile Include="Quest\FleshSurvivorHelaGenerator.cs" />
+    <Compile Include="Quest\GameComponent_FleshSurvivor.cs" />
+    <Compile Include="Quest\QuestNode_Root_DistressCall_FleshHive.cs" />
+    <Compile Include="Quest\QuestNode_Root_FleshSurvivor.cs" />
+    <Compile Include="Quest\QuestPart_DistressCallAmbush_FleshHive.cs" />
+    <Compile Include="Quest\SitePartWorker_DistressCall_Fleshbeasts_FleshHive.cs" />
+    <Compile Include="Regeneration\Building_FleshRegenerationSac.cs" />
+    <Compile Include="Regeneration\CompFleshRegenerationSac.cs" />
+    <Compile Include="Regeneration\CompProperties_FleshRegenerationSac.cs" />
+    <Compile Include="Regeneration\JobDriver_CarryToFleshRegenerationSac.cs" />
+    <Compile Include="Regeneration\JobDriver_EnterFleshRegenerationSac.cs" />
+    <Compile Include="Regeneration\JobGiver_EnterFleshRegenerationSac.cs" />
+    <Compile Include="Regeneration\WorkGiver_CarryToFleshRegenerationSac.cs" />
+    <Compile Include="Resource\HiveResource_FleshHiveNutrition.cs" />
+    <Compile Include="Scenario\ScenPart_StartingFleshSurvivors.cs" />
+    <Compile Include="Spawner\CompHiveFormulaSpawner_FleshTrait.cs" />
+    <Compile Include="Spawner\CompHiveSpawner_FleshTrait.cs" />
+    <Compile Include="Spawner\FormulaProgress_FleshTrait.cs" />
+    <Compile Include="Spawner\ItemSpawnData_FleshShaping.cs" />
+    <Compile Include="Spawner\ItemSpawnWorker_FleshHopper.cs" />
+    <Compile Include="Spawner\SpawnCategoryWorker_ResearchPrerequisite.cs" />
+    <Compile Include="Spawner\SpecialResourceConsume_FleshBoxRequirement.cs" />
+    <Compile Include="Spawner\UnitSpawnWorker_FleshTraitUnlock.cs" />
+    <Compile Include="Stat\StatPart_FleshCarapacePsychicSensitivity.cs" />
+    <Compile Include="Stat\StatPart_FleshHiveCapacity.cs" />
+    <Compile Include="Stat\StatPart_MarketValue_Parasitism.cs" />
+    <Compile Include="Tutorial\GameComponent_FleshHiveTutorial.cs" />
+    <Compile Include="Tutorial\Window_FleshHiveTutorial.cs" />
+    <Compile Include="TwistedFlesh\CompTwistedFlesh.cs" />
+    <Compile Include="TwistedFlesh\JobDriver_RefillTwistedFlesh_Help.cs" />
+    <Compile Include="TwistedFlesh\JobDriver_RefillTwistedFlesh.cs" />
+    <Compile Include="TwistedFlesh\StatPart_FleshPack.cs" />
+    <Compile Include="TwistedFlesh\TwistedFleshUtility.cs" />
+    <Compile Include="TwistedFlesh\WorkGiver_RefillTwistedFlesh_Help.cs" />
+    <Compile Include="TwistedFlesh\WorkGiver_RefillTwistedFlesh.cs" />
+    <Compile Include="Verb\Mote_BastionmeldCharge.cs" />
+    <Compile Include="Verb\UnitTurret_PlayerEmptyWeaponMount.cs" />
+    <Compile Include="Verb\Verb_AbilityShootMoveAfterAttack.cs" />
+    <Compile Include="Verb\Verb_AbilityShootWithEffects.cs" />
+    <Compile Include="Verb\Verb_BastionmeldTrackingLaser.cs" />
+    <Compile Include="Verb\VerbProperties_BastionmeldTrackingLaser.cs" />
+    <Compile Include="Work\Fishing\JobDriver_FingerspikeAnimalFishing.cs" />
+    <Compile Include="Work\Fishing\JobGiver_FingerspikeAnimalFishing.cs" />
+    <Compile Include="Work\Suppression\FleshHiveActivitySuppressionUtility.cs" />
+    <Compile Include="Work\Suppression\JobDriver_SuppressFleshHiveActivity.cs" />
+    <Compile Include="Work\Suppression\WorkGiver_SuppressFleshHiveActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Waylith.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\com.rlabrecque.steamworks.net.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ISharpZipLib">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\ISharpZipLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Brutal.Core.Logging">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Brutal.Core.Logging.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>D:\Game\Steam\steamapps\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="QuestEditor_Library">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\CQF\1.7\Assemblies\net10.0\QuestEditor_Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="HiveCreatureFramework">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\巢群生物框架\1.7\Assemblies\net10.0\HiveCreatureFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PlayerAbilityFramework">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\玩家能力框架\1.7\Assemblies\PlayerAbilityFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PowerArmorPlatform">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\动力甲装甲平台\1.7\Assemblies\PowerArmorPlatform.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SpartanSurgery">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\斯巴达异种\1.7\Assemblies\SpartanSurgery.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

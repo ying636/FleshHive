@@ -24,6 +24,11 @@ public static class ParasitismSystemUtility
 
 public class ParasitismSystem : HediffWithComps
 {
+    public override bool ShouldRemove => base.ShouldRemove
+        || !pawn.health.hediffSet.hediffs.Any(hediff => hediff is ParasitismHediff
+            || hediff.def == FleshHiveDefOf.FH_Hela
+            || hediff.def == FleshHiveDefOf.FH_FleshRetainer);
+
     public int Limit
     {
         get

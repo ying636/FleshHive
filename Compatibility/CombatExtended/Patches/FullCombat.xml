@@ -347,26 +347,6 @@
       <SwayFactor>0.14</SwayFactor>
     </value>
   </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="FH_FleshmassSpitter"]/verbs/li</xpath>
-    <value>
-      <li Class="CombatExtended.VerbPropertiesCE">
-        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-        <warmupTime>4</warmupTime>
-        <defaultProjectile>FH_Projectile_FleshmassSpitterCE</defaultProjectile>
-        <isMortar>true</isMortar>
-        <requireLineOfSight>false</requireLineOfSight>
-        <minRange>9.9</minRange>
-        <range>72</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>SpitterSpit</soundCast>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-      </li>
-    </value>
-  </Operation>
   <Operation Class="PatchOperationAttributeSet">
     <xpath>Defs/ThingDef[defName="FH_Gun_BastionmeldTrackingLaser"]/verbs/li</xpath>
     <attribute>Class</attribute>

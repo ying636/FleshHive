@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <ThingDef ParentName="BaseBullet">
@@ -152,7 +152,7 @@
     <costList>
       <Meat_Twisted>160</Meat_Twisted>
     </costList>
-    <thingClass>Building</thingClass>
+    <thingClass>Building_TurretGun</thingClass>
     <graphicData>
       <graphicClass>Graphic_Indexed_SquashNStretch</graphicClass>
       <texPath>Things/Building/Fleshmass/FleshmassSpitter</texPath>
@@ -192,8 +192,11 @@
       <li>FH_FleshBuilding</li>
     </tradeTags>
     <building>
+      <turretGunDef>FH_Gun_FleshmassSpitterVanilla</turretGunDef>
+      <turretBurstCooldownTime>41.6666667</turretBurstCooldownTime>
+      <turretBurstWarmupTime>0</turretBurstWarmupTime>
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
-      <isInert>true</isInert>
+      <isInert>false</isInert>
       <claimable>false</claimable>
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>false</deconstructible>
@@ -201,29 +204,8 @@
       <isTargetable>true</isTargetable>
       <destroyEffecter>FleshmassDestroyed</destroyEffecter>
     </building>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-        <warmupTime>4</warmupTime>
-        <forcedMissRadius>3</forcedMissRadius>
-        <defaultProjectile>Bullet_Shell_AcidSpit</defaultProjectile>
-        <isMortar>true</isMortar>
-        <requireLineOfSight>false</requireLineOfSight>
-        <minRange>6.9</minRange>
-        <range>41.9</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>SpitterSpit</soundCast>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-      </li>
-    </verbs>
     <comps>
       <li Class="FleshHive.CompProperties_FleshBuildingCache" />
-      <li>
-        <compClass>CompFleshmassSpitter</compClass>
-      </li>
       <li Class="FleshHive.CompProperties_FleshmassBase">
         <size>(2,2)</size>
       </li>

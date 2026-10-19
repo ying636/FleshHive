@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>FH_Research_BasicFleshHive</defName>
+    <label>basic flesh hive</label>
+    <description>Unlocks the basic flesh hive, flesh floors, flesh blocks, flesh doors, flesh vesicles, flesh hoppers, twisted meat production, and cultivation of all small fleshbeasts.</description>
+    <knowledgeCost>5</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts>
+      <li>Twisted meat</li>
+      <li>All small fleshbeasts</li>
+    </customUnlockTexts>
+    <researchViewX>0</researchViewX>
+    <researchViewY>2.5</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_NutritionCycle</defName>
+    <label>nutrition cycle</label>
+    <description>Unlocks production of flesh lamps, fleshberry bushes, flesh sacks, and flesh power generators.</description>
+    <knowledgeCost>5</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_ImmuneSystem</defName>
+    <label>immune system</label>
+    <description>Unlocks bone-spike spitters, small guard tentacles, and flesh barricades.</description>
+    <knowledgeCost>10</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>1.30</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_FleshFurniture</defName>
+    <label>flesh furniture</label>
+    <description>Unlocks flesh beds, tables, stools, and support columns.</description>
+    <knowledgeCost>5</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>4.90</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_FleshbeastCoexistence</defName>
+    <label>fleshbeast coexistence</label>
+    <description>Unlocks flesh parasite vats and production of flesh adaptation modules and flesh symbiosis modules.</description>
+    <knowledgeCost>20</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>3.80</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_ComplexFleshHive</defName>
+    <label>complex flesh hive</label>
+    <description>Unlocks nerve bundles, flesh hive upgrades, cultivation of all discovered medium fleshbeast formulas except flesh replicas, and production of bioferrite and nerve flesh.</description>
+    <knowledgeCost>20</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts>
+      <li>All medium fleshbeasts except flesh replicas</li>
+      <li>Bioferrite</li>
+      <li>Flesh hive upgrades</li>
+    </customUnlockTexts>
+    <prerequisites><li>FH_Research_BasicFleshHive</li></prerequisites>
+    <researchViewX>1.50</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_FleshFusion</defName>
+    <label>flesh fusion</label>
+    <description>Allows medium fleshbeast fusion and unlocks production of flesh tentacles, flesh whips, fleshmass stomachs, and fleshmass lungs.</description>
+    <knowledgeCost>10</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts>
+      <li>Medium fleshbeast fusion</li>
+    </customUnlockTexts>
+    <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_FleshReplica</defName>
+    <label>flesh replica</label>
+    <description>Allows cultivation of flesh replicas.</description>
+    <knowledgeCost>15</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts><li>Flesh replica cultivation</li></customUnlockTexts>
+    <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.20</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_BonePlatingFleshBlock</defName>
+    <label>chitin-plated flesh blocks</label>
+    <description>Replaces flesh blocks and flesh barricades on all maps with chitin-plated versions and unlocks their construction.</description>
+    <knowledgeCost>15</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts>
+      <li>Harden all flesh blocks and barricades</li>
+    </customUnlockTexts>
+    <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>4.90</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_ComplexImmuneSystem</defName>
+    <label>complex immune system</label>
+    <description>Unlocks fleshmass spitters, flesh bursters, and guard tentacle centers.</description>
+    <knowledgeCost>20</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>3.80</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_FleshPrimaryHive</defName>
+    <label>advanced flesh hive</label>
+    <description>Unlocks the nerve center, cultivation of all large fleshbeasts, and evolution into a flesh primary nest.</description>
+    <knowledgeCost>20</knowledgeCost>
+    <knowledgeCategory>Advanced</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts>
+      <li>All large fleshbeasts</li>
+      <li>Flesh primary nest evolution</li>
+    </customUnlockTexts>
+    <prerequisites><li>FH_Research_ComplexFleshHive</li></prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.50</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_ComplexFleshFusion</defName>
+    <label>complex flesh fusion</label>
+    <description>Allows large fleshbeast fusion and unlocks production of parasite expansion packs.</description>
+    <knowledgeCost>30</knowledgeCost>
+    <knowledgeCategory>Advanced</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts>
+      <li>Large fleshbeast fusion</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_FleshPrimaryHive</li>
+      <li>FH_Research_FleshFusion</li>
+    </prerequisites>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>1.70</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_MotherBeastControl</defName>
+    <label>meld-beast control</label>
+    <description>Allows cultivation of meld beasts.</description>
+    <knowledgeCost>45</knowledgeCost>
+    <knowledgeCategory>Advanced</knowledgeCategory>
+    <techLevel>Undefined</techLevel>
+    <customUnlockTexts><li>Meld-beast cultivation</li></customUnlockTexts>
+    <prerequisites><li>FH_Research_FleshPrimaryHive</li></prerequisites>
+    <researchViewX>4.50</researchViewX>
+    <researchViewY>3.30</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <!--
+  <ResearchProjectDef>
+    <defName>FH_Research_EfficientFleshExpansion</defName>
+    <label>efficient flesh expansion</label>
+    <description>Increases global flesh terrain spread speed by 50%.</description>
+    <knowledgeCost>10</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Industrial</techLevel>
+    <customUnlockTexts>
+      <li>Global flesh terrain spread speed +50%</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_BasicFleshHive</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>3</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_EfficientNutritionAbsorption</defName>
+    <label>efficient nutrition absorption</label>
+    <description>Increases nutrition gained from corpses, food, and flesh sacks by 50%.</description>
+    <knowledgeCost>30</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Industrial</techLevel>
+    <customUnlockTexts>
+      <li>Nutrition gained from corpses, food, and flesh sacks +50%</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>3</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_AdvancedFleshHive</defName>
+    <label>advanced flesh hive</label>
+    <description>Unlocks large fleshbeast fusion, advanced meld-beast fusion when the required meld-beast node is available, nerve centers, fleshmass spitters, flesh burst launchers, and parasite expansion packs.</description>
+    <knowledgeCost>45</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Industrial</techLevel>
+    <customUnlockTexts>
+      <li>Large fleshbeast fusion</li>
+      <li>Advanced meld-beast fusion</li>
+      <li>Nerve centers</li>
+      <li>Fleshmass spitters</li>
+      <li>Flesh burst launchers</li>
+      <li>Parasite expansion packs</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_ComplexFleshHive</li>
+    </prerequisites>
+    <researchViewX>8</researchViewX>
+    <researchViewY>2</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_SelfRepairFlesh</defName>
+    <label>self-repairing flesh</label>
+    <description>Allows flesh buildings to consume hive nutrition to repair their own hit points over time.</description>
+    <knowledgeCost>30</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Industrial</techLevel>
+    <customUnlockTexts>
+      <li>Flesh buildings consume hive nutrition to repair themselves</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </prerequisites>
+    <researchViewX>10</researchViewX>
+    <researchViewY>1</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_FleshHeartControl</defName>
+    <label>flesh heart control</label>
+    <description>Reduces global flesh hive activity growth speed by 50%.</description>
+    <knowledgeCost>80</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Industrial</techLevel>
+    <customUnlockTexts>
+      <li>Global flesh hive activity growth speed -50%</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </prerequisites>
+    <researchViewX>10</researchViewX>
+    <researchViewY>2</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>FH_Research_EfficientCellDivision</defName>
+    <label>efficient cell division</label>
+    <description>Increases fleshbeast production speed by 50%.</description>
+    <knowledgeCost>60</knowledgeCost>
+    <knowledgeCategory>Basic</knowledgeCategory>
+    <techLevel>Industrial</techLevel>
+    <customUnlockTexts>
+      <li>Fleshbeast production speed +50%</li>
+    </customUnlockTexts>
+    <prerequisites>
+      <li>FH_Research_AdvancedFleshHive</li>
+    </prerequisites>
+    <researchViewX>10</researchViewX>
+    <researchViewY>3</researchViewY>
+    <tab>FH_ResearchTab_FleshHive</tab>
+  </ResearchProjectDef>
+  -->
+</Defs>

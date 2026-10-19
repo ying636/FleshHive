@@ -30,6 +30,55 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
     private bool IsPlayerHiveHungry => hive?.TryGetComp<CompHiveGroup_MotherBeast>() == null
         && hive?.Faction == Faction.OfPlayer && FleshHiveHungerUtility.IsHungry(hive);
 
+    public bool CanUngroupAll => this is not UnitGroup_TemporaryFleshHive && Map != null
+        && (hive == null || hive.Faction == Faction.OfPlayer)
+        && units.Any(unit => unit.Faction == Faction.OfPlayer && !unit.Dead && !unit.Destroyed
+            && unit.TryGetComp<CompFleshBeastCache>() != null && !HCFGameUtility.IsNodeUnit(unit)
+            && HCFGameUtility.GetUnitComp(unit)?.group == this);
+
+    public void UngroupAll()
+    {
+        if (!CanUngroupAll)
+        {
+            return;
+        }
+        if (Map.GetComponent<MapComponent_FleshHive>()?.group is not UnitGroup_TemporaryFleshHive target)
+        {
+            Log.Error("[FleshHive] Cannot ungroup fleshbeasts: the map has no ungrouped fleshbeast group.");
+            return;
+        }
+        List<Pawn> members = units.Where(unit => unit.Faction == Faction.OfPlayer && !unit.Dead && !unit.Destroyed
+            && unit.TryGetComp<CompFleshBeastCache>() != null && !HCFGameUtility.IsNodeUnit(unit)
+            && HCFGameUtility.GetUnitComp(unit)?.group == this).ToList();
+        GameComponent_UnitGroup.Instance.tranDatas.RemoveWhere(data => members.Contains(data.unit));
+        foreach (Pawn unit in members)
+        {
+            unit.jobs?.StopAll();
+            if (unit.mindState != null)
+            {
+                unit.mindState.enemyTarget = null;
+                unit.mindState.duty = null;
+            }
+            if (unit.Spawned && unit.Map == target.Map)
+            {
+                target.AcceptUnit(unit);
+            }
+            else
+            {
+                var targetLord = target.lord;
+                target.lord = null;
+                try
+                {
+                    target.AcceptUnit(unit);
+                }
+                finally
+                {
+                    target.lord = targetLord;
+                }
+            }
+        }
+    }
+
     public override void AcceptUnit(Pawn unit)
     {
         if (unit == null)

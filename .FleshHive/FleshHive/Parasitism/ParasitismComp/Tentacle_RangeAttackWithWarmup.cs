@@ -21,7 +21,7 @@ public class Tentacle_RangeAttackWithWarmup : Tentacle_RangeAttack
             return;
         }
 
-        if (!AutoAttackEnabled)
+        if (!AutoAttackEnabled || HostDownedAttackBlocked)
         {
             CancelWarmup();
             return;
@@ -61,7 +61,7 @@ public class Tentacle_RangeAttackWithWarmup : Tentacle_RangeAttack
 
     public override void Attack(Thing target)
     {
-        if (target == null || warmupTarget != null)
+        if (HostDownedAttackBlocked || target == null || warmupTarget != null)
         {
             return;
         }

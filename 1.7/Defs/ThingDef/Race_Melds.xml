@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="FH_BaseFleshBeast" Name="FH_NodeFleshBeast" Abstract="True">
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
+    </statBases>
+    <race>
+      <intelligence>Animal</intelligence>
+    </race>
+    <comps>
+      <li Class="FleshHive.CompPropertiesHiveGroup_MotherBeast">
+        <groupCount>1</groupCount>
+        <defaultUnitLimit>30</defaultUnitLimit>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <gizmoBackgroundColor>(1,0.35,0.35,1)</gizmoBackgroundColor>
+        <specialWorks>
+          <li>HCF_UnitWork_Hunt</li>
+        </specialWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Advanced</knowledgeCategory>
+        <anomalyKnowledge>4</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
+      <li Class="CompProperties_AttachPoints" MayRequire="Ludeon.RimWorld.Anomaly">
+        <points>
+          <li>
+            <offset>(-.71, 0, .71)</offset>
+            <type>PlatformRestraint0</type>
+          </li>
+          <li>
+            <offset>(.71, 0, .71)</offset>
+            <type>PlatformRestraint1</type>
+          </li>
+          <li>
+            <offset>(.71, 0, -.71)</offset>
+            <type>PlatformRestraint2</type>
+          </li>
+          <li>
+            <offset>(-.71, 0, -.71)</offset>
+            <type>PlatformRestraint3</type>
+          </li>
+        </points>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>FleshHive.ITab_FleshHive</li>
+    </inspectorTabs>
+    <recipes>
+      <li>Anesthetize</li>
+    </recipes>
+  </ThingDef>
+
+  <!-- 统合母兽 -->
+  <ThingDef ParentName="FH_NodeFleshBeast">
+    <defName>FH_Nexusmeld</defName>
+    <label>nexusmeld</label>
+    <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. The nexusmeld is the core of the fleshbeast swarm's coordination, using its powerful psychic abilities to command other fleshbeasts in assaults. Nexusmelds rarely appear in raids, preferring to lurk within nests supported by fleshmass hearts, with which they share a psychic bond.</description>
+    <statBases>
+      <MoveSpeed>2.8</MoveSpeed>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <ToxicResistance>0.8</ToxicResistance>
+      <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_NexusmeldSeed</seed>
+      </li>
+    </modExtensions>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.8</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeExpectancy>25</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <renderTree>Dreadmeld</renderTree>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_NexusmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>3</enemyDropCount>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2.6315789</bioferriteDensity>
+      </li>
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>6</groupCost>
+        <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>36</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_MeldSplit">
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
+        <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
+        <damageThreshold>200</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
+      </li>
+      <li Class="FleshHive.CompProperties_FH_UnifyAura" />
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>300</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Nexusmeld</hediff>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <abilityLabel>Meld beast tentacle</abilityLabel>
+        <abilityDescription>The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
+    </comps>
+    <tools>
+      <li>
+        <label>left bone spike</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right bone spike</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Nexusmeld</defName>
+    <label>nexusmeld</label>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
+    <race>FH_Nexusmeld</race>
+    <combatPower>600</combatPower>
+    <abilities>
+      <li>FH_FleshBerserk</li>
+      <li>FH_FleshSpread</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Nexusmeld</skillDuty>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Nexusmeld/FH_Nexusmeld</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- 暴怒母兽 -->
+  <ThingDef ParentName="FH_NodeFleshBeast">
+    <defName>FH_Furiousmeld</defName>
+    <label>furiousmeld</label>
+    <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. It grows a thick carapace of living iron and can project a spherical bioprotective forcefield that allows bullets to pass out but not in. Furiousmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the furiousmeld charges headlong to destroy defenses, clearing a path for lesser fleshbeasts to overwhelm the enemy.</description>
+    <statBases>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.00</ArmorRating_Heat>
+      <ToxicResistance>0.80</ToxicResistance>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_FuriousmeldSeed</seed>
+      </li>
+    </modExtensions>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeExpectancy>25</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <renderTree>Dreadmeld</renderTree>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_FuriousmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>3</enemyDropCount>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>6</groupCost>
+        <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>48</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_MeldSplit">
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
+        <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
+        <damageThreshold>200</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
+      </li>
+      <li Class="FleshHive.CompProperties_ScarletField">
+        <areaShieldRadius>6.75</areaShieldRadius>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>400</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Furiousmeld</hediff>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <abilityLabel>Shield-claw tentacle</abilityLabel>
+        <abilityDescription>The host grows two shield-claw tentacles that deal 16 blunt damage every 3 seconds.</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
+    </comps>
+    <tools>
+      <li>
+        <label>left bone spike</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right bone spike</label>
+        <capacities>
+          <li>Scratch</li>
+          <li>Stab</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>carapace</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Furiousmeld</defName>
+    <label>furiousmeld</label>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
+    <race>FH_Furiousmeld</race>
+    <combatPower>650</combatPower>
+    <abilities>
+      <li>FH_ScarletField</li>
+      <li>FH_RampageCharge</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Furiousmeld</skillDuty>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Furiousmeld/FH_Furiousmeld</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="FH_NodeFleshBeast">
+    <defName>FH_Bastionmeld</defName>
+    <label>bastionmeld</label>
+    <description>A colossal amalgamation of dozens of smaller fleshbeasts, coordinated by a loosely connected central nervous system. Its body is embedded with the remnants of various mechanoids. Through some form of supernatural energy, the bastionmeld controls weapons that once belonged to mechanoids. Bastionmelds rarely appear in raids and can usually only be summoned through rituals. In combat, the bastionmeld continually assembles armed fleshbeasts and defeats its enemies through long-range fire.</description>
+    <statBases>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.50</ArmorRating_Heat>
+      <ToxicResistance>0.80</ToxicResistance>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <FilthMultiplier>1</FilthMultiplier>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_BastionmeldSeed</seed>
+      </li>
+    </modExtensions>
+    <inspectorTabs>
+      <li>HiveCreatureFramework.ITab_UnitTurret</li>
+    </inspectorTabs>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeExpectancy>25</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <renderTree>Dreadmeld</renderTree>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_BastionmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>3</enemyDropCount>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>6</groupCost>
+        <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>42</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_MeldSplit">
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
+        <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
+        <damageThreshold>200</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
+      </li>
+      <li Class="FleshHive.CompProperties_UnitMultiTurret_Bastionmeld">
+        <turrets>
+          <li>
+            <label>Beam Incinerator Cannon</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>FH_Gun_BastionmeldTrackingLaser</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>false</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1, 1)</overrideMeshSize>
+                <baseLayer>20</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(0.62, 0, 0.31)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(0.2, 0, -0.12)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(-0.62, 0, 0.7)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(-0.2, 0, 1.12)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <label>Flesh weapon mount</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>Gun_ChargeBlasterHeavy</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>true</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1.15, 1.15)</overrideMeshSize>
+                <baseLayer>21</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(-0.82, 0, 0.31)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(0.2, 0, 1.12)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(0.82, 0, 0.7)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(-0.2, 0, -0.12)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <label>Flesh weapon mount</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>Gun_ThumpCannon</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>true</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1.25, 1.25)</overrideMeshSize>
+                <baseLayer>22</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(0.62, 0, 0.86)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(-0.36, 0, -0.12)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(-0.62, 0, 0.14)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(0.36, 0, 1.12)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+          <li>
+            <label>Flesh weapon mount</label>
+            <turretClass>FleshHive.UnitTurret_PlayerEmptyWeaponMount</turretClass>
+            <turretDef>FH_Gun_BastionmeldChargeLance</turretDef>
+            <angleOffset>-90</angleOffset>
+            <mainWeapon>false</mainWeapon>
+            <canBeUnmounted>true</canBeUnmounted>
+            <renderNodeProperties>
+              <li>
+                <nodeClass>HiveCreatureFramework.PawnRenderNode_UnitMultiTurret</nodeClass>
+                <workerClass>HiveCreatureFramework.PawnRenderNodeWorker_UnitMultiTurret</workerClass>
+                <parentTagDef>Body</parentTagDef>
+                <overrideMeshSize>(1.15, 1.15)</overrideMeshSize>
+                <baseLayer>22</baseLayer>
+                <pawnType>Any</pawnType>
+                <drawData>
+                  <dataNorth>
+                    <offset>(-0.82, 0, 0.86)</offset>
+                  </dataNorth>
+                  <dataEast>
+                    <offset>(-0.36, 0, 1.12)</offset>
+                  </dataEast>
+                  <dataSouth>
+                    <offset>(0.82, 0, 0.14)</offset>
+                  </dataSouth>
+                  <dataWest>
+                    <rotationOffset>180</rotationOffset>
+                    <offset>(0.36, 0, -0.12)</offset>
+                  </dataWest>
+                </drawData>
+              </li>
+            </renderNodeProperties>
+          </li>
+        </turrets>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>400</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Bastionmeld</hediff>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <effect>Flesh mutualism mood -6; Social Impact -10%; grants impossible regeneration; adds two parasitic weapon mounts.</effect>
+        <abilityLabel>Weapon slot</abilityLabel>
+        <abilityDescription>The host grows two weapon slots that can mount weapons and use the mounted weapons to attack.</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
+    </comps>
+    <tools>
+      <li>
+        <label>left bone spike</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right bone spike</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+  <!-- 血肉死卫 -->
+  <ThingDef ParentName="FH_LittleFleshBeast">
+    <defName>FH_FleshDeadguard</defName>
+    <label>flesh deadguard</label>
+    <description>A temporary fleshbeast guard summoned by a fleshbeast meld.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</uiIconPath>
+    <race>
+      <body>Fingerspike</body>
+      <renderTree>Fingerspike</renderTree>
+    </race>
+    <comps Inherit="False">
+      <li Class="HiveCreatureFramework.ControlCompProperties" />
+      <li Class="FleshHive.CompProperties_FleshBeastAgility" />
+      <li Class="FleshHive.CompProperties_Studiable_FleshBeast" MayRequire="Ludeon.RimWorld.Anomaly">
+        <frequencyTicks>120000</frequencyTicks>
+        <knowledgeCategory>Basic</knowledgeCategory>
+        <anomalyKnowledge>1</anomalyKnowledge>
+        <minMonolithLevelForStudy>1</minMonolithLevelForStudy>
+        <requiresHoldingPlatform>true</requiresHoldingPlatform>
+      </li>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
+      <li Class="FleshHive.FleshHiveUnitCompProperties">
+        <overrideDuty_Attack>FH_FleshReplicaAttack</overrideDuty_Attack>
+        <overrideDuty_Defend>FH_FleshReplicaDefend</overrideDuty_Defend>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>3</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+          <li>BasicWorker</li>
+          <li>Hauling</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>spike</label>
+        <labelNoLocation>spike</labelNoLocation>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>MiddleSpike</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <chanceFactor>0.5</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_FleshDeadguard</defName>
+    <label>flesh deadguard</label>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
+    <race>FH_FleshDeadguard</race>
+    <forceNoDeathNotification>true</forceNoDeathNotification>
+    <combatPower>30</combatPower>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <combatMode>Ranged</combatMode>
+        <seekCover>true</seekCover>
+        <targetAcquireRadius>36</targetAcquireRadius>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>FH_FleshDeadguardLifespan</def>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+        <silhouetteGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Fingerspike/Fingerspike_MenuIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </silhouetteGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Bastionmeld</defName>
+    <label>bastionmeld</label>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
+    <race>FH_Bastionmeld</race>
+    <combatPower>550</combatPower>
+    <abilities>
+      <li>FH_BastionmeldSummonDeadguard</li>
+      <li>FH_BastionmeldFleshPulse</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Bastionmeld</skillDuty>
+        <combatMode>Ranged</combatMode>
+        <minimumRange>15</minimumRange>
+        <maximumRange>18.9</maximumRange>
+        <targetAcquireRadius>48</targetAcquireRadius>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Bastionmeld/FH_Bastionmeld</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- 裂殖母兽 -->
+  <ThingDef ParentName="FH_NodeFleshBeast">
+    <defName>FH_Fissionmeld</defName>
+    <label>fissionmeld</label>
+    <description>A colossal amalgamation of dozens of smaller fleshbeasts, bound together by a loosely connected central nervous system. Its body undergoes constant rapid hyperplasia, with new fleshbeasts budding from its form at regular intervals. These parasitic offspring make the fissionmeld a terrifying meat grinder. Fissionmelds rarely appear in raids and can usually only be summoned through rituals. Upon death, the fissionmeld enters a dormant state and will eventually regenerate.</description>
+    <statBases>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <ToxicResistance>0.80</ToxicResistance>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <FilthRate>1.0</FilthRate>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <FH_Stat_ParasitismCapacity>-1</FH_Stat_ParasitismCapacity>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld_east</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_FissionmeldSeed</seed>
+      </li>
+    </modExtensions>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>5.0</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeExpectancy>25</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <renderTree>Dreadmeld</renderTree>
+      <deathAction Class="FleshHive.DeathActionProperties_FissionmeldDormancy">
+        <dormantThing>FH_DormantFissionmeld</dormantThing>
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <spawnPointsRange>100~300</spawnPointsRange>
+        <spawnRadius>5</spawnRadius>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="FleshHive.CompProperties_FissionmeldState" />
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2</bioferriteDensity>
+      </li>
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>6</groupCost>
+        <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>30</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_MeldSplit">
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
+        <thresholdSpawnPointsRange>100~300</thresholdSpawnPointsRange>
+        <damageThreshold>150</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>800</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Fissionmeld</hediff>
+        <twistedFleshCapacity>800</twistedFleshCapacity>
+        <abilityLabel>Meld beast tentacle</abilityLabel>
+        <abilityDescription>The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
+    </comps>
+    <tools>
+      <li>
+        <label>left bone spike</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>34</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>1</armorPenetration>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right bone spike</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Stab</li>
+        </capacities>
+        <power>34</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>1</armorPenetration>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+          <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>42</power>
+        <cooldownTime>2.6</cooldownTime>
+        <armorPenetration>1</armorPenetration>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Fissionmeld</defName>
+    <label>fissionmeld</label>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
+    <race>FH_Fissionmeld</race>
+    <combatPower>450</combatPower>
+    <abilities>
+      <li>FH_FissionmeldFission</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Fissionmeld</skillDuty>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+      <li>
+        <def>FH_ParasitismSystem</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Fissionmeld/FH_Fissionmeld</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- 血肉泰坦 -->
+  <ThingDef ParentName="FH_NodeFleshBeast" Name="FH_FleshtitanBase">
+    <defName>FH_Fleshtitan</defName>
+    <label>fleshtitan</label>
+    <description>The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time.</description>
+    <statBases>
+      <MoveSpeed>1</MoveSpeed>
+      <MinimumContainmentStrength>200</MinimumContainmentStrength>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.0</ArmorRating_Heat>
+      <ToxicResistance>1.0</ToxicResistance>
+      <Flammability>0</Flammability>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan_east</uiIconPath>
+    <race>
+      <body>Gorehulk</body>
+      <baseBodySize>4.0</baseBodySize>
+      <baseHealthScale>1.5</baseHealthScale>
+      <lifeExpectancy>50</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <deathAction Class="HiveCreatureFramework.DeathActionProperties_UnitDivide">
+        <divideBloodFilthCountRange>4~6</divideBloodFilthCountRange>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>5</groupCost>
+        <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>100</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_MeldSplit">
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>2~4</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
+        <thresholdSpawnPointsRange>200~400</thresholdSpawnPointsRange>
+        <damageThreshold>300</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>800</capacity>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshtitanInvulnerability" />
+      <li Class="FleshHive.CompProperties_FleshtitanReversion">
+        <wildTitanRace>FH_Fleshtitan</wildTitanRace>
+        <controlledTitanRace>FH_HarnessedFleshtitan</controlledTitanRace>
+        <heartDef>FleshmassHeart</heartDef>
+        <controlledHeartDef>FH_HarnessedFleshmassHeart</controlledHeartDef>
+        <revertAfterTicks>25000</revertAfterTicks>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left arm</label>
+        <labelNoLocation>heavy punch</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>56</power>
+        <cooldownTime>3</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>LeftFleshClub</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>right arm</label>
+        <labelNoLocation>heavy punch</labelNoLocation>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>56</power>
+        <cooldownTime>3</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>RightFleshClub</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Fleshbeast_Attack_Blunt</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="FH_FleshtitanBase">
+    <defName>FH_HarnessedFleshtitan</defName>
+    <label>harnessed fleshtitan</label>
+    <description>The heart of the fleshbeast catastrophe - a fleshmass heart that has somehow grown limbs. Its extreme regenerative capabilities render it nearly invulnerable. Almost no known method can harm the fleshtitan. Its near-limitless strength allows it to destroy any obstacle in its path. The fleshtitan moves extremely slowly and will revert to a fleshmass heart after a period of time. Under the restraint of an archotechnological device, the fleshtitan can accept simple commands and participate in combat.</description>
+    <uiIconPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_HarnessedFleshtitan_east</uiIconPath>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseFleshbeastKind" Name="FH_FleshtitanKindBase">
+    <defName>FH_Fleshtitan</defName>
+    <label>fleshtitan</label>
+    <overrideDeathOnDownedChance>1.0</overrideDeathOnDownedChance>
+    <race>FH_Fleshtitan</race>
+    <combatPower>1500</combatPower>
+    <abilities>
+      <li>FH_TitanDevastatingStrike</li>
+      <li>FH_TitanGroundSlam</li>
+      <li>FH_TitanCharge</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Fleshtitan</skillDuty>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_Fleshtitan</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>6.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- 惊惧母兽 -->
+  <ThingDef ParentName="FH_NodeFleshBeast">
+    <defName>FH_Dreadmeld</defName>
+    <label>dreadmeld</label>
+    <description>A gargantuan amalgamation of dozens of smaller fleshbeasts linked together by a loosely shared central nervous system. It uses its massive claws to dig tunnels through solid rock. Fleshbeast dreadmelds are rarely seen above ground, instead sheltering in caverns built from living flesh. They share a psychic connection with the flesh used to create their burrow.</description>
+    <statBases>
+      <MoveSpeed>2.8</MoveSpeed>
+      <MinimumContainmentStrength>100</MinimumContainmentStrength>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <ToxicResistance>0.8</ToxicResistance>
+      <FH_Stat_ParasitismCapacity>5</FH_Stat_ParasitismCapacity>
+    </statBases>
+    <uiIconPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld_MenuIcon</uiIconPath>
+    <modExtensions>
+      <li Class="FleshHive.ModExtension_MeldGrowth">
+        <seed>FH_DreadmeldSeed</seed>
+      </li>
+    </modExtensions>
+    <race>
+      <body>Bulbfreak</body>
+      <baseBodySize>3.8</baseBodySize>
+      <baseHealthScale>10.0</baseHealthScale>
+      <lifeExpectancy>25</lifeExpectancy>
+      <soundMoving>Pawn_Fleshbeast_Bulbfreak_Moving</soundMoving>
+      <renderTree>Dreadmeld</renderTree>
+      <deathAction Class="FleshHive.DeathActionProperties_UnitDivideDropThing">
+        <divideBloodFilthCountRange>3~4</divideBloodFilthCountRange>
+        <dividePawnCount>3</dividePawnCount>
+        <dividePawnSize>Large</dividePawnSize>
+        <dropThing>FH_DreadmeldSeed</dropThing>
+        <enemyDropThing>Shard</enemyDropThing>
+        <enemyDropCount>3</enemyDropCount>
+      </deathAction>
+      <lifeStageAges>
+        <li>
+          <def>EntityFullyFormed</def>
+          <soundWounded>Pawn_Fleshbeast_Bulbfreak_Wounded</soundWounded>
+          <soundDeath>Pawn_Fleshbeast_Bulbfreak_Death</soundDeath>
+          <soundCall>Pawn_Fleshbeast_Bulbfreak_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <comps>
+      <li Class="CompProperties_ProducesBioferrite" MayRequire="Ludeon.RimWorld.Anomaly">
+        <bioferriteDensity>2.6315789</bioferriteDensity>
+      </li>
+      <li Class="FleshHive.FleshHiveNodeUnitCompProperties">
+        <groupCost>6</groupCost>
+        <maintenanceResource>FH_Resource_TwistedFlesh</maintenanceResource>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.5</maintenancePerInterval>
+        <maintenancePerResource>0.1</maintenancePerResource>
+        <overrideNeedDef>FH_Need_Control</overrideNeedDef>
+        <draftable>true</draftable>
+        <rewild Class="HiveCreatureFramework.RewildingEffectWorker_ChangeFaction">
+          <faction>Entities</faction>
+        </rewild>
+        <recycledResources>
+          <FH_Resource_Nutrition>54</FH_Resource_Nutrition>
+        </recycledResources>
+        <works>
+          <li>HCF_UnitWork_DoWorkGiver</li>
+          <li>HCF_UnitWork_Rescuing</li>
+        </works>
+        <availableRoutineWorks>
+          <li>Firefighter</li>
+        </availableRoutineWorks>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+      </li>
+      <li Class="FleshHive.CompProperties_MeldSplit">
+        <spawnOptions>
+          <li>FH_Fingerspike</li>
+          <li>FH_Whipspike</li>
+          <li>FH_Gutspike</li>
+          <li>FH_Paraspike</li>
+          <li>FH_Puffspike</li>
+        </spawnOptions>
+        <firstHitSpawnCountRange>1~3</firstHitSpawnCountRange>
+        <firstHitSpawnRadius>5</firstHitSpawnRadius>
+        <thresholdSpawnPointsRange>150~350</thresholdSpawnPointsRange>
+        <damageThreshold>250</damageThreshold>
+      </li>
+      <li Class="FleshHive.CompProperties_FleshBeastCache">
+        <size>Giant</size>
+      </li>
+      <li Class="FleshHive.CompProperties_TwistedFlesh">
+        <capacity>300</capacity>
+      </li>
+      <li Class="FleshHive.ParasitismCompProperties">
+        <cost>6</cost>
+        <hediff>FH_Parasitism_Dreadmeld</hediff>
+        <twistedFleshCapacity>400</twistedFleshCapacity>
+        <abilityLabel>Meld beast tentacle</abilityLabel>
+        <abilityDescription>The host grows two meld beast tentacles that deal 14 sharp damage every 2 seconds with 40% armor penetration.</abilityDescription>
+      </li>
+      <li Class="FleshHive.CompProperties_DreadmeldCollapse" />
+    </comps>
+    <tools>
+      <li>
+        <label>left bone spike</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>FirstTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>right bone spike</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <linkedBodyPartsGroup>SecondTentacle</linkedBodyPartsGroup>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+        <soundMeleeHit>Pawn_Dreadmeld_Attack_Spike</soundMeleeHit>
+      </li>
+    </tools>
+  </ThingDef>
+  <PawnKindDef ParentName="BaseFleshbeastKind">
+    <defName>FH_Dreadmeld</defName>
+    <label>dreadmeld</label>
+    <isBoss>true</isBoss>
+    <overrideDeathOnDownedChance>0.98</overrideDeathOnDownedChance>
+    <race>FH_Dreadmeld</race>
+    <combatPower>600</combatPower>
+    <abilities>
+      <li>FH_DreadmeldTerrorRoar</li>
+    </abilities>
+    <modExtensions>
+      <li Class="HiveCreatureFramework.ModExtension_UnitSkillDuty">
+        <skillDuty>FH_Skill_Dreadmeld</skillDuty>
+      </li>
+    </modExtensions>
+    <startingHediffs>
+      <li>
+        <def>Regeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/Dreadmeld/Dreadmeld</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <PawnKindDef ParentName="FH_FleshtitanKindBase">
+    <defName>FH_HarnessedFleshtitan</defName>
+    <label>harnessed fleshtitan</label>
+    <race>FH_HarnessedFleshtitan</race>
+    <lifeStages Inherit="false">
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Fleshbeast/FH_Fleshtitan/FH_HarnessedFleshtitan</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>6.5</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

@@ -337,6 +337,10 @@ public class FleshTree : Plant
         {
             return false;
         }
+        if (cell.GetTerrain(Map).IsFloor)
+        {
+            return false;
+        }
         if (cell.Impassable(Map))
         {
             return false;

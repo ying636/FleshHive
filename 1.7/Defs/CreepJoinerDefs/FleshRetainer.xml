@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <CreepJoinerBenefitDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_CreepJoinerBenefit_FleshRetainer</defName>
+    <label>flesh retainer</label>
+    <letterExtra>{PAWN_nameDef} possesses a weakened version of Hela's power, known as flesh retainer. Parasitism does not increase {PAWN_possessive} body factor, and {PAWN_pronoun} is not a node creature. {PAWN_pronoun} has 4 parasite capacity and begins with one random small fleshbeast. Consuming a shard increases parasite capacity, up to 10, and causes a one-day coma.</letterExtra>
+    <weight>1</weight>
+    <hediffs>
+      <li>FH_FleshRetainer</li>
+    </hediffs>
+  </CreepJoinerBenefitDef>
+
+</Defs>

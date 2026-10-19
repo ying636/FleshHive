@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HiveCreatureFramework.SpawnCategoryDef>
+    <defName>FH_Category_FleshItems</defName>
+    <label>flesh items</label>
+    <description>Materials and body parts produced by the flesh hive.</description>
+    <color>(0.75, 0.15, 0.15)</color>
+    <items>
+      <li>FH_Item_TwistedMeat</li>
+      <li>FH_Item_Bioferrite</li>
+      <li>FH_Item_FleshCarapace</li>
+      <li>FH_Item_NerveFlesh</li>
+      <li>FH_Item_Tentacle</li>
+      <li>FH_Item_FleshAdaptationModule</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">FH_Item_FleshSymbiosisSerum</li>
+      <li>FH_Item_FleshSymbiosisModule</li>
+      <li>FH_Item_FleshPack</li>
+      <li>FH_Item_SynapsePack</li>
+      <li>FH_Item_FleshWhip</li>
+      <li>FH_Item_FleshmassStomach</li>
+      <li>FH_Item_FleshmassLung</li>
+    </items>
+  </HiveCreatureFramework.SpawnCategoryDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_TwistedMeat</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>twisted meat</label>
+    <description>Pieces of twisted muscle and gristle, bloated with tumorous growths. These bizarre shreds of flesh must have come from a horrific creature.</description>
+    <thing>Meat_Twisted</thing>
+    <stackCountRange>10~10</stackCountRange>
+    <spawningDay>0.05~0.05</spawningDay>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>0.6</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_Bioferrite</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>bioferrite</label>
+    <description>An exotic metal-like fibrous substance with both organic and metallic properties. Bioferrite is produced by microscopic mechanites as they process organic material. In cases of disordered mechanite behavior, this happens in a chaotic, cancer-like way.\n\nThe material is known to interact with some types of psychic flows. If pressurized under specific conditions, bioferrite becomes extremely flammable, making it a useful fuel.</description>
+    <thing>Bioferrite</thing>
+    <stackCountRange>5~5</stackCountRange>
+    <spawningDay>1.5~1.5</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshCarapace</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh carapace</label>
+    <description>A carapace commonly found on fleshbeasts. It contains trace amounts of bioferrite that are difficult to extract, and is both hard and lightweight. It can be used as a building material.</description>
+    <thing>FH_FleshCarapace</thing>
+    <stackCountRange>5~5</stackCountRange>
+    <spawningDay>0.5~0.5</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFurniture</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>0.5</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_NerveFlesh</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>nerve flesh</label>
+    <description>An essential part of flesh nerves. Many complex flesh structures require nerve flesh to complete their construction.</description>
+    <thing>FH_NerveFlesh</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.25~0.25</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>2</FH_Resource_Nutrition>
+    </costs>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_Tentacle</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh tentacle</label>
+    <description>A fleshy, muscled tentacle resembling a partial transformation into a fleshbeast. The tentacle is excellent at manipulation.\n\nThe flesh tentacle has its own neural structures and may become dangerous if removed.</description>
+    <thing>Tentacle</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshAdaptationModule</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh adaptation module</label>
+    <description>A tumor-like flesh module produced by the flesh hive. After implantation, it subtly reshapes the host's mind, removing disgust toward flesh creatures, flesh-made goods, and twisted meat, and allowing the host to live more easily alongside the flesh hive.</description>
+    <thing>FH_FleshAdaptationModule</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>30</Bioferrite>
+          <FH_NerveFlesh>6</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef MayRequire="Ludeon.RimWorld.Anomaly">
+    <defName>FH_Item_FleshSymbiosisSerum</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>symbiosis serum</label>
+    <description>A syringe filled with opaque, flesh-colored fluid that allows the user to become mentally attuned to flesh structures. Once injected into muscle, the serum alters the user's mind and spirit, removing disgust toward flesh creatures, flesh-made products, and even twisted meat, allowing them to live better alongside the flesh hive.</description>
+    <thing>FH_FleshSymbiosisSerum</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.0133333333~0.0133333333</spawningDay>
+    <researchPrerequisites><li>FH_Research_BasicFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>1</FH_Resource_Nutrition>
+    </costs>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>10</Bioferrite>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshSymbiosisModule</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh symbiosis module</label>
+    <description>A tumor-like module produced by the flesh hive. It allows the host to draw nutrition directly from the hive, making it easier to live alongside the flesh hive. However, having nutrition delivered straight into the body instead of eating can be irritating.</description>
+    <thing>FH_FleshSymbiosisModule</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshbeastCoexistence</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>30</Bioferrite>
+          <FH_NerveFlesh>6</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshPack</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh pack</label>
+    <description>A pack fitted with a suitable growth environment for flesh beasts, allowing them to compress into a smaller volume. It increases the wearer's mutualism capacity.</description>
+    <thing>FH_FleshPack</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.233333~0.233333</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshFusion</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>20</Bioferrite>
+          <FH_NerveFlesh>5</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_SynapsePack</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>synapse command pack</label>
+    <description>A living pack made of carapace and pheromone synapses. It lets the wearer command fleshbeasts and holds twisted meat to sustain their upkeep.</description>
+    <thing>FH_SynapsePack</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.233333~0.233333</spawningDay>
+    <researchPrerequisites><li>FH_Research_ComplexFleshHive</li></researchPrerequisites>
+    <costs>
+      <FH_Resource_Nutrition>5</FH_Resource_Nutrition>
+    </costs>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <FH_NerveFlesh>2</FH_NerveFlesh>
+          <FH_FleshCarapace>60</FH_FleshCarapace>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshWhip</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>flesh whip</label>
+    <description>A fleshy, muscled tentacle with a blade at the end. The flesh whip makes an excellent melee weapon.\n\nIt has its own neural structures and may become dangerous if removed.</description>
+    <thing>FleshWhip</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshmassStomach</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>fleshmass stomach</label>
+    <description>A cancerous mass of semi-sentient flesh. The harsh acid it produces is painful, but strong enough to prevent most food poisoning.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <thing>FleshmassStomach</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+  <HiveCreatureFramework.ItemDef>
+    <defName>FH_Item_FleshmassLung</defName>
+    <worker Class="FleshHive.ItemSpawnWorker_FleshHopper" />
+    <label>fleshmass lung</label>
+    <description>A cancerous mass of semi-sentient flesh. The tissue constantly regrows and replaces itself, making it immune to effects like lung rot and asthma.\n\nThe organ has its own neural structures and may become dangerous if removed.</description>
+    <thing>FleshmassLung</thing>
+    <stackCountRange>1~1</stackCountRange>
+    <spawningDay>0.433333~0.433333</spawningDay>
+    <researchPrerequisites><li>FH_Research_FleshFusion</li></researchPrerequisites>
+    <specialResources>
+      <li Class="FleshHive.SpecialResourceConsume_FleshBoxRequirement">
+        <requirements>
+          <Bioferrite>15</Bioferrite>
+          <FH_NerveFlesh>4</FH_NerveFlesh>
+        </requirements>
+      </li>
+    </specialResources>
+  </HiveCreatureFramework.ItemDef>
+
+</Defs>

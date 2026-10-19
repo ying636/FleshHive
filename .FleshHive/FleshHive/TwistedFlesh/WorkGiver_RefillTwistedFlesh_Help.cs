@@ -24,6 +24,11 @@ public class WorkGiver_RefillTwistedFlesh_Help : WorkGiver_Scanner
 
     public override PathEndMode PathEndMode => PathEndMode.Touch;
 
+    public override bool ShouldSkip(Pawn pawn, bool forced = false)
+    {
+        return pawn.Map.listerThings.ThingsOfDef(MeatTwistedDef).Count == 0;
+    }
+
     public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
         if (pawn == null || t is not Pawn target || target == pawn || !target.Spawned || target.Dead || target.Downed)

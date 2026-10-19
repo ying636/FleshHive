@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <DutyDef>
+    <defName>FH_FleshReplicaAttack</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="HiveCreatureFramework.ThinkNode_GroupAcquireAttackTarget">
+          <targetAcquireRadius>36</targetAcquireRadius>
+        </li>
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
+        <li Class="FleshHive.JobGiver_FleshReplicaCombat">
+          <targetAcquireRadius>36</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="JobGiver_AIGotoNearestHostile" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+  <DutyDef>
+    <defName>FH_FleshReplicaDefend</defName>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+    <thinkNode Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="HiveCreatureFramework.ThinkNode_GroupAcquireAttackTarget">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+        </li>
+        <li Class="HiveCreatureFramework.ThinkNode_UnitSkillDuty" />
+        <li Class="FleshHive.JobGiver_FleshReplicaCombat">
+          <targetAcquireRadius>65</targetAcquireRadius>
+          <targetKeepRadius>72</targetKeepRadius>
+          <respectDutyArea>true</respectDutyArea>
+        </li>
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByNeed" />
+        <li Class="HiveCreatureFramework.JobGiver_EnterHiveByDamaged" />
+        <li Class="JobGiver_WanderNearDutyLocation">
+          <wanderRadius>8</wanderRadius>
+          <locomotionUrgencyOutsideRadius>Sprint</locomotionUrgencyOutsideRadius>
+        </li>
+      </subNodes>
+    </thinkNode>
+  </DutyDef>
+
+</Defs>

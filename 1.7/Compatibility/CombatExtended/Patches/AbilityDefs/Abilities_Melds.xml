@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_FleshJump" or defName="FH_Parasitism_FleshJump"]/verbProperties/range</xpath>
+    <value>
+      <range>24</range>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="FH_BastionmeldFleshPulse" or defName="FH_BastionmeldFleshPulse_Parasitism"]/comps/li[@Class="FleshHive.CompProperties_AbilityEffect_TwistedFleshCost"]/twistedFleshCost</xpath>
+    <value>
+      <twistedFleshCost>350</twistedFleshCost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/AbilityDef[defName="FH_BastionmeldFleshPulse" or defName="FH_BastionmeldFleshPulse_Parasitism"]/comps/li[@Class="FleshHive.CompProperties_AbilityBastionmeldFleshPulse"]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.CompProperties_AbilityFleshPulseCE</value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AbilityDef[defName="FH_BastionmeldFleshPulse" or defName="FH_BastionmeldFleshPulse_Parasitism"]/comps/li[@Class="FleshHive.CE.CompProperties_AbilityFleshPulseCE"]</xpath>
+    <value>
+      <damageAmount>150</damageAmount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Projectile_Rampage"]/thingClass</xpath>
+    <value>
+      <thingClass>FleshHive.CE.Projectile_RampageCE</thingClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Projectile_Rampage"]/projectile</xpath>
+    <value>
+      <projectile Class="CombatExtended.ProjectilePropertiesCE">
+        <damageDef>Stab</damageDef>
+        <damageAmountBase>27</damageAmountBase>
+        <speed>50</speed>
+        <flyOverhead>true</flyOverhead>
+        <armorPenetrationSharp>15</armorPenetrationSharp>
+        <armorPenetrationBlunt>10000</armorPenetrationBlunt>
+        <armorPenetrationBase>15</armorPenetrationBase>
+      </projectile>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Projectile_Rampage"]/modExtensions/li[@Class="HiveCreatureFramework.ModExtension_Charge"]/damageDef</xpath>
+    <value>
+      <damageDef>Stab</damageDef>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="FH_Projectile_Rampage"]/modExtensions/li[@Class="HiveCreatureFramework.ModExtension_Charge"]/amount</xpath>
+    <value>
+      <amount>27</amount>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="FH_TitanGroundSlamTrigger"]/comps/li[@Class="HiveCreatureFramework.EffectCompPropertiesFlyPawn_Vertical"]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.EffectCompProperties_TitanGroundSlamCE</value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_TitanGroundSlamTrigger"]/comps/li[@Class="FleshHive.CE.EffectCompProperties_TitanGroundSlamCE"]</xpath>
+    <value>
+      <armorPenetration>30</armorPenetration>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="FH_Flyer_TitanGroundSlamVictim"]/comps/li[@Class="HiveCreatureFramework.EffectCompPropertiesDamage"]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CE.EffectCompProperties_TitanImpactCE</value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Flyer_TitanGroundSlamVictim"]/comps/li[@Class="FleshHive.CE.EffectCompProperties_TitanImpactCE"][damageDef="Blunt"]</xpath>
+    <value>
+      <armorPenetration>30</armorPenetration>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="FH_Flyer_TitanGroundSlamVictim"]/comps/li[@Class="FleshHive.CE.EffectCompProperties_TitanImpactCE"][damageDef="Stun"]</xpath>
+    <value>
+      <armorPenetration>0</armorPenetration>
+    </value>
+  </Operation>
+</Patch>

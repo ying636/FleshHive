@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\1.7\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FleshHive.CE</AssemblyName>
+    <RootNamespace>FleshHive.CE</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <OutputPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\血肉巢穴\1.7\Compatibility\CombatExtended\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>portable</DebugType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Building_BoneSpearSpitterCE.cs" />
+    <Compile Include="Building_FleshTurretCE.cs" />
+    <Compile Include="Bullet_BoneSpearCE.cs" />
+    <Compile Include="Bullet_ParaspikeCE.cs" />
+    <Compile Include="Comp_ProjectileEffecterCE.cs" />
+    <Compile Include="CompAbilityEffect_FleshPulseCE.cs" />
+    <Compile Include="CompAbilityEffect_SprayLiquidCE.cs" />
+    <Compile Include="CompProperties_AbilityFleshPulseCE.cs" />
+    <Compile Include="CompProperties_AbilitySprayLiquidCE.cs" />
+    <Compile Include="CompProperties_ProjectileEffecterCE.cs" />
+    <Compile Include="EffectComp_ChargeImpactCE.cs" />
+    <Compile Include="EffectComp_TitanGroundSlamCE.cs" />
+    <Compile Include="EffectComp_TitanImpactCE.cs" />
+    <Compile Include="EffectCompProperties_ChargeImpactCE.cs" />
+    <Compile Include="EffectCompProperties_TitanGroundSlamCE.cs" />
+    <Compile Include="EffectCompProperties_TitanImpactCE.cs" />
+    <Compile Include="HediffComp_ParasitismWeaponsCE.cs" />
+    <Compile Include="HediffCompProperties_ParasitismWeaponsCE.cs" />
+    <Compile Include="JobDriver_MountedWeaponReloadCE.cs" />
+    <Compile Include="ModExtension_ParasitismParryCE.cs" />
+    <Compile Include="Mote_BeamIncineratorCE.cs" />
+    <Compile Include="Patch_ScarletFieldHediffs.cs" />
+    <Compile Include="Patch_ScarletFieldPawnRegistry.cs" />
+    <Compile Include="Projectile_FleshMortarCE.cs" />
+    <Compile Include="Projectile_AcidSpitCE.cs" />
+    <Compile Include="TrajectoryWorker_FleshMortarCE.cs" />
+    <Compile Include="Patch_FleshProjectileExplosionCE.cs" />
+    <Compile Include="Patch_FleshbeastPainCE.cs" />
+    <Compile Include="Projectile_LiquidCE.cs" />
+    <Compile Include="Projectile_RampageCE.cs" />
+    <Compile Include="Projectile_TitanChargeCE.cs" />
+    <Compile Include="Projectile_TrackingBeamCE.cs" />
+    <Compile Include="ScarletFieldCE.cs" />
+    <Compile Include="ScarletFieldMapIndex.cs" />
+    <Compile Include="StatWorker_ParasitismParryCE.cs" />
+    <Compile Include="Tentacle_Attackable_CE.cs" />
+    <Compile Include="Tentacle_RangeAttackCE.cs" />
+    <Compile Include="Tentacle_RangeAttackWithWarmupCE.cs" />
+    <Compile Include="Tentacle_WeaponMountCE.cs" />
+    <Compile Include="TentacleProperties_CE.cs" />
+    <Compile Include="UnitTurret_PlayerEmptyWeaponMountCE.cs" />
+    <Compile Include="Verb_AbilityShootMoveAfterAttackCE.cs" />
+    <Compile Include="Verb_AbilityShootWithEffectsCE.cs" />
+    <Compile Include="Verb_BastionmeldTrackingLaserCE.cs" />
+    <Compile Include="Verb_MeleeAttack_FleshTentacleCE.cs" />
+    <Compile Include="Verb_ShootFleshTentacleCE.cs" />
+    <Compile Include="Verb_ShootFleshTurretCE.cs" />
+    <Compile Include="VerbProperties_BastionmeldTrackingLaserCE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Waylith.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\com.rlabrecque.steamworks.net.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ISharpZipLib">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\ISharpZipLib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Brutal.Core.Logging">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Brutal.Core.Logging.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>D:\Game\Steam\steamapps\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="QuestEditor_Library">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\CQF\1.7\Assemblies\net10.0\QuestEditor_Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="HiveCreatureFramework">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\巢群生物框架\1.7\Assemblies\net10.0\HiveCreatureFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PlayerAbilityFramework">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\玩家能力框架\1.7\Assemblies\PlayerAbilityFramework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Users\HaiLu\Documents\Codex\RimWorld17Migration\CompilerReferences\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="PowerArmorPlatform">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\动力甲装甲平台\1.7\Assemblies\PowerArmorPlatform.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SpartanSurgery">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\斯巴达异种\1.7\Assemblies\SpartanSurgery.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="FleshHive">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\血肉巢穴\1.7\Assemblies\FleshHive.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RSH">
+      <HintPath>C:\Users\HaiLu\Documents\Codex\RimWorld17Migration\Stage\RSH\RSH.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VoidUniverse">
+      <HintPath>D:\Game\Steam\steamapps\common\RimWorld\Mods\VoidUniverse\1.7\Assemblies\VoidUniverse.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="CombatExtended">
+      <HintPath>D:\Game\Steam\steamapps\workshop\content\294100\2890901044\Assemblies\CombatExtended.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

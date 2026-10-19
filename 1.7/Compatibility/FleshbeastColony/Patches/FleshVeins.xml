@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TerrainDef[defName="FleshVeins"]/tags</xpath>
+    <value>
+      <li>FH_FleshTerrain</li>
+      <li>FH_FleshAdaptationBeauty</li>
+    </value>
+  </Operation>
+</Patch>

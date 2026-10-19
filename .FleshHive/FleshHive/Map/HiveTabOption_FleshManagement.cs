@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HiveCreatureFramework;
@@ -81,7 +81,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     {
         Rect scaleRect = new Rect(inRect.x + 10f, inRect.y + 10f, inRect.width * 0.56f, 24f);
         Widgets.Label(scaleRect, "FH_FleshManagement_HiveScale".Translate(mapComp.HiveScale));
-        TooltipHandler.TipRegion(scaleRect, BuildHiveScaleTooltip(mapComp));
+        DrawHiveScaleTooltip(scaleRect, mapComp);
         float scaleBlocksHeight = GetScaleBlocksHeight(scaleRect.width, mapComp.HiveGroupCostLimit);
         Rect scaleBlocksRect = new Rect(scaleRect.x, scaleRect.yMax + 8f, scaleRect.width, scaleBlocksHeight);
         DrawScaleBlocks(scaleBlocksRect, mapComp.CurrentHiveGroupCost, mapComp.HiveGroupCostLimit);
@@ -97,6 +97,14 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         Widgets.Label(fleshCountRect, "FH_FleshManagement_FleshCount".Translate(mapComp.MapFleshHive.fleshTerrainCount));
 
         DrawLineHorizontal(inRect.x + 10f, inRect.y + summaryHeight - 12f, inRect.width - 20f);
+    }
+
+    private void DrawHiveScaleTooltip(Rect rect, MapComponent_FleshHive mapComp)
+    {
+        if (Mouse.IsOver(rect) || DebugViewSettings.drawTooltipEdges)
+        {
+            TooltipHandler.TipRegion(rect, BuildHiveScaleTooltip(mapComp));
+        }
     }
 
     private void DrawScaleBlocks(Rect rect, int scale)

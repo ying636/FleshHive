@@ -57,6 +57,18 @@ public class Tentacle_WeaponMount : Tentacle
         }
 
         EnsureVerbCaster();
+        if (HostDownedAttackBlocked)
+        {
+            foreach (Verb verb in mountedWeapon.GetComp<CompEquippable>().AllVerbs)
+            {
+                if (verb.state != VerbState.Idle)
+                {
+                    verb.Reset();
+                }
+            }
+            ResetCurrentTarget();
+            return;
+        }
         if (!CanUseMountedWeapon(pawn))
         {
             ResetCurrentTarget();
@@ -78,7 +90,7 @@ public class Tentacle_WeaponMount : Tentacle
     public override void RareTick()
     {
         Pawn pawn = Comp?.Pawn;
-        if (AutoAttackEnabled && mountedWeapon != null && pawn?.Spawned == true)
+        if (AutoAttackEnabled && !HostDownedAttackBlocked && mountedWeapon != null && pawn?.Spawned == true)
         {
             FindAttackTargetAndAttack();
         }

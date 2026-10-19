@@ -261,6 +261,46 @@ public class MapComponent_FleshHive : MapComponent
         return unit != null && unitMaintainTargets.TryGetValue(unit, out int target) ? target : 0;
     }
 
+    public UnitGroup? GetUnitGestationGroup(UnitDef unit)
+    {
+        return unit != null && unitGestationGroups.TryGetValue(unit, out UnitGroup? target) ? target : null;
+    }
+
+    public void SetUnitGestationGroup(UnitDef unit, UnitGroup? target)
+    {
+        if (unit == null)
+        {
+            return;
+        }
+        if (target == null)
+        {
+            unitGestationGroups.Remove(unit);
+        }
+        else
+        {
+            unitGestationGroups[unit] = target;
+        }
+    }
+
+    public void AssignGestationGroup(Pawn pawn, UnitDef unit)
+    {
+        if (pawn?.Faction != Faction.OfPlayer || unit == null || HCFGameUtility.IsNodeUnit(pawn)
+            || !unitGestationGroups.TryGetValue(unit, out UnitGroup? target))
+        {
+            return;
+        }
+        if (target != null && GameComponent_UnitGroup.Instance.groups.Contains(target)
+            && HCFGameUtility.GroupOnMap(target, map)
+            && (HCFGameUtility.GetUnitComp(pawn)?.group == target || target.CanAccept(pawn).Accepted))
+        {
+            target.AcceptUnit(pawn);
+        }
+        else if (group != null && HCFGameUtility.GetUnitComp(pawn)?.group != group)
+        {
+            group.AcceptUnit(pawn);
+        }
+    }
+
     public void SetUnitMaintainTarget(UnitDef unit, int target)
     {
         if (unit == null)
@@ -903,6 +943,8 @@ public class MapComponent_FleshHive : MapComponent
         Scribe_Deep.Look(ref mapFleshHive, "mapFleshHive");
         Scribe_Collections.Look(ref hiveResourcers, "hiveResourcers", LookMode.Deep);
         Scribe_Collections.Look(ref unitMaintainTargets, "unitMaintainTargets", LookMode.Def, LookMode.Value);
+        Scribe_Collections.Look(ref unitGestationGroups, "unitGestationGroups", LookMode.Def, LookMode.Reference,
+            ref unitGestationGroupKeys, ref unitGestationGroupValues);
         Scribe_Collections.Look(ref unitMaximumTargets, "unitMaximumTargets", LookMode.Def, LookMode.Value);
         Scribe_Values.Look(ref fleshBushCycleIndex, "fleshBushCycleIndex");
         Scribe_Values.Look(ref planCheckIntervalTicks, "planCheckIntervalTicks");
@@ -1121,6 +1163,7 @@ public class MapComponent_FleshHive : MapComponent
 
     private void NormalizeUnitTargets()
     {
+        unitGestationGroups ??= new Dictionary<UnitDef, UnitGroup>();
         unitMaintainTargets ??= new Dictionary<UnitDef, int>();
         unitMaximumTargets ??= new Dictionary<UnitDef, int>();
 
@@ -2054,6 +2097,9 @@ public class MapComponent_FleshHive : MapComponent
     private int extraHiveScale;
     private MapFleshHive mapFleshHive;
     private Dictionary<UnitDef, int> unitMaintainTargets = new Dictionary<UnitDef, int>();
+    private Dictionary<UnitDef, UnitGroup> unitGestationGroups = new Dictionary<UnitDef, UnitGroup>();
+    private List<UnitDef> unitGestationGroupKeys = new();
+    private List<UnitGroup> unitGestationGroupValues = new();
     private Dictionary<UnitDef, int> unitMaximumTargets = new Dictionary<UnitDef, int>();
     private int fleshBushCycleIndex;
     private int planCheckIntervalTicks;

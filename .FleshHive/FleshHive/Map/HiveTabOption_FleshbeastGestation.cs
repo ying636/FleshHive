@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using HiveCreatureFramework;
 using RimWorld;
@@ -158,9 +158,13 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         // FloatRange actualTime = new FloatRange(
         //     unit.spawningDay.min / CompHiveSpawner_FleshTrait.FleshbeastProductionSpeedFactor,
         //     unit.spawningDay.max / CompHiveSpawner_FleshTrait.FleshbeastProductionSpeedFactor);
+        bool rapidGrowth = formula == null
+            ? spawner.GetSelectedTrait(unit)?.defName == "FH_Trait_RapidGrowth"
+            : formula.materials.Any(material => material is FormulaMaterial_FleshTrait { trait.defName: "FH_Trait_RapidGrowth" });
+        float timeFactor = (rapidGrowth ? 0.75f : 1f) / MapComponent_FleshHive.GetCellDivisionSpeedFactor(spawner.parent.Map);
         FloatRange actualTime = new FloatRange(
-            unit.spawningDay.min,
-            unit.spawningDay.max);
+            unit.spawningDay.min * timeFactor,
+            unit.spawningDay.max * timeFactor);
         Widgets.Label(new Rect(detailsRect.x, detailsRect.y + 78f, detailsRect.width, 24f),
             "FH_Gestation_Time".Translate(FormatFloatRange(unit.spawningDay), FormatFloatRange(actualTime)));
         int groupCost = unit.kind.race.GetCompProperties<UnitCompProperties>()?.groupCost ?? 0;
@@ -465,7 +469,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         Rect innerRect = rect.ContractedBy(10f);
         Widgets.DrawBoxSolid(new Rect(innerRect.x, innerRect.y, innerRect.width, QuotaHeaderHeight), QuotaHeaderColor);
 
-        float unitWidth = innerRect.width - CurrentColumnWidth - MaintainColumnWidth - MaximumColumnWidth;
+        float unitWidth = innerRect.width - ScrollbarWidth - CurrentColumnWidth - MaintainColumnWidth - MaximumColumnWidth - GroupColumnWidth;
         Rect unitHeaderRect = new Rect(innerRect.x, innerRect.y, unitWidth, QuotaHeaderHeight);
         Rect currentHeaderRect = new Rect(innerRect.x + unitWidth, innerRect.y, CurrentColumnWidth, QuotaHeaderHeight);
         Rect maintainHeaderRect = new Rect(innerRect.x + unitWidth + CurrentColumnWidth, innerRect.y, MaintainColumnWidth, QuotaHeaderHeight);
@@ -475,6 +479,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         Widgets.Label(currentHeaderRect, "FH_Gestation_QuotaCurrent".Translate());
         Widgets.Label(maintainHeaderRect, "FH_Gestation_QuotaMaintain".Translate());
         Widgets.Label(maximumHeaderRect, "FH_Gestation_QuotaMaximum".Translate());
+        Widgets.Label(new Rect(maximumHeaderRect.xMax, innerRect.y, GroupColumnWidth, QuotaHeaderHeight), "FH_Gestation_QuotaGroup".Translate());
         Text.Anchor = TextAnchor.UpperLeft;
         TooltipHandler.TipRegion(unitHeaderRect, "FH_Gestation_QuotaUnitTip".Translate());
         TooltipHandler.TipRegion(currentHeaderRect, "FH_Gestation_QuotaCurrentTip".Translate());
@@ -504,7 +509,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
             Widgets.DrawAltRect(rect);
         }
 
-        float unitWidth = rect.width - CurrentColumnWidth - MaintainColumnWidth - MaximumColumnWidth;
+        float unitWidth = rect.width - CurrentColumnWidth - MaintainColumnWidth - MaximumColumnWidth - GroupColumnWidth;
         Rect iconRect = new Rect(rect.x + 3f, rect.y + 3f, QuotaRowHeight - 6f, QuotaRowHeight - 6f);
         Widgets.DefIcon(iconRect, unit.kind);
         Rect labelRect = new Rect(iconRect.xMax + 3f, rect.y, unitWidth - iconRect.width - 6f, rect.height);
@@ -531,7 +536,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
         }
 
         int maximum = mapComp.GetUnitMaximumTarget(unit);
-        Rect maximumRect = new Rect(maintainRect.xMax + 4f, rect.y + 4f, MaximumColumnWidth - 8f, rect.height - 8f);
+        Rect maximumRect = new Rect(maintainRect.xMax + 8f, rect.y + 4f, MaximumColumnWidth - 8f, rect.height - 8f);
         if (maximum < 0)
         {
             if (Widgets.ButtonText(maximumRect, "\u221E"))
@@ -561,8 +566,31 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
             TooltipHandler.TipRegion(infiniteRect, "FH_Gestation_SetInfiniteMaximum".Translate());
         }
 
+        Rect groupRect = new Rect(maximumRect.xMax + 8f, rect.y + 4f, GroupColumnWidth - 8f, rect.height - 8f);
+        UnitGroup? targetGroup = mapComp.GetUnitGestationGroup(unit);
+        string groupLabel = targetGroup?.RenamableLabel ?? "FH_Gestation_ReservedGroupNone".Translate().ToString();
+        bool isNode = unit.kind.race.GetCompProperties<NodeUnitCompProperties>() != null;
+        if (Widgets.ButtonText(groupRect, groupLabel.Truncate(groupRect.width - 8f), true, true,
+                isNode ? Color.grey : Color.white, !isNode))
+        {
+            List<FloatMenuOption> options = new()
+            {
+                new FloatMenuOption("FH_Gestation_ReservedGroupNone".Translate(), () => mapComp.SetUnitGestationGroup(unit, null))
+            };
+            UnitCompProperties unitProps = unit.kind.race.GetCompProperties<UnitCompProperties>();
+            foreach (UnitGroup candidate in GameComponent_UnitGroup.Instance.groups
+                         .Where(group => group.Show && HCFGameUtility.GroupOnMap(group, Find.CurrentMap)
+                             && group.tags.Any(tag => unitProps?.tags.Contains(tag) == true))
+                         .OrderBy(group => group.RenamableLabel))
+            {
+                UnitGroup selected = candidate;
+                options.Add(new FloatMenuOption(selected.RenamableLabel, () => mapComp.SetUnitGestationGroup(unit, selected)));
+            }
+            Find.WindowStack.Add(new FloatMenu(options));
+        }
+        TooltipHandler.TipRegion(groupRect, isNode ? "HCF_GroupReject_NodeLord".Translate() : groupLabel);
         Text.Anchor = TextAnchor.UpperLeft;
-        TooltipHandler.TipRegion(rect, unit.description.NullOrEmpty() ? unit.kind.race.description : unit.description);
+        TooltipHandler.TipRegion(new Rect(rect.x, rect.y, unitWidth, rect.height), unit.description.NullOrEmpty() ? unit.kind.race.description : unit.description);
     }
 
     private void ShowUnitMenu(CompHiveSpawner_FleshTrait spawner)
@@ -872,9 +900,9 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
     private const int MinRepeatCount = 1;
     private const int MaxRepeatCount = 999;
     private const int MaxQuotaValue = 999;
-    private const float QuotaPanelWidthFactor = 0.28f;
-    private const float QuotaPanelWidthMin = 300f;
-    private const float QuotaPanelWidthMax = 330f;
+    private const float QuotaPanelWidthFactor = 0.36f;
+    private const float QuotaPanelWidthMin = 410f;
+    private const float QuotaPanelWidthMax = 450f;
     private const float PanelGap = 10f;
     private const float FormulaToolbarHeight = 40f;
     private const float SelectedUnitHeight = 180f;
@@ -891,6 +919,7 @@ public class HiveTabOption_FleshbeastGestation : HiveTabOption_FleshHive
     private const float ScrollbarWidth = 16f;
     private const float QuotaHeaderHeight = 36f;
     private const float QuotaRowHeight = 36f;
+    private const float GroupColumnWidth = 90f;
     private const float CurrentColumnWidth = 45f;
     private const float MaintainColumnWidth = 67f;
     private const float MaximumColumnWidth = 82f;

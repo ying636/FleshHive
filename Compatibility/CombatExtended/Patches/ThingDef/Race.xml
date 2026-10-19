@@ -637,11 +637,11 @@
     <xpath>Defs/ThingDef[defName="FH_Shieldspike"]/comps</xpath>
     <value>
       <li Class="CombatExtended.CompProperties_ArmorDurability">
-        <Durability>2000</Durability>
+        <Durability>500</Durability>
         <Regenerates>true</Regenerates>
-        <RegenInterval>1100</RegenInterval>
+        <RegenInterval>600</RegenInterval>
         <RegenValue>10</RegenValue>
-        <MinArmorPct>0.35</MinArmorPct>
+        <MinArmorPct>0.25</MinArmorPct>
       </li>
     </value>
   </Operation>

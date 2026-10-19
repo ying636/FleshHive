@@ -31,6 +31,7 @@ public class Tentacle : IExposable
 
     public TentacleProperties Prop => this.prop;
     public virtual bool CanAutoAttack => false;
+    protected bool HostDownedAttackBlocked => FleshHiveMod.Settings.disableDownedHostTentacleAttacks && Comp?.Pawn?.Downed == true;
     public Texture2D Icon
     {
         get

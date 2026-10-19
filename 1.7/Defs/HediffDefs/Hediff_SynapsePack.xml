@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>FH_SynapsePackNode</defName>
+    <label>synapse command pack</label>
+    <description>A living pack made of carapace and pheromone synapses. It lets the wearer command fleshbeasts and holds twisted meat to sustain their upkeep.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="FleshHive.HediffCompProperties_HelaNode">
+        <groupCount>1</groupCount>
+        <groupType>FleshHive.UnitGroup_FleshHive</groupType>
+        <tags>
+          <li>Flesh</li>
+        </tags>
+        <defaultUnitLimit>20</defaultUnitLimit>
+        <groupCheckIntervalTicks>60</groupCheckIntervalTicks>
+        <maintenanceIntervalTicks>2500</maintenanceIntervalTicks>
+        <maintenancePerInterval>0.1</maintenancePerInterval>
+        <maintenancePerTwistedFlesh>1</maintenancePerTwistedFlesh>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

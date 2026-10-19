@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>FH_Gun_FleshmassSpitter</defName>
+    <label>Fleshmass Spitter Silo</label>
+    <description>1</description>
+    <graphicData>
+      <texPath>Things/Mote/Transparent</texPath>
+    </graphicData>
+    <statBases>
+      <RangedWeapon_Cooldown>41.6666667</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+	<verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootMortarCE</verbClass>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<hasStandardCommand>true</hasStandardCommand>
+			<requireLineOfSight>false</requireLineOfSight>
+			<defaultProjectile>FH_Projectile_FleshmassSpitterCE</defaultProjectile>
+			<warmupTime>4</warmupTime>
+			<range>72</range>
+			<minRange>9.9</minRange>
+			<burstShotCount>1</burstShotCount>
+			<soundCast>SpitterSpit</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<circularError>1</circularError>
+			<indirectFirePenalty>0.25</indirectFirePenalty>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+	</verbs>
+	<comps>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>FH_Projectile_FleshmassSpitterCE</defName>
+    <label>acid spit</label>
+    <graphicData>
+      <graphicClass>Graphic_Single_AgeSecs</graphicClass>
+      <texPath>Things/Projectile/FleshmassSpitterProjectileSheet</texPath>
+      <drawSize>(.75, .75)</drawSize>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <thingClass>FleshHive.CE.Projectile_AcidSpitCE</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <useGraphicClass>True</useGraphicClass>
+      <shadowSize>1</shadowSize>
+      <damageDef>AcidBurn</damageDef>
+      <spinRate>20</spinRate>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>41</speed>
+      <arcHeightFactor>1</arcHeightFactor>
+      <trajectoryWorker>FleshHive.CE.TrajectoryWorker_FleshMortarCE</trajectoryWorker>
+	  <gravityFactor>5</gravityFactor>
+      <explosionRadius>3.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundExplode>SpitterSpitLands</soundExplode>
+      <filth>Filth_SpentAcid</filth>
+      <filthCount>1</filthCount>
+      <explosionEffect>Shell_AcidSpitImpact</explosionEffect>
+      <explosionEffectLifetimeTicks>60</explosionEffectLifetimeTicks>
+      <doExplosionVFX>false</doExplosionVFX>
+    </projectile>
+    <comps>
+      <li Class="FleshHive.CE.CompProperties_ProjectileEffecterCE">
+        <effecterDef>Shell_AcidSpitStream</effecterDef>
+      </li>
+      <li Class="FleshHive.CE.CompProperties_ProjectileEffecterCE">
+        <effecterDef>Shell_AcidSpitLaunched</effecterDef>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
