@@ -44,9 +44,8 @@
     <Compile Include="Patch_ScarletFieldPawnRegistry.cs" />
     <Compile Include="Projectile_FleshMortarCE.cs" />
     <Compile Include="Projectile_AcidSpitCE.cs" />
+    <Compile Include="Projectile_FleshExplosionCE.cs" />
     <Compile Include="TrajectoryWorker_FleshMortarCE.cs" />
-    <Compile Include="Patch_FleshProjectileExplosionCE.cs" />
-    <Compile Include="Patch_FleshbeastPainCE.cs" />
     <Compile Include="Projectile_LiquidCE.cs" />
     <Compile Include="Projectile_RampageCE.cs" />
     <Compile Include="Projectile_TitanChargeCE.cs" />

@@ -36,6 +36,35 @@ public class UnitGroup_FleshHive : UnitGroup, IExposable
             && unit.TryGetComp<CompFleshBeastCache>() != null && !HCFGameUtility.IsNodeUnit(unit)
             && HCFGameUtility.GetUnitComp(unit)?.group == this);
 
+    public override void Draw(ref Rect wholeRect, CompHiveGroup groupComp = null)
+    {
+        Rect actionRect = new Rect(wholeRect.x + 95f, wholeRect.y + 30f, 25f, 25f);
+        base.Draw(ref wholeRect, groupComp);
+        DrawGroupAction(actionRect);
+    }
+
+    public virtual void DrawGroupAction(Rect rect)
+    {
+        if (hive != null && hive.Faction != Faction.OfPlayer)
+        {
+            return;
+        }
+        bool enabled = GUI.enabled;
+        GUI.enabled = enabled && CanUngroupAll;
+        try
+        {
+            TooltipHandler.TipRegion(rect, "FH_Group_UngroupAll".Translate());
+            if (Widgets.ButtonImage(rect, TexButton.Drop))
+            {
+                UngroupAll();
+            }
+        }
+        finally
+        {
+            GUI.enabled = enabled;
+        }
+    }
+
     public void UngroupAll()
     {
         if (!CanUngroupAll)

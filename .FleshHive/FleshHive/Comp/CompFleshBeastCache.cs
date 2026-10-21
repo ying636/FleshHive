@@ -20,6 +20,14 @@ public class CompFleshBeastCache : ThingComp
         base.PostSpawnSetup(respawningAfterLoad);
         if (this.parent is Pawn pawn)
         {
+            if (ModsConfig.IsActive("CETeam.CombatExtended"))
+            {
+                HediffDef painDef = DefDatabase<HediffDef>.GetNamed("FH_CE_NoPain");
+                if (!pawn.health.hediffSet.HasHediff(painDef))
+                {
+                    pawn.health.AddHediff(painDef);
+                }
+            }
             MapComponent_FleshHive? comp = pawn.Map?.GetComponent<MapComponent_FleshHive>();
             comp?.RegisterFleshBeast(pawn);
         }

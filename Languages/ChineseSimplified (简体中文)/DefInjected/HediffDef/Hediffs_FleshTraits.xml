@@ -48,8 +48,8 @@
   
   <!-- EN: runaway -->
   <FH_Trait_Runaway.label>失控</FH_Trait_Runaway.label>
-  <!-- EN: This fleshbeast is prone to breaking free of control after fusion. -->
-  <FH_Trait_Runaway.description>这只血肉兽在融合后更容易脱离控制。</FH_Trait_Runaway.description>
+  <!-- EN: Fleshbeasts produced by fusion are hostile. -->
+  <FH_Trait_Runaway.description>融合出的血肉兽为敌对血肉兽</FH_Trait_Runaway.description>
   
   <!-- EN: sharp -->
   <FH_Trait_Sharp.label>锐利</FH_Trait_Sharp.label>

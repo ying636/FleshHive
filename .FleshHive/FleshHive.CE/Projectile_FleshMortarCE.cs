@@ -4,7 +4,7 @@ using Verse;
 
 namespace FleshHive.CE;
 
-public class Projectile_FleshMortarCE : ProjectileCE_Explosive
+public class Projectile_FleshMortarCE : Projectile_FleshExplosionCE
 {
     public override void Impact(Thing hitThing)
     {

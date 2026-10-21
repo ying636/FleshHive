@@ -274,7 +274,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         {
             DrawGroupControls(new Rect(iconRect.x, rect.yMax - GroupControlSize - 10f,
                 GroupControlSize * GroupControlCount + GroupControlGap * (GroupControlCount - 1), GroupControlSize),
-                group, mapComp, entry.IsTemporary);
+                group);
         }
 
         if (!entry.IsTemporary && !entry.IsUngrouped)
@@ -288,7 +288,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         DrawUnitGrid(unitsRect, entry.Units);
     }
 
-    private void DrawGroupControls(Rect rect, UnitGroup group, MapComponent_FleshHive mapComp, bool isTemporary)
+    private void DrawGroupControls(Rect rect, UnitGroup group)
     {
         Rect controlRect = new Rect(rect.x, rect.y, GroupControlSize, GroupControlSize);
         DrawGroupColorControl(controlRect, group);
@@ -317,11 +317,10 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         controlRect.x += GroupControlSize + GroupControlGap;
         DrawGroupButton(controlRect, AcceptAllIconTex, "HCF_AcceptAll".Translate(), () => AcceptAllUnits(group));
 
-        if (isTemporary)
+        if (group is UnitGroup_FleshHive fleshGroup)
         {
             controlRect.x += GroupControlSize + GroupControlGap;
-            DrawGroupButton(controlRect, TexButton.Reload, "FH_FleshManagement_RecallTemporary".Translate(),
-                () => RecallTemporaryUnits(group, mapComp));
+            fleshGroup.DrawGroupAction(controlRect);
         }
     }
 
@@ -471,56 +470,6 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
         }
 
         Messages.Message(rejectReason ?? "TargetGroupDontAccept".Translate(), MessageTypeDefOf.RejectInput, false);
-    }
-
-    private void RecallTemporaryUnits(UnitGroup temporaryGroup, MapComponent_FleshHive mapComp)
-    {
-        List<Pawn> units = temporaryGroup.units
-            .Where(unit => unit != null)
-            .OrderByDescending(unit => unit.TryGetComp<UnitComp>()?.Props.groupCost ?? 0)
-            .ThenBy(unit => unit.thingIDNumber)
-            .ToList();
-        if (units.Count == 0)
-        {
-            Messages.Message("FH_FleshManagement_RecallTemporaryEmpty".Translate(), MessageTypeDefOf.NeutralEvent, false);
-            return;
-        }
-
-        List<UnitGroup> targetGroups = GetNormalGroups(mapComp.map)
-            .Where(group => group != temporaryGroup)
-            .ToList();
-        if (targetGroups.Count == 0)
-        {
-            Messages.Message("FH_FleshManagement_RecallTemporaryNoHive".Translate(), MessageTypeDefOf.RejectInput, false);
-            return;
-        }
-
-        int recalledCount = 0;
-        string? rejectReason = null;
-        foreach (Pawn unit in units)
-        {
-            foreach (UnitGroup targetGroup in targetGroups)
-            {
-                AcceptReason acceptReason = targetGroup.CanAccept(unit);
-                if (acceptReason.Accepted)
-                {
-                    targetGroup.AcceptUnit(unit);
-                    recalledCount++;
-                    break;
-                }
-
-                rejectReason ??= acceptReason.Reason;
-            }
-        }
-
-        int remainingCount = temporaryGroup.units.Count(unit => unit != null);
-        TaggedString message = remainingCount > 0
-            ? "FH_FleshManagement_RecallTemporaryPartial".Translate(
-                recalledCount,
-                remainingCount,
-                rejectReason ?? "TargetGroupDontAccept".Translate())
-            : "FH_FleshManagement_RecallTemporaryComplete".Translate(recalledCount);
-        Messages.Message(message, remainingCount > 0 ? MessageTypeDefOf.RejectInput : MessageTypeDefOf.PositiveEvent, false);
     }
 
     private void DrawUnitCost(Rect rect, int cost)
@@ -735,7 +684,7 @@ public class HiveTabOption_FleshManagement : HiveTabOption_FleshHive
     private const float ScaleBlockStride = ScaleBlockSize + ScaleBlockGap;
     private const float GroupControlSize = 26f;
     private const float GroupControlGap = 4f;
-    private const int GroupControlCount = 7;
+    private const int GroupControlCount = 8;
     private static readonly Color NutritionBarColor = new Color(0.55f, 0.28f, 0.25f);
     private static readonly Color ActivityBarColor = new Color(0.42f, 0.55f, 0.55f);
     private static readonly Color ActivityDangerBarColor = new Color(0.75f, 0.08f, 0.08f);

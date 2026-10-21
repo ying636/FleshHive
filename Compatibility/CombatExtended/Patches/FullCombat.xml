@@ -140,13 +140,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_ParasitismAcidMortar"]/thingClass</xpath>
       <value>
-        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <thingClass>FleshHive.CE.Projectile_AcidSpitCE</thingClass>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_ParasitismAcidMortar"]</xpath>
       <value>
-        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <thingClass>FleshHive.CE.Projectile_AcidSpitCE</thingClass>
       </value>
     </nomatch>
   </Operation>
@@ -155,13 +155,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_AcidSpit"]/thingClass</xpath>
       <value>
-        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <thingClass>FleshHive.CE.Projectile_AcidSpitCE</thingClass>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ThingDef[defName="FH_Bullet_Shell_AcidSpit"]</xpath>
       <value>
-        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <thingClass>FleshHive.CE.Projectile_AcidSpitCE</thingClass>
       </value>
     </nomatch>
   </Operation>

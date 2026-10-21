@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="WarpedObelisk_Duplicator"]/comps/li[@Class="CompProperties_Obelisk"]/compClass</xpath>
+    <value>
+      <compClass>FleshHive.CompObelisk_DuplicatorFleshHive</compClass>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>/Defs/ThingDef[defName="WarpedObelisk_Duplicator"]/comps/li[@Class="CompProperties_ObeliskTriggerInteractor"]</xpath>
+    <attribute>Class</attribute>
+    <value>FleshHive.CompProperties_ObeliskTriggerInteractorFleshHive</value>
+  </Operation>
+</Patch>

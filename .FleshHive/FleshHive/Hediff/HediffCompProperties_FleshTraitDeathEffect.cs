@@ -48,6 +48,21 @@ public class HediffComp_FleshTraitDeathEffect : HediffComp
 
     private void DoAcidExplosion(IntVec3 position, Map map)
     {
+        ProjectileProperties projectile = FleshHiveDefOf.FH_Bullet_Shell_AcidSpit.projectile;
+        if (projectile.explosionEffect != null)
+        {
+            Effecter effecter = projectile.explosionEffect.Spawn();
+            if (projectile.explosionEffectLifetimeTicks != 0)
+            {
+                map.effecterMaintainer.AddEffecterToMaintain(effecter, position, projectile.explosionEffectLifetimeTicks);
+            }
+            else
+            {
+                effecter.Trigger(new TargetInfo(position, map), new TargetInfo(position, map));
+                effecter.Cleanup();
+            }
+        }
+
         GenExplosion.DoExplosion(
             position,
             map,

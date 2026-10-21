@@ -5,6 +5,11 @@ namespace FleshHive.CE;
 
 public class Verb_AbilityShootWithEffectsCE : Verb_AbilityShootCE
 {
+    public override void OrderForceTarget(LocalTargetInfo target)
+    {
+        Ability.QueueCastingJob(target, LocalTargetInfo.Invalid);
+    }
+
     public override bool TryCastShot()
     {
         if (!effectsApplied && Ability.EffectComps.Any(effect => !effect.CanCast))

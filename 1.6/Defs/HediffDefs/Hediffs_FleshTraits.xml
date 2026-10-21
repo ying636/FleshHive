@@ -39,7 +39,7 @@
   <HediffDef>
     <defName>FH_Trait_Runaway</defName>
     <label>runaway</label>
-    <description>This fleshbeast is prone to breaking free of control after fusion.</description>
+    <description>Fleshbeasts produced by fusion are hostile.</description>
     <hediffClass>Hediff</hediffClass>
     <isBad>true</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

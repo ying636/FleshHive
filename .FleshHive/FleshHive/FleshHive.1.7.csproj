@@ -84,6 +84,8 @@
     <Compile Include="Building\PlaceWorker_FleshTurretRadius.cs" />
     <Compile Include="Building\PlaceWorker_RequireFleshTerrain.cs" />
     <Compile Include="Comp\CompAdditionalHarvestYield.cs" />
+    <Compile Include="Comp\CompObelisk_DuplicatorFleshHive.cs" />
+    <Compile Include="Comp\CompProperties_ObeliskTriggerInteractorFleshHive.cs" />
     <Compile Include="Comp\CompDreadmeldCollapse.cs" />
     <Compile Include="Comp\CompFissionmeldDormant.cs" />
     <Compile Include="Comp\CompFissionmeldState.cs" />
@@ -127,7 +129,6 @@
     <Compile Include="Comp\Gizmo_FleshHiveDailySummary.cs" />
     <Compile Include="Alert\Alert_UngroupedFleshbeasts.cs" />
     <Compile Include="AI\ThinkNode_FleshHiveAllowedArea.cs" />
-    <Compile Include="Patch\Patch_Caravan_AddPawn_FleshHive.cs" />
     <Compile Include="Core\FHUtitly.cs" />
     <Compile Include="Core\FleshBeastKindUtility.cs" />
     <Compile Include="Core\FleshBoxUtility.cs" />
@@ -257,9 +258,6 @@
     <Compile Include="Parasitism\ParasitismComp\Tentacle_WeaponMount.cs" />
     <Compile Include="Parasitism\ParasitismComp\Tentacle.cs" />
     <Compile Include="Patch\Patch_Ability_StartCooldown_FleshTrait.cs" />
-    <Compile Include="Patch\Patch_WorkGiverMilk_BulbplumpSkip.cs" />
-    <Compile Include="Patch\Patch_WorkGiverMilk_BulbplumpJob.cs" />
-    <Compile Include="Patch\Patch_UnitGroup_Draw_FleshHive.cs" />
     <Compile Include="Patch\Patch_AddHediff_Immunity.cs" />
     <Compile Include="Patch\Patch_BodyPartDef_GetMaxHealth_Hela.cs" />
     <Compile Include="Patch\Patch_BonePlatingFleshBlockResearch.cs" />
@@ -272,7 +270,6 @@
     <Compile Include="Patch\Patch_MainTabWindowResearchProgress.cs" />
     <Compile Include="Patch\Patch_Pawn_HealthTracker_LethalDamageThreshold_Hela.cs" />
     <Compile Include="Patch\Patch_PawnComponents_Parasitism.cs" />
-    <Compile Include="Patch\Patch_PsychicRitualDef_Visible_FleshHive.cs" />
     <Compile Include="Patch\Patch_PawnGroupMaker_FleshParasites.cs" />
     <Compile Include="Patch\Patch_PawnInspectTabs_ParasiticWeapons.cs" />
     <Compile Include="Patch\Patch_PawnPathFollower_Fleshwind.cs" />
@@ -334,6 +331,7 @@
     <Compile Include="Work\Suppression\FleshHiveActivitySuppressionUtility.cs" />
     <Compile Include="Work\Suppression\JobDriver_SuppressFleshHiveActivity.cs" />
     <Compile Include="Work\Suppression\WorkGiver_SuppressFleshHiveActivity.cs" />
+    <Compile Include="Work\WorkGiver_HarvestBulbplump.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">

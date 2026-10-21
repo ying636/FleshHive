@@ -200,6 +200,7 @@ public class HiveTabOption_HivePlan : HiveTabOption_FleshHive
 
     private void SelectPlan(CompHivePlan plan)
     {
+        CameraJumper.TryJumpAndSelect(plan.parent);
         if (selectedPlan == plan)
         {
             return;

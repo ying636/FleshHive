@@ -42,6 +42,7 @@ public class MapFleshHive : IExposable
         Scribe_Values.Look(ref activity, "activity", 0f);
         Scribe_Values.Look(ref fullActivityTicks, "fullActivityTicks", 0);
         Scribe_Values.Look(ref autoSuppressActivity, "autoSuppressActivity");
+        Scribe_Values.Look(ref autoSuppressionInProgress, "autoSuppressionInProgress");
         Scribe_Values.Look(ref autoSuppressActivityThreshold, "autoSuppressActivityThreshold", 0.5f);
         Scribe_Values.Look(ref autoRepairFleshBuildings, "autoRepairFleshBuildings", false);
         Scribe_Collections.Look(ref completedUpgrades, "completedUpgrades", LookMode.Def);
@@ -68,6 +69,7 @@ public class MapFleshHive : IExposable
     public float activity;
     public int fullActivityTicks;
     public bool autoSuppressActivity;
+    public bool autoSuppressionInProgress;
     public float autoSuppressActivityThreshold = 0.5f;
     public bool autoRepairFleshBuildings;
 

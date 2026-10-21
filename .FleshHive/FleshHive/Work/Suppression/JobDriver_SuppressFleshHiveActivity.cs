@@ -30,8 +30,8 @@ public class JobDriver_SuppressFleshHiveActivity : JobDriver
         toil.initAction = delegate
         {
             if (!job.playerForced && SuppressTarget.Map?.GetComponent<MapComponent_FleshHive>() is { } mapComp
-                && (mapComp.Activity <= mapComp.ActivityLimit * (mapComp.AutoSuppressActivityThreshold - 0.05f)
-                    || Mathf.Approximately(mapComp.Activity, mapComp.ActivityLimit * (mapComp.AutoSuppressActivityThreshold - 0.05f))))
+                && (mapComp.Activity <= mapComp.ActivityLimit * mapComp.AutoSuppressActivityStopThreshold
+                    || Mathf.Approximately(mapComp.Activity, mapComp.ActivityLimit * mapComp.AutoSuppressActivityStopThreshold)))
             {
                 ReadyForNextToil();
             }
@@ -78,7 +78,7 @@ public class JobDriver_SuppressFleshHiveActivity : JobDriver
             suppression *= SuppressTarget.GetStatValue(FleshHiveDefOf.FH_Stat_SuppressionEffect);
             if (!job.playerForced)
             {
-                float remaining = mapComp.Activity - mapComp.ActivityLimit * (mapComp.AutoSuppressActivityThreshold - 0.05f);
+                float remaining = mapComp.Activity - mapComp.ActivityLimit * mapComp.AutoSuppressActivityStopThreshold;
                 suppression = Mathf.Min(suppression, Mathf.Max(0f, remaining));
             }
             mapComp.SuppressActivity(suppression);

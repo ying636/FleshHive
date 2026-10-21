@@ -111,19 +111,49 @@ public class MapComponent_FleshHive : MapComponent
     public float Activity
     {
         get => MapFleshHive.activity;
-        set => MapFleshHive.activity = Mathf.Clamp(value, 0f, ActivityLimit);
+        set
+        {
+            MapFleshHive.activity = Mathf.Clamp(value, 0f, ActivityLimit);
+            if (MapFleshHive.activity <= ActivityLimit * AutoSuppressActivityStopThreshold)
+            {
+                MapFleshHive.autoSuppressionInProgress = false;
+            }
+        }
     }
     public bool AutoSuppressActivity
     {
         get => MapFleshHive.autoSuppressActivity;
-        set => MapFleshHive.autoSuppressActivity = value;
+        set
+        {
+            MapFleshHive.autoSuppressActivity = value;
+            if (!value)
+            {
+                MapFleshHive.autoSuppressionInProgress = false;
+            }
+        }
     }
     public float AutoSuppressActivityThreshold
     {
         get => Mathf.Clamp(MapFleshHive.autoSuppressActivityThreshold, 0.06f, 1f);
         set => MapFleshHive.autoSuppressActivityThreshold = Mathf.Clamp(value, 0.06f, 1f);
     }
-    public bool ShouldAutoSuppressActivity => AutoSuppressActivity && ActivityPercent >= AutoSuppressActivityThreshold;
+    public float AutoSuppressActivityStopThreshold => AutoSuppressActivityThreshold - 0.05f;
+    public bool ShouldAutoSuppressActivity
+    {
+        get
+        {
+            if (!AutoSuppressActivity || ActivityPercent <= AutoSuppressActivityStopThreshold
+                || Mathf.Approximately(ActivityPercent, AutoSuppressActivityStopThreshold))
+            {
+                MapFleshHive.autoSuppressionInProgress = false;
+            }
+            else if (ActivityPercent >= AutoSuppressActivityThreshold)
+            {
+                MapFleshHive.autoSuppressionInProgress = true;
+            }
+            return MapFleshHive.autoSuppressionInProgress;
+        }
+    }
     public float ActivityLimit => 100f;
     public float ActivityPercent => ActivityLimit > 0f ? Mathf.Clamp01(Activity / ActivityLimit) : 0f;
     public int CurrentHiveGroupCost => GetHiveGroupCost();

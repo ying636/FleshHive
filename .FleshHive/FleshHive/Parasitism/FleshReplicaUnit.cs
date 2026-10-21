@@ -17,6 +17,12 @@ public class FleshReplicaUnit : Unit
 
     public bool Active => host is { Destroyed: false } && !Destroyed;
 
+    public override void Notify_DuplicatedFrom(Pawn source)
+    {
+        base.Notify_DuplicatedFrom(source);
+        scavengedWeaponRolled = true;
+    }
+
     public override void SpawnSetup(Map map, bool respawningAfterLoad)
     {
         base.SpawnSetup(map, respawningAfterLoad);

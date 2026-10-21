@@ -90,4 +90,14 @@
         </requiredCapacities>
     </WorkGiverDef>
 
+  <WorkGiverDef>
+    <defName>FH_WorkGiver_HarvestBulbplump</defName>
+    <label>FH_WorkGiver_HarvestBulbplump</label>
+    <giverClass>FleshHive.WorkGiver_HarvestBulbplump</giverClass>
+    <workType>Handling</workType>
+    <priorityInType>90</priorityInType>
+    <requiredCapacities><li>Manipulation</li></requiredCapacities>
+    <verb>milk</verb>
+    <gerund>milking</gerund>
+  </WorkGiverDef>
 </Defs> 
