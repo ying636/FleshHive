@@ -25,17 +25,6 @@ public class CompFleshRegenerationSac : CompFleshHiveContainer, IThingHolderWith
             && HCFGameUtility.IsNodeUnit(node);
     }
 
-    public bool NeedsTreatment(Pawn pawn)
-    {
-        return pawn.health.hediffSet.hediffs.Any(hediff =>
-            hediff is Hediff_Injury { Severity: > 0f }
-            || hediff.def == HediffDefOf.BloodLoss
-            || hediff is Hediff_MissingPart missing
-                && missing.Part.parent != null
-                && pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(missing.Part.parent) == null
-                && pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(missing.Part.parent) == null);
-    }
-
     public override bool CanContain(Pawn pawn)
     {
         return parent.Spawned && units.Count == 0 && CanTreat(pawn) && NeedsTreatment(pawn);
@@ -67,7 +56,7 @@ public class CompFleshRegenerationSac : CompFleshHiveContainer, IThingHolderWith
             {
                 Heal(pawn, GetHealPoint());
             }
-            if (!CanTreat(pawn) || !NeedsTreatment(pawn))
+            if (!CanTreat(pawn) || !pawn.Downed && !NeedsTreatment(pawn))
             {
                 if (units.TryDrop(pawn, parent.Position, parent.Map, ThingPlaceMode.Near, out _))
                 {
